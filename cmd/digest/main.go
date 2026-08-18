@@ -25,10 +25,10 @@ import (
 	"github.com/jtprogru/weekly-incident/internal/score"
 )
 
-// summaryTopN is how many incidents the notification quotes. It is not
-// BriefTopN: a Telegram message wants three lines, a pasteable brief wants
-// enough context to write from.
-const summaryTopN = 3
+// notifyTopN is how many incidents the Telegram message quotes. It is not
+// BriefTopN: a chat message wants three glanceable lines, a pasteable brief
+// wants enough context to write an article from.
+const notifyTopN = 3
 
 func main() {
 	var (
@@ -89,7 +89,7 @@ func run(configPath, dataDir, outDir, weekFlag, nowFlag string) (string, error) 
 	for name, body := range map[string]string{
 		"digest.md":   render.Digest(idx, incidents),
 		"brief.md":    render.Brief(idx, incidents, cfg.Digest.BriefTopN, cfg.Digest.BriefBodyLimit),
-		"summary.txt": summary(idx),
+		"summary.txt": render.Notification(idx, notifyTopN),
 	} {
 		if err := writeIfChanged(filepath.Join(dir, name), body); err != nil {
 			return "", err
@@ -116,25 +116,6 @@ func writeIfChanged(path, body string) error {
 		return fmt.Errorf("write %s: %w", path, err)
 	}
 	return nil
-}
-
-// summary is the short text the workflow forwards to notiflow.
-func summary(idx model.WeekIndex) string {
-	var above []model.IndexEntry
-	for _, e := range idx.Incidents {
-		if e.AboveThreshold {
-			above = append(above, e)
-		}
-	}
-
-	s := fmt.Sprintf("Week %s: %d incidents, %d above threshold.\n", idx.Week, len(idx.Incidents), len(above))
-	for i, e := range above {
-		if i == summaryTopN {
-			break
-		}
-		s += fmt.Sprintf("%d. %s — %s (%d min)\n", i+1, e.Vendor, e.Title, e.Score.Duration)
-	}
-	return s
 }
 
 // previousSources reuses the source health recorded by the last collect run. A

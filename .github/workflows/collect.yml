@@ -103,5 +103,10 @@ jobs:
           chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
           status: success
           notify_on: success
-          parse_mode: none
-          message: ${{ steps.collect.outputs.warning }}
+          parse_mode: HTML
+          message: |
+            <b>Archive gap — history may already be lost</b>
+
+            ${{ steps.collect.outputs.warning }}
+
+            <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">Run log</a>

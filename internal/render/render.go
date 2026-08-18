@@ -8,6 +8,7 @@ package render
 
 import (
 	"fmt"
+	"html"
 	"strings"
 
 	"github.com/jtprogru/weekly-incident/internal/model"
@@ -279,3 +280,95 @@ func truncate(s string, limit int) string {
 	}
 	return strings.TrimSpace(string(r[:limit])) + "…"
 }
+
+// notifyTitleLimit keeps one headline to a single glance in a chat client.
+const notifyTitleLimit = 90
+
+// Notification renders the Telegram body for a finished week.
+//
+// The markup is Telegram HTML, which needs only &, < and > escaped. MarkdownV2
+// would demand escaping a dozen punctuation marks that vendor titles are full
+// of — dots, parens, dashes — and a single missed one makes Telegram reject the
+// whole message.
+//
+// The link to the full digest is not built here: it needs the repository path,
+// which only the workflow knows.
+func Notification(idx model.WeekIndex, topN int) string {
+	above, _ := split(idx.Incidents)
+
+	var b strings.Builder
+	fmt.Fprintf(&b, "<b>%s</b> — incidents of the week\n", esc(idx.Week))
+	fmt.Fprintf(&b, "%s → %s UTC\n\n",
+		idx.From.Format(dateFormat), idx.To.AddDate(0, 0, -1).Format(dateFormat))
+	fmt.Fprintf(&b, "%d collected · <b>%d above threshold</b> · %s\n",
+		len(idx.Incidents), len(above), sourceHealth(idx.Sources))
+
+	if w := parseErrorSummary(idx.Sources); w != "" {
+		fmt.Fprintf(&b, "%s\n", w)
+	}
+
+	if len(above) == 0 {
+		b.WriteString("\nNothing cleared the threshold this week.\n")
+		return b.String()
+	}
+
+	top := above
+	if len(top) > topN {
+		top = top[:topN]
+	}
+	for i, e := range top {
+		fmt.Fprintf(&b, "\n<b>%d.</b> %s\n", i+1, notifyLink(e))
+		fmt.Fprintf(&b, "%s · %s%s\n", esc(e.Vendor), esc(duration(e)), impactSuffix(e))
+	}
+	if rest := len(above) - len(top); rest > 0 {
+		fmt.Fprintf(&b, "\n…and %d more above threshold.\n", rest)
+	}
+	return b.String()
+}
+
+// notifyLink renders one headline as an anchor, or as bold text when the
+// vendor gave no URL.
+func notifyLink(e model.IndexEntry) string {
+	title := esc(truncate(oneLine(e.Title), notifyTitleLimit))
+	if e.URL == "" {
+		return "<b>" + title + "</b>"
+	}
+	return `<a href="` + esc(e.URL) + `">` + title + `</a>`
+}
+
+// impactSuffix appends the severity, unless the vendor never reports one.
+func impactSuffix(e model.IndexEntry) string {
+	if e.Impact == model.ImpactUnknown {
+		return ""
+	}
+	return " · " + esc(string(e.Impact))
+}
+
+// sourceHealth says how the fetch went in a handful of characters.
+func sourceHealth(sources []model.SourceStatus) string {
+	var failed []string
+	for _, s := range sources {
+		if !s.OK {
+			failed = append(failed, s.Vendor)
+		}
+	}
+	if len(failed) == 0 {
+		return fmt.Sprintf("%d/%d sources ok", len(sources), len(sources))
+	}
+	return fmt.Sprintf("<b>%d/%d sources ok</b> (failed: %s)",
+		len(sources)-len(failed), len(sources), esc(strings.Join(failed, ", ")))
+}
+
+// parseErrorSummary is the one-line form of the digest's parse warning.
+func parseErrorSummary(sources []model.SourceStatus) string {
+	total := 0
+	for _, s := range sources {
+		total += s.ParseErrors
+	}
+	if total == 0 {
+		return ""
+	}
+	return fmt.Sprintf("<b>%d record(s) dropped as unparseable</b> — a vendor likely changed its schema.", total)
+}
+
+func esc(s string) string { return html.EscapeString(s) }

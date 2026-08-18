@@ -96,16 +96,30 @@ jobs:
             echo 'SUMMARY_EOF'
           } >> "$GITHUB_OUTPUT"
 
-      - name: Notify
-        if: always()
+      # Two notifications rather than one. On success the body is the
+      # rendered summary; on failure notiflow's own template carries the run
+      # link and the job name, which a bare summary would bury.
+      #
+      # parse_mode is HTML because the renderer emits it: MarkdownV2 would
+      # demand escaping every dot, dash and paren in a vendor headline, and one
+      # missed character makes Telegram reject the whole message.
+      - name: Notify on success
+        if: success()
         uses: jtprogru/notiflow@v2
         with:
           bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
-          status: ${{ job.status }}
-          # The summary carries dots, parens and a URL; MarkdownV2 would reject it.
-          parse_mode: none
+          status: success
+          parse_mode: HTML
+          disable_web_page_preview: 'true'
           message: |
             ${{ steps.render.outputs.summary }}
+            <a href="https://github.com/${{ github.repository }}/blob/main/weeks/${{ steps.render.outputs.week }}/digest.md">Full digest for ${{ steps.render.outputs.week }}</a>
 
-            https://github.com/${{ github.repository }}/blob/main/weeks/${{ steps.render.outputs.week }}/digest.md
+      - name: Notify on failure
+        if: failure()
+        uses: jtprogru/notiflow@v2
+        with:
+          bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          status: failure

@@ -219,3 +219,91 @@ func TestDigestWarnsAboutParseErrors(t *testing.T) {
 		t.Error("a clean run should carry no parse warning")
 	}
 }
+
+func TestNotification(t *testing.T) {
+	idx, _ := fixture()
+	out := Notification(idx, 3)
+
+	for _, want := range []string{
+		"<b>2026-W34</b> — incidents of the week",
+		"2026-08-17 → 2026-08-23 UTC",
+		"<b>1 above threshold</b>",
+		`<a href="https://health.aws.amazon.com/health/status">Increased Packet loss</a>`,
+		"aws · 3d 0h 18m",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("notification is missing %q\n---\n%s", want, out)
+		}
+	}
+	// A dead source has to be visible at a glance, not buried in the digest.
+	if !strings.Contains(out, "<b>1/2 sources ok</b> (failed: datadog)") {
+		t.Errorf("notification does not flag the failed source:\n%s", out)
+	}
+	// AWS reports no severity; printing "unknown" as if it meant something
+	// would be worse than saying nothing.
+	if strings.Contains(out, "unknown") {
+		t.Error("notification prints the unknown impact")
+	}
+	if strings.Contains(out, "**") {
+		t.Error("markdown leaked into a Telegram HTML message")
+	}
+}
+
+func TestNotificationEscapesVendorText(t *testing.T) {
+	// Vendor headlines are attacker-adjacent text: one bare < and Telegram
+	// rejects the whole message as broken HTML.
+	idx, _ := fixture()
+	idx.Incidents[0].Title = `Errors in <script> & "quoted" mode`
+	out := Notification(idx, 3)
+
+	if strings.Contains(out, "<script>") {
+		t.Error("a raw tag from a vendor title reached the message")
+	}
+	if !strings.Contains(out, "&lt;script&gt;") || !strings.Contains(out, "&amp;") {
+		t.Errorf("vendor title was not escaped:\n%s", out)
+	}
+}
+
+func TestNotificationTruncatesLongHeadlines(t *testing.T) {
+	idx, _ := fixture()
+	idx.Incidents[0].Title = strings.Repeat("very long headline ", 20)
+	out := Notification(idx, 3)
+
+	if !strings.Contains(out, "…") {
+		t.Error("a long headline was not truncated")
+	}
+	for _, line := range strings.Split(out, "\n") {
+		if len([]rune(line)) > 400 {
+			t.Errorf("line of %d runes is too long for a chat message", len([]rune(line)))
+		}
+	}
+}
+
+func TestNotificationRespectsTopN(t *testing.T) {
+	idx, _ := fixture()
+	idx.Incidents[1].AboveThreshold = true
+
+	out := Notification(idx, 1)
+	if !strings.Contains(out, "…and 1 more above threshold.") {
+		t.Errorf("notification does not say what it left out:\n%s", out)
+	}
+}
+
+func TestNotificationOnAQuietWeek(t *testing.T) {
+	idx, _ := fixture()
+	for i := range idx.Incidents {
+		idx.Incidents[i].AboveThreshold = false
+	}
+	out := Notification(idx, 3)
+	if !strings.Contains(out, "Nothing cleared the threshold this week.") {
+		t.Error("a quiet week should say so plainly")
+	}
+}
+
+func TestNotificationFlagsDroppedRecords(t *testing.T) {
+	idx, _ := fixture()
+	idx.Sources[0].ParseErrors = 2
+	if !strings.Contains(Notification(idx, 3), "2 record(s) dropped as unparseable") {
+		t.Error("notification hides dropped records")
+	}
+}
