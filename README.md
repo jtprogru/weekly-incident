@@ -43,7 +43,7 @@ Go 1.26 and nothing else. No database, no credentials, no services to start.
 make collect              # fetch every source, merge into data/
 make digest               # render the week that just closed
 make digest WEEK=2026-W34 # render a specific week
-make test lint            # go test -race, go vet, golangci-lint
+make test lint            # go test -race; gofmt, go vet, golangci-lint
 make cover build fmt      # the rest of the targets; make help lists them
 ```
 
@@ -61,7 +61,7 @@ Parser tests run offline against feed responses captured in `testdata/`. When a 
 
 Both write to `main` and share a `concurrency: archive` group; if a push still loses a race, the job resyncs onto the new tip and re-runs itself. Collect merges upsert-only and digest reads only the archive, so the second pass lands exactly what the first one would have.
 
-`ci.yml` gates every push and pull request on `gofmt -l`, `go vet`, `go test -race` and golangci-lint.
+`ci.yml` gates every push and pull request on `make lint` and `make test`, so the gate is `gofmt -l`, `go vet`, golangci-lint and `go test -race` — the same four checks a developer runs locally, from the same targets. The scheduled workflows call `make collect` and `make digest` for the same reason: the only thing CI adds is the git plumbing around them.
 
 All three need `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` as repository secrets for [notiflow](https://github.com/jtprogru/notiflow) notifications: the week's summary on Monday, a failure alert from either job, and a separate alert when `collect` finds the archive going stale. That last one matters more than it looks — a gap in the archive is silent damage, and the incidents that aged out of the feeds are gone for good.
 

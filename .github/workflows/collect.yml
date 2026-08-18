@@ -38,9 +38,9 @@ jobs:
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
           collect() {
-            go run ./cmd/collect \
-              -summary .collect-summary.txt \
-              -warning .collect-warning.txt
+            make collect \
+              SUMMARY=.collect-summary.txt \
+              WARNING=.collect-warning.txt
           }
 
           collect

@@ -10,9 +10,10 @@ A Go pipeline that collects incidents from thirteen vendor status pages into a g
 
 ```bash
 make test                       # go test -race ./...
-make lint                       # go vet + golangci-lint (CI also enforces gofmt -l)
+make lint                       # gofmt gate + go vet + golangci-lint (exactly what CI runs)
 make cover                      # coverage summary
 make collect                    # fetch all sources, merge into data/  (only network step)
+make collect SUMMARY=s.txt WARNING=w.txt  # also write the run notes the workflow commits and alerts on
 make digest                     # render the week that just closed
 make digest WEEK=2026-W34       # render a specific week
 make testdata                   # re-capture golden feed responses from live endpoints
@@ -28,7 +29,7 @@ The pipeline is a straight line, and the two ends are deliberately disconnected:
 
 `config.yaml` → `internal/source` (fetch + normalize) → `internal/archive` (upsert into `data/YYYY/Wnn/<vendor>.json`) → `internal/score` (rank, build `index.json`) → `internal/render` (`digest.md`, `brief.md`, `summary.txt`). `internal/clock` resolves `-now` for both commands.
 
-`cmd/collect` is the only code that touches the network. `cmd/digest` never fetches, so any past week can be re-rendered with a different threshold or score. Keep it that way. `cmd/digest` prints the rendered week to **stdout** and everything else to stderr — the workflow reads the week from there, so do not add stdout chatter.
+`cmd/collect` is the only code that touches the network. `cmd/digest` never fetches, so any past week can be re-rendered with a different threshold or score. Keep it that way. `cmd/digest` prints the rendered week to **stdout** and everything else to stderr — the workflow reads the week from there, so do not add stdout chatter. The `digest` make target is silenced with `@` for the same reason: an echoed recipe line would land in the captured week.
 
 `internal/model` is the canonical vocabulary every other package speaks: `Incident`, `Update`, `Impact`, `Status`, `Score`, `IndexEntry`, `WeekIndex`. Parsers build `Incident` values, call `Finalize()` (derives `Key`, normalizes times to UTC, computes `DurationMinutes`, canonicalizes `Raw`), then `Validate()`, and skip the record on error rather than failing the whole feed.
 

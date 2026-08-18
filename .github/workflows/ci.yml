@@ -20,21 +20,10 @@ jobs:
           go-version-file: go.mod
           cache: true
 
-      - name: Check formatting
-        run: |
-          unformatted="$(gofmt -l .)"
-          if [ -n "${unformatted}" ]; then
-            echo "gofmt needed on:"
-            echo "${unformatted}"
-            exit 1
-          fi
-
-      - name: Vet
-        run: go vet ./...
-
-      - name: Test
-        run: go test -race ./...
-
+      # The action installs the linter but does not run it: `make lint` does,
+      # so the gate CI applies is the one a developer gets locally, gofmt and
+      # go vet included.
+      #
       # golangci-lint refuses to run when the Go version it was built with is
       # older than the module's. The v6 action installs the v1 line, which is
       # built with go1.24 and therefore cannot lint a go1.26 module at all.
@@ -43,3 +32,10 @@ jobs:
       - uses: golangci/golangci-lint-action@v9
         with:
           version: v2.12.2
+          install-only: true
+
+      - name: Lint
+        run: make lint
+
+      - name: Test
+        run: make test

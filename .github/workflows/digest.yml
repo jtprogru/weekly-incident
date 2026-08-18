@@ -40,7 +40,9 @@ jobs:
       # which is the wrong week whenever an older one is rendered on purpose.
       #
       # The input arrives as an environment variable rather than a ${{ }}
-      # substitution, so its contents can never become shell syntax.
+      # substitution, and is checked against the ISO week shape before it is
+      # handed to make, which would otherwise re-expand it inside the recipe's
+      # shell.
       - name: Render and publish the week
         id: render
         env:
@@ -48,15 +50,19 @@ jobs:
         run: |
           set -euo pipefail
 
+          if [ -n "${WEEK_INPUT}" ] &&
+             ! printf '%s' "${WEEK_INPUT}" | grep -qE '^[0-9]{4}-W[0-9]{2}$'; then
+            echo "not an ISO week: ${WEEK_INPUT}" >&2
+            exit 1
+          fi
+
           git config user.name  'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
+          # An empty WEEK is the same as no -week flag, so the scheduled run
+          # and the hand-dispatched one take the same path.
           render() {
-            if [ -n "${WEEK_INPUT}" ]; then
-              go run ./cmd/digest -week "${WEEK_INPUT}"
-            else
-              go run ./cmd/digest
-            fi
+            make digest WEEK="${WEEK_INPUT}"
           }
 
           # Both scheduled workflows commit to main, and a person can push at
