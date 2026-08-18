@@ -13,9 +13,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
           cache: true
@@ -35,6 +35,11 @@ jobs:
       - name: Test
         run: go test -race ./...
 
-      - uses: golangci/golangci-lint-action@v6
+      # golangci-lint refuses to run when the Go version it was built with is
+      # older than the module's. The v6 action installs the v1 line, which is
+      # built with go1.24 and therefore cannot lint a go1.26 module at all.
+      # The version is pinned rather than floating so CI and local runs agree
+      # on which linters exist.
+      - uses: golangci/golangci-lint-action@v9
         with:
-          version: latest
+          version: v2.12.2

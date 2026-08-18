@@ -22,22 +22,31 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
           cache: true
 
-      - name: Collect
+      - name: Collect and publish
         id: collect
         run: |
           set -euo pipefail
-          go run ./cmd/collect \
-            -summary .collect-summary.txt \
-            -warning .collect-warning.txt
+
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          collect() {
+            go run ./cmd/collect \
+              -summary .collect-summary.txt \
+              -warning .collect-warning.txt
+          }
+
+          collect
+
           # An archive gap is silent damage: the incidents that aged out are
-          # gone and nothing later in the pipeline can reveal them. It must
+          # gone and nothing later in the pipeline can reveal them. It has to
           # leave the logs and reach a human.
           if [ -s .collect-warning.txt ]; then
             {
@@ -49,20 +58,34 @@ jobs:
           fi
           rm -f .collect-warning.txt
 
-      - name: Commit the archive
-        run: |
-          set -euo pipefail
-          git config user.name  'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add data
-          if git diff --cached --quiet; then
-            echo 'nothing to commit'
-            rm -f .collect-summary.txt
-            exit 0
-          fi
-          git commit -m "chore(data): $(cat .collect-summary.txt)"
+          # The digest workflow commits to main too, and a person can push at
+          # any moment, so the checkout may be stale by the time this pushes.
+          # Generated files are not worth merging: resync onto the new tip and
+          # collect again. The merge is upsert-only and idempotent, so a second
+          # pass on fresh ground yields the same archive.
+          published=''
+          for attempt in 1 2 3; do
+            git add data
+            if git diff --cached --quiet; then
+              echo 'nothing to commit'
+              published='yes'
+              break
+            fi
+            git commit -q -m "chore(data): $(cat .collect-summary.txt)"
+            if git push; then
+              published='yes'
+              break
+            fi
+            echo "push rejected on attempt ${attempt}, resyncing with origin/main"
+            git fetch origin main
+            git reset --hard origin/main
+            collect
+          done
           rm -f .collect-summary.txt
-          git push
+          if [ -z "${published}" ]; then
+            echo 'could not publish after 3 attempts'
+            exit 1
+          fi
 
       - name: Notify on failure
         if: failure()

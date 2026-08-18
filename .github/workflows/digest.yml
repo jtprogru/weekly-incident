@@ -24,43 +24,77 @@ jobs:
   digest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
           cache: true
 
-      # No network access here: the digest is built entirely from the archive,
-      # so it can be regenerated for any past week with a changed threshold.
+      # No network access in the renderer: the digest is built entirely from
+      # the archive, so it can be regenerated for any past week with a changed
+      # threshold.
       #
       # The week comes from the command's stdout, not from the filesystem.
       # Guessing it with `ls | tail -1` picked the newest directory on disk,
       # which is the wrong week whenever an older one is rendered on purpose.
-      - name: Render the week
+      #
+      # The input arrives as an environment variable rather than a ${{ }}
+      # substitution, so its contents can never become shell syntax.
+      - name: Render and publish the week
         id: render
+        env:
+          WEEK_INPUT: ${{ inputs.week }}
         run: |
           set -euo pipefail
-          week="$(go run ./cmd/digest ${{ inputs.week && format('-week {0}', inputs.week) || '' }})"
+
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+          render() {
+            if [ -n "${WEEK_INPUT}" ]; then
+              go run ./cmd/digest -week "${WEEK_INPUT}"
+            else
+              go run ./cmd/digest
+            fi
+          }
+
+          # Both scheduled workflows commit to main, and a person can push at
+          # any moment, so this job's checkout may already be stale by the time
+          # it pushes. Generated files are not worth merging: resync onto the
+          # new tip and render again. The renderer is deterministic and reads
+          # only the archive, so the second pass produces exactly what the
+          # first one would have produced had it started later.
+          week="$(render)"
+          published=''
+          for attempt in 1 2 3; do
+            git add weeks data
+            if git diff --cached --quiet; then
+              echo 'nothing to commit'
+              published='yes'
+              break
+            fi
+            git commit -q -m "docs(weeks): digest for ${week}"
+            if git push; then
+              published='yes'
+              break
+            fi
+            echo "push rejected on attempt ${attempt}, resyncing with origin/main"
+            git fetch origin main
+            git reset --hard origin/main
+            week="$(render)"
+          done
+          if [ -z "${published}" ]; then
+            echo 'could not publish after 3 attempts'
+            exit 1
+          fi
+
           echo "week=${week}" >> "$GITHUB_OUTPUT"
           {
             echo 'summary<<SUMMARY_EOF'
             cat "weeks/${week}/summary.txt"
             echo 'SUMMARY_EOF'
           } >> "$GITHUB_OUTPUT"
-
-      - name: Commit the week
-        run: |
-          set -euo pipefail
-          git config user.name  'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add weeks data
-          if git diff --cached --quiet; then
-            echo 'nothing to commit'
-            exit 0
-          fi
-          git commit -m "docs(weeks): digest for ${{ steps.render.outputs.week }}"
-          git push
 
       - name: Notify
         if: always()
