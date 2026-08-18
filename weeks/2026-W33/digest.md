@@ -1,6 +1,6 @@
 # Week 2026-W33
 
-2026-08-10 to 2026-08-16 (UTC). Generated 2026-08-18 13:12.
+2026-08-10 to 2026-08-16 (UTC). Generated 2026-08-18 13:42.
 
 48 incidents collected, 22 above threshold. All 13 sources responded.
 
@@ -8,7 +8,7 @@
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
-| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 4d 15h 50m (ongoing) | unknown | Messaging, Workspace/Org Administration | 16104 = 6710 × 2 × 1.2 |
+| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 4d 16h 20m (ongoing) | unknown | Messaging, Workspace/Org Administration | 16176 = 6740 × 2 × 1.2 |
 | 2 | aws | [Increased Packet loss](https://health.aws.amazon.com/health/status) | 2026-08-15 03:42 | 3d 0h 18m | unknown | directconnect-eu-central-1 | 8676 = 4338 × 1 × 2.0 |
 | 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/twh93x4twdps) | 2026-08-12 13:50 | 4h 16m | minor | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 1536 = 256 × 4 × 1.5 |
 | 4 | openai | [Increased error rates](https://status.openai.com/incidents/01KZNZTPWMV06Z6TQNMY1R1QDR) | 2026-08-10 14:04 | 12h 43m | minor | — | 1144 = 763 × 1 × 1.5 |
@@ -40,7 +40,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
 - Started: 2026-08-13 21:21 UTC
 - Resolved: not yet
-- Duration: 4d 15h 50m (ongoing)
+- Duration: 4d 16h 20m (ongoing)
 - Impact: unknown, status: investigating
 - Components: Messaging, Workspace/Org Administration
 

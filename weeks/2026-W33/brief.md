@@ -5,7 +5,7 @@
 ## 1. slack — Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled
 
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
-- Window: 2026-08-13 21:21 to not yet (4d 15h 50m (ongoing))
+- Window: 2026-08-13 21:21 to not yet (4d 16h 20m (ongoing))
 - Impact: unknown, status: investigating
 - Components: Messaging, Workspace/Org Administration
 
