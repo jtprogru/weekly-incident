@@ -1,0 +1,84 @@
+---
+name: collect
+
+# Daily, not weekly. Vendor feeds hold a fixed number of incidents with no
+# pagination — 50, which is only about 20 days for Cloudflare — so a weekly
+# cadence would leave just two missed runs of slack before data is lost for
+# good. The daily commit doubles as the activity that keeps GitHub from
+# disabling the schedule after 60 idle days.
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
+      - name: Collect
+        id: collect
+        run: |
+          set -euo pipefail
+          go run ./cmd/collect \
+            -summary .collect-summary.txt \
+            -warning .collect-warning.txt
+          # An archive gap is silent damage: the incidents that aged out are
+          # gone and nothing later in the pipeline can reveal them. It must
+          # leave the logs and reach a human.
+          if [ -s .collect-warning.txt ]; then
+            {
+              echo 'warning<<EOF'
+              cat .collect-warning.txt
+              echo 'EOF'
+            } >> "$GITHUB_OUTPUT"
+            echo "::warning::$(cat .collect-warning.txt)"
+          fi
+          rm -f .collect-warning.txt
+
+      - name: Commit the archive
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data
+          if git diff --cached --quiet; then
+            echo 'nothing to commit'
+            rm -f .collect-summary.txt
+            exit 0
+          fi
+          git commit -m "chore(data): $(cat .collect-summary.txt)"
+          rm -f .collect-summary.txt
+          git push
+
+      - name: Notify on failure
+        if: failure()
+        uses: jtprogru/notiflow@v2
+        with:
+          bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          status: failure
+
+      - name: Notify on archive gap
+        if: success() && steps.collect.outputs.warning != ''
+        uses: jtprogru/notiflow@v2
+        with:
+          bot_token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          chat_id: ${{ secrets.TELEGRAM_CHAT_ID }}
+          status: success
+          notify_on: success
+          parse_mode: none
+          message: ${{ steps.collect.outputs.warning }}

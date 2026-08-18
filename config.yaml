@@ -1,0 +1,109 @@
+---
+# Source list and policy for the collector and the weekly digest.
+# Endpoints verified 2026-08-18; see PLAN.md section 3 for measured feed depth.
+
+user_agent: "weekly-incident/0.1 (+https://github.com/jtprogru/weekly-incident)"
+
+http:
+  timeout: 30s
+  retries: 3
+  backoff_base: 2s
+
+collect:
+  # Job goes red only if more than this fraction of sources is unreachable,
+  # which points at our side rather than at the vendors.
+  fail_threshold: 0.5
+  # Feed depth is finite and Statuspage has no pagination, so a long gap in the
+  # archive is unrecoverable. Warn well before that.
+  gap_warn_days: 14
+
+digest:
+  # An incident is shown in full if it ran at least this long OR its impact is
+  # at least min_impact. Everything else collapses into a one-line tail.
+  #
+  # Tuned against a real week (2026-W33, 48 incidents across the 13 sources):
+  #   30m -> 36 above threshold, 60m -> 28, 120m -> 22, 180m -> 16, 240m -> 15.
+  # The median incident runs one to three hours, so a 30-minute floor filters
+  # almost nothing. Raise this if the weekly table still reads as a wall.
+  min_duration_minutes: 120
+  min_impact: major
+  brief_top_n: 5
+  brief_body_limit: 800
+
+sources:
+  # --- Statuspage schema: one parser, ten vendors ---
+  - vendor: github
+    kind: statuspage
+    url: https://www.githubstatus.com/api/v2/incidents.json
+    weight: 1.5
+
+  - vendor: cloudflare
+    kind: statuspage
+    url: https://www.cloudflarestatus.com/api/v2/incidents.json
+    weight: 1.8
+
+  - vendor: datadog
+    kind: statuspage
+    url: https://status.datadoghq.com/api/v2/incidents.json
+    weight: 1.0
+
+  - vendor: atlassian
+    kind: statuspage
+    url: https://status.atlassian.com/api/v2/incidents.json
+    weight: 1.0
+
+  # status.stripe.com returns 404; www.stripestatus.com is the live host.
+  - vendor: stripe
+    kind: statuspage
+    url: https://www.stripestatus.com/api/v2/incidents.json
+    weight: 1.2
+
+  - vendor: openai
+    kind: statuspage
+    url: https://status.openai.com/api/v2/incidents.json
+    weight: 1.5
+
+  # status.anthropic.com redirects here; the final host is configured directly.
+  - vendor: anthropic
+    kind: statuspage
+    url: https://status.claude.com/api/v2/incidents.json
+    weight: 1.5
+
+  - vendor: grafana
+    kind: statuspage
+    url: https://status.grafana.com/api/v2/incidents.json
+    weight: 1.0
+
+  - vendor: circleci
+    kind: statuspage
+    url: https://status.circleci.com/api/v2/incidents.json
+    weight: 1.0
+
+  - vendor: digitalocean
+    kind: statuspage
+    url: https://status.digitalocean.com/api/v2/incidents.json
+    weight: 0.8
+
+  # --- One-off schemas ---
+
+  # Undocumented endpoint. Reports no impact level, so it clears the digest
+  # threshold on duration only.
+  - vendor: slack
+    kind: slack
+    url: https://slack-status.com/api/v2.0.0/history
+    weight: 1.2
+
+  # Publishes only major incidents: roughly four per half-year, but each one
+  # arrives with a full postmortem.
+  - vendor: gcp
+    kind: gcp
+    url: https://status.cloud.google.com/incidents.json
+    weight: 2.0
+
+  # Undocumented legacy feed; the documented replacement
+  # (health.aws.amazon.com/public/currentevents) is a current-state snapshot
+  # with no history and is useless for a weekly window.
+  - vendor: aws
+    kind: aws-rss
+    url: https://status.aws.amazon.com/rss/all.rss
+    weight: 2.0
