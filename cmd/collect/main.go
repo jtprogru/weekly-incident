@@ -77,6 +77,7 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 		incidents []model.Incident
 		statuses  []model.SourceStatus
 		failed    int
+		seen      int
 	)
 
 	for _, sc := range cfg.Sources {
@@ -100,8 +101,16 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 			st.IncidentsSeen = len(res.Incidents)
 			st.ParseErrors = res.ParseErrors
 			incidents = append(incidents, res.Incidents...)
+			seen += len(res.Incidents)
 			state.Sources[sc.Vendor] = now
-			log.Printf("%-13s %3d incidents, %d parse errors", sc.Vendor, len(res.Incidents), res.ParseErrors)
+			// A healthy source says nothing. Thirteen "0 parse errors" lines
+			// every day are noise that trains you to skip the log, and the
+			// per-source counts are kept in index.json anyway. Only the
+			// notable cases speak up.
+			if res.ParseErrors > 0 {
+				log.Printf("%-13s %d of %d records unparseable and dropped",
+					sc.Vendor, res.ParseErrors, len(res.Incidents)+res.ParseErrors)
+			}
 		}
 		statuses = append(statuses, st)
 
@@ -123,8 +132,8 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 		return err
 	}
 
-	summary := fmt.Sprintf("collect: %d new, %d updated, %d/%d sources ok%s",
-		stats.Created, stats.Updated, len(cfg.Sources)-failed, len(cfg.Sources), weekSuffix(stats.Weeks))
+	summary := fmt.Sprintf("collect: %d new, %d updated, %d seen, %d/%d sources ok%s",
+		stats.Created, stats.Updated, seen, len(cfg.Sources)-failed, len(cfg.Sources), weekSuffix(stats.Weeks))
 	log.Print(summary)
 	if summaryPath != "" {
 		if err := os.WriteFile(summaryPath, []byte(summary+"\n"), 0o644); err != nil {
