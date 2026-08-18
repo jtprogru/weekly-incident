@@ -1,0 +1,1300 @@
+[
+  {
+    "key": "datadog/ww8rhx2j8mfz",
+    "vendor": "datadog",
+    "native_id": "ww8rhx2j8mfz",
+    "title": "Multiple products impacted with data delays",
+    "url": "https://stspg.io/29j9dsc8llxg",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2025-10-20T10:14:51.02Z",
+    "resolved_at": "2025-10-20T11:31:39.466Z",
+    "duration_minutes": 76,
+    "components": [
+      "Cloud Security Management",
+      "Incident Response"
+    ],
+    "updates": [
+      {
+        "native_id": "v852zf50zq29",
+        "status": "identified",
+        "body": "Note: this is a delayed update because this incident impaired our ability to update the status page, we posted banners earlier in the product to let customers know about the ongoing impact.\nWe are still seeing some delays as we are fully recovering from the underlying incident: agentless vulnerability scanning for hosts in AWS us-east-1 is still delayed, On-Call notifications are not fully recovered. This incident started at 07:10 UTC on October 20.\nSo far we have recovered fully from the impact on Synthetics, collection of data from AWS, Bits AI, Codegen, Dashboards (edition features were impaired).",
+        "created_at": "2025-10-20T10:14:51.119Z"
+      },
+      {
+        "native_id": "nm4q9cwh30nj",
+        "status": "monitoring",
+        "body": "We are monitoring and seeing recovery for all products, some customers might still experience for a limited subset of data delays for logs or host vulnerability scanning specific to AWS us-east-1. We will post specific information on the affected product pages for those customers.\nOn-Call notifications are fully operational.",
+        "created_at": "2025-10-20T10:53:19.072Z"
+      },
+      {
+        "native_id": "72mh0mv0xbp5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2025-10-20T11:31:39.466Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-09-07T03:51:13.272-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cwp97nbkd47t",
+          "name": "Cloud Security Management",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2021-09-07",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:05.594-04:00"
+        },
+        {
+          "created_at": "2021-09-07T03:47:32.660-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "nypxbf5kxblr",
+          "name": "Incident Response",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2021-09-07",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:10.423-04:00"
+        }
+      ],
+      "created_at": "2025-10-20T06:14:51.025-04:00",
+      "id": "ww8rhx2j8mfz",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2025-10-20T07:31:39.466-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T07:31:39.466-04:00",
+          "id": "72mh0mv0xbp5",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "resolved",
+          "tweet_id": 1980235461475053809,
+          "updated_at": "2025-10-20T07:31:39.798-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are monitoring and seeing recovery for all products, some customers might still experience for a limited subset of data delays for logs or host vulnerability scanning specific to AWS us-east-1. We will post specific information on the affected product pages for those customers.\nOn-Call notifications are fully operational.",
+          "created_at": "2025-10-20T06:53:19.072-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T06:53:19.072-04:00",
+          "id": "nm4q9cwh30nj",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "monitoring",
+          "tweet_id": 1980225827288785395,
+          "updated_at": "2025-10-20T06:53:22.855-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Note: this is a delayed update because this incident impaired our ability to update the status page, we posted banners earlier in the product to let customers know about the ongoing impact.\nWe are still seeing some delays as we are fully recovering from the underlying incident: agentless vulnerability scanning for hosts in AWS us-east-1 is still delayed, On-Call notifications are not fully recovered. This incident started at 07:10 UTC on October 20.\nSo far we have recovered fully from the impact on Synthetics, collection of data from AWS, Bits AI, Codegen, Dashboards (edition features were impaired).",
+          "created_at": "2025-10-20T06:14:51.119-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T06:14:51.119-04:00",
+          "id": "v852zf50zq29",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "identified",
+          "tweet_id": 1980216133186916361,
+          "updated_at": "2025-10-20T06:14:51.595-04:00"
+        }
+      ],
+      "monitoring_at": "2025-10-20T06:53:19.072-04:00",
+      "name": "Multiple products impacted with data delays",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2025-10-20T07:31:39.466-04:00",
+      "shortlink": "https://stspg.io/29j9dsc8llxg",
+      "started_at": "2025-10-20T06:14:51.020-04:00",
+      "status": "resolved",
+      "updated_at": "2025-10-20T07:31:39.803-04:00"
+    }
+  },
+  {
+    "key": "datadog/vjgmxjdf0ps5",
+    "vendor": "datadog",
+    "native_id": "vjgmxjdf0ps5",
+    "title": "Multiple products impacted with data delays",
+    "url": "https://stspg.io/gzvrd592kg4t",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2025-10-20T12:45:48Z",
+    "resolved_at": "2025-10-22T14:40:11.62Z",
+    "duration_minutes": 2994,
+    "components": [
+      "APM",
+      "App Builder",
+      "Cloud Cost Management",
+      "Continuous Profiler",
+      "Log Management",
+      "RUM",
+      "Workflow Automation"
+    ],
+    "updates": [
+      {
+        "native_id": "jk9jc6z4mz3q",
+        "status": "identified",
+        "body": "We are investigating increased latency processing APM, RUM, Log Management and Profiling. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and the data will be backfilled once the service is fully operational again.",
+        "created_at": "2025-10-20T12:45:48.526Z"
+      },
+      {
+        "native_id": "dyhf5v6y3pch",
+        "status": "identified",
+        "body": "We are investigating increased latency processing APM, RUM, Log Management and Profiling. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nMonitors using the impacted data are delayed.\nWe are working on bringing new capacity online and will provide an update once the service is fully operational again.",
+        "created_at": "2025-10-20T14:07:22.428Z"
+      },
+      {
+        "native_id": "vsghtqt1p6s2",
+        "status": "identified",
+        "body": "We are still seeing increased latency processing for those products and the associated monitors are delayed.\nWe are continuing to work on bringing new capacity online and will continue to provide updates on this issue.",
+        "created_at": "2025-10-20T15:18:31.574Z"
+      },
+      {
+        "native_id": "b1j1wrm81dpb",
+        "status": "identified",
+        "body": "APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and for all products except RUM we expect the data will be backfilled once the service is fully operational again.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.\nDue to upstream provider issues, we are also continuing to see unavailability of telemetry data coming from AWS into Datadog.",
+        "created_at": "2025-10-20T17:05:04.842Z"
+      },
+      {
+        "native_id": "xb9n5jnxhyw9",
+        "status": "identified",
+        "body": "APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and for all products except RUM we expect the data will be backfilled once the service is fully operational again.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.\nDue to upstream provider issues, we are also continuing to see unavailability of telemetry data coming from AWS into Datadog.",
+        "created_at": "2025-10-20T18:04:57.925Z"
+      },
+      {
+        "native_id": "2w57ldcpks8x",
+        "status": "identified",
+        "body": "We are seeing progress in telemetry data coming from AWS into Datadog. Also, we are starting to see our capacity requests being fulfilled.\nOur processing is still delayed impacting multiple products - Distribution Metrics, APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.",
+        "created_at": "2025-10-20T19:01:20.124Z"
+      },
+      {
+        "native_id": "0dwcn2pvbd4n",
+        "status": "identified",
+        "body": "We are seeing progress in telemetry data coming from AWS into Datadog. We are starting to see our capacity requests being fulfilled more slowly than usual. App Builder and Workflow Automation are seeing recovery.\nOur processing is still delayed impacting multiple products - Distribution Metrics, APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.",
+        "created_at": "2025-10-20T20:14:06.86Z"
+      },
+      {
+        "native_id": "dz98ls366xmz",
+        "status": "identified",
+        "body": "We are seeing recovery in AWS Metrics. Logs data submitted after 21:30 UTC should be processed normally. Users may see gaps in historical logs prior to 21:30 UTC while our backfill is in progress.\nIn addition to Log Management we continue to see delays in processing that impacts the following products: Distribution Metrics, APM, RUM, Profiling, CCM and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+        "created_at": "2025-10-20T21:47:01.189Z"
+      },
+      {
+        "native_id": "8n070qz4d0v5",
+        "status": "identified",
+        "body": "We are seeing recovery in Profiling.\n\nLogs data submitted after 21:30 UTC should be processed normally. Users may see gaps in historical logs prior to 21:30 UTC while our backfill is in progress.\n\nIn addition to Log Management we continue to see delays in processing that impacts the following products: Distribution Metrics, APM, RUM, CCM and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+        "created_at": "2025-10-20T22:40:04.391Z"
+      },
+      {
+        "native_id": "sq759qp2y7vx",
+        "status": "identified",
+        "body": "Logs data have been backfilled, and users should no longer see gaps in their historical logs. Log Archives and Log Forwarding were paused between 15:00 and 18:30 UTC, and we are working to re-forward any logs from that time period.\n\nWe continue to see delays in processing that impact the following products: Distribution Metrics, APM, RUM, CCM, and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+        "created_at": "2025-10-20T22:41:41.231Z"
+      },
+      {
+        "native_id": "j2dtkm3mx4x6",
+        "status": "identified",
+        "body": "We are seeing recovery for APM.\nWe continue to see delays in processing that impact the following products: Distribution Metrics, RUM, CCM, and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+        "created_at": "2025-10-21T00:25:47.766Z"
+      },
+      {
+        "native_id": "vlql8mpj4tn8",
+        "status": "monitoring",
+        "body": "We are seeing recovery across all of our products, and live data and monitor evaluations have resumed for all affected products. Most historical data in Logs has been backfilled and we have a small number of ongoing backfills in Metrics and other products. We will continue to monitor the situation overnight, and our next update will be 09:00 UTC.",
+        "created_at": "2025-10-21T01:32:17.188Z"
+      },
+      {
+        "native_id": "hb66zyx7g1g3",
+        "status": "monitoring",
+        "body": "All products have been stable since the last update. We are continuing the work on outstanding backfills, during this process queries that include data from the backfilled windows may appear incomplete for the affected subset of customers and products.\nWe will resolve the incident when the backfills are complete or before Oct 21, 16:00 UTC.",
+        "created_at": "2025-10-21T10:20:29.966Z"
+      },
+      {
+        "native_id": "q2bc5cqns5hl",
+        "status": "monitoring",
+        "body": "We are continuing the work on outstanding backfills which are not yet fully complete, during this process queries that include data from the backfilled windows may appear incomplete for the affected subset of customers and products.\nWe will resolve the incident when the backfills are complete or before Oct 21, 22:00 UTC.",
+        "created_at": "2025-10-21T18:04:56.681Z"
+      },
+      {
+        "native_id": "dp8q6w0cbfnl",
+        "status": "monitoring",
+        "body": "We are making progress on outstanding backfills. Cloud Cost Monitoring backfill is complete. Metrics and Logs backfills are still in progress.\nFor products still undergoing backfilling, queries that include data from the backfilled windows may appear incomplete for the affected subset of customers.\nWe will provide next update no later than Oct 22, 10:00 UTC.",
+        "created_at": "2025-10-21T21:35:30.223Z"
+      },
+      {
+        "native_id": "zgmk547xcwgc",
+        "status": "monitoring",
+        "body": "We are making progress on outstanding backfills. Metrics and Logs backfills are still in progress.\nFor products still undergoing backfilling, queries that include data from the backfilled windows may appear incomplete for the affected subset of customers.\nWe will provide next update no later than Oct 22, 16:00 UTC.",
+        "created_at": "2025-10-22T09:10:11.657Z"
+      },
+      {
+        "native_id": "6dz7vb9gdlf0",
+        "status": "resolved",
+        "body": "Backfills for Metrics and Log Management data have completed. All systems are back to normal.",
+        "created_at": "2025-10-22T14:40:11.62Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-23T08:40:20.513-04:00",
+          "description": "Application Performance Monitoring (services and traces)",
+          "group": false,
+          "group_id": null,
+          "id": "p4hwj4wsc5wf",
+          "name": "APM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.448-04:00"
+        },
+        {
+          "created_at": "2025-09-18T16:47:45.901-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s1nkvpbqvr55",
+          "name": "App Builder",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2025-09-18",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:11:59.926-04:00"
+        },
+        {
+          "created_at": "2023-11-13T17:07:35.335-05:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "wxl8hfbylpf5",
+          "name": "Cloud Cost Management",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-11-13",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:05.570-04:00"
+        },
+        {
+          "created_at": "2021-09-07T03:50:29.684-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "34qkhdj3s176",
+          "name": "Continuous Profiler",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2021-09-07",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:10.367-04:00"
+        },
+        {
+          "created_at": "2018-04-24T16:10:20.080-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "1w2mz2hzw0cz",
+          "name": "Log Management",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 22,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:10.444-04:00"
+        },
+        {
+          "created_at": "2021-07-08T12:02:36.463-04:00",
+          "description": "Real User Monitoring",
+          "group": false,
+          "group_id": null,
+          "id": "wb6d6tss5zph",
+          "name": "RUM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 30,
+          "showcase": false,
+          "start_date": "2021-07-08",
+          "status": "operational",
+          "updated_at": "2026-07-29T12:53:24.410-04:00"
+        },
+        {
+          "created_at": "2023-11-13T17:08:06.786-05:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "g9s6dpk03782",
+          "name": "Workflow Automation",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 37,
+          "showcase": false,
+          "start_date": "2023-11-13",
+          "status": "operational",
+          "updated_at": "2026-06-12T14:49:23.112-04:00"
+        }
+      ],
+      "created_at": "2025-10-20T08:45:48.000-04:00",
+      "id": "vjgmxjdf0ps5",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Backfills for Metrics and Log Management data have completed. All systems are back to normal.",
+          "created_at": "2025-10-22T10:40:11.620-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-22T10:40:11.620-04:00",
+          "id": "6dz7vb9gdlf0",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "resolved",
+          "tweet_id": 1981007683764539707,
+          "updated_at": "2025-10-22T10:40:11.949-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are making progress on outstanding backfills. Metrics and Logs backfills are still in progress.\nFor products still undergoing backfilling, queries that include data from the backfilled windows may appear incomplete for the affected subset of customers.\nWe will provide next update no later than Oct 22, 16:00 UTC.",
+          "created_at": "2025-10-22T05:10:11.657-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-22T05:10:11.657-04:00",
+          "id": "zgmk547xcwgc",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "monitoring",
+          "tweet_id": 1980924636645965894,
+          "updated_at": "2025-10-22T05:10:11.978-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are making progress on outstanding backfills. Cloud Cost Monitoring backfill is complete. Metrics and Logs backfills are still in progress.\nFor products still undergoing backfilling, queries that include data from the backfilled windows may appear incomplete for the affected subset of customers.\nWe will provide next update no later than Oct 22, 10:00 UTC.",
+          "created_at": "2025-10-21T17:35:30.223-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-21T17:35:30.223-04:00",
+          "id": "dp8q6w0cbfnl",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "monitoring",
+          "tweet_id": 1980749812007047191,
+          "updated_at": "2025-10-21T17:35:30.562-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing the work on outstanding backfills which are not yet fully complete, during this process queries that include data from the backfilled windows may appear incomplete for the affected subset of customers and products.\nWe will resolve the incident when the backfills are complete or before Oct 21, 22:00 UTC.",
+          "created_at": "2025-10-21T14:04:56.681-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-21T14:04:56.681-04:00",
+          "id": "q2bc5cqns5hl",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "monitoring",
+          "tweet_id": 1980696823036850499,
+          "updated_at": "2025-10-21T14:04:56.986-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "All products have been stable since the last update. We are continuing the work on outstanding backfills, during this process queries that include data from the backfilled windows may appear incomplete for the affected subset of customers and products.\nWe will resolve the incident when the backfills are complete or before Oct 21, 16:00 UTC.",
+          "created_at": "2025-10-21T06:20:29.966-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-21T06:20:29.966-04:00",
+          "id": "hb66zyx7g1g3",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "monitoring",
+          "tweet_id": 1980579941684232360,
+          "updated_at": "2025-10-21T06:20:30.300-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are seeing recovery across all of our products, and live data and monitor evaluations have resumed for all affected products. Most historical data in Logs has been backfilled and we have a small number of ongoing backfills in Metrics and other products. We will continue to monitor the situation overnight, and our next update will be 09:00 UTC.",
+          "created_at": "2025-10-20T21:32:17.188-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T21:32:17.188-04:00",
+          "id": "vlql8mpj4tn8",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "monitoring",
+          "tweet_id": 1980447016611361147,
+          "updated_at": "2025-10-20T21:32:18.490-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are seeing recovery for APM.\nWe continue to see delays in processing that impact the following products: Distribution Metrics, RUM, CCM, and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+          "created_at": "2025-10-20T20:25:47.766-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T20:25:47.766-04:00",
+          "id": "j2dtkm3mx4x6",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980430280738722235,
+          "updated_at": "2025-10-20T20:25:48.340-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Logs data have been backfilled, and users should no longer see gaps in their historical logs. Log Archives and Log Forwarding were paused between 15:00 and 18:30 UTC, and we are working to re-forward any logs from that time period.\n\nWe continue to see delays in processing that impact the following products: Distribution Metrics, APM, RUM, CCM, and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+          "created_at": "2025-10-20T18:41:41.231-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2025-10-20T19:33:41.000-04:00",
+          "id": "sq759qp2y7vx",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2025-10-20T19:42:49.125-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are seeing recovery in Profiling.\n\nLogs data submitted after 21:30 UTC should be processed normally. Users may see gaps in historical logs prior to 21:30 UTC while our backfill is in progress.\n\nIn addition to Log Management we continue to see delays in processing that impacts the following products: Distribution Metrics, APM, RUM, CCM and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+          "created_at": "2025-10-20T18:40:04.391-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T18:40:04.391-04:00",
+          "id": "8n070qz4d0v5",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980403673537880468,
+          "updated_at": "2025-10-20T18:40:04.699-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are seeing recovery in AWS Metrics. Logs data submitted after 21:30 UTC should be processed normally. Users may see gaps in historical logs prior to 21:30 UTC while our backfill is in progress.\nIn addition to Log Management we continue to see delays in processing that impacts the following products: Distribution Metrics, APM, RUM, Profiling, CCM and Product Analytics. As a result of this issue, some users may see only a subset of their data when querying those products or viewing pages that rely on telemetry from those products.",
+          "created_at": "2025-10-20T17:47:01.189-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T17:47:01.189-04:00",
+          "id": "dz98ls366xmz",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980390322325864623,
+          "updated_at": "2025-10-20T17:47:01.519-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are seeing progress in telemetry data coming from AWS into Datadog. We are starting to see our capacity requests being fulfilled more slowly than usual. App Builder and Workflow Automation are seeing recovery.\nOur processing is still delayed impacting multiple products - Distribution Metrics, APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.",
+          "created_at": "2025-10-20T16:14:06.860-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T16:14:06.860-04:00",
+          "id": "0dwcn2pvbd4n",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980366942499373381,
+          "updated_at": "2025-10-20T16:14:07.339-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are seeing progress in telemetry data coming from AWS into Datadog. Also, we are starting to see our capacity requests being fulfilled.\nOur processing is still delayed impacting multiple products - Distribution Metrics, APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.",
+          "created_at": "2025-10-20T15:01:20.124-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T15:01:20.124-04:00",
+          "id": "2w57ldcpks8x",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980348626431012927,
+          "updated_at": "2025-10-20T15:01:20.431-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and for all products except RUM we expect the data will be backfilled once the service is fully operational again.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.\nDue to upstream provider issues, we are also continuing to see unavailability of telemetry data coming from AWS into Datadog.",
+          "created_at": "2025-10-20T14:04:57.925-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T14:04:57.925-04:00",
+          "id": "xb9n5jnxhyw9",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980334440523178092,
+          "updated_at": "2025-10-20T14:04:58.288-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wxl8hfbylpf5",
+              "name": "Cloud Cost Management",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9s6dpk03782",
+              "name": "Workflow Automation",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "s1nkvpbqvr55",
+              "name": "App Builder",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "APM, RUM, Log Management, Profiling, CCM and Product Analytics data is still delayed. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and for all products except RUM we expect the data will be backfilled once the service is fully operational again.\nApp Builder and Workflow Automation are also experiencing elevated errors, as a result customers might not be to query applications and workflows might take longer to execute.\nDue to upstream provider issues, we are also continuing to see unavailability of telemetry data coming from AWS into Datadog.",
+          "created_at": "2025-10-20T13:05:04.842-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T13:05:04.842-04:00",
+          "id": "b1j1wrm81dpb",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980319370778923185,
+          "updated_at": "2025-10-20T13:05:05.357-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are still seeing increased latency processing for those products and the associated monitors are delayed.\nWe are continuing to work on bringing new capacity online and will continue to provide updates on this issue.",
+          "created_at": "2025-10-20T11:18:31.574-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T11:18:31.574-04:00",
+          "id": "vsghtqt1p6s2",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980292554596974824,
+          "updated_at": "2025-10-20T11:18:31.882-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "1w2mz2hzw0cz",
+              "name": "Log Management",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "34qkhdj3s176",
+              "name": "Profiling",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing APM, RUM, Log Management and Profiling. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nMonitors using the impacted data are delayed.\nWe are working on bringing new capacity online and will provide an update once the service is fully operational again.",
+          "created_at": "2025-10-20T10:07:22.428-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T10:07:22.000-04:00",
+          "id": "dyhf5v6y3pch",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980274649851437408,
+          "updated_at": "2025-10-20T10:08:06.469-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "wb6d6tss5zph",
+              "name": "RUM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing APM, RUM, Log Management and Profiling. As a result of this issue, some users may see only a subset of their data when querying those different products, other product pages using the same underlying product data will be impacted as well.\nWe are working on bringing new capacity online and the data will be backfilled once the service is fully operational again.",
+          "created_at": "2025-10-20T08:45:48.526-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T08:45:48.000-04:00",
+          "id": "jk9jc6z4mz3q",
+          "incident_id": "vjgmxjdf0ps5",
+          "status": "identified",
+          "tweet_id": 1980254122805981234,
+          "updated_at": "2025-10-20T09:58:11.205-04:00"
+        }
+      ],
+      "monitoring_at": "2025-10-20T21:32:17.188-04:00",
+      "name": "Multiple products impacted with data delays",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2025-10-22T10:40:11.620-04:00",
+      "shortlink": "https://stspg.io/gzvrd592kg4t",
+      "started_at": "2025-10-20T08:45:48.000-04:00",
+      "status": "resolved",
+      "updated_at": "2025-10-22T10:40:11.956-04:00"
+    }
+  }
+]

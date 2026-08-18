@@ -1,0 +1,260 @@
+[
+  {
+    "key": "stripe/s6hpm263c04x",
+    "vendor": "stripe",
+    "native_id": "s6hpm263c04x",
+    "title": "Elevated 3DS errors on Mastercard transactions",
+    "url": "https://stspg.io/l0pf76xd55ny",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-15T08:06:18.401Z",
+    "resolved_at": "2026-07-15T09:42:49.146Z",
+    "duration_minutes": 96,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "51cpjt6hc56p",
+        "status": "identified",
+        "body": "We’re observing elevated 3DS errors for Mastercard transactions starting 07:00 UTC. We are engaging with the Mastercard team and we will provide an update as soon as we have more information.",
+        "created_at": "2026-07-15T08:06:18.548Z"
+      },
+      {
+        "native_id": "x3vwh59q00f2",
+        "status": "investigating",
+        "body": "We are starting to see improvement in the elevated 3D Secure errors affecting Mastercard transactions. The impact still continues however Stripe engagement with Mastercard teams continue. We will provide further updates once we have observed recovery.",
+        "created_at": "2026-07-15T09:01:12.645Z"
+      },
+      {
+        "native_id": "42b6v9frn99r",
+        "status": "monitoring",
+        "body": "As of 09:06 UTC, we can confirm that the elevated 3D Secure errors on Mastercard transactions have recovered following certificate rotation by Mastercard. We're continuing to validate that this issue is fully resolved and will provide further updates once we have observed sustained recovery.",
+        "created_at": "2026-07-15T09:17:51.957Z"
+      },
+      {
+        "native_id": "79gh969xs7df",
+        "status": "resolved",
+        "body": "From 2026-07-15 07:00:00 UTC to 09:06:00 UTC, we experienced elevated 3D Secure errors on Mastercard transactions due to an expired certificate on the upstream Mastercard service. Mastercard identified and resolved the issue on their end. We have verified that all certificates are now valid and transactions are processing normally.",
+        "created_at": "2026-07-15T09:42:49.146Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-17T06:29:02.991Z"
+        }
+      ],
+      "created_at": "2026-07-15T08:06:18.416Z",
+      "id": "s6hpm263c04x",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 2026-07-15 07:00:00 UTC to 09:06:00 UTC, we experienced elevated 3D Secure errors on Mastercard transactions due to an expired certificate on the upstream Mastercard service. Mastercard identified and resolved the issue on their end. We have verified that all certificates are now valid and transactions are processing normally.",
+          "created_at": "2026-07-15T09:42:49.146Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:42:49.146Z",
+          "id": "79gh969xs7df",
+          "incident_id": "s6hpm263c04x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:42:49.146Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 09:06 UTC, we can confirm that the elevated 3D Secure errors on Mastercard transactions have recovered following certificate rotation by Mastercard. We're continuing to validate that this issue is fully resolved and will provide further updates once we have observed sustained recovery.",
+          "created_at": "2026-07-15T09:17:51.957Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:17:51.957Z",
+          "id": "42b6v9frn99r",
+          "incident_id": "s6hpm263c04x",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:17:51.957Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are starting to see improvement in the elevated 3D Secure errors affecting Mastercard transactions. The impact still continues however Stripe engagement with Mastercard teams continue. We will provide further updates once we have observed recovery.",
+          "created_at": "2026-07-15T09:01:12.645Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:01:12.645Z",
+          "id": "x3vwh59q00f2",
+          "incident_id": "s6hpm263c04x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:01:12.645Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re observing elevated 3DS errors for Mastercard transactions starting 07:00 UTC. We are engaging with the Mastercard team and we will provide an update as soon as we have more information.",
+          "created_at": "2026-07-15T08:06:18.548Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T08:06:18.548Z",
+          "id": "51cpjt6hc56p",
+          "incident_id": "s6hpm263c04x",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T08:06:18.548Z"
+        }
+      ],
+      "monitoring_at": "2026-07-15T09:17:51.957Z",
+      "name": "Elevated 3DS errors on Mastercard transactions",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T09:42:49.146Z",
+      "shortlink": "https://stspg.io/l0pf76xd55ny",
+      "started_at": "2026-07-15T08:06:18.401Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T09:42:49.224Z"
+    }
+  },
+  {
+    "key": "stripe/v6sllx288pwy",
+    "vendor": "stripe",
+    "native_id": "v6sllx288pwy",
+    "title": "Elevated Issuing API Errors",
+    "url": "https://stspg.io/16s7hszs8vj7",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-17T19:56:33.851Z",
+    "resolved_at": "2026-07-17T20:24:44.397Z",
+    "duration_minutes": 28,
+    "components": [
+      "Stripe API"
+    ],
+    "updates": [
+      {
+        "native_id": "80f57njv06f0",
+        "status": "identified",
+        "body": "Starting 19:00 UTC we started seeing elevated error rates affecting Issuing API requests, resulting in failing credit card transactions. We've identified the cause and are working to mitigate. We will provide an update when we start seeing recovery.",
+        "created_at": "2026-07-17T19:56:33.937Z"
+      },
+      {
+        "native_id": "wshvdq6dzm1p",
+        "status": "resolved",
+        "body": "From 19:00–19:55 UTC on July 17, 2026, Issuing users did not receive real-time authorization request webhooks and experienced declined transactions. All systems have recovered and are operating normally.",
+        "created_at": "2026-07-17T20:24:44.397Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-08-06T16:24:32.575Z"
+        }
+      ],
+      "created_at": "2026-07-17T19:56:33.859Z",
+      "id": "v6sllx288pwy",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 19:00–19:55 UTC on July 17, 2026, Issuing users did not receive real-time authorization request webhooks and experienced declined transactions. All systems have recovered and are operating normally.",
+          "created_at": "2026-07-17T20:24:44.397Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-17T20:24:44.397Z",
+          "id": "wshvdq6dzm1p",
+          "incident_id": "v6sllx288pwy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T20:24:44.397Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Starting 19:00 UTC we started seeing elevated error rates affecting Issuing API requests, resulting in failing credit card transactions. We've identified the cause and are working to mitigate. We will provide an update when we start seeing recovery.",
+          "created_at": "2026-07-17T19:56:33.937Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-17T19:56:33.937Z",
+          "id": "80f57njv06f0",
+          "incident_id": "v6sllx288pwy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T19:56:33.937Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Issuing API Errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-17T20:24:44.397Z",
+      "shortlink": "https://stspg.io/16s7hszs8vj7",
+      "started_at": "2026-07-17T19:56:33.851Z",
+      "status": "resolved",
+      "updated_at": "2026-07-17T20:24:44.412Z"
+    }
+  }
+]

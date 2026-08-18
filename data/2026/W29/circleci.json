@@ -1,0 +1,983 @@
+[
+  {
+    "key": "circleci/n1tc2lw9q7l0",
+    "vendor": "circleci",
+    "native_id": "n1tc2lw9q7l0",
+    "title": "Issues with network routing for Mac jobs",
+    "url": "https://stspg.io/vc3sdl5vsqyr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-13T18:55:54.294Z",
+    "resolved_at": "2026-07-13T19:40:22.542Z",
+    "duration_minutes": 44,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "nw42z8jcpj5h",
+        "status": "investigating",
+        "body": "We've received reports of intermittent network issues between our mac infrastructure and a VCS provider. We are investigating and will provide updates.",
+        "created_at": "2026-07-13T18:55:54.379Z"
+      },
+      {
+        "native_id": "wwdxk6fbc2cz",
+        "status": "identified",
+        "body": "We're working with our Mac infrastructure provider to attempt a mitigation. Will update again shortly.",
+        "created_at": "2026-07-13T19:11:04.646Z"
+      },
+      {
+        "native_id": "4bk0zw5hw9fn",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has implemented a fix, we're starting to see recovery. We're monitoring and we'll update again shortly.",
+        "created_at": "2026-07-13T19:29:52.04Z"
+      },
+      {
+        "native_id": "d9m27khylqsq",
+        "status": "resolved",
+        "body": "We've confirmed the fix with our infrastructure provider and successful tests on our end.  If customers continue to see any failed runs, please run again for a successful connection and reach out to Support if any further issues.",
+        "created_at": "2026-07-13T19:40:22.542Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-14T05:00:07.441Z"
+        }
+      ],
+      "created_at": "2026-07-13T18:55:54.301Z",
+      "id": "n1tc2lw9q7l0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've confirmed the fix with our infrastructure provider and successful tests on our end.  If customers continue to see any failed runs, please run again for a successful connection and reach out to Support if any further issues.",
+          "created_at": "2026-07-13T19:40:22.542Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:40:22.542Z",
+          "id": "d9m27khylqsq",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:40:22.542Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has implemented a fix, we're starting to see recovery. We're monitoring and we'll update again shortly.",
+          "created_at": "2026-07-13T19:29:52.040Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:29:52.040Z",
+          "id": "4bk0zw5hw9fn",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:29:52.040Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're working with our Mac infrastructure provider to attempt a mitigation. Will update again shortly.",
+          "created_at": "2026-07-13T19:11:04.646Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:11:04.646Z",
+          "id": "wwdxk6fbc2cz",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:11:04.646Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We've received reports of intermittent network issues between our mac infrastructure and a VCS provider. We are investigating and will provide updates.",
+          "created_at": "2026-07-13T18:55:54.379Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T18:55:54.379Z",
+          "id": "nw42z8jcpj5h",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T18:55:54.379Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T19:29:52.040Z",
+      "name": "Issues with network routing for Mac jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-13T19:40:22.542Z",
+      "shortlink": "https://stspg.io/vc3sdl5vsqyr",
+      "started_at": "2026-07-13T18:55:54.294Z",
+      "status": "resolved",
+      "updated_at": "2026-07-13T19:40:22.558Z"
+    }
+  },
+  {
+    "key": "circleci/7cnl777wp9qz",
+    "vendor": "circleci",
+    "native_id": "7cnl777wp9qz",
+    "title": "Issues with network routing for Mac jobs",
+    "url": "https://stspg.io/vg35mbl8lxpg",
+    "impact": "minor",
+    "status": "postmortem",
+    "started_at": "2026-07-13T21:52:02.877Z",
+    "resolved_at": "2026-07-14T23:18:34.925Z",
+    "duration_minutes": 1526,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "jw1xk05hx0pg",
+        "status": "investigating",
+        "body": "We're received some reports of intermittent network issues between our mac infrastructure and a VCS provider again. We are investigating and will provide updates.",
+        "created_at": "2026-07-13T21:52:03.001Z"
+      },
+      {
+        "native_id": "m9frghgc29ph",
+        "status": "investigating",
+        "body": "We're still investigating these intermittent network issues. We'll update again shortly, we appreciate your patience.",
+        "created_at": "2026-07-13T22:21:02.826Z"
+      },
+      {
+        "native_id": "4wzxv2pv33lb",
+        "status": "investigating",
+        "body": "We've been able to reproduce the issue, but it still appears to be very much intermittent. We're continuing to work with our Mac infrastructure provider to help diagnose the issue. We'll update again soon.",
+        "created_at": "2026-07-13T23:13:24.434Z"
+      },
+      {
+        "native_id": "hd0t385cdp74",
+        "status": "monitoring",
+        "body": "We've identified the issue. Some customers may experience jobs that hang or fail to progress during Github fetch steps due to intermittent networking issues. Our engineers are actively monitoring.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-13T23:35:24.593Z"
+      },
+      {
+        "native_id": "k1dlxg14sfdr",
+        "status": "identified",
+        "body": "Unfortunately there are still some customers that may be experiencing jobs that hang or fail to progress during Github fetch steps due to ongoing intermittent networking issues with our Mac infrastructure provider. Our engineers are actively working with them to resolve this. We appreciate your patience.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T13:59:54.591Z"
+      },
+      {
+        "native_id": "wqphn66st6hh",
+        "status": "identified",
+        "body": "Our Mac infrastructure provider is testing changes to their network configuration in an effort to isolate the source of the issue. We're actively validating whether this resolves the impact and will follow up with another update soon. In the meantime, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T15:35:01.27Z"
+      },
+      {
+        "native_id": "mjnlkwxtsq46",
+        "status": "identified",
+        "body": "We've identified the issue as some inbound routes from the affected VCS provider causing significantly lower available bandwidth which is negatively impacting repo fetch times. We're working with our Mac infrastructure provider to attempt to shift inbound traffic to a different route, however this process may take an extended period of time to complete. We will continue to provide updates as they become available.\n\nAs we've shared in previous updates, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T16:31:42.627Z"
+      },
+      {
+        "native_id": "pssjdn3d943w",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has shifted the inbound routes and we are seeing recovery in VCS fetch times. We will be continuing to monitor this issue over the next few hours. We'll update again soon.",
+        "created_at": "2026-07-14T16:58:55.916Z"
+      },
+      {
+        "native_id": "99zzqg0p7msd",
+        "status": "monitoring",
+        "body": "We're continuing to see slow, progressive recovery in VCS fetch times. We're going to continuing monitoring and update again soon. We appreciate your patience.",
+        "created_at": "2026-07-14T18:28:25.595Z"
+      },
+      {
+        "native_id": "6xzp6y5jkxg3",
+        "status": "investigating",
+        "body": "We're starting to see VCS fetch times rising again. Our engineering team is actively investigating and working with our Mac infrastructure provider to resolve this. Again, we appreciate your patience.",
+        "created_at": "2026-07-14T20:18:56.277Z"
+      },
+      {
+        "native_id": "c1m5bspmmqc8",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has shifted more traffic to working network providers and we're starting to see significant recovery again in VCS fetch times. As always, our engineering team will continue to monitor this closely and we'll provide another update soon.",
+        "created_at": "2026-07-14T22:15:51.903Z"
+      },
+      {
+        "native_id": "k1jb2bmq3kfd",
+        "status": "resolved",
+        "body": "We continue to see significant VCS fetch time recovery over the last couple of hours. We're going to resolve this incident, and our engineering team will continue to monitor closely. We greatly appreciate your patience as we worked through this with our Mac infrastructure provider. Please reach out to our Support team if you have any issues.",
+        "created_at": "2026-07-14T23:18:34.925Z"
+      },
+      {
+        "native_id": "c4yjs46km5tz",
+        "status": "postmortem",
+        "body": "## Summary\n\nFrom 18:00 UTC on July 13, 2026 to 23:18 UTC on July 14, 2026, some customers running jobs on CircleCI's macOS fleet experienced jobs that hung or failed to progress during GitHub fetch steps. For these customers, GitHub fetch steps which would ordinarily take 1-2 minutes took 20-30 minutes, and timed out. The issue was caused by a capacity and routing problem on the network path between our Mac infrastructure provider and GitHub, and the associated intermittent networking issues slowed down fetches from GitHub. During the entire incident, our team worked directly with our Mac infrastructure provider to identify and reroute traffic away from the affected network paths. We resolved an initial occurrence at 19:40 UTC on July 13. The issue recurred at 21:52 UTC that same day, we reopened the incident, and it was fully resolved by 23:18 UTC on July 14.\n\nOur macOS fleet had a similar issue several weeks ago. From 20:18 UTC on June 24, 2026 to 03:09 UTC on June 25, 2026, customers experienced a [similar incident](https://status.circleci.com/incidents/gvysjmkf4ct9) affecting the ability of macOS jobs to reach GitHub. That incident was also caused by a network routing problem in our Mac infrastructure provider.\n\nWe thank our customers for their patience while we worked through this incident. Please see below for specific actions which CircleCI and our Mac infrastructure provider will be taking. Please reach out to our support team with any questions or concerns.\n\nThe status pages for this incident can be found [here](https://status.circleci.com/incidents/n1tc2lw9q7l0) and [here](https://status.circleci.com/incidents/7cnl777wp9qz).\n\n## Background\n\nCircleCI's macOS jobs are hosted on a third-party Mac infrastructure provider. That provider connects to the broader internet, including services like GitHub, over multiple redundant upstream network paths. When one of those paths is experiencing reduced capacity or a routing problem, jobs that are fetching code or dependencies from a destination along that network path can slow down or hang intermittently, even when CircleCI's own platform, the third-party infrastructure provider, and the destination service are all operating normally.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nAt 18:00 on July 13, some customers running macOS jobs began experiencing intermittent failures and delays fetching code and dependencies from GitHub. We opened an investigation and alerted our customers via our status page at 18:55. By 19:04, our Mac infrastructure provider identified increased latency on one of its network paths and rerouted traffic around it. Fetch times recovered, and we moved the incident to `Monitoring` at 19:29, and to `Resolved` at 19:40.\n\nAt 20:44 UTC, customers reported that the issue had returned. We reopened the incident and updated our status page to `Investigating` at 21:52. Over the following two hours, we worked closely with our infrastructure provider to gather diagnostic data in an effort to isolate the affected network path. In the meantime, we published guidance recommending that customers increase their `no_output_timeout` setting to 15–20 minutes, to allow more time for GitHub fetches to complete during the intermittent slowdowns, and moved the status page to `Monitoring` at 23:35.\n\nAfter publishing the workaround guidance at 23:35 UTC on July 13, we expected the underlying network issue to improve overnight. It did not. At 13:59 UTC on July 14, we confirmed that customers were still experiencing intermittent failures and moved the status page back to `Investigating`. Our engineering team reproduced the failure directly using our own testing tools, which helped confirm this was a general `git-fetch` issue rather than something specific to any particular build tool, container image, or software update. At 15:35, we updated the status page to share that our infrastructure provider was testing changes to its network configuration to isolate the source of the issue. At 16:31, we updated the status page again to share that we'd identified the cause as reduced inbound bandwidth on a specific route, and that we were working with our provider to shift traffic to a different route. At 16:36, our infrastructure provider identified the affected network paths and shifted traffic away from them, fetch times recovered, and at 16:58, we updated the status page to `Monitoring`.\n\nBy early afternoon, some customers were again seeing slow fetch times, and we moved the status page back to `Investigating` at 20:18. Our infrastructure provider identified two additional network paths with degraded performance and shifted traffic away from them by 22:07. Fetch times stabilized over the following hour, and we marked the incident `Resolved` at 23:18.\n\nIn total, customers running Mac jobs may have experienced intermittent job slowdowns or failures for portions of the window between 18:00 UTC on July 13 and 23:18 UTC on July 14. Our infrastructure provider has since reported clean test results across its network and believes the underlying capacity issue originated further upstream, closer to GitHub, rather than within its own network. We are continuing to monitor this closely.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are building additional automated monitoring for macOS fleet GitHub-fetch performance.** Our extensive automated monitoring did not catch this incident. We are now adding end-to-end monitoring for GitHub fetches in particular, in order to detect similar issues proactively.\n\n**We are working directly with our Mac infrastructure provider on faster, more proactive detection.** We are asking our provider to build monitoring that can detect a degraded network path and reroute around it automatically, rather than relying on CircleCI to identify and request a reroute during an active incident.\n\n**We are turning the diagnostic tooling we built during this incident into a standing capability.** This will let us detect and reproduce this class of network failure on demand going forward, rather than assembling test infrastructure during an active incident.\n\n**We are reviewing our incident response process for a sufficient confirmation window before marking a network-related incident Resolved.** This incident briefly recurred after an early, premature resolution; we are formalizing a minimum period of confirmed-clean monitoring before closing incidents of this type. We will continue to provide regular updates along the way as investigation and remediation continues.\n\n**We are actively moving from a single provider for Mac infrastructure** **to multiple providers.** This will allow CircleCI to route incoming customer workloads to the most available and best-performing provider.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+        "created_at": "2026-07-16T01:56:30.452Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-14T05:00:07.441Z"
+        }
+      ],
+      "created_at": "2026-07-13T21:52:02.888Z",
+      "id": "7cnl777wp9qz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nFrom 18:00 UTC on July 13, 2026 to 23:18 UTC on July 14, 2026, some customers running jobs on CircleCI's macOS fleet experienced jobs that hung or failed to progress during GitHub fetch steps. For these customers, GitHub fetch steps which would ordinarily take 1-2 minutes took 20-30 minutes, and timed out. The issue was caused by a capacity and routing problem on the network path between our Mac infrastructure provider and GitHub, and the associated intermittent networking issues slowed down fetches from GitHub. During the entire incident, our team worked directly with our Mac infrastructure provider to identify and reroute traffic away from the affected network paths. We resolved an initial occurrence at 19:40 UTC on July 13. The issue recurred at 21:52 UTC that same day, we reopened the incident, and it was fully resolved by 23:18 UTC on July 14.\n\nOur macOS fleet had a similar issue several weeks ago. From 20:18 UTC on June 24, 2026 to 03:09 UTC on June 25, 2026, customers experienced a [similar incident](https://status.circleci.com/incidents/gvysjmkf4ct9) affecting the ability of macOS jobs to reach GitHub. That incident was also caused by a network routing problem in our Mac infrastructure provider.\n\nWe thank our customers for their patience while we worked through this incident. Please see below for specific actions which CircleCI and our Mac infrastructure provider will be taking. Please reach out to our support team with any questions or concerns.\n\nThe status pages for this incident can be found [here](https://status.circleci.com/incidents/n1tc2lw9q7l0) and [here](https://status.circleci.com/incidents/7cnl777wp9qz).\n\n## Background\n\nCircleCI's macOS jobs are hosted on a third-party Mac infrastructure provider. That provider connects to the broader internet, including services like GitHub, over multiple redundant upstream network paths. When one of those paths is experiencing reduced capacity or a routing problem, jobs that are fetching code or dependencies from a destination along that network path can slow down or hang intermittently, even when CircleCI's own platform, the third-party infrastructure provider, and the destination service are all operating normally.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nAt 18:00 on July 13, some customers running macOS jobs began experiencing intermittent failures and delays fetching code and dependencies from GitHub. We opened an investigation and alerted our customers via our status page at 18:55. By 19:04, our Mac infrastructure provider identified increased latency on one of its network paths and rerouted traffic around it. Fetch times recovered, and we moved the incident to `Monitoring` at 19:29, and to `Resolved` at 19:40.\n\nAt 20:44 UTC, customers reported that the issue had returned. We reopened the incident and updated our status page to `Investigating` at 21:52. Over the following two hours, we worked closely with our infrastructure provider to gather diagnostic data in an effort to isolate the affected network path. In the meantime, we published guidance recommending that customers increase their `no_output_timeout` setting to 15–20 minutes, to allow more time for GitHub fetches to complete during the intermittent slowdowns, and moved the status page to `Monitoring` at 23:35.\n\nAfter publishing the workaround guidance at 23:35 UTC on July 13, we expected the underlying network issue to improve overnight. It did not. At 13:59 UTC on July 14, we confirmed that customers were still experiencing intermittent failures and moved the status page back to `Investigating`. Our engineering team reproduced the failure directly using our own testing tools, which helped confirm this was a general `git-fetch` issue rather than something specific to any particular build tool, container image, or software update. At 15:35, we updated the status page to share that our infrastructure provider was testing changes to its network configuration to isolate the source of the issue. At 16:31, we updated the status page again to share that we'd identified the cause as reduced inbound bandwidth on a specific route, and that we were working with our provider to shift traffic to a different route. At 16:36, our infrastructure provider identified the affected network paths and shifted traffic away from them, fetch times recovered, and at 16:58, we updated the status page to `Monitoring`.\n\nBy early afternoon, some customers were again seeing slow fetch times, and we moved the status page back to `Investigating` at 20:18. Our infrastructure provider identified two additional network paths with degraded performance and shifted traffic away from them by 22:07. Fetch times stabilized over the following hour, and we marked the incident `Resolved` at 23:18.\n\nIn total, customers running Mac jobs may have experienced intermittent job slowdowns or failures for portions of the window between 18:00 UTC on July 13 and 23:18 UTC on July 14. Our infrastructure provider has since reported clean test results across its network and believes the underlying capacity issue originated further upstream, closer to GitHub, rather than within its own network. We are continuing to monitor this closely.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are building additional automated monitoring for macOS fleet GitHub-fetch performance.** Our extensive automated monitoring did not catch this incident. We are now adding end-to-end monitoring for GitHub fetches in particular, in order to detect similar issues proactively.\n\n**We are working directly with our Mac infrastructure provider on faster, more proactive detection.** We are asking our provider to build monitoring that can detect a degraded network path and reroute around it automatically, rather than relying on CircleCI to identify and request a reroute during an active incident.\n\n**We are turning the diagnostic tooling we built during this incident into a standing capability.** This will let us detect and reproduce this class of network failure on demand going forward, rather than assembling test infrastructure during an active incident.\n\n**We are reviewing our incident response process for a sufficient confirmation window before marking a network-related incident Resolved.** This incident briefly recurred after an early, premature resolution; we are formalizing a minimum period of confirmed-clean monitoring before closing incidents of this type. We will continue to provide regular updates along the way as investigation and remediation continues.\n\n**We are actively moving from a single provider for Mac infrastructure** **to multiple providers.** This will allow CircleCI to route incoming customer workloads to the most available and best-performing provider.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+          "created_at": "2026-07-16T01:56:30.452Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "c4yjs46km5tz",
+          "incident_id": "7cnl777wp9qz",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T01:56:42.742Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to see significant VCS fetch time recovery over the last couple of hours. We're going to resolve this incident, and our engineering team will continue to monitor closely. We greatly appreciate your patience as we worked through this with our Mac infrastructure provider. Please reach out to our Support team if you have any issues.",
+          "created_at": "2026-07-14T23:18:34.925Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T23:18:34.925Z",
+          "id": "k1jb2bmq3kfd",
+          "incident_id": "7cnl777wp9qz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T23:18:34.925Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has shifted more traffic to working network providers and we're starting to see significant recovery again in VCS fetch times. As always, our engineering team will continue to monitor this closely and we'll provide another update soon.",
+          "created_at": "2026-07-14T22:15:51.903Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T22:15:51.903Z",
+          "id": "c1m5bspmmqc8",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T22:15:51.903Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're starting to see VCS fetch times rising again. Our engineering team is actively investigating and working with our Mac infrastructure provider to resolve this. Again, we appreciate your patience.",
+          "created_at": "2026-07-14T20:18:56.277Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T20:18:56.277Z",
+          "id": "6xzp6y5jkxg3",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T20:18:56.277Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're continuing to see slow, progressive recovery in VCS fetch times. We're going to continuing monitoring and update again soon. We appreciate your patience.",
+          "created_at": "2026-07-14T18:28:25.595Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T18:28:25.595Z",
+          "id": "99zzqg0p7msd",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T18:28:25.595Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has shifted the inbound routes and we are seeing recovery in VCS fetch times. We will be continuing to monitor this issue over the next few hours. We'll update again soon.",
+          "created_at": "2026-07-14T16:58:55.916Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T16:58:55.916Z",
+          "id": "pssjdn3d943w",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T16:58:55.916Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified the issue as some inbound routes from the affected VCS provider causing significantly lower available bandwidth which is negatively impacting repo fetch times. We're working with our Mac infrastructure provider to attempt to shift inbound traffic to a different route, however this process may take an extended period of time to complete. We will continue to provide updates as they become available.\n\nAs we've shared in previous updates, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T16:31:42.627Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T16:31:42.627Z",
+          "id": "mjnlkwxtsq46",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T16:31:42.627Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider is testing changes to their network configuration in an effort to isolate the source of the issue. We're actively validating whether this resolves the impact and will follow up with another update soon. In the meantime, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T15:35:01.270Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T15:35:01.270Z",
+          "id": "wqphn66st6hh",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T15:35:01.270Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Unfortunately there are still some customers that may be experiencing jobs that hang or fail to progress during Github fetch steps due to ongoing intermittent networking issues with our Mac infrastructure provider. Our engineers are actively working with them to resolve this. We appreciate your patience.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T13:59:54.591Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T13:59:54.591Z",
+          "id": "k1dlxg14sfdr",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T13:59:54.591Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified the issue. Some customers may experience jobs that hang or fail to progress during Github fetch steps due to intermittent networking issues. Our engineers are actively monitoring.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-13T23:35:24.593Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T23:35:24.593Z",
+          "id": "hd0t385cdp74",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T23:35:24.593Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've been able to reproduce the issue, but it still appears to be very much intermittent. We're continuing to work with our Mac infrastructure provider to help diagnose the issue. We'll update again soon.",
+          "created_at": "2026-07-13T23:13:24.434Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T23:13:24.434Z",
+          "id": "4wzxv2pv33lb",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T23:13:24.434Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're still investigating these intermittent network issues. We'll update again shortly, we appreciate your patience.",
+          "created_at": "2026-07-13T22:21:02.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T22:21:02.826Z",
+          "id": "m9frghgc29ph",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T22:21:02.826Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're received some reports of intermittent network issues between our mac infrastructure and a VCS provider again. We are investigating and will provide updates.",
+          "created_at": "2026-07-13T21:52:03.001Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T21:52:03.001Z",
+          "id": "jw1xk05hx0pg",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T21:52:03.001Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T23:35:24.593Z",
+      "name": "Issues with network routing for Mac jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T23:18:34.925Z",
+      "shortlink": "https://stspg.io/vg35mbl8lxpg",
+      "started_at": "2026-07-13T21:52:02.877Z",
+      "status": "postmortem",
+      "updated_at": "2026-07-16T01:56:42.744Z"
+    }
+  },
+  {
+    "key": "circleci/gsyjwybg477g",
+    "vendor": "circleci",
+    "native_id": "gsyjwybg477g",
+    "title": "Login issues for some Bitbucket users",
+    "url": "https://stspg.io/lzl0fmm6xmts",
+    "impact": "minor",
+    "status": "postmortem",
+    "started_at": "2026-07-14T02:49:37.826Z",
+    "resolved_at": "2026-07-14T05:15:18.525Z",
+    "duration_minutes": 145,
+    "components": [
+      "Pipelines \u0026 Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "86bwth95zktk",
+        "status": "investigating",
+        "body": "We are currently investigating login errors affecting some customers using Bitbucket as their identity provider.",
+        "created_at": "2026-07-14T02:49:37.879Z"
+      },
+      {
+        "native_id": "qt7jvgmknkn5",
+        "status": "investigating",
+        "body": "Our team continues to investigate login errors affecting some customers using Bitbucket as their identity provider.",
+        "created_at": "2026-07-14T03:29:00.527Z"
+      },
+      {
+        "native_id": "7snz6zq1v0kl",
+        "status": "investigating",
+        "body": "What's impacted\nSome customers logging in with a Bitbucket-linked identity are affected. This may also include customers logging in with GitHub but have a linked Bitbucket identity on their account. Additionally, some customers are experiencing workflows that are not starting or updating.\n\nWhat can you expect\nAffected customers may see login errors. Some customers may also notice workflows that fail to start or do not update as expected. Thank you for your patience while our engineers investigate.\n\nNext update\nWe will provide another update as soon as we have more information to share",
+        "created_at": "2026-07-14T03:51:53.73Z"
+      },
+      {
+        "native_id": "rfnfhsdvdsxs",
+        "status": "monitoring",
+        "body": "What's impacted\nSome customers logging in with a Bitbucket-linked identity were affected. This may also have included customers logging in with GitHub who have a linked Bitbucket identity on their account. Some customers also experienced workflows that were not starting or updating.\n\nWhat can you expect\nA fix has been deployed. We are monitoring the situation to confirm full recovery.\n\nNext update\nWe will provide an update if anything changes",
+        "created_at": "2026-07-14T04:21:50.345Z"
+      },
+      {
+        "native_id": "s13yh49tx6z1",
+        "status": "resolved",
+        "body": "The issue where customers logging in with a Bitbucket-linked identity experienced login errors, and some customers experienced workflows that failed to start or did not update, has been resolved. \n\nWhat you may still experience and need to do\n- If you use Bitbucket as your login method, please log out and reauthenticate the CircleCI Bitbucket integration on your account.\n- If any of your workflows are stuck or showing missing status checks, please rerun them to pick up the fix.\n- If you continue to experience issues after taking these steps, please reach out to CircleCI Support.\n\nWe thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-07-14T05:15:18.525Z"
+      },
+      {
+        "native_id": "9s71wc2kbckp",
+        "status": "postmortem",
+        "body": "## Summary\n\nFrom 01:33 UTC to 05:18 UTC on July 14, 2026, customers with a Bitbucket-linked identity were unable to log in to CircleCI, and some customers experienced workflows that failed to start or update, due to a change in how Bitbucket's OAuth service reports account permissions. At 05:07 UTC, we deployed a fix that corrected how our systems read the updated permissions field. Some customers needed to log out and re-authenticate their Bitbucket integration after we deployed the fix. Our systems continued processing the backlog of affected jobs until 08:39 UTC.\n\nWe thank our customers for their patience as we resolved this incident. Please reach out to our support team with any questions or concerns.\n\nThe status page for this incident can be found [here](https://status.circleci.com/incidents/gsyjwybg477g).\n\n## Background\n\nCircleCI supports logging in with a GitHub account, a Bitbucket account, or an email and password. When a customer logs in with a Bitbucket-linked identity, or when CircleCI needs to refresh the customer's access on their behalf, we exchange an authorization token with Bitbucket's OAuth service. This exchange includes a list of the permissions, or \"scopes,\" the customer has granted us, which Bitbucket and CircleCI use to confirm what CircleCI is authorized to do on the customer’s behalf.\n\n## What Happened\n\n\\(All times UTC\\)\n\nOn April 8, 2026, [Bitbucket announced a change to its OAuth service](https://developer.atlassian.com/cloud/bitbucket/changelog/#CHANGE-3139): it would be renaming the field used to report a customer's granted permissions. Bitbucket ran a transition period during which both the old and new field names were available, then fully removed the old field name on May 4, 2026. Our systems had not been updated to recognize the new field name, so once Bitbucket fully phased out the old one, requests that depended on it began to fail.\n\nAt 01:33 on July 14, 2026, our systems began failing to process permissions information returned for Bitbucket-linked accounts, because our systems still expected the old permissions structure. This caused login attempts for all Bitbucket-linked accounts to fail, including for customers who log in with GitHub but have a Bitbucket identity linked to their account.\n\nAt 01:59, automated monitoring alerted our engineering team to a spike in errors on the affected systems. The team began investigating immediately, confirmed customer impact at 02:38, and alerted customers via our status page at 02:51. By 03:00, the team had isolated the failures to the renamed Bitbucket field.\n\nBeginning at 03:17, workflow status updates for Bitbucket pipelines belonging to customers with an expired access token began to be dropped. The Bitbucket permissions check is used broadly across our platform, and these permissions failures also affected some of our internal job-processing systems. This caused a subset of workflows to become stuck without a final status, and caused some pull requests to show missing or stuck status checks.\n\nAt 04:21, the team deployed an initial fix that resolved the underlying issue, restoring the login flow and returning our internal permissions system to normal operation. Some affected customers needed to log out and log back in to pick up the fix. By 05:07, the team deployed two additional fixes so our systems would begin accepting Bitbucket's new permissions field format going forward. We resolved the incident at 05:18.\n\nSome customers did need to log out and re-authenticate their Bitbucket integration before their account fully recovered. Our systems continued processing a backlog of affected jobs, returning to normal levels by approximately 08:39.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are hardening our authorization code against upstream API changes.** This incident happened because our system did not gracefully handle a renamed field in a response from a third-party identity provider. We will be immediately updating our authorization code so that unexpected or missing fields from GitHub, Bitbucket, and GitLab are handled safely.\n\n**We are improving how we track upstream provider changes.** We currently already monitor changelogs from our identity providers for exactly this kind of breaking change, but we didn't add this particular provider change to our monitoring in time to catch it before it shipped. We are auditing and expanding this monitoring so provider announcements reach our team before they affect customers.\n\n**We are improving how we classify and communicate incidents in their earliest minutes.** This incident's initial classification did not immediately reflect its customer-facing severity. We are refining our incident tooling and guidance to help engineers identify and communicate customer impact more quickly.\n\n**We are improving the resilience of our workflow-processing pipeline.** A downstream failure in this incident caused some workflow status updates to be dropped rather than retried or clearly surfaced. We are reviewing this system's retry and error-handling behavior so similar downstream failures are more visible and easier to recover from.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+        "created_at": "2026-07-14T22:31:12.395Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-12T16:43:37.822Z"
+        }
+      ],
+      "created_at": "2026-07-14T02:49:37.834Z",
+      "id": "gsyjwybg477g",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nFrom 01:33 UTC to 05:18 UTC on July 14, 2026, customers with a Bitbucket-linked identity were unable to log in to CircleCI, and some customers experienced workflows that failed to start or update, due to a change in how Bitbucket's OAuth service reports account permissions. At 05:07 UTC, we deployed a fix that corrected how our systems read the updated permissions field. Some customers needed to log out and re-authenticate their Bitbucket integration after we deployed the fix. Our systems continued processing the backlog of affected jobs until 08:39 UTC.\n\nWe thank our customers for their patience as we resolved this incident. Please reach out to our support team with any questions or concerns.\n\nThe status page for this incident can be found [here](https://status.circleci.com/incidents/gsyjwybg477g).\n\n## Background\n\nCircleCI supports logging in with a GitHub account, a Bitbucket account, or an email and password. When a customer logs in with a Bitbucket-linked identity, or when CircleCI needs to refresh the customer's access on their behalf, we exchange an authorization token with Bitbucket's OAuth service. This exchange includes a list of the permissions, or \"scopes,\" the customer has granted us, which Bitbucket and CircleCI use to confirm what CircleCI is authorized to do on the customer’s behalf.\n\n## What Happened\n\n\\(All times UTC\\)\n\nOn April 8, 2026, [Bitbucket announced a change to its OAuth service](https://developer.atlassian.com/cloud/bitbucket/changelog/#CHANGE-3139): it would be renaming the field used to report a customer's granted permissions. Bitbucket ran a transition period during which both the old and new field names were available, then fully removed the old field name on May 4, 2026. Our systems had not been updated to recognize the new field name, so once Bitbucket fully phased out the old one, requests that depended on it began to fail.\n\nAt 01:33 on July 14, 2026, our systems began failing to process permissions information returned for Bitbucket-linked accounts, because our systems still expected the old permissions structure. This caused login attempts for all Bitbucket-linked accounts to fail, including for customers who log in with GitHub but have a Bitbucket identity linked to their account.\n\nAt 01:59, automated monitoring alerted our engineering team to a spike in errors on the affected systems. The team began investigating immediately, confirmed customer impact at 02:38, and alerted customers via our status page at 02:51. By 03:00, the team had isolated the failures to the renamed Bitbucket field.\n\nBeginning at 03:17, workflow status updates for Bitbucket pipelines belonging to customers with an expired access token began to be dropped. The Bitbucket permissions check is used broadly across our platform, and these permissions failures also affected some of our internal job-processing systems. This caused a subset of workflows to become stuck without a final status, and caused some pull requests to show missing or stuck status checks.\n\nAt 04:21, the team deployed an initial fix that resolved the underlying issue, restoring the login flow and returning our internal permissions system to normal operation. Some affected customers needed to log out and log back in to pick up the fix. By 05:07, the team deployed two additional fixes so our systems would begin accepting Bitbucket's new permissions field format going forward. We resolved the incident at 05:18.\n\nSome customers did need to log out and re-authenticate their Bitbucket integration before their account fully recovered. Our systems continued processing a backlog of affected jobs, returning to normal levels by approximately 08:39.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are hardening our authorization code against upstream API changes.** This incident happened because our system did not gracefully handle a renamed field in a response from a third-party identity provider. We will be immediately updating our authorization code so that unexpected or missing fields from GitHub, Bitbucket, and GitLab are handled safely.\n\n**We are improving how we track upstream provider changes.** We currently already monitor changelogs from our identity providers for exactly this kind of breaking change, but we didn't add this particular provider change to our monitoring in time to catch it before it shipped. We are auditing and expanding this monitoring so provider announcements reach our team before they affect customers.\n\n**We are improving how we classify and communicate incidents in their earliest minutes.** This incident's initial classification did not immediately reflect its customer-facing severity. We are refining our incident tooling and guidance to help engineers identify and communicate customer impact more quickly.\n\n**We are improving the resilience of our workflow-processing pipeline.** A downstream failure in this incident caused some workflow status updates to be dropped rather than retried or clearly surfaced. We are reviewing this system's retry and error-handling behavior so similar downstream failures are more visible and easier to recover from.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+          "created_at": "2026-07-14T22:31:12.395Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "9s71wc2kbckp",
+          "incident_id": "gsyjwybg477g",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T22:31:39.550Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue where customers logging in with a Bitbucket-linked identity experienced login errors, and some customers experienced workflows that failed to start or did not update, has been resolved. \n\nWhat you may still experience and need to do\n- If you use Bitbucket as your login method, please log out and reauthenticate the CircleCI Bitbucket integration on your account.\n- If any of your workflows are stuck or showing missing status checks, please rerun them to pick up the fix.\n- If you continue to experience issues after taking these steps, please reach out to CircleCI Support.\n\nWe thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-07-14T05:15:18.525Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T05:15:18.525Z",
+          "id": "s13yh49tx6z1",
+          "incident_id": "gsyjwybg477g",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T05:15:18.525Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "What's impacted\nSome customers logging in with a Bitbucket-linked identity were affected. This may also have included customers logging in with GitHub who have a linked Bitbucket identity on their account. Some customers also experienced workflows that were not starting or updating.\n\nWhat can you expect\nA fix has been deployed. We are monitoring the situation to confirm full recovery.\n\nNext update\nWe will provide an update if anything changes",
+          "created_at": "2026-07-14T04:21:50.345Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T04:21:50.345Z",
+          "id": "rfnfhsdvdsxs",
+          "incident_id": "gsyjwybg477g",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T04:21:50.345Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "What's impacted\nSome customers logging in with a Bitbucket-linked identity are affected. This may also include customers logging in with GitHub but have a linked Bitbucket identity on their account. Additionally, some customers are experiencing workflows that are not starting or updating.\n\nWhat can you expect\nAffected customers may see login errors. Some customers may also notice workflows that fail to start or do not update as expected. Thank you for your patience while our engineers investigate.\n\nNext update\nWe will provide another update as soon as we have more information to share",
+          "created_at": "2026-07-14T03:51:53.730Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T03:51:53.730Z",
+          "id": "7snz6zq1v0kl",
+          "incident_id": "gsyjwybg477g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T03:51:53.730Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Our team continues to investigate login errors affecting some customers using Bitbucket as their identity provider.",
+          "created_at": "2026-07-14T03:29:00.527Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-14T03:29:00.527Z",
+          "id": "qt7jvgmknkn5",
+          "incident_id": "gsyjwybg477g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T03:29:00.527Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are currently investigating login errors affecting some customers using Bitbucket as their identity provider.",
+          "created_at": "2026-07-14T02:49:37.879Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-14T02:49:37.879Z",
+          "id": "86bwth95zktk",
+          "incident_id": "gsyjwybg477g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T02:49:37.879Z"
+        }
+      ],
+      "monitoring_at": "2026-07-14T04:21:50.345Z",
+      "name": "Login issues for some Bitbucket users",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T05:15:18.525Z",
+      "shortlink": "https://stspg.io/lzl0fmm6xmts",
+      "started_at": "2026-07-14T02:49:37.826Z",
+      "status": "postmortem",
+      "updated_at": "2026-07-14T22:31:39.552Z"
+    }
+  },
+  {
+    "key": "circleci/rfz5wdpg2nl0",
+    "vendor": "circleci",
+    "native_id": "rfz5wdpg2nl0",
+    "title": "Delays starting jobs on Docker (Gen 2) resource classes",
+    "url": "https://stspg.io/0t40l14n15yl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-14T22:54:42.719Z",
+    "resolved_at": "2026-07-15T00:32:55.545Z",
+    "duration_minutes": 98,
+    "components": [
+      "Docker Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "1kjfdzl4dk8s",
+        "status": "identified",
+        "body": "On July 13 between 15:30 UTC and 22:40 UTC, we experienced delays starting jobs on Docker (Gen 2) resource classes due to capacity constraints from our cloud provider. Delays reached up to approximately 1 minute 48 seconds.\n\nWe are continuing to experience these delays again since approximately 15:45 UTC. So far, delays have reached up to approximately 1 minute 19 seconds. \n\nWe are working with our cloud provider to add capacity and will update this incident as the situation changes.",
+        "created_at": "2026-07-14T22:54:42.8Z"
+      },
+      {
+        "native_id": "g29zfzgsy8v1",
+        "status": "resolved",
+        "body": "On July 13 between 15:30 UTC and 22:40 UTC, we experienced delays starting jobs on Docker (Gen 2) resource classes due to capacity constraints from our cloud provider. The same issue recurred on July 14 between 15:45 UTC and 22:50 UTC.\n\nDelays reached up to 25 minutes on July 13 and up to 24 minutes on July 14. The medium+ and 2 X-large+ resource classes saw the longest waits. Earlier updates in this incident reported figures based on average wait times, which didn't reflect the maximum impact some customers may have experienced.\n\nWait times have now returned to normal. We are continuing to work with our cloud provider to add capacity ahead of the next peak period. Thank you for your patience.",
+        "created_at": "2026-07-15T00:32:55.545Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-17T19:43:18.878Z",
+          "description": "CircleCI jobs using the docker executor.",
+          "group": false,
+          "group_id": null,
+          "id": "x1v3t5qrnlhk",
+          "name": "Docker Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 1,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-15T00:32:55.515Z"
+        }
+      ],
+      "created_at": "2026-07-14T22:54:42.726Z",
+      "id": "rfz5wdpg2nl0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On July 13 between 15:30 UTC and 22:40 UTC, we experienced delays starting jobs on Docker (Gen 2) resource classes due to capacity constraints from our cloud provider. The same issue recurred on July 14 between 15:45 UTC and 22:50 UTC.\n\nDelays reached up to 25 minutes on July 13 and up to 24 minutes on July 14. The medium+ and 2 X-large+ resource classes saw the longest waits. Earlier updates in this incident reported figures based on average wait times, which didn't reflect the maximum impact some customers may have experienced.\n\nWait times have now returned to normal. We are continuing to work with our cloud provider to add capacity ahead of the next peak period. Thank you for your patience.",
+          "created_at": "2026-07-15T00:32:55.545Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T00:32:55.545Z",
+          "id": "g29zfzgsy8v1",
+          "incident_id": "rfz5wdpg2nl0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T00:32:55.545Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 13 between 15:30 UTC and 22:40 UTC, we experienced delays starting jobs on Docker (Gen 2) resource classes due to capacity constraints from our cloud provider. Delays reached up to approximately 1 minute 48 seconds.\n\nWe are continuing to experience these delays again since approximately 15:45 UTC. So far, delays have reached up to approximately 1 minute 19 seconds. \n\nWe are working with our cloud provider to add capacity and will update this incident as the situation changes.",
+          "created_at": "2026-07-14T22:54:42.800Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T22:54:42.800Z",
+          "id": "1kjfdzl4dk8s",
+          "incident_id": "rfz5wdpg2nl0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T22:54:42.800Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delays starting jobs on Docker (Gen 2) resource classes",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T00:32:55.545Z",
+      "shortlink": "https://stspg.io/0t40l14n15yl",
+      "started_at": "2026-07-14T22:54:42.719Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T00:32:55.560Z"
+    }
+  },
+  {
+    "key": "circleci/2b55fgxy67rb",
+    "vendor": "circleci",
+    "native_id": "2b55fgxy67rb",
+    "title": "Errors accessing CircleCI and delays starting pipelines and scheduled workflows",
+    "url": "https://stspg.io/jftpxjjgvqxy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-16T23:04:18.943Z",
+    "resolved_at": "2026-07-17T00:26:36.776Z",
+    "duration_minutes": 82,
+    "components": [
+      "Pipelines \u0026 Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "qhcgj528vr20",
+        "status": "investigating",
+        "body": "We're investigating an issue where customers may see errors loading the CircleCI web app and signing in, along with pipelines and scheduled workflows failing to start or running late. This is related to an ongoing incident affecting GitHub. You can follow GitHub's status at https://www.githubstatus.com/incidents/gxycch3076xk. Our engineers are actively investigating. \n\nWe will provide another update as soon as we have more information to share.",
+        "created_at": "2026-07-16T23:04:19.047Z"
+      },
+      {
+        "native_id": "t8bh381nl26q",
+        "status": "identified",
+        "body": "We are continuing to see high failure rates from GitHub APIs which are impacting login and workflow processing.\n\nWe will continue to monitor the GitHub API for recovery.",
+        "created_at": "2026-07-16T23:42:54.4Z"
+      },
+      {
+        "native_id": "q7xrbc0yscm6",
+        "status": "monitoring",
+        "body": "What's happening\nThe upstream incident affecting GitHub has been mitigated and is now being monitored on GitHub's side. You can follow GitHub's status at https://www.githubstatus.com/.\n\nWhat can you expect\nAccess to the CircleCI web app, sign-in, and pipeline and workflow processing are returning to normal. You may still see intermittent errors or delayed scheduled pipelines and workflows as systems stabilize. Thank you for your patience while we monitor for full recovery.",
+        "created_at": "2026-07-17T00:09:55.352Z"
+      },
+      {
+        "native_id": "q5zh4ksz4c48",
+        "status": "resolved",
+        "body": "An incident affecting GitHub's API caused CircleCI customers to experience errors loading the web app and signing in, along with pipelines and scheduled workflows failing to start or running late. GitHub has resolved the underlying incident (https://www.githubstatus.com/) and all affected functionality has returned to normal.\n\nCustomers whose jobs or pipelines failed may rerun them. Scheduled pipelines and workflows that were missed during the incident will not run automatically and will need to be re-triggered.\n\nWe thank you for your patience.",
+        "created_at": "2026-07-17T00:26:36.776Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-12T16:43:37.822Z"
+        }
+      ],
+      "created_at": "2026-07-16T23:04:18.952Z",
+      "id": "2b55fgxy67rb",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "An incident affecting GitHub's API caused CircleCI customers to experience errors loading the web app and signing in, along with pipelines and scheduled workflows failing to start or running late. GitHub has resolved the underlying incident (https://www.githubstatus.com/) and all affected functionality has returned to normal.\n\nCustomers whose jobs or pipelines failed may rerun them. Scheduled pipelines and workflows that were missed during the incident will not run automatically and will need to be re-triggered.\n\nWe thank you for your patience.",
+          "created_at": "2026-07-17T00:26:36.776Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-17T00:26:36.776Z",
+          "id": "q5zh4ksz4c48",
+          "incident_id": "2b55fgxy67rb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T00:26:36.776Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "What's happening\nThe upstream incident affecting GitHub has been mitigated and is now being monitored on GitHub's side. You can follow GitHub's status at https://www.githubstatus.com/.\n\nWhat can you expect\nAccess to the CircleCI web app, sign-in, and pipeline and workflow processing are returning to normal. You may still see intermittent errors or delayed scheduled pipelines and workflows as systems stabilize. Thank you for your patience while we monitor for full recovery.",
+          "created_at": "2026-07-17T00:09:55.352Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-17T00:09:55.352Z",
+          "id": "q7xrbc0yscm6",
+          "incident_id": "2b55fgxy67rb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T00:09:55.352Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to see high failure rates from GitHub APIs which are impacting login and workflow processing.\n\nWe will continue to monitor the GitHub API for recovery.",
+          "created_at": "2026-07-16T23:42:54.400Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T23:42:54.400Z",
+          "id": "t8bh381nl26q",
+          "incident_id": "2b55fgxy67rb",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T23:42:54.400Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're investigating an issue where customers may see errors loading the CircleCI web app and signing in, along with pipelines and scheduled workflows failing to start or running late. This is related to an ongoing incident affecting GitHub. You can follow GitHub's status at https://www.githubstatus.com/incidents/gxycch3076xk. Our engineers are actively investigating. \n\nWe will provide another update as soon as we have more information to share.",
+          "created_at": "2026-07-16T23:04:19.047Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T23:04:19.000Z",
+          "id": "qhcgj528vr20",
+          "incident_id": "2b55fgxy67rb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T23:05:44.907Z"
+        }
+      ],
+      "monitoring_at": "2026-07-17T00:09:55.352Z",
+      "name": "Errors accessing CircleCI and delays starting pipelines and scheduled workflows",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-17T00:26:36.776Z",
+      "shortlink": "https://stspg.io/jftpxjjgvqxy",
+      "started_at": "2026-07-16T23:04:18.943Z",
+      "status": "resolved",
+      "updated_at": "2026-07-17T00:26:36.789Z"
+    }
+  }
+]

@@ -1,0 +1,3064 @@
+[
+  {
+    "key": "grafana/vp96psrp0tvn",
+    "vendor": "grafana",
+    "native_id": "vp96psrp0tvn",
+    "title": "Partial OTLP Write Outage in prod-us-east-3",
+    "url": "https://stspg.io/05bt4v67qbyk",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-28T19:40:17.543Z",
+    "resolved_at": "2026-07-28T19:43:34.185Z",
+    "duration_minutes": 3,
+    "components": [
+      "AWS US East - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "w8kz6m6f6cbb",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting OTLP ingestion in the prod-us-east-3 region. Customers may experience intermittent failures when writing telemetry to the OTLP endpoint. Based on current information, logs are confirmed to be affected, and metrics and traces may also be impacted.\n\nOur investigation indicates intermittent failures began around 08:00 UTC, with the primary period of impact occurring between 15:30 UTC and 17:45 UTC. We are continuing to investigate the scope and root cause of this issue and will provide additional updates as more information becomes available.",
+        "created_at": "2026-07-28T19:40:17.649Z"
+      },
+      {
+        "native_id": "r8qxn9yzpf7b",
+        "status": "resolved",
+        "body": "The issue affecting OTLP ingestion in the prod-us-east-3 region has been resolved. Between 13:30 UTC and 17:45 UTC, some customers experienced intermittent failures when writing telemetry to the OTLP endpoint. Logs were confirmed to be affected, and metrics and traces may also have experienced intermittent ingestion failures.\n\nOur investigation has concluded, and the affected services have recovered.",
+        "created_at": "2026-07-28T19:43:34.185Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-28T19:38:04.353Z",
+          "description": null,
+          "group": false,
+          "group_id": "mnrssd8vqsf2",
+          "id": "wpkdzdqpdf7d",
+          "name": "AWS US East - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": "2026-07-28",
+          "status": "operational",
+          "updated_at": "2026-07-28T19:43:34.143Z"
+        }
+      ],
+      "created_at": "2026-07-28T19:40:17.554Z",
+      "id": "vp96psrp0tvn",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "wpkdzdqpdf7d",
+              "name": "OpenTelemetry Ingest Endpoint - AWS US East - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue affecting OTLP ingestion in the prod-us-east-3 region has been resolved. Between 13:30 UTC and 17:45 UTC, some customers experienced intermittent failures when writing telemetry to the OTLP endpoint. Logs were confirmed to be affected, and metrics and traces may also have experienced intermittent ingestion failures.\n\nOur investigation has concluded, and the affected services have recovered.",
+          "created_at": "2026-07-28T19:43:34.185Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-28T19:43:34.185Z",
+          "id": "r8qxn9yzpf7b",
+          "incident_id": "vp96psrp0tvn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T19:43:34.185Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wpkdzdqpdf7d",
+              "name": "OpenTelemetry Ingest Endpoint - AWS US East - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting OTLP ingestion in the prod-us-east-3 region. Customers may experience intermittent failures when writing telemetry to the OTLP endpoint. Based on current information, logs are confirmed to be affected, and metrics and traces may also be impacted.\n\nOur investigation indicates intermittent failures began around 08:00 UTC, with the primary period of impact occurring between 15:30 UTC and 17:45 UTC. We are continuing to investigate the scope and root cause of this issue and will provide additional updates as more information becomes available.",
+          "created_at": "2026-07-28T19:40:17.649Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-28T19:40:17.649Z",
+          "id": "w8kz6m6f6cbb",
+          "incident_id": "vp96psrp0tvn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T19:40:17.649Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Partial OTLP Write Outage in prod-us-east-3",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-28T19:43:34.185Z",
+      "shortlink": "https://stspg.io/05bt4v67qbyk",
+      "started_at": "2026-07-28T19:40:17.543Z",
+      "status": "resolved",
+      "updated_at": "2026-07-28T19:43:34.199Z"
+    }
+  },
+  {
+    "key": "grafana/6mdfbztbzctw",
+    "vendor": "grafana",
+    "native_id": "6mdfbztbzctw",
+    "title": "Grafana Cloud non-billing usage metrics gaps in select regions",
+    "url": "https://stspg.io/5db188nt4pmn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-29T18:49:19Z",
+    "resolved_at": "2026-07-29T18:49:19Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "xsmmqq0wfxyb",
+        "status": "resolved",
+        "body": "Impact period: April 1 – July 29, 2026\n\nSummary:\nDuring this period, some customers in a subset of regions may have experienced gaps in select ruler/recording rule metrics within their Grafana Cloud instances. Not all customers or environments in the listed regions were affected.\n\nAffected regions:\nA subset of environments across the following regions may have been impacted:\nap-south-1\nau-southeast-1\nca-east-0\neu-central-0\neu-west-2\neu-west-7\nus-west-0\n\nAffected values:\ngrafanacloud_instance_queries_per_second\ngrafanacloud_instance_rule_config_last_reload_successful\ngrafanacloud_instance_rule_evaluations_total:rate5m\ngrafanacloud_instance_rule_evaluation_failures_total:rate5m\ngrafanacloud_instance_rule_group_interval_seconds\ngrafanacloud_instance_rule_group_last_duration_seconds\ngrafanacloud_instance_rule_group_iterations_total:rate5m\ngrafanacloud_instance_rule_group_iterations_missed_total:rate5m\ngrafanacloud_instance_rule_group_last_evaluation_timestamp_seconds\ngrafanacloud_instance_rule_group_rules\ngrafanacloud_instance_ruler_queries_failed_total:rate5m\ngrafanacloud_instance_ruler_queries_zero_fetched_series_total:rate5m\ngrafanacloud_instance_ruler_notifications_sent_total:rate5m\ngrafanacloud_instance_ruler_notifications_errors_total:rate5m\ngrafanacloud_instance_ruler_notifications_queue_capacity\ngrafanacloud_instance_ruler_notifications_queue_length\ngrafanacloud_instance_ruler_notifications_latency_seconds:99quantile\ngrafanacloud_instance_ruler_notifications_latency_seconds:50quantile\n\nCurrent status:\nThis issue has been resolved. No further action is required from customers. If you continue to notice gaps in the metrics described above, please reach out to support and reference this incident.",
+        "created_at": "2026-07-29T18:49:19.776Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-29T18:49:19.000Z",
+      "id": "6mdfbztbzctw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Impact period: April 1 – July 29, 2026\n\nSummary:\nDuring this period, some customers in a subset of regions may have experienced gaps in select ruler/recording rule metrics within their Grafana Cloud instances. Not all customers or environments in the listed regions were affected.\n\nAffected regions:\nA subset of environments across the following regions may have been impacted:\nap-south-1\nau-southeast-1\nca-east-0\neu-central-0\neu-west-2\neu-west-7\nus-west-0\n\nAffected values:\ngrafanacloud_instance_queries_per_second\ngrafanacloud_instance_rule_config_last_reload_successful\ngrafanacloud_instance_rule_evaluations_total:rate5m\ngrafanacloud_instance_rule_evaluation_failures_total:rate5m\ngrafanacloud_instance_rule_group_interval_seconds\ngrafanacloud_instance_rule_group_last_duration_seconds\ngrafanacloud_instance_rule_group_iterations_total:rate5m\ngrafanacloud_instance_rule_group_iterations_missed_total:rate5m\ngrafanacloud_instance_rule_group_last_evaluation_timestamp_seconds\ngrafanacloud_instance_rule_group_rules\ngrafanacloud_instance_ruler_queries_failed_total:rate5m\ngrafanacloud_instance_ruler_queries_zero_fetched_series_total:rate5m\ngrafanacloud_instance_ruler_notifications_sent_total:rate5m\ngrafanacloud_instance_ruler_notifications_errors_total:rate5m\ngrafanacloud_instance_ruler_notifications_queue_capacity\ngrafanacloud_instance_ruler_notifications_queue_length\ngrafanacloud_instance_ruler_notifications_latency_seconds:99quantile\ngrafanacloud_instance_ruler_notifications_latency_seconds:50quantile\n\nCurrent status:\nThis issue has been resolved. No further action is required from customers. If you continue to notice gaps in the metrics described above, please reach out to support and reference this incident.",
+          "created_at": "2026-07-29T18:49:19.776Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-29T18:49:19.000Z",
+          "id": "xsmmqq0wfxyb",
+          "incident_id": "6mdfbztbzctw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T19:03:40.923Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Grafana Cloud non-billing usage metrics gaps in select regions",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-29T18:49:19.000Z",
+      "shortlink": "https://stspg.io/5db188nt4pmn",
+      "started_at": "2026-07-29T18:49:19.000Z",
+      "status": "resolved",
+      "updated_at": "2026-07-29T19:03:43.013Z"
+    }
+  },
+  {
+    "key": "grafana/mbqs14vz2l29",
+    "vendor": "grafana",
+    "native_id": "mbqs14vz2l29",
+    "title": "IRM Performance Degradation in EU Region",
+    "url": "https://stspg.io/35m2lfvv6h87",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-29T21:46:42.951Z",
+    "resolved_at": "2026-07-30T00:39:26Z",
+    "duration_minutes": 172,
+    "components": [
+      "Incident Management and Response (IRM)"
+    ],
+    "updates": [
+      {
+        "native_id": "tjz9pkhc3svn",
+        "status": "investigating",
+        "body": "We are currently investigating an issue affecting Grafana IRM in our EU region. Users may experience a degraded or unresponsive IRM UI, reduced availability of the public API, and delays in notifications.\n\nOur engineering team is actively investigating the issue and working to restore normal service. We will provide another update as more information becomes available.",
+        "created_at": "2026-07-29T21:46:43.052Z"
+      },
+      {
+        "native_id": "2ff7c9zc3wdm",
+        "status": "identified",
+        "body": "We have identified the underlying issue affecting Grafana IRM in our EU region and are actively working to restore normal service.\n\nUsers may continue to experience a degraded or unresponsive IRM UI, reduced availability of the public API, and delays in notifications while mitigation efforts are underway.\n\nOur engineering team is working to restore full functionality as quickly as possible. We will provide another update as more information becomes available.",
+        "created_at": "2026-07-29T23:07:17.309Z"
+      },
+      {
+        "native_id": "mwy600rf91bl",
+        "status": "resolved",
+        "body": "The issue affecting Grafana IRM in the EU region has been resolved. The IRM UI, public API, and alert notification processing have been restored and are operating normally.",
+        "created_at": "2026-07-30T00:39:26.168Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-03-25T16:09:00.130Z",
+          "description": "Former Grafana Incident and Grafana OnCall",
+          "group": false,
+          "group_id": null,
+          "id": "1mxpk7q1bkb6",
+          "name": "Incident Management and Response (IRM)",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2024-03-25",
+          "status": "operational",
+          "updated_at": "2026-07-31T14:10:46.261Z"
+        }
+      ],
+      "created_at": "2026-07-29T21:46:42.959Z",
+      "id": "mbqs14vz2l29",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue affecting Grafana IRM in the EU region has been resolved. The IRM UI, public API, and alert notification processing have been restored and are operating normally.",
+          "created_at": "2026-07-30T00:39:26.168Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T00:39:26.000Z",
+          "id": "mwy600rf91bl",
+          "incident_id": "mbqs14vz2l29",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T00:48:49.388Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the underlying issue affecting Grafana IRM in our EU region and are actively working to restore normal service.\n\nUsers may continue to experience a degraded or unresponsive IRM UI, reduced availability of the public API, and delays in notifications while mitigation efforts are underway.\n\nOur engineering team is working to restore full functionality as quickly as possible. We will provide another update as more information becomes available.",
+          "created_at": "2026-07-29T23:07:17.309Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T23:07:17.309Z",
+          "id": "2ff7c9zc3wdm",
+          "incident_id": "mbqs14vz2l29",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T23:07:17.309Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue affecting Grafana IRM in our EU region. Users may experience a degraded or unresponsive IRM UI, reduced availability of the public API, and delays in notifications.\n\nOur engineering team is actively investigating the issue and working to restore normal service. We will provide another update as more information becomes available.",
+          "created_at": "2026-07-29T21:46:43.052Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T21:46:43.052Z",
+          "id": "tjz9pkhc3svn",
+          "incident_id": "mbqs14vz2l29",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T21:46:43.052Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "IRM Performance Degradation in EU Region",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-30T00:39:26.000Z",
+      "shortlink": "https://stspg.io/35m2lfvv6h87",
+      "started_at": "2026-07-29T21:46:42.951Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T00:48:49.407Z"
+    }
+  },
+  {
+    "key": "grafana/79nwp08zs9vj",
+    "vendor": "grafana",
+    "native_id": "79nwp08zs9vj",
+    "title": "Issues with Billing/Usage Dashboard Metrics and Panels.",
+    "url": "https://stspg.io/fz2tz9xsqx46",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-30T13:15:49.132Z",
+    "resolved_at": "2026-07-30T15:17:38.318Z",
+    "duration_minutes": 121,
+    "components": [
+      "AWS Australia - prod-ap-southeast-2: Querying",
+      "AWS Australia - prod-ap-southeast-2: Ingestion",
+      "AWS Brazil - prod-sa-east-1: Querying",
+      "AWS Brazil - prod-sa-east-1: Ingestion",
+      "AWS Canada - prod-ca-east-0: Querying",
+      "AWS Canada - prod-ca-east-0: Ingestion",
+      "AWS Germany - prod-eu-west-2: Querying",
+      "AWS Germany - prod-eu-west-2: Ingestion",
+      "AWS UAE - prod-me-central-1: Querying",
+      "AWS UAE - prod-me-central-1: Ingestion",
+      "AWS India - prod-ap-south-1: Querying",
+      "AWS India - prod-ap-south-1: Ingestion",
+      "AWS Japan - prod-ap-northeast-0: Querying",
+      "AWS Japan - prod-ap-northeast-0: Ingestion",
+      "AWS Singapore - prod-ap-southeast-1: Querying",
+      "AWS Singapore - prod-ap-southeast-1: Ingestion",
+      "AWS Sweden - prod-eu-north-0: Querying",
+      "AWS Sweden - prod-eu-north-0: Ingestion",
+      "AWS US East - prod-us-east-0: Querying",
+      "AWS US East - prod-us-east-0: Ingestion",
+      "AWS US West - prod-us-west-0: Querying",
+      "AWS US West - prod-us-west-0: Ingestion",
+      "Azure Netherlands - prod-eu-west-3: Querying",
+      "Azure Netherlands - prod-eu-west-3: Ingestion",
+      "AWS Ireland - prod-eu-west-6",
+      "AWS Switzerland - prod-eu-central-0",
+      "Azure US Central - us-central2: Querying",
+      "Azure US Central - us-central2: Ingestion",
+      "Azure US Central - us-central7: Ingestion",
+      "GCP Australia - prod-au-southeast-0: Querying",
+      "GCP Australia - prod-au-southeast-0: Ingestion",
+      "GCP Belgium - prod-eu-west-0: Querying",
+      "GCP Belgium - prod-eu-west-0: Ingestion",
+      "GCP Brazil - prod-sa-east-0: Querying",
+      "GCP Brazil - prod-sa-east-0: Ingestion",
+      "GCP India - prod-ap-south-0: Querying",
+      "GCP India - prod-ap-south-0: Ingestion",
+      "GCP Singapore - prod-ap-southeast-0: Querying",
+      "GCP Singapore - prod-ap-southeast-0: Ingestion",
+      "GCP UK - prod-gb-south-0: Querying",
+      "GCP UK - prod-gb-south-0: Ingestion",
+      "GCP US Central - prod-us-central-0: Querying",
+      "GCP US Central - prod-us-central-0: Ingestion",
+      "GCP US Central - prod-us-central-5: Querying",
+      "GCP US Central - prod-us-central-5: Ingestion",
+      "GCS US - cortex-prod-04: Ingestion",
+      "GCS US - cortex-prod-04: Querying",
+      "Federal Cloud - AWS US Gov West",
+      "Azure US Central - prod-us-central-7: Querying",
+      "Azure US Central - prod-us-central-7: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "bf9j0c501jd2",
+        "status": "investigating",
+        "body": "We are investigating an outage for the Billing / Usage dashboard metrics and panels. This appears to be partially affecting organizations using Grafana Cloud.\n\nWe are working on identifying and resolving the issue",
+        "created_at": "2026-07-30T13:15:50.281Z"
+      },
+      {
+        "native_id": "fb33gg1hl410",
+        "status": "identified",
+        "body": "We have identified the issue, and are working on deploying a fix.",
+        "created_at": "2026-07-30T13:50:46.069Z"
+      },
+      {
+        "native_id": "5c3f6tr4cv4p",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-07-30T14:34:38.147Z"
+      },
+      {
+        "native_id": "f2rdm5dcwzyv",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-30T15:17:38.318Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T14:43:55.333Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "2qyvsc1qs6cl",
+          "name": "AWS Australia - prod-ap-southeast-2: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.484Z"
+        },
+        {
+          "created_at": "2023-09-20T14:44:35.497Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "fm6ngm716ftw",
+          "name": "AWS Australia - prod-ap-southeast-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.501Z"
+        },
+        {
+          "created_at": "2023-09-20T14:51:09.194Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "hmzmx0616wgs",
+          "name": "AWS Brazil - prod-sa-east-1: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.517Z"
+        },
+        {
+          "created_at": "2023-09-20T14:51:22.783Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "pg6f8jh5jmw1",
+          "name": "AWS Brazil - prod-sa-east-1: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.532Z"
+        },
+        {
+          "created_at": "2023-09-20T14:46:28.400Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "fnfxjvh2066p",
+          "name": "AWS Canada - prod-ca-east-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.550Z"
+        },
+        {
+          "created_at": "2023-09-20T14:46:44.989Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "9cnglb70hqhk",
+          "name": "AWS Canada - prod-ca-east-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.566Z"
+        },
+        {
+          "created_at": "2023-09-20T14:49:07.616Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "mk0mjmlmp2ms",
+          "name": "AWS Germany - prod-eu-west-2: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.582Z"
+        },
+        {
+          "created_at": "2023-09-20T14:49:22.344Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "kywjchj50pzs",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.598Z"
+        },
+        {
+          "created_at": "2025-04-16T19:46:49.587Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "bsw2w0c5p6wm",
+          "name": "AWS UAE - prod-me-central-1: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2025-04-16",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.613Z"
+        },
+        {
+          "created_at": "2025-04-16T19:47:13.374Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "n72tkbyzr423",
+          "name": "AWS UAE - prod-me-central-1: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2025-04-16",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.628Z"
+        },
+        {
+          "created_at": "2023-10-03T13:22:10.893Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "ngh62blxrpkq",
+          "name": "AWS India - prod-ap-south-1: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.644Z"
+        },
+        {
+          "created_at": "2023-10-03T13:22:26.613Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "1pvkyb8n3wjg",
+          "name": "AWS India - prod-ap-south-1: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.660Z"
+        },
+        {
+          "created_at": "2024-04-19T13:12:27.611Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "czngbgg4qfq5",
+          "name": "AWS Japan - prod-ap-northeast-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2024-04-19",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.676Z"
+        },
+        {
+          "created_at": "2024-04-19T13:12:44.342Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "mcrkfm4my3ks",
+          "name": "AWS Japan - prod-ap-northeast-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2024-04-19",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.691Z"
+        },
+        {
+          "created_at": "2023-09-20T14:44:52.789Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "g9ynk4pl34ms",
+          "name": "AWS Singapore - prod-ap-southeast-1: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.706Z"
+        },
+        {
+          "created_at": "2023-09-20T14:45:07.705Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "0zbn3g1ngjfs",
+          "name": "AWS Singapore - prod-ap-southeast-1: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.722Z"
+        },
+        {
+          "created_at": "2023-09-20T14:47:07.576Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "3mck8r7xncdn",
+          "name": "AWS Sweden - prod-eu-north-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.737Z"
+        },
+        {
+          "created_at": "2023-09-20T14:47:25.555Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "xsn3y4zb9fdb",
+          "name": "AWS Sweden - prod-eu-north-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.752Z"
+        },
+        {
+          "created_at": "2022-01-13T15:03:35.792Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "5270kl9kd6l2",
+          "name": "AWS US East - prod-us-east-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.768Z"
+        },
+        {
+          "created_at": "2022-01-13T15:03:50.044Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "zqsjp5p0d8n7",
+          "name": "AWS US East - prod-us-east-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.785Z"
+        },
+        {
+          "created_at": "2023-09-20T14:51:44.826Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "tfr4g652mxn5",
+          "name": "AWS US West - prod-us-west-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 21,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.803Z"
+        },
+        {
+          "created_at": "2023-09-20T14:52:00.018Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "k8k4wprtwgz9",
+          "name": "AWS US West - prod-us-west-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.820Z"
+        },
+        {
+          "created_at": "2023-09-20T14:49:52.824Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "xm2ns8nm3qgv",
+          "name": "Azure Netherlands - prod-eu-west-3: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.837Z"
+        },
+        {
+          "created_at": "2023-09-20T14:50:05.964Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "82s7r3tjyb6n",
+          "name": "Azure Netherlands - prod-eu-west-3: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 24,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.855Z"
+        },
+        {
+          "created_at": "2026-02-18T15:26:17.052Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "gd3lyf8xqljf",
+          "name": "AWS Ireland - prod-eu-west-6",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 25,
+          "showcase": false,
+          "start_date": "2026-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.872Z"
+        },
+        {
+          "created_at": "2026-03-11T09:43:48.280Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "04hhy6fg69ck",
+          "name": "AWS Switzerland - prod-eu-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": "2026-03-11",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.890Z"
+        },
+        {
+          "created_at": "2020-09-28T12:21:07.398Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "ql2hwfkmnyrr",
+          "name": "Azure US Central - us-central2: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 27,
+          "showcase": false,
+          "start_date": "2020-09-28",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.909Z"
+        },
+        {
+          "created_at": "2020-09-28T12:21:28.338Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "d1qqwsst6by9",
+          "name": "Azure US Central - us-central2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 28,
+          "showcase": false,
+          "start_date": "2020-09-28",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.925Z"
+        },
+        {
+          "created_at": "2025-11-03T12:32:06.422Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "gxyxxd4nr755",
+          "name": "Azure US Central - us-central7: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": "2025-11-03",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.940Z"
+        },
+        {
+          "created_at": "2022-01-13T14:27:46.795Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "y4w38klthkcm",
+          "name": "GCP Australia - prod-au-southeast-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 30,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.957Z"
+        },
+        {
+          "created_at": "2022-01-13T14:29:00.722Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "vc52wtjdh6db",
+          "name": "GCP Australia - prod-au-southeast-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 31,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.975Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:26.954Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "9rtx96d2z01z",
+          "name": "GCP Belgium - prod-eu-west-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 32,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.992Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:44.708Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "d2vdtkjjdzjy",
+          "name": "GCP Belgium - prod-eu-west-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 33,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.008Z"
+        },
+        {
+          "created_at": "2023-09-20T14:50:29.021Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "1c0xjffzwghy",
+          "name": "GCP Brazil - prod-sa-east-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 34,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.025Z"
+        },
+        {
+          "created_at": "2023-09-20T14:50:42.963Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "ly7gqcr2bm3m",
+          "name": "GCP Brazil - prod-sa-east-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 35,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.040Z"
+        },
+        {
+          "created_at": "2023-09-20T14:42:30.899Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "lr4wf5bv4lk1",
+          "name": "GCP India - prod-ap-south-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 36,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.055Z"
+        },
+        {
+          "created_at": "2023-09-20T14:42:46.525Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "b74p2737fm3r",
+          "name": "GCP India - prod-ap-south-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 37,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.070Z"
+        },
+        {
+          "created_at": "2023-09-20T14:43:10.229Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "szkwf5rlkrxq",
+          "name": "GCP Singapore - prod-ap-southeast-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 38,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.086Z"
+        },
+        {
+          "created_at": "2023-09-20T14:43:31.432Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "24jq47r3m6gj",
+          "name": "GCP Singapore - prod-ap-southeast-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 39,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.101Z"
+        },
+        {
+          "created_at": "2021-09-17T17:05:39.458Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "5dvwqvtb0t84",
+          "name": "GCP UK - prod-gb-south-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 40,
+          "showcase": false,
+          "start_date": "2021-09-17",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.116Z"
+        },
+        {
+          "created_at": "2021-09-17T17:05:54.920Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "993qpty6gv9f",
+          "name": "GCP UK - prod-gb-south-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 41,
+          "showcase": false,
+          "start_date": "2021-09-17",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.131Z"
+        },
+        {
+          "created_at": "2019-04-10T08:43:51.752Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "jhc34sjt42wd",
+          "name": "GCP US Central - prod-us-central-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 42,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.145Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:09.523Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "1tt4gx4t4q87",
+          "name": "GCP US Central - prod-us-central-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 43,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.160Z"
+        },
+        {
+          "created_at": "2025-08-07T05:27:53.431Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "cp7lzhn0jrgw",
+          "name": "GCP US Central - prod-us-central-5: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 44,
+          "showcase": false,
+          "start_date": "2025-08-07",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.174Z"
+        },
+        {
+          "created_at": "2025-08-07T05:29:06.482Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "l778xg16mls4",
+          "name": "GCP US Central - prod-us-central-5: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 45,
+          "showcase": false,
+          "start_date": "2025-08-07",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.189Z"
+        },
+        {
+          "created_at": "2025-11-17T14:03:45.781Z",
+          "description": "Prod US Central",
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "dw1zzwblgd66",
+          "name": "GCS US - cortex-prod-04: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 46,
+          "showcase": false,
+          "start_date": "2025-11-17",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.205Z"
+        },
+        {
+          "created_at": "2025-11-17T14:46:01.080Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "wg8xtz9dq3j4",
+          "name": "GCS US - cortex-prod-04: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2025-11-17",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.220Z"
+        },
+        {
+          "created_at": "2026-03-05T19:25:44.997Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "90x90mfp0tj5",
+          "name": "Federal Cloud - AWS US Gov West",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 48,
+          "showcase": false,
+          "start_date": "2026-03-05",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.236Z"
+        },
+        {
+          "created_at": "2026-05-08T21:09:55.110Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "slqwr2vp7rrn",
+          "name": "Azure US Central - prod-us-central-7: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 49,
+          "showcase": false,
+          "start_date": "2026-05-08",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.252Z"
+        },
+        {
+          "created_at": "2026-05-08T21:10:33.986Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "7xgglzcpb274",
+          "name": "Azure US Central - prod-us-central-7: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 50,
+          "showcase": false,
+          "start_date": "2026-05-08",
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.268Z"
+        }
+      ],
+      "created_at": "2026-07-30T13:15:49.205Z",
+      "id": "79nwp08zs9vj",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2qyvsc1qs6cl",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fm6ngm716ftw",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmzmx0616wgs",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "pg6f8jh5jmw1",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fnfxjvh2066p",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9cnglb70hqhk",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bsw2w0c5p6wm",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "n72tkbyzr423",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ngh62blxrpkq",
+              "name": "Metrics - AWS India - prod-ap-south-1: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1pvkyb8n3wjg",
+              "name": "Metrics - AWS India - prod-ap-south-1: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "czngbgg4qfq5",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mcrkfm4my3ks",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9ynk4pl34ms",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0zbn3g1ngjfs",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3mck8r7xncdn",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xsn3y4zb9fdb",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "zqsjp5p0d8n7",
+              "name": "Metrics - AWS US East - prod-us-east-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xm2ns8nm3qgv",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "82s7r3tjyb6n",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gd3lyf8xqljf",
+              "name": "Metrics - AWS Ireland - prod-eu-west-6",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "04hhy6fg69ck",
+              "name": "Metrics - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ql2hwfkmnyrr",
+              "name": "Metrics - Azure US Central - us-central2: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d1qqwsst6by9",
+              "name": "Metrics - Azure US Central - us-central2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gxyxxd4nr755",
+              "name": "Metrics - Azure US Central - us-central7: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y4w38klthkcm",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "vc52wtjdh6db",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1c0xjffzwghy",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ly7gqcr2bm3m",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "lr4wf5bv4lk1",
+              "name": "Metrics - GCP India - prod-ap-south-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "b74p2737fm3r",
+              "name": "Metrics - GCP India - prod-ap-south-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "szkwf5rlkrxq",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "24jq47r3m6gj",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5dvwqvtb0t84",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "993qpty6gv9f",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "cp7lzhn0jrgw",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "dw1zzwblgd66",
+              "name": "Metrics - GCS US - cortex-prod-04: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wg8xtz9dq3j4",
+              "name": "Metrics - GCS US - cortex-prod-04: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "90x90mfp0tj5",
+              "name": "Metrics - Federal Cloud - AWS US Gov West",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-30T15:17:38.318Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T15:17:38.318Z",
+          "id": "f2rdm5dcwzyv",
+          "incident_id": "79nwp08zs9vj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T15:17:38.318Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2qyvsc1qs6cl",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fm6ngm716ftw",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmzmx0616wgs",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "pg6f8jh5jmw1",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fnfxjvh2066p",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9cnglb70hqhk",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bsw2w0c5p6wm",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "n72tkbyzr423",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ngh62blxrpkq",
+              "name": "Metrics - AWS India - prod-ap-south-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1pvkyb8n3wjg",
+              "name": "Metrics - AWS India - prod-ap-south-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "czngbgg4qfq5",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mcrkfm4my3ks",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9ynk4pl34ms",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0zbn3g1ngjfs",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3mck8r7xncdn",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xsn3y4zb9fdb",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "zqsjp5p0d8n7",
+              "name": "Metrics - AWS US East - prod-us-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xm2ns8nm3qgv",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "82s7r3tjyb6n",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gd3lyf8xqljf",
+              "name": "Metrics - AWS Ireland - prod-eu-west-6",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "04hhy6fg69ck",
+              "name": "Metrics - AWS Switzerland - prod-eu-central-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ql2hwfkmnyrr",
+              "name": "Metrics - Azure US Central - us-central2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d1qqwsst6by9",
+              "name": "Metrics - Azure US Central - us-central2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gxyxxd4nr755",
+              "name": "Metrics - Azure US Central - us-central7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y4w38klthkcm",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "vc52wtjdh6db",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1c0xjffzwghy",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ly7gqcr2bm3m",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "lr4wf5bv4lk1",
+              "name": "Metrics - GCP India - prod-ap-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "b74p2737fm3r",
+              "name": "Metrics - GCP India - prod-ap-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "szkwf5rlkrxq",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "24jq47r3m6gj",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5dvwqvtb0t84",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "993qpty6gv9f",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "cp7lzhn0jrgw",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "dw1zzwblgd66",
+              "name": "Metrics - GCS US - cortex-prod-04: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wg8xtz9dq3j4",
+              "name": "Metrics - GCS US - cortex-prod-04: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "90x90mfp0tj5",
+              "name": "Metrics - Federal Cloud - AWS US Gov West",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-07-30T14:34:38.147Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T14:34:38.147Z",
+          "id": "5c3f6tr4cv4p",
+          "incident_id": "79nwp08zs9vj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T14:34:38.147Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2qyvsc1qs6cl",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fm6ngm716ftw",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmzmx0616wgs",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "pg6f8jh5jmw1",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "fnfxjvh2066p",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9cnglb70hqhk",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bsw2w0c5p6wm",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "n72tkbyzr423",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ngh62blxrpkq",
+              "name": "Metrics - AWS India - prod-ap-south-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1pvkyb8n3wjg",
+              "name": "Metrics - AWS India - prod-ap-south-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "czngbgg4qfq5",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mcrkfm4my3ks",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "g9ynk4pl34ms",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0zbn3g1ngjfs",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3mck8r7xncdn",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xsn3y4zb9fdb",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "zqsjp5p0d8n7",
+              "name": "Metrics - AWS US East - prod-us-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xm2ns8nm3qgv",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "82s7r3tjyb6n",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gd3lyf8xqljf",
+              "name": "Metrics - AWS Ireland - prod-eu-west-6",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "04hhy6fg69ck",
+              "name": "Metrics - AWS Switzerland - prod-eu-central-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ql2hwfkmnyrr",
+              "name": "Metrics - Azure US Central - us-central2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d1qqwsst6by9",
+              "name": "Metrics - Azure US Central - us-central2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gxyxxd4nr755",
+              "name": "Metrics - Azure US Central - us-central7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y4w38klthkcm",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "vc52wtjdh6db",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1c0xjffzwghy",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ly7gqcr2bm3m",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "lr4wf5bv4lk1",
+              "name": "Metrics - GCP India - prod-ap-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "b74p2737fm3r",
+              "name": "Metrics - GCP India - prod-ap-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "szkwf5rlkrxq",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "24jq47r3m6gj",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "5dvwqvtb0t84",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "993qpty6gv9f",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "cp7lzhn0jrgw",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "dw1zzwblgd66",
+              "name": "Metrics - GCS US - cortex-prod-04: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "wg8xtz9dq3j4",
+              "name": "Metrics - GCS US - cortex-prod-04: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "90x90mfp0tj5",
+              "name": "Metrics - Federal Cloud - AWS US Gov West",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the issue, and are working on deploying a fix.",
+          "created_at": "2026-07-30T13:50:46.069Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T13:50:46.069Z",
+          "id": "fb33gg1hl410",
+          "incident_id": "79nwp08zs9vj",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T13:50:46.069Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2qyvsc1qs6cl",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "fm6ngm716ftw",
+              "name": "Metrics - AWS Australia - prod-ap-southeast-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "hmzmx0616wgs",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "pg6f8jh5jmw1",
+              "name": "Metrics - AWS Brazil - prod-sa-east-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "fnfxjvh2066p",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "9cnglb70hqhk",
+              "name": "Metrics - AWS Canada - prod-ca-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bsw2w0c5p6wm",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "n72tkbyzr423",
+              "name": "Metrics - AWS UAE - prod-me-central-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "ngh62blxrpkq",
+              "name": "Metrics - AWS India - prod-ap-south-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "1pvkyb8n3wjg",
+              "name": "Metrics - AWS India - prod-ap-south-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "czngbgg4qfq5",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "mcrkfm4my3ks",
+              "name": "Metrics - AWS Japan - prod-ap-northeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "g9ynk4pl34ms",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "0zbn3g1ngjfs",
+              "name": "Metrics - AWS Singapore - prod-ap-southeast-1: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "3mck8r7xncdn",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "xsn3y4zb9fdb",
+              "name": "Metrics - AWS Sweden - prod-eu-north-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "zqsjp5p0d8n7",
+              "name": "Metrics - AWS US East - prod-us-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "xm2ns8nm3qgv",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "82s7r3tjyb6n",
+              "name": "Metrics - Azure Netherlands - prod-eu-west-3: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "gd3lyf8xqljf",
+              "name": "Metrics - AWS Ireland - prod-eu-west-6",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "04hhy6fg69ck",
+              "name": "Metrics - AWS Switzerland - prod-eu-central-0",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "ql2hwfkmnyrr",
+              "name": "Metrics - Azure US Central - us-central2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "d1qqwsst6by9",
+              "name": "Metrics - Azure US Central - us-central2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "gxyxxd4nr755",
+              "name": "Metrics - Azure US Central - us-central7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "y4w38klthkcm",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "vc52wtjdh6db",
+              "name": "Metrics - GCP Australia - prod-au-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "1c0xjffzwghy",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "ly7gqcr2bm3m",
+              "name": "Metrics - GCP Brazil - prod-sa-east-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "lr4wf5bv4lk1",
+              "name": "Metrics - GCP India - prod-ap-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "b74p2737fm3r",
+              "name": "Metrics - GCP India - prod-ap-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "szkwf5rlkrxq",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "24jq47r3m6gj",
+              "name": "Metrics - GCP Singapore - prod-ap-southeast-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "5dvwqvtb0t84",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "993qpty6gv9f",
+              "name": "Metrics - GCP UK - prod-gb-south-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "cp7lzhn0jrgw",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "dw1zzwblgd66",
+              "name": "Metrics - GCS US - cortex-prod-04: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "wg8xtz9dq3j4",
+              "name": "Metrics - GCS US - cortex-prod-04: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "90x90mfp0tj5",
+              "name": "Metrics - Federal Cloud - AWS US Gov West",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an outage for the Billing / Usage dashboard metrics and panels. This appears to be partially affecting organizations using Grafana Cloud.\n\nWe are working on identifying and resolving the issue",
+          "created_at": "2026-07-30T13:15:50.281Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T13:15:50.281Z",
+          "id": "bf9j0c501jd2",
+          "incident_id": "79nwp08zs9vj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T13:15:50.281Z"
+        }
+      ],
+      "monitoring_at": "2026-07-30T14:34:38.147Z",
+      "name": "Issues with Billing/Usage Dashboard Metrics and Panels.",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-30T15:17:38.318Z",
+      "shortlink": "https://stspg.io/fz2tz9xsqx46",
+      "started_at": "2026-07-30T13:15:49.132Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T15:17:38.341Z"
+    }
+  },
+  {
+    "key": "grafana/z5hw9b0tmjzm",
+    "vendor": "grafana",
+    "native_id": "z5hw9b0tmjzm",
+    "title": "PDC Authentication Issues",
+    "url": "https://stspg.io/p8c7l7pzd5f5",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-30T14:45:31.447Z",
+    "resolved_at": "2026-07-30T17:40:15.709Z",
+    "duration_minutes": 174,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS US East - prod-us-east-0",
+      "GCP US Central - prod-us-central-0",
+      "GCP US East - prod-us-east-1"
+    ],
+    "updates": [
+      {
+        "native_id": "2n4g3vf42rzl",
+        "status": "investigating",
+        "body": "We are currently investigating an issue impacting PDC authentication. We will provide additional updates as they become available.",
+        "created_at": "2026-07-30T14:45:31.531Z"
+      },
+      {
+        "native_id": "mh2sh8q3715c",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-30T14:51:00.603Z"
+      },
+      {
+        "native_id": "s74fqsg5nc2m",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-30T15:11:34.221Z"
+      },
+      {
+        "native_id": "x6zv04jf8fq6",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-07-30T15:56:44.284Z"
+      },
+      {
+        "native_id": "c8j2ng33ql3f",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-30T17:40:15.709Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-25T14:23:26.772Z",
+          "description": null,
+          "group": false,
+          "group_id": "sntjvmcjzp1r",
+          "id": "hmyx8mtn3tjq",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-25",
+          "status": "operational",
+          "updated_at": "2026-07-30T17:40:15.603Z"
+        },
+        {
+          "created_at": "2023-09-25T14:25:17.118Z",
+          "description": null,
+          "group": false,
+          "group_id": "sntjvmcjzp1r",
+          "id": "r4t5cjg79lkv",
+          "name": "AWS US East - prod-us-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2023-09-25",
+          "status": "operational",
+          "updated_at": "2026-07-30T17:40:15.623Z"
+        },
+        {
+          "created_at": "2023-09-25T14:31:06.938Z",
+          "description": null,
+          "group": false,
+          "group_id": "sntjvmcjzp1r",
+          "id": "y081wmnk39py",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 24,
+          "showcase": false,
+          "start_date": "2023-09-25",
+          "status": "operational",
+          "updated_at": "2026-07-30T17:40:15.642Z"
+        },
+        {
+          "created_at": "2025-10-06T19:53:49.274Z",
+          "description": null,
+          "group": false,
+          "group_id": "sntjvmcjzp1r",
+          "id": "xb8m6tjchkht",
+          "name": "GCP US East - prod-us-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 25,
+          "showcase": false,
+          "start_date": "2025-10-06",
+          "status": "operational",
+          "updated_at": "2026-07-30T17:40:15.660Z"
+        }
+      ],
+      "created_at": "2026-07-30T14:45:31.456Z",
+      "id": "z5hw9b0tmjzm",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "r4t5cjg79lkv",
+              "name": "Private Datasource Connect (PDC) - AWS US East - prod-us-east-0",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y081wmnk39py",
+              "name": "Private Datasource Connect (PDC) - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xb8m6tjchkht",
+              "name": "Private Datasource Connect (PDC) - GCP US East - prod-us-east-1",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-30T17:40:15.709Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T17:40:15.709Z",
+          "id": "c8j2ng33ql3f",
+          "incident_id": "z5hw9b0tmjzm",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T17:40:15.709Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "r4t5cjg79lkv",
+              "name": "Private Datasource Connect (PDC) - AWS US East - prod-us-east-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y081wmnk39py",
+              "name": "Private Datasource Connect (PDC) - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xb8m6tjchkht",
+              "name": "Private Datasource Connect (PDC) - GCP US East - prod-us-east-1",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-07-30T15:56:44.284Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T15:56:44.284Z",
+          "id": "x6zv04jf8fq6",
+          "incident_id": "z5hw9b0tmjzm",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T15:56:44.284Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "r4t5cjg79lkv",
+              "name": "Private Datasource Connect (PDC) - AWS US East - prod-us-east-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y081wmnk39py",
+              "name": "Private Datasource Connect (PDC) - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xb8m6tjchkht",
+              "name": "Private Datasource Connect (PDC) - GCP US East - prod-us-east-1",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-30T15:11:34.221Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T15:11:34.221Z",
+          "id": "s74fqsg5nc2m",
+          "incident_id": "z5hw9b0tmjzm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T15:11:34.221Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "r4t5cjg79lkv",
+              "name": "Private Datasource Connect (PDC) - AWS US East - prod-us-east-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "y081wmnk39py",
+              "name": "Private Datasource Connect (PDC) - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-30T14:51:00.603Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T14:51:00.603Z",
+          "id": "mh2sh8q3715c",
+          "incident_id": "z5hw9b0tmjzm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T14:51:00.603Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "r4t5cjg79lkv",
+              "name": "Private Datasource Connect (PDC) - AWS US East - prod-us-east-0",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue impacting PDC authentication. We will provide additional updates as they become available.",
+          "created_at": "2026-07-30T14:45:31.531Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T14:45:31.531Z",
+          "id": "2n4g3vf42rzl",
+          "incident_id": "z5hw9b0tmjzm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T14:45:31.531Z"
+        }
+      ],
+      "monitoring_at": "2026-07-30T15:56:44.284Z",
+      "name": "PDC Authentication Issues",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-30T17:40:15.709Z",
+      "shortlink": "https://stspg.io/p8c7l7pzd5f5",
+      "started_at": "2026-07-30T14:45:31.447Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T17:40:15.728Z"
+    }
+  },
+  {
+    "key": "grafana/gxb577ll1b7x",
+    "vendor": "grafana",
+    "native_id": "gxb577ll1b7x",
+    "title": "Degraded Performance: Stack Provisioning Failures within certain reigons (PDC Setup)",
+    "url": "https://stspg.io/gkrhww23994q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-31T10:51:28.894Z",
+    "resolved_at": "2026-07-31T12:13:31.007Z",
+    "duration_minutes": 82,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS US East - prod-us-east-0",
+      "GCP US Central - prod-us-central-0",
+      "GCP US East - prod-us-east-1"
+    ],
+    "updates": [
+      {
+        "native_id": "jg8bqrcpd5l4",
+        "status": "investigating",
+        "body": "We are currently investigating an issue impacting stack provisioning. Attempting to set up PDC on newly created stacks will currently fail across several regions. We are currently looking into the cause of this.",
+        "created_at": "2026-07-31T10:51:29.035Z"
+      },
+      {
+        "native_id": "5cyk6lryr8hm",
+        "status": "resolved",
+        "body": "He have identified the cause and applied a fix for this issue and all effected stacks within the affected regions are not working as expected.",
+        "created_at": "2026-07-31T12:13:31.007Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-01T23:37:22.739Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "6wgslg1s3bzr",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-08-13T13:00:07.939Z"
+        },
+        {
+          "created_at": "2023-03-21T21:16:23.932Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "hbqgpzmf8h9k",
+          "name": "AWS US East - prod-us-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-03-21",
+          "status": "operational",
+          "updated_at": "2026-08-13T13:00:08.975Z"
+        },
+        {
+          "created_at": "2017-08-28T09:09:28.157Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "qqj6ssvvsqmq",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-13T13:00:13.064Z"
+        },
+        {
+          "created_at": "2023-03-01T23:34:20.391Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2yn7w8rnphcp",
+          "name": "GCP US East - prod-us-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-08-13T13:00:13.371Z"
+        }
+      ],
+      "created_at": "2026-07-31T10:51:28.906Z",
+      "id": "gxb577ll1b7x",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East - prod-us-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "He have identified the cause and applied a fix for this issue and all effected stacks within the affected regions are not working as expected.",
+          "created_at": "2026-07-31T12:13:31.007Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:13:31.007Z",
+          "id": "5cyk6lryr8hm",
+          "incident_id": "gxb577ll1b7x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:13:31.007Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East - prod-us-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue impacting stack provisioning. Attempting to set up PDC on newly created stacks will currently fail across several regions. We are currently looking into the cause of this.",
+          "created_at": "2026-07-31T10:51:29.035Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T10:51:29.035Z",
+          "id": "jg8bqrcpd5l4",
+          "incident_id": "gxb577ll1b7x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T10:51:29.035Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded Performance: Stack Provisioning Failures within certain reigons (PDC Setup)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-31T12:13:31.007Z",
+      "shortlink": "https://stspg.io/gkrhww23994q",
+      "started_at": "2026-07-31T10:51:28.894Z",
+      "status": "resolved",
+      "updated_at": "2026-07-31T12:13:31.027Z"
+    }
+  },
+  {
+    "key": "grafana/bq8dhxj55g7g",
+    "vendor": "grafana",
+    "native_id": "bq8dhxj55g7g",
+    "title": "Partial Read Outage for Loki in prod-us-east-4",
+    "url": "https://stspg.io/mm2jxybgmg52",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-31T20:33:40.336Z",
+    "resolved_at": "2026-07-31T19:30:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "fkh9grqqxg5w",
+        "status": "resolved",
+        "body": "We are investigating a partial read outage affecting Loki in prod-us-east-4. Between 19:41 UTC and 19:50 UTC, a significant portion of read queries may have failed or returned errors.\n\nThe issue has been identified and service has been restored. We are continuing to investigate the underlying cause and will provide additional information as it becomes available.",
+        "created_at": "2026-07-31T20:33:40.384Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-31T19:30:00.000Z",
+      "id": "bq8dhxj55g7g",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are investigating a partial read outage affecting Loki in prod-us-east-4. Between 19:41 UTC and 19:50 UTC, a significant portion of read queries may have failed or returned errors.\n\nThe issue has been identified and service has been restored. We are continuing to investigate the underlying cause and will provide additional information as it becomes available.",
+          "created_at": "2026-07-31T20:33:40.384Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-31T19:30:00.000Z",
+          "id": "fkh9grqqxg5w",
+          "incident_id": "bq8dhxj55g7g",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T20:33:40.384Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Partial Read Outage for Loki in prod-us-east-4",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-31T19:30:00.000Z",
+      "shortlink": "https://stspg.io/mm2jxybgmg52",
+      "started_at": "2026-07-31T20:33:40.336Z",
+      "status": "resolved",
+      "updated_at": "2026-07-31T20:33:40.391Z"
+    }
+  },
+  {
+    "key": "grafana/3rqk10z0jlr1",
+    "vendor": "grafana",
+    "native_id": "3rqk10z0jlr1",
+    "title": "K6 - Cloud test-run issues",
+    "url": "https://stspg.io/x4fmhx2pym34",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-01T07:25:38.675Z",
+    "resolved_at": "2026-08-01T08:31:37.496Z",
+    "duration_minutes": 65,
+    "components": [
+      "Cloud Test Runs"
+    ],
+    "updates": [
+      {
+        "native_id": "fmlvmrgj07f7",
+        "status": "investigating",
+        "body": "We are currently investigating an issue which is resulting in some test runs to abort and metrics data to be incomplete for a subset of tests",
+        "created_at": "2026-08-01T07:25:38.778Z"
+      },
+      {
+        "native_id": "n6q5klvysd39",
+        "status": "monitoring",
+        "body": "A critical piece of infrastructure behaved poorly after a reboot. It has now been properly recovered",
+        "created_at": "2026-08-01T08:06:19.924Z"
+      },
+      {
+        "native_id": "pk6dbdym3c26",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-01T08:31:37.496Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-09-24T09:45:42.720Z",
+          "description": null,
+          "group": false,
+          "group_id": "wk83fl3yzlzn",
+          "id": "m79yjv169r06",
+          "name": "Cloud Test Runs",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2024-07-11",
+          "status": "operational",
+          "updated_at": "2026-08-13T16:47:18.404Z"
+        }
+      ],
+      "created_at": "2026-08-01T07:25:38.684Z",
+      "id": "3rqk10z0jlr1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "m79yjv169r06",
+              "name": "Performance and Load Testing - Cloud Test Runs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-01T08:31:37.496Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T08:31:37.496Z",
+          "id": "pk6dbdym3c26",
+          "incident_id": "3rqk10z0jlr1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T08:31:37.496Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m79yjv169r06",
+              "name": "Performance and Load Testing - Cloud Test Runs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A critical piece of infrastructure behaved poorly after a reboot. It has now been properly recovered",
+          "created_at": "2026-08-01T08:06:19.924Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T08:06:19.924Z",
+          "id": "n6q5klvysd39",
+          "incident_id": "3rqk10z0jlr1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T08:06:19.924Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m79yjv169r06",
+              "name": "Performance and Load Testing - Cloud Test Runs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue which is resulting in some test runs to abort and metrics data to be incomplete for a subset of tests",
+          "created_at": "2026-08-01T07:25:38.778Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T07:25:38.778Z",
+          "id": "fmlvmrgj07f7",
+          "incident_id": "3rqk10z0jlr1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T07:25:38.778Z"
+        }
+      ],
+      "monitoring_at": "2026-08-01T08:06:19.924Z",
+      "name": "K6 - Cloud test-run issues",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-01T08:31:37.496Z",
+      "shortlink": "https://stspg.io/x4fmhx2pym34",
+      "started_at": "2026-08-01T07:25:38.675Z",
+      "status": "resolved",
+      "updated_at": "2026-08-01T08:31:37.516Z"
+    }
+  }
+]

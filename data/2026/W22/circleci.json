@@ -1,0 +1,390 @@
+[
+  {
+    "key": "circleci/dqlq3v1q8pvn",
+    "vendor": "circleci",
+    "native_id": "dqlq3v1q8pvn",
+    "title": "Usage API data delayed for 5/28",
+    "url": "https://stspg.io/vc8xbt2r7rmw",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-05-29T14:51:42.392Z",
+    "resolved_at": "2026-05-29T18:10:15.886Z",
+    "duration_minutes": 198,
+    "components": [
+      "CircleCI API"
+    ],
+    "updates": [
+      {
+        "native_id": "pd7ytrgxmh67",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-05-29T14:51:42.474Z"
+      },
+      {
+        "native_id": "kxw2wdpcdzjq",
+        "status": "investigating",
+        "body": "We've identified a small number of duplicate records in the Usage API data. Data is available, but may be inaccurate. We continue to investigate.",
+        "created_at": "2026-05-29T14:57:49.102Z"
+      },
+      {
+        "native_id": "7y57jpl3hyqg",
+        "status": "resolved",
+        "body": "The Usage API incident has been resolved.",
+        "created_at": "2026-05-29T18:10:15.886Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-08-06T19:54:25.350Z"
+        }
+      ],
+      "created_at": "2026-05-29T14:51:42.399Z",
+      "id": "dqlq3v1q8pvn",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The Usage API incident has been resolved.",
+          "created_at": "2026-05-29T18:10:15.886Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-29T18:10:15.886Z",
+          "id": "7y57jpl3hyqg",
+          "incident_id": "dqlq3v1q8pvn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-29T18:10:15.886Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified a small number of duplicate records in the Usage API data. Data is available, but may be inaccurate. We continue to investigate.",
+          "created_at": "2026-05-29T14:57:49.102Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-29T14:57:49.000Z",
+          "id": "kxw2wdpcdzjq",
+          "incident_id": "dqlq3v1q8pvn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-29T16:54:18.319Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-05-29T14:51:42.474Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-29T14:51:42.474Z",
+          "id": "pd7ytrgxmh67",
+          "incident_id": "dqlq3v1q8pvn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-29T14:51:42.474Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Usage API data delayed for 5/28",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-29T18:10:15.886Z",
+      "shortlink": "https://stspg.io/vc8xbt2r7rmw",
+      "started_at": "2026-05-29T14:51:42.392Z",
+      "status": "resolved",
+      "updated_at": "2026-05-29T18:10:15.904Z"
+    }
+  },
+  {
+    "key": "circleci/t7vt8j14jnbg",
+    "vendor": "circleci",
+    "native_id": "t7vt8j14jnbg",
+    "title": "Mac jobs failing to start",
+    "url": "https://stspg.io/fd7x5v1g2kw9",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-05-31T18:15:41.764Z",
+    "resolved_at": "2026-06-01T00:45:07.993Z",
+    "duration_minutes": 389,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "xjrp6rvl77zv",
+        "status": "identified",
+        "body": "We have identified a network outage that is preventing Mac jobs from starting. This include m4pro.medium and m4pro.large resource types.\n\nWe are working with our infrastructure provider to restore service.\n\nWe will update this incident as we work to resolve the issue.",
+        "created_at": "2026-05-31T18:15:41.835Z"
+      },
+      {
+        "native_id": "z3f4lcq603sx",
+        "status": "identified",
+        "body": "We are continuing to work on resolving the networking issue for Mac jobs.",
+        "created_at": "2026-05-31T19:09:16.934Z"
+      },
+      {
+        "native_id": "z9nmh3wk90px",
+        "status": "identified",
+        "body": "We are still seeing failures with Mac jobs starting due to high network latency and packet loss. We will continue to update as we have more information on a resolution.",
+        "created_at": "2026-05-31T20:05:30.284Z"
+      },
+      {
+        "native_id": "wr23tykg6q0c",
+        "status": "identified",
+        "body": "We are continuing to investigate failures with Mac jobs starting due to high network latency and packet loss. Our engineers remain engaged with our infrastructure provider to restore service. \n\nWe will provide another update within the hour, or sooner if circumstances change. We thank you for your patience while our engineers work to resolve this.",
+        "created_at": "2026-05-31T21:24:53.883Z"
+      },
+      {
+        "native_id": "hyzzgflkpy73",
+        "status": "identified",
+        "body": "Mac jobs are continuing to experience failures. Our infrastructure provider is reporting they are experiencing a DDoS attack causing high network latency and packet loss for our Mac fleet. We are working to bring up additional capacity to restore service.\n\nWe will continue to update as more information is available.",
+        "created_at": "2026-05-31T22:38:04.474Z"
+      },
+      {
+        "native_id": "9dfkrpms8gcl",
+        "status": "monitoring",
+        "body": "We are seeing Mac jobs starting successfully and improved network connectivity to the Mac fleet. We will continue to monitor the recovery.",
+        "created_at": "2026-06-01T00:24:15.594Z"
+      },
+      {
+        "native_id": "1l3d7l4v58zy",
+        "status": "monitoring",
+        "body": "We have processed the backlog of Mac jobs and job start times are recovering to normal parameters.",
+        "created_at": "2026-06-01T00:42:15.582Z"
+      },
+      {
+        "native_id": "jwry2rkn7vyj",
+        "status": "resolved",
+        "body": "Mac jobs have now fully recovered.\n\nThank you for your patience during this incident.",
+        "created_at": "2026-06-01T00:45:07.993Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-14T05:00:07.441Z"
+        }
+      ],
+      "created_at": "2026-05-31T18:15:41.770Z",
+      "id": "t7vt8j14jnbg",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Mac jobs have now fully recovered.\n\nThank you for your patience during this incident.",
+          "created_at": "2026-06-01T00:45:07.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-01T00:45:07.993Z",
+          "id": "jwry2rkn7vyj",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-01T00:45:07.993Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have processed the backlog of Mac jobs and job start times are recovering to normal parameters.",
+          "created_at": "2026-06-01T00:42:15.582Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-01T00:42:15.582Z",
+          "id": "1l3d7l4v58zy",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-01T00:42:15.582Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are seeing Mac jobs starting successfully and improved network connectivity to the Mac fleet. We will continue to monitor the recovery.",
+          "created_at": "2026-06-01T00:24:15.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-01T00:24:15.594Z",
+          "id": "9dfkrpms8gcl",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-01T00:24:15.594Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Mac jobs are continuing to experience failures. Our infrastructure provider is reporting they are experiencing a DDoS attack causing high network latency and packet loss for our Mac fleet. We are working to bring up additional capacity to restore service.\n\nWe will continue to update as more information is available.",
+          "created_at": "2026-05-31T22:38:04.474Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-05-31T22:38:04.000Z",
+          "id": "hyzzgflkpy73",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-31T22:38:35.331Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to investigate failures with Mac jobs starting due to high network latency and packet loss. Our engineers remain engaged with our infrastructure provider to restore service. \n\nWe will provide another update within the hour, or sooner if circumstances change. We thank you for your patience while our engineers work to resolve this.",
+          "created_at": "2026-05-31T21:24:53.883Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-31T21:24:53.883Z",
+          "id": "wr23tykg6q0c",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-31T21:24:53.883Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are still seeing failures with Mac jobs starting due to high network latency and packet loss. We will continue to update as we have more information on a resolution.",
+          "created_at": "2026-05-31T20:05:30.284Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-05-31T20:05:30.284Z",
+          "id": "z9nmh3wk90px",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-31T20:05:30.284Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on resolving the networking issue for Mac jobs.",
+          "created_at": "2026-05-31T19:09:16.934Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-05-31T19:09:16.934Z",
+          "id": "z3f4lcq603sx",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-31T19:09:16.934Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified a network outage that is preventing Mac jobs from starting. This include m4pro.medium and m4pro.large resource types.\n\nWe are working with our infrastructure provider to restore service.\n\nWe will update this incident as we work to resolve the issue.",
+          "created_at": "2026-05-31T18:15:41.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-05-31T18:15:41.835Z",
+          "id": "xjrp6rvl77zv",
+          "incident_id": "t7vt8j14jnbg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-31T18:15:41.835Z"
+        }
+      ],
+      "monitoring_at": "2026-06-01T00:24:15.594Z",
+      "name": "Mac jobs failing to start",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-01T00:45:07.993Z",
+      "shortlink": "https://stspg.io/fd7x5v1g2kw9",
+      "started_at": "2026-05-31T18:15:41.764Z",
+      "status": "resolved",
+      "updated_at": "2026-06-01T00:45:08.010Z"
+    }
+  }
+]

@@ -1,0 +1,488 @@
+[
+  {
+    "key": "datadog/g5vw545yn7vt",
+    "vendor": "datadog",
+    "native_id": "g5vw545yn7vt",
+    "title": "Delayed Traces in APM Trace Search",
+    "url": "https://stspg.io/4znpw24vxbbg",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-02-11T20:56:50.828Z",
+    "resolved_at": "2026-02-11T23:44:55.42Z",
+    "duration_minutes": 168,
+    "components": [
+      "APM",
+      "Monitors"
+    ],
+    "updates": [
+      {
+        "native_id": "4tkjv9dh1gry",
+        "status": "investigating",
+        "body": "We are investigating increased latency processing Traces in APM Trace Search.\nAs a result of this issue, some users may see missing or delayed traces in APM Trace Search and delayed APM Trace Monitors since 21:30 UTC.",
+        "created_at": "2026-02-11T20:56:50.936Z"
+      },
+      {
+        "native_id": "m3qwmb3cxw8b",
+        "status": "identified",
+        "body": "Teams have identified the issue and are working to mitigate at this time",
+        "created_at": "2026-02-11T21:18:40.964Z"
+      },
+      {
+        "native_id": "pf889yckpp1m",
+        "status": "identified",
+        "body": "Teams continue to work to mitigate the impact of this issue. At this time, APM Trace Processing, APM Trace Monitors are still delayed and Distribution Metrics monitors are delayed starting from 21:35 UTC",
+        "created_at": "2026-02-11T21:51:27.495Z"
+      },
+      {
+        "native_id": "3cjgcvjrrgj3",
+        "status": "identified",
+        "body": "Teams continue to work to mitigate the impact of this issue. At this time, APM Trace Processing, APM Trace Monitors are still delayed. Distribution Metrics monitors were delayed between 21:35 and 22:15 UTC",
+        "created_at": "2026-02-11T22:28:31.997Z"
+      },
+      {
+        "native_id": "ns0lv3cv8qgt",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-02-11T23:28:55.075Z"
+      },
+      {
+        "native_id": "rbw2v48psfmr",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-02-11T23:44:55.42Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-23T08:40:20.513-04:00",
+          "description": "Application Performance Monitoring (services and traces)",
+          "group": false,
+          "group_id": null,
+          "id": "p4hwj4wsc5wf",
+          "name": "APM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.448-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:10:23.098-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s6jxgrkjjj6p",
+          "name": "Monitors",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-06T15:37:32.847-04:00"
+        }
+      ],
+      "created_at": "2026-02-11T15:56:50.834-05:00",
+      "id": "g5vw545yn7vt",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-02-11T18:44:55.420-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T18:44:55.420-05:00",
+          "id": "rbw2v48psfmr",
+          "incident_id": "g5vw545yn7vt",
+          "status": "resolved",
+          "tweet_id": 2021732210945192048,
+          "updated_at": "2026-02-11T18:44:55.837-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-02-11T18:28:55.075-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T18:28:55.075-05:00",
+          "id": "ns0lv3cv8qgt",
+          "incident_id": "g5vw545yn7vt",
+          "status": "monitoring",
+          "tweet_id": 2021728182421045328,
+          "updated_at": "2026-02-11T18:28:55.357-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Teams continue to work to mitigate the impact of this issue. At this time, APM Trace Processing, APM Trace Monitors are still delayed. Distribution Metrics monitors were delayed between 21:35 and 22:15 UTC",
+          "created_at": "2026-02-11T17:28:31.997-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T17:28:31.997-05:00",
+          "id": "3cjgcvjrrgj3",
+          "incident_id": "g5vw545yn7vt",
+          "status": "identified",
+          "tweet_id": 2021712991662878932,
+          "updated_at": "2026-02-11T17:28:33.658-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Teams continue to work to mitigate the impact of this issue. At this time, APM Trace Processing, APM Trace Monitors are still delayed and Distribution Metrics monitors are delayed starting from 21:35 UTC",
+          "created_at": "2026-02-11T16:51:27.495-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T16:51:27.495-05:00",
+          "id": "pf889yckpp1m",
+          "incident_id": "g5vw545yn7vt",
+          "status": "identified",
+          "tweet_id": 2021703655809069543,
+          "updated_at": "2026-02-11T16:51:27.779-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Teams have identified the issue and are working to mitigate at this time",
+          "created_at": "2026-02-11T16:18:40.964-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T16:18:40.964-05:00",
+          "id": "m3qwmb3cxw8b",
+          "incident_id": "g5vw545yn7vt",
+          "status": "identified",
+          "tweet_id": 2021695407743782921,
+          "updated_at": "2026-02-11T16:18:41.323-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing Traces in APM Trace Search.\nAs a result of this issue, some users may see missing or delayed traces in APM Trace Search and delayed APM Trace Monitors since 21:30 UTC.",
+          "created_at": "2026-02-11T15:56:50.936-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T15:56:50.936-05:00",
+          "id": "4tkjv9dh1gry",
+          "incident_id": "g5vw545yn7vt",
+          "status": "investigating",
+          "tweet_id": 2021689913729806537,
+          "updated_at": "2026-02-11T15:56:51.407-05:00"
+        }
+      ],
+      "monitoring_at": "2026-02-11T18:28:55.075-05:00",
+      "name": "Delayed Traces in APM Trace Search",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-02-11T18:44:55.420-05:00",
+      "shortlink": "https://stspg.io/4znpw24vxbbg",
+      "started_at": "2026-02-11T15:56:50.828-05:00",
+      "status": "resolved",
+      "updated_at": "2026-02-11T18:44:55.843-05:00"
+    }
+  },
+  {
+    "key": "datadog/vkqm21bfss9c",
+    "vendor": "datadog",
+    "native_id": "vkqm21bfss9c",
+    "title": "Delayed Traces in APM",
+    "url": "https://stspg.io/19l6tqc8m1b2",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-02-12T00:57:47.006Z",
+    "resolved_at": "2026-02-12T02:08:46.715Z",
+    "duration_minutes": 70,
+    "components": [
+      "APM",
+      "Metrics and Infra Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "z3g11qgtv4nz",
+        "status": "investigating",
+        "body": "We are investigating increased latency processing Traces in APM Trace Search and AWS streams metrics.\nAs a result of this issue, some users may see missing or delayed traces in APM Trace Search, and delayed AWS stream metrics since 00:13 UTC.",
+        "created_at": "2026-02-12T00:57:47.14Z"
+      },
+      {
+        "native_id": "k3jnlr0lb3y7",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-02-12T01:20:35.617Z"
+      },
+      {
+        "native_id": "fwbs9rdzpzsg",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-02-12T01:32:45.427Z"
+      },
+      {
+        "native_id": "klq14qz3fy3w",
+        "status": "monitoring",
+        "body": "The remaining impact is limited to AWS Streams metrics. We are continuing to monitor for any further issues.",
+        "created_at": "2026-02-12T01:49:18.24Z"
+      },
+      {
+        "native_id": "ndvl07mzp7jm",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-02-12T02:08:46.715Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-23T08:40:20.513-04:00",
+          "description": "Application Performance Monitoring (services and traces)",
+          "group": false,
+          "group_id": null,
+          "id": "p4hwj4wsc5wf",
+          "name": "APM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.448-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        }
+      ],
+      "created_at": "2026-02-11T19:57:47.013-05:00",
+      "id": "vkqm21bfss9c",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-02-11T21:08:46.715-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T21:08:46.715-05:00",
+          "id": "ndvl07mzp7jm",
+          "incident_id": "vkqm21bfss9c",
+          "status": "resolved",
+          "tweet_id": 2021768413388189986,
+          "updated_at": "2026-02-11T21:08:47.171-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The remaining impact is limited to AWS Streams metrics. We are continuing to monitor for any further issues.",
+          "created_at": "2026-02-11T20:49:18.240-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T20:49:18.240-05:00",
+          "id": "klq14qz3fy3w",
+          "incident_id": "vkqm21bfss9c",
+          "status": "monitoring",
+          "tweet_id": 2021763511718953410,
+          "updated_at": "2026-02-11T20:49:18.546-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-02-11T20:32:45.427-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T20:32:45.427-05:00",
+          "id": "fwbs9rdzpzsg",
+          "incident_id": "vkqm21bfss9c",
+          "status": "monitoring",
+          "tweet_id": 2021759347555283362,
+          "updated_at": "2026-02-11T20:32:45.708-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-02-11T20:20:35.617-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T20:20:35.617-05:00",
+          "id": "k3jnlr0lb3y7",
+          "incident_id": "vkqm21bfss9c",
+          "status": "identified",
+          "tweet_id": 2021756293254721983,
+          "updated_at": "2026-02-11T20:20:37.600-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing Traces in APM Trace Search and AWS streams metrics.\nAs a result of this issue, some users may see missing or delayed traces in APM Trace Search, and delayed AWS stream metrics since 00:13 UTC.",
+          "created_at": "2026-02-11T19:57:47.140-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-02-11T19:57:47.140-05:00",
+          "id": "z3g11qgtv4nz",
+          "incident_id": "vkqm21bfss9c",
+          "status": "investigating",
+          "tweet_id": 2021750547586666734,
+          "updated_at": "2026-02-11T19:57:47.653-05:00"
+        }
+      ],
+      "monitoring_at": "2026-02-11T20:32:45.427-05:00",
+      "name": "Delayed Traces in APM",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-02-11T21:08:46.715-05:00",
+      "shortlink": "https://stspg.io/19l6tqc8m1b2",
+      "started_at": "2026-02-11T19:57:47.006-05:00",
+      "status": "resolved",
+      "updated_at": "2026-02-11T21:08:47.176-05:00"
+    }
+  }
+]

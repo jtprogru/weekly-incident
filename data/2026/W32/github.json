@@ -1,0 +1,1238 @@
+[
+  {
+    "key": "github/7s119p1yxttr",
+    "vendor": "github",
+    "native_id": "7s119p1yxttr",
+    "title": "Incident with Copilot",
+    "url": "https://stspg.io/y3tm8v1gmn85",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-03T09:53:27.164Z",
+    "resolved_at": "2026-08-03T11:25:12.371Z",
+    "duration_minutes": 91,
+    "components": [
+      "Copilot"
+    ],
+    "updates": [
+      {
+        "native_id": "t9dgrnh8h5d8",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot",
+        "created_at": "2026-08-03T09:53:27.252Z"
+      },
+      {
+        "native_id": "6q9bqtptytqj",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for chat \u0026 agent models in Copilot. Multiple models are impacted and customers may experience requests failing. We are investigating and will provide an update as soon as possible.",
+        "created_at": "2026-08-03T09:54:22.985Z"
+      },
+      {
+        "native_id": "s8ckry51tn7q",
+        "status": "investigating",
+        "body": "We are still seeing intermittent errors with Copilot, and are continuing to investigate and consider mitigations.",
+        "created_at": "2026-08-03T10:35:19.914Z"
+      },
+      {
+        "native_id": "k4jj0pm8nj3d",
+        "status": "monitoring",
+        "body": "The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-03T11:19:04.001Z"
+      },
+      {
+        "native_id": "mpkkftmykc6h",
+        "status": "resolved",
+        "body": "On 2026-08-03, between 06:52 and 11:25 UTC, some GitHub Copilot users experienced errors when using chat and agent features. Requests to list the available models failed, and because every chat or agent interaction begins by retrieving the list of models, affected users saw their requests fail. On average about 3% of these model-listing requests failed during the incident (roughly 97% succeeded), but failures were significantly higher during peak-traffic periods, at times approaching 100% for the affected internal lookups. Approximately 4,066 users were affected in a single 60-minute window, concentrated among IDE-based clients. The underlying AI models themselves remained healthy throughout.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by an increase in how often clients requested the model list, which pushed an internal user-authorization lookup past a rate limit; the rate-limited responses were surfaced to users as errors. We mitigated the impact by increasing how long Copilot caches that authorization lookup, which reduced load on the internal service, and we have additional capacity and rate-limit changes in progress. To prevent recurrence we are improving monitoring for this class of failure, adjusting cache and rate-limit settings, and coordinating with client teams on request patterns.",
+        "created_at": "2026-08-03T11:25:12.371Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-06-21T16:04:33.017Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "pjmpxvq2cmr2",
+          "name": "Copilot",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 10,
+          "showcase": true,
+          "start_date": "2022-06-21",
+          "status": "operational",
+          "updated_at": "2026-08-17T21:15:46.595Z"
+        }
+      ],
+      "created_at": "2026-08-03T09:53:27.172Z",
+      "id": "7s119p1yxttr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On 2026-08-03, between 06:52 and 11:25 UTC, some GitHub Copilot users experienced errors when using chat and agent features. Requests to list the available models failed, and because every chat or agent interaction begins by retrieving the list of models, affected users saw their requests fail. On average about 3% of these model-listing requests failed during the incident (roughly 97% succeeded), but failures were significantly higher during peak-traffic periods, at times approaching 100% for the affected internal lookups. Approximately 4,066 users were affected in a single 60-minute window, concentrated among IDE-based clients. The underlying AI models themselves remained healthy throughout.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by an increase in how often clients requested the model list, which pushed an internal user-authorization lookup past a rate limit; the rate-limited responses were surfaced to users as errors. We mitigated the impact by increasing how long Copilot caches that authorization lookup, which reduced load on the internal service, and we have additional capacity and rate-limit changes in progress. To prevent recurrence we are improving monitoring for this class of failure, adjusting cache and rate-limit settings, and coordinating with client teams on request patterns.",
+          "created_at": "2026-08-03T11:25:12.371Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T11:25:12.371Z",
+          "id": "mpkkftmykc6h",
+          "incident_id": "7s119p1yxttr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T15:00:05.151Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-03T11:19:04.001Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T11:19:04.001Z",
+          "id": "k4jj0pm8nj3d",
+          "incident_id": "7s119p1yxttr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T11:19:04.001Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are still seeing intermittent errors with Copilot, and are continuing to investigate and consider mitigations.",
+          "created_at": "2026-08-03T10:35:19.914Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T10:35:19.914Z",
+          "id": "s8ckry51tn7q",
+          "incident_id": "7s119p1yxttr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T10:35:19.914Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing degraded availability for chat \u0026 agent models in Copilot. Multiple models are impacted and customers may experience requests failing. We are investigating and will provide an update as soon as possible.",
+          "created_at": "2026-08-03T09:54:22.985Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T09:54:22.985Z",
+          "id": "6q9bqtptytqj",
+          "incident_id": "7s119p1yxttr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T09:54:22.985Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot",
+          "created_at": "2026-08-03T09:53:27.252Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T09:53:27.252Z",
+          "id": "t9dgrnh8h5d8",
+          "incident_id": "7s119p1yxttr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T09:53:27.252Z"
+        }
+      ],
+      "monitoring_at": "2026-08-03T11:19:04.001Z",
+      "name": "Incident with Copilot",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-03T11:25:12.371Z",
+      "shortlink": "https://stspg.io/y3tm8v1gmn85",
+      "started_at": "2026-08-03T09:53:27.164Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T15:00:05.157Z"
+    }
+  },
+  {
+    "key": "github/9wzhl5jr80jt",
+    "vendor": "github",
+    "native_id": "9wzhl5jr80jt",
+    "title": "Some Copilot Cloud Agent jobs not starting",
+    "url": "https://stspg.io/kxdh3hfxm3zl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-05T11:38:57.677Z",
+    "resolved_at": "2026-08-05T13:00:25.857Z",
+    "duration_minutes": 81,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "cyh7wt5kzssb",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-08-05T11:38:57.748Z"
+      },
+      {
+        "native_id": "rbfr7f2qn446",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-05T12:01:29.155Z"
+      },
+      {
+        "native_id": "0d2gc2n7f36w",
+        "status": "monitoring",
+        "body": "Copilot cloud agent jobs have recovered and the backlog of delayed jobs is being processed.",
+        "created_at": "2026-08-05T12:10:46.467Z"
+      },
+      {
+        "native_id": "27d2wd2kyn4y",
+        "status": "resolved",
+        "body": "On August 5, 2026, between 11:02 and 11:54 UTC, the GitHub Copilot cloud agent service was degraded and new cloud agent jobs were delayed from starting. During this period 100% of newly submitted agent jobs were affected. The incident was limited to delay of cloud agent jobs. No jobs were lost and the queued backlog was processed by 13:00 UTC. This was due to an internal rate limit used to protect service availability that was enabled more broadly than intended delaying more traffic than expected. \u003cbr /\u003e \u003cbr /\u003eThe service recovered when the rate limit window expired. We then tuned the control so it no longer affected unrelated coding agent traffic. \u003cbr /\u003e \u003cbr /\u003eWe are working to improve the control's scoping and our monitoring and alerting to reduce our time to detection and mitigation of similar issues in the future.",
+        "created_at": "2026-08-05T13:00:25.857Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-05T11:38:57.684Z",
+      "id": "9wzhl5jr80jt",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On August 5, 2026, between 11:02 and 11:54 UTC, the GitHub Copilot cloud agent service was degraded and new cloud agent jobs were delayed from starting. During this period 100% of newly submitted agent jobs were affected. The incident was limited to delay of cloud agent jobs. No jobs were lost and the queued backlog was processed by 13:00 UTC. This was due to an internal rate limit used to protect service availability that was enabled more broadly than intended delaying more traffic than expected. \u003cbr /\u003e \u003cbr /\u003eThe service recovered when the rate limit window expired. We then tuned the control so it no longer affected unrelated coding agent traffic. \u003cbr /\u003e \u003cbr /\u003eWe are working to improve the control's scoping and our monitoring and alerting to reduce our time to detection and mitigation of similar issues in the future.",
+          "created_at": "2026-08-05T13:00:25.857Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-05T13:00:25.857Z",
+          "id": "27d2wd2kyn4y",
+          "incident_id": "9wzhl5jr80jt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T14:38:40.193Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Copilot cloud agent jobs have recovered and the backlog of delayed jobs is being processed.",
+          "created_at": "2026-08-05T12:10:46.467Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-05T12:10:46.467Z",
+          "id": "0d2gc2n7f36w",
+          "incident_id": "9wzhl5jr80jt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-05T12:10:46.467Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-05T12:01:29.155Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-05T12:01:29.155Z",
+          "id": "rbfr7f2qn446",
+          "incident_id": "9wzhl5jr80jt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-05T12:01:29.155Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-08-05T11:38:57.748Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-05T11:38:57.748Z",
+          "id": "cyh7wt5kzssb",
+          "incident_id": "9wzhl5jr80jt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-05T11:38:57.748Z"
+        }
+      ],
+      "monitoring_at": "2026-08-05T12:01:29.155Z",
+      "name": "Some Copilot Cloud Agent jobs not starting",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-05T13:00:25.857Z",
+      "shortlink": "https://stspg.io/kxdh3hfxm3zl",
+      "started_at": "2026-08-05T11:38:57.677Z",
+      "status": "resolved",
+      "updated_at": "2026-08-06T14:38:40.197Z"
+    }
+  },
+  {
+    "key": "github/1xqvzyv99skw",
+    "vendor": "github",
+    "native_id": "1xqvzyv99skw",
+    "title": "Incident with Pages - Deployment Lag",
+    "url": "https://stspg.io/b0n00sx9z3ht",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-06T15:03:55.174Z",
+    "resolved_at": "2026-08-06T16:22:59.638Z",
+    "duration_minutes": 79,
+    "components": [
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "yqpw817ffp7k",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pages",
+        "created_at": "2026-08-06T15:03:55.261Z"
+      },
+      {
+        "native_id": "6sgmrlwjxcqf",
+        "status": "monitoring",
+        "body": "The degradation affecting Pages has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-06T15:50:51.844Z"
+      },
+      {
+        "native_id": "r19dvhh02nhy",
+        "status": "resolved",
+        "body": "On August 6, 2026, at 07:00 UTC, a configuration change inadvertently reduced the capacity of the service that processes GitHub Pages deployments. As traffic increased over the following hours, latency in the deployment pipeline progressively increased. \u003cbr /\u003e\u003cbr /\u003eAt 12:09 UTC, latency crossed the alerting threshold and the team began investigating. We reverted the invalid configuration and applied additional mitigations, including reducing status deployment processing to lower the load on our Redis cluster. Latency returned to normal levels at 15:40 UTC. \u003cbr /\u003e\u003cbr /\u003eCustomer impact occurred from 11:34 to 15:32 UTC. During this period, we failed to process approximately 128,000 deployments. \u003cbr /\u003e\u003cbr /\u003eWe have updated our alerts to detect elevated processing latency sooner and to notify us immediately when latency causes deployment processing failures. We've confirmed this incident was not fully captured by our availability metrics. In the coming days, we'll update how GitHub Pages availability is measured so incidents like this are accurately reflected going forward.",
+        "created_at": "2026-08-06T16:22:59.638Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.098Z"
+        }
+      ],
+      "created_at": "2026-08-06T15:03:55.182Z",
+      "id": "1xqvzyv99skw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On August 6, 2026, at 07:00 UTC, a configuration change inadvertently reduced the capacity of the service that processes GitHub Pages deployments. As traffic increased over the following hours, latency in the deployment pipeline progressively increased. \u003cbr /\u003e\u003cbr /\u003eAt 12:09 UTC, latency crossed the alerting threshold and the team began investigating. We reverted the invalid configuration and applied additional mitigations, including reducing status deployment processing to lower the load on our Redis cluster. Latency returned to normal levels at 15:40 UTC. \u003cbr /\u003e\u003cbr /\u003eCustomer impact occurred from 11:34 to 15:32 UTC. During this period, we failed to process approximately 128,000 deployments. \u003cbr /\u003e\u003cbr /\u003eWe have updated our alerts to detect elevated processing latency sooner and to notify us immediately when latency causes deployment processing failures. We've confirmed this incident was not fully captured by our availability metrics. In the coming days, we'll update how GitHub Pages availability is measured so incidents like this are accurately reflected going forward.",
+          "created_at": "2026-08-06T16:22:59.638Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:22:59.638Z",
+          "id": "r19dvhh02nhy",
+          "incident_id": "1xqvzyv99skw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-10T21:16:18.250Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Pages has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-06T15:50:51.844Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:50:51.844Z",
+          "id": "6sgmrlwjxcqf",
+          "incident_id": "1xqvzyv99skw",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:50:51.844Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pages",
+          "created_at": "2026-08-06T15:03:55.261Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:03:55.261Z",
+          "id": "yqpw817ffp7k",
+          "incident_id": "1xqvzyv99skw",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:03:55.261Z"
+        }
+      ],
+      "monitoring_at": "2026-08-06T15:50:51.844Z",
+      "name": "Incident with Pages - Deployment Lag",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-06T16:22:59.638Z",
+      "shortlink": "https://stspg.io/b0n00sx9z3ht",
+      "started_at": "2026-08-06T15:03:55.174Z",
+      "status": "resolved",
+      "updated_at": "2026-08-10T21:16:18.256Z"
+    }
+  },
+  {
+    "key": "github/qcvjkzcs7j74",
+    "vendor": "github",
+    "native_id": "qcvjkzcs7j74",
+    "title": "Incident with Actions",
+    "url": "https://stspg.io/rcz3fcm83sff",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-08-06T15:22:49.021Z",
+    "resolved_at": "2026-08-07T02:04:44.46Z",
+    "duration_minutes": 641,
+    "components": [
+      "Actions",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "f3r3jlmz4h4k",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-08-06T15:22:49.1Z"
+      },
+      {
+        "native_id": "07t612lp5ftr",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-08-06T15:41:10.535Z"
+      },
+      {
+        "native_id": "yd9whz1ptmfn",
+        "status": "investigating",
+        "body": "We are investigating errors affecting GitHub Actions. Some workflow runs are failing to start or failing partway through, and some requests to the Actions REST API are returning errors. \u003cbr /\u003e\u003cbr /\u003eSome customers may also see unexpected rate limiting in their workflows. \u003cbr /\u003e\u003cbr /\u003eEngineers have identified the source of the disruption and are actively working on a mitigation",
+        "created_at": "2026-08-06T15:45:14.821Z"
+      },
+      {
+        "native_id": "n139kbl0gx46",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-08-06T15:53:22.125Z"
+      },
+      {
+        "native_id": "v0l2qjlcwy2g",
+        "status": "investigating",
+        "body": "Pages is operating normally.",
+        "created_at": "2026-08-06T16:19:30.322Z"
+      },
+      {
+        "native_id": "dl9j9t80lsxt",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-08-06T16:27:01.865Z"
+      },
+      {
+        "native_id": "nhz9dp5jm9ws",
+        "status": "investigating",
+        "body": "We are continuing to work on the issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eSome workflow runs are still delayed or failing to complete, and some requests to the Actions API are returning errors. \u003cbr /\u003e\u003cbr /\u003eCustomers running migrations with GitHub Enterprise Importer may also see failures. \u003cbr /\u003e\u003cbr /\u003eEngineers are actively working towards full recovery.",
+        "created_at": "2026-08-06T16:27:47.096Z"
+      },
+      {
+        "native_id": "qhn69kn25x0r",
+        "status": "investigating",
+        "body": "Actions and Pages are experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-08-06T16:33:31.419Z"
+      },
+      {
+        "native_id": "njpbbjgyv02d",
+        "status": "investigating",
+        "body": "We are continuing to work on the issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eSome requests to the Actions API are returning errors. Customers running migrations with GitHub Enterprise Importer may see failures. \u003cbr /\u003e\u003cbr /\u003eOur engineers have applied several mitigations and are rolling out a further fix now.",
+        "created_at": "2026-08-06T17:02:43.449Z"
+      },
+      {
+        "native_id": "6t7qw7z59r7n",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting multiple GitHub services.\u003cbr /\u003e\u003cbr /\u003eWorkflow runs are failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, hosted runners, and migrations using GitHub Enterprise Importer might also affected. \u003cbr /\u003e\u003cbr /\u003eWebhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eEngineers have applied a number of mitigations and are rolling out a further fix across all affected systems now.",
+        "created_at": "2026-08-06T17:40:22.051Z"
+      },
+      {
+        "native_id": "ck7qh9w98c47",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting multiple GitHub services. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eCustomers using self-hosted runners may see errors or rate limiting when runners register. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, hosted runners, and migrations using GitHub Enterprise Importer may also be affected. \u003cbr /\u003e\u003cbr /\u003eWebhook deliveries may be delayed.\u003cbr /\u003e\u003cbr /\u003eEngineers have applied further mitigations and are continuing to work towards full recovery.",
+        "created_at": "2026-08-06T18:11:41.65Z"
+      },
+      {
+        "native_id": "vhks311t6vxw",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting multiple GitHub services. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing, and jobs may remain queued for an extended period before starting or may time out. Jobs using GitHub-hosted runners are particularly affected while capacity is constrained. \u003cbr /\u003e\u003cbr /\u003eCustomers using self-hosted runners may see errors or rate limiting when runners register. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected. Webhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eRecovery is taking longer than we expected, and engineers remain actively engaged.",
+        "created_at": "2026-08-06T18:46:37.4Z"
+      },
+      {
+        "native_id": "jfc357z3bjqm",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eCapacity remains constrained and jobs may still be delayed or fail while it recovers gradually. Customers using self-hosted runners may see errors or rate limiting when runners register.  \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected. Webhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eOur engineers remain actively engaged.",
+        "created_at": "2026-08-06T19:43:21.502Z"
+      },
+      {
+        "native_id": "q5f1g35x3kkd",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting GitHub Actions. Webhook triggers are currently throttled to help with recovery and and we are processing approximately 15% of webhooks, so many events such as pushes and pull requests are not triggering workflow runs. Of jobs queued, approximately 65% are succeeding, improved from a low of 30 to 40% earlier in this incident.\u003cbr /\u003e\u003cbr /\u003eWe have narrowed the remaining impact to runners that are stuck retrying jobs that are no longer available. Both GitHub-hosted and self-hosted runners are affected, and we are working to recover them.\u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected.",
+        "created_at": "2026-08-06T20:34:17.618Z"
+      },
+      {
+        "native_id": "lg0mwhjb818h",
+        "status": "investigating",
+        "body": "We are continuing to work on an issue affecting GitHub Actions. Webhook triggers remain throttled to aid recovery, so many push and pull request events are not triggering new workflow runs.\u003cbr /\u003e\u003cbr /\u003eWe identified runners being assigned jobs that are no longer valid and are deploying a change to address this issue. Both GitHub-hosted and self-hosted runners are affected.\u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and GitHub Pages may experience failures or delays. Migrations using GitHub Enterprise Importer have been paused to support mitigation efforts.",
+        "created_at": "2026-08-06T21:30:42.677Z"
+      },
+      {
+        "native_id": "dwhlj0kqvv5p",
+        "status": "investigating",
+        "body": "We continue to make progress on the issue affecting GitHub Actions. We have deployed a fix that addresses runners being assigned jobs that are no longer valid, and are seeing improvement in job completion rates. For workflow runs that are starting, success rates have increased significantly and are now at 97%. Standard and larger runners are now draining queued work. A change is also in progress to mitigate issues with existing self-hosted runners that are not picking up jobs.\u003cbr /\u003e\u003cbr /\u003eWebhook triggers remain throttled to support recovery. Many push and pull request events are not yet triggering new workflow runs, and we are working to safely restore full throughput.\u003cbr /\u003e\u003cbr /\u003eGitHub Pages, Copilot code review, and Copilot coding agent may still experience failures or delays. Migrations using GitHub Enterprise Importer remain paused.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor recovery and will provide another update as conditions improve.",
+        "created_at": "2026-08-06T22:18:09.797Z"
+      },
+      {
+        "native_id": "bc6nlz3ztfkz",
+        "status": "investigating",
+        "body": "We have deployed fixes that address runners being assigned invalid jobs and are taking additional steps to clear the backlog of affected jobs. Job completion rates for running workflows have improved significantly, with success rates now at 99%. Global queues for hosted runner assignment are nearly burned down and concurrency queues for customers are being processed. Another change was deployed to accelerate processing the backlog of job requests.\u003cbr /\u003e\u003cbr /\u003eWe are gradually restoring throughput for webhook-triggered Actions workflows and monitoring system stability. We have deployed a fix for self-hosted runners that were not picking up jobs and are enabling it incrementally.\u003cbr /\u003e\u003cbr /\u003eGitHub Pages, Copilot code review, and Copilot coding agent may still experience intermittent failures or delays. Migrations using GitHub Enterprise Importer remain paused.\u003cbr /\u003e\u003cbr /\u003eWe continue to monitor recovery across all affected services and will provide another update as conditions improve.",
+        "created_at": "2026-08-06T23:13:30.825Z"
+      },
+      {
+        "native_id": "jjkymmsnczrg",
+        "status": "investigating",
+        "body": "\u003cbr /\u003eSystem-wide queues have been drained, and new jobs are being processed as expected. The fix for self-hosted runners not picking up jobs has been fully rolled out.\u003cbr /\u003e\u003cbr /\u003eWebhook-triggered Actions workflows have been restored to full throughput. GitHub Pages, Copilot code review, and Copilot coding agent are showing recovery. Migrations using GitHub Enterprise Importer remain paused as a precaution.\u003cbr /\u003e\u003cbr /\u003eWe are monitoring all affected services for sustained recovery and will provide another update shortly.",
+        "created_at": "2026-08-07T00:01:15.259Z"
+      },
+      {
+        "native_id": "bpgwsqb38dh9",
+        "status": "investigating",
+        "body": "System-wide queues have been drained, and new jobs are being processed as expected. The fix for self-hosted runners not picking up jobs has been fully rolled out.\u003cbr /\u003e\u003cbr /\u003eWebhook-triggered Actions workflows have been restored to full throughput. GitHub Pages, Copilot code review, and Copilot coding agent are showing recovery. Migrations using GitHub Enterprise Importer remain paused as a precaution.\u003cbr /\u003e\u003cbr /\u003eWe are monitoring all affected services for sustained recovery and will provide another update shortly.",
+        "created_at": "2026-08-07T00:01:26.921Z"
+      },
+      {
+        "native_id": "rhg81c20vk06",
+        "status": "investigating",
+        "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-07T00:05:05.379Z"
+      },
+      {
+        "native_id": "sk63vxykkbrj",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-07T00:06:24.906Z"
+      },
+      {
+        "native_id": "ckqdf8pm7gqw",
+        "status": "monitoring",
+        "body": "We’re investigating reports that some Actions Runner Controller runners are taking longer than expected to recover. We’ll provide an update as our investigation progresses.",
+        "created_at": "2026-08-07T00:59:01.958Z"
+      },
+      {
+        "native_id": "qky4pzj2zplf",
+        "status": "monitoring",
+        "body": "During the incident, some Actions Runner Controller (ARC) runner pods became stuck in an idle state. Affected users can delete those pods using kubectl or redeploy their Actions Runner Controller application. ARC will automatically create replacement runners.\u003cbr /\u003e\u003cbr /\u003eThe next releases of Actions Runner and Actions Runner Controller will include an automatic recovery mechanism, preventing the need for these manual steps in the future.\u003cbr /\u003e\u003cbr /\u003eSome workflow-triggering events, including push and pull request events, were not processed during the incident and cannot be replayed automatically. Customers may need to repeat the triggering action by pushing a new commit, updating the pull request, or manually re-running the workflow where applicable.",
+        "created_at": "2026-08-07T02:03:41.768Z"
+      },
+      {
+        "native_id": "x3dy6fnmf98h",
+        "status": "resolved",
+        "body": "On August 6, 2026, between 15:05 UTC and 00:14 UTC on August 7, GitHub Actions experienced degraded availability. During the incident, workflow runs failed or remained queued for an extended period of time. Customers using both GitHub-hosted and self-hosted runners were affected. At peak, 71% of workflow runs experienced infrastructure failures and 75% of the remaining workflow runs were delayed by more than 5 minutes. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a routine deployment to an internal Actions service responsible for processing events and generating Actions jobs. The deployment exposed an existing capacity and concurrency weakness. As pods were replaced during the deployment, remaining capacity became saturated, causing services to crash and triggering a cascading impact across multiple clusters and downstream services. \u003cbr /\u003e\u003cbr /\u003eThese services recovered at 17:00 after expanding capacity, throttling incoming webhook-triggered work to allow the system to recover, and increasing processing capacity for the backlog of affected events. \u003cbr /\u003e\u003cbr /\u003eAs the incident progressed, a backlog of work accumulated across the systems responsible for assigning jobs to runners. Due to a latent bug in one of the services responsible for job assignment, runners were getting assigned jobs that were no longer valid and then getting stuck retrying those jobs, preventing them from picking up valid work. \u003cbr /\u003e\u003cbr /\u003eThis second stage of impact was mitigated by deploying changes to prevent runners from repeatedly attempting to acquire invalid jobs. These mitigations allowed the accumulated queues to drain and Actions to recover to normal operation. \u003cbr /\u003e\u003cbr /\u003eSome Actions Runner Controller (ARC) runners remained stuck after the incident. A mitigation deployed during the incident inadvertently affected these runners, causing some to remain offline until they were manually recovered. We subsequently rolled back the change and are adding automatic recovery in upcoming Runner and ARC releases. \u003cbr /\u003e\u003cbr /\u003eSome jobs created during the incident were also left stuck unable to be retried or canceled.  CLI and UI solutions for customers to address these were shared at https://github.com/orgs/community/discussions/204152#discussioncomment-17946043. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are making improvements to deployment and capacity safeguards for the affected services, strengthening monitoring for the conditions that preceded the incident, improving the resiliency and recovery of queued work and runner assignment, and adding automatic recovery for self-hosted runners affected by similar failure conditions. We are also making additional improvements to reduce the risk of cascading failures and accelerate recovery during large-scale Actions disruptions.",
+        "created_at": "2026-08-07T02:04:44.46Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.098Z"
+        }
+      ],
+      "created_at": "2026-08-06T15:22:49.029Z",
+      "id": "qcvjkzcs7j74",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On August 6, 2026, between 15:05 UTC and 00:14 UTC on August 7, GitHub Actions experienced degraded availability. During the incident, workflow runs failed or remained queued for an extended period of time. Customers using both GitHub-hosted and self-hosted runners were affected. At peak, 71% of workflow runs experienced infrastructure failures and 75% of the remaining workflow runs were delayed by more than 5 minutes. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a routine deployment to an internal Actions service responsible for processing events and generating Actions jobs. The deployment exposed an existing capacity and concurrency weakness. As pods were replaced during the deployment, remaining capacity became saturated, causing services to crash and triggering a cascading impact across multiple clusters and downstream services. \u003cbr /\u003e\u003cbr /\u003eThese services recovered at 17:00 after expanding capacity, throttling incoming webhook-triggered work to allow the system to recover, and increasing processing capacity for the backlog of affected events. \u003cbr /\u003e\u003cbr /\u003eAs the incident progressed, a backlog of work accumulated across the systems responsible for assigning jobs to runners. Due to a latent bug in one of the services responsible for job assignment, runners were getting assigned jobs that were no longer valid and then getting stuck retrying those jobs, preventing them from picking up valid work. \u003cbr /\u003e\u003cbr /\u003eThis second stage of impact was mitigated by deploying changes to prevent runners from repeatedly attempting to acquire invalid jobs. These mitigations allowed the accumulated queues to drain and Actions to recover to normal operation. \u003cbr /\u003e\u003cbr /\u003eSome Actions Runner Controller (ARC) runners remained stuck after the incident. A mitigation deployed during the incident inadvertently affected these runners, causing some to remain offline until they were manually recovered. We subsequently rolled back the change and are adding automatic recovery in upcoming Runner and ARC releases. \u003cbr /\u003e\u003cbr /\u003eSome jobs created during the incident were also left stuck unable to be retried or canceled.  CLI and UI solutions for customers to address these were shared at https://github.com/orgs/community/discussions/204152#discussioncomment-17946043. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are making improvements to deployment and capacity safeguards for the affected services, strengthening monitoring for the conditions that preceded the incident, improving the resiliency and recovery of queued work and runner assignment, and adding automatic recovery for self-hosted runners affected by similar failure conditions. We are also making additional improvements to reduce the risk of cascading failures and accelerate recovery during large-scale Actions disruptions.",
+          "created_at": "2026-08-07T02:04:44.460Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T02:04:44.460Z",
+          "id": "x3dy6fnmf98h",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T02:05:24.918Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "During the incident, some Actions Runner Controller (ARC) runner pods became stuck in an idle state. Affected users can delete those pods using kubectl or redeploy their Actions Runner Controller application. ARC will automatically create replacement runners.\u003cbr /\u003e\u003cbr /\u003eThe next releases of Actions Runner and Actions Runner Controller will include an automatic recovery mechanism, preventing the need for these manual steps in the future.\u003cbr /\u003e\u003cbr /\u003eSome workflow-triggering events, including push and pull request events, were not processed during the incident and cannot be replayed automatically. Customers may need to repeat the triggering action by pushing a new commit, updating the pull request, or manually re-running the workflow where applicable.",
+          "created_at": "2026-08-07T02:03:41.768Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T02:03:41.768Z",
+          "id": "qky4pzj2zplf",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T02:03:41.768Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re investigating reports that some Actions Runner Controller runners are taking longer than expected to recover. We’ll provide an update as our investigation progresses.",
+          "created_at": "2026-08-07T00:59:01.958Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T00:59:01.958Z",
+          "id": "ckqdf8pm7gqw",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T00:59:01.958Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-07T00:06:24.906Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T00:06:24.906Z",
+          "id": "sk63vxykkbrj",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T00:06:24.906Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-07T00:05:05.379Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T00:05:05.379Z",
+          "id": "rhg81c20vk06",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T00:05:05.379Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "System-wide queues have been drained, and new jobs are being processed as expected. The fix for self-hosted runners not picking up jobs has been fully rolled out.\u003cbr /\u003e\u003cbr /\u003eWebhook-triggered Actions workflows have been restored to full throughput. GitHub Pages, Copilot code review, and Copilot coding agent are showing recovery. Migrations using GitHub Enterprise Importer remain paused as a precaution.\u003cbr /\u003e\u003cbr /\u003eWe are monitoring all affected services for sustained recovery and will provide another update shortly.",
+          "created_at": "2026-08-07T00:01:26.921Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T00:01:26.921Z",
+          "id": "bpgwsqb38dh9",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T00:01:26.921Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "\u003cbr /\u003eSystem-wide queues have been drained, and new jobs are being processed as expected. The fix for self-hosted runners not picking up jobs has been fully rolled out.\u003cbr /\u003e\u003cbr /\u003eWebhook-triggered Actions workflows have been restored to full throughput. GitHub Pages, Copilot code review, and Copilot coding agent are showing recovery. Migrations using GitHub Enterprise Importer remain paused as a precaution.\u003cbr /\u003e\u003cbr /\u003eWe are monitoring all affected services for sustained recovery and will provide another update shortly.",
+          "created_at": "2026-08-07T00:01:15.259Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T00:01:15.259Z",
+          "id": "jjkymmsnczrg",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T00:01:15.259Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have deployed fixes that address runners being assigned invalid jobs and are taking additional steps to clear the backlog of affected jobs. Job completion rates for running workflows have improved significantly, with success rates now at 99%. Global queues for hosted runner assignment are nearly burned down and concurrency queues for customers are being processed. Another change was deployed to accelerate processing the backlog of job requests.\u003cbr /\u003e\u003cbr /\u003eWe are gradually restoring throughput for webhook-triggered Actions workflows and monitoring system stability. We have deployed a fix for self-hosted runners that were not picking up jobs and are enabling it incrementally.\u003cbr /\u003e\u003cbr /\u003eGitHub Pages, Copilot code review, and Copilot coding agent may still experience intermittent failures or delays. Migrations using GitHub Enterprise Importer remain paused.\u003cbr /\u003e\u003cbr /\u003eWe continue to monitor recovery across all affected services and will provide another update as conditions improve.",
+          "created_at": "2026-08-06T23:13:30.825Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T23:13:30.825Z",
+          "id": "bc6nlz3ztfkz",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T23:13:30.825Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We continue to make progress on the issue affecting GitHub Actions. We have deployed a fix that addresses runners being assigned jobs that are no longer valid, and are seeing improvement in job completion rates. For workflow runs that are starting, success rates have increased significantly and are now at 97%. Standard and larger runners are now draining queued work. A change is also in progress to mitigate issues with existing self-hosted runners that are not picking up jobs.\u003cbr /\u003e\u003cbr /\u003eWebhook triggers remain throttled to support recovery. Many push and pull request events are not yet triggering new workflow runs, and we are working to safely restore full throughput.\u003cbr /\u003e\u003cbr /\u003eGitHub Pages, Copilot code review, and Copilot coding agent may still experience failures or delays. Migrations using GitHub Enterprise Importer remain paused.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor recovery and will provide another update as conditions improve.",
+          "created_at": "2026-08-06T22:18:09.797Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T22:18:09.797Z",
+          "id": "dwhlj0kqvv5p",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T22:18:09.797Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting GitHub Actions. Webhook triggers remain throttled to aid recovery, so many push and pull request events are not triggering new workflow runs.\u003cbr /\u003e\u003cbr /\u003eWe identified runners being assigned jobs that are no longer valid and are deploying a change to address this issue. Both GitHub-hosted and self-hosted runners are affected.\u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and GitHub Pages may experience failures or delays. Migrations using GitHub Enterprise Importer have been paused to support mitigation efforts.",
+          "created_at": "2026-08-06T21:30:42.677Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T21:30:42.677Z",
+          "id": "lg0mwhjb818h",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T21:30:42.677Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting GitHub Actions. Webhook triggers are currently throttled to help with recovery and and we are processing approximately 15% of webhooks, so many events such as pushes and pull requests are not triggering workflow runs. Of jobs queued, approximately 65% are succeeding, improved from a low of 30 to 40% earlier in this incident.\u003cbr /\u003e\u003cbr /\u003eWe have narrowed the remaining impact to runners that are stuck retrying jobs that are no longer available. Both GitHub-hosted and self-hosted runners are affected, and we are working to recover them.\u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected.",
+          "created_at": "2026-08-06T20:34:17.618Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T20:34:17.618Z",
+          "id": "q5f1g35x3kkd",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T20:34:17.618Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eCapacity remains constrained and jobs may still be delayed or fail while it recovers gradually. Customers using self-hosted runners may see errors or rate limiting when runners register.  \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected. Webhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eOur engineers remain actively engaged.",
+          "created_at": "2026-08-06T19:43:21.502Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T19:43:21.502Z",
+          "id": "jfc357z3bjqm",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T19:43:21.502Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting multiple GitHub services. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing, and jobs may remain queued for an extended period before starting or may time out. Jobs using GitHub-hosted runners are particularly affected while capacity is constrained. \u003cbr /\u003e\u003cbr /\u003eCustomers using self-hosted runners may see errors or rate limiting when runners register. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, and migrations using GitHub Enterprise Importer may also be affected. Webhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eRecovery is taking longer than we expected, and engineers remain actively engaged.",
+          "created_at": "2026-08-06T18:46:37.400Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T18:46:37.400Z",
+          "id": "vhks311t6vxw",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T18:46:37.400Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting multiple GitHub services. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eCustomers using self-hosted runners may see errors or rate limiting when runners register. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, hosted runners, and migrations using GitHub Enterprise Importer may also be affected. \u003cbr /\u003e\u003cbr /\u003eWebhook deliveries may be delayed.\u003cbr /\u003e\u003cbr /\u003eEngineers have applied further mitigations and are continuing to work towards full recovery.",
+          "created_at": "2026-08-06T18:11:41.650Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T18:11:41.650Z",
+          "id": "ck7qh9w98c47",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T18:11:41.650Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on an issue affecting multiple GitHub services.\u003cbr /\u003e\u003cbr /\u003eWorkflow runs are failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eCopilot code review, Copilot coding agent, hosted runners, and migrations using GitHub Enterprise Importer might also affected. \u003cbr /\u003e\u003cbr /\u003eWebhook deliveries may be delayed. \u003cbr /\u003e\u003cbr /\u003eEngineers have applied a number of mitigations and are rolling out a further fix across all affected systems now.",
+          "created_at": "2026-08-06T17:40:22.051Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T17:40:22.051Z",
+          "id": "6t7qw7z59r7n",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T17:40:22.051Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on the issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eWorkflow runs are still failing or delayed in starting, and some queued jobs may time out. \u003cbr /\u003e\u003cbr /\u003eSome requests to the Actions API are returning errors. Customers running migrations with GitHub Enterprise Importer may see failures. \u003cbr /\u003e\u003cbr /\u003eOur engineers have applied several mitigations and are rolling out a further fix now.",
+          "created_at": "2026-08-06T17:02:43.449Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T17:02:43.449Z",
+          "id": "njpbbjgyv02d",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T17:02:43.449Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "major_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Actions and Pages are experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-08-06T16:33:31.419Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:33:31.419Z",
+          "id": "qhn69kn25x0r",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T16:33:31.419Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to work on the issue affecting GitHub Actions. \u003cbr /\u003e\u003cbr /\u003eSome workflow runs are still delayed or failing to complete, and some requests to the Actions API are returning errors. \u003cbr /\u003e\u003cbr /\u003eCustomers running migrations with GitHub Enterprise Importer may also see failures. \u003cbr /\u003e\u003cbr /\u003eEngineers are actively working towards full recovery.",
+          "created_at": "2026-08-06T16:27:47.096Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:27:47.096Z",
+          "id": "nhz9dp5jm9ws",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T16:27:47.096Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-08-06T16:27:01.865Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:27:01.865Z",
+          "id": "dl9j9t80lsxt",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T16:27:01.865Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pages is operating normally.",
+          "created_at": "2026-08-06T16:19:30.322Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:19:30.322Z",
+          "id": "v0l2qjlcwy2g",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T16:19:30.322Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-08-06T15:53:22.125Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:53:22.125Z",
+          "id": "n139kbl0gx46",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:53:22.125Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are investigating errors affecting GitHub Actions. Some workflow runs are failing to start or failing partway through, and some requests to the Actions REST API are returning errors. \u003cbr /\u003e\u003cbr /\u003eSome customers may also see unexpected rate limiting in their workflows. \u003cbr /\u003e\u003cbr /\u003eEngineers have identified the source of the disruption and are actively working on a mitigation",
+          "created_at": "2026-08-06T15:45:14.821Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:45:14.821Z",
+          "id": "yd9whz1ptmfn",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:45:14.821Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-08-06T15:41:10.535Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:41:10.535Z",
+          "id": "07t612lp5ftr",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:41:10.535Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-08-06T15:22:49.100Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T15:22:49.100Z",
+          "id": "f3r3jlmz4h4k",
+          "incident_id": "qcvjkzcs7j74",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T15:22:49.100Z"
+        }
+      ],
+      "monitoring_at": "2026-08-07T00:06:24.906Z",
+      "name": "Incident with Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-07T02:04:44.460Z",
+      "shortlink": "https://stspg.io/rcz3fcm83sff",
+      "started_at": "2026-08-06T15:22:49.021Z",
+      "status": "resolved",
+      "updated_at": "2026-08-11T02:05:24.924Z"
+    }
+  }
+]

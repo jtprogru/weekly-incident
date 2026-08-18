@@ -1,0 +1,157 @@
+[
+  {
+    "key": "datadog/476hf8wnc4l0",
+    "vendor": "datadog",
+    "native_id": "476hf8wnc4l0",
+    "title": "Delayed Events",
+    "url": "https://stspg.io/w2k14cxk8th3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-01-18T12:33:26.498Z",
+    "resolved_at": "2026-01-18T14:24:41.174Z",
+    "duration_minutes": 111,
+    "components": [
+      "Metrics and Infra Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "46f8g1t9r919",
+        "status": "identified",
+        "body": "We are investigating increased latency processing Events.\nAs a result of this issue, some users may see delays or gaps in the event stream or for event based widgets or event based monitors.",
+        "created_at": "2026-01-18T12:33:26.599Z"
+      },
+      {
+        "native_id": "d6cg1f5c5kfh",
+        "status": "identified",
+        "body": "We have identified the issue and scaled up for recovery, with a recovery estimated to be around 14h30 UTC. We'll continue to give updates as recovery progresses.",
+        "created_at": "2026-01-18T12:35:23.814Z"
+      },
+      {
+        "native_id": "s8xmrx5fm6z4",
+        "status": "identified",
+        "body": "Recovery is in progress and the new estimated time of recovery would be 14h30 UTC.",
+        "created_at": "2026-01-18T13:26:48.942Z"
+      },
+      {
+        "native_id": "vqz6265cjg5h",
+        "status": "resolved",
+        "body": "This incident is resolved. There's no more delay for the processing of Events, nor impact on the event stream, event based widgets and event based monitors.",
+        "created_at": "2026-01-18T14:24:41.174Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        }
+      ],
+      "created_at": "2026-01-18T07:33:26.505-05:00",
+      "id": "476hf8wnc4l0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident is resolved. There's no more delay for the processing of Events, nor impact on the event stream, event based widgets and event based monitors.",
+          "created_at": "2026-01-18T09:24:41.174-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-01-18T09:24:41.174-05:00",
+          "id": "vqz6265cjg5h",
+          "incident_id": "476hf8wnc4l0",
+          "status": "resolved",
+          "tweet_id": 2012893913661800586,
+          "updated_at": "2026-01-18T09:24:41.581-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Recovery is in progress and the new estimated time of recovery would be 14h30 UTC.",
+          "created_at": "2026-01-18T08:26:48.942-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-01-18T08:26:48.000-05:00",
+          "id": "s8xmrx5fm6z4",
+          "incident_id": "476hf8wnc4l0",
+          "status": "identified",
+          "tweet_id": 2012879349771362538,
+          "updated_at": "2026-01-18T09:05:48.825-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the issue and scaled up for recovery, with a recovery estimated to be around 14h30 UTC. We'll continue to give updates as recovery progresses.",
+          "created_at": "2026-01-18T07:35:23.814-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-01-18T07:35:23.814-05:00",
+          "id": "d6cg1f5c5kfh",
+          "incident_id": "476hf8wnc4l0",
+          "status": "identified",
+          "tweet_id": 2012866409735278991,
+          "updated_at": "2026-01-18T07:35:24.166-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing Events.\nAs a result of this issue, some users may see delays or gaps in the event stream or for event based widgets or event based monitors.",
+          "created_at": "2026-01-18T07:33:26.599-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-01-18T07:33:26.599-05:00",
+          "id": "46f8g1t9r919",
+          "incident_id": "476hf8wnc4l0",
+          "status": "identified",
+          "tweet_id": 2012865924739842250,
+          "updated_at": "2026-01-18T07:33:28.863-05:00"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delayed Events",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-01-18T09:24:41.174-05:00",
+      "shortlink": "https://stspg.io/w2k14cxk8th3",
+      "started_at": "2026-01-18T07:33:26.498-05:00",
+      "status": "resolved",
+      "updated_at": "2026-01-18T09:24:41.586-05:00"
+    }
+  }
+]

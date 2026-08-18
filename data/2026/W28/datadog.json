@@ -1,0 +1,157 @@
+[
+  {
+    "key": "datadog/9qt73ty9p9ph",
+    "vendor": "datadog",
+    "native_id": "9qt73ty9p9ph",
+    "title": "Delayed data streams data",
+    "url": "https://stspg.io/y5323mlt6x4g",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-10T14:09:23.735Z",
+    "resolved_at": "2026-07-10T15:59:28.762Z",
+    "duration_minutes": 110,
+    "components": [
+      "Data Streams Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "bfmcsxwpt5zp",
+        "status": "investigating",
+        "body": "We are currently investigating an issue affecting Data Streams Monitoring (DSM) in our US1 datacenter. As a result, data stream latency metrics may be delayed or not updating for some users. If you have monitors configured on those metrics, they may fail to alert as expected during this incident. We are not aware of any data loss at this time. Our engineering team is actively working on a fix, and we'll follow up with more information shortly.",
+        "created_at": "2026-07-10T14:09:23.854Z"
+      },
+      {
+        "native_id": "c4lnm6qkx9gw",
+        "status": "investigating",
+        "body": "We are continuing to investigate the issue.",
+        "created_at": "2026-07-10T14:35:17.884Z"
+      },
+      {
+        "native_id": "5vjm7yfr5bxm",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results. A small percentage of data sent between 6:23 UTC and 14:43 UTC is still being backfilled.",
+        "created_at": "2026-07-10T15:18:40.883Z"
+      },
+      {
+        "native_id": "tkfkssfwq4q4",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-10T15:59:28.762Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-07-26T17:09:02.006-04:00",
+          "description": "APM / Data Streams Monitoring",
+          "group": false,
+          "group_id": null,
+          "id": "hk7whmvszngs",
+          "name": "Data Streams Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2024-07-26",
+          "status": "operational",
+          "updated_at": "2026-07-10T11:59:28.729-04:00"
+        }
+      ],
+      "created_at": "2026-07-10T10:09:23.744-04:00",
+      "id": "9qt73ty9p9ph",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hk7whmvszngs",
+              "name": "Data Streams Monitoring",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-10T11:59:28.762-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T11:59:28.762-04:00",
+          "id": "tkfkssfwq4q4",
+          "incident_id": "9qt73ty9p9ph",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T11:59:28.762-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hk7whmvszngs",
+              "name": "Data Streams Monitoring",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results. A small percentage of data sent between 6:23 UTC and 14:43 UTC is still being backfilled.",
+          "created_at": "2026-07-10T11:18:40.883-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T11:18:40.883-04:00",
+          "id": "5vjm7yfr5bxm",
+          "incident_id": "9qt73ty9p9ph",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T11:18:40.883-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hk7whmvszngs",
+              "name": "Data Streams Monitoring",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate the issue.",
+          "created_at": "2026-07-10T10:35:17.884-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T10:35:17.884-04:00",
+          "id": "c4lnm6qkx9gw",
+          "incident_id": "9qt73ty9p9ph",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T10:35:17.884-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hk7whmvszngs",
+              "name": "Data Streams Monitoring",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue affecting Data Streams Monitoring (DSM) in our US1 datacenter. As a result, data stream latency metrics may be delayed or not updating for some users. If you have monitors configured on those metrics, they may fail to alert as expected during this incident. We are not aware of any data loss at this time. Our engineering team is actively working on a fix, and we'll follow up with more information shortly.",
+          "created_at": "2026-07-10T10:09:23.854-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T10:09:23.854-04:00",
+          "id": "bfmcsxwpt5zp",
+          "incident_id": "9qt73ty9p9ph",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T10:09:23.854-04:00"
+        }
+      ],
+      "monitoring_at": "2026-07-10T11:18:40.883-04:00",
+      "name": "Delayed data streams data",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-10T11:59:28.762-04:00",
+      "shortlink": "https://stspg.io/y5323mlt6x4g",
+      "started_at": "2026-07-10T10:09:23.735-04:00",
+      "status": "resolved",
+      "updated_at": "2026-07-10T11:59:28.779-04:00"
+    }
+  }
+]

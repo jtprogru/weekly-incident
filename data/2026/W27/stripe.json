@@ -1,0 +1,260 @@
+[
+  {
+    "key": "stripe/wv134rlqz1ds",
+    "vendor": "stripe",
+    "native_id": "wv134rlqz1ds",
+    "title": "Elevated P24 errors",
+    "url": "https://stspg.io/9rxrgvlbpn8g",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-02T10:59:51.727Z",
+    "resolved_at": "2026-07-02T11:36:55.995Z",
+    "duration_minutes": 37,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "gb4m4t05nn47",
+        "status": "investigating",
+        "body": "We're currently investigating a Partial Service disruption of the P24 payment method that began at 10:52 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through the P24 payment method. We are actively monitoring the situation and will provide updates as more information becomes available.",
+        "created_at": "2026-07-02T10:59:51.928Z"
+      },
+      {
+        "native_id": "cgkg4fygwhhy",
+        "status": "resolved",
+        "body": "From 10:52–11:34 UTC, we saw a partial service disruption of the P24 payment method. This is now resolved.",
+        "created_at": "2026-07-02T11:36:55.995Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-17T06:29:02.991Z"
+        }
+      ],
+      "created_at": "2026-07-02T10:59:51.738Z",
+      "id": "wv134rlqz1ds",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 10:52–11:34 UTC, we saw a partial service disruption of the P24 payment method. This is now resolved.",
+          "created_at": "2026-07-02T11:36:55.995Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-02T11:36:55.995Z",
+          "id": "cgkg4fygwhhy",
+          "incident_id": "wv134rlqz1ds",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T11:36:55.995Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating a Partial Service disruption of the P24 payment method that began at 10:52 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through the P24 payment method. We are actively monitoring the situation and will provide updates as more information becomes available.",
+          "created_at": "2026-07-02T10:59:51.928Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-02T10:59:51.928Z",
+          "id": "gb4m4t05nn47",
+          "incident_id": "wv134rlqz1ds",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T10:59:51.928Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated P24 errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-02T11:36:55.995Z",
+      "shortlink": "https://stspg.io/9rxrgvlbpn8g",
+      "started_at": "2026-07-02T10:59:51.727Z",
+      "status": "resolved",
+      "updated_at": "2026-07-02T11:36:56.030Z"
+    }
+  },
+  {
+    "key": "stripe/j5szf7f3wjp5",
+    "vendor": "stripe",
+    "native_id": "j5szf7f3wjp5",
+    "title": "Elevated WeChat Pay errors",
+    "url": "https://stspg.io/17c6mmm4lg2f",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-02T15:07:39Z",
+    "resolved_at": "2026-07-03T03:56:36.451Z",
+    "duration_minutes": 768,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "pjnwhy0zgzpn",
+        "status": "investigating",
+        "body": "We're currently investigating a degradation of the WeChat Pay payment method that began at 7:10 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through the WeChat Pay payment method. We are actively monitoring the situation and will provide updates as more information becomes available.",
+        "created_at": "2026-07-02T13:37:34.048Z"
+      },
+      {
+        "native_id": "srx2jznb5qvn",
+        "status": "identified",
+        "body": "We’re currently seeing a degradation of the WeChat Pay payment method. Our partner has identified the cause and is working on a fix.",
+        "created_at": "2026-07-02T15:07:39.332Z"
+      },
+      {
+        "native_id": "nc3bkszmv877",
+        "status": "identified",
+        "body": "WeChat Pay has confirmed they are addressing the issue and it will take some time to implement the fix. We are actively monitoring and will provide a further update as more information becomes available.",
+        "created_at": "2026-07-02T19:23:10.603Z"
+      },
+      {
+        "native_id": "vt8dj1dm0hg1",
+        "status": "resolved",
+        "body": "From 07:10 July 2 to 01:20 July 3 UTC, we saw elevated errors which affected WeChat Pay payment method transactions. This issue has now been resolved by our partner.",
+        "created_at": "2026-07-03T03:56:36.451Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-17T06:29:02.991Z"
+        }
+      ],
+      "created_at": "2026-07-02T13:37:33.970Z",
+      "id": "j5szf7f3wjp5",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 07:10 July 2 to 01:20 July 3 UTC, we saw elevated errors which affected WeChat Pay payment method transactions. This issue has now been resolved by our partner.",
+          "created_at": "2026-07-03T03:56:36.451Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-03T03:56:36.451Z",
+          "id": "vt8dj1dm0hg1",
+          "incident_id": "j5szf7f3wjp5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-03T03:56:36.451Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "WeChat Pay has confirmed they are addressing the issue and it will take some time to implement the fix. We are actively monitoring and will provide a further update as more information becomes available.",
+          "created_at": "2026-07-02T19:23:10.603Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T19:23:10.000Z",
+          "id": "nc3bkszmv877",
+          "incident_id": "j5szf7f3wjp5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T19:45:27.705Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re currently seeing a degradation of the WeChat Pay payment method. Our partner has identified the cause and is working on a fix.",
+          "created_at": "2026-07-02T15:07:39.332Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T15:07:39.000Z",
+          "id": "srx2jznb5qvn",
+          "incident_id": "j5szf7f3wjp5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T18:56:10.250Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating a degradation of the WeChat Pay payment method that began at 7:10 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through the WeChat Pay payment method. We are actively monitoring the situation and will provide updates as more information becomes available.",
+          "created_at": "2026-07-02T13:37:34.048Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T13:37:34.048Z",
+          "id": "pjnwhy0zgzpn",
+          "incident_id": "j5szf7f3wjp5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T13:37:34.048Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated WeChat Pay errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": "[]",
+      "resolved_at": "2026-07-03T03:56:36.451Z",
+      "shortlink": "https://stspg.io/17c6mmm4lg2f",
+      "started_at": "2026-07-02T15:07:39.000Z",
+      "status": "resolved",
+      "updated_at": "2026-07-03T03:56:36.485Z"
+    }
+  }
+]

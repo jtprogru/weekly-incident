@@ -1,0 +1,253 @@
+[
+  {
+    "key": "circleci/2l1y8dhrvtzd",
+    "vendor": "circleci",
+    "native_id": "2l1y8dhrvtzd",
+    "title": "Degradation in CircleCI UI elements",
+    "url": "https://stspg.io/3qm63nb96zjy",
+    "impact": "major",
+    "status": "postmortem",
+    "started_at": "2026-04-06T20:33:28.462Z",
+    "resolved_at": "2026-04-06T21:12:35.372Z",
+    "duration_minutes": 39,
+    "components": [
+      "CircleCI UI"
+    ],
+    "updates": [
+      {
+        "native_id": "zsh8cf0zw289",
+        "status": "investigating",
+        "body": "We are currently investigating an issue in the CircleCI UI impacting approval jobs and SSH key navigation. This is an interface-only issue and builds continue to flow as usual.",
+        "created_at": "2026-04-06T20:33:28.563Z"
+      },
+      {
+        "native_id": "737cszm0cljk",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results. Thank you for your patience.",
+        "created_at": "2026-04-06T20:43:08.895Z"
+      },
+      {
+        "native_id": "xx7f4k3y7722",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-04-06T21:12:35.372Z"
+      },
+      {
+        "native_id": "1kj5l450y936",
+        "status": "postmortem",
+        "body": "**What happened**  \nAll modals and dialogs across the CircleCI application became invisible. They were being rendered correctly in the background, but were not visible to users. This affected approval jobs, SSH key management, and other settings pages across the app.  \n  \n**Root cause**  \nThe issue was introduced by an upgrade to our internal design system library. The new version added animation support to modal components using a library called Framer Motion. These animations are designed to fade modals in from invisible \\(`opacity: 0`\\) to visible \\(`opacity: 1`\\) when opened.  \n  \nHowever, the animation logic reads open/close state from a specific React context that is only available when modals are opened via a particular component \\(`DialogTrigger`\\). Our application manages modal state differently, passing open/close state directly via props, so that context was never populated. As a result, every modal in the app was permanently stuck in the \"hidden\" animation state and never transitioned to visible.  \n  \n**Resolution**  \nWe reverted the design system upgrade to restore the previous working version, which resolved the issue immediately. We are now working on a follow-up fix that will upgrade Framer Motion properly, by ensuring all modal components receive the required context.  \n  \n**Impact**  \nThe issue affected all modal dialogs across project settings, org settings, user settings, plans \u0026 payments, and other areas of the app for the duration of the incident. No data was lost or corrupted. The underlying functionality was intact, just inaccessible via the UI.",
+        "created_at": "2026-04-07T00:17:45.997Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-08-11T03:29:32.538Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "sw1j7xsbdlk4",
+          "name": "CircleCI UI",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-02T16:29:24.413Z"
+        }
+      ],
+      "created_at": "2026-04-06T20:33:28.468Z",
+      "id": "2l1y8dhrvtzd",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "**What happened**  \nAll modals and dialogs across the CircleCI application became invisible. They were being rendered correctly in the background, but were not visible to users. This affected approval jobs, SSH key management, and other settings pages across the app.  \n  \n**Root cause**  \nThe issue was introduced by an upgrade to our internal design system library. The new version added animation support to modal components using a library called Framer Motion. These animations are designed to fade modals in from invisible \\(`opacity: 0`\\) to visible \\(`opacity: 1`\\) when opened.  \n  \nHowever, the animation logic reads open/close state from a specific React context that is only available when modals are opened via a particular component \\(`DialogTrigger`\\). Our application manages modal state differently, passing open/close state directly via props, so that context was never populated. As a result, every modal in the app was permanently stuck in the \"hidden\" animation state and never transitioned to visible.  \n  \n**Resolution**  \nWe reverted the design system upgrade to restore the previous working version, which resolved the issue immediately. We are now working on a follow-up fix that will upgrade Framer Motion properly, by ensuring all modal components receive the required context.  \n  \n**Impact**  \nThe issue affected all modal dialogs across project settings, org settings, user settings, plans \u0026 payments, and other areas of the app for the duration of the incident. No data was lost or corrupted. The underlying functionality was intact, just inaccessible via the UI.",
+          "created_at": "2026-04-07T00:17:45.997Z",
+          "custom_tweet": "We published a postmortem on our April 6th incident: https://stspg.io/3qm63nb96zjy",
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "1kj5l450y936",
+          "incident_id": "2l1y8dhrvtzd",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-04-07T00:22:59.310Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-04-06T21:12:35.372Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-06T21:12:35.372Z",
+          "id": "xx7f4k3y7722",
+          "incident_id": "2l1y8dhrvtzd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-06T21:12:35.372Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results. Thank you for your patience.",
+          "created_at": "2026-04-06T20:43:08.895Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-06T20:43:08.895Z",
+          "id": "737cszm0cljk",
+          "incident_id": "2l1y8dhrvtzd",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-06T20:43:08.895Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue in the CircleCI UI impacting approval jobs and SSH key navigation. This is an interface-only issue and builds continue to flow as usual.",
+          "created_at": "2026-04-06T20:33:28.563Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-06T20:33:28.563Z",
+          "id": "zsh8cf0zw289",
+          "incident_id": "2l1y8dhrvtzd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-06T20:33:28.563Z"
+        }
+      ],
+      "monitoring_at": "2026-04-06T20:43:08.895Z",
+      "name": "Degradation in CircleCI UI elements",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-06T21:12:35.372Z",
+      "shortlink": "https://stspg.io/3qm63nb96zjy",
+      "started_at": "2026-04-06T20:33:28.462Z",
+      "status": "postmortem",
+      "updated_at": "2026-04-07T00:22:59.313Z"
+    }
+  },
+  {
+    "key": "circleci/l7vz5yr3wrp0",
+    "vendor": "circleci",
+    "native_id": "l7vz5yr3wrp0",
+    "title": "Delays in Workflow and Job data in the Usage API",
+    "url": "https://stspg.io/b6482c23v6nr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-08T13:20:12.683Z",
+    "resolved_at": "2026-04-08T20:33:29.716Z",
+    "duration_minutes": 433,
+    "components": [
+      "CircleCI API"
+    ],
+    "updates": [
+      {
+        "native_id": "q4k8btmvhqwf",
+        "status": "identified",
+        "body": "We have identified an issue causing Insights workflow and job data to be delayed when requested through the Usage API. Some data for the last 24 hours may not be fully reflected while we work to process the backlog of events. Insights UI is not impacted by this issue. Thank you for your patience.",
+        "created_at": "2026-04-08T13:20:12.784Z"
+      },
+      {
+        "native_id": "j0mvkyrzxgtq",
+        "status": "resolved",
+        "body": "The Usage API incident is resolved on an ongoing basis. There was a 4-hour period yesterday 4/7 for which we did not capture RAM and CPU utilization in our logs. We will not be backfilling the data for that period. Appreciate your patience.",
+        "created_at": "2026-04-08T20:33:29.716Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-08-06T19:54:25.350Z"
+        }
+      ],
+      "created_at": "2026-04-08T13:20:12.689Z",
+      "id": "l7vz5yr3wrp0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The Usage API incident is resolved on an ongoing basis. There was a 4-hour period yesterday 4/7 for which we did not capture RAM and CPU utilization in our logs. We will not be backfilling the data for that period. Appreciate your patience.",
+          "created_at": "2026-04-08T20:33:29.716Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-08T20:33:29.716Z",
+          "id": "j0mvkyrzxgtq",
+          "incident_id": "l7vz5yr3wrp0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-08T20:33:29.716Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified an issue causing Insights workflow and job data to be delayed when requested through the Usage API. Some data for the last 24 hours may not be fully reflected while we work to process the backlog of events. Insights UI is not impacted by this issue. Thank you for your patience.",
+          "created_at": "2026-04-08T13:20:12.784Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-08T13:20:12.784Z",
+          "id": "q4k8btmvhqwf",
+          "incident_id": "l7vz5yr3wrp0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-08T13:20:12.784Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delays in Workflow and Job data in the Usage API",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-08T20:33:29.716Z",
+      "shortlink": "https://stspg.io/b6482c23v6nr",
+      "started_at": "2026-04-08T13:20:12.683Z",
+      "status": "resolved",
+      "updated_at": "2026-04-08T20:33:29.733Z"
+    }
+  }
+]

@@ -1,0 +1,262 @@
+[
+  {
+    "key": "aws/8d9678d7476c58c2",
+    "vendor": "aws",
+    "native_id": "8d9678d7476c58c2",
+    "title": "Increased Packet loss",
+    "url": "https://health.aws.amazon.com/health/status",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-08-15T03:42:59Z",
+    "resolved_at": "2026-08-18T04:01:19Z",
+    "duration_minutes": 4338,
+    "components": [
+      "directconnect-eu-central-1"
+    ],
+    "updates": [
+      {
+        "status": "investigating",
+        "body": "We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region.",
+        "created_at": "2026-08-15T03:42:59Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share.",
+        "created_at": "2026-08-15T04:42:50Z"
+      },
+      {
+        "status": "investigating",
+        "body": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share.",
+        "created_at": "2026-08-15T05:55:13Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We are actively working to restore connectivity through the Direct Connect location: Equinix FR5, Frankfurt, DEU. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. For a workaround impacted customers who have the option available to failover to VPN are recommended to do so to achieve recovery. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attach it to your Transit Gateway, refer steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing a AWS Site-to-Site VPN as a temporary backup path,  refer steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. As of this time, we expect recovery is multiple hours away. We will provide another update in 90 minutes, or sooner if we have additional information to share.",
+        "created_at": "2026-08-15T07:24:28Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to work towards recovery of connectivity for AWS Direct Connect connections at Equinix FR5, Frankfurt, DEU. The root cause is related to a facility infrastructure issue at the location that is impacting network infrastructure. Customers with connections solely at this location will continue to experience packet loss or connectivity degradation. Customers with multi-site or redundant configurations across other locations are not impacted. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. As of this time, we expect recovery is multiple hours away. We will provide another update within 2 hours or as soon as we have more information to share.",
+        "created_at": "2026-08-15T09:08:14Z"
+      },
+      {
+        "status": "investigating",
+        "body": "AWS Direct Connect connectivity remains impaired for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Customers with multi-site or redundant configurations across other locations continue to be unaffected. Engineers are actively working to restore connectivity, with efforts ongoing across multiple workstreams to resolve the underlying facility issue and bring the impacted network equipment back into service. We continue to expect recovery is multiple hours away. For a workaround, impacted customers who have the option to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We will provide another update within 2 hours or as soon as we have more information to share.",
+        "created_at": "2026-08-15T11:10:29Z"
+      },
+      {
+        "status": "investigating",
+        "body": "Engineers continue work to restore connectivity at Equinix FR5 location in Frankfurt, DEU. Our co-location partner is working to resolve the underlying facility infrastructure issue and while the improvements are not yet customer visible, we are making positive progress towards resolution. For customers who require immediate recovery, we recommend failing over to VPN, as outlined in our previous updates. We will provide another update by 9:30 AM PDT, or sooner if we have additional information to share.",
+        "created_at": "2026-08-15T13:17:50Z"
+      },
+      {
+        "status": "investigating",
+        "body": "Our co-location partner continues to work to resolve the underlying facility infrastructure issue at the Equinix FR5 location in Frankfurt, DEU. Access to the affected area is currently restricted due to safety concerns, which is impacting our ability to assess the physical condition of the network equipment and provide a more accurate recovery timeline. Based on current information, full recovery is not expected in the near term and may extend beyond today. AWS Direct Connect connections at this location remain impaired. Customers with redundant connections through other locations remain unaffected. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We will provide another update by 3:30 PM PDT, or sooner if we have additional information to share.",
+        "created_at": "2026-08-15T16:27:41Z"
+      },
+      {
+        "status": "investigating",
+        "body": "Our co-location partner is continuing work to restore safe access to the affected area at the Equinix FR5 location in Frankfurt, DEU. Once safe access has been secured, our engineers will be able to assess the affected network devices. We continue to closely track progress and will share an update by 9:30 PM PDT, or sooner as new information becomes available.",
+        "created_at": "2026-08-15T22:26:42Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We are actively engaged with our co-location partner to restore connectivity at Equinix FR5 location in Frankfurt, DEU. Since our last update, we have made incremental progress to restore safe access to the affected area at the Equinix FR5 location in Frankfurt, DEU. In parallel, we have prioritized the order in which critical and high-priority racks will be restored, as part of the mitigation efforts. Based on our current assessment, full recovery is not expected in the near term and may extend beyond today. AWS Direct Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations remain unaffected. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We continue to closely track progress and will share an update by August 16 3:30 AM PDT, or sooner as new information becomes available.",
+        "created_at": "2026-08-16T04:37:47Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to work with our co-location partner to restore connectivity at the Equinix FR5 location in Frankfurt, DEU. Since our last update, we have made significant progress toward restoring safe access to the affected area. The electrical isolation procedure is now underway, with our teams on site in the electrical room executing the de-energization of the affected infrastructure. Once isolation is verified and confirmed safe, engineers will begin a physical inspection of the impacted network equipment to determine the scope of replacement required. \n\nBased on our current assessment, full recovery is not expected in the near term due to the scope of potential impacted to equipment. AWS Direct Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations remain unaffected. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We continue to closely track progress and will share an update by August 16 9:30 AM PDT, or sooner as new information becomes available.",
+        "created_at": "2026-08-16T10:25:32Z"
+      },
+      {
+        "status": "investigating",
+        "body": "The electrical isolation at Equinix FR5 in Frankfurt, DEU is now complete and our engineers have begun physically inspecting the impacted network equipment. We do not yet have a timeline for full resolution while we continue to assess the extent of impact to equipment.\n\nDirect Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected.\n\nWe recommend that impacted customers failover to VPN until we have more clarity on next steps and a recovery timeline. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. \n\nWe will provide another update by August 16 5:30 PM PDT, or sooner as new information becomes available.",
+        "created_at": "2026-08-16T16:30:39Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We have completed our assessment of the impacted network equipment at the Equinix FR5 location in Frankfurt, DEU and now have a clear understanding of the scope of impact. We are making progress toward restoring connectivity and will be taking a phased approach to remediation.\n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected.\n\nWe will provide another update by August 16 10:30 PM PDT, or sooner as new information becomes available.",
+        "created_at": "2026-08-16T22:51:07Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses.",
+        "created_at": "2026-08-17T05:38:04Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Network infrastructure and dependent systems continue to improve as we bring affected hardware back online. Some replacement hardware has been delivered and installation is proceeding as components arrive on-site. In parallel, we are shifting network traffic to allow restored devices to begin serving customers as they come online. \n\nAs we progress through recovery, customers will observe restoration occurring in two stages. In the first stage, BGP sessions will re-establish but IP prefixes will not yet be advertised, this indicates that recovery is still in progress and the underlying infrastructure is not yet ready to carry traffic. In the second stage, IP prefix advertisement will resume, at which point the infrastructure is fully remediated and connectivity is restored.\n\nWhile we do not currently have an ETA for full recovery, we continue to work as quickly and safely as possible to mitigate the impact for customers. We will provide another update by August 17 10:30 AM PDT, or sooner as remediation progresses.",
+        "created_at": "2026-08-17T11:22:30Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to work on phased remediation incrementally at the Equinix FR5 location in Frankfurt, DEU. We are seeing early signs of recovery while we continue to fully remediate the issue. We are actively working to bring the remaining affected hardware back online and we will provide another update by 12:30 PM PDT, or sooner as remediation progresses.",
+        "created_at": "2026-08-17T16:25:22Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We are seeing broad signs of recovery at the Equinix FR5 location in Frankfurt, DEU. We have restored connectivity for the majority of affected hardware and most of the connections are fully recovered and stable. There are a small number of customers that will remain affected until the remaining devices are fully restored. We will provide another update by 2:00 PM PDT, or sooner as remediation progresses.",
+        "created_at": "2026-08-17T17:59:20Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We continue to work on bringing affected hardware back online. Since our last update we have made progress that will not be visible to customers, but is required for recovery. We are working in parallel to bring all devices online as safely as possible. This work is expected to take several hours to complete and validate.\n\nFor customers that require workarounds, we recommend that you consider failing over to VPN. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e.\n\nWe will provide another update by 7:00 PM PDT or sooner as new information becomes available.",
+        "created_at": "2026-08-17T21:00:11Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We are seeing significant recovery for most of the customer connections at this stage. While we are not yet fully recovered, restoration efforts are progressing as expected at the Equinix FR5 location in Frankfurt, DEU. Remediation of remaining infrastructure involves completion of hardware replacements and traffic validation, both of which are actively underway. We anticipate further customer-visible recovery as the remaining infrastructure is brought back into service. \n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 11:00 PM PDT or sooner.",
+        "created_at": "2026-08-18T01:50:12Z"
+      },
+      {
+        "status": "resolved",
+        "body": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the \u003ca href=\"https://console.aws.amazon.com/support\"\u003eAWS Support Center\u003c/a\u003e.",
+        "created_at": "2026-08-18T04:01:19Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": [
+      {
+        "description": "We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786765379",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Fri, 14 Aug 2026 20:42:59 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786768970",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Fri, 14 Aug 2026 21:42:50 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "Starting at 7:33 PM PDT, we began experiencing increased packet loss impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region. While we have made progress, connections to the following Direct Connect location are still impaired: Equinix FR5, Frankfurt, DEU. Customers who have multi-site redundancy configured with their Direct Connect paths should not be observing impact at this time. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. We are actively working to mitigate the impact and work toward full recovery, but expect full recovery is multiple hours away. We will provide an update in 90 minutes, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786773313",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Fri, 14 Aug 2026 22:55:13 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We are actively working to restore connectivity through the Direct Connect location: Equinix FR5, Frankfurt, DEU. Customers whom only have connections at the Equinix FR5, Frankfurt, DEU location will continue to experience connectivity issues. For a workaround impacted customers who have the option available to failover to VPN are recommended to do so to achieve recovery. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attach it to your Transit Gateway, refer steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing a AWS Site-to-Site VPN as a temporary backup path,  refer steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. As of this time, we expect recovery is multiple hours away. We will provide another update in 90 minutes, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786778668",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 00:24:28 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to work towards recovery of connectivity for AWS Direct Connect connections at Equinix FR5, Frankfurt, DEU. The root cause is related to a facility infrastructure issue at the location that is impacting network infrastructure. Customers with connections solely at this location will continue to experience packet loss or connectivity degradation. Customers with multi-site or redundant configurations across other locations are not impacted. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. As of this time, we expect recovery is multiple hours away. We will provide another update within 2 hours or as soon as we have more information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786784894",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 02:08:14 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "AWS Direct Connect connectivity remains impaired for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Customers with multi-site or redundant configurations across other locations continue to be unaffected. Engineers are actively working to restore connectivity, with efforts ongoing across multiple workstreams to resolve the underlying facility issue and bring the impacted network equipment back into service. We continue to expect recovery is multiple hours away. For a workaround, impacted customers who have the option to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We will provide another update within 2 hours or as soon as we have more information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786792229",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 04:10:29 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "Engineers continue work to restore connectivity at Equinix FR5 location in Frankfurt, DEU. Our co-location partner is working to resolve the underlying facility infrastructure issue and while the improvements are not yet customer visible, we are making positive progress towards resolution. For customers who require immediate recovery, we recommend failing over to VPN, as outlined in our previous updates. We will provide another update by 9:30 AM PDT, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786799870",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 06:17:50 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "Our co-location partner continues to work to resolve the underlying facility infrastructure issue at the Equinix FR5 location in Frankfurt, DEU. Access to the affected area is currently restricted due to safety concerns, which is impacting our ability to assess the physical condition of the network equipment and provide a more accurate recovery timeline. Based on current information, full recovery is not expected in the near term and may extend beyond today. AWS Direct Connect connections at this location remain impaired. Customers with redundant connections through other locations remain unaffected. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We will provide another update by 3:30 PM PDT, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786811261",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 09:27:41 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "Our co-location partner is continuing work to restore safe access to the affected area at the Equinix FR5 location in Frankfurt, DEU. Once safe access has been secured, our engineers will be able to assess the affected network devices. We continue to closely track progress and will share an update by 9:30 PM PDT, or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786832802",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 15:26:42 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We are actively engaged with our co-location partner to restore connectivity at Equinix FR5 location in Frankfurt, DEU. Since our last update, we have made incremental progress to restore safe access to the affected area at the Equinix FR5 location in Frankfurt, DEU. In parallel, we have prioritized the order in which critical and high-priority racks will be restored, as part of the mitigation efforts. Based on our current assessment, full recovery is not expected in the near term and may extend beyond today. AWS Direct Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations remain unaffected. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We continue to closely track progress and will share an update by August 16 3:30 AM PDT, or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786855067",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sat, 15 Aug 2026 21:37:47 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to work with our co-location partner to restore connectivity at the Equinix FR5 location in Frankfurt, DEU. Since our last update, we have made significant progress toward restoring safe access to the affected area. The electrical isolation procedure is now underway, with our teams on site in the electrical room executing the de-energization of the affected infrastructure. Once isolation is verified and confirmed safe, engineers will begin a physical inspection of the impacted network equipment to determine the scope of replacement required. \n\nBased on our current assessment, full recovery is not expected in the near term due to the scope of potential impacted to equipment. AWS Direct Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations remain unaffected. For a workaround, impacted customers who have the option available to failover to VPN are recommended to do so. For customers using Direct Connect gateway and Transit Gateway, we recommend creating a AWS Site-to-Site VPN and attaching it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. We continue to closely track progress and will share an update by August 16 9:30 AM PDT, or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786875932",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 16 Aug 2026 03:25:32 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "The electrical isolation at Equinix FR5 in Frankfurt, DEU is now complete and our engineers have begun physically inspecting the impacted network equipment. We do not yet have a timeline for full resolution while we continue to assess the extent of impact to equipment.\n\nDirect Connect connections at this location remain impaired. Customers with connections exclusively at this location will continue to experience packet loss. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected.\n\nWe recommend that impacted customers failover to VPN until we have more clarity on next steps and a recovery timeline. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e. \n\nWe will provide another update by August 16 5:30 PM PDT, or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786897839",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 16 Aug 2026 09:30:39 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We have completed our assessment of the impacted network equipment at the Equinix FR5 location in Frankfurt, DEU and now have a clear understanding of the scope of impact. We are making progress toward restoring connectivity and will be taking a phased approach to remediation.\n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected.\n\nWe will provide another update by August 16 10:30 PM PDT, or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786920667",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 16 Aug 2026 15:51:07 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Since our last update, some dependent network infrastructure has been restored. Remediation of remaining infrastructure is ongoing, with a portion of recovery dependent on the delivery of replacement hardware. Cooling has been fully restored, with environmental conditions stable within normal operating thresholds.\n\nCustomers with connections exclusively at this location will continue to experience packet loss as remediation progresses. Customers with multi-site or redundant configurations across other Direct Connect locations are not affected. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 4:30 AM PDT, or sooner as remediation progresses.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786945084",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 16 Aug 2026 22:38:04 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to make progress in our phased remediation at the Equinix FR5 location in Frankfurt, DEU. Network infrastructure and dependent systems continue to improve as we bring affected hardware back online. Some replacement hardware has been delivered and installation is proceeding as components arrive on-site. In parallel, we are shifting network traffic to allow restored devices to begin serving customers as they come online. \n\nAs we progress through recovery, customers will observe restoration occurring in two stages. In the first stage, BGP sessions will re-establish but IP prefixes will not yet be advertised, this indicates that recovery is still in progress and the underlying infrastructure is not yet ready to carry traffic. In the second stage, IP prefix advertisement will resume, at which point the infrastructure is fully remediated and connectivity is restored.\n\nWhile we do not currently have an ETA for full recovery, we continue to work as quickly and safely as possible to mitigate the impact for customers. We will provide another update by August 17 10:30 AM PDT, or sooner as remediation progresses.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786965750",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 04:22:30 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to work on phased remediation incrementally at the Equinix FR5 location in Frankfurt, DEU. We are seeing early signs of recovery while we continue to fully remediate the issue. We are actively working to bring the remaining affected hardware back online and we will provide another update by 12:30 PM PDT, or sooner as remediation progresses.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786983922",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 09:25:22 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We are seeing broad signs of recovery at the Equinix FR5 location in Frankfurt, DEU. We have restored connectivity for the majority of affected hardware and most of the connections are fully recovered and stable. There are a small number of customers that will remain affected until the remaining devices are fully restored. We will provide another update by 2:00 PM PDT, or sooner as remediation progresses.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1786989560",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 10:59:20 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We continue to work on bringing affected hardware back online. Since our last update we have made progress that will not be visible to customers, but is required for recovery. We are working in parallel to bring all devices online as safely as possible. This work is expected to take several hours to complete and validate.\n\nFor customers that require workarounds, we recommend that you consider failing over to VPN. For customers using Direct Connect gateway and Transit Gateway, you can create an AWS Site-to-Site VPN and attach it to your Transit Gateway, refer to steps \u003ca href=\"https://aws.amazon.com/premiumsupport/knowledge-center/dx-configure-dx-and-vpn-failover-tgw/\"\u003ehere\u003c/a\u003e. For other customers, we recommend establishing an AWS Site-to-Site VPN as a temporary backup path, refer to steps \u003ca href=\"https://docs.aws.amazon.com/vpn/latest/s2svpn/SetUpVPNConnections.html\"\u003ehere\u003c/a\u003e.\n\nWe will provide another update by 7:00 PM PDT or sooner as new information becomes available.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1787000411",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 14:00:11 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "We are seeing significant recovery for most of the customer connections at this stage. While we are not yet fully recovered, restoration efforts are progressing as expected at the Equinix FR5 location in Frankfurt, DEU. Remediation of remaining infrastructure involves completion of hardware replacements and traffic validation, both of which are actively underway. We anticipate further customer-visible recovery as the remaining infrastructure is brought back into service. \n\nCustomers with connections exclusively at this location will continue to experience packet loss until remediation is complete. Previously communicated mitigation guidance and recommendations remain unchanged at this time. We will provide another update by August 17 11:00 PM PDT or sooner.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1787017812",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 18:50:12 PDT",
+        "title": "Service impact: Increased Packet loss"
+      },
+      {
+        "description": "Starting August 14 7:33 PM PDT, we experienced increased packet loss impacting AWS Direct Connect connectivity for customers with connections at the Equinix FR5 location in Frankfurt, DEU. Engineers were automatically engaged at 7:45 PM on August 14 and immediately began investigating mitigations. By 8:30 PM, we identified that network equipment at the FR5 location was impaired due to water ingress into the co-location facility. As a result, cooling system was impaired which resulted in devices overheating and shutting down. Water also affected power distribution systems which disabled the power for the network devices. Initial recovery efforts were delayed as environmental conditions within the facility required stabilization before engineers could safely access the affected area. Throughout August 15 and 16, our engineers worked in coordination with the facility operator to restore impaired network devices while the underlying infrastructure issue was addressed. By 7:26 PM on August 17, all impaired network equipment was successfully restored and connectivity to the location was verified as fully operational with sustained recovery. We do not expect this issue to recur. \n\nCustomers with redundant connections across other Direct Connect locations maintained connectivity through their alternate paths throughout this event and require no further action. Customers who implemented VPN failover as a workaround may now safely revert to their primary Direct Connect paths. Connectivity has been verified as stable and fully operational. Customers requiring further assistance may contact AWS Support through the AWS Management Console or the \u003ca href=\"https://console.aws.amazon.com/support\"\u003eAWS Support Center\u003c/a\u003e.",
+        "guid": "https://status.aws.amazon.com/#directconnect-eu-central-1_1787025679",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 17 Aug 2026 21:01:19 PDT",
+        "title": "Service is operating normally: [RESOLVED] Increased Packet loss"
+      }
+    ]
+  }
+]

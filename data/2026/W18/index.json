@@ -1,0 +1,317 @@
+{
+  "week": "2026-W18",
+  "from": "2026-04-27T00:00:00Z",
+  "to": "2026-05-04T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "aws/dd4f7c1f4ca3fe41",
+      "vendor": "aws",
+      "title": "Increased Connectivity Issues and API Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-04-30T07:07:11Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-south-1"
+      ],
+      "score": {
+        "value": 317458,
+        "duration_minutes": 158729,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "aws/ca5f1cc2b6034dd6",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-04-30T07:25:54Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-central-1"
+      ],
+      "score": {
+        "value": 317420,
+        "duration_minutes": 158710,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/z5fjzx3kp16z",
+      "vendor": "digitalocean",
+      "title": "Elevated 5xx “context canceled” errors impacting serverless inference",
+      "url": "https://stspg.io/qf13crcjzkmn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-04-28T13:45:20.294Z",
+      "resolved_at": "2026-04-28T19:33:38.769Z",
+      "duration_minutes": 348,
+      "ongoing": false,
+      "components": [
+        "Agent Runtime"
+      ],
+      "score": {
+        "value": 278.40000000000003,
+        "duration_minutes": 348,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1547",
+      "vendor": "slack",
+      "title": "Users May Not Receive Notifications on Slack Thread Replies",
+      "url": "https://slack-status.com/2026-04/22195f9f2ca47237",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-04-27T17:11:53Z",
+      "resolved_at": "2026-04-27T20:36:02Z",
+      "duration_minutes": 204,
+      "ongoing": false,
+      "components": [
+        "Notifications"
+      ],
+      "score": {
+        "value": 244.79999999999998,
+        "duration_minutes": 204,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/mspf5pqp7d42",
+      "vendor": "circleci",
+      "title": "Usage API data is delayed for data from yesterday, 4/30. All prior data is available. We are investigating.",
+      "url": "https://stspg.io/ld03v9l2cm5c",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-05-01T10:04:37.275Z",
+      "resolved_at": "2026-05-01T14:02:02.849Z",
+      "duration_minutes": 237,
+      "ongoing": false,
+      "components": [
+        "CircleCI API"
+      ],
+      "score": {
+        "value": 237,
+        "duration_minutes": 237,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/5gsk0hfctqp5",
+      "vendor": "digitalocean",
+      "title": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+      "url": "https://stspg.io/y8cgtdqrkct1",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-04-27T10:38:30Z",
+      "resolved_at": "2026-04-27T11:37:36.467Z",
+      "duration_minutes": 59,
+      "ongoing": false,
+      "components": [
+        "Agent Runtime"
+      ],
+      "score": {
+        "value": 47.2,
+        "duration_minutes": 59,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/dw41jpjjghhs",
+      "vendor": "datadog",
+      "title": "Elevated Error Rates for Metrics Queries",
+      "url": "https://stspg.io/17n4grhvbmjt",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-05-01T00:45:48.672Z",
+      "resolved_at": "2026-05-01T01:19:56.916Z",
+      "duration_minutes": 34,
+      "ongoing": false,
+      "components": [
+        "Metrics and Infra Monitoring"
+      ],
+      "score": {
+        "value": 34,
+        "duration_minutes": 34,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/t30mkznmqskh",
+      "vendor": "circleci",
+      "title": "Jobs using Xcode 14.3.1 on m4pro.large are delayed.",
+      "url": "https://stspg.io/f6kcq9nb85wt",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-01T10:51:24.142Z",
+      "resolved_at": "2026-05-01T11:08:22.351Z",
+      "duration_minutes": 16,
+      "ongoing": false,
+      "components": [
+        "macOS Jobs"
+      ],
+      "score": {
+        "value": 16,
+        "duration_minutes": 16,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/jnvb0qp0c7pd",
+      "vendor": "stripe",
+      "title": "Certificate warnings on stripe.com and dashboard logins",
+      "url": "https://stspg.io/3x0dw69bql3k",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-04-29T14:39:14.862Z",
+      "resolved_at": "2026-04-29T14:39:14.913Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "slack/1548",
+      "vendor": "slack",
+      "title": "Slack Search Feature Disruption - Japan region",
+      "url": "https://slack-status.com/2026-04/4bd5196b0c972734",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-05-01T01:50:42Z",
+      "resolved_at": "2026-05-01T01:50:42Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "Search"
+      ],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    }
+  ]
+}

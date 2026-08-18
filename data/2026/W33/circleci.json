@@ -1,0 +1,209 @@
+[
+  {
+    "key": "circleci/lh8681zry6jd",
+    "vendor": "circleci",
+    "native_id": "lh8681zry6jd",
+    "title": "Delayed pipeline updates and pipeline processing failures",
+    "url": "https://stspg.io/b811tvs48x2k",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-08-11T17:42:47.504Z",
+    "resolved_at": "2026-08-11T18:00:00Z",
+    "duration_minutes": 17,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "3zj37kxpvs0h",
+        "status": "resolved",
+        "body": "Between 13:50 UTC and approximately 17:30 UTC on August 11, 2026, some customers experienced delays of up to an hour in pipeline status updates and in notification delivery. \n\nBetween 16:40 UTC and 17:00 UTC within that same window, a small number of customers also saw newly created pipelines fail to process, appearing in an errored state in the UI and API. \n\nThe issue has been resolved and all affected functionality has returned to normal. Customers whose pipelines errored during that window can retrigger them. \n\nWe thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-08-11T17:42:47.564Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-11T17:42:47.509Z",
+      "id": "lh8681zry6jd",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 13:50 UTC and approximately 17:30 UTC on August 11, 2026, some customers experienced delays of up to an hour in pipeline status updates and in notification delivery. \n\nBetween 16:40 UTC and 17:00 UTC within that same window, a small number of customers also saw newly created pipelines fail to process, appearing in an errored state in the UI and API. \n\nThe issue has been resolved and all affected functionality has returned to normal. Customers whose pipelines errored during that window can retrigger them. \n\nWe thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-08-11T17:42:47.564Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-08-11T18:00:00.000Z",
+          "id": "3zj37kxpvs0h",
+          "incident_id": "lh8681zry6jd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T17:42:47.564Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delayed pipeline updates and pipeline processing failures",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-11T18:00:00.000Z",
+      "shortlink": "https://stspg.io/b811tvs48x2k",
+      "started_at": "2026-08-11T17:42:47.504Z",
+      "status": "resolved",
+      "updated_at": "2026-08-11T17:42:47.576Z"
+    }
+  },
+  {
+    "key": "circleci/ljvrkzc9pdfr",
+    "vendor": "circleci",
+    "native_id": "ljvrkzc9pdfr",
+    "title": "GitHub service degradation may impact customers using GitHub",
+    "url": "https://stspg.io/5n5fpq53kkhh",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-12T16:33:41.153Z",
+    "resolved_at": "2026-08-12T16:43:37.854Z",
+    "duration_minutes": 9,
+    "components": [
+      "Pipelines \u0026 Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "qvqv2cpyppfy",
+        "status": "identified",
+        "body": "GitHub is currently experiencing a service degradation (https://www.githubstatus.com/incidents/76t89hbfb09h). Customers who use GitHub as their VCS may experience impact to their CircleCI platform experience as a result, impacting checkout and workflows.\n\nWe will provide another update as we have more information to share.  Thank you for your patience.",
+        "created_at": "2026-08-12T16:33:41.25Z"
+      },
+      {
+        "native_id": "9k6ptxc56j7b",
+        "status": "resolved",
+        "body": "The issue impacting customers who use GitHub as their VCS while GitHub was undergoing a service degradation (https://www.githubstatus.com/incidents/76t89hbfb09h) has now been resolved.  GitHub has resolved the underlying issue and the affected functionality has returned to normal. \n\nWe thank you for your patience.",
+        "created_at": "2026-08-12T16:43:37.854Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-12T16:43:37.822Z"
+        }
+      ],
+      "created_at": "2026-08-12T16:33:41.163Z",
+      "id": "ljvrkzc9pdfr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue impacting customers who use GitHub as their VCS while GitHub was undergoing a service degradation (https://www.githubstatus.com/incidents/76t89hbfb09h) has now been resolved.  GitHub has resolved the underlying issue and the affected functionality has returned to normal. \n\nWe thank you for your patience.",
+          "created_at": "2026-08-12T16:43:37.854Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T16:43:37.854Z",
+          "id": "9k6ptxc56j7b",
+          "incident_id": "ljvrkzc9pdfr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T16:43:37.854Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "GitHub is currently experiencing a service degradation (https://www.githubstatus.com/incidents/76t89hbfb09h). Customers who use GitHub as their VCS may experience impact to their CircleCI platform experience as a result, impacting checkout and workflows.\n\nWe will provide another update as we have more information to share.  Thank you for your patience.",
+          "created_at": "2026-08-12T16:33:41.250Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T16:33:41.250Z",
+          "id": "qvqv2cpyppfy",
+          "incident_id": "ljvrkzc9pdfr",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T16:33:41.250Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "GitHub service degradation may impact customers using GitHub",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-12T16:43:37.854Z",
+      "shortlink": "https://stspg.io/5n5fpq53kkhh",
+      "started_at": "2026-08-12T16:33:41.153Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T16:43:37.870Z"
+    }
+  },
+  {
+    "key": "circleci/phn6832tvb84",
+    "vendor": "circleci",
+    "native_id": "phn6832tvb84",
+    "title": "Delays starting jobs following planned maintenance",
+    "url": "https://stspg.io/v83b8dvfq3hq",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-08-15T13:58:54.809Z",
+    "resolved_at": "2026-08-15T17:00:00Z",
+    "duration_minutes": 181,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "9bs4r3hm6h85",
+        "status": "resolved",
+        "body": "Following planned maintenance that ended at 13:00 UTC on August 15, some impact to job processing continued for approximately 30 minutes beyond the window we announced.\n\nSome customers continued to see delays in jobs starting, along with a small number of jobs failing with infrastructure errors, until approximately 13:30 UTC.\n\nThis has been resolved and job processing has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix and apologize for any inconvenience the extended impact may have caused.",
+        "created_at": "2026-08-15T13:58:54.863Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-15T13:58:54.814Z",
+      "id": "phn6832tvb84",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Following planned maintenance that ended at 13:00 UTC on August 15, some impact to job processing continued for approximately 30 minutes beyond the window we announced.\n\nSome customers continued to see delays in jobs starting, along with a small number of jobs failing with infrastructure errors, until approximately 13:30 UTC.\n\nThis has been resolved and job processing has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix and apologize for any inconvenience the extended impact may have caused.",
+          "created_at": "2026-08-15T13:58:54.863Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-08-15T17:00:00.000Z",
+          "id": "9bs4r3hm6h85",
+          "incident_id": "phn6832tvb84",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-15T13:58:54.863Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delays starting jobs following planned maintenance",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-15T17:00:00.000Z",
+      "shortlink": "https://stspg.io/v83b8dvfq3hq",
+      "started_at": "2026-08-15T13:58:54.809Z",
+      "status": "resolved",
+      "updated_at": "2026-08-15T13:58:54.874Z"
+    }
+  }
+]

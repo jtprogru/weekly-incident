@@ -1,0 +1,710 @@
+{
+  "week": "2026-W27",
+  "from": "2026-06-29T00:00:00Z",
+  "to": "2026-07-06T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "grafana/x0h2rsqpqk3w",
+      "vendor": "grafana",
+      "title": "Some Queries Failing",
+      "url": "https://stspg.io/hmkbllwz66w2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-02T18:10:29.608Z",
+      "resolved_at": "2026-07-02T21:35:48.102Z",
+      "duration_minutes": 205,
+      "ongoing": false,
+      "components": [
+        "AWS Australia - prod-ap-southeast-2",
+        "AWS Brazil - prod-sa-east-1",
+        "AWS Canada - prod-ca-east-0",
+        "AWS Germany - prod-eu-west-2",
+        "AWS UAE - prod-me-central-1",
+        "AWS India - prod-ap-south-1",
+        "AWS Japan - prod-ap-northeast-0",
+        "AWS Singapore - prod-ap-southeast-1",
+        "AWS Sweden - prod-eu-north-0",
+        "AWS US West - prod-us-west-0",
+        "AWS US East - prod-us-east-0",
+        "AWS Ireland - prod-eu-west-6",
+        "AWS Switzerland - prod-eu-central-0",
+        "Azure Netherlands - prod-eu-west-3",
+        "Azure US Central - us-central2",
+        "Azure US Central - us-central7",
+        "GCP Australia - prod-au-southeast-0",
+        "GCP Belgium - prod-eu-west-0",
+        "GCP Brazil - prod-sa-east-0",
+        "GCP India - prod-ap-south-0",
+        "GCP Singapore - prod-ap-southeast-0",
+        "GCP UK - prod-gb-south-0",
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-5",
+        "Federal Cloud - AWS US Gov West"
+      ],
+      "score": {
+        "value": 5125,
+        "duration_minutes": 205,
+        "components": 25,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/j5vgks57cphf",
+      "vendor": "grafana",
+      "title": "Elevated Loki Query Bytes Reporting",
+      "url": "https://stspg.io/wqbptt5wfqtg",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-01T19:43:18.329Z",
+      "resolved_at": "2026-07-01T22:00:44.338Z",
+      "duration_minutes": 137,
+      "ongoing": false,
+      "components": [
+        "AWS Australia - prod-ap-southeast-2",
+        "AWS Brazil - prod-sa-east-1",
+        "AWS Canada - prod-ca-east-0",
+        "AWS Germany - prod-eu-west-2",
+        "AWS UAE - prod-me-central-1",
+        "AWS India - prod-ap-south-1",
+        "AWS Japan - prod-ap-northeast-0",
+        "AWS Singapore - prod-ap-southeast-1",
+        "AWS Sweden - prod-eu-north-0",
+        "AWS US West - prod-us-west-0",
+        "AWS US East - prod-us-east-0",
+        "AWS Ireland - prod-eu-west-6",
+        "AWS Switzerland - prod-eu-central-0",
+        "Azure Netherlands - prod-eu-west-3",
+        "Azure US Central - us-central2",
+        "Azure US Central - us-central7",
+        "GCP Australia - prod-au-southeast-0",
+        "GCP Belgium - prod-eu-west-0",
+        "GCP Brazil - prod-sa-east-0",
+        "GCP India - prod-ap-south-0",
+        "GCP Singapore - prod-ap-southeast-0",
+        "GCP UK - prod-gb-south-0",
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-5",
+        "Federal Cloud - AWS US Gov West"
+      ],
+      "score": {
+        "value": 3425,
+        "duration_minutes": 137,
+        "components": 25,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/grtt5vk2dd3v",
+      "vendor": "grafana",
+      "title": "Mimir read errors and high latency in prod-eu-west-0",
+      "url": "https://stspg.io/h6ydsghh5vvs",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-29T11:37:40.849Z",
+      "resolved_at": "2026-06-30T08:20:53.167Z",
+      "duration_minutes": 1243,
+      "ongoing": false,
+      "components": [
+        "GCP Belgium - prod-eu-west-0: Querying",
+        "GCP Belgium - prod-eu-west-0: Ingestion"
+      ],
+      "score": {
+        "value": 2486,
+        "duration_minutes": 1243,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/76l7xym7jd5m",
+      "vendor": "digitalocean",
+      "title": "Agent Timeouts While Retrieving Data from Knowledge Bases",
+      "url": "https://stspg.io/sp8b09xxqvjt",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-07-01T06:25:23.492Z",
+      "resolved_at": "2026-07-02T03:38:53.338Z",
+      "duration_minutes": 1273,
+      "ongoing": false,
+      "components": [
+        "Agent Runtime",
+        "Knowledge Bases"
+      ],
+      "score": {
+        "value": 2036.8000000000002,
+        "duration_minutes": 1273,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/71vvxf0rxxnz",
+      "vendor": "datadog",
+      "title": "Delayed data processing and errors in multiple products",
+      "url": "https://stspg.io/5snql687z9c4",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-30T17:51:54.589Z",
+      "resolved_at": "2026-06-30T20:32:44.628Z",
+      "duration_minutes": 160,
+      "ongoing": false,
+      "components": [
+        "APM",
+        "CI Visibility",
+        "Code Coverage",
+        "Database Monitoring",
+        "Error Tracking",
+        "Observability Pipelines",
+        "RUM",
+        "Synthetics",
+        "Test Optimization"
+      ],
+      "score": {
+        "value": 1440,
+        "duration_minutes": 160,
+        "components": 9,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/4m5tfwljjfxk",
+      "vendor": "grafana",
+      "title": "Grafana Cloud IRM alert groups failing to produce alerts in us-east-3 region.",
+      "url": "https://stspg.io/34p7wm05ydt0",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-07-05T11:37:40.914Z",
+      "resolved_at": "2026-07-06T07:37:05.16Z",
+      "duration_minutes": 1199,
+      "ongoing": false,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 1199,
+        "duration_minutes": 1199,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/rjfr3rbzxlx1",
+      "vendor": "digitalocean",
+      "title": "Managed Database Clusters",
+      "url": "https://stspg.io/rpkck6zr7ht5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-02T22:04:53.254Z",
+      "resolved_at": "2026-07-03T08:20:23.462Z",
+      "duration_minutes": 615,
+      "ongoing": false,
+      "components": [
+        "Global",
+        "Global"
+      ],
+      "score": {
+        "value": 984,
+        "duration_minutes": 615,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/j5szf7f3wjp5",
+      "vendor": "stripe",
+      "title": "Elevated WeChat Pay errors",
+      "url": "https://stspg.io/17c6mmm4lg2f",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-02T15:07:39Z",
+      "resolved_at": "2026-07-03T03:56:36.451Z",
+      "duration_minutes": 768,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 921.5999999999999,
+        "duration_minutes": 768,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/phwpbgwcmkjn",
+      "vendor": "digitalocean",
+      "title": "DNS Lookup Failures for Managed Database",
+      "url": "https://stspg.io/r6yw4xc720r8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-01T11:35:28.92Z",
+      "resolved_at": "2026-07-01T16:28:25.933Z",
+      "duration_minutes": 292,
+      "ongoing": false,
+      "components": [
+        "FRA1",
+        "FRA1",
+        "DNS"
+      ],
+      "score": {
+        "value": 700.8000000000001,
+        "duration_minutes": 292,
+        "components": 3,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/njbxb52z1g1y",
+      "vendor": "circleci",
+      "title": "Some customers are unable to access their organizations",
+      "url": "https://stspg.io/ty6ll6xj9c18",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-29T10:23:34.6Z",
+      "resolved_at": "2026-06-29T16:58:09.761Z",
+      "duration_minutes": 394,
+      "ongoing": false,
+      "components": [
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 394,
+        "duration_minutes": 394,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/wvj4t3y98gs7",
+      "vendor": "digitalocean",
+      "title": "Limited access to Deepseek V4 Pro model",
+      "url": "https://stspg.io/wwsc9zft1lxd",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-07-04T22:13:45.282Z",
+      "resolved_at": "2026-07-05T00:53:19.389Z",
+      "duration_minutes": 159,
+      "ongoing": false,
+      "components": [
+        "Inference",
+        "Model Services"
+      ],
+      "score": {
+        "value": 254.4,
+        "duration_minutes": 159,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/rl7f90w0n0gq",
+      "vendor": "github",
+      "title": "Delays in copilot budget limits resets for some users",
+      "url": "https://stspg.io/jy3yhfvwxpjh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-01T10:51:33.312Z",
+      "resolved_at": "2026-07-01T13:26:06.678Z",
+      "duration_minutes": 154,
+      "ongoing": false,
+      "components": [
+        "Copilot"
+      ],
+      "score": {
+        "value": 231,
+        "duration_minutes": 154,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/gsdpkqp4kvlv",
+      "vendor": "grafana",
+      "title": "Loki and Frontend Observability - Major Outage in prod-us-central-0 region",
+      "url": "https://stspg.io/3v5hcx1v7p32",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-07-02T04:55:52.588Z",
+      "resolved_at": "2026-07-02T06:49:44.76Z",
+      "duration_minutes": 113,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-0"
+      ],
+      "score": {
+        "value": 226,
+        "duration_minutes": 113,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/6fdsld9f0nsn",
+      "vendor": "grafana",
+      "title": "Rule evaluation error on cluster prod-gb-south-0",
+      "url": "https://stspg.io/qldkxzbdb7qp",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-29T10:34:05.913Z",
+      "resolved_at": "2026-06-29T13:12:07.993Z",
+      "duration_minutes": 158,
+      "ongoing": false,
+      "components": [
+        "GCP UK - prod-gb-south-0: Rule Evaluation"
+      ],
+      "score": {
+        "value": 158,
+        "duration_minutes": 158,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/82j91239k876",
+      "vendor": "circleci",
+      "title": "Outage impacting web experience and pipelines starting",
+      "url": "https://stspg.io/n86hwbb1whpc",
+      "impact": "critical",
+      "status": "postmortem",
+      "started_at": "2026-07-02T15:25:28.35Z",
+      "resolved_at": "2026-07-02T16:44:04.676Z",
+      "duration_minutes": 78,
+      "ongoing": false,
+      "components": [
+        "Pipelines \u0026 Workflows",
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 156,
+        "duration_minutes": 78,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/5bnwwg9tzd4q",
+      "vendor": "github",
+      "title": "Incident with Pages",
+      "url": "https://stspg.io/wgv67m39tbml",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-02T16:54:10.115Z",
+      "resolved_at": "2026-07-02T18:25:24.658Z",
+      "duration_minutes": 91,
+      "ongoing": false,
+      "components": [
+        "Pages"
+      ],
+      "score": {
+        "value": 136.5,
+        "duration_minutes": 91,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "datadog/smc2wgcmsx6r",
+      "vendor": "datadog",
+      "title": "Elevated Error Rates",
+      "url": "https://stspg.io/h1vdjddg90hd",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-07-01T18:31:20.458Z",
+      "resolved_at": "2026-07-01T20:37:08.245Z",
+      "duration_minutes": 125,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 125,
+        "duration_minutes": 125,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/bsfk9nm4l61f",
+      "vendor": "grafana",
+      "title": "Confluent API Outage",
+      "url": "https://stspg.io/b3bbl34zgmbw",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-29T12:37:28.924Z",
+      "resolved_at": "2026-06-29T14:27:13.546Z",
+      "duration_minutes": 109,
+      "ongoing": false,
+      "components": [
+        "Integrations"
+      ],
+      "score": {
+        "value": 109,
+        "duration_minutes": 109,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/8mvnl6s4cmdt",
+      "vendor": "digitalocean",
+      "title": "Droplet Resize",
+      "url": "https://stspg.io/m6y2gmlz3jrv",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-07-01T11:13:21.128Z",
+      "resolved_at": "2026-07-01T13:28:10.841Z",
+      "duration_minutes": 134,
+      "ongoing": false,
+      "components": [
+        "Cloud Control Panel"
+      ],
+      "score": {
+        "value": 107.2,
+        "duration_minutes": 134,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/rpj3lwgx1s3s",
+      "vendor": "datadog",
+      "title": "Errors Pulling Container Images",
+      "url": "https://stspg.io/gs85vq0xmxcx",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-07-03T00:25:57.069Z",
+      "resolved_at": "2026-07-03T01:29:11.981Z",
+      "duration_minutes": 63,
+      "ongoing": false,
+      "components": [
+        "Container Registry"
+      ],
+      "score": {
+        "value": 63,
+        "duration_minutes": 63,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/wv134rlqz1ds",
+      "vendor": "stripe",
+      "title": "Elevated P24 errors",
+      "url": "https://stspg.io/9rxrgvlbpn8g",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-07-02T10:59:51.727Z",
+      "resolved_at": "2026-07-02T11:36:55.995Z",
+      "duration_minutes": 37,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 44.4,
+        "duration_minutes": 37,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "digitalocean/7vmz1hmlzzrc",
+      "vendor": "digitalocean",
+      "title": "Droplet Actions in NYC3",
+      "url": "https://stspg.io/1ggj0xnb3n4v",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-07-04T14:42:47.869Z",
+      "resolved_at": "2026-07-04T15:10:06.071Z",
+      "duration_minutes": 27,
+      "ongoing": false,
+      "components": [
+        "NYC3",
+        "NYC3"
+      ],
+      "score": {
+        "value": 43.2,
+        "duration_minutes": 27,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "datadog/41jdllgcbk9s",
+      "vendor": "datadog",
+      "title": "Delayed Monitors Notifications",
+      "url": "https://stspg.io/hsz1r8ww26gn",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-30T10:35:02.76Z",
+      "resolved_at": "2026-06-30T11:18:50.339Z",
+      "duration_minutes": 43,
+      "ongoing": false,
+      "components": [
+        "Monitors"
+      ],
+      "score": {
+        "value": 43,
+        "duration_minutes": 43,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/mc4yx9f8x1hk",
+      "vendor": "github",
+      "title": "Disruption with some GitHub services - Signup Flow",
+      "url": "https://stspg.io/vbk1zdbpmv6m",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-30T15:38:48.938Z",
+      "resolved_at": "2026-06-30T15:49:18.386Z",
+      "duration_minutes": 10,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 15,
+        "duration_minutes": 10,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/s8cx9hvdxd5v",
+      "vendor": "grafana",
+      "title": "Partial Write Outage for Grafana Cloud Logs in prod-eu-north-0.",
+      "url": "https://stspg.io/lwn65pz9737z",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-03T14:27:45.497Z",
+      "resolved_at": "2026-07-03T14:27:45.573Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    }
+  ]
+}

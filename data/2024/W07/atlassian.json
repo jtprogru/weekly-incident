@@ -1,0 +1,130 @@
+[
+  {
+    "key": "atlassian/gg9z8g8xsxc7",
+    "vendor": "atlassian",
+    "native_id": "gg9z8g8xsxc7",
+    "title": "Service Disruptions Affecting Atlassian Products",
+    "url": "https://stspg.io/r4h0jlkc4br7",
+    "impact": "none",
+    "status": "postmortem",
+    "started_at": "2024-02-14T21:57:44.064Z",
+    "resolved_at": "2024-02-14T23:32:18.665Z",
+    "duration_minutes": 94,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "1vm2lnpnv7d6",
+        "status": "investigating",
+        "body": "We are investigating reports of intermittent errors for all Cloud Customers across all Atlassian products. We will provide more details once we identify the root cause.",
+        "created_at": "2024-02-14T21:57:44.093Z"
+      },
+      {
+        "native_id": "h5y9fwyy8gcg",
+        "status": "identified",
+        "body": "We have identified the root cause of the increased errors and have mitigated the problem. We continue to work on resolving the issue and monitoring this closely.",
+        "created_at": "2024-02-14T22:31:10.107Z"
+      },
+      {
+        "native_id": "80h7tglrf0j0",
+        "status": "monitoring",
+        "body": "We have identified the root cause of the Service Disruptions affecting all Atlassian products and have mitigated the problem. We are now monitoring this closely.",
+        "created_at": "2024-02-14T22:55:47.246Z"
+      },
+      {
+        "native_id": "7bhjfffy6tpm",
+        "status": "resolved",
+        "body": "We experienced increased errors on Confluence, Jira Work Management, Jira Service Management, Jira Software, Opsgenie, Trello, Atlassian Bitbucket, Atlassian Access, Jira Align, Jira Product Discovery, Atlas, Compass, and Atlassian Analytics. The issue has been resolved and the services are operating normally.",
+        "created_at": "2024-02-14T23:32:18.665Z"
+      },
+      {
+        "native_id": "2kmsbsz8jgd6",
+        "status": "postmortem",
+        "body": "### **Summary**\n\nOn February 14, 2024, between 20:05 UTC and 23:03 UTC, Atlassian customers on the following cloud products encountered a service disruption: Access, Atlas, Atlassian Analytics, Bitbucket, Compass, Confluence, Ecosystem apps, Jira Service Management, Jira Software, Jira Work Management, Jira Product Discovery, Opsgenie, StatusPage, and Trello.\n\nAs part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names used for internal service-to-service connections. Active domain names were incorrectly deleted during this event. This impacted all cloud customers across all regions. The issue was identified and resolved through the rollback of the faulty deployment to restore the domain names and Atlassian systems to a stable state. The time to resolution was two hours and 58 minutes.\n\n### **IMPACT**\n\nExternal customers started reporting issues with Atlassian cloud products at 20:52 UTC. The impact of the failed change led to performance degradation or in some cases, complete service disruption. Symptoms experienced by end-users were unsuccessful page loads and/or failed interactions with our cloud products.\n\n### **ROOT CAUSE**\n\nAs part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names that were being used for internal service-to-service connections. Active domain names were incorrectly deleted during this operation.\n\n### **REMEDIAL ACTIONS PLAN \u0026 NEXT STEPS**\n\nWe know that outages impact your productivity. The detection was delayed because existing testing \u0026 monitoring focused on service health rather than the entire system’s availability.\n\nTo prevent a recurrence of this type of incident, we are implementing the following improvement measures:\n\n* Canary checks to monitor the entire system availability.\n* Faster rollback procedures for this type of service impact.\n* Stricter change control procedures for infrastructure modifications.\n* Migration of all DNS records to centralised management and stricter access controls on modification to DNS records.\n\nWe apologize to customers whose services were impacted during this incident; we are taking immediate steps to improve the platform’s performance and availability.\n\n‌\n\nThanks,\n\nAtlassian Customer Support",
+        "created_at": "2024-02-27T05:41:24.667Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2024-02-14T21:57:44.069Z",
+      "id": "gg9z8g8xsxc7",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "### **Summary**\n\nOn February 14, 2024, between 20:05 UTC and 23:03 UTC, Atlassian customers on the following cloud products encountered a service disruption: Access, Atlas, Atlassian Analytics, Bitbucket, Compass, Confluence, Ecosystem apps, Jira Service Management, Jira Software, Jira Work Management, Jira Product Discovery, Opsgenie, StatusPage, and Trello.\n\nAs part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names used for internal service-to-service connections. Active domain names were incorrectly deleted during this event. This impacted all cloud customers across all regions. The issue was identified and resolved through the rollback of the faulty deployment to restore the domain names and Atlassian systems to a stable state. The time to resolution was two hours and 58 minutes.\n\n### **IMPACT**\n\nExternal customers started reporting issues with Atlassian cloud products at 20:52 UTC. The impact of the failed change led to performance degradation or in some cases, complete service disruption. Symptoms experienced by end-users were unsuccessful page loads and/or failed interactions with our cloud products.\n\n### **ROOT CAUSE**\n\nAs part of a security and compliance uplift, we had scheduled the deletion of unused and legacy domain names that were being used for internal service-to-service connections. Active domain names were incorrectly deleted during this operation.\n\n### **REMEDIAL ACTIONS PLAN \u0026 NEXT STEPS**\n\nWe know that outages impact your productivity. The detection was delayed because existing testing \u0026 monitoring focused on service health rather than the entire system’s availability.\n\nTo prevent a recurrence of this type of incident, we are implementing the following improvement measures:\n\n* Canary checks to monitor the entire system availability.\n* Faster rollback procedures for this type of service impact.\n* Stricter change control procedures for infrastructure modifications.\n* Migration of all DNS records to centralised management and stricter access controls on modification to DNS records.\n\nWe apologize to customers whose services were impacted during this incident; we are taking immediate steps to improve the platform’s performance and availability.\n\n‌\n\nThanks,\n\nAtlassian Customer Support",
+          "created_at": "2024-02-27T05:41:24.667Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "2kmsbsz8jgd6",
+          "incident_id": "gg9z8g8xsxc7",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2024-02-27T05:41:26.776Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We experienced increased errors on Confluence, Jira Work Management, Jira Service Management, Jira Software, Opsgenie, Trello, Atlassian Bitbucket, Atlassian Access, Jira Align, Jira Product Discovery, Atlas, Compass, and Atlassian Analytics. The issue has been resolved and the services are operating normally.",
+          "created_at": "2024-02-14T23:32:18.665Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2024-02-14T23:32:18.665Z",
+          "id": "7bhjfffy6tpm",
+          "incident_id": "gg9z8g8xsxc7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2024-02-14T23:32:18.665Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified the root cause of the Service Disruptions affecting all Atlassian products and have mitigated the problem. We are now monitoring this closely.",
+          "created_at": "2024-02-14T22:55:47.246Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2024-02-14T22:55:47.246Z",
+          "id": "80h7tglrf0j0",
+          "incident_id": "gg9z8g8xsxc7",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2024-02-14T22:55:47.246Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified the root cause of the increased errors and have mitigated the problem. We continue to work on resolving the issue and monitoring this closely.",
+          "created_at": "2024-02-14T22:31:10.107Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2024-02-14T22:31:10.107Z",
+          "id": "h5y9fwyy8gcg",
+          "incident_id": "gg9z8g8xsxc7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2024-02-14T22:31:10.107Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of intermittent errors for all Cloud Customers across all Atlassian products. We will provide more details once we identify the root cause.",
+          "created_at": "2024-02-14T21:57:44.093Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2024-02-14T21:57:44.093Z",
+          "id": "1vm2lnpnv7d6",
+          "incident_id": "gg9z8g8xsxc7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2024-02-14T21:57:44.093Z"
+        }
+      ],
+      "monitoring_at": "2024-02-14T22:55:47.246Z",
+      "name": "Service Disruptions Affecting Atlassian Products",
+      "page_id": "0f54fx204jpt",
+      "reminder_intervals": null,
+      "resolved_at": "2024-02-14T23:32:18.665Z",
+      "shortlink": "https://stspg.io/r4h0jlkc4br7",
+      "started_at": "2024-02-14T21:57:44.064Z",
+      "status": "postmortem",
+      "updated_at": "2024-02-27T05:41:26.778Z"
+    }
+  }
+]

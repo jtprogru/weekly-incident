@@ -1,0 +1,2686 @@
+[
+  {
+    "key": "github/ph5nns5y4gxj",
+    "vendor": "github",
+    "native_id": "ph5nns5y4gxj",
+    "title": "Disruption with some GitHub services",
+    "url": "https://stspg.io/2n2g6kzg67mh",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-20T00:25:09.563Z",
+    "resolved_at": "2026-07-20T01:46:02.453Z",
+    "duration_minutes": 80,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "922zvb5nk8j2",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-07-20T00:25:09.597Z"
+      },
+      {
+        "native_id": "mv2fnsgwxcm6",
+        "status": "monitoring",
+        "body": "Some Git LFS operations, and loading files through the API are failing. We are investigating.",
+        "created_at": "2026-07-20T00:25:49.712Z"
+      },
+      {
+        "native_id": "bdcds652mdqj",
+        "status": "monitoring",
+        "body": "Some Git LFS operations, and loading files through the API  are failing. We are investigating.",
+        "created_at": "2026-07-20T00:26:10.695Z"
+      },
+      {
+        "native_id": "n8t3pcn65rsn",
+        "status": "investigating",
+        "body": "The Git LFS API issues have been identified as being related to a separate incident where Actions is experiencing degraded availability. We’re consolidating our investigation efforts under that incident.",
+        "created_at": "2026-07-20T01:15:30.992Z"
+      },
+      {
+        "native_id": "vfj75jqpbngm",
+        "status": "investigating",
+        "body": "Git LFS API success rates have returned to normal. We will continue to monitor the service closely.",
+        "created_at": "2026-07-20T01:45:49.212Z"
+      },
+      {
+        "native_id": "rvwm44wflpgn",
+        "status": "resolved",
+        "body": "Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal.\u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs.",
+        "created_at": "2026-07-20T01:46:02.453Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-20T00:25:09.568Z",
+      "id": "ph5nns5y4gxj",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal.\u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs.",
+          "created_at": "2026-07-20T01:46:02.453Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:46:02.453Z",
+          "id": "rvwm44wflpgn",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T12:29:35.539Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Git LFS API success rates have returned to normal. We will continue to monitor the service closely.",
+          "created_at": "2026-07-20T01:45:49.212Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:45:49.212Z",
+          "id": "vfj75jqpbngm",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:45:49.212Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The Git LFS API issues have been identified as being related to a separate incident where Actions is experiencing degraded availability. We’re consolidating our investigation efforts under that incident.",
+          "created_at": "2026-07-20T01:15:30.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:15:30.992Z",
+          "id": "n8t3pcn65rsn",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:15:30.992Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some Git LFS operations, and loading files through the API  are failing. We are investigating.",
+          "created_at": "2026-07-20T00:26:10.695Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:26:10.695Z",
+          "id": "bdcds652mdqj",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:26:10.695Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some Git LFS operations, and loading files through the API are failing. We are investigating.",
+          "created_at": "2026-07-20T00:25:49.712Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:25:49.712Z",
+          "id": "mv2fnsgwxcm6",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:25:49.712Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-07-20T00:25:09.597Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:25:09.597Z",
+          "id": "922zvb5nk8j2",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:25:09.597Z"
+        }
+      ],
+      "monitoring_at": "2026-07-20T00:25:49.712Z",
+      "name": "Disruption with some GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-20T01:46:02.453Z",
+      "shortlink": "https://stspg.io/2n2g6kzg67mh",
+      "started_at": "2026-07-20T00:25:09.563Z",
+      "status": "resolved",
+      "updated_at": "2026-07-28T12:29:35.546Z"
+    }
+  },
+  {
+    "key": "github/fd7j2mw8xw94",
+    "vendor": "github",
+    "native_id": "fd7j2mw8xw94",
+    "title": "Disruption with GPT 5.3 Codex",
+    "url": "https://stspg.io/7ls47qxt8lpq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-20T16:03:51.177Z",
+    "resolved_at": "2026-07-20T18:37:08.022Z",
+    "duration_minutes": 153,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "y9r7c45nqpgz",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-07-20T16:03:51.272Z"
+      },
+      {
+        "native_id": "0c63ygxm7kkx",
+        "status": "investigating",
+        "body": "We are investigating GPT Codex 5.3 performance.",
+        "created_at": "2026-07-20T16:04:26.517Z"
+      },
+      {
+        "native_id": "yc012530pl6v",
+        "status": "investigating",
+        "body": "We identified that an upstream provider is returning errors for GPT 5.3 Codex requests, causing some users to experience failed or interrupted responses. Traffic is being automatically rerouted to mitigate impact. We are working with the upstream provider to resolve the underlying issue. We recommend using a different model at this time while we resolve the problem.",
+        "created_at": "2026-07-20T16:39:46.794Z"
+      },
+      {
+        "native_id": "lnp080gypymx",
+        "status": "investigating",
+        "body": "The upstream provider continues to return intermittent errors for GPT 5.3 Codex requests. Some users may experience failed or interrupted responses when using this model. Traffic continues to be automatically rerouted to reduce impact, and we are actively working with the upstream provider on a resolution. In the meantime, selecting an alternative model will avoid disruption.",
+        "created_at": "2026-07-20T17:21:18.855Z"
+      },
+      {
+        "native_id": "byh7r7nq0t7p",
+        "status": "investigating",
+        "body": "We are seeing signs of sustained recovery from the upstream provider for GPT 5.3 Codex requests. Requests  are succeeding as expected. We are awaiting confirmation from the provider that the issue is fully mitigated before resolving this incident.",
+        "created_at": "2026-07-20T18:25:51.982Z"
+      },
+      {
+        "native_id": "gd7fy9kr96rr",
+        "status": "resolved",
+        "body": "Between 06:39 and 18:11 UTC on July 20, 2026, the Copilot service experienced a degradation of the GPT 5.3 model due to an issue with our upstream provider. The upstream model provider returned intermittent errors for GPT 5.3 Codex requests, which caused some responses to fail. Auto mode requests that had selected GPT 5.3 Codex were also impacted. On average about 2% of GPT 5.3 Codex requests failed during this window. Copilot automatically routed eligible traffic away from the impacted provider to reduce customer impact. No other models were impacted.\u003cbr /\u003e\u003cbr /\u003eWe worked with the upstream provider throughout the incident and confirmed sustained recovery before resolving.",
+        "created_at": "2026-07-20T18:37:08.022Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-07-20T16:03:51.187Z",
+      "id": "fd7j2mw8xw94",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 06:39 and 18:11 UTC on July 20, 2026, the Copilot service experienced a degradation of the GPT 5.3 model due to an issue with our upstream provider. The upstream model provider returned intermittent errors for GPT 5.3 Codex requests, which caused some responses to fail. Auto mode requests that had selected GPT 5.3 Codex were also impacted. On average about 2% of GPT 5.3 Codex requests failed during this window. Copilot automatically routed eligible traffic away from the impacted provider to reduce customer impact. No other models were impacted.\u003cbr /\u003e\u003cbr /\u003eWe worked with the upstream provider throughout the incident and confirmed sustained recovery before resolving.",
+          "created_at": "2026-07-20T18:37:08.022Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T18:37:08.022Z",
+          "id": "gd7fy9kr96rr",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:18:05.121Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing signs of sustained recovery from the upstream provider for GPT 5.3 Codex requests. Requests  are succeeding as expected. We are awaiting confirmation from the provider that the issue is fully mitigated before resolving this incident.",
+          "created_at": "2026-07-20T18:25:51.982Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T18:25:51.982Z",
+          "id": "byh7r7nq0t7p",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T18:25:51.982Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The upstream provider continues to return intermittent errors for GPT 5.3 Codex requests. Some users may experience failed or interrupted responses when using this model. Traffic continues to be automatically rerouted to reduce impact, and we are actively working with the upstream provider on a resolution. In the meantime, selecting an alternative model will avoid disruption.",
+          "created_at": "2026-07-20T17:21:18.855Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T17:21:18.855Z",
+          "id": "lnp080gypymx",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T17:21:18.855Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We identified that an upstream provider is returning errors for GPT 5.3 Codex requests, causing some users to experience failed or interrupted responses. Traffic is being automatically rerouted to mitigate impact. We are working with the upstream provider to resolve the underlying issue. We recommend using a different model at this time while we resolve the problem.",
+          "created_at": "2026-07-20T16:39:46.794Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T16:39:46.794Z",
+          "id": "yc012530pl6v",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T16:39:46.794Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating GPT Codex 5.3 performance.",
+          "created_at": "2026-07-20T16:04:26.517Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T16:04:26.517Z",
+          "id": "0c63ygxm7kkx",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T16:04:26.517Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-07-20T16:03:51.272Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T16:03:51.272Z",
+          "id": "y9r7c45nqpgz",
+          "incident_id": "fd7j2mw8xw94",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T16:03:51.272Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Disruption with GPT 5.3 Codex",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-20T18:37:08.022Z",
+      "shortlink": "https://stspg.io/7ls47qxt8lpq",
+      "started_at": "2026-07-20T16:03:51.177Z",
+      "status": "resolved",
+      "updated_at": "2026-07-29T20:18:05.126Z"
+    }
+  },
+  {
+    "key": "github/g40zcbvchny4",
+    "vendor": "github",
+    "native_id": "g40zcbvchny4",
+    "title": "Some SSH connections using deploy keys are failing",
+    "url": "https://stspg.io/jczxclgm9znm",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-21T10:31:44.118Z",
+    "resolved_at": "2026-07-21T11:57:01.311Z",
+    "duration_minutes": 85,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "qb0gklk516dl",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-07-21T10:31:44.156Z"
+      },
+      {
+        "native_id": "5h5hz3q1xk3m",
+        "status": "investigating",
+        "body": "We are investigating reports of intermittent SSH authentication failures affecting connections that use deploy keys. Customers may experience failed SSH connections when interacting with repositories via deploy keys. Our engineering team is actively investigating the root cause and working toward resolution.",
+        "created_at": "2026-07-21T11:04:43.642Z"
+      },
+      {
+        "native_id": "mzv8f1bk3s49",
+        "status": "investigating",
+        "body": "We have identified a recent code change as a potential cause of the SSH authentication failures affecting deploy key connections. Our engineering team is rolling back this change. Customers using deploy keys for SSH access to repositories may continue to experience intermittent connection failures until the fix is deployed.",
+        "created_at": "2026-07-21T11:46:47.091Z"
+      },
+      {
+        "native_id": "9n25ch5llc92",
+        "status": "resolved",
+        "body": "On July 21, 2026, between 07:41 UTC and 11:57 UTC, the SSH Authentication service was degraded and some SSH connections failed to authenticate. On average, 12.2% of SSH authentication requests failed, peaking at 15.7%. Both user RSA keys and deploy keys were impacted. This was due to a change in how our SSH service handled one public-key authentication method that caused the affected authentication attempts to be rejected as invalid. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by reverting the change, after which SSH authentication returned to normal. \u003cbr /\u003e\u003cbr /\u003eWe are working to expand our automated test coverage for our SSH public-key authentication flows to catch more edge cases and to improve observability and alerting on SSH authentication failures, to reduce our time to detection and mitigation of issues like this one in the future.",
+        "created_at": "2026-07-21T11:57:01.311Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-21T10:31:44.123Z",
+      "id": "g40zcbvchny4",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On July 21, 2026, between 07:41 UTC and 11:57 UTC, the SSH Authentication service was degraded and some SSH connections failed to authenticate. On average, 12.2% of SSH authentication requests failed, peaking at 15.7%. Both user RSA keys and deploy keys were impacted. This was due to a change in how our SSH service handled one public-key authentication method that caused the affected authentication attempts to be rejected as invalid. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by reverting the change, after which SSH authentication returned to normal. \u003cbr /\u003e\u003cbr /\u003eWe are working to expand our automated test coverage for our SSH public-key authentication flows to catch more edge cases and to improve observability and alerting on SSH authentication failures, to reduce our time to detection and mitigation of issues like this one in the future.",
+          "created_at": "2026-07-21T11:57:01.311Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-21T11:57:01.311Z",
+          "id": "9n25ch5llc92",
+          "incident_id": "g40zcbvchny4",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T17:30:57.018Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified a recent code change as a potential cause of the SSH authentication failures affecting deploy key connections. Our engineering team is rolling back this change. Customers using deploy keys for SSH access to repositories may continue to experience intermittent connection failures until the fix is deployed.",
+          "created_at": "2026-07-21T11:46:47.091Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-21T11:46:47.091Z",
+          "id": "mzv8f1bk3s49",
+          "incident_id": "g40zcbvchny4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-21T11:46:47.091Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of intermittent SSH authentication failures affecting connections that use deploy keys. Customers may experience failed SSH connections when interacting with repositories via deploy keys. Our engineering team is actively investigating the root cause and working toward resolution.",
+          "created_at": "2026-07-21T11:04:43.642Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-21T11:04:43.642Z",
+          "id": "5h5hz3q1xk3m",
+          "incident_id": "g40zcbvchny4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-21T11:04:43.642Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-07-21T10:31:44.156Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-21T10:31:44.156Z",
+          "id": "qb0gklk516dl",
+          "incident_id": "g40zcbvchny4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-21T10:31:44.156Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Some SSH connections using deploy keys are failing",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-21T11:57:01.311Z",
+      "shortlink": "https://stspg.io/jczxclgm9znm",
+      "started_at": "2026-07-21T10:31:44.118Z",
+      "status": "resolved",
+      "updated_at": "2026-07-29T17:30:57.024Z"
+    }
+  },
+  {
+    "key": "github/20frdtvv3yg6",
+    "vendor": "github",
+    "native_id": "20frdtvv3yg6",
+    "title": "Disruption with actions hosted runners",
+    "url": "https://stspg.io/hccgdw2k2b1q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-22T20:43:43.789Z",
+    "resolved_at": "2026-07-22T22:09:26.957Z",
+    "duration_minutes": 85,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "0nkb28qlrqrw",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-07-22T20:43:43.871Z"
+      },
+      {
+        "native_id": "70q12wmx3ckx",
+        "status": "investigating",
+        "body": "Approximately 3% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A small portion of these runs may fail after extended delays. We have identified the cause and are working on a mitigation.",
+        "created_at": "2026-07-22T20:47:02.375Z"
+      },
+      {
+        "native_id": "hsnkhygj7qpy",
+        "status": "investigating",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-22T22:01:51.972Z"
+      },
+      {
+        "native_id": "bbdq20tkd55c",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-22T22:01:57.549Z"
+      },
+      {
+        "native_id": "02zk52mdqsq8",
+        "status": "resolved",
+        "body": "On July 22, 2026, between 19:36 UTC and 22:04 UTC, GitHub Actions experienced delayed and failed job starts on GitHub-hosted runners. The incident was caused by an unhealthy state in a backend data service responsible for provisioning hosted runners, preventing runner acquisition for a subset of workloads. During most of the incident, approximately 15% of workflow runs on hosted runners were delayed by more than 5 minutes, while roughly 1% failed to start.\u003cbr /\u003e\u003cbr /\u003eAt 21:49 UTC, we restored the health of the backend data replication system, allowing provisioning to recover and the accumulated workflow backlog to drain. Service performance then returned to expected levels. We are improving provisioning-service resiliency, workload distribution, and capacity balancing to reduce the likelihood and impact of similar incidents.",
+        "created_at": "2026-07-22T22:09:26.957Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        }
+      ],
+      "created_at": "2026-07-22T20:43:43.797Z",
+      "id": "20frdtvv3yg6",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 22, 2026, between 19:36 UTC and 22:04 UTC, GitHub Actions experienced delayed and failed job starts on GitHub-hosted runners. The incident was caused by an unhealthy state in a backend data service responsible for provisioning hosted runners, preventing runner acquisition for a subset of workloads. During most of the incident, approximately 15% of workflow runs on hosted runners were delayed by more than 5 minutes, while roughly 1% failed to start.\u003cbr /\u003e\u003cbr /\u003eAt 21:49 UTC, we restored the health of the backend data replication system, allowing provisioning to recover and the accumulated workflow backlog to drain. Service performance then returned to expected levels. We are improving provisioning-service resiliency, workload distribution, and capacity balancing to reduce the likelihood and impact of similar incidents.",
+          "created_at": "2026-07-22T22:09:26.957Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-22T22:09:26.957Z",
+          "id": "02zk52mdqsq8",
+          "incident_id": "20frdtvv3yg6",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T23:09:42.206Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-22T22:01:57.549Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-22T22:01:57.549Z",
+          "id": "bbdq20tkd55c",
+          "incident_id": "20frdtvv3yg6",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-22T22:01:57.549Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-22T22:01:51.972Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-22T22:01:51.972Z",
+          "id": "hsnkhygj7qpy",
+          "incident_id": "20frdtvv3yg6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-22T22:01:51.972Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Approximately 3% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A small portion of these runs may fail after extended delays. We have identified the cause and are working on a mitigation.",
+          "created_at": "2026-07-22T20:47:02.375Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-22T20:47:02.375Z",
+          "id": "70q12wmx3ckx",
+          "incident_id": "20frdtvv3yg6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-22T20:47:02.375Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-07-22T20:43:43.871Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-22T20:43:43.871Z",
+          "id": "0nkb28qlrqrw",
+          "incident_id": "20frdtvv3yg6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-22T20:43:43.871Z"
+        }
+      ],
+      "monitoring_at": "2026-07-22T22:01:57.549Z",
+      "name": "Disruption with actions hosted runners",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-22T22:09:26.957Z",
+      "shortlink": "https://stspg.io/hccgdw2k2b1q",
+      "started_at": "2026-07-22T20:43:43.789Z",
+      "status": "resolved",
+      "updated_at": "2026-07-24T23:09:42.211Z"
+    }
+  },
+  {
+    "key": "github/zq3c1jst2vkq",
+    "vendor": "github",
+    "native_id": "zq3c1jst2vkq",
+    "title": "Latency issues across a number of services",
+    "url": "https://stspg.io/syhr80rth84z",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-23T07:53:59.347Z",
+    "resolved_at": "2026-07-23T09:39:19.558Z",
+    "duration_minutes": 105,
+    "components": [
+      "Webhooks",
+      "Issues",
+      "Pull Requests",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "yr8pyqdv7qwt",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions, Issues and Webhooks",
+        "created_at": "2026-07-23T07:53:59.492Z"
+      },
+      {
+        "native_id": "8mq7pgb7gfwb",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-23T08:25:16.023Z"
+      },
+      {
+        "native_id": "1mm6hv2wjrl0",
+        "status": "investigating",
+        "body": "We're currently investigating latency across multiple services. This can show as Actions jobs taking longer to start, Issues search serving stale results, and other listed services being similarly impacted.",
+        "created_at": "2026-07-23T08:34:23.597Z"
+      },
+      {
+        "native_id": "mt758nrn2cbl",
+        "status": "investigating",
+        "body": "The degradation affecting Issues has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-23T09:18:37.845Z"
+      },
+      {
+        "native_id": "mzj2z08dyjvr",
+        "status": "investigating",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-23T09:19:49.973Z"
+      },
+      {
+        "native_id": "ppfk8bczsh4t",
+        "status": "investigating",
+        "body": "We identified the source of latency affecting multiple services and applied a fix. Issues and Actions are recovering, and remaining affected services are seeing improvement as processing backlogs clear. We are actively monitoring recovery across all services.",
+        "created_at": "2026-07-23T09:22:21.016Z"
+      },
+      {
+        "native_id": "r5d74zh225fg",
+        "status": "investigating",
+        "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-23T09:27:35.34Z"
+      },
+      {
+        "native_id": "75hdy99hpk5n",
+        "status": "investigating",
+        "body": "Webhooks is operating normally.",
+        "created_at": "2026-07-23T09:35:17.965Z"
+      },
+      {
+        "native_id": "2kyzzvtz8k3m",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-23T09:39:11.833Z"
+      },
+      {
+        "native_id": "0kqtxsskfxgk",
+        "status": "resolved",
+        "body": "On July 23, 2026, between 07:08 and 09:39 UTC, several services experienced delays: 8% of actions workflow runs experienced an average run start delay of 10 minutes, 5% of webhook deliveries exceeded SLO, and code scanning, repos, notifications, issues and pull requests experienced increased latency over the life of the incident.    \u003cbr /\u003e\u003cbr /\u003eThe root cause of the incident was a node of our background job processing system which did not recover after entering scheduled host maintenance.  The incident was mitigated by identifying the problematic shard and restoring its correct state, after which queue backlogs drained and services recovered.  \u003cbr /\u003e\u003cbr /\u003eTo speed mitigation, we have added monitors for nodes in this unhealthy state after maintenance operations.  To prevent future recurrence, we are adapting our lifecycle automation to verify host rejoin after a scheduled reboot.",
+        "created_at": "2026-07-23T09:39:19.558Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.017Z"
+        },
+        {
+          "created_at": "2017-01-31T20:01:46.638Z",
+          "description": "Requests for Issues on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "kr09ddfgbfsf",
+          "name": "Issues",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T20:22:28.767Z"
+        },
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.066Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        }
+      ],
+      "created_at": "2026-07-23T07:53:59.358Z",
+      "id": "zq3c1jst2vkq",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 23, 2026, between 07:08 and 09:39 UTC, several services experienced delays: 8% of actions workflow runs experienced an average run start delay of 10 minutes, 5% of webhook deliveries exceeded SLO, and code scanning, repos, notifications, issues and pull requests experienced increased latency over the life of the incident.    \u003cbr /\u003e\u003cbr /\u003eThe root cause of the incident was a node of our background job processing system which did not recover after entering scheduled host maintenance.  The incident was mitigated by identifying the problematic shard and restoring its correct state, after which queue backlogs drained and services recovered.  \u003cbr /\u003e\u003cbr /\u003eTo speed mitigation, we have added monitors for nodes in this unhealthy state after maintenance operations.  To prevent future recurrence, we are adapting our lifecycle automation to verify host rejoin after a scheduled reboot.",
+          "created_at": "2026-07-23T09:39:19.558Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:39:19.558Z",
+          "id": "0kqtxsskfxgk",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-27T21:51:04.949Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-23T09:39:11.833Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:39:11.833Z",
+          "id": "2kyzzvtz8k3m",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:39:11.833Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Webhooks is operating normally.",
+          "created_at": "2026-07-23T09:35:17.965Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:35:17.965Z",
+          "id": "75hdy99hpk5n",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:35:17.965Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-23T09:27:35.340Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:27:35.340Z",
+          "id": "r5d74zh225fg",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:27:35.340Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We identified the source of latency affecting multiple services and applied a fix. Issues and Actions are recovering, and remaining affected services are seeing improvement as processing backlogs clear. We are actively monitoring recovery across all services.",
+          "created_at": "2026-07-23T09:22:21.016Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:22:21.016Z",
+          "id": "ppfk8bczsh4t",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:22:21.016Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-23T09:19:49.973Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:19:49.973Z",
+          "id": "mzj2z08dyjvr",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:19:49.973Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Issues has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-23T09:18:37.845Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T09:18:37.845Z",
+          "id": "mt758nrn2cbl",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T09:18:37.845Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're currently investigating latency across multiple services. This can show as Actions jobs taking longer to start, Issues search serving stale results, and other listed services being similarly impacted.",
+          "created_at": "2026-07-23T08:34:23.597Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T08:34:23.597Z",
+          "id": "1mm6hv2wjrl0",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T08:34:23.597Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-23T08:25:16.023Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T08:25:16.023Z",
+          "id": "8mq7pgb7gfwb",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T08:25:16.023Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions, Issues and Webhooks",
+          "created_at": "2026-07-23T07:53:59.492Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-23T07:53:59.492Z",
+          "id": "yr8pyqdv7qwt",
+          "incident_id": "zq3c1jst2vkq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T07:53:59.492Z"
+        }
+      ],
+      "monitoring_at": "2026-07-23T09:39:11.833Z",
+      "name": "Latency issues across a number of services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-23T09:39:19.558Z",
+      "shortlink": "https://stspg.io/syhr80rth84z",
+      "started_at": "2026-07-23T07:53:59.347Z",
+      "status": "resolved",
+      "updated_at": "2026-07-27T21:51:04.953Z"
+    }
+  },
+  {
+    "key": "github/594m87r8sw13",
+    "vendor": "github",
+    "native_id": "594m87r8sw13",
+    "title": "Incident With Blocked GitHub.com Traffic",
+    "url": "https://stspg.io/dd1j7wg77hn9",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-24T15:56:48.829Z",
+    "resolved_at": "2026-07-24T11:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "4vz29my0d0gw",
+        "status": "resolved",
+        "body": "Between July 23, 2026 at 18:45 UTC and July 24, 2026 at 11:19 UTC, an abuse mitigation update caused some legitimate customers whose traffic was routed through our Central Europe and South America edge locations to be incorrectly blocked from GitHub.com. We estimate that approximately 0.25% of GitHub.com requests were affected during this period.\n\nThis was caused by an abuse mitigation configuration that incorrectly classified legitimate traffic. We mitigated the incident by reverting the update. We are adding validation and safeguards to prevent similar incorrect blocking in the future.",
+        "created_at": "2026-07-24T15:56:48.881Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-24T11:00:00.000Z",
+      "id": "594m87r8sw13",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between July 23, 2026 at 18:45 UTC and July 24, 2026 at 11:19 UTC, an abuse mitigation update caused some legitimate customers whose traffic was routed through our Central Europe and South America edge locations to be incorrectly blocked from GitHub.com. We estimate that approximately 0.25% of GitHub.com requests were affected during this period.\n\nThis was caused by an abuse mitigation configuration that incorrectly classified legitimate traffic. We mitigated the incident by reverting the update. We are adding validation and safeguards to prevent similar incorrect blocking in the future.",
+          "created_at": "2026-07-24T15:56:48.881Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-24T11:00:00.000Z",
+          "id": "4vz29my0d0gw",
+          "incident_id": "594m87r8sw13",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T15:56:48.881Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incident With Blocked GitHub.com Traffic",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-24T11:00:00.000Z",
+      "shortlink": "https://stspg.io/dd1j7wg77hn9",
+      "started_at": "2026-07-24T15:56:48.829Z",
+      "status": "resolved",
+      "updated_at": "2026-07-24T15:56:48.891Z"
+    }
+  },
+  {
+    "key": "github/yjysg0xrl67m",
+    "vendor": "github",
+    "native_id": "yjysg0xrl67m",
+    "title": "Disruption with some GitHub services",
+    "url": "https://stspg.io/j5c80shxqm53",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-24T16:17:31.492Z",
+    "resolved_at": "2026-07-24T17:36:50.993Z",
+    "duration_minutes": 79,
+    "components": [
+      "API Requests",
+      "Issues",
+      "Pull Requests",
+      "Actions",
+      "Pages",
+      "Copilot"
+    ],
+    "updates": [
+      {
+        "native_id": "g34kbbs9k26c",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for API Requests and Issues",
+        "created_at": "2026-07-24T16:17:31.584Z"
+      },
+      {
+        "native_id": "q82xjpf22hzj",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:19:39.348Z"
+      },
+      {
+        "native_id": "hscgqnl2q5jl",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:20:10.002Z"
+      },
+      {
+        "native_id": "p0nvls36ccdc",
+        "status": "investigating",
+        "body": "We are investigating timeouts to some GitHub services",
+        "created_at": "2026-07-24T16:22:37.945Z"
+      },
+      {
+        "native_id": "pql6vmkx1s4g",
+        "status": "investigating",
+        "body": "Copilot is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:26:47.181Z"
+      },
+      {
+        "native_id": "nzw67ssqpl52",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:27:51.934Z"
+      },
+      {
+        "native_id": "m44s2b9rbgsl",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:28:37.283Z"
+      },
+      {
+        "native_id": "xhvwpnn2kn4q",
+        "status": "investigating",
+        "body": "We have applied a mitigation and are monitoring for recovery",
+        "created_at": "2026-07-24T16:40:27.946Z"
+      },
+      {
+        "native_id": "0rp3bgc6fvbl",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-24T16:41:59.232Z"
+      },
+      {
+        "native_id": "vwg4mw6tzsp6",
+        "status": "investigating",
+        "body": "The degradation affecting API Requests, Actions, Copilot, Issues, Pages and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-24T17:16:44.181Z"
+      },
+      {
+        "native_id": "p48gb0cqfhld",
+        "status": "investigating",
+        "body": "We are seeing recovery across all services",
+        "created_at": "2026-07-24T17:24:27.324Z"
+      },
+      {
+        "native_id": "1d87ylhsd6wd",
+        "status": "resolved",
+        "body": "On July 24th at 16:04 UTC, a loss of connectivity occurred in network paths in one of our three physical data center availability zones (AZs). This resulted in packet loss due to the remaining active paths becoming saturated. Our data centers use a leaf-spine switch fabric in each compute cage, and an aggregation layer interconnecting the spines from each cage within each AZ. The loss of connectivity affected links between one cage’s spine switches and the aggregation layer within that specific AZ. \u003cbr /\u003e\u003cbr /\u003eWorkloads depending on compute resources in this cage became degraded due to packet loss, and exhibited intermittent errors: \u003cbr /\u003e\u003cbr /\u003e- Actions saw 10% of jobs fail during the impact window, and 5% of jobs succeeded but with delayed starts. \u003cbr /\u003e- 27% of GitHub issues interactions saw slow requests or timeouts. \u003cbr /\u003e- 4% of GitHub Copilot requests experienced errors, though most automatically retry. \u003cbr /\u003e- 4% of git push operations saw impacts during the affected window. \u003cbr /\u003e- Authentication requests saw increased latency during the affected window, but error rates, while elevated, were \u003c 1% in all cases.  \u003cbr /\u003e\u003cbr /\u003eWe were able to mitigate the outage by re-routing affected connections to available fiber paths that were allocated for future capacity upgrades. Sufficient network capacity to eliminate packet loss was restored at 17:07, with most services showing full recovery by 17:16. All paths were restored and services healthy at 17:36. \u003cbr /\u003e\u003cbr /\u003eThis incident affected 25% of available network interconnect capacity. Older cages utilize a 100Gbps network interface standard. To remove risk of reoccurrence, a planned upgrade to 400Gbps interfaces is being accelerated as much as possible, ensuring increased bandwidth available at all layers of the switch fabric for resiliency to path or device loss.",
+        "created_at": "2026-07-24T17:36:50.993Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T19:01:45.543Z"
+        },
+        {
+          "created_at": "2017-01-31T20:01:46.638Z",
+          "description": "Requests for Issues on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "kr09ddfgbfsf",
+          "name": "Issues",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T20:22:28.767Z"
+        },
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.066Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.098Z"
+        },
+        {
+          "created_at": "2022-06-21T16:04:33.017Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "pjmpxvq2cmr2",
+          "name": "Copilot",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 10,
+          "showcase": true,
+          "start_date": "2022-06-21",
+          "status": "operational",
+          "updated_at": "2026-08-17T21:15:46.595Z"
+        }
+      ],
+      "created_at": "2026-07-24T16:17:31.499Z",
+      "id": "yjysg0xrl67m",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 24th at 16:04 UTC, a loss of connectivity occurred in network paths in one of our three physical data center availability zones (AZs). This resulted in packet loss due to the remaining active paths becoming saturated. Our data centers use a leaf-spine switch fabric in each compute cage, and an aggregation layer interconnecting the spines from each cage within each AZ. The loss of connectivity affected links between one cage’s spine switches and the aggregation layer within that specific AZ. \u003cbr /\u003e\u003cbr /\u003eWorkloads depending on compute resources in this cage became degraded due to packet loss, and exhibited intermittent errors: \u003cbr /\u003e\u003cbr /\u003e- Actions saw 10% of jobs fail during the impact window, and 5% of jobs succeeded but with delayed starts. \u003cbr /\u003e- 27% of GitHub issues interactions saw slow requests or timeouts. \u003cbr /\u003e- 4% of GitHub Copilot requests experienced errors, though most automatically retry. \u003cbr /\u003e- 4% of git push operations saw impacts during the affected window. \u003cbr /\u003e- Authentication requests saw increased latency during the affected window, but error rates, while elevated, were \u003c 1% in all cases.  \u003cbr /\u003e\u003cbr /\u003eWe were able to mitigate the outage by re-routing affected connections to available fiber paths that were allocated for future capacity upgrades. Sufficient network capacity to eliminate packet loss was restored at 17:07, with most services showing full recovery by 17:16. All paths were restored and services healthy at 17:36. \u003cbr /\u003e\u003cbr /\u003eThis incident affected 25% of available network interconnect capacity. Older cages utilize a 100Gbps network interface standard. To remove risk of reoccurrence, a planned upgrade to 400Gbps interfaces is being accelerated as much as possible, ensuring increased bandwidth available at all layers of the switch fabric for resiliency to path or device loss.",
+          "created_at": "2026-07-24T17:36:50.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T17:36:50.993Z",
+          "id": "1d87ylhsd6wd",
+          "incident_id": "yjysg0xrl67m",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T02:36:25.135Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are seeing recovery across all services",
+          "created_at": "2026-07-24T17:24:27.324Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T17:24:27.324Z",
+          "id": "p48gb0cqfhld",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T17:24:27.324Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting API Requests, Actions, Copilot, Issues, Pages and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-24T17:16:44.181Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T17:16:44.181Z",
+          "id": "vwg4mw6tzsp6",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T17:16:44.181Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:41:59.232Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:41:59.232Z",
+          "id": "0rp3bgc6fvbl",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:41:59.232Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have applied a mitigation and are monitoring for recovery",
+          "created_at": "2026-07-24T16:40:27.946Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:40:27.946Z",
+          "id": "xhvwpnn2kn4q",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:40:27.946Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:28:37.283Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:28:37.283Z",
+          "id": "m44s2b9rbgsl",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:28:37.283Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:27:51.934Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:27:51.934Z",
+          "id": "nzw67ssqpl52",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:27:51.934Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Copilot is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:26:47.181Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:26:47.181Z",
+          "id": "pql6vmkx1s4g",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:26:47.181Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating timeouts to some GitHub services",
+          "created_at": "2026-07-24T16:22:37.945Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:22:37.945Z",
+          "id": "p0nvls36ccdc",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:22:37.945Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:20:10.002Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:20:10.002Z",
+          "id": "hscgqnl2q5jl",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:20:10.002Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-24T16:19:39.348Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:19:39.348Z",
+          "id": "q82xjpf22hzj",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:19:39.348Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for API Requests and Issues",
+          "created_at": "2026-07-24T16:17:31.584Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T16:17:31.584Z",
+          "id": "g34kbbs9k26c",
+          "incident_id": "yjysg0xrl67m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T16:17:31.584Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Disruption with some GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-24T17:36:50.993Z",
+      "shortlink": "https://stspg.io/j5c80shxqm53",
+      "started_at": "2026-07-24T16:17:31.492Z",
+      "status": "resolved",
+      "updated_at": "2026-07-29T02:36:25.139Z"
+    }
+  },
+  {
+    "key": "github/jxd617hfwfq8",
+    "vendor": "github",
+    "native_id": "jxd617hfwfq8",
+    "title": "Incident with Pull Requests",
+    "url": "https://stspg.io/sm1tp7kfm4vj",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-24T19:37:28.071Z",
+    "resolved_at": "2026-07-24T20:23:10.319Z",
+    "duration_minutes": 45,
+    "components": [
+      "Pull Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "x8wzbkbbfblq",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pull Requests",
+        "created_at": "2026-07-24T19:37:28.159Z"
+      },
+      {
+        "native_id": "d2g87ttcmj6n",
+        "status": "investigating",
+        "body": "We are investigating errors creating pull requests",
+        "created_at": "2026-07-24T19:40:45.691Z"
+      },
+      {
+        "native_id": "2zmhwpgd2kyc",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-24T19:43:40.031Z"
+      },
+      {
+        "native_id": "sjf31xcqv9zn",
+        "status": "investigating",
+        "body": "We have applied a mitigation and are monitoring for recovery",
+        "created_at": "2026-07-24T19:59:57.275Z"
+      },
+      {
+        "native_id": "2g4t08c40dbr",
+        "status": "monitoring",
+        "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-24T20:02:39.236Z"
+      },
+      {
+        "native_id": "h51gbgc5m5zz",
+        "status": "resolved",
+        "body": "Between July 24, 19:17 UTC and July 24, 20:02 UTC, users were unable to create pull requests due to a database schema change. In total, 113,930 pull request creation attempts were impacted across 50,904 users, with an average error rate of 1.75% and a maximum error rate of 2.25% for all requests to Pull Requests service. Existing pull requests and other GitHub functionality were not affected. The issue was resolved by reverting the change to the affected database, upon which pull request creation immediately resumed.\u003cbr /\u003e\u003cbr /\u003eThe root cause was related to a backfill workflow into the Vitess keyspace hosting Pull Request data. The backfill Vitess command encountered errors and increased VReplication lag, and the workflow was canceled at 19:17 UTC. The cancellation executed a misunderstood Vitess codepath that dropped the backing table to the target keyspace, leaving a non-existent reference that resulted in errors creating Pull Requests. The mitigation was executing a command to drop the vschema reference to the dropped table, allowing Pull Request creation to resume.\u003cbr /\u003e\u003cbr /\u003eWe are adding stronger pre-flight validation to our tooling to prevent similar issues and expanding lower-environment support to provide better test coverage end-to-end before promoting them to production. We're also fixing our backfill migration tooling to protect from this specific codepath.",
+        "created_at": "2026-07-24T20:23:10.319Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.066Z"
+        }
+      ],
+      "created_at": "2026-07-24T19:37:28.079Z",
+      "id": "jxd617hfwfq8",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between July 24, 19:17 UTC and July 24, 20:02 UTC, users were unable to create pull requests due to a database schema change. In total, 113,930 pull request creation attempts were impacted across 50,904 users, with an average error rate of 1.75% and a maximum error rate of 2.25% for all requests to Pull Requests service. Existing pull requests and other GitHub functionality were not affected. The issue was resolved by reverting the change to the affected database, upon which pull request creation immediately resumed.\u003cbr /\u003e\u003cbr /\u003eThe root cause was related to a backfill workflow into the Vitess keyspace hosting Pull Request data. The backfill Vitess command encountered errors and increased VReplication lag, and the workflow was canceled at 19:17 UTC. The cancellation executed a misunderstood Vitess codepath that dropped the backing table to the target keyspace, leaving a non-existent reference that resulted in errors creating Pull Requests. The mitigation was executing a command to drop the vschema reference to the dropped table, allowing Pull Request creation to resume.\u003cbr /\u003e\u003cbr /\u003eWe are adding stronger pre-flight validation to our tooling to prevent similar issues and expanding lower-environment support to provide better test coverage end-to-end before promoting them to production. We're also fixing our backfill migration tooling to protect from this specific codepath.",
+          "created_at": "2026-07-24T20:23:10.319Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T20:23:10.319Z",
+          "id": "h51gbgc5m5zz",
+          "incident_id": "jxd617hfwfq8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T19:49:41.096Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-24T20:02:39.236Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T20:02:39.236Z",
+          "id": "2g4t08c40dbr",
+          "incident_id": "jxd617hfwfq8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T20:02:39.236Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have applied a mitigation and are monitoring for recovery",
+          "created_at": "2026-07-24T19:59:57.275Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T19:59:57.275Z",
+          "id": "sjf31xcqv9zn",
+          "incident_id": "jxd617hfwfq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T19:59:57.275Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-24T19:43:40.031Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T19:43:40.031Z",
+          "id": "2zmhwpgd2kyc",
+          "incident_id": "jxd617hfwfq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T19:43:40.031Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating errors creating pull requests",
+          "created_at": "2026-07-24T19:40:45.691Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T19:40:45.691Z",
+          "id": "d2g87ttcmj6n",
+          "incident_id": "jxd617hfwfq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T19:40:45.691Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pull Requests",
+          "created_at": "2026-07-24T19:37:28.159Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T19:37:28.159Z",
+          "id": "x8wzbkbbfblq",
+          "incident_id": "jxd617hfwfq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T19:37:28.159Z"
+        }
+      ],
+      "monitoring_at": "2026-07-24T20:02:39.236Z",
+      "name": "Incident with Pull Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-24T20:23:10.319Z",
+      "shortlink": "https://stspg.io/sm1tp7kfm4vj",
+      "started_at": "2026-07-24T19:37:28.071Z",
+      "status": "resolved",
+      "updated_at": "2026-07-29T19:49:41.102Z"
+    }
+  },
+  {
+    "key": "github/s65j9gslmfm8",
+    "vendor": "github",
+    "native_id": "s65j9gslmfm8",
+    "title": "Incident with Actions",
+    "url": "https://stspg.io/vkt1mn9sny66",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-25T08:59:37.051Z",
+    "resolved_at": "2026-07-25T09:25:30.607Z",
+    "duration_minutes": 25,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "49lclt77r370",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-07-25T08:59:37.122Z"
+      },
+      {
+        "native_id": "9znv9xkz10yl",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-25T09:13:09.336Z"
+      },
+      {
+        "native_id": "8wt9b1sh5pkl",
+        "status": "monitoring",
+        "body": "We identified an issue causing delays in GitHub Actions run starts. Some users may have experienced longer than expected wait times when triggering workflow runs. We have applied mitigations and have recovered. Our team continues to monitor and investigate the root cause.",
+        "created_at": "2026-07-25T09:20:23.795Z"
+      },
+      {
+        "native_id": "cyyg0bvntj9b",
+        "status": "resolved",
+        "body": "On July 25, 2026, GitHub Actions experienced two related periods of degradation that caused some workflow runs to be delayed by more than 5 minutes or end with infrastructure failures. \u003cbr /\u003e\u003cbr /\u003eFirst period (08:45 – 09:13 UTC): During planned maintenance on a critical-path Redis cluster for Actions, one participating region was left in a degraded state. Separately, an independent capacity operation temporarily removed another region from the cluster and redirected its traffic to the degraded region. This created cross-region inconsistencies in job-assignment state, causing workflow runs to be delayed, exhaust retries, or fail outright. At peak, about 7% of runs were delayed by more than 5 minutes, and 25% of runs failed with an infrastructure error during the course of the incident. We mitigated the incident at 09:13 UTC by returning traffic to its normal distribution. \u003cbr /\u003e\u003cbr /\u003eSecond period (12:08 – 12:48 UTC): As part of mitigating the first incident, traffic was returned to the regional instance that was still undergoing its capacity increase. Multiple Redis nodes in the scaling region experienced failures, increasing traffic to healthy nodes and causing connection limits to be reached on many nodes. At peak, 30% of runs were delayed by more than 5 minutes, and 60% of runs failed with an infrastructure error during the course of the incident. We mitigated the incident at 12:48 UTC by redirecting workflow traffic away from the scaling region. \u003cbr /\u003e\u003cbr /\u003eWe are adding stronger regional health and capacity checks before maintenance and requiring a stable observation period before restoring traffic. We are also improving automated connection resiliency, and partnering with our platform dependency to automatically detect and remediate unhealthy cluster members and shard imbalance.  More generally, we already had work underway to improve the resiliency and scale of this piece of Actions infrastructure.",
+        "created_at": "2026-07-25T09:25:30.607Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        }
+      ],
+      "created_at": "2026-07-25T08:59:37.057Z",
+      "id": "s65j9gslmfm8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 25, 2026, GitHub Actions experienced two related periods of degradation that caused some workflow runs to be delayed by more than 5 minutes or end with infrastructure failures. \u003cbr /\u003e\u003cbr /\u003eFirst period (08:45 – 09:13 UTC): During planned maintenance on a critical-path Redis cluster for Actions, one participating region was left in a degraded state. Separately, an independent capacity operation temporarily removed another region from the cluster and redirected its traffic to the degraded region. This created cross-region inconsistencies in job-assignment state, causing workflow runs to be delayed, exhaust retries, or fail outright. At peak, about 7% of runs were delayed by more than 5 minutes, and 25% of runs failed with an infrastructure error during the course of the incident. We mitigated the incident at 09:13 UTC by returning traffic to its normal distribution. \u003cbr /\u003e\u003cbr /\u003eSecond period (12:08 – 12:48 UTC): As part of mitigating the first incident, traffic was returned to the regional instance that was still undergoing its capacity increase. Multiple Redis nodes in the scaling region experienced failures, increasing traffic to healthy nodes and causing connection limits to be reached on many nodes. At peak, 30% of runs were delayed by more than 5 minutes, and 60% of runs failed with an infrastructure error during the course of the incident. We mitigated the incident at 12:48 UTC by redirecting workflow traffic away from the scaling region. \u003cbr /\u003e\u003cbr /\u003eWe are adding stronger regional health and capacity checks before maintenance and requiring a stable observation period before restoring traffic. We are also improving automated connection resiliency, and partnering with our platform dependency to automatically detect and remediate unhealthy cluster members and shard imbalance.  More generally, we already had work underway to improve the resiliency and scale of this piece of Actions infrastructure.",
+          "created_at": "2026-07-25T09:25:30.607Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T09:25:30.607Z",
+          "id": "cyyg0bvntj9b",
+          "incident_id": "s65j9gslmfm8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T18:33:14.712Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We identified an issue causing delays in GitHub Actions run starts. Some users may have experienced longer than expected wait times when triggering workflow runs. We have applied mitigations and have recovered. Our team continues to monitor and investigate the root cause.",
+          "created_at": "2026-07-25T09:20:23.795Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T09:20:23.795Z",
+          "id": "8wt9b1sh5pkl",
+          "incident_id": "s65j9gslmfm8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T09:21:19.336Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-25T09:13:09.336Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T09:13:09.336Z",
+          "id": "9znv9xkz10yl",
+          "incident_id": "s65j9gslmfm8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T09:13:09.336Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-07-25T08:59:37.122Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T08:59:37.122Z",
+          "id": "49lclt77r370",
+          "incident_id": "s65j9gslmfm8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T08:59:37.122Z"
+        }
+      ],
+      "monitoring_at": "2026-07-25T09:13:09.336Z",
+      "name": "Incident with Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-25T09:25:30.607Z",
+      "shortlink": "https://stspg.io/vkt1mn9sny66",
+      "started_at": "2026-07-25T08:59:37.051Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T18:33:14.719Z"
+    }
+  },
+  {
+    "key": "github/vv9vvksmj4s9",
+    "vendor": "github",
+    "native_id": "vv9vvksmj4s9",
+    "title": "Several GPT models degraded",
+    "url": "https://stspg.io/vh0xxw69dr6v",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-25T09:42:28.883Z",
+    "resolved_at": "2026-07-25T10:11:16.738Z",
+    "duration_minutes": 28,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "8ql04hwt1g1w",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Copilot AI Model Providers",
+        "created_at": "2026-07-25T09:42:28.945Z"
+      },
+      {
+        "native_id": "2rz9vhwbkhff",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+        "created_at": "2026-07-25T09:48:30.969Z"
+      },
+      {
+        "native_id": "smklsn309xg8",
+        "status": "monitoring",
+        "body": "The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-25T10:04:39.601Z"
+      },
+      {
+        "native_id": "mdbnd8pr0vlq",
+        "status": "resolved",
+        "body": "On July 25, 2026, between 09:07 and 10:04 UTC, the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra and GPT-5.6 Luna models experienced degraded availability in GitHub Copilot products and IDE surfaces. Requests to these models had an average failure rate of 5.6%. Other Copilot models remained available as alternatives.\u003cbr /\u003e\u003cbr /\u003eThe degradation was caused by an issue with an upstream model provider. Success rates returned to normal after the upstream issue was mitigated, and we continued monitoring before resolving the incident. We are working on improving the automated failover for the affected models to prevent similar incidents in the future.",
+        "created_at": "2026-07-25T10:11:16.738Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-07-25T09:42:28.889Z",
+      "id": "vv9vvksmj4s9",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 25, 2026, between 09:07 and 10:04 UTC, the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra and GPT-5.6 Luna models experienced degraded availability in GitHub Copilot products and IDE surfaces. Requests to these models had an average failure rate of 5.6%. Other Copilot models remained available as alternatives.\u003cbr /\u003e\u003cbr /\u003eThe degradation was caused by an issue with an upstream model provider. Success rates returned to normal after the upstream issue was mitigated, and we continued monitoring before resolving the incident. We are working on improving the automated failover for the affected models to prevent similar incidents in the future.",
+          "created_at": "2026-07-25T10:11:16.738Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T10:11:16.738Z",
+          "id": "mdbnd8pr0vlq",
+          "incident_id": "vv9vvksmj4s9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T16:04:22.686Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-25T10:04:39.601Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T10:04:39.601Z",
+          "id": "smklsn309xg8",
+          "incident_id": "vv9vvksmj4s9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T10:04:39.601Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are experiencing degraded availability for the GPT-5.2, GPT-5.3-Codex, GPT-5.4, GPT-5.4 Mini, GPT-5.6 Sol, GPT-5.6 Terra, and GPT-5.6 Luna models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+          "created_at": "2026-07-25T09:48:30.969Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T09:48:30.969Z",
+          "id": "2rz9vhwbkhff",
+          "incident_id": "vv9vvksmj4s9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T09:48:30.969Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Copilot AI Model Providers",
+          "created_at": "2026-07-25T09:42:28.945Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T09:42:28.945Z",
+          "id": "8ql04hwt1g1w",
+          "incident_id": "vv9vvksmj4s9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T09:42:28.945Z"
+        }
+      ],
+      "monitoring_at": "2026-07-25T10:04:39.601Z",
+      "name": "Several GPT models degraded",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-25T10:11:16.738Z",
+      "shortlink": "https://stspg.io/vh0xxw69dr6v",
+      "started_at": "2026-07-25T09:42:28.883Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T16:04:22.692Z"
+    }
+  },
+  {
+    "key": "github/pz7g535gbs6p",
+    "vendor": "github",
+    "native_id": "pz7g535gbs6p",
+    "title": "Actions run failures and delays",
+    "url": "https://stspg.io/448g37mrq066",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-25T12:31:50.953Z",
+    "resolved_at": "2026-07-25T13:13:21.503Z",
+    "duration_minutes": 41,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "fx4blmxlhh4y",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions",
+        "created_at": "2026-07-25T12:31:51.013Z"
+      },
+      {
+        "native_id": "yblvsfvtyyrv",
+        "status": "investigating",
+        "body": "We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality.",
+        "created_at": "2026-07-25T12:34:26.839Z"
+      },
+      {
+        "native_id": "2s8j64rtkx4d",
+        "status": "investigating",
+        "body": "We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure.",
+        "created_at": "2026-07-25T12:58:32.832Z"
+      },
+      {
+        "native_id": "y86xqymm4d7m",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-25T12:59:58.367Z"
+      },
+      {
+        "native_id": "c4tfkcrpwjbg",
+        "status": "monitoring",
+        "body": "We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried.",
+        "created_at": "2026-07-25T13:12:41.317Z"
+      },
+      {
+        "native_id": "40fbrl0y9zcy",
+        "status": "resolved",
+        "body": "Please refer to the combined summary in this related incident: https://www.githubstatus.com/incidents/s65j9gslmfm8",
+        "created_at": "2026-07-25T13:13:21.503Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        }
+      ],
+      "created_at": "2026-07-25T12:31:50.959Z",
+      "id": "pz7g535gbs6p",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Please refer to the combined summary in this related incident: https://www.githubstatus.com/incidents/s65j9gslmfm8",
+          "created_at": "2026-07-25T13:13:21.503Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T13:13:21.503Z",
+          "id": "40fbrl0y9zcy",
+          "incident_id": "pz7g535gbs6p",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T18:41:47.893Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried.",
+          "created_at": "2026-07-25T13:12:41.317Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T13:12:41.317Z",
+          "id": "c4tfkcrpwjbg",
+          "incident_id": "pz7g535gbs6p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T13:12:41.317Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-25T12:59:58.367Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:59:58.367Z",
+          "id": "y86xqymm4d7m",
+          "incident_id": "pz7g535gbs6p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:59:58.367Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure.",
+          "created_at": "2026-07-25T12:58:32.832Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:58:32.832Z",
+          "id": "2s8j64rtkx4d",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:58:32.832Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality.",
+          "created_at": "2026-07-25T12:34:26.839Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:34:26.839Z",
+          "id": "yblvsfvtyyrv",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:34:26.839Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions",
+          "created_at": "2026-07-25T12:31:51.013Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:31:51.013Z",
+          "id": "fx4blmxlhh4y",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:31:51.013Z"
+        }
+      ],
+      "monitoring_at": "2026-07-25T12:59:58.367Z",
+      "name": "Actions run failures and delays",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-25T13:13:21.503Z",
+      "shortlink": "https://stspg.io/448g37mrq066",
+      "started_at": "2026-07-25T12:31:50.953Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T18:41:47.898Z"
+    }
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "key": "datadog/tw86ncfv8q78",
+    "vendor": "datadog",
+    "native_id": "tw86ncfv8q78",
+    "title": "Delayed Metrics for APM and distribution metrics",
+    "url": "https://stspg.io/f3zkd8tmhdxm",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2025-11-05T15:42:35Z",
+    "resolved_at": "2025-11-05T17:57:12.658Z",
+    "duration_minutes": 134,
+    "components": [
+      "APM",
+      "Metrics and Infra Monitoring",
+      "Monitors"
+    ],
+    "updates": [
+      {
+        "native_id": "vgnx4btt8nml",
+        "status": "identified",
+        "body": "We are investigating increased latency processing Metrics from APM and distribution metrics.\nAs a result of this issue, some users may see delays or gaps for metrics on graphs.\nTo prevent spurious alerts, we have temporarily disabled monitors based on this data.",
+        "created_at": "2025-11-05T15:42:35.645Z"
+      },
+      {
+        "native_id": "bbtmt8nybbg4",
+        "status": "identified",
+        "body": "We have identified the root cause, and scaled up the processing to catch up with the lag.",
+        "created_at": "2025-11-05T16:25:02.442Z"
+      },
+      {
+        "native_id": "zs6z3vgmpr34",
+        "status": "identified",
+        "body": "The distribution metrics should be back to processing live, without latency. APM metrics are still being delayed, and we're actively working at getting it back to live.",
+        "created_at": "2025-11-05T16:59:15.908Z"
+      },
+      {
+        "native_id": "whmvdvg6gnwn",
+        "status": "resolved",
+        "body": "APM metrics are now processing live.",
+        "created_at": "2025-11-05T17:57:12.658Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-23T08:40:20.513-04:00",
+          "description": "Application Performance Monitoring (services and traces)",
+          "group": false,
+          "group_id": null,
+          "id": "p4hwj4wsc5wf",
+          "name": "APM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.448-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:10:23.098-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s6jxgrkjjj6p",
+          "name": "Monitors",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-06T15:37:32.847-04:00"
+        }
+      ],
+      "created_at": "2025-11-05T10:42:35.000-05:00",
+      "id": "tw86ncfv8q78",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "APM metrics are now processing live.",
+          "created_at": "2025-11-05T12:57:12.658-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-11-05T12:57:12.658-05:00",
+          "id": "whmvdvg6gnwn",
+          "incident_id": "tw86ncfv8q78",
+          "status": "resolved",
+          "tweet_id": 1986130695757135956,
+          "updated_at": "2025-11-05T12:57:13.197-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The distribution metrics should be back to processing live, without latency. APM metrics are still being delayed, and we're actively working at getting it back to live.",
+          "created_at": "2025-11-05T11:59:15.908-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-11-05T11:59:15.908-05:00",
+          "id": "zs6z3vgmpr34",
+          "incident_id": "tw86ncfv8q78",
+          "status": "identified",
+          "tweet_id": 1986116112300548547,
+          "updated_at": "2025-11-05T11:59:16.234-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the root cause, and scaled up the processing to catch up with the lag.",
+          "created_at": "2025-11-05T11:25:02.442-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-11-05T11:25:02.442-05:00",
+          "id": "bbtmt8nybbg4",
+          "incident_id": "tw86ncfv8q78",
+          "status": "identified",
+          "tweet_id": 1986107499347603579,
+          "updated_at": "2025-11-05T11:25:02.726-05:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing Metrics from APM and distribution metrics.\nAs a result of this issue, some users may see delays or gaps for metrics on graphs.\nTo prevent spurious alerts, we have temporarily disabled monitors based on this data.",
+          "created_at": "2025-11-05T10:42:35.645-05:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-11-05T10:42:35.000-05:00",
+          "id": "vgnx4btt8nml",
+          "incident_id": "tw86ncfv8q78",
+          "status": "identified",
+          "tweet_id": 1986096818128851022,
+          "updated_at": "2025-11-05T10:57:31.411-05:00"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delayed Metrics for APM and distribution metrics",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2025-11-05T12:57:12.658-05:00",
+      "shortlink": "https://stspg.io/f3zkd8tmhdxm",
+      "started_at": "2025-11-05T10:42:35.000-05:00",
+      "status": "resolved",
+      "updated_at": "2025-11-05T12:57:13.202-05:00"
+    }
+  }
+]

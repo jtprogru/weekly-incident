@@ -1,0 +1,836 @@
+[
+  {
+    "key": "github/fz9sdc2q008p",
+    "vendor": "github",
+    "native_id": "fz9sdc2q008p",
+    "title": "Actions and Codespaces APIs experiencing partial failures",
+    "url": "https://stspg.io/rmlwm65yzzjj",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-07T14:14:39.949Z",
+    "resolved_at": "2026-07-07T16:17:16.965Z",
+    "duration_minutes": 122,
+    "components": [
+      "Actions",
+      "Codespaces"
+    ],
+    "updates": [
+      {
+        "native_id": "4sghqwym8zs3",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions and Codespaces",
+        "created_at": "2026-07-07T14:14:40.1Z"
+      },
+      {
+        "native_id": "rc4d4nt7cvbl",
+        "status": "investigating",
+        "body": "Customers accessing the Actions and Codespaces REST APIs may see 500 class errors a small percentage of the time.\u003cbr /\u003e\u003cbr /\u003eActions runs in progress are continuing successfully.",
+        "created_at": "2026-07-07T14:14:52.44Z"
+      },
+      {
+        "native_id": "dv7kcxzmqy77",
+        "status": "investigating",
+        "body": "Codespaces is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-07T14:32:57.428Z"
+      },
+      {
+        "native_id": "ztcg4f3nxjfy",
+        "status": "investigating",
+        "body": "Customers accessing the Actions and Codespaces REST APIs may see 500 class errors a percentage of the time.  Retries may be successful.\u003cbr /\u003e\u003cbr /\u003eActions runs and codespaces  in progress are continuing successfully.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to investigate the source of these errors.",
+        "created_at": "2026-07-07T14:47:06.64Z"
+      },
+      {
+        "native_id": "88zp9dqv51ys",
+        "status": "investigating",
+        "body": "Customers accessing Actions runners and Codespaces REST APIs continue to see 500 errors a percentage of the time. Retries may be successful.\u003cbr /\u003e\u003cbr /\u003eWe continue to investigate the source of these errors.",
+        "created_at": "2026-07-07T15:06:56.331Z"
+      },
+      {
+        "native_id": "r07csmxqjsbp",
+        "status": "investigating",
+        "body": "Customers will continue to see 500 errors for approximately 8% of Actions runner REST APIs and 13% of Codespaces REST APIs. Retries may be successful. We have identified a likely cause and are preparing a mitigation.",
+        "created_at": "2026-07-07T15:50:02.072Z"
+      },
+      {
+        "native_id": "fth01ytlmj6j",
+        "status": "investigating",
+        "body": "We have rolled out the mitigation and are seeing recovery.",
+        "created_at": "2026-07-07T16:00:01.142Z"
+      },
+      {
+        "native_id": "m4pmbp03cq7x",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions and Codespaces has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-07T16:02:02.561Z"
+      },
+      {
+        "native_id": "04snmsszt9t6",
+        "status": "resolved",
+        "body": "On July 7, 2026, between 14:01 UTC and 16:17 UTC the Actions and Codespaces REST APIs were degraded and returned intermittent 500-class errors for a percentage of requests. Error rates peaked at approximately 8% of Actions runner API requests and 13% of Codespaces API requests, though retries were frequently successful. In-progress Actions runs and Codespaces were not impacted and continued successfully. This was due to a recent change that did not deliver the expected performance and, under certain conditions, caused downstream errors.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by rolling back the change, after which the affected services recovered.\u003cbr /\u003e\u003cbr /\u003eWe are working to improve the resilience of our services to these conditions and to strengthen our monitoring to reduce our time to detection and mitigation of issues like this one in the future.",
+        "created_at": "2026-07-07T16:17:16.965Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        },
+        {
+          "created_at": "2021-08-11T16:02:09.505Z",
+          "description": "Orchestration and Compute for GitHub Codespaces",
+          "group": false,
+          "group_id": null,
+          "id": "h2ftsgbw7kmk",
+          "name": "Codespaces",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 11,
+          "showcase": true,
+          "start_date": "2021-08-11",
+          "status": "operational",
+          "updated_at": "2026-07-14T09:51:08.862Z"
+        }
+      ],
+      "created_at": "2026-07-07T14:14:39.966Z",
+      "id": "fz9sdc2q008p",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 7, 2026, between 14:01 UTC and 16:17 UTC the Actions and Codespaces REST APIs were degraded and returned intermittent 500-class errors for a percentage of requests. Error rates peaked at approximately 8% of Actions runner API requests and 13% of Codespaces API requests, though retries were frequently successful. In-progress Actions runs and Codespaces were not impacted and continued successfully. This was due to a recent change that did not deliver the expected performance and, under certain conditions, caused downstream errors.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by rolling back the change, after which the affected services recovered.\u003cbr /\u003e\u003cbr /\u003eWe are working to improve the resilience of our services to these conditions and to strengthen our monitoring to reduce our time to detection and mitigation of issues like this one in the future.",
+          "created_at": "2026-07-07T16:17:16.965Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T16:17:16.965Z",
+          "id": "04snmsszt9t6",
+          "incident_id": "fz9sdc2q008p",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T23:39:45.480Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions and Codespaces has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-07T16:02:02.561Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T16:02:02.561Z",
+          "id": "m4pmbp03cq7x",
+          "incident_id": "fz9sdc2q008p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T16:02:02.561Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have rolled out the mitigation and are seeing recovery.",
+          "created_at": "2026-07-07T16:00:01.142Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T16:00:01.142Z",
+          "id": "fth01ytlmj6j",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T16:00:01.142Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Customers will continue to see 500 errors for approximately 8% of Actions runner REST APIs and 13% of Codespaces REST APIs. Retries may be successful. We have identified a likely cause and are preparing a mitigation.",
+          "created_at": "2026-07-07T15:50:02.072Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T15:50:02.072Z",
+          "id": "r07csmxqjsbp",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T15:50:02.072Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Customers accessing Actions runners and Codespaces REST APIs continue to see 500 errors a percentage of the time. Retries may be successful.\u003cbr /\u003e\u003cbr /\u003eWe continue to investigate the source of these errors.",
+          "created_at": "2026-07-07T15:06:56.331Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T15:06:56.331Z",
+          "id": "88zp9dqv51ys",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T15:06:56.331Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Customers accessing the Actions and Codespaces REST APIs may see 500 class errors a percentage of the time.  Retries may be successful.\u003cbr /\u003e\u003cbr /\u003eActions runs and codespaces  in progress are continuing successfully.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to investigate the source of these errors.",
+          "created_at": "2026-07-07T14:47:06.640Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T14:47:06.640Z",
+          "id": "ztcg4f3nxjfy",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T14:47:06.640Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Codespaces is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-07T14:32:57.428Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T14:32:57.428Z",
+          "id": "dv7kcxzmqy77",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T14:32:57.428Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers accessing the Actions and Codespaces REST APIs may see 500 class errors a small percentage of the time.\u003cbr /\u003e\u003cbr /\u003eActions runs in progress are continuing successfully.",
+          "created_at": "2026-07-07T14:14:52.440Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T14:14:52.440Z",
+          "id": "rc4d4nt7cvbl",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T14:14:52.440Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions and Codespaces",
+          "created_at": "2026-07-07T14:14:40.100Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-07T14:14:40.100Z",
+          "id": "4sghqwym8zs3",
+          "incident_id": "fz9sdc2q008p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T14:14:40.100Z"
+        }
+      ],
+      "monitoring_at": "2026-07-07T16:02:02.561Z",
+      "name": "Actions and Codespaces APIs experiencing partial failures",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-07T16:17:16.965Z",
+      "shortlink": "https://stspg.io/rmlwm65yzzjj",
+      "started_at": "2026-07-07T14:14:39.949Z",
+      "status": "resolved",
+      "updated_at": "2026-07-10T23:39:45.487Z"
+    }
+  },
+  {
+    "key": "github/cstx3v63mklm",
+    "vendor": "github",
+    "native_id": "cstx3v63mklm",
+    "title": "Delays starting Actions runs",
+    "url": "https://stspg.io/r6sj21r75r24",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-09T04:34:24.849Z",
+    "resolved_at": "2026-07-09T13:52:16.87Z",
+    "duration_minutes": 557,
+    "components": [
+      "Actions",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "9sbs9yrvj3z2",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-07-09T04:34:25.065Z"
+      },
+      {
+        "native_id": "y5b7mcgjq5br",
+        "status": "investigating",
+        "body": "Approximately 5% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A small portion of these runs may fail after extended delays. We have identified the cause and are working on a mitigation.",
+        "created_at": "2026-07-09T04:51:43.031Z"
+      },
+      {
+        "native_id": "0j3fdw37sj7t",
+        "status": "investigating",
+        "body": "We are continuing to work on a mitigation.",
+        "created_at": "2026-07-09T06:01:43.388Z"
+      },
+      {
+        "native_id": "gchj9bz37m1w",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-09T10:07:04.149Z"
+      },
+      {
+        "native_id": "p2ltd6rlhhhw",
+        "status": "investigating",
+        "body": "Approximately 30% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A smaller percentage of those are exhausting retries and failing to start.",
+        "created_at": "2026-07-09T10:15:25.672Z"
+      },
+      {
+        "native_id": "5nt4w3pxwn1n",
+        "status": "investigating",
+        "body": "Approximately 30% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A smaller percentage of those are exhausting retries and failing to start.\u003cbr /\u003eThis has caused some customers to exceed their hosted compute concurrency and experience increased impact.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to working on infrastructure mitigations. \u003cbr /\u003e\u003cbr /\u003eNext update in one hour.",
+        "created_at": "2026-07-09T12:01:59.888Z"
+      },
+      {
+        "native_id": "r12q3lrvhk88",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-09T12:36:33.719Z"
+      },
+      {
+        "native_id": "rw4mg66kfq89",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-09T12:46:13.778Z"
+      },
+      {
+        "native_id": "yygkh16bml60",
+        "status": "investigating",
+        "body": "We're seeing Actions and Pages recovery. \u003cbr /\u003e\u003cbr /\u003eFor a period of approximate 20 minutes ~96% of GitHub Actions runs on GitHub-hosted runners were failing to start, but has now recovered and we are seeing jobs processing.\u003cbr /\u003e\u003cbr /\u003eGitHub pages builds were also failing during that period, but Pages are still accessible.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor for full recovery.",
+        "created_at": "2026-07-09T12:54:24.3Z"
+      },
+      {
+        "native_id": "lv61tckvv483",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-07-09T13:16:36.183Z"
+      },
+      {
+        "native_id": "yld1ryj06lcc",
+        "status": "investigating",
+        "body": "We are continuing to monitor slow recovery in Actions and Pages builds as the system works through the high volume of backlog.\u003cbr /\u003e\u003cbr /\u003eCustomers may see a small rate of  API and job failures as the system is recovering.\u003cbr /\u003e\u003cbr /\u003eCopilot Cloud Agent and Copilot Code Review also failed to start for approximately 30 minutes during this incident, and we are monitoring recovery.\u003cbr /\u003e\u003cbr /\u003ePages were accessible throughout the incident.",
+        "created_at": "2026-07-09T13:17:04.011Z"
+      },
+      {
+        "native_id": "14klnzzrvhd2",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-09T13:39:48.103Z"
+      },
+      {
+        "native_id": "02thzr98lzxq",
+        "status": "monitoring",
+        "body": "Actions, Pages builds, Copilot Cloud Agent, and Copilot Code review have all recovered and are mitigated.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor to ensure full recovery, and investigating the health of the affected infrastructure.",
+        "created_at": "2026-07-09T13:41:26.179Z"
+      },
+      {
+        "native_id": "3f436ls8br7w",
+        "status": "resolved",
+        "body": "On July 9, 2026, between 03:29 UTC and 13:39 UTC, GitHub Actions experienced delayed and failed job starts on GitHub-hosted runners. The incident was caused by an unhealthy state in a backend data service responsible for provisioning hosted runners, preventing runner acquisition for a subset of workloads. During most of the incident, approximately 8% of workflow runs on hosted runners were delayed by more than 5 minutes, while roughly 2% failed to start.\u003cbr /\u003e\u003cbr /\u003eAt 13:39 UTC, we restored the health of the backend data replication system, allowing provisioning to recover and the accumulated workflow backlog to drain. Service performance then returned to expected levels. We are improving provisioning-service resiliency, workload distribution, and capacity balancing to reduce the likelihood and impact of similar incidents.",
+        "created_at": "2026-07-09T13:52:16.87Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.098Z"
+        }
+      ],
+      "created_at": "2026-07-09T04:34:24.871Z",
+      "id": "cstx3v63mklm",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 9, 2026, between 03:29 UTC and 13:39 UTC, GitHub Actions experienced delayed and failed job starts on GitHub-hosted runners. The incident was caused by an unhealthy state in a backend data service responsible for provisioning hosted runners, preventing runner acquisition for a subset of workloads. During most of the incident, approximately 8% of workflow runs on hosted runners were delayed by more than 5 minutes, while roughly 2% failed to start.\u003cbr /\u003e\u003cbr /\u003eAt 13:39 UTC, we restored the health of the backend data replication system, allowing provisioning to recover and the accumulated workflow backlog to drain. Service performance then returned to expected levels. We are improving provisioning-service resiliency, workload distribution, and capacity balancing to reduce the likelihood and impact of similar incidents.",
+          "created_at": "2026-07-09T13:52:16.870Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:52:16.870Z",
+          "id": "3f436ls8br7w",
+          "incident_id": "cstx3v63mklm",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-11T01:30:09.953Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Actions, Pages builds, Copilot Cloud Agent, and Copilot Code review have all recovered and are mitigated.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor to ensure full recovery, and investigating the health of the affected infrastructure.",
+          "created_at": "2026-07-09T13:41:26.179Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:41:26.179Z",
+          "id": "02thzr98lzxq",
+          "incident_id": "cstx3v63mklm",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T13:41:26.179Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-09T13:39:48.103Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:39:48.103Z",
+          "id": "14klnzzrvhd2",
+          "incident_id": "cstx3v63mklm",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T13:39:48.103Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to monitor slow recovery in Actions and Pages builds as the system works through the high volume of backlog.\u003cbr /\u003e\u003cbr /\u003eCustomers may see a small rate of  API and job failures as the system is recovering.\u003cbr /\u003e\u003cbr /\u003eCopilot Cloud Agent and Copilot Code Review also failed to start for approximately 30 minutes during this incident, and we are monitoring recovery.\u003cbr /\u003e\u003cbr /\u003ePages were accessible throughout the incident.",
+          "created_at": "2026-07-09T13:17:04.011Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:17:04.011Z",
+          "id": "yld1ryj06lcc",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T13:17:04.011Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-09T13:16:36.183Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:16:36.183Z",
+          "id": "lv61tckvv483",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T13:16:36.183Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We're seeing Actions and Pages recovery. \u003cbr /\u003e\u003cbr /\u003eFor a period of approximate 20 minutes ~96% of GitHub Actions runs on GitHub-hosted runners were failing to start, but has now recovered and we are seeing jobs processing.\u003cbr /\u003e\u003cbr /\u003eGitHub pages builds were also failing during that period, but Pages are still accessible.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to monitor for full recovery.",
+          "created_at": "2026-07-09T12:54:24.300Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T12:54:24.300Z",
+          "id": "yygkh16bml60",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T12:54:24.300Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-09T12:46:13.778Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T12:46:13.778Z",
+          "id": "rw4mg66kfq89",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T12:46:13.778Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-09T12:36:33.719Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T12:36:33.719Z",
+          "id": "r12q3lrvhk88",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T12:36:33.719Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Approximately 30% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A smaller percentage of those are exhausting retries and failing to start.\u003cbr /\u003eThis has caused some customers to exceed their hosted compute concurrency and experience increased impact.\u003cbr /\u003e\u003cbr /\u003eWe are continuing to working on infrastructure mitigations. \u003cbr /\u003e\u003cbr /\u003eNext update in one hour.",
+          "created_at": "2026-07-09T12:01:59.888Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T12:01:59.888Z",
+          "id": "5nt4w3pxwn1n",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T12:01:59.888Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Approximately 30% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A smaller percentage of those are exhausting retries and failing to start.",
+          "created_at": "2026-07-09T10:15:25.672Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T10:15:25.672Z",
+          "id": "p2ltd6rlhhhw",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T10:15:34.982Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-07-09T10:07:04.149Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T10:07:04.149Z",
+          "id": "gchj9bz37m1w",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T10:07:04.149Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a mitigation.",
+          "created_at": "2026-07-09T06:01:43.388Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T06:01:43.388Z",
+          "id": "0j3fdw37sj7t",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T06:01:43.388Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Approximately 5% of GitHub Actions runs on GitHub-hosted runners are experiencing run start delays exceeding 5 minutes. A small portion of these runs may fail after extended delays. We have identified the cause and are working on a mitigation.",
+          "created_at": "2026-07-09T04:51:43.031Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T04:51:43.031Z",
+          "id": "y5b7mcgjq5br",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T04:51:43.031Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-07-09T04:34:25.065Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T04:34:25.065Z",
+          "id": "9sbs9yrvj3z2",
+          "incident_id": "cstx3v63mklm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T04:34:25.065Z"
+        }
+      ],
+      "monitoring_at": "2026-07-09T13:39:48.103Z",
+      "name": "Delays starting Actions runs",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-09T13:52:16.870Z",
+      "shortlink": "https://stspg.io/r6sj21r75r24",
+      "started_at": "2026-07-09T04:34:24.849Z",
+      "status": "resolved",
+      "updated_at": "2026-07-11T01:30:09.966Z"
+    }
+  }
+]

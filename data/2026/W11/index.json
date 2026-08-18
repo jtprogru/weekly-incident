@@ -1,0 +1,190 @@
+{
+  "week": "2026-W11",
+  "from": "2026-03-09T00:00:00Z",
+  "to": "2026-03-16T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "slack/1536",
+      "vendor": "slack",
+      "title": "Intermittent SSO login errors accessing Slack workspace.",
+      "url": "https://slack-status.com/2026-03/0c433efa2ea295fb",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-03-09T03:02:32Z",
+      "resolved_at": "2026-03-09T19:17:50Z",
+      "duration_minutes": 975,
+      "ongoing": false,
+      "components": [
+        "Login/SSO"
+      ],
+      "score": {
+        "value": 1170,
+        "duration_minutes": 975,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/9ksfbdb59mtn",
+      "vendor": "datadog",
+      "title": "Web Application Not Loading",
+      "url": "https://stspg.io/mfp6qzq5bd51",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-03-13T09:26:35.659Z",
+      "resolved_at": "2026-03-13T10:30:25.499Z",
+      "duration_minutes": 63,
+      "ongoing": false,
+      "components": [
+        "Web Application"
+      ],
+      "score": {
+        "value": 63,
+        "duration_minutes": 63,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/v86p9jb46jt1",
+      "vendor": "circleci",
+      "title": "Unable to view orb list on Organization Settings page",
+      "url": "https://stspg.io/q09f0398btms",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-11T01:58:22.903Z",
+      "resolved_at": "2026-03-11T02:24:16.348Z",
+      "duration_minutes": 25,
+      "ongoing": false,
+      "components": [
+        "CircleCI API",
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 50,
+        "duration_minutes": 25,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/57rkhg708hrf",
+      "vendor": "stripe",
+      "title": "Errors downloading files",
+      "url": "https://stspg.io/9swt2kr5kqlm",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-03-10T20:43:18.608Z",
+      "resolved_at": "2026-03-10T20:53:15.666Z",
+      "duration_minutes": 9,
+      "ongoing": false,
+      "components": [
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 10.799999999999999,
+        "duration_minutes": 9,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    }
+  ]
+}

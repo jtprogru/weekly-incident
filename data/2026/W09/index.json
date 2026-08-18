@@ -1,0 +1,255 @@
+{
+  "week": "2026-W09",
+  "from": "2026-02-23T00:00:00Z",
+  "to": "2026-03-02T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "aws/6a8fc17b2bdd3e4d",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-03-01T20:14:03Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-central-1"
+      ],
+      "score": {
+        "value": 488684,
+        "duration_minutes": 244342,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "gcp/41E5S3mkTGDfkZuJZH5k",
+      "vendor": "gcp",
+      "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
+      "url": "https://status.cloud.google.com/incidents/41E5S3mkTGDfkZuJZH5k",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-02-27T12:37:00Z",
+      "resolved_at": "2026-02-27T14:35:00Z",
+      "duration_minutes": 118,
+      "ongoing": false,
+      "components": [
+        "Agent Assist",
+        "Dialogflow CX",
+        "Vertex Gemini API",
+        "Google Cloud Support"
+      ],
+      "score": {
+        "value": 944,
+        "duration_minutes": 118,
+        "components": 4,
+        "vendor_weight": 2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "slack/1533",
+      "vendor": "slack",
+      "title": "Issue with Slack Search feature",
+      "url": "https://slack-status.com/2026-03/a498942c1b812963",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-03-01T14:23:32Z",
+      "resolved_at": "2026-03-01T20:49:25Z",
+      "duration_minutes": 385,
+      "ongoing": false,
+      "components": [
+        "Search"
+      ],
+      "score": {
+        "value": 462,
+        "duration_minutes": 385,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1531",
+      "vendor": "slack",
+      "title": "Issue with Slack Direct Messaging",
+      "url": "https://slack-status.com/2026-02/0736abde1ec2eea0",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-02-24T14:36:56Z",
+      "resolved_at": "2026-02-24T19:19:19Z",
+      "duration_minutes": 282,
+      "ongoing": false,
+      "components": [
+        "Messaging"
+      ],
+      "score": {
+        "value": 338.4,
+        "duration_minutes": 282,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1532",
+      "vendor": "slack",
+      "title": "Slack Email Delivery Feature Degradation",
+      "url": "https://slack-status.com/2026-02/fb905e8a457042ba",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-02-25T00:26:58Z",
+      "resolved_at": "2026-02-25T04:52:24Z",
+      "duration_minutes": 265,
+      "ongoing": false,
+      "components": [
+        "Messaging"
+      ],
+      "score": {
+        "value": 318,
+        "duration_minutes": 265,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/qqb6y9g81rw6",
+      "vendor": "datadog",
+      "title": "Delayed RUM data",
+      "url": "https://stspg.io/f7nly8tc2198",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-02-24T04:31:54.184Z",
+      "resolved_at": "2026-02-24T07:08:31.512Z",
+      "duration_minutes": 156,
+      "ongoing": false,
+      "components": [
+        "Cloud Cost Management",
+        "RUM"
+      ],
+      "score": {
+        "value": 312,
+        "duration_minutes": 156,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/r88g618tt765",
+      "vendor": "circleci",
+      "title": "Degradation in some checkout steps",
+      "url": "https://stspg.io/vmpflb7sk964",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-02-26T22:56:42Z",
+      "resolved_at": "2026-02-27T00:17:31.594Z",
+      "duration_minutes": 80,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 80,
+        "duration_minutes": 80,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    }
+  ]
+}

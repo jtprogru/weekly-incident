@@ -1,0 +1,373 @@
+[
+  {
+    "key": "stripe/cm7qs1tjkw6c",
+    "vendor": "stripe",
+    "native_id": "cm7qs1tjkw6c",
+    "title": "Elevated BLIK errors",
+    "url": "https://stspg.io/pzxm22cjk88l",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-20T21:42:36.245Z",
+    "resolved_at": "2026-07-20T22:32:16.655Z",
+    "duration_minutes": 49,
+    "components": [
+      "Global payments",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "rvmxpgnfv84d",
+        "status": "investigating",
+        "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+        "created_at": "2026-07-20T21:42:36.353Z"
+      },
+      {
+        "native_id": "dystdz2xxblk",
+        "status": "identified",
+        "body": "We're currently seeing a degradation of the Blik payment method. Our partner has identified the cause and is working on a fix.",
+        "created_at": "2026-07-20T22:09:57.56Z"
+      },
+      {
+        "native_id": "0ffxx97ys1tk",
+        "status": "resolved",
+        "body": "From 19:40 to 22:10 UTC, we saw elevated errors for Blik payment method payments. This is now resolved.",
+        "created_at": "2026-07-20T22:32:16.655Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:58.953Z",
+          "description": "Checkout, Elements, Connect, Payment Links, Terminal, 3DS, and more",
+          "group": false,
+          "group_id": null,
+          "id": "qcs5gg7rz4ps",
+          "name": "Global payments",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-01T00:50:40.114Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-17T06:29:02.991Z"
+        }
+      ],
+      "created_at": "2026-07-20T21:42:36.253Z",
+      "id": "cm7qs1tjkw6c",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 19:40 to 22:10 UTC, we saw elevated errors for Blik payment method payments. This is now resolved.",
+          "created_at": "2026-07-20T22:32:16.655Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T22:32:16.655Z",
+          "id": "0ffxx97ys1tk",
+          "incident_id": "cm7qs1tjkw6c",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T22:32:16.655Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're currently seeing a degradation of the Blik payment method. Our partner has identified the cause and is working on a fix.",
+          "created_at": "2026-07-20T22:09:57.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T22:09:57.560Z",
+          "id": "dystdz2xxblk",
+          "incident_id": "cm7qs1tjkw6c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T22:09:57.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+          "created_at": "2026-07-20T21:42:36.353Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T21:42:36.353Z",
+          "id": "rvmxpgnfv84d",
+          "incident_id": "cm7qs1tjkw6c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T21:42:36.353Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated BLIK errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-20T22:32:16.655Z",
+      "shortlink": "https://stspg.io/pzxm22cjk88l",
+      "started_at": "2026-07-20T21:42:36.245Z",
+      "status": "resolved",
+      "updated_at": "2026-07-20T22:32:16.673Z"
+    }
+  },
+  {
+    "key": "stripe/xxkcvlgj8wxw",
+    "vendor": "stripe",
+    "native_id": "xxkcvlgj8wxw",
+    "title": "Elevated BLIK Errors",
+    "url": "https://stspg.io/g4vzl6b05kny",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-21T10:26:47.073Z",
+    "resolved_at": "2026-07-21T10:26:47.132Z",
+    "duration_minutes": 0,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "6w3r746432yt",
+        "status": "resolved",
+        "body": "From 09:59 UTC to 10:13 UTC on July 21, 2026, we saw elevated error rates on BLIK payments affecting multiple customers. This issue is now resolved. We confirmed that the issue was upstream and was restored without Stripe actions.",
+        "created_at": "2026-07-21T10:26:47.132Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-17T06:29:02.991Z"
+        }
+      ],
+      "created_at": "2026-07-21T10:26:47.079Z",
+      "id": "xxkcvlgj8wxw",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 09:59 UTC to 10:13 UTC on July 21, 2026, we saw elevated error rates on BLIK payments affecting multiple customers. This issue is now resolved. We confirmed that the issue was upstream and was restored without Stripe actions.",
+          "created_at": "2026-07-21T10:26:47.132Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-21T10:26:47.132Z",
+          "id": "6w3r746432yt",
+          "incident_id": "xxkcvlgj8wxw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-21T10:26:47.132Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated BLIK Errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-21T10:26:47.132Z",
+      "shortlink": "https://stspg.io/g4vzl6b05kny",
+      "started_at": "2026-07-21T10:26:47.073Z",
+      "status": "resolved",
+      "updated_at": "2026-07-21T10:26:47.143Z"
+    }
+  },
+  {
+    "key": "stripe/s0nbrdrprmrt",
+    "vendor": "stripe",
+    "native_id": "s0nbrdrprmrt",
+    "title": "Elevated API errors",
+    "url": "https://stspg.io/wtfd9x61syx3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-24T12:00:19.322Z",
+    "resolved_at": "2026-07-24T12:14:27.948Z",
+    "duration_minutes": 14,
+    "components": [
+      "Stripe API",
+      "Stripe core components"
+    ],
+    "updates": [
+      {
+        "native_id": "xwyy0jcgc4kn",
+        "status": "investigating",
+        "body": "We’re currently investigating elevated error rates and response times with the API. We’ll post an update soon",
+        "created_at": "2026-07-24T12:00:19.403Z"
+      },
+      {
+        "native_id": "9yr6t8fbbskw",
+        "status": "resolved",
+        "body": "From 10:56 - 12:00 UTC, we saw elevated error rates and response times with the API. This is now resolved.",
+        "created_at": "2026-07-24T12:14:27.948Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-08-06T16:24:32.575Z"
+        },
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-08-08T00:39:30.876Z"
+        }
+      ],
+      "created_at": "2026-07-24T12:00:19.329Z",
+      "id": "s0nbrdrprmrt",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 10:56 - 12:00 UTC, we saw elevated error rates and response times with the API. This is now resolved.",
+          "created_at": "2026-07-24T12:14:27.948Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T12:14:27.948Z",
+          "id": "9yr6t8fbbskw",
+          "incident_id": "s0nbrdrprmrt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T12:14:27.948Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re currently investigating elevated error rates and response times with the API. We’ll post an update soon",
+          "created_at": "2026-07-24T12:00:19.403Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-24T12:00:19.403Z",
+          "id": "xwyy0jcgc4kn",
+          "incident_id": "s0nbrdrprmrt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-24T12:00:19.403Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated API errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": "[]",
+      "resolved_at": "2026-07-24T12:14:27.948Z",
+      "shortlink": "https://stspg.io/wtfd9x61syx3",
+      "started_at": "2026-07-24T12:00:19.322Z",
+      "status": "resolved",
+      "updated_at": "2026-07-24T12:14:27.962Z"
+    }
+  }
+]

@@ -1,0 +1,509 @@
+[
+  {
+    "key": "datadog/j4v5lc1lvgf1",
+    "vendor": "datadog",
+    "native_id": "j4v5lc1lvgf1",
+    "title": "Degraded Web Application Performance",
+    "url": "https://stspg.io/cwzjd95rnzhd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-05-13T15:16:27.124Z",
+    "resolved_at": "2026-05-13T15:53:19.73Z",
+    "duration_minutes": 36,
+    "components": [
+      "APM",
+      "Database Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "s6tnz4jrvgzh",
+        "status": "investigating",
+        "body": "We are investigating degraded performance in the Database Monitoring pages and APM service pages.\n\nDuring this time, some customers may be experiencing:\n- The DBM database list page failing to load or displaying zero databases\n- 503 errors when attempting to access database instance views\n- Inability to view or interact with Database Monitoring data in our US1 datacenter\n- The APM service page failing to load",
+        "created_at": "2026-05-13T15:16:27.235Z"
+      },
+      {
+        "native_id": "hqks7gmg6k6n",
+        "status": "monitoring",
+        "body": "We have deployed a fix and we are monitoring the results. We will provide another update once the issue is fully resolved.",
+        "created_at": "2026-05-13T15:36:42.231Z"
+      },
+      {
+        "native_id": "6dshpnr2hb7r",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-05-13T15:53:19.73Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-23T08:40:20.513-04:00",
+          "description": "Application Performance Monitoring (services and traces)",
+          "group": false,
+          "group_id": null,
+          "id": "p4hwj4wsc5wf",
+          "name": "APM",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.448-04:00"
+        },
+        {
+          "created_at": "2022-05-25T14:33:21.781-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2ng88yhsvb74",
+          "name": "Database Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2022-05-25",
+          "status": "operational",
+          "updated_at": "2026-06-30T16:32:44.503-04:00"
+        }
+      ],
+      "created_at": "2026-05-13T11:16:27.132-04:00",
+      "id": "j4v5lc1lvgf1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2ng88yhsvb74",
+              "name": "Database Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-05-13T11:53:19.730-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-13T11:53:19.730-04:00",
+          "id": "6dshpnr2hb7r",
+          "incident_id": "j4v5lc1lvgf1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-13T11:53:19.730-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2ng88yhsvb74",
+              "name": "Database Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have deployed a fix and we are monitoring the results. We will provide another update once the issue is fully resolved.",
+          "created_at": "2026-05-13T11:36:42.231-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-13T11:36:42.231-04:00",
+          "id": "hqks7gmg6k6n",
+          "incident_id": "j4v5lc1lvgf1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-05-13T11:36:42.231-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4hwj4wsc5wf",
+              "name": "APM",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2ng88yhsvb74",
+              "name": "Database Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating degraded performance in the Database Monitoring pages and APM service pages.\n\nDuring this time, some customers may be experiencing:\n- The DBM database list page failing to load or displaying zero databases\n- 503 errors when attempting to access database instance views\n- Inability to view or interact with Database Monitoring data in our US1 datacenter\n- The APM service page failing to load",
+          "created_at": "2026-05-13T11:16:27.235-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-13T11:16:27.235-04:00",
+          "id": "s6tnz4jrvgzh",
+          "incident_id": "j4v5lc1lvgf1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-13T11:16:27.235-04:00"
+        }
+      ],
+      "monitoring_at": "2026-05-13T11:36:42.231-04:00",
+      "name": "Degraded Web Application Performance",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-13T11:53:19.730-04:00",
+      "shortlink": "https://stspg.io/cwzjd95rnzhd",
+      "started_at": "2026-05-13T11:16:27.124-04:00",
+      "status": "resolved",
+      "updated_at": "2026-05-13T11:53:19.754-04:00"
+    }
+  },
+  {
+    "key": "datadog/shjkvbwy06nl",
+    "vendor": "datadog",
+    "native_id": "shjkvbwy06nl",
+    "title": "Delayed Metric Loading",
+    "url": "https://stspg.io/sskp2jtfd9sj",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-05-14T18:24:38.674Z",
+    "resolved_at": "2026-05-14T19:48:24.589Z",
+    "duration_minutes": 83,
+    "components": [
+      "Metrics and Infra Monitoring",
+      "Monitors"
+    ],
+    "updates": [
+      {
+        "native_id": "58gnsq9nnkcd",
+        "status": "investigating",
+        "body": "We are investigating increased latency querying Metrics. As a result of this issue, some users may experience delays loading graphs in dashboards and notebooks, and delayed monitor evaluations.",
+        "created_at": "2026-05-14T18:24:38.759Z"
+      },
+      {
+        "native_id": "ynm2x95tbhhd",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-05-14T18:48:48.641Z"
+      },
+      {
+        "native_id": "xpmvdbb2zgzv",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-05-14T19:48:24.589Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:10:23.098-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s6jxgrkjjj6p",
+          "name": "Monitors",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-06T15:37:32.847-04:00"
+        }
+      ],
+      "created_at": "2026-05-14T14:24:38.680-04:00",
+      "id": "shjkvbwy06nl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-05-14T15:48:24.589-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T15:48:24.589-04:00",
+          "id": "xpmvdbb2zgzv",
+          "incident_id": "shjkvbwy06nl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T15:48:24.589-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-05-14T14:48:48.641-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T14:48:48.641-04:00",
+          "id": "ynm2x95tbhhd",
+          "incident_id": "shjkvbwy06nl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T14:48:48.641-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency querying Metrics. As a result of this issue, some users may experience delays loading graphs in dashboards and notebooks, and delayed monitor evaluations.",
+          "created_at": "2026-05-14T14:24:38.759-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T14:24:38.759-04:00",
+          "id": "58gnsq9nnkcd",
+          "incident_id": "shjkvbwy06nl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T14:24:38.759-04:00"
+        }
+      ],
+      "monitoring_at": "2026-05-14T14:48:48.641-04:00",
+      "name": "Delayed Metric Loading",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-14T15:48:24.589-04:00",
+      "shortlink": "https://stspg.io/sskp2jtfd9sj",
+      "started_at": "2026-05-14T14:24:38.674-04:00",
+      "status": "resolved",
+      "updated_at": "2026-05-14T15:48:24.606-04:00"
+    }
+  },
+  {
+    "key": "datadog/xqyrslhjs303",
+    "vendor": "datadog",
+    "native_id": "xqyrslhjs303",
+    "title": "Azure Metrics Reporting",
+    "url": "https://stspg.io/l0b8n3g0ysky",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-05-16T02:17:24.967Z",
+    "resolved_at": "2026-05-16T03:43:01.802Z",
+    "duration_minutes": 85,
+    "components": [
+      "Metrics and Infra Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "94k8xdtqcx0l",
+        "status": "investigating",
+        "body": "We are investigating an issue submitting Azure metrics.",
+        "created_at": "2026-05-16T02:17:25.068Z"
+      },
+      {
+        "native_id": "qfstpp2wl7zx",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-05-16T02:40:11.578Z"
+      },
+      {
+        "native_id": "cg9j7h7lk9ym",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-05-16T03:09:05.459Z"
+      },
+      {
+        "native_id": "jcm3pd473m4b",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-05-16T03:27:27.118Z"
+      },
+      {
+        "native_id": "qgrqq81cmxqr",
+        "status": "resolved",
+        "body": "This incident has been resolved and Azure metrics are reporting as expected.",
+        "created_at": "2026-05-16T03:43:01.802Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        }
+      ],
+      "created_at": "2026-05-15T22:17:24.976-04:00",
+      "id": "xqyrslhjs303",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident has been resolved and Azure metrics are reporting as expected.",
+          "created_at": "2026-05-15T23:43:01.802-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T23:43:01.802-04:00",
+          "id": "qgrqq81cmxqr",
+          "incident_id": "xqyrslhjs303",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T23:43:01.802-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-05-15T23:27:27.118-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T23:27:27.118-04:00",
+          "id": "jcm3pd473m4b",
+          "incident_id": "xqyrslhjs303",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T23:27:27.118-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-05-15T23:09:05.459-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T23:09:05.459-04:00",
+          "id": "cg9j7h7lk9ym",
+          "incident_id": "xqyrslhjs303",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T23:09:05.459-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-05-15T22:40:11.578-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T22:40:11.578-04:00",
+          "id": "qfstpp2wl7zx",
+          "incident_id": "xqyrslhjs303",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T22:40:11.578-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue submitting Azure metrics.",
+          "created_at": "2026-05-15T22:17:25.068-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T22:17:25.068-04:00",
+          "id": "94k8xdtqcx0l",
+          "incident_id": "xqyrslhjs303",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T22:17:25.068-04:00"
+        }
+      ],
+      "monitoring_at": "2026-05-15T23:27:27.118-04:00",
+      "name": "Azure Metrics Reporting",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-15T23:43:01.802-04:00",
+      "shortlink": "https://stspg.io/l0b8n3g0ysky",
+      "started_at": "2026-05-15T22:17:24.967-04:00",
+      "status": "resolved",
+      "updated_at": "2026-05-15T23:43:01.817-04:00"
+    }
+  }
+]

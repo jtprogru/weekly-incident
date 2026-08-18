@@ -1,0 +1,351 @@
+{
+  "week": "2026-W20",
+  "from": "2026-05-11T00:00:00Z",
+  "to": "2026-05-18T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "digitalocean/gwgh41d5r0nz",
+      "vendor": "digitalocean",
+      "title": "DNS service, Certificates and Managed MongoDB",
+      "url": "https://stspg.io/r6dtr7gc9pch",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-14T13:57:38.566Z",
+      "resolved_at": "2026-05-14T20:46:40.334Z",
+      "duration_minutes": 409,
+      "ongoing": false,
+      "components": [
+        "Global",
+        "DNS"
+      ],
+      "score": {
+        "value": 654.4000000000001,
+        "duration_minutes": 409,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "circleci/qhxl36d29vfl",
+      "vendor": "circleci",
+      "title": "Elevated 429 errors pulling from maven central",
+      "url": "https://stspg.io/c8h5p945vnkw",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-14T16:49:02.69Z",
+      "resolved_at": "2026-05-14T19:38:54.325Z",
+      "duration_minutes": 169,
+      "ongoing": false,
+      "components": [
+        "Docker Jobs",
+        "Machine Jobs",
+        "macOS Jobs"
+      ],
+      "score": {
+        "value": 507,
+        "duration_minutes": 169,
+        "components": 3,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1553",
+      "vendor": "slack",
+      "title": "Issues affecting file uploads, message edits, channel renames, and channel creations",
+      "url": "https://slack-status.com/2026-05/fe557ca05fdb64fa",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-05-14T14:37:41Z",
+      "resolved_at": "2026-05-14T15:34:48Z",
+      "duration_minutes": 57,
+      "ongoing": false,
+      "components": [
+        "Messaging",
+        "Files",
+        "Apps/Integrations/APIs",
+        "Workflows"
+      ],
+      "score": {
+        "value": 273.59999999999997,
+        "duration_minutes": 57,
+        "components": 4,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/ws0j885npfx1",
+      "vendor": "stripe",
+      "title": "Elevated MobilePay errors",
+      "url": "https://stspg.io/06tvvhhcgy80",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-05-16T16:01:56.383Z",
+      "resolved_at": "2026-05-16T18:53:37.009Z",
+      "duration_minutes": 171,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 205.2,
+        "duration_minutes": 171,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/shjkvbwy06nl",
+      "vendor": "datadog",
+      "title": "Delayed Metric Loading",
+      "url": "https://stspg.io/sskp2jtfd9sj",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-14T18:24:38.674Z",
+      "resolved_at": "2026-05-14T19:48:24.589Z",
+      "duration_minutes": 83,
+      "ongoing": false,
+      "components": [
+        "Metrics and Infra Monitoring",
+        "Monitors"
+      ],
+      "score": {
+        "value": 166,
+        "duration_minutes": 83,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/f5l7tqzmc9mm",
+      "vendor": "stripe",
+      "title": "Elevated Apple Pay errors",
+      "url": "https://stspg.io/m72fwk8k8qfg",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-05-16T03:38:32.123Z",
+      "resolved_at": "2026-05-16T05:21:31.408Z",
+      "duration_minutes": 102,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 122.39999999999999,
+        "duration_minutes": 102,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "datadog/xqyrslhjs303",
+      "vendor": "datadog",
+      "title": "Azure Metrics Reporting",
+      "url": "https://stspg.io/l0b8n3g0ysky",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-05-16T02:17:24.967Z",
+      "resolved_at": "2026-05-16T03:43:01.802Z",
+      "duration_minutes": 85,
+      "ongoing": false,
+      "components": [
+        "Metrics and Infra Monitoring"
+      ],
+      "score": {
+        "value": 85,
+        "duration_minutes": 85,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/j4v5lc1lvgf1",
+      "vendor": "datadog",
+      "title": "Degraded Web Application Performance",
+      "url": "https://stspg.io/cwzjd95rnzhd",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-13T15:16:27.124Z",
+      "resolved_at": "2026-05-13T15:53:19.73Z",
+      "duration_minutes": 36,
+      "ongoing": false,
+      "components": [
+        "APM",
+        "Database Monitoring"
+      ],
+      "score": {
+        "value": 72,
+        "duration_minutes": 36,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/mkbj4zw0w85w",
+      "vendor": "stripe",
+      "title": "Elevated Swish errors",
+      "url": "https://stspg.io/0zpfx7w4g20f",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-12T09:56:24.189Z",
+      "resolved_at": "2026-05-12T10:33:00.811Z",
+      "duration_minutes": 36,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 43.199999999999996,
+        "duration_minutes": 36,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "digitalocean/bnq93nhgvtm6",
+      "vendor": "digitalocean",
+      "title": "GradientAI: Agent Platform Playground Interaction Errors",
+      "url": "https://stspg.io/ll1m0fw2m4g9",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-05-12T10:50:10Z",
+      "resolved_at": "2026-05-12T11:37:12Z",
+      "duration_minutes": 47,
+      "ongoing": false,
+      "components": [
+        "Agent Runtime"
+      ],
+      "score": {
+        "value": 37.6,
+        "duration_minutes": 47,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/lrrw084g3whn",
+      "vendor": "digitalocean",
+      "title": "Anthropic reported outage that's impacting access to their Serverless Inference models",
+      "url": "https://stspg.io/d47rft5t1t68",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-05-15T01:21:51.677Z",
+      "resolved_at": "2026-05-15T02:00:39.064Z",
+      "duration_minutes": 38,
+      "ongoing": false,
+      "components": [
+        "Agent Runtime"
+      ],
+      "score": {
+        "value": 30.400000000000002,
+        "duration_minutes": 38,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    }
+  ]
+}

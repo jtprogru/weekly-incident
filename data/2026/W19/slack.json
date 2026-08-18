@@ -1,0 +1,293 @@
+[
+  {
+    "key": "slack/1549",
+    "vendor": "slack",
+    "native_id": "1549",
+    "title": "Slow behaviour in Slack",
+    "url": "https://slack-status.com/2026-05/bedf971f90be70a6",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-05-04T10:00:38Z",
+    "resolved_at": "2026-05-04T17:37:54Z",
+    "duration_minutes": 457,
+    "components": [
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some users are experiencing issues with workflows. Triggered workflows may fail to complete, with the first step not executing. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T10:00:38Z"
+      },
+      {
+        "status": "unknown",
+        "body": "The investigation identified elevated latency in EU backend services as the cause of workflows not completing. A subset of workflow trigger attempts is impacted, primarily, EU users. Pod restarts have stopped, and error rates are improving. A fix is being prepared and will be deployed shortly. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T11:43:11Z"
+      },
+      {
+        "status": "unknown",
+        "body": "A fix has been deployed to address the elevated latency in EU backend services. The team is monitoring the environment to ensure service stability and full recovery. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T13:08:54Z"
+      },
+      {
+        "status": "unknown",
+        "body": "This issue is now resolved for all users.\nCurrent status and recent actions taken: A fix has been deployed that resolved the underlying cause of this issue. Our health metrics have returned to normal levels and workflows are running as expected.\nScope: Users in the EU region — primarily teams based in Central Europe — experienced elevated workflow failure rates.\nPrevious impact to end users: Users may have experienced workflows failing to run, with the first step remaining stuck in an initialized state. Some users in the EU region may also have experienced general slowness when using Slack.\nRequired resolution steps: No steps are required. Workflows should be running normally. If you continue to experience any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux).\nWe apologize for any disruptions this may have caused to your day.",
+        "created_at": "2026-05-04T17:37:53Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-05-04T03:00:38-07:00",
+      "date_updated": "2026-05-04T10:37:54-07:00",
+      "id": 1549,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome users are experiencing issues with workflows. Triggered workflows may fail to complete, with the first step not executing. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T03:00:38-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThe investigation identified elevated latency in EU backend services as the cause of workflows not completing. A subset of workflow trigger attempts is impacted, primarily, EU users. Pod restarts have stopped, and error rates are improving. A fix is being prepared and will be deployed shortly. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T04:43:11-07:00"
+        },
+        {
+          "body": "\u003cp\u003eA fix has been deployed to address the elevated latency in EU backend services. The team is monitoring the environment to ensure service stability and full recovery. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T06:08:54-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThis issue is now resolved for all users.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and recent actions taken:\u003c/strong\u003e A fix has been deployed that resolved the underlying cause of this issue. Our health metrics have returned to normal levels and workflows are running as expected.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope\u003c/strong\u003e: Users in the EU region — primarily teams based in Central Europe — experienced elevated workflow failure rates.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003ePrevious impact to end users: \u003c/strong\u003eUsers may have experienced workflows failing to run, with the first step remaining stuck in an initialized state. Some users in the EU region may also have experienced general slowness when using Slack.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eRequired resolution steps\u003c/strong\u003e: No steps are required. Workflows should be running normally. If you continue to experience any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux).\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe apologize for any disruptions this may have caused to your day.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-05-04T10:37:53-07:00"
+        }
+      ],
+      "services": [
+        "Workflows"
+      ],
+      "status": "resolved",
+      "title": "Slow behaviour in Slack",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-05/bedf971f90be70a6"
+    }
+  },
+  {
+    "key": "slack/1550",
+    "vendor": "slack",
+    "native_id": "1550",
+    "title": "Scheduled Grid Migrations are experiencing extended downtime",
+    "url": "https://slack-status.com/2026-05/02b2d5b45d656512",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-05-08T12:13:46Z",
+    "resolved_at": "2026-05-08T17:44:24Z",
+    "duration_minutes": 330,
+    "components": [
+      "Connectivity"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Users who are undergoing scheduled Grid Migrations are experiencing extended downtime. Downtime is expected during a Grid Migration however it's taking longer than usual. During the downtime users are unable to access Slack until the migration completes. We've identified an issue with Job Queues, which may be the cause and are investigating this further. The next update will be provided once additional information becomes available.",
+        "created_at": "2026-05-08T12:13:46Z"
+      },
+      {
+        "status": "unknown",
+        "body": "This issue is now resolved.\nCurrent status and actions being taken: We identified database write throttling as the cause of the stalled grid migrations. We applied a drop rule for jobs that were stuck in a retry loop, which has restored normal migration processing.\nScope: A small number of enterprise users undergoing grid migrations experienced extended delays in accessing Slack.\nCurrent impact to end users: Affected users may have experienced an inability to access Slack during their migration window.\nKnown workarounds: No workarounds needed at this time.\nWe apologize for how this incident affected you and your business.",
+        "created_at": "2026-05-08T17:44:24Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-05-08T05:13:46-07:00",
+      "date_updated": "2026-05-08T10:44:24-07:00",
+      "id": 1550,
+      "notes": [
+        {
+          "body": "\u003cp\u003eUsers who are undergoing scheduled Grid Migrations are experiencing extended downtime. Downtime is expected during a Grid Migration however it's taking longer than usual. During the downtime users are unable to access Slack until the migration completes. We've identified an issue with Job Queues, which may be the cause and are investigating this further. The next update will be provided once additional information becomes available.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-05-08T05:13:46-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThis issue is now resolved.\u003c/p\u003e\u003cul\u003e\u003cli\u003eCurrent status and actions being taken: We identified database write throttling as the cause of the stalled grid migrations. We applied a drop rule for jobs that were stuck in a retry loop, which has restored normal migration processing.\u0026nbsp;\u003c/li\u003e\u003cli\u003eScope: A small number of enterprise users undergoing grid migrations experienced extended delays in accessing Slack.\u0026nbsp;\u003c/li\u003e\u003cli\u003eCurrent impact to end users: Affected users may have experienced an inability to access Slack during their migration window.\u0026nbsp;\u003c/li\u003e\u003cli\u003eKnown workarounds: No workarounds needed at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe apologize for how this incident affected you and your business.\u0026nbsp;\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-05-08T10:44:24-07:00"
+        }
+      ],
+      "services": [
+        "Connectivity"
+      ],
+      "status": "resolved",
+      "title": "Scheduled Grid Migrations are experiencing extended downtime",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-05/02b2d5b45d656512"
+    }
+  },
+  {
+    "key": "slack/1551",
+    "vendor": "slack",
+    "native_id": "1551",
+    "title": "EKM customers were previously experiencing issues with channel loading and message delivery",
+    "url": "https://slack-status.com/2026-05/d284d808ed66c511",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-05-08T18:31:22Z",
+    "resolved_at": "2026-05-11T21:48:12Z",
+    "duration_minutes": 4516,
+    "components": [
+      "Messaging",
+      "Files",
+      "Notifications",
+      "Apps/Integrations/APIs"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Between approximately 10:55 AM and 11:10 AM PDT, customers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading some channels. Error rates have returned to normal levels and customers should now see expected performance. We are continuing to investigate the underlying cause and monitoring closely. We apologize for the disruption.",
+        "created_at": "2026-05-08T18:31:22Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken:  We’re seeing renewed, elevated error rates and latency affecting customers using Enterprise Key Management (EKM). Affected customers may experience issues sending messages and loading some channels. Our team is actively investigating this issue.\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management (EKM) customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading some channels.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T18:44:53Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken:  We believe an issue with an upstream provider may be impacting some Slack services. We’re partnering with them to help with our investigation and are waiting on additional details from their analysis. In parallel, we’re actively reviewing the cache configuration to alleviate the impact.\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management (EKM) customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading some channels.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T19:20:05Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken: We’ve deployed a fix that has improved our cache hit ratio and are observing recovery in our health metrics. In parallel, we're monitoring for updates from our upstream provider. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T19:54:42Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken: We're seeing consistent improvement in our health metrics while our upstream provider has begun implementing a fix on their side. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T20:27:06Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken: We continue to monitor the issue as our upstream provider continues their work toward a resolution. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 60 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T20:57:18Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re investigating this issue:\nCurrent status and actions being taken: Our upstream provider has implemented a fix and is continuing their investigation. In the meantime, we continue to observe improved health metrics. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved\nEstimated time to resolution: No ETA at this time.\nScope: This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 60 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-08T21:58:34Z"
+      },
+      {
+        "status": "unknown",
+        "body": "This issue is now resolved for all users.\nCurrent status and recent actions taken: Our upstream provider has successfully implemented a fix. Following a period of stable monitoring, all services have been restored. Customers should no longer experience issues accessing Slack.\nScope: This issue didn’t affect any specific region, but a percentage of Enterprise Key Management customers may have experienced an impact globally.\nPrevious impact to end users: Customers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading channels. Additionally, they may have experienced delays with all messaging activity, including notifications and activity feeds.\nRequired resolution steps: No additional steps are necessary.\nWe apologize for any disruptions to your day.",
+        "created_at": "2026-05-08T23:27:58Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Current status and actions being taken: We’re investigating a recurrence of a previous incident causing elevated errors and high latency for EKM customers. As a precaution, EKM backfills have been paused to reduce load. Teams are evaluating pod scaling and assessing a high-volume load test workload contributing to EKGen traffic. A bridge is active with EKM and EKGen engineers engaged, and third-party infrastructure teams have been re-engaged as a potential contributing factor.\nEstimated time to resolution: Under investigation. No ETA available at this time.\nScope: Customers using Enterprise Key Management (EKM).\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.",
+        "created_at": "2026-05-11T14:22:13Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Current status and actions being taken: We're continuing to investigate elevated error rates affecting a subset of users. We've identified additional load contributing to the issue and have taken steps to reduce it.\nEstimated time to resolution: Under investigation. No ETA available at this time.\nScope: Customers using Enterprise Key Management (EKM)\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll provide another update in 30 minutes or as new information becomes available. We apologize for the disruption.",
+        "created_at": "2026-05-11T15:11:15Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Current status and actions being taken:  We're continuing to investigate elevated error rates affecting a subset of users. We've identified additional load contributing to the issue and have taken steps to reduce it. We've also engaged our third-party vendor to assist in providing additional troubleshooting.\nEstimated time to resolution: Under investigation. No ETA available at this time.\nScope: Customers using Enterprise Key Management (EKM)\nCurrent impact to end users: Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll provide another update in 30 minutes or as new information becomes available. We apologize for the disruption.",
+        "created_at": "2026-05-11T16:05:26Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Current status and actions being taken: We have identified contributing factors to the issue impacting EKM customers and have taken mitigating actions, including reducing the rate of KMS requests by approximately 50% and increasing cache capacity. We are continuing to monitor closely and are actively investigating the underlying cause in partnership with our third-party provider.\nEstimated time to resolution: The incident has been stable for over an hour with no new customer-facing impact detected.\nScope: Customers using Enterprise Key Management (EKM)\nCurrent impact to end users:  Customers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\nKnown workarounds: No known workarounds at this time.\nWe'll provide another update by 9:50 AM PT. We apologize for the disruption.",
+        "created_at": "2026-05-11T16:38:03Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue is still ongoing.\nCurrent status and actions being taken: Our monitoring has shown no further instability and we have considered this incident now under control. We are continuing to monitor closely.\nWe'll provide another update should we find any further information of note. We apologize for the disruption.",
+        "created_at": "2026-05-11T17:12:38Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue is still ongoing.\nCurrent status and actions being taken: Customer impact effectively stopped around 8:00AM PT and has remained stable. Our monitoring has shown no further instability and we have considered this incident under control. We are continuing to monitor closely and we'll update again when there's another meaningful update to share.\nWe apologize for the disruption.",
+        "created_at": "2026-05-11T19:02:41Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Users who rely on Enterprise Key Management (EKM) may have experienced elevated latency and errors across messaging, channel loading, workflows, and file operations starting around 5:55 AM PDT on May 11, 2026. Impact was mitigated and the incident was brought under control at 9:16 AM PDT on May 11, 2026.\nWe've deployed fixes addressing the root cause of the elevated encryption key request load. If you continue to experience trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). We apologize for the disruption and thank you for your patience.",
+        "created_at": "2026-05-11T21:48:12Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-05-08T11:31:22-07:00",
+      "date_updated": "2026-05-11T14:48:12-07:00",
+      "id": 1551,
+      "notes": [
+        {
+          "body": "\u003cp\u003eBetween approximately 10:55 AM and 11:10 AM PDT, customers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading some channels. Error rates have returned to normal levels and customers should now see expected performance. We are continuing to investigate the underlying cause and monitoring closely. We apologize for the disruption.\u003c/p\u003e",
+          "date_created": "2026-05-08T11:31:22-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003e\u0026nbsp;We’re seeing renewed, elevated error rates and latency affecting customers using Enterprise Key Management (EKM). Affected customers may experience issues sending messages and loading some channels. Our team is actively investigating this issue.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eNo ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eThis is not affecting any specific region, but a percentage of Enterprise Key Management (EKM) customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading some channels.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNo known workarounds at this time.\u003cstrong\u003e\u003cbr\u003e\u003c/strong\u003e\u003cbr\u003e\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-08T11:44:53-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003e\u0026nbsp;We believe an issue with an upstream provider may be impacting some Slack services. We’re partnering with them to help with our investigation and are waiting on additional details from their analysis. In parallel, we’re actively reviewing the cache configuration to alleviate the impact.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution:\u003c/strong\u003e No ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eThis is not affecting any specific region, but a percentage of Enterprise Key Management (EKM) customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users:\u003c/strong\u003e Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading some channels.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNo known workarounds at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cbr\u003eWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-08T12:20:05-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eWe’ve deployed a fix that has improved our cache hit ratio and are observing recovery in our health metrics. In parallel, we're monitoring for updates from our upstream provider. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eNo ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eThis is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNo known workarounds at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003eWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.\u003cbr\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-05-08T12:54:42-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken:\u003c/strong\u003e We're seeing consistent improvement in our health metrics while our upstream provider has begun implementing a fix on their side. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eNo ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope:\u003c/strong\u003e This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds:\u003c/strong\u003e No known workarounds at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cbr\u003e\u003cbr\u003eWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-08T13:27:06-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken:\u003c/strong\u003e We continue to monitor the issue as our upstream provider continues their work toward a resolution. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eNo ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope:\u003c/strong\u003e This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds:\u003c/strong\u003e No known workarounds at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003eWe'll continue to provide updates every 60 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-08T13:57:18-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re investigating this issue:\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken:\u003c/strong\u003e Our upstream provider has implemented a fix and is continuing their investigation. In the meantime, we continue to observe improved health metrics. Affected customers may already be seeing improvements, and we’ll continue to monitor the situation closely until it is fully resolved\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eNo ETA at this time.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope:\u003c/strong\u003e This is not affecting any specific region, but a percentage of Enterprise Key Management customers may experience impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications and activity feeds.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds:\u003c/strong\u003e No known workarounds at this time.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003eWe'll continue to provide updates every 60 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-08T14:58:34-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThis issue is now resolved for all users.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and recent actions taken:\u003c/strong\u003e Our upstream provider has successfully implemented a fix. Following a period of stable monitoring, all services have been restored. Customers should no longer experience issues accessing Slack.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope:\u003c/strong\u003e This issue didn’t affect any specific region, but a percentage of Enterprise Key Management customers may have experienced an impact globally.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003ePrevious impact to end users:\u003c/strong\u003e Customers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading channels. Additionally, they may have experienced delays with all messaging activity, including notifications and activity feeds.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eRequired resolution steps: \u003c/strong\u003eNo additional steps are necessary.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe apologize for any disruptions to your day.\u003c/p\u003e",
+          "date_created": "2026-05-08T16:27:58-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cstrong\u003eCurrent status and actions being taken:\u003c/strong\u003e We’re investigating a recurrence of a previous incident causing elevated errors and high latency for EKM customers. As a precaution, EKM backfills have been paused to reduce load. Teams are evaluating pod scaling and assessing a high-volume load test workload contributing to EKGen traffic. A bridge is active with EKM and EKGen engineers engaged, and third-party infrastructure teams have been re-engaged as a potential contributing factor.\u0026nbsp;\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eEstimated time to resolution:\u003c/strong\u003e Under investigation. No ETA available at this time.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eScope\u003c/strong\u003e: Customers using Enterprise Key Management (EKM).\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent impact to end users:\u003c/strong\u003e Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eKnown workarounds:\u003c/strong\u003e No known workarounds at this time.\u003cbr\u003e\u003cbr\u003eWe'll continue to provide updates every 30 minutes until the impact is resolved for all users.\u003c/p\u003e",
+          "date_created": "2026-05-11T07:22:13-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cstrong\u003eCurrent status and actions being taken:\u003c/strong\u003e We're continuing to investigate elevated error rates affecting a subset of users. We've identified additional load contributing to the issue and have taken steps to reduce it.\u0026nbsp;\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eEstimated time to resolution:\u003c/strong\u003e Under investigation. No ETA available at this time.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eScope\u003c/strong\u003e: Customers using Enterprise Key Management (EKM)\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent impact to end users:\u003c/strong\u003e Customers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eKnown workarounds:\u003c/strong\u003e No known workarounds at this time.\u003c/p\u003e\u003cp\u003eWe'll provide another update in 30 minutes or as new information becomes available. We apologize for the disruption.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-05-11T08:11:15-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003e\u0026nbsp;We're continuing to investigate elevated error rates affecting a subset of users. We've identified additional load contributing to the issue and have taken steps to reduce it. We've also engaged our third-party vendor to assist in providing additional troubleshooting.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eUnder investigation. No ETA available at this time.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eScope: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM)\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may experience issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNo known workarounds at this time.\u003c/p\u003e\u003cp\u003eWe'll provide another update in 30 minutes or as new information becomes available. We apologize for the disruption.\u003c/p\u003e",
+          "date_created": "2026-05-11T09:05:26-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eWe have identified contributing factors to the issue impacting EKM customers and have taken mitigating actions, including reducing the rate of KMS requests by approximately 50% and increasing cache capacity. We are continuing to monitor closely and are actively investigating the underlying cause in partnership with our third-party provider.\u0026nbsp;\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eThe incident has been stable for over an hour with no new customer-facing impact detected.\u0026nbsp;\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eScope: \u003c/strong\u003eCustomers using Enterprise Key Management (EKM)\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent impact to end users:\u0026nbsp; \u003c/strong\u003eCustomers using Enterprise Key Management (EKM) may have experienced issues sending messages and loading channels. Additionally, they may experience delays with all messaging activity, including notifications, Workflow, DMs, and activity feeds.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNo known workarounds at this time.\u003c/p\u003e\u003cp\u003eWe'll provide another update by 9:50 AM PT. We apologize for the disruption.\u003c/p\u003e",
+          "date_created": "2026-05-11T09:38:03-07:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue is still ongoing.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eOur monitoring has shown no further instability and we have considered this incident now under control. We are continuing to monitor closely.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll provide another update should we find any further information of note. We apologize for the disruption.\u003c/p\u003e",
+          "date_created": "2026-05-11T10:12:38-07:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue is still ongoing.\u003c/p\u003e\u003cp\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eCustomer impact effectively stopped around 8:00AM PT and has remained stable.\u003cstrong\u003e \u003c/strong\u003eOur monitoring has shown no further instability and we have considered this incident under control. We are continuing to monitor closely and we'll update again when there's another meaningful update to share.\u0026nbsp;\u003c/p\u003e\u003cp\u003eWe apologize for the disruption.\u003c/p\u003e",
+          "date_created": "2026-05-11T12:02:41-07:00"
+        },
+        {
+          "body": "\u003cp\u003eUsers who rely on Enterprise Key Management (EKM) may have experienced elevated latency and errors across messaging, channel loading, workflows, and file operations starting around 5:55 AM PDT on May 11, 2026. Impact was mitigated and the incident was brought under control at 9:16 AM PDT on May 11, 2026.\u003cbr\u003e\u003cbr\u003eWe've deployed fixes addressing the root cause of the elevated encryption key request load. If you continue to experience trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). We apologize for the disruption and thank you for your patience.\u003c/p\u003e",
+          "date_created": "2026-05-11T14:48:12-07:00"
+        }
+      ],
+      "services": [
+        "Messaging",
+        "Files",
+        "Notifications",
+        "Apps/Integrations/APIs"
+      ],
+      "status": "resolved",
+      "title": "EKM customers were previously experiencing issues with channel loading and message delivery",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-05/d284d808ed66c511"
+    }
+  }
+]

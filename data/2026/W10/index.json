@@ -1,0 +1,299 @@
+{
+  "week": "2026-W10",
+  "from": "2026-03-02T00:00:00Z",
+  "to": "2026-03-09T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "aws/93d92e456f200868",
+      "vendor": "aws",
+      "title": "Increased Connectivity Issues and API Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-03-02T05:56:27Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-south-1"
+      ],
+      "score": {
+        "value": 487520,
+        "duration_minutes": 243760,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1535",
+      "vendor": "slack",
+      "title": "Issues with App Mentions, Grid Migrations, and Notifications",
+      "url": "https://slack-status.com/2026-03/e63ca9cc0d76539c",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-03-05T14:56:18Z",
+      "resolved_at": "2026-03-06T16:44:54Z",
+      "duration_minutes": 1548,
+      "ongoing": false,
+      "components": [
+        "Notifications",
+        "Apps/Integrations/APIs",
+        "Workspace/Org Administration"
+      ],
+      "score": {
+        "value": 5572.8,
+        "duration_minutes": 1548,
+        "components": 3,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1534",
+      "vendor": "slack",
+      "title": "Degraded Search Performance for Dubai IDR Users – Middle East (Dubai) Region",
+      "url": "https://slack-status.com/2026-03/5d92c691d977da03",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-03-02T08:50:16Z",
+      "resolved_at": "2026-03-04T18:41:51Z",
+      "duration_minutes": 3471,
+      "ongoing": false,
+      "components": [
+        "Search"
+      ],
+      "score": {
+        "value": 4165.2,
+        "duration_minutes": 3471,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/vbrq9l2x48y6",
+      "vendor": "stripe",
+      "title": "Federal Reserve ACH system disruption",
+      "url": "https://stspg.io/tc7z8ct6pyqd",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-03T15:06:37Z",
+      "resolved_at": "2026-03-03T20:07:49.838Z",
+      "duration_minutes": 301,
+      "ongoing": false,
+      "components": [
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 361.2,
+        "duration_minutes": 301,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/rv8m0mtn024h",
+      "vendor": "stripe",
+      "title": "Dashboard pages export errors",
+      "url": "https://stspg.io/f411dzxr6x7b",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-06T13:11:46.544Z",
+      "resolved_at": "2026-03-06T14:31:13.03Z",
+      "duration_minutes": 79,
+      "ongoing": false,
+      "components": [
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 94.8,
+        "duration_minutes": 79,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/cqvlkm3fcr7x",
+      "vendor": "stripe",
+      "title": "Elevated errors for multiple Payment Methods",
+      "url": "https://stspg.io/29xyj5xknp7p",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-03T11:22:56Z",
+      "resolved_at": "2026-03-03T12:41:50.255Z",
+      "duration_minutes": 78,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 93.6,
+        "duration_minutes": 78,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/5jywybwt5qcz",
+      "vendor": "stripe",
+      "title": "Elevated API errors",
+      "url": "https://stspg.io/5r6k5ht4vvg6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-05T22:27:39.598Z",
+      "resolved_at": "2026-03-05T22:49:07.892Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Stripe API"
+      ],
+      "score": {
+        "value": 25.2,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/lg8x09p2d2n3",
+      "vendor": "circleci",
+      "title": "docker not working in cimg:*",
+      "url": "https://stspg.io/wqmcz2chv2f6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-02T17:59:14Z",
+      "resolved_at": "2026-03-02T18:21:06.106Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Docker Jobs"
+      ],
+      "score": {
+        "value": 21,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/xw65m0409rp0",
+      "vendor": "stripe",
+      "title": "Elevated API errors",
+      "url": "https://stspg.io/sjvl135mk2yv",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-03-06T18:25:16.671Z",
+      "resolved_at": "2026-03-06T18:36:50.536Z",
+      "duration_minutes": 11,
+      "ongoing": false,
+      "components": [
+        "Stripe API"
+      ],
+      "score": {
+        "value": 13.2,
+        "duration_minutes": 11,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    }
+  ]
+}

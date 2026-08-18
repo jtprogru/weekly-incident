@@ -1,0 +1,315 @@
+[
+  {
+    "key": "slack/1562",
+    "vendor": "slack",
+    "native_id": "1562",
+    "title": "Some users unable to sign in",
+    "url": "https://slack-status.com/2026-06/d13366ccb07b34a5",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-06-08T19:00:00Z",
+    "resolved_at": "2026-06-08T19:35:49Z",
+    "duration_minutes": 35,
+    "components": [
+      "Login/SSO"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some users in EMEA may be failing to receive 2FA codes via SMS when logging into Slack. We are investigating the trigger and working to resolve this incident as quickly as possible.\nWe will provide another update in 30 minutes or sooner as we have more details to share.",
+        "created_at": "2026-06-08T19:00:00Z"
+      },
+      {
+        "status": "unknown",
+        "body": "The issue affecting SMS-based two-factor authentication for users in EMEA has been resolved, and all services are now functioning as expected. We have adjusted configuration settings to restore normal service and will continue to monitor the situation to ensure stability.\nWe apologize for how you and your business may have been affected by this. We will perform a full investigation of the incident, confirming the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.",
+        "created_at": "2026-06-08T19:35:49Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-06-08T12:00:00-07:00",
+      "date_updated": "2026-06-08T12:35:49-07:00",
+      "id": 1562,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome users in EMEA may be failing to receive 2FA codes via SMS when logging into Slack. We are investigating the trigger and working to resolve this incident as quickly as possible.\u003cbr\u003e\u003cbr\u003eWe will provide another update in 30 minutes or sooner as we have more details to share.\u003c/p\u003e",
+          "date_created": "2026-06-08T12:00:00-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThe issue affecting SMS-based two-factor authentication for users in EMEA has been resolved, and all services are now functioning as expected. We have adjusted configuration settings to restore normal service and will continue to monitor the situation to ensure stability.\u0026nbsp;\u003cbr\u003e\u003cbr\u003eWe apologize for how you and your business may have been affected by this. We will perform a full investigation of the incident, confirming the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.\u003c/p\u003e",
+          "date_created": "2026-06-08T12:35:49-07:00"
+        }
+      ],
+      "services": [
+        "Login/SSO"
+      ],
+      "status": "resolved",
+      "title": "Some users unable to sign in",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-06/d13366ccb07b34a5"
+    }
+  },
+  {
+    "key": "slack/1563",
+    "vendor": "slack",
+    "native_id": "1563",
+    "title": "Trouble adding multiple users to channels",
+    "url": "https://slack-status.com/2026-06/767f9891b3838e3f",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-06-09T15:24:39Z",
+    "resolved_at": "2026-06-10T21:43:02Z",
+    "duration_minutes": 1818,
+    "components": [
+      "Workspace/Org Administration"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some users may experience issues when attempting to add multiple users to channels. Multiple matches error may appear along with a failure to identify team members. This may cause subsequent workflows not to trigger. We're investigating and will let you know as soon as we know more.",
+        "created_at": "2026-06-09T15:24:39Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue is still ongoing.\nCurrent status and actions being taken: We have identified the trigger for this issue and a fix is in the process of deploying. The progress is being monitored and we’ll provide an update as soon as the fix is completely deployed and verified.\nWe'll be back with another update once we have news to share.",
+        "created_at": "2026-06-09T17:39:08Z"
+      },
+      {
+        "status": "unknown",
+        "body": "This issue is now resolved for all users.\nCurrent status and recent actions taken: We identified the trigger for this issue and a fix was deployed. After a period of monitoring, we have concluded that there is no further impact to users.\nPrevious impact to end users: Some users may have experienced issues when attempting to add multiple users to channels and received an error indicating a failure to identify team members. This could have caused subsequent workflows not to trigger.\nRequired resolution steps: No further action is necessary.\nThanks for sticking with us as we resolved this. We apologize for any disruptions to your day.",
+        "created_at": "2026-06-09T20:18:02Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've received reports that a subset of users may continue to experience issues when attempting to add multiple users to channels using email addresses. These users may encounter a \"Multiple matches\" error, preventing the intended user from being identified and added to the channel.\nWe’re actively investigating these reports to determine whether additional remediation is required. We'll provide further updates as more information becomes available.",
+        "created_at": "2026-06-10T09:47:22Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re working to reproduce the issue. This will help us ‌identify the underlying cause and provide a resolution.\nWe'll provide further update as soon as more information becomes available.",
+        "created_at": "2026-06-10T10:35:18Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’ve identified the cause of the issue and we’re validating a fix to ensure it fully resolves the issue before we deploy it.\nWe'll provide further update as soon as more information becomes available.",
+        "created_at": "2026-06-10T11:44:38Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've deployed a fix for the issue and are monitoring to confirm that the issue has been resolved.\nWe'll provide another update as soon as more information becomes available.",
+        "created_at": "2026-06-10T14:35:48Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've resolved an issue that could cause incorrect email address tokens to appear when users pasted multiple email addresses into the member invite flow. In some cases, pasted email addresses were incorrectly matched to existing members with similar email addresses, requiring users to manually correct the entries before proceeding.\nWe identified the cause of the issue and deployed a fix to ensure email addresses are now matched correctly when pasted into the invite flow. The issue is resolved for all affected users.\nIf you're still experiencing any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). We apologize for the disruption and appreciate your patience.",
+        "created_at": "2026-06-10T21:43:02Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-06-09T08:24:39-07:00",
+      "date_updated": "2026-06-10T14:43:02-07:00",
+      "id": 1563,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome users may experience issues when attempting to add multiple users to channels. Multiple matches error may appear along with a failure to identify team members. This may cause subsequent workflows not to trigger. We're investigating and will let you know as soon as we know more.\u003c/p\u003e",
+          "date_created": "2026-06-09T08:24:39-07:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue is still ongoing.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eWe have identified the trigger for this issue and a fix is in the process of deploying. The progress is being monitored and we’ll provide an update as soon as the fix is completely deployed and verified.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll be back with another update once we have news to share.\u003c/p\u003e",
+          "date_created": "2026-06-09T10:39:08-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThis issue is now resolved for all users.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and recent actions taken:\u003c/strong\u003e We identified the trigger for this issue and a fix was deployed. After a period of monitoring, we have concluded that there is no further impact to users.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003ePrevious impact to end users:\u003c/strong\u003e Some users may have experienced issues when attempting to add multiple users to channels and received an error indicating a failure to identify team members. This could have caused subsequent workflows not to trigger.\u0026nbsp;\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eRequired resolution steps:\u003c/strong\u003e No further action is necessary.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eThanks for sticking with us as we resolved this. We apologize for any disruptions to your day.\u003cbr\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-06-09T13:18:02-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've received reports that a subset of users may continue to experience issues when attempting to add multiple users to channels using email addresses. These users may encounter a \"Multiple matches\" error, preventing the intended user from being identified and added to the channel.\u003cbr\u003eWe’re actively investigating these reports to determine whether additional remediation is required. We'll provide further updates as more information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T02:47:22-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re working to reproduce the issue. This will help us ‌identify the underlying cause and provide a resolution.\u003c/p\u003e\u003cp\u003eWe'll provide further update as soon as more information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T03:35:18-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’ve identified the cause of the issue and we’re validating a fix to ensure it fully resolves the issue before we deploy it.\u003cbr\u003eWe'll provide further update as soon as more information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T04:44:38-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've deployed a fix for the issue and are monitoring to confirm that the issue has been resolved.\u0026nbsp;\u003c/p\u003e\u003cp\u003eWe'll provide another update as soon as more information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T07:35:48-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've resolved an issue that could cause incorrect email address tokens to appear when users pasted multiple email addresses into the member invite flow. In some cases, pasted email addresses were incorrectly matched to existing members with similar email addresses, requiring users to manually correct the entries before proceeding.\u003c/p\u003e\u003cp\u003eWe identified the cause of the issue and deployed a fix to ensure email addresses are now matched correctly when pasted into the invite flow. The issue is resolved for all affected users.\u003c/p\u003e\u003cp\u003eIf you're still experiencing any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). We apologize for the disruption and appreciate your patience.\u003c/p\u003e",
+          "date_created": "2026-06-10T14:43:02-07:00"
+        }
+      ],
+      "services": [
+        "Workspace/Org Administration"
+      ],
+      "status": "resolved",
+      "title": "Trouble adding multiple users to channels",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-06/767f9891b3838e3f"
+    }
+  },
+  {
+    "key": "slack/1564",
+    "vendor": "slack",
+    "native_id": "1564",
+    "title": "Trouble with Gmail add-on Integration",
+    "url": "https://slack-status.com/2026-06/8e2c9f5e6f18c289",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-06-10T20:36:35Z",
+    "resolved_at": "2026-06-11T06:39:58Z",
+    "duration_minutes": 603,
+    "components": [
+      "Apps/Integrations/APIs"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "We're aware of an issue impacting the Slack Gmail add-on integration. As a result, users are unable to interact with the add-on and may encounter a “Something went wrong when executing the add-on. For help, contact the add-on developer” error message when attempting to use it. We are investigating the cause of this issue. We'll provide an update in 30 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-10T20:36:35Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re still actively investigating the issue impacting the Slack Gmail add-on. We are working to identify the cause, and no workaround is currently available. We’ll provide an update in 30 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-10T21:05:12Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re still investigating the issue impacting Slack Gmail add-ons. No additional news to share just yet, but we’re focused on getting things back to normal as quickly as we can. We apologize for the continued trouble.\nWe’ll provide an update in 60 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-10T21:37:18Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re still investigating the issue impacting Slack Gmail add-ons. No additional news to share just yet, but we’re focused on getting things back to normal as quickly as we can. We apologize for the continued trouble.\nWe’ll provide an update in 60 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-10T22:49:33Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We continue to investigate the issue impacting Slack Gmail add-ons. We've identified the cause and our teams are working on a fix to resolve the issue as soon as possible.\nWe’ll provide an update once additional information becomes available.",
+        "created_at": "2026-06-10T23:39:55Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re actively working on the fix to resolve the issue. We estimate this will take approximately four hours or more to complete, and validate the fix, before it can be deployed. As such, the next status update will be once the fix has been completed and validated, or we have new information to share. We apologize for any inconvenience this issue is causing for users.",
+        "created_at": "2026-06-11T00:18:54Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re continuing to investigate the issues with the Slack Gmail add-on and are actively working on a fix to resolve the issue. There’s no new information to share at this time, but we’ll provide an update as soon as we have more details on implementing the fix.\nWe apologize for any inconvenience this issue is causing for users.",
+        "created_at": "2026-06-11T06:04:09Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've resolved the issue that prevented customers from using the Slack Gmail add-on. The fix has been successfully deployed; health metrics have stabilized, and the Gmail add-on is now fully operational for all affected users.\nWe apologize for any inconvenience this may have caused.",
+        "created_at": "2026-06-11T06:39:58Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-06-10T13:36:35-07:00",
+      "date_updated": "2026-06-10T23:39:58-07:00",
+      "id": 1564,
+      "notes": [
+        {
+          "body": "\u003cp\u003eWe're aware of an issue impacting the Slack Gmail add-on integration. As a result, users are unable to interact with the add-on and may encounter a “Something went wrong when executing the add-on. For help, contact the add-on developer” error message when attempting to use it. We are investigating the cause of this issue. We'll provide an update in 30 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T13:36:35-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re still actively investigating the issue impacting the Slack Gmail add-on. We are working to identify the cause, and no workaround is currently available. We’ll provide an update in 30 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T14:05:12-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re still investigating the issue impacting Slack Gmail add-ons. No additional news to share just yet, but we’re focused on getting things back to normal as quickly as we can. We apologize for the continued trouble.\u003cbr\u003e\u003cbr\u003eWe’ll provide an update in 60 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T14:37:18-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re still investigating the issue impacting Slack Gmail add-ons. No additional news to share just yet, but we’re focused on getting things back to normal as quickly as we can. We apologize for the continued trouble.\u003c/p\u003e\u003cp\u003eWe’ll provide an update in 60 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T15:49:33-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe continue to investigate the issue impacting Slack Gmail add-ons. We've identified the cause and our teams are working on a fix to resolve the issue as soon as possible.\u003c/p\u003e\u003cp\u003eWe’ll provide an update once additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-10T16:39:55-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re actively working on the fix to resolve the issue. We estimate this will take approximately four hours or more to complete, and validate the fix, before it can be deployed. As such, the next status update will be once the fix has been completed and validated, or we have new information to share. We apologize for any inconvenience this issue is causing for users.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-06-10T17:18:54-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re continuing to investigate the issues with the Slack Gmail add-on and are actively working on a fix to resolve the issue. There’s no new information to share at this time, but we’ll provide an update as soon as we have more details on implementing the fix.\u003cbr\u003e\u003cbr\u003eWe apologize for any inconvenience this issue is causing for users.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-06-10T23:04:09-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've resolved the issue that prevented customers from using the Slack Gmail add-on. The fix has been successfully deployed; health metrics have stabilized, and the Gmail add-on is now fully operational for all affected users.\u003cbr\u003e\u003cbr\u003eWe apologize for any inconvenience this may have caused.\u003c/p\u003e",
+          "date_created": "2026-06-10T23:39:58-07:00"
+        }
+      ],
+      "services": [
+        "Apps/Integrations/APIs"
+      ],
+      "status": "resolved",
+      "title": "Trouble with Gmail add-on Integration",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-06/8e2c9f5e6f18c289"
+    }
+  },
+  {
+    "key": "slack/1566",
+    "vendor": "slack",
+    "native_id": "1566",
+    "title": "Child windows displaying content at half height",
+    "url": "https://slack-status.com/2026-06/882c8c36707ac335",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-06-11T22:13:07Z",
+    "resolved_at": "2026-06-11T23:15:33Z",
+    "duration_minutes": 62,
+    "components": [],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "We're aware of an issue affecting the Slack desktop app. Users may find that content in child windows, such as channels or documents opened in a separate window, displays at reduced height. We’ve identified the technical trigger and are deploying a fix.\nWe'll provide an update in 30 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-11T22:13:07Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’ve deployed a fix and are now performing validations. We'll provide an update in 30 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-06-11T22:43:12Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've validated that the fix resolved the issue and child windows are now displaying content as expected.\nYou may need to reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux) in order for this fix to be reflected on your end. We're sorry for the disruption this caused to your day.",
+        "created_at": "2026-06-11T23:15:33Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-06-11T15:13:07-07:00",
+      "date_updated": "2026-06-11T16:15:33-07:00",
+      "id": 1566,
+      "notes": [
+        {
+          "body": "\u003cp\u003eWe're aware of an issue affecting the Slack desktop app. Users may find that content\u0026nbsp;in child windows, such as channels or documents opened in a separate window, displays\u0026nbsp;at reduced height. We’ve identified the technical trigger and are deploying a fix.\u003cbr\u003e\u003cbr\u003eWe'll provide an update in 30 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-11T15:13:07-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’ve deployed a fix and are now performing validations. We'll provide an update in 30 minutes or sooner if additional information becomes available.\u003c/p\u003e",
+          "date_created": "2026-06-11T15:43:12-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've validated that the fix resolved the issue and child windows are now displaying content as expected.\u0026nbsp;\u003cbr\u003e\u003cbr\u003eYou may need to reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux) in order for this fix to be reflected on your end. We're sorry for the disruption this caused to your day.\u003c/p\u003e",
+          "date_created": "2026-06-11T16:15:33-07:00"
+        }
+      ],
+      "services": [],
+      "status": "resolved",
+      "title": "Child windows displaying content at half height",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-06/882c8c36707ac335"
+    }
+  }
+]

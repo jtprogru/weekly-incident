@@ -1,0 +1,326 @@
+[
+  {
+    "key": "circleci/hth87g8tfm2y",
+    "vendor": "circleci",
+    "native_id": "hth87g8tfm2y",
+    "title": "Some pipelines not triggering due to GitHub API failures",
+    "url": "https://stspg.io/3q4dxfr93jhd",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-04-01T11:55:06.949Z",
+    "resolved_at": "2026-04-01T12:23:57.585Z",
+    "duration_minutes": 28,
+    "components": [
+      "Pipelines \u0026 Workflows",
+      "GitHub API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "wv9pdc05mrlx",
+        "status": "investigating",
+        "body": "Some pipelines may not trigger due to a high rate of API failures on one of GitHub's API endpoints. This includes some manually-triggered pipelines, some OAuth hooks and some scheduled pipelines.",
+        "created_at": "2026-04-01T11:55:07.066Z"
+      },
+      {
+        "native_id": "j7zkd77drvhf",
+        "status": "identified",
+        "body": "We are continuing to see very high error rates from GitHub's `GET /repos/{owner}/{repo}/commits` API.",
+        "created_at": "2026-04-01T11:58:00.537Z"
+      },
+      {
+        "native_id": "93y2hrrsrpv7",
+        "status": "monitoring",
+        "body": "GitHub's `GET /repos/{owner}/{repo}/commits` API has appeared to recover. We will continue to monitor this.",
+        "created_at": "2026-04-01T12:12:45.299Z"
+      },
+      {
+        "native_id": "g9ljw3c942vt",
+        "status": "resolved",
+        "body": "It appears that GitHub's `GET /repos/{owner}/{repo}/commits` API is now stable and responsive.",
+        "created_at": "2026-04-01T12:23:57.585Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-12T16:43:37.822Z"
+        },
+        {
+          "created_at": "2019-01-21T21:45:32.960Z",
+          "description": null,
+          "group": false,
+          "group_id": "s21fdjds0k15",
+          "id": "ys748wcgjv2s",
+          "name": "GitHub API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T19:01:46.919Z"
+        }
+      ],
+      "created_at": "2026-04-01T11:55:06.957Z",
+      "id": "hth87g8tfm2y",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "It appears that GitHub's `GET /repos/{owner}/{repo}/commits` API is now stable and responsive.",
+          "created_at": "2026-04-01T12:23:57.585Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-01T12:23:57.585Z",
+          "id": "g9ljw3c942vt",
+          "incident_id": "hth87g8tfm2y",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-01T12:23:57.585Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "GitHub's `GET /repos/{owner}/{repo}/commits` API has appeared to recover. We will continue to monitor this.",
+          "created_at": "2026-04-01T12:12:45.299Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-01T12:12:45.299Z",
+          "id": "93y2hrrsrpv7",
+          "incident_id": "hth87g8tfm2y",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-01T12:12:45.299Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to see very high error rates from GitHub's `GET /repos/{owner}/{repo}/commits` API.",
+          "created_at": "2026-04-01T11:58:00.537Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-01T11:58:00.537Z",
+          "id": "j7zkd77drvhf",
+          "incident_id": "hth87g8tfm2y",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-01T11:58:00.537Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some pipelines may not trigger due to a high rate of API failures on one of GitHub's API endpoints. This includes some manually-triggered pipelines, some OAuth hooks and some scheduled pipelines.",
+          "created_at": "2026-04-01T11:55:07.066Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-01T11:55:07.066Z",
+          "id": "wv9pdc05mrlx",
+          "incident_id": "hth87g8tfm2y",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-01T11:55:07.066Z"
+        }
+      ],
+      "monitoring_at": "2026-04-01T12:12:45.299Z",
+      "name": "Some pipelines not triggering due to GitHub API failures",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-01T12:23:57.585Z",
+      "shortlink": "https://stspg.io/3q4dxfr93jhd",
+      "started_at": "2026-04-01T11:55:06.949Z",
+      "status": "resolved",
+      "updated_at": "2026-04-01T12:23:57.601Z"
+    }
+  },
+  {
+    "key": "circleci/lxkrhs9rmrxv",
+    "vendor": "circleci",
+    "native_id": "lxkrhs9rmrxv",
+    "title": "Usage API data for 4/1 is incomplete with multiple columns showing null values. Data prior to 4/1 is unaffected. We are investigating.",
+    "url": "https://stspg.io/78v0qz8pybdn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-02T19:19:48.923Z",
+    "resolved_at": "2026-04-03T02:18:05.03Z",
+    "duration_minutes": 418,
+    "components": [
+      "CircleCI API"
+    ],
+    "updates": [
+      {
+        "native_id": "xtfmpyx6dv40",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-04-02T19:19:49.009Z"
+      },
+      {
+        "native_id": "lcw30dwdlnw9",
+        "status": "identified",
+        "body": "The Usage API issue has been identified and the fix is being implemented.",
+        "created_at": "2026-04-02T21:23:34.935Z"
+      },
+      {
+        "native_id": "4p828sty8x4g",
+        "status": "resolved",
+        "body": "The Usage API issue affecting 4/1 data has been resolved. Updated data will be available on 4/3. Thank you for your patience.",
+        "created_at": "2026-04-03T02:18:05.03Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-08-06T19:54:25.350Z"
+        }
+      ],
+      "created_at": "2026-04-02T19:19:48.929Z",
+      "id": "lxkrhs9rmrxv",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The Usage API issue affecting 4/1 data has been resolved. Updated data will be available on 4/3. Thank you for your patience.",
+          "created_at": "2026-04-03T02:18:05.030Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-03T02:18:05.030Z",
+          "id": "4p828sty8x4g",
+          "incident_id": "lxkrhs9rmrxv",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-03T02:18:05.030Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The Usage API issue has been identified and the fix is being implemented.",
+          "created_at": "2026-04-02T21:23:34.935Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-02T21:23:34.935Z",
+          "id": "lcw30dwdlnw9",
+          "incident_id": "lxkrhs9rmrxv",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-02T21:23:34.935Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-04-02T19:19:49.009Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-02T19:19:49.009Z",
+          "id": "xtfmpyx6dv40",
+          "incident_id": "lxkrhs9rmrxv",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-02T19:19:49.009Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Usage API data for 4/1 is incomplete with multiple columns showing null values. Data prior to 4/1 is unaffected. We are investigating.",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-03T02:18:05.030Z",
+      "shortlink": "https://stspg.io/78v0qz8pybdn",
+      "started_at": "2026-04-02T19:19:48.923Z",
+      "status": "resolved",
+      "updated_at": "2026-04-03T02:18:05.047Z"
+    }
+  }
+]

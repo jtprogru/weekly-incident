@@ -1,0 +1,183 @@
+[
+  {
+    "key": "datadog/7ht7d7xsnbhy",
+    "vendor": "datadog",
+    "native_id": "7ht7d7xsnbhy",
+    "title": "Delayed Metrics",
+    "url": "https://stspg.io/32s2j42tn8xz",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-04-15T22:38:22.908Z",
+    "resolved_at": "2026-04-16T00:37:38.862Z",
+    "duration_minutes": 119,
+    "components": [
+      "Metrics and Infra Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "n1shl7z048mh",
+        "status": "investigating",
+        "body": "We are investigating increased latency processing Metrics.\nAs a result of this issue, some users may see delays or gaps for metrics on graphs.\n\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally.",
+        "created_at": "2026-04-15T22:38:22.98Z"
+      },
+      {
+        "native_id": "f86nhg6ltfpc",
+        "status": "investigating",
+        "body": "We are investigating increased latency processing Distribution Metrics.\nAs a result of this issue, some users may see delays or gaps for distribution metrics on graphs.\n\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally.",
+        "created_at": "2026-04-15T23:16:37.587Z"
+      },
+      {
+        "native_id": "0h2wh831lr3p",
+        "status": "investigating",
+        "body": "We are still investigating increased latency processing Distribution Metrics, delays have gone down but have not fully recovered.",
+        "created_at": "2026-04-15T23:54:58.881Z"
+      },
+      {
+        "native_id": "q4tb21gpqz7k",
+        "status": "monitoring",
+        "body": "We have resolved the lag in distribution metrics and we are monitoring the results.\nWe will provide another update once the issue is fully resolved.",
+        "created_at": "2026-04-16T00:32:12.9Z"
+      },
+      {
+        "native_id": "8rtsvgvynb03",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-04-16T00:37:38.862Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        }
+      ],
+      "created_at": "2026-04-15T18:38:22.912-04:00",
+      "id": "7ht7d7xsnbhy",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-04-15T20:37:38.862-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T20:37:38.862-04:00",
+          "id": "8rtsvgvynb03",
+          "incident_id": "7ht7d7xsnbhy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T20:37:38.862-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have resolved the lag in distribution metrics and we are monitoring the results.\nWe will provide another update once the issue is fully resolved.",
+          "created_at": "2026-04-15T20:32:12.900-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T20:32:12.900-04:00",
+          "id": "q4tb21gpqz7k",
+          "incident_id": "7ht7d7xsnbhy",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T20:32:12.900-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are still investigating increased latency processing Distribution Metrics, delays have gone down but have not fully recovered.",
+          "created_at": "2026-04-15T19:54:58.881-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T19:54:58.881-04:00",
+          "id": "0h2wh831lr3p",
+          "incident_id": "7ht7d7xsnbhy",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T19:54:58.881-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating increased latency processing Distribution Metrics.\nAs a result of this issue, some users may see delays or gaps for distribution metrics on graphs.\n\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally.",
+          "created_at": "2026-04-15T19:16:37.587-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T19:16:37.587-04:00",
+          "id": "f86nhg6ltfpc",
+          "incident_id": "7ht7d7xsnbhy",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T19:16:37.587-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing Metrics.\nAs a result of this issue, some users may see delays or gaps for metrics on graphs.\n\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally.",
+          "created_at": "2026-04-15T18:38:22.980-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T18:38:22.980-04:00",
+          "id": "n1shl7z048mh",
+          "incident_id": "7ht7d7xsnbhy",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T18:38:22.980-04:00"
+        }
+      ],
+      "monitoring_at": "2026-04-15T20:32:12.900-04:00",
+      "name": "Delayed Metrics",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-15T20:37:38.862-04:00",
+      "shortlink": "https://stspg.io/32s2j42tn8xz",
+      "started_at": "2026-04-15T18:38:22.908-04:00",
+      "status": "resolved",
+      "updated_at": "2026-04-15T20:37:38.876-04:00"
+    }
+  }
+]

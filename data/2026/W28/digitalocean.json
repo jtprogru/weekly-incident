@@ -1,0 +1,131 @@
+[
+  {
+    "key": "digitalocean/2kxtxyvzzzk0",
+    "vendor": "digitalocean",
+    "native_id": "2kxtxyvzzzk0",
+    "title": "Kubernetes Deployments in NYC1",
+    "url": "https://stspg.io/p8xctv4k5yjv",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-09T20:31:52.145Z",
+    "resolved_at": "2026-07-11T01:27:56.795Z",
+    "duration_minutes": 1736,
+    "components": [
+      "NYC1"
+    ],
+    "updates": [
+      {
+        "native_id": "cxwpfp53hgfp",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue affecting Kubernetes deployments in NYC1. Users may see intermittent DNS failures and NodeNotReady events from application workloads during this time.\n\nWe apologize for the inconvenience, we'll share new information on this page as soon as it is available.",
+        "created_at": "2026-07-09T20:31:52.251Z"
+      },
+      {
+        "native_id": "d114d70wg74t",
+        "status": "monitoring",
+        "body": "The issue affecting Kubernetes deployments in NYC1 has subsided. Workloads should now be functioning normally.\n\nOur Engineering team is continuing to monitor the affected systems to confirm full resolution. We'll update this page if any further action is needed. We apologize for the inconvenience this may have caused.",
+        "created_at": "2026-07-10T01:18:00.407Z"
+      },
+      {
+        "native_id": "483g7d03z4bl",
+        "status": "resolved",
+        "body": "The issue affecting Kubernetes deployments in the NYC1 region has been resolved. Our investigation found intermittent DNS timeouts affecting a small number of DOKS clusters, with affected worker nodes running on shared-CPU Droplets. This is a documented limitation for latency-sensitive cluster DNS workloads such as CoreDNS.\n\nThe affected clusters are currently functional. To reduce the risk of recurrence, we recommend running CoreDNS on non-shared/dedicated CPU node pools and using sufficient CoreDNS replicas. \n\nIf you continue to see DNS failures or NodeNotReady events, please open a support ticket so we can investigate that cluster specifically.",
+        "created_at": "2026-07-11T01:27:56.795Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-22T17:31:21.379Z",
+          "description": null,
+          "group": false,
+          "group_id": "gb3gs5vj7js2",
+          "id": "jzv4wms5qc33",
+          "name": "NYC1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-07-15T20:00:50.223Z"
+        }
+      ],
+      "created_at": "2026-07-09T20:31:52.156Z",
+      "id": "2kxtxyvzzzk0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "jzv4wms5qc33",
+              "name": "Kubernetes - NYC1",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue affecting Kubernetes deployments in the NYC1 region has been resolved. Our investigation found intermittent DNS timeouts affecting a small number of DOKS clusters, with affected worker nodes running on shared-CPU Droplets. This is a documented limitation for latency-sensitive cluster DNS workloads such as CoreDNS.\n\nThe affected clusters are currently functional. To reduce the risk of recurrence, we recommend running CoreDNS on non-shared/dedicated CPU node pools and using sufficient CoreDNS replicas. \n\nIf you continue to see DNS failures or NodeNotReady events, please open a support ticket so we can investigate that cluster specifically.",
+          "created_at": "2026-07-11T01:27:56.795Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-11T01:27:56.795Z",
+          "id": "483g7d03z4bl",
+          "incident_id": "2kxtxyvzzzk0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-11T01:27:56.795Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jzv4wms5qc33",
+              "name": "Kubernetes - NYC1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue affecting Kubernetes deployments in NYC1 has subsided. Workloads should now be functioning normally.\n\nOur Engineering team is continuing to monitor the affected systems to confirm full resolution. We'll update this page if any further action is needed. We apologize for the inconvenience this may have caused.",
+          "created_at": "2026-07-10T01:18:00.407Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T01:18:00.407Z",
+          "id": "d114d70wg74t",
+          "incident_id": "2kxtxyvzzzk0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T01:18:00.407Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jzv4wms5qc33",
+              "name": "Kubernetes - NYC1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue affecting Kubernetes deployments in NYC1. Users may see intermittent DNS failures and NodeNotReady events from application workloads during this time.\n\nWe apologize for the inconvenience, we'll share new information on this page as soon as it is available.",
+          "created_at": "2026-07-09T20:31:52.251Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T20:31:52.251Z",
+          "id": "cxwpfp53hgfp",
+          "incident_id": "2kxtxyvzzzk0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T20:31:52.251Z"
+        }
+      ],
+      "monitoring_at": "2026-07-10T01:18:00.407Z",
+      "name": "Kubernetes Deployments in NYC1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-11T01:27:56.795Z",
+      "shortlink": "https://stspg.io/p8xctv4k5yjv",
+      "started_at": "2026-07-09T20:31:52.145Z",
+      "status": "resolved",
+      "updated_at": "2026-07-11T01:27:56.812Z"
+    }
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "key": "datadog/twnwtk275knx",
+    "vendor": "datadog",
+    "native_id": "twnwtk275knx",
+    "title": "Delayed AWS, GCP, Azure, SaaS integrations Metrics and Logs",
+    "url": "https://stspg.io/x812ktyhkf0q",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2025-10-14T17:14:52.724Z",
+    "resolved_at": "2025-10-14T19:19:29.164Z",
+    "duration_minutes": 124,
+    "components": [
+      "Metrics and Infra Monitoring"
+    ],
+    "updates": [
+      {
+        "native_id": "r5knv8jv2x95",
+        "status": "investigating",
+        "body": "We are investigating increased latency processing AWS, GCP and Azure Metrics.\nAs a result of this issue, some users may see delays or gaps in graphs that contain these metrics.\nTo prevent spurious alerts, we have temporarily disabled monitors based on this data.",
+        "created_at": "2025-10-14T17:14:52.821Z"
+      },
+      {
+        "native_id": "vwcqbjl4vy8v",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2025-10-14T17:29:00.501Z"
+      },
+      {
+        "native_id": "0l0x477m6yf4",
+        "status": "monitoring",
+        "body": "A fix has been implemented, and we are monitoring the results.",
+        "created_at": "2025-10-14T17:43:17.204Z"
+      },
+      {
+        "native_id": "xr814cjgvhrw",
+        "status": "monitoring",
+        "body": "Data flow has been restored for new incoming data. We are currently backfilling historical data.",
+        "created_at": "2025-10-14T18:44:58.857Z"
+      },
+      {
+        "native_id": "gc4tlgcn48cq",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2025-10-14T19:19:29.164Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-29T13:28:08.403-04:00"
+        }
+      ],
+      "created_at": "2025-10-14T13:14:52.729-04:00",
+      "id": "twnwtk275knx",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2025-10-14T15:19:29.164-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-14T15:19:29.164-04:00",
+          "id": "gc4tlgcn48cq",
+          "incident_id": "twnwtk275knx",
+          "status": "resolved",
+          "tweet_id": 1978178867266510905,
+          "updated_at": "2025-10-14T15:19:29.522-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Data flow has been restored for new incoming data. We are currently backfilling historical data.",
+          "created_at": "2025-10-14T14:44:58.857-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-14T14:44:58.857-04:00",
+          "id": "xr814cjgvhrw",
+          "incident_id": "twnwtk275knx",
+          "status": "monitoring",
+          "tweet_id": 1978170183379534167,
+          "updated_at": "2025-10-14T14:44:59.141-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "A fix has been implemented, and we are monitoring the results.",
+          "created_at": "2025-10-14T13:43:17.204-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-14T13:43:17.204-04:00",
+          "id": "0l0x477m6yf4",
+          "incident_id": "twnwtk275knx",
+          "status": "monitoring",
+          "tweet_id": 1978154657605374231,
+          "updated_at": "2025-10-14T13:43:17.511-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2025-10-14T13:29:00.501-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-14T13:29:00.501-04:00",
+          "id": "vwcqbjl4vy8v",
+          "incident_id": "twnwtk275knx",
+          "status": "identified",
+          "tweet_id": 1978151064315846729,
+          "updated_at": "2025-10-14T13:29:00.790-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency processing AWS, GCP and Azure Metrics.\nAs a result of this issue, some users may see delays or gaps in graphs that contain these metrics.\nTo prevent spurious alerts, we have temporarily disabled monitors based on this data.",
+          "created_at": "2025-10-14T13:14:52.821-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-14T13:14:52.821-04:00",
+          "id": "r5knv8jv2x95",
+          "incident_id": "twnwtk275knx",
+          "status": "investigating",
+          "tweet_id": 1978147509366358080,
+          "updated_at": "2025-10-14T13:14:53.227-04:00"
+        }
+      ],
+      "monitoring_at": "2025-10-14T13:43:17.204-04:00",
+      "name": "Delayed AWS, GCP, Azure, SaaS integrations Metrics and Logs",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2025-10-14T15:19:29.164-04:00",
+      "shortlink": "https://stspg.io/x812ktyhkf0q",
+      "started_at": "2025-10-14T13:14:52.724-04:00",
+      "status": "resolved",
+      "updated_at": "2025-10-14T15:19:29.526-04:00"
+    }
+  }
+]

@@ -1,0 +1,862 @@
+[
+  {
+    "key": "digitalocean/8sjb7kmqnvk9",
+    "vendor": "digitalocean",
+    "native_id": "8sjb7kmqnvk9",
+    "title": "Serverless Inference - Gemma4 Latency Issues Causing Timeouts \u0026 Slow Responses",
+    "url": "https://stspg.io/rzs04wclgpfq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-13T19:04:10.227Z",
+    "resolved_at": "2026-07-15T21:46:35.616Z",
+    "duration_minutes": 3042,
+    "components": [
+      "Inference"
+    ],
+    "updates": [
+      {
+        "native_id": "lm7m655m8ym1",
+        "status": "identified",
+        "body": "We are currently experiencing an issue where customers using the Gemma 4 model on our Serverless Inference and Dedicated Inference platforms may experience severe latency or request timeouts.\nOur engineering team has identified a backend configuration issue as the root cause, which is temporarily degrading performance. We are actively working on a fix to restore normal response times and will provide another update as soon as the mitigation is in place",
+        "created_at": "2026-07-13T19:04:10.33Z"
+      },
+      {
+        "native_id": "h5qb9cprv92c",
+        "status": "monitoring",
+        "body": "A fix has been deployed to resolve the backend configuration issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+        "created_at": "2026-07-13T22:24:14.997Z"
+      },
+      {
+        "native_id": "c83lld5wgmqn",
+        "status": "identified",
+        "body": "We are currently experiencing an issue affecting customers using the Gemma 4 model on our Serverless Inference platform. Customers may experience significantly increased latency or request timeouts.\n\nOur Engineering team has identified a backend configuration issue as the root cause, which is temporarily impacting model performance. Please be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+        "created_at": "2026-07-14T11:07:24.206Z"
+      },
+      {
+        "native_id": "4s9nxff2q7lf",
+        "status": "monitoring",
+        "body": "A fix has been deployed to resolve the issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+        "created_at": "2026-07-15T10:06:19.57Z"
+      },
+      {
+        "native_id": "vvrgvw5p9r3q",
+        "status": "resolved",
+        "body": "The deployed fix has successfully restored full functionality, and our monitoring shows that system performance has completely stabilized. Response times for all Gemma 4 inference workflows have returned to normal baseline levels.\nWe will continue to track platform stability moving forward to ensure long-term reliability. We apologize for any disruption this may have caused to your workflows and appreciate your patience throughout the recovery process.",
+        "created_at": "2026-07-15T21:46:35.616Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-15T07:02:10.429Z",
+          "description": "Serverless access to foundation models (e.g. Llama, Mistral, GPT) via OpenAI-compatible API.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "2z9ldz1t4dgp",
+          "name": "Inference",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2026-05-15",
+          "status": "operational",
+          "updated_at": "2026-07-23T12:36:59.981Z"
+        }
+      ],
+      "created_at": "2026-07-13T19:04:10.240Z",
+      "id": "8sjb7kmqnvk9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The deployed fix has successfully restored full functionality, and our monitoring shows that system performance has completely stabilized. Response times for all Gemma 4 inference workflows have returned to normal baseline levels.\nWe will continue to track platform stability moving forward to ensure long-term reliability. We apologize for any disruption this may have caused to your workflows and appreciate your patience throughout the recovery process.",
+          "created_at": "2026-07-15T21:46:35.616Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T21:46:35.616Z",
+          "id": "vvrgvw5p9r3q",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T21:46:35.616Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed to resolve the issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+          "created_at": "2026-07-15T10:06:19.570Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T10:06:19.570Z",
+          "id": "4s9nxff2q7lf",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T10:06:19.570Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are currently experiencing an issue affecting customers using the Gemma 4 model on our Serverless Inference platform. Customers may experience significantly increased latency or request timeouts.\n\nOur Engineering team has identified a backend configuration issue as the root cause, which is temporarily impacting model performance. Please be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+          "created_at": "2026-07-14T11:07:24.206Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T11:07:24.206Z",
+          "id": "c83lld5wgmqn",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T11:07:24.206Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed to resolve the backend configuration issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+          "created_at": "2026-07-13T22:24:14.997Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T22:24:14.997Z",
+          "id": "h5qb9cprv92c",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T22:24:14.997Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently experiencing an issue where customers using the Gemma 4 model on our Serverless Inference and Dedicated Inference platforms may experience severe latency or request timeouts.\nOur engineering team has identified a backend configuration issue as the root cause, which is temporarily degrading performance. We are actively working on a fix to restore normal response times and will provide another update as soon as the mitigation is in place",
+          "created_at": "2026-07-13T19:04:10.330Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:04:10.330Z",
+          "id": "lm7m655m8ym1",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:04:10.330Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T22:24:14.997Z",
+      "name": "Serverless Inference - Gemma4 Latency Issues Causing Timeouts \u0026 Slow Responses",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T21:46:35.616Z",
+      "shortlink": "https://stspg.io/rzs04wclgpfq",
+      "started_at": "2026-07-13T19:04:10.227Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T21:46:35.631Z"
+    }
+  },
+  {
+    "key": "digitalocean/nfhvp4yhyrfl",
+    "vendor": "digitalocean",
+    "native_id": "nfhvp4yhyrfl",
+    "title": "Reserved IP routing in TOR1",
+    "url": "https://stspg.io/x0s0pghvdcgv",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-16T13:39:47.12Z",
+    "resolved_at": "2026-07-16T17:24:35.996Z",
+    "duration_minutes": 224,
+    "components": [
+      "Reserved IP",
+      "TOR1"
+    ],
+    "updates": [
+      {
+        "native_id": "2ysnlytcf8fb",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue affecting Reserved IP routing in the TOR1 region. The issue is causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nIn the meantime, detaching and reassigning the Reserved IP to the Droplet may restore connectivity. We recommend trying this workaround if you are experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is actively investigating the root cause and working towards a resolution. We will provide updates as more information becomes available.",
+        "created_at": "2026-07-16T13:39:47.275Z"
+      },
+      {
+        "native_id": "mx2r629wp7mh",
+        "status": "identified",
+        "body": "Our Engineering team has identified the cause of the issue affecting Reserved IP routing in the TOR1 region, which was causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nDetaching and reassigning the Reserved IP to the Droplet may restore connectivity in the meantime. We recommend trying this workaround if you are still experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is now working on implementing a fix. We will provide updates as more information becomes available.",
+        "created_at": "2026-07-16T15:30:04.792Z"
+      },
+      {
+        "native_id": "y903yzdmw49d",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the issue affecting Reserved IP routing in the TOR1 region, and we are currently monitoring the results.\n\nInbound and outbound traffic to and from Reserved IPs in TOR1 should now be restored. If you reassigned your Reserved IP as a workaround and are still experiencing issues, please reach out to our support team.\n\nWe will continue to monitor the situation closely and provide a further update once we have confirmed the issue is fully resolved.",
+        "created_at": "2026-07-16T17:01:27.917Z"
+      },
+      {
+        "native_id": "fdg9nrm0b8lc",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the underlying issue affecting Reserved IP routing in the TOR1 region has been fully resolved, and services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+        "created_at": "2026-07-16T17:24:35.996Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-06T18:42:45.132Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yvh4g97h7mk7",
+          "name": "Reserved IP",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-08-09T00:31:29.223Z"
+        },
+        {
+          "created_at": "2023-02-22T17:38:11.448Z",
+          "description": null,
+          "group": false,
+          "group_id": "sjlhrm4vf4pr",
+          "id": "3hwkzd3pqd0p",
+          "name": "TOR1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-07-16T17:01:27.868Z"
+        }
+      ],
+      "created_at": "2026-07-16T13:39:47.134Z",
+      "id": "nfhvp4yhyrfl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the underlying issue affecting Reserved IP routing in the TOR1 region has been fully resolved, and services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+          "created_at": "2026-07-16T17:24:35.996Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T17:24:35.996Z",
+          "id": "fdg9nrm0b8lc",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T17:24:35.996Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the issue affecting Reserved IP routing in the TOR1 region, and we are currently monitoring the results.\n\nInbound and outbound traffic to and from Reserved IPs in TOR1 should now be restored. If you reassigned your Reserved IP as a workaround and are still experiencing issues, please reach out to our support team.\n\nWe will continue to monitor the situation closely and provide a further update once we have confirmed the issue is fully resolved.",
+          "created_at": "2026-07-16T17:01:27.917Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T17:01:27.917Z",
+          "id": "y903yzdmw49d",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T17:01:27.917Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified the cause of the issue affecting Reserved IP routing in the TOR1 region, which was causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nDetaching and reassigning the Reserved IP to the Droplet may restore connectivity in the meantime. We recommend trying this workaround if you are still experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is now working on implementing a fix. We will provide updates as more information becomes available.",
+          "created_at": "2026-07-16T15:30:04.792Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T15:30:04.792Z",
+          "id": "mx2r629wp7mh",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T15:30:04.792Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue affecting Reserved IP routing in the TOR1 region. The issue is causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nIn the meantime, detaching and reassigning the Reserved IP to the Droplet may restore connectivity. We recommend trying this workaround if you are experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is actively investigating the root cause and working towards a resolution. We will provide updates as more information becomes available.",
+          "created_at": "2026-07-16T13:39:47.275Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T13:39:47.275Z",
+          "id": "2ysnlytcf8fb",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T13:39:47.275Z"
+        }
+      ],
+      "monitoring_at": "2026-07-16T17:01:27.917Z",
+      "name": "Reserved IP routing in TOR1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-16T17:24:35.996Z",
+      "shortlink": "https://stspg.io/x0s0pghvdcgv",
+      "started_at": "2026-07-16T13:39:47.120Z",
+      "status": "resolved",
+      "updated_at": "2026-07-16T17:24:36.013Z"
+    }
+  },
+  {
+    "key": "digitalocean/qzbsmdsw9lq8",
+    "vendor": "digitalocean",
+    "native_id": "qzbsmdsw9lq8",
+    "title": "Networking in BLR1",
+    "url": "https://stspg.io/8yc90q76srsl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-19T06:57:41.449Z",
+    "resolved_at": "2026-07-19T09:52:00.733Z",
+    "duration_minutes": 174,
+    "components": [
+      "BLR1"
+    ],
+    "updates": [
+      {
+        "native_id": "nft7ydvj5hvk",
+        "status": "investigating",
+        "body": "We are currently investigating an issue affecting outbound network traffic for Droplets in the BLR1 region. Customers may experience timeout errors or connectivity issues when attempting to reach external services.\nOur Engineering team is actively investigating the issue and working to identify the root cause. We will provide additional updates as soon as more information becomes available.",
+        "created_at": "2026-07-19T06:57:41.549Z"
+      },
+      {
+        "native_id": "5ygs7x5n66h0",
+        "status": "identified",
+        "body": "Our Engineering team has identified an issue affecting upstream network connectivity for Droplet-based services in the BLR1 region and is actively working with the relevant upstream providers to implement a resolution.\n\nCustomers may continue to experience intermittent timeouts or connectivity issues when attempting to reach external endpoints from Droplets in BLR1.\n\nWe will provide another update once the issue has been fully resolved or when additional information becomes available.",
+        "created_at": "2026-07-19T08:27:36.675Z"
+      },
+      {
+        "native_id": "gyc2mnxy603j",
+        "status": "monitoring",
+        "body": "Our engineering team has implemented the necessary fixes affecting upstream network connectivity for Droplet-based services in the BLR1 region. Users should now be able to connect to the external endpoints from Droplets in BLR1.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+        "created_at": "2026-07-19T09:31:03.681Z"
+      },
+      {
+        "native_id": "pyq123bftf4j",
+        "status": "resolved",
+        "body": "Our engineering team has resolved the outbound network connectivity issue in the BLR1 region. If you continue to experience problems, please open a ticket with our support team. We apologize for any inconvenience.",
+        "created_at": "2026-07-19T09:52:00.733Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-22T19:29:08.629Z",
+          "description": null,
+          "group": false,
+          "group_id": "sjlhrm4vf4pr",
+          "id": "lmgn764lq04q",
+          "name": "BLR1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-07-19T09:31:03.637Z"
+        }
+      ],
+      "created_at": "2026-07-19T06:57:41.458Z",
+      "id": "qzbsmdsw9lq8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our engineering team has resolved the outbound network connectivity issue in the BLR1 region. If you continue to experience problems, please open a ticket with our support team. We apologize for any inconvenience.",
+          "created_at": "2026-07-19T09:52:00.733Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T09:52:00.733Z",
+          "id": "pyq123bftf4j",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T09:52:00.733Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our engineering team has implemented the necessary fixes affecting upstream network connectivity for Droplet-based services in the BLR1 region. Users should now be able to connect to the external endpoints from Droplets in BLR1.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+          "created_at": "2026-07-19T09:31:03.681Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T09:31:03.681Z",
+          "id": "gyc2mnxy603j",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T09:31:03.681Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified an issue affecting upstream network connectivity for Droplet-based services in the BLR1 region and is actively working with the relevant upstream providers to implement a resolution.\n\nCustomers may continue to experience intermittent timeouts or connectivity issues when attempting to reach external endpoints from Droplets in BLR1.\n\nWe will provide another update once the issue has been fully resolved or when additional information becomes available.",
+          "created_at": "2026-07-19T08:27:36.675Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-19T08:27:36.675Z",
+          "id": "5ygs7x5n66h0",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T08:27:36.675Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue affecting outbound network traffic for Droplets in the BLR1 region. Customers may experience timeout errors or connectivity issues when attempting to reach external services.\nOur Engineering team is actively investigating the issue and working to identify the root cause. We will provide additional updates as soon as more information becomes available.",
+          "created_at": "2026-07-19T06:57:41.549Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T06:57:41.549Z",
+          "id": "nft7ydvj5hvk",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T06:57:41.549Z"
+        }
+      ],
+      "monitoring_at": "2026-07-19T09:31:03.681Z",
+      "name": "Networking in BLR1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-19T09:52:00.733Z",
+      "shortlink": "https://stspg.io/8yc90q76srsl",
+      "started_at": "2026-07-19T06:57:41.449Z",
+      "status": "resolved",
+      "updated_at": "2026-07-19T09:52:00.749Z"
+    }
+  },
+  {
+    "key": "digitalocean/84v7d9gkkzzf",
+    "vendor": "digitalocean",
+    "native_id": "84v7d9gkkzzf",
+    "title": "Block Storage Volume NYC1, NYC3, SGP1, SYD1 and BLR1",
+    "url": "https://stspg.io/wv68wmnz55ln",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-19T09:51:19Z",
+    "resolved_at": "2026-07-19T15:32:39.578Z",
+    "duration_minutes": 341,
+    "components": [
+      "BLR1",
+      "NYC1",
+      "NYC3",
+      "SGP1",
+      "SYD1"
+    ],
+    "updates": [
+      {
+        "native_id": "5mkdz338rq73",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue with attaching volume to the droplets in the NYC1, NYC3, SGP1, SYD1 and BLR1 regions. During this time you may experience an issue with attaching volume to the Droplet(s). We apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-07-19T09:51:19.694Z"
+      },
+      {
+        "native_id": "pkbqk6cwtcjg",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-19T13:34:53.41Z"
+      },
+      {
+        "native_id": "h50wphcdwxs0",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-19T13:36:11.089Z"
+      },
+      {
+        "native_id": "cmx87x1jsb5n",
+        "status": "monitoring",
+        "body": "Our Engineering team has identified the root cause of the issue preventing volume attachments to Droplets in NYC1, NYC3, SGP1, SYD1, and BLR1 and has successfully implemented a fix. You should now be able to attach volumes to your Droplet(s) without encountering any further errors or issues.\n\nWe are actively monitoring the situation to ensure the fix remains effective and will provide another update once the issue has been fully resolved.",
+        "created_at": "2026-07-19T14:52:16.246Z"
+      },
+      {
+        "native_id": "t7bw9dsghhzr",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the issue regarding volume attachment to Droplets in the NYC1, NYC3, SGP1, SYD1, and BLR1 regions has been fully resolved, and all services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+        "created_at": "2026-07-19T15:32:39.578Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-18T01:32:32.003Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "6xz356g340vj",
+          "name": "BLR1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-19T14:52:16.125Z"
+        },
+        {
+          "created_at": "2023-02-18T01:32:31.701Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "p4l05gv4bg18",
+          "name": "NYC1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-19T14:52:16.145Z"
+        },
+        {
+          "created_at": "2023-02-18T01:32:31.709Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "fkzl92xwpwc9",
+          "name": "NYC3",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-19T14:52:16.164Z"
+        },
+        {
+          "created_at": "2023-02-18T01:32:31.602Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "q7b6ftmzs9m9",
+          "name": "SGP1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2023-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-19T14:52:16.183Z"
+        },
+        {
+          "created_at": "2023-02-18T01:32:31.832Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "4q7xqwryx8rd",
+          "name": "SYD1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2023-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-19T14:52:16.203Z"
+        }
+      ],
+      "created_at": "2026-07-19T09:51:19.000Z",
+      "id": "84v7d9gkkzzf",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "6xz356g340vj",
+              "name": "Volumes - BLR1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "p4l05gv4bg18",
+              "name": "Volumes - NYC1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "fkzl92xwpwc9",
+              "name": "Volumes - NYC3",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "q7b6ftmzs9m9",
+              "name": "Volumes - SGP1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4q7xqwryx8rd",
+              "name": "Volumes - SYD1",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the issue regarding volume attachment to Droplets in the NYC1, NYC3, SGP1, SYD1, and BLR1 regions has been fully resolved, and all services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+          "created_at": "2026-07-19T15:32:39.578Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T15:32:39.578Z",
+          "id": "t7bw9dsghhzr",
+          "incident_id": "84v7d9gkkzzf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T15:32:39.578Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6xz356g340vj",
+              "name": "Volumes - BLR1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "p4l05gv4bg18",
+              "name": "Volumes - NYC1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fkzl92xwpwc9",
+              "name": "Volumes - NYC3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "q7b6ftmzs9m9",
+              "name": "Volumes - SGP1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4q7xqwryx8rd",
+              "name": "Volumes - SYD1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified the root cause of the issue preventing volume attachments to Droplets in NYC1, NYC3, SGP1, SYD1, and BLR1 and has successfully implemented a fix. You should now be able to attach volumes to your Droplet(s) without encountering any further errors or issues.\n\nWe are actively monitoring the situation to ensure the fix remains effective and will provide another update once the issue has been fully resolved.",
+          "created_at": "2026-07-19T14:52:16.246Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T14:52:16.246Z",
+          "id": "cmx87x1jsb5n",
+          "incident_id": "84v7d9gkkzzf",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T14:52:16.246Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6xz356g340vj",
+              "name": "Volumes - BLR1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "p4l05gv4bg18",
+              "name": "Volumes - NYC1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fkzl92xwpwc9",
+              "name": "Volumes - NYC3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "q7b6ftmzs9m9",
+              "name": "Volumes - SGP1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4q7xqwryx8rd",
+              "name": "Volumes - SYD1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-19T13:36:11.089Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T13:36:11.089Z",
+          "id": "h50wphcdwxs0",
+          "incident_id": "84v7d9gkkzzf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T13:36:11.089Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4l05gv4bg18",
+              "name": "Volumes - NYC1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fkzl92xwpwc9",
+              "name": "Volumes - NYC3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-19T13:34:53.410Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T13:34:53.410Z",
+          "id": "pkbqk6cwtcjg",
+          "incident_id": "84v7d9gkkzzf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T13:34:53.410Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p4l05gv4bg18",
+              "name": "Volumes - NYC1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "fkzl92xwpwc9",
+              "name": "Volumes - NYC3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue with attaching volume to the droplets in the NYC1, NYC3, SGP1, SYD1 and BLR1 regions. During this time you may experience an issue with attaching volume to the Droplet(s). We apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-07-19T09:51:19.694Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T09:51:19.000Z",
+          "id": "5mkdz338rq73",
+          "incident_id": "84v7d9gkkzzf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T13:34:46.812Z"
+        }
+      ],
+      "monitoring_at": "2026-07-19T14:52:16.246Z",
+      "name": "Block Storage Volume NYC1, NYC3, SGP1, SYD1 and BLR1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-19T15:32:39.578Z",
+      "shortlink": "https://stspg.io/wv68wmnz55ln",
+      "started_at": "2026-07-19T09:51:19.000Z",
+      "status": "resolved",
+      "updated_at": "2026-07-19T15:32:39.594Z"
+    }
+  }
+]

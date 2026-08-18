@@ -1,0 +1,417 @@
+[
+  {
+    "key": "datadog/q2njm9l08tjb",
+    "vendor": "datadog",
+    "native_id": "q2njm9l08tjb",
+    "title": "Notifications to Pagerduty, VictorOps, Slack, Webhook, Microsoft Teams and OpsGenie are not delivered",
+    "url": "https://stspg.io/18986pkc2dgr",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-04-10T14:54:11Z",
+    "resolved_at": "2026-04-10T20:59:49Z",
+    "duration_minutes": 365,
+    "components": [
+      "Monitors"
+    ],
+    "updates": [
+      {
+        "native_id": "89lsn30t9grq",
+        "status": "investigating",
+        "body": "We are investigating an issue to send notifications to Pagerduty, VictorOps, Slack, Webhook, Microsoft Teams and OpsGenie.",
+        "created_at": "2026-04-10T14:54:11.988Z"
+      },
+      {
+        "native_id": "kwj1898cgq1q",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-04-10T15:00:20.6Z"
+      },
+      {
+        "native_id": "bp720l11pw4y",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-04-10T15:23:20.303Z"
+      },
+      {
+        "native_id": "7db7q169g14v",
+        "status": "identified",
+        "body": "New notifications are now successfully delivered, and we are catching-up on past notifications that may have been delayed.",
+        "created_at": "2026-04-10T15:42:27.233Z"
+      },
+      {
+        "native_id": "hnh25c1hq6v2",
+        "status": "monitoring",
+        "body": "New notifications are now successfully delivered, and we are catching-up on past notifications that may have been delayed",
+        "created_at": "2026-04-10T15:42:47.75Z"
+      },
+      {
+        "native_id": "8sv8k16n2mbg",
+        "status": "monitoring",
+        "body": "We are still catching-up on past notifications that may have been delayed.",
+        "created_at": "2026-04-10T15:59:05.039Z"
+      },
+      {
+        "native_id": "5zgjnd336qjv",
+        "status": "monitoring",
+        "body": "We are still catching-up on past notifications that may have been delayed.",
+        "created_at": "2026-04-10T16:15:54.95Z"
+      },
+      {
+        "native_id": "7j5zjlfxbcfl",
+        "status": "monitoring",
+        "body": "Notifications for Opsgenie, VictorOps, BigPanda, Zendesk, and Sumologic are caught up. Webhooks, Microsoft Teams, Slack, JIRA, and ServiceNow are still catching up.",
+        "created_at": "2026-04-10T17:12:44.937Z"
+      },
+      {
+        "native_id": "f06vp8k695xx",
+        "status": "monitoring",
+        "body": "Notifications for JIRA are now caught up.",
+        "created_at": "2026-04-10T17:37:45.671Z"
+      },
+      {
+        "native_id": "m8x8jrkljzjk",
+        "status": "monitoring",
+        "body": "Notifications for ServiceNow and Microsoft Teams are now caught up. Webhooks and Slack notifications are still catching up.",
+        "created_at": "2026-04-10T18:33:12.935Z"
+      },
+      {
+        "native_id": "bppd2pk380nh",
+        "status": "monitoring",
+        "body": "Webhooks and Slack notifications are still catching up.",
+        "created_at": "2026-04-10T19:02:16.22Z"
+      },
+      {
+        "native_id": "jblzlpz7wyqy",
+        "status": "monitoring",
+        "body": "Webhooks and Slack notifications are still catching up.",
+        "created_at": "2026-04-10T19:44:24.348Z"
+      },
+      {
+        "native_id": "gd3kv9qs7szn",
+        "status": "monitoring",
+        "body": "Webhooks and Slack notifications are still catching up.",
+        "created_at": "2026-04-10T20:13:41.517Z"
+      },
+      {
+        "native_id": "nhw0r963v42w",
+        "status": "resolved",
+        "body": "Between approximately 9:42 AM and 10:38 AM ET on April 10, we observed delivery failures for customers in the US1, AP1, and AP2 regions. During this window, notifications to the following integrations were delayed or temporarily undelivered:\n\n• PagerDuty\n• Slack\n• Microsoft Teams\n• Webhooks\n• Jira\n• ServiceNow\n• OpsGenie\n• VictorOps\n• BigPanda\n• Zendesk\n• Sumologic\n\nAll delayed notifications have been replayed with the following exceptions: PagerDuty pages and Slack notifications queued during the outage window were not replayed, as they were no longer actionable at the time of recovery. Webhook notifications will be reprocessed and delivered at a later date.\n\nNo monitoring data was lost during this incident. Monitor evaluations continued normally — only the delivery of triggered notifications was affected.\n\nThank you for your patience.",
+        "created_at": "2026-04-10T20:59:49.065Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:10:23.098-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s6jxgrkjjj6p",
+          "name": "Monitors",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-06T15:37:32.847-04:00"
+        }
+      ],
+      "created_at": "2026-04-10T10:54:11.000-04:00",
+      "id": "q2njm9l08tjb",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between approximately 9:42 AM and 10:38 AM ET on April 10, we observed delivery failures for customers in the US1, AP1, and AP2 regions. During this window, notifications to the following integrations were delayed or temporarily undelivered:\n\n• PagerDuty\n• Slack\n• Microsoft Teams\n• Webhooks\n• Jira\n• ServiceNow\n• OpsGenie\n• VictorOps\n• BigPanda\n• Zendesk\n• Sumologic\n\nAll delayed notifications have been replayed with the following exceptions: PagerDuty pages and Slack notifications queued during the outage window were not replayed, as they were no longer actionable at the time of recovery. Webhook notifications will be reprocessed and delivered at a later date.\n\nNo monitoring data was lost during this incident. Monitor evaluations continued normally — only the delivery of triggered notifications was affected.\n\nThank you for your patience.",
+          "created_at": "2026-04-10T16:59:49.065-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T16:59:49.000-04:00",
+          "id": "nhw0r963v42w",
+          "incident_id": "q2njm9l08tjb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T17:14:38.532-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Webhooks and Slack notifications are still catching up.",
+          "created_at": "2026-04-10T16:13:41.517-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T16:13:41.517-04:00",
+          "id": "gd3kv9qs7szn",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T16:13:41.517-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Webhooks and Slack notifications are still catching up.",
+          "created_at": "2026-04-10T15:44:24.348-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T15:44:24.348-04:00",
+          "id": "jblzlpz7wyqy",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T15:44:24.348-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Webhooks and Slack notifications are still catching up.",
+          "created_at": "2026-04-10T15:02:16.220-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T15:02:16.220-04:00",
+          "id": "bppd2pk380nh",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T15:02:16.220-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Notifications for ServiceNow and Microsoft Teams are now caught up. Webhooks and Slack notifications are still catching up.",
+          "created_at": "2026-04-10T14:33:12.935-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T14:33:12.935-04:00",
+          "id": "m8x8jrkljzjk",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T14:33:12.935-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Notifications for JIRA are now caught up.",
+          "created_at": "2026-04-10T13:37:45.671-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T13:37:45.671-04:00",
+          "id": "f06vp8k695xx",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T13:37:45.671-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Notifications for Opsgenie, VictorOps, BigPanda, Zendesk, and Sumologic are caught up. Webhooks, Microsoft Teams, Slack, JIRA, and ServiceNow are still catching up.",
+          "created_at": "2026-04-10T13:12:44.937-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T13:12:44.937-04:00",
+          "id": "7j5zjlfxbcfl",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T13:12:44.937-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are still catching-up on past notifications that may have been delayed.",
+          "created_at": "2026-04-10T12:15:54.950-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T12:15:54.950-04:00",
+          "id": "5zgjnd336qjv",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T12:15:54.950-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are still catching-up on past notifications that may have been delayed.",
+          "created_at": "2026-04-10T11:59:05.039-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T11:59:05.039-04:00",
+          "id": "8sv8k16n2mbg",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T11:59:05.039-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "New notifications are now successfully delivered, and we are catching-up on past notifications that may have been delayed",
+          "created_at": "2026-04-10T11:42:47.750-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T11:42:47.000-04:00",
+          "id": "hnh25c1hq6v2",
+          "incident_id": "q2njm9l08tjb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T11:42:53.893-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "New notifications are now successfully delivered, and we are catching-up on past notifications that may have been delayed.",
+          "created_at": "2026-04-10T11:42:27.233-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T11:42:27.233-04:00",
+          "id": "7db7q169g14v",
+          "incident_id": "q2njm9l08tjb",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T11:42:27.233-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-04-10T11:23:20.303-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T11:23:20.303-04:00",
+          "id": "bp720l11pw4y",
+          "incident_id": "q2njm9l08tjb",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T11:23:20.303-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-04-10T11:00:20.600-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T11:00:20.600-04:00",
+          "id": "kwj1898cgq1q",
+          "incident_id": "q2njm9l08tjb",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T11:00:20.600-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue to send notifications to Pagerduty, VictorOps, Slack, Webhook, Microsoft Teams and OpsGenie.",
+          "created_at": "2026-04-10T10:54:11.988-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-10T10:54:11.000-04:00",
+          "id": "89lsn30t9grq",
+          "incident_id": "q2njm9l08tjb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-10T10:56:04.081-04:00"
+        }
+      ],
+      "monitoring_at": "2026-04-10T11:42:47.000-04:00",
+      "name": "Notifications to Pagerduty, VictorOps, Slack, Webhook, Microsoft Teams and OpsGenie are not delivered",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-10T16:59:49.000-04:00",
+      "shortlink": "https://stspg.io/18986pkc2dgr",
+      "started_at": "2026-04-10T10:54:11.000-04:00",
+      "status": "resolved",
+      "updated_at": "2026-04-10T17:14:38.535-04:00"
+    }
+  }
+]

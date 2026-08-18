@@ -1,0 +1,168 @@
+[
+  {
+    "key": "atlassian/lvq7pq0zbgvr",
+    "vendor": "atlassian",
+    "native_id": "lvq7pq0zbgvr",
+    "title": "Atlassian's cross product user search service is currently degraded.",
+    "url": "https://stspg.io/3yxq4k25m6sr",
+    "impact": "none",
+    "status": "postmortem",
+    "started_at": "2023-12-18T15:04:25.444Z",
+    "resolved_at": "2023-12-19T03:28:15.244Z",
+    "duration_minutes": 743,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "k0bfgms683dc",
+        "status": "investigating",
+        "body": "We are investigating reports of intermittent errors for \u003cSOME/ALL\u003e Atlassian, Confluence, Jira Work Management, Jira Service Management, Jira Software, Atlassian Bitbucket, Jira Align, Jira Product Discovery, Atlas, and Compass Cloud customers. We will provide more details once we identify the root cause.",
+        "created_at": "2023-12-18T15:04:25.48Z"
+      },
+      {
+        "native_id": "t92qrp6ls3zp",
+        "status": "investigating",
+        "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+        "created_at": "2023-12-18T16:01:25.707Z"
+      },
+      {
+        "native_id": "f2lssnhd3k74",
+        "status": "investigating",
+        "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+        "created_at": "2023-12-18T16:02:08.311Z"
+      },
+      {
+        "native_id": "wbr831rv0g0q",
+        "status": "investigating",
+        "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+        "created_at": "2023-12-18T16:06:04.131Z"
+      },
+      {
+        "native_id": "yslwpyd1m6zy",
+        "status": "investigating",
+        "body": "Atlassian's cross product user search service is currently healthy. Searches for users within Atlassian products are working as expected.\nWe are in the process of investigating the root cause of this incident.",
+        "created_at": "2023-12-18T16:23:44.132Z"
+      },
+      {
+        "native_id": "j6kstkzmx3gc",
+        "status": "resolved",
+        "body": "It has been resolved. Atlassian's cross product user search is working.",
+        "created_at": "2023-12-19T03:28:15.244Z"
+      },
+      {
+        "native_id": "z03fyqvwslrs",
+        "status": "postmortem",
+        "body": "### **SUMMARY**\n\nOn Dec 18, 2023, between 12:29 p.m. and 3:35 p.m. UTC, Dec 18, 2023, Atlassian's cloud customers using Atlas, Bitbucket Cloud, Compass, Confluence Cloud, Jira Service Management, Jira Software, Jira Work Management, Jira Product Discovery products were unable to search for users or use the \"@mention\" functionality. Customers' user search results failed or were delayed as Atlassian's service returning user search results was degraded in several regions.\n\nThe incident originated from a computationally intensive operation that was triggered multiple times in rapid succession, resulting in degraded performance of Atlassian's user search service across several regions. Notably, customers in the EU west region were most affected. The incident was detected within 2 minutes by automated monitoring, and our team promptly took action by recovering unhealthy systems and scaling up the service's infrastructure temporarily. The resolution process concluded in 3 hours and 06 minutes.\n\n### **IMPACT**\n\nThe overall impact was between Dec 18, 2023, between 12:29 p.m. UTC and Dec 18, 2023, 3:35 p.m. UTC. The Incident caused service disruption to cloud customers worldwide. Customers experienced delayed or failed user searches when using the following Atlassian cloud products:\n\n* Atlas\n* Bitbucket Cloud\n* Compass\n* Confluence Cloud\n* Jira Service Management\n* Jira Software\n* Jira Work Management\n* Jira Product Discovery\n\n### **ROOT CAUSE**\n\nThe incident stemmed from Atlassian's user search service receiving commands to process multiple computationally intensive operations in rapid succession. These operations were directed at the same customer data set, and therefore overloaded resources within a clustered database system, leading to memory exhaustion and subsequent unresponsiveness to user search requests. \n\n### **REMEDIAL ACTIONS PLAN \u0026 NEXT STEPS**\n\nTo prevent a recurrence of such incidents, we are implementing the following measures:\n\n* Implement a mechanism to queue computationally intensive operations in order to avoid overloading the resources within the systems and process them without impact on customer experience.\n* Fine-tune our clustered database settings to mitigate the impact of resource exhaustion on the overall system. \n\nWe apologize to customers whose services were affected during this incident; we are taking immediate steps to improve the service’s resiliency.\n\nThanks,\n\nAtlassian Customer Support",
+        "created_at": "2023-12-28T02:43:05.232Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2023-12-18T15:04:25.450Z",
+      "id": "lvq7pq0zbgvr",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "### **SUMMARY**\n\nOn Dec 18, 2023, between 12:29 p.m. and 3:35 p.m. UTC, Dec 18, 2023, Atlassian's cloud customers using Atlas, Bitbucket Cloud, Compass, Confluence Cloud, Jira Service Management, Jira Software, Jira Work Management, Jira Product Discovery products were unable to search for users or use the \"@mention\" functionality. Customers' user search results failed or were delayed as Atlassian's service returning user search results was degraded in several regions.\n\nThe incident originated from a computationally intensive operation that was triggered multiple times in rapid succession, resulting in degraded performance of Atlassian's user search service across several regions. Notably, customers in the EU west region were most affected. The incident was detected within 2 minutes by automated monitoring, and our team promptly took action by recovering unhealthy systems and scaling up the service's infrastructure temporarily. The resolution process concluded in 3 hours and 06 minutes.\n\n### **IMPACT**\n\nThe overall impact was between Dec 18, 2023, between 12:29 p.m. UTC and Dec 18, 2023, 3:35 p.m. UTC. The Incident caused service disruption to cloud customers worldwide. Customers experienced delayed or failed user searches when using the following Atlassian cloud products:\n\n* Atlas\n* Bitbucket Cloud\n* Compass\n* Confluence Cloud\n* Jira Service Management\n* Jira Software\n* Jira Work Management\n* Jira Product Discovery\n\n### **ROOT CAUSE**\n\nThe incident stemmed from Atlassian's user search service receiving commands to process multiple computationally intensive operations in rapid succession. These operations were directed at the same customer data set, and therefore overloaded resources within a clustered database system, leading to memory exhaustion and subsequent unresponsiveness to user search requests. \n\n### **REMEDIAL ACTIONS PLAN \u0026 NEXT STEPS**\n\nTo prevent a recurrence of such incidents, we are implementing the following measures:\n\n* Implement a mechanism to queue computationally intensive operations in order to avoid overloading the resources within the systems and process them without impact on customer experience.\n* Fine-tune our clustered database settings to mitigate the impact of resource exhaustion on the overall system. \n\nWe apologize to customers whose services were affected during this incident; we are taking immediate steps to improve the service’s resiliency.\n\nThanks,\n\nAtlassian Customer Support",
+          "created_at": "2023-12-28T02:43:05.232Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "z03fyqvwslrs",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2023-12-28T03:12:31.387Z"
+        },
+        {
+          "affected_components": null,
+          "body": "It has been resolved. Atlassian's cross product user search is working.",
+          "created_at": "2023-12-19T03:28:15.244Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2023-12-19T03:28:15.244Z",
+          "id": "j6kstkzmx3gc",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2023-12-19T03:28:15.244Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Atlassian's cross product user search service is currently healthy. Searches for users within Atlassian products are working as expected.\nWe are in the process of investigating the root cause of this incident.",
+          "created_at": "2023-12-18T16:23:44.132Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2023-12-18T16:23:44.132Z",
+          "id": "yslwpyd1m6zy",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2023-12-18T16:23:44.132Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+          "created_at": "2023-12-18T16:06:04.131Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2023-12-18T16:06:04.131Z",
+          "id": "wbr831rv0g0q",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2023-12-18T16:06:04.131Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+          "created_at": "2023-12-18T16:02:08.311Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2023-12-18T16:02:08.311Z",
+          "id": "f2lssnhd3k74",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2023-12-18T16:02:08.311Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Atlassian's cross product user search service is recovering. Searches for users within Atlassian products are returning to normal.",
+          "created_at": "2023-12-18T16:01:25.707Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2023-12-18T16:01:25.707Z",
+          "id": "t92qrp6ls3zp",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2023-12-18T16:01:25.707Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of intermittent errors for \u003cSOME/ALL\u003e Atlassian, Confluence, Jira Work Management, Jira Service Management, Jira Software, Atlassian Bitbucket, Jira Align, Jira Product Discovery, Atlas, and Compass Cloud customers. We will provide more details once we identify the root cause.",
+          "created_at": "2023-12-18T15:04:25.480Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2023-12-18T15:04:25.480Z",
+          "id": "k0bfgms683dc",
+          "incident_id": "lvq7pq0zbgvr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2023-12-18T15:04:25.480Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Atlassian's cross product user search service is currently degraded.",
+      "page_id": "0f54fx204jpt",
+      "reminder_intervals": null,
+      "resolved_at": "2023-12-19T03:28:15.244Z",
+      "shortlink": "https://stspg.io/3yxq4k25m6sr",
+      "started_at": "2023-12-18T15:04:25.444Z",
+      "status": "postmortem",
+      "updated_at": "2023-12-28T03:12:31.390Z"
+    }
+  }
+]

@@ -1,0 +1,636 @@
+[
+  {
+    "key": "circleci/rp9y8kszn25j",
+    "vendor": "circleci",
+    "native_id": "rp9y8kszn25j",
+    "title": "Delays starting Docker jobs",
+    "url": "https://stspg.io/dw1r4sr0mrtl",
+    "impact": "major",
+    "status": "postmortem",
+    "started_at": "2026-06-23T18:34:35.087Z",
+    "resolved_at": "2026-06-23T19:58:24.368Z",
+    "duration_minutes": 83,
+    "components": [
+      "Docker Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "tgq5vrgwhfyr",
+        "status": "investigating",
+        "body": "We are investigating reports of delays starting Docker jobs.",
+        "created_at": "2026-06-23T18:34:35.183Z"
+      },
+      {
+        "native_id": "0z2ckx7q3q0j",
+        "status": "identified",
+        "body": "We are deploying a change to mitigate this issue.",
+        "created_at": "2026-06-23T18:42:28.562Z"
+      },
+      {
+        "native_id": "0kj0yscdj17h",
+        "status": "identified",
+        "body": "What's impacted\nCustomers running Docker jobs. Affected jobs are queuing rather than starting, resulting in elevated wait times.\n\nWhat can you expect\nDocker jobs may remain stuck in \"preparing environment\" for an extended period. Our engineers have identified the cause and are actively working to restore normal job startup times. Thank you for your patience while our team deploys a fix.\n\nNext update\nWe will provide another update as soon as more information is available",
+        "created_at": "2026-06-23T19:04:41.685Z"
+      },
+      {
+        "native_id": "v0fzqvgxf7hz",
+        "status": "monitoring",
+        "body": "What's happening\nOur engineers have deployed a fix and we are observing the job backlog clearing. Docker jobs are now starting normally.\n\nWhat's impacted\nCustomers who submitted Docker jobs during the incident window may still see some jobs completing with elevated queue times. Newly submitted jobs should be starting at normal times.\n\nWhat can you expect\nDocker job startup times are returning to normal. Thank you for your patience while our engineers resolved this issue.\n\nWe are monitoring the recovery and will provide a further update if the situation changes.",
+        "created_at": "2026-06-23T19:29:42.422Z"
+      },
+      {
+        "native_id": "pqz83s6jrdxz",
+        "status": "resolved",
+        "body": "The issue where customers running Docker jobs experienced significant delays, with jobs stuck in a \"preparing environment\" state, has now been resolved. We thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-06-23T19:58:24.368Z"
+      },
+      {
+        "native_id": "qtxrk80r06zj",
+        "status": "postmortem",
+        "body": "## Summary\n\nOn Tuesday, June 23, 2026, our engineering team identified that a single Docker job cluster was operating below expected performance levels. Our infrastructure is organized into routing groups, each responsible for handling a specific segment of traffic, and this cluster was the sole member of its group. To address the performance issue, they initiated a standard two-step procedure to safely take it out of rotation: first, update the routing configuration to stop directing traffic to the cluster, then take it offline.\n\nWhen the team moved to take the cluster offline, the first step of the procedure was skipped. The cluster was removed from the available pool, but the routing configuration was not updated, meaning traffic continued to be directed to the routing group even though it had no capacity to process work. With no other clusters in the routing group to absorb the traffic, affected jobs had nowhere to go and began queuing rather than starting. This is a routine and safe operation when the two-step procedure is followed correctly, this incident exposed a gap in our tooling that allowed the procedure to be completed out of order.\n\nThe issue began at approximately 17:25 UTC and was fully resolved by 19:46 UTC, for a total impact window of roughly 2 hours and 20 minutes. Only Docker jobs were affected; other job types, including machine and macOS jobs, continued to operate normally.\n\nBeyond the missed step, several factors extended the impact window. An automated alert fired within a minute of the change deploying, but was dismissed as expected behavior. This delayed detection by nearly an hour. When engineers attempted to accelerate recovery by restoring a prior known-good version, they encountered unexpected issues with the rollback process, adding further delay before the fix could be deployed.\n\nThe original status page for this incident can be found [here](https://status.circleci.com/incidents/rp9y8kszn25j).\n\n## How Job Routing Works\n\nCircleCI uses Nomad as its job scheduling system for Docker-based jobs. When a job is triggered, it is routed to one of several Nomad clusters, organized into routing groups each responsible for handling a specific segment of traffic. This multi-cluster architecture is intentional: clusters are isolated from one another so that an issue in one does not impact the others, limiting blast radius and improving overall resiliency. Under normal circumstances, if a cluster becomes unavailable, traffic is automatically rerouted to the remaining operational clusters in its routing group, allowing jobs to continue without interruption.\n\n## What Happened\n\n\\(All times UTC\\)\n\nPrior to the incident, our engineering team identified that a single Docker job cluster was operating below expected performance levels. Our infrastructure is organized into routing groups, each responsible for handling a specific segment of traffic, and this cluster was the sole member of its group. To address the performance issue, they initiated a standard two-step procedure to safely take it out of rotation.\n\nAt 16:58, our engineering team applied a configuration change to remove the affected cluster from service. The first step of the two-step procedure was missed. The cluster was removed from the available pool, but the routing configuration was not updated, leaving traffic still being directed to a routing group with no capacity to process it.\n\nWhen the configuration change was fully deployed at 17:25, the affected jobs began to queue.\n\nAt 17:26, our monitoring alerted us to reduced job throughput on the affected cluster. Because throughput on that cluster was expected to drop as part of the cluster rotation procedure, the alert was interpreted as expected behavior and no action was taken.\n\nBy 18:19, a series of customer support tickets made clear that something beyond expected behavior was occurring. A formal incident was declared at 18:28 and engineers began investigating.\n\nBy 18:33, the team confirmed the impact was isolated to a subset of Docker jobs and identified a large backlog of queued jobs. At 18:41, a fix was merged to restore the affected cluster back into the available pool. Deployment of that fix was delayed because the CI smoke tests assume functioning clusters, leading to some rework of the pipeline itself. In parallel, the team attempted to accelerate recovery at 18:54 by restoring a prior known-good configuration directly, but encountered a conflict that left multiple active versions running simultaneously, preventing a clean rollback. The fix was fully deployed at 19:20 and Docker jobs began processing again.\n\nBy 19:28, the team confirmed the backlog was actively clearing and newly submitted jobs were starting at normal times.\n\nCustomers who had accumulated queued jobs during the incident period may have experienced a surge in concurrent job starts upon recovery, potentially hitting plan concurrency limits, which would have resulted in jobs still queueing while we processed the backlog.\n\nIn total, the period during which Docker jobs were unable to start lasted from approximately 17:25 to 19:20, roughly 1 hour and 55 minutes. The additional time from 19:20 to 19:46 was spent processing the accumulated backlog, during which some previously queued jobs completed with elevated wait times.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are strengthening our failover architecture.** Our multi-cluster design is built for resiliency, and while automatic failover mechanisms are already in place, this incident exposed a gap in our safeguards. We are closing that gap to ensure traffic is rerouted to healthy clusters across routing groups regardless of whether a cluster goes down unexpectedly or is intentionally taken offline.\n\n**We are enhancing our cluster rotation procedure.** This incident was possible because our tooling allowed an invalid state to exist, a cluster removed from the available pool while the routing configuration still directed traffic to it. We are updating this tooling to enforce that routing configuration and cluster availability are always updated together, and that the procedure cannot be completed out of order.\n\n**We are improving our monitoring and alerting.** The automated alert that fired during this incident was dismissed because it appeared consistent with the operation being performed. We are improving our monitoring so that unexpected side effects are surfaced clearly and are not confused with expected behavior.\n\n**We are improving our rollback capabilities.** During the incident, our team encountered delays when attempting to deploy the fix. We are auditing our deployment configurations to ensure that rollbacks can be executed more quickly and reliably during incidents.\n\nReliability is our top priority, and we are committed to ensuring that infrastructure upgrades like this one are executed with the appropriate safeguards in place.",
+        "created_at": "2026-06-27T00:15:49.533Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-17T19:43:18.878Z",
+          "description": "CircleCI jobs using the docker executor.",
+          "group": false,
+          "group_id": null,
+          "id": "x1v3t5qrnlhk",
+          "name": "Docker Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 1,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-15T00:32:55.515Z"
+        }
+      ],
+      "created_at": "2026-06-23T18:34:35.096Z",
+      "id": "rp9y8kszn25j",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nOn Tuesday, June 23, 2026, our engineering team identified that a single Docker job cluster was operating below expected performance levels. Our infrastructure is organized into routing groups, each responsible for handling a specific segment of traffic, and this cluster was the sole member of its group. To address the performance issue, they initiated a standard two-step procedure to safely take it out of rotation: first, update the routing configuration to stop directing traffic to the cluster, then take it offline.\n\nWhen the team moved to take the cluster offline, the first step of the procedure was skipped. The cluster was removed from the available pool, but the routing configuration was not updated, meaning traffic continued to be directed to the routing group even though it had no capacity to process work. With no other clusters in the routing group to absorb the traffic, affected jobs had nowhere to go and began queuing rather than starting. This is a routine and safe operation when the two-step procedure is followed correctly, this incident exposed a gap in our tooling that allowed the procedure to be completed out of order.\n\nThe issue began at approximately 17:25 UTC and was fully resolved by 19:46 UTC, for a total impact window of roughly 2 hours and 20 minutes. Only Docker jobs were affected; other job types, including machine and macOS jobs, continued to operate normally.\n\nBeyond the missed step, several factors extended the impact window. An automated alert fired within a minute of the change deploying, but was dismissed as expected behavior. This delayed detection by nearly an hour. When engineers attempted to accelerate recovery by restoring a prior known-good version, they encountered unexpected issues with the rollback process, adding further delay before the fix could be deployed.\n\nThe original status page for this incident can be found [here](https://status.circleci.com/incidents/rp9y8kszn25j).\n\n## How Job Routing Works\n\nCircleCI uses Nomad as its job scheduling system for Docker-based jobs. When a job is triggered, it is routed to one of several Nomad clusters, organized into routing groups each responsible for handling a specific segment of traffic. This multi-cluster architecture is intentional: clusters are isolated from one another so that an issue in one does not impact the others, limiting blast radius and improving overall resiliency. Under normal circumstances, if a cluster becomes unavailable, traffic is automatically rerouted to the remaining operational clusters in its routing group, allowing jobs to continue without interruption.\n\n## What Happened\n\n\\(All times UTC\\)\n\nPrior to the incident, our engineering team identified that a single Docker job cluster was operating below expected performance levels. Our infrastructure is organized into routing groups, each responsible for handling a specific segment of traffic, and this cluster was the sole member of its group. To address the performance issue, they initiated a standard two-step procedure to safely take it out of rotation.\n\nAt 16:58, our engineering team applied a configuration change to remove the affected cluster from service. The first step of the two-step procedure was missed. The cluster was removed from the available pool, but the routing configuration was not updated, leaving traffic still being directed to a routing group with no capacity to process it.\n\nWhen the configuration change was fully deployed at 17:25, the affected jobs began to queue.\n\nAt 17:26, our monitoring alerted us to reduced job throughput on the affected cluster. Because throughput on that cluster was expected to drop as part of the cluster rotation procedure, the alert was interpreted as expected behavior and no action was taken.\n\nBy 18:19, a series of customer support tickets made clear that something beyond expected behavior was occurring. A formal incident was declared at 18:28 and engineers began investigating.\n\nBy 18:33, the team confirmed the impact was isolated to a subset of Docker jobs and identified a large backlog of queued jobs. At 18:41, a fix was merged to restore the affected cluster back into the available pool. Deployment of that fix was delayed because the CI smoke tests assume functioning clusters, leading to some rework of the pipeline itself. In parallel, the team attempted to accelerate recovery at 18:54 by restoring a prior known-good configuration directly, but encountered a conflict that left multiple active versions running simultaneously, preventing a clean rollback. The fix was fully deployed at 19:20 and Docker jobs began processing again.\n\nBy 19:28, the team confirmed the backlog was actively clearing and newly submitted jobs were starting at normal times.\n\nCustomers who had accumulated queued jobs during the incident period may have experienced a surge in concurrent job starts upon recovery, potentially hitting plan concurrency limits, which would have resulted in jobs still queueing while we processed the backlog.\n\nIn total, the period during which Docker jobs were unable to start lasted from approximately 17:25 to 19:20, roughly 1 hour and 55 minutes. The additional time from 19:20 to 19:46 was spent processing the accumulated backlog, during which some previously queued jobs completed with elevated wait times.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are strengthening our failover architecture.** Our multi-cluster design is built for resiliency, and while automatic failover mechanisms are already in place, this incident exposed a gap in our safeguards. We are closing that gap to ensure traffic is rerouted to healthy clusters across routing groups regardless of whether a cluster goes down unexpectedly or is intentionally taken offline.\n\n**We are enhancing our cluster rotation procedure.** This incident was possible because our tooling allowed an invalid state to exist, a cluster removed from the available pool while the routing configuration still directed traffic to it. We are updating this tooling to enforce that routing configuration and cluster availability are always updated together, and that the procedure cannot be completed out of order.\n\n**We are improving our monitoring and alerting.** The automated alert that fired during this incident was dismissed because it appeared consistent with the operation being performed. We are improving our monitoring so that unexpected side effects are surfaced clearly and are not confused with expected behavior.\n\n**We are improving our rollback capabilities.** During the incident, our team encountered delays when attempting to deploy the fix. We are auditing our deployment configurations to ensure that rollbacks can be executed more quickly and reliably during incidents.\n\nReliability is our top priority, and we are committed to ensuring that infrastructure upgrades like this one are executed with the appropriate safeguards in place.",
+          "created_at": "2026-06-27T00:15:49.533Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "qtxrk80r06zj",
+          "incident_id": "rp9y8kszn25j",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-06-27T00:16:07.948Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue where customers running Docker jobs experienced significant delays, with jobs stuck in a \"preparing environment\" state, has now been resolved. We thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-06-23T19:58:24.368Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T19:58:24.368Z",
+          "id": "pqz83s6jrdxz",
+          "incident_id": "rp9y8kszn25j",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T19:58:24.368Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's happening\nOur engineers have deployed a fix and we are observing the job backlog clearing. Docker jobs are now starting normally.\n\nWhat's impacted\nCustomers who submitted Docker jobs during the incident window may still see some jobs completing with elevated queue times. Newly submitted jobs should be starting at normal times.\n\nWhat can you expect\nDocker job startup times are returning to normal. Thank you for your patience while our engineers resolved this issue.\n\nWe are monitoring the recovery and will provide a further update if the situation changes.",
+          "created_at": "2026-06-23T19:29:42.422Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T19:29:42.422Z",
+          "id": "v0fzqvgxf7hz",
+          "incident_id": "rp9y8kszn25j",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T19:29:42.422Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's impacted\nCustomers running Docker jobs. Affected jobs are queuing rather than starting, resulting in elevated wait times.\n\nWhat can you expect\nDocker jobs may remain stuck in \"preparing environment\" for an extended period. Our engineers have identified the cause and are actively working to restore normal job startup times. Thank you for your patience while our team deploys a fix.\n\nNext update\nWe will provide another update as soon as more information is available",
+          "created_at": "2026-06-23T19:04:41.685Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T19:04:41.685Z",
+          "id": "0kj0yscdj17h",
+          "incident_id": "rp9y8kszn25j",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T19:04:41.685Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are deploying a change to mitigate this issue.",
+          "created_at": "2026-06-23T18:42:28.562Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T18:42:28.562Z",
+          "id": "0z2ckx7q3q0j",
+          "incident_id": "rp9y8kszn25j",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T18:42:28.562Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of delays starting Docker jobs.",
+          "created_at": "2026-06-23T18:34:35.183Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T18:34:35.183Z",
+          "id": "tgq5vrgwhfyr",
+          "incident_id": "rp9y8kszn25j",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T18:34:35.183Z"
+        }
+      ],
+      "monitoring_at": "2026-06-23T19:29:42.422Z",
+      "name": "Delays starting Docker jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-23T19:58:24.368Z",
+      "shortlink": "https://stspg.io/dw1r4sr0mrtl",
+      "started_at": "2026-06-23T18:34:35.087Z",
+      "status": "postmortem",
+      "updated_at": "2026-06-27T00:16:07.950Z"
+    }
+  },
+  {
+    "key": "circleci/gvysjmkf4ct9",
+    "vendor": "circleci",
+    "native_id": "gvysjmkf4ct9",
+    "title": "Issues with network routing for Mac jobs",
+    "url": "https://stspg.io/mrq29l3fw2cm",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-24T23:13:45.011Z",
+    "resolved_at": "2026-06-25T03:06:41.792Z",
+    "duration_minutes": 232,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "2gfrrpd7x52l",
+        "status": "investigating",
+        "body": "What's happening\nOur engineers are investigating network routing issues for some Mac jobs.\n\nWhat's impacted\nMac jobs that make outbound requests, including checking out from GitHub.",
+        "created_at": "2026-06-24T23:13:45.127Z"
+      },
+      {
+        "native_id": "gy29hjssj77q",
+        "status": "identified",
+        "body": "We have implemented a change to address the routing issues and are monitoring the results.",
+        "created_at": "2026-06-24T23:33:58.523Z"
+      },
+      {
+        "native_id": "hngxxqzfs1nz",
+        "status": "identified",
+        "body": "Mac jobs are still seeing intermittent failures with network routing.\n\nWe are working with our infrastructure provider to address the networking issues.",
+        "created_at": "2026-06-24T23:56:26.342Z"
+      },
+      {
+        "native_id": "xxkck7py00y3",
+        "status": "identified",
+        "body": "We are seeing improvement in Mac job network routing.\n\nWe will continue to monitor for signs of recovery.",
+        "created_at": "2026-06-25T00:39:06.365Z"
+      },
+      {
+        "native_id": "q03vkj7mjs7c",
+        "status": "monitoring",
+        "body": "Our team is moving this incident to Monitoring status based on significant improvement seen in our tests and low error rate. We are seeing improvement in network routing for Mac jobs and are actively engaged with our infrastructure provider. If your Mac jobs experience network-related failures or degraded service please reach out to CircleCI support.",
+        "created_at": "2026-06-25T01:13:02.685Z"
+      },
+      {
+        "native_id": "d97cmq7pkgss",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-06-25T01:22:26.24Z"
+      },
+      {
+        "native_id": "74nkwjxwylvd",
+        "status": "monitoring",
+        "body": "We are continuing to monitor. We still observe a low percentage of intermittent failures. The failure rate is trending down as we continue to monitor. We advise customers to contact CircleCI Support if they see a change in degraded services and increased failure rate.",
+        "created_at": "2026-06-25T02:20:03.09Z"
+      },
+      {
+        "native_id": "rr1qfss5rz02",
+        "status": "investigating",
+        "body": "Due to continued reports of intermittent failures and a lack of sustained improvement while in monitoring status, this incident is elevated back to investigating to escalate with our infrastructure provider.",
+        "created_at": "2026-06-25T02:54:31.598Z"
+      },
+      {
+        "native_id": "lztxsg61dr54",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-06-25T02:58:28.931Z"
+      },
+      {
+        "native_id": "qgw679xmd4n2",
+        "status": "resolved",
+        "body": "We are concluding this incident based on a confirmed fix with our infrastructure provider and successful tests.  For any customers seeing failed runs, please run again for a successful connection.",
+        "created_at": "2026-06-25T03:06:41.792Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-14T05:00:07.441Z"
+        }
+      ],
+      "created_at": "2026-06-24T23:13:45.020Z",
+      "id": "gvysjmkf4ct9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are concluding this incident based on a confirmed fix with our infrastructure provider and successful tests.  For any customers seeing failed runs, please run again for a successful connection.",
+          "created_at": "2026-06-25T03:06:41.792Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T03:06:41.792Z",
+          "id": "qgw679xmd4n2",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T03:06:41.792Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-06-25T02:58:28.931Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T02:58:28.931Z",
+          "id": "lztxsg61dr54",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T02:58:28.931Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Due to continued reports of intermittent failures and a lack of sustained improvement while in monitoring status, this incident is elevated back to investigating to escalate with our infrastructure provider.",
+          "created_at": "2026-06-25T02:54:31.598Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T02:54:31.598Z",
+          "id": "rr1qfss5rz02",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T02:54:31.598Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to monitor. We still observe a low percentage of intermittent failures. The failure rate is trending down as we continue to monitor. We advise customers to contact CircleCI Support if they see a change in degraded services and increased failure rate.",
+          "created_at": "2026-06-25T02:20:03.090Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T02:20:03.090Z",
+          "id": "74nkwjxwylvd",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T02:20:03.090Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-06-25T01:22:26.240Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T01:22:26.240Z",
+          "id": "d97cmq7pkgss",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T01:22:26.240Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our team is moving this incident to Monitoring status based on significant improvement seen in our tests and low error rate. We are seeing improvement in network routing for Mac jobs and are actively engaged with our infrastructure provider. If your Mac jobs experience network-related failures or degraded service please reach out to CircleCI support.",
+          "created_at": "2026-06-25T01:13:02.685Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T01:13:02.685Z",
+          "id": "q03vkj7mjs7c",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T01:13:02.685Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing improvement in Mac job network routing.\n\nWe will continue to monitor for signs of recovery.",
+          "created_at": "2026-06-25T00:39:06.365Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-25T00:39:06.365Z",
+          "id": "xxkck7py00y3",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T00:39:06.365Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Mac jobs are still seeing intermittent failures with network routing.\n\nWe are working with our infrastructure provider to address the networking issues.",
+          "created_at": "2026-06-24T23:56:26.342Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-24T23:56:26.342Z",
+          "id": "hngxxqzfs1nz",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-24T23:56:26.342Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have implemented a change to address the routing issues and are monitoring the results.",
+          "created_at": "2026-06-24T23:33:58.523Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-24T23:33:58.523Z",
+          "id": "gy29hjssj77q",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-24T23:33:58.523Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "What's happening\nOur engineers are investigating network routing issues for some Mac jobs.\n\nWhat's impacted\nMac jobs that make outbound requests, including checking out from GitHub.",
+          "created_at": "2026-06-24T23:13:45.127Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-24T23:13:45.127Z",
+          "id": "2gfrrpd7x52l",
+          "incident_id": "gvysjmkf4ct9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-24T23:13:45.127Z"
+        }
+      ],
+      "monitoring_at": "2026-06-25T01:13:02.685Z",
+      "name": "Issues with network routing for Mac jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-25T03:06:41.792Z",
+      "shortlink": "https://stspg.io/mrq29l3fw2cm",
+      "started_at": "2026-06-24T23:13:45.011Z",
+      "status": "resolved",
+      "updated_at": "2026-07-10T14:24:46.599Z"
+    }
+  },
+  {
+    "key": "circleci/xyzcdfq55stc",
+    "vendor": "circleci",
+    "native_id": "xyzcdfq55stc",
+    "title": "Investigating — Usage API Not Available",
+    "url": "https://stspg.io/0hqc49q254gd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-25T22:44:15.73Z",
+    "resolved_at": "2026-06-25T23:03:58.327Z",
+    "duration_minutes": 19,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "ftfj8bdhlhfs",
+        "status": "investigating",
+        "body": "Customers using the Usage API may not be able to access the API. Our team is investigating.",
+        "created_at": "2026-06-25T22:44:15.772Z"
+      },
+      {
+        "native_id": "n7tdghrmyrjp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-06-25T23:03:58.327Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-25T22:44:15.737Z",
+      "id": "xyzcdfq55stc",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-06-25T23:03:58.327Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-25T23:03:58.327Z",
+          "id": "n7tdghrmyrjp",
+          "incident_id": "xyzcdfq55stc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T23:03:58.327Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Customers using the Usage API may not be able to access the API. Our team is investigating.",
+          "created_at": "2026-06-25T22:44:15.772Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-25T22:44:15.772Z",
+          "id": "ftfj8bdhlhfs",
+          "incident_id": "xyzcdfq55stc",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-25T22:44:15.772Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Investigating — Usage API Not Available",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-25T23:03:58.327Z",
+      "shortlink": "https://stspg.io/0hqc49q254gd",
+      "started_at": "2026-06-25T22:44:15.730Z",
+      "status": "resolved",
+      "updated_at": "2026-06-25T23:03:58.346Z"
+    }
+  },
+  {
+    "key": "circleci/6s53wvppvby5",
+    "vendor": "circleci",
+    "native_id": "6s53wvppvby5",
+    "title": "Xcode 26.6 Demand + Queueing",
+    "url": "https://stspg.io/z1sdwdk27983",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-26T15:00:00Z",
+    "resolved_at": "2026-06-26T15:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "14rzt9bg6m4q",
+        "status": "resolved",
+        "body": "We observed a surge in demand for Xcode 26.6 and have since mitigated the incident by increasing the available capacity for that Xcode version. Customers may have seen jobs queueing for ~10-15 mins.",
+        "created_at": "2026-06-26T15:29:41.658Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-26T15:00:00.000Z",
+      "id": "6s53wvppvby5",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We observed a surge in demand for Xcode 26.6 and have since mitigated the incident by increasing the available capacity for that Xcode version. Customers may have seen jobs queueing for ~10-15 mins.",
+          "created_at": "2026-06-26T15:29:41.658Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-26T15:00:00.000Z",
+          "id": "14rzt9bg6m4q",
+          "incident_id": "6s53wvppvby5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-26T15:30:45.730Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Xcode 26.6 Demand + Queueing",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-26T15:00:00.000Z",
+      "shortlink": "https://stspg.io/z1sdwdk27983",
+      "started_at": "2026-06-26T15:00:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-06-26T15:30:45.805Z"
+    }
+  }
+]

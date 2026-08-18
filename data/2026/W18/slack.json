@@ -1,0 +1,102 @@
+[
+  {
+    "key": "slack/1547",
+    "vendor": "slack",
+    "native_id": "1547",
+    "title": "Users May Not Receive Notifications on Slack Thread Replies",
+    "url": "https://slack-status.com/2026-04/22195f9f2ca47237",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-04-27T17:11:53Z",
+    "resolved_at": "2026-04-27T20:36:02Z",
+    "duration_minutes": 204,
+    "components": [
+      "Notifications"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some users have reported issues with thread replies not generating a notification banner. We’re investigating the issue, and have identified a recent deployment as a possible trigger.\nWe apologize for the inconvenience and will report back as more information becomes available.",
+        "created_at": "2026-04-27T17:11:53Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re observing positive signals after rolling back the deployment in test environments. We will complete some final validations before rolling back the deployment in the production environment.\nThank you for your patience as we work through this one. We’ll report back once production rollback is completed or if there are substantial updates to share.",
+        "created_at": "2026-04-27T18:07:01Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’ve successfully performed a rollback in the production environment, and all systems are now functioning as expected. Users should no longer experience any issues with thread replies not generating a notification banner.\nWe apologize for any inconvenience and appreciate your patience.",
+        "created_at": "2026-04-27T20:36:02Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-04-27T10:11:53-07:00",
+      "date_updated": "2026-04-27T13:36:02-07:00",
+      "id": 1547,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome users have reported issues with thread replies not generating a notification banner. We’re investigating the issue, and have identified a recent deployment as a possible trigger.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003eWe apologize for the inconvenience and will report back as more information becomes available.\u003c/p\u003e",
+          "date_created": "2026-04-27T10:11:53-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re observing positive signals after rolling back the deployment in test environments. We will complete some final validations before rolling back the deployment in the production environment.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e\u003cp\u003eThank you for your patience as we work through this one. We’ll report back once production rollback is completed or if there are substantial updates to share.\u003c/p\u003e",
+          "date_created": "2026-04-27T11:07:01-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’ve successfully performed a rollback in the production environment, and all systems are now functioning as expected. Users should no longer experience any issues with thread replies not generating a notification banner.\u003cbr\u003e\u003cbr\u003eWe apologize for any inconvenience and appreciate your patience.\u003c/p\u003e",
+          "date_created": "2026-04-27T13:36:02-07:00"
+        }
+      ],
+      "services": [
+        "Notifications"
+      ],
+      "status": "resolved",
+      "title": "Users May Not Receive Notifications on Slack Thread Replies",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-04/22195f9f2ca47237"
+    }
+  },
+  {
+    "key": "slack/1548",
+    "vendor": "slack",
+    "native_id": "1548",
+    "title": "Slack Search Feature Disruption - Japan region",
+    "url": "https://slack-status.com/2026-04/4bd5196b0c972734",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-05-01T01:50:42Z",
+    "resolved_at": "2026-05-01T01:50:42Z",
+    "duration_minutes": 0,
+    "components": [
+      "Search"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "At 23:20 UTC, April 30, 2026, a feature disruption began affecting the Slack Search feature for a subset of customers in Japan region. As a result, users were unable to use Search functionality within Slack.\nWe identified that infrastructure changes to our Search cluster caused a number of internal search nodes to become unavailable, which prevented Search queries from routing correctly. We implemented a series of remediation steps, including increasing cluster capacity and restoring affected search shards. We also blocked certain Search traffic to contain secondary impact while the cluster was being recovered.\nAs of 00:45 UTC, May 1, 2026, Slack Search functionality is fully operational.\nWe apologize for how this incident affected you and your business. We will undertake a full investigation of the incident, establishing the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.",
+        "created_at": "2026-05-01T01:50:42Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "date_created": "2026-04-30T18:50:42-07:00",
+      "date_updated": "2026-04-30T18:50:42-07:00",
+      "id": 1548,
+      "notes": [
+        {
+          "body": "\u003cp\u003eAt 23:20 UTC, April 30, 2026, a feature disruption began affecting the Slack Search feature for a subset of customers in Japan region. As a result, users were unable to use Search functionality within Slack.\u003c/p\u003e\u003cp\u003eWe identified that infrastructure changes to our Search cluster caused a number of internal search nodes to become unavailable, which prevented Search queries from routing correctly. We implemented a series of remediation steps, including increasing cluster capacity and restoring affected search shards. We also blocked certain Search traffic to contain secondary impact while the cluster was being recovered.\u003c/p\u003e\u003cp\u003eAs of 00:45 UTC, May 1, 2026, Slack Search functionality is fully operational.\u003c/p\u003e\u003cp\u003eWe apologize for how this incident affected you and your business. We will undertake a full investigation of the incident, establishing the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-04-30T18:50:42-07:00"
+        }
+      ],
+      "services": [
+        "Search"
+      ],
+      "status": "resolved",
+      "title": "Slack Search Feature Disruption - Japan region",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-04/4bd5196b0c972734"
+    }
+  }
+]

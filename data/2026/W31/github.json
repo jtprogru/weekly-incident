@@ -1,0 +1,1062 @@
+[
+  {
+    "key": "github/fmmsrcg5x638",
+    "vendor": "github",
+    "native_id": "fmmsrcg5x638",
+    "title": "Incident with GraphQL API Requests",
+    "url": "https://stspg.io/vr201n49yl53",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-27T03:53:19.028Z",
+    "resolved_at": "2026-07-27T04:09:10.59Z",
+    "duration_minutes": 15,
+    "components": [
+      "API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "952dj9ft00hn",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for API Requests",
+        "created_at": "2026-07-27T03:53:19.087Z"
+      },
+      {
+        "native_id": "l53rsb4m6b2v",
+        "status": "monitoring",
+        "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-27T04:09:01.497Z"
+      },
+      {
+        "native_id": "drfw44m9fqq4",
+        "status": "resolved",
+        "body": "On July 26, 2026 at 21:34 UTC we began seeing intermittent errors on the GitHub GraphQL API. A subset of GraphQL API requests returned HTTP 502 errors in short bursts. During the impact window an average of 0.09% of GraphQL API requests in the affected region failed, with a peak of 0.50% of requests failing during the worst two-minute period at 03:02 UTC on July 27. Requests that failed generally succeeded when retried, and no data was lost or altered. Other GitHub services were not affected.\u003cbr /\u003e\u003cbr /\u003eThe errors were traced to a single group of servers handling a share of GraphQL API traffic. Application processes on that group intermittently closed connections before completing responses. Impact ended at 03:52 UTC on July 27 when those processes were replaced, and we resolved the incident at 04:09 UTC on July 27 after confirming error rates had returned to normal.\u003cbr /\u003e\u003cbr /\u003eWe are still investigating why those processes closed connections, and that work is being carried out by the team that owns the underlying compute platform. In the meantime we are adding detection and automated mitigation for when a single group of servers behaves differently from its peers.",
+        "created_at": "2026-07-27T04:09:10.59Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T19:01:45.543Z"
+        }
+      ],
+      "created_at": "2026-07-27T03:53:19.034Z",
+      "id": "fmmsrcg5x638",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 26, 2026 at 21:34 UTC we began seeing intermittent errors on the GitHub GraphQL API. A subset of GraphQL API requests returned HTTP 502 errors in short bursts. During the impact window an average of 0.09% of GraphQL API requests in the affected region failed, with a peak of 0.50% of requests failing during the worst two-minute period at 03:02 UTC on July 27. Requests that failed generally succeeded when retried, and no data was lost or altered. Other GitHub services were not affected.\u003cbr /\u003e\u003cbr /\u003eThe errors were traced to a single group of servers handling a share of GraphQL API traffic. Application processes on that group intermittently closed connections before completing responses. Impact ended at 03:52 UTC on July 27 when those processes were replaced, and we resolved the incident at 04:09 UTC on July 27 after confirming error rates had returned to normal.\u003cbr /\u003e\u003cbr /\u003eWe are still investigating why those processes closed connections, and that work is being carried out by the team that owns the underlying compute platform. In the meantime we are adding detection and automated mitigation for when a single group of servers behaves differently from its peers.",
+          "created_at": "2026-07-27T04:09:10.590Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-27T04:09:10.590Z",
+          "id": "drfw44m9fqq4",
+          "incident_id": "fmmsrcg5x638",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T16:17:32.862Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-27T04:09:01.497Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-27T04:09:01.497Z",
+          "id": "l53rsb4m6b2v",
+          "incident_id": "fmmsrcg5x638",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-27T04:09:01.497Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for API Requests",
+          "created_at": "2026-07-27T03:53:19.087Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-27T03:53:19.087Z",
+          "id": "952dj9ft00hn",
+          "incident_id": "fmmsrcg5x638",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-27T03:53:19.087Z"
+        }
+      ],
+      "monitoring_at": "2026-07-27T04:09:01.497Z",
+      "name": "Incident with GraphQL API Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-27T04:09:10.590Z",
+      "shortlink": "https://stspg.io/vr201n49yl53",
+      "started_at": "2026-07-27T03:53:19.028Z",
+      "status": "resolved",
+      "updated_at": "2026-08-11T16:17:32.866Z"
+    }
+  },
+  {
+    "key": "github/75g5xmzptjqb",
+    "vendor": "github",
+    "native_id": "75g5xmzptjqb",
+    "title": "Incident with Actions",
+    "url": "https://stspg.io/8nsh6820sff9",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-29T15:26:24.385Z",
+    "resolved_at": "2026-07-29T16:00:54.006Z",
+    "duration_minutes": 34,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "7yv4fy0tyr51",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions",
+        "created_at": "2026-07-29T15:26:24.457Z"
+      },
+      {
+        "native_id": "hf2974ydyqmj",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting GitHub Actions. Some customers may experience timeouts or failures with runner registration and workflow runs may be delayed during startup. Our team is actively working to mitigate the impact by scaling capacity across additional infrastructure.",
+        "created_at": "2026-07-29T15:34:07.587Z"
+      },
+      {
+        "native_id": "htc067j9ntq0",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-29T15:40:35.731Z"
+      },
+      {
+        "native_id": "m2y88z0rsnrv",
+        "status": "resolved",
+        "body": "On July 29, 2026, from 14:51 UTC to 15:28 UTC, GitHub Actions experienced elevated REST API request timeouts and errors, failures registering runners, and delayed workflow run starts for customers whose traffic was served by a single infrastructure site. This was caused by an under-provisioned internal Actions service in that site: under increased load its instances ran out of memory and became unresponsive, and because Actions API requests wait synchronously on that service, requests routed through the affected site stalled and timed out. During the incident, approximately 2% of workflows were delayed. Requests served by other sites remained unaffected. Both standard and larger hosted runners routed through the affected site could see delayed job starts. \u003cbr /\u003e\u003cbr /\u003eThe issue was mitigated by scaling out the runner-administration service in the affected site and increasing the replica count, which restored API availability and returned workflow run starts to normal. We are working to add horizontal autoscaling, memory-saturation alerting, and scaling-forecast monitoring for this service, along with responder playbooks, to reduce the likelihood of similar issues in the future.",
+        "created_at": "2026-07-29T16:00:54.006Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.083Z"
+        }
+      ],
+      "created_at": "2026-07-29T15:26:24.392Z",
+      "id": "75g5xmzptjqb",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 29, 2026, from 14:51 UTC to 15:28 UTC, GitHub Actions experienced elevated REST API request timeouts and errors, failures registering runners, and delayed workflow run starts for customers whose traffic was served by a single infrastructure site. This was caused by an under-provisioned internal Actions service in that site: under increased load its instances ran out of memory and became unresponsive, and because Actions API requests wait synchronously on that service, requests routed through the affected site stalled and timed out. During the incident, approximately 2% of workflows were delayed. Requests served by other sites remained unaffected. Both standard and larger hosted runners routed through the affected site could see delayed job starts. \u003cbr /\u003e\u003cbr /\u003eThe issue was mitigated by scaling out the runner-administration service in the affected site and increasing the replica count, which restored API availability and returned workflow run starts to normal. We are working to add horizontal autoscaling, memory-saturation alerting, and scaling-forecast monitoring for this service, along with responder playbooks, to reduce the likelihood of similar issues in the future.",
+          "created_at": "2026-07-29T16:00:54.006Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T16:00:54.006Z",
+          "id": "m2y88z0rsnrv",
+          "incident_id": "75g5xmzptjqb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T01:28:07.558Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-29T15:40:35.731Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:40:35.731Z",
+          "id": "htc067j9ntq0",
+          "incident_id": "75g5xmzptjqb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:40:35.731Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are investigating an issue affecting GitHub Actions. Some customers may experience timeouts or failures with runner registration and workflow runs may be delayed during startup. Our team is actively working to mitigate the impact by scaling capacity across additional infrastructure.",
+          "created_at": "2026-07-29T15:34:07.587Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:34:07.587Z",
+          "id": "hf2974ydyqmj",
+          "incident_id": "75g5xmzptjqb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:34:07.587Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions",
+          "created_at": "2026-07-29T15:26:24.457Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:26:24.457Z",
+          "id": "7yv4fy0tyr51",
+          "incident_id": "75g5xmzptjqb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:26:24.457Z"
+        }
+      ],
+      "monitoring_at": "2026-07-29T15:40:35.731Z",
+      "name": "Incident with Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-29T16:00:54.006Z",
+      "shortlink": "https://stspg.io/8nsh6820sff9",
+      "started_at": "2026-07-29T15:26:24.385Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T01:28:07.562Z"
+    }
+  },
+  {
+    "key": "github/dsrfymph7my0",
+    "vendor": "github",
+    "native_id": "dsrfymph7my0",
+    "title": "Incident with Copilot AI Model Providers",
+    "url": "https://stspg.io/tdw1hjz3lj91",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-29T20:07:07.943Z",
+    "resolved_at": "2026-07-29T21:51:26.803Z",
+    "duration_minutes": 104,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "dmzmfzw096mt",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-07-29T20:07:08.018Z"
+      },
+      {
+        "native_id": "bkltx66r5kcb",
+        "status": "investigating",
+        "body": "We are seeing increased error rates with requests to specific model providers.",
+        "created_at": "2026-07-29T20:07:43.768Z"
+      },
+      {
+        "native_id": "bq6y57pgphv2",
+        "status": "investigating",
+        "body": "We are investigating increased error rates affecting GitHub Copilot requests to external AI model providers. Some users may experience failures or degraded performance when using Copilot features.",
+        "created_at": "2026-07-29T20:18:18.929Z"
+      },
+      {
+        "native_id": "vlcfp0ghjf0w",
+        "status": "investigating",
+        "body": "The external AI model provider has identified the issue and is working to resolve.",
+        "created_at": "2026-07-29T20:38:32.363Z"
+      },
+      {
+        "native_id": "4d8b5fkkvlz6",
+        "status": "investigating",
+        "body": "The external AI model provider is continuing to investigate.",
+        "created_at": "2026-07-29T21:08:31.62Z"
+      },
+      {
+        "native_id": "7yj63qrg9n8k",
+        "status": "investigating",
+        "body": "The external ai model provider has resolved the issues, and we have verified Copilot's traffic is fully recovered.",
+        "created_at": "2026-07-29T21:51:15.966Z"
+      },
+      {
+        "native_id": "f403shx7v547",
+        "status": "resolved",
+        "body": "On July 29, 2026, between 19:45 UTC and 21:51 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.006%, while failures for Fable 5 peaked at 21%. Other models remained available. This was caused by degradation of an upstream model provider.\u003cbr /\u003e\u003cbr /\u003eThe affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future.",
+        "created_at": "2026-07-29T21:51:26.803Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-07-29T20:07:07.951Z",
+      "id": "dsrfymph7my0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On July 29, 2026, between 19:45 UTC and 21:51 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.006%, while failures for Fable 5 peaked at 21%. Other models remained available. This was caused by degradation of an upstream model provider.\u003cbr /\u003e\u003cbr /\u003eThe affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future.",
+          "created_at": "2026-07-29T21:51:26.803Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T21:51:26.803Z",
+          "id": "f403shx7v547",
+          "incident_id": "dsrfymph7my0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T17:25:01.830Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The external ai model provider has resolved the issues, and we have verified Copilot's traffic is fully recovered.",
+          "created_at": "2026-07-29T21:51:15.966Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T21:51:15.966Z",
+          "id": "7yj63qrg9n8k",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T21:51:15.966Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The external AI model provider is continuing to investigate.",
+          "created_at": "2026-07-29T21:08:31.620Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T21:08:31.620Z",
+          "id": "4d8b5fkkvlz6",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T21:08:31.620Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The external AI model provider has identified the issue and is working to resolve.",
+          "created_at": "2026-07-29T20:38:32.363Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T20:38:32.363Z",
+          "id": "vlcfp0ghjf0w",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:38:32.363Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating increased error rates affecting GitHub Copilot requests to external AI model providers. Some users may experience failures or degraded performance when using Copilot features.",
+          "created_at": "2026-07-29T20:18:18.929Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T20:18:18.929Z",
+          "id": "bq6y57pgphv2",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:18:18.929Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing increased error rates with requests to specific model providers.",
+          "created_at": "2026-07-29T20:07:43.768Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T20:07:43.768Z",
+          "id": "bkltx66r5kcb",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:07:43.768Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-07-29T20:07:08.018Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T20:07:08.018Z",
+          "id": "dmzmfzw096mt",
+          "incident_id": "dsrfymph7my0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:07:08.018Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incident with Copilot AI Model Providers",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-29T21:51:26.803Z",
+      "shortlink": "https://stspg.io/tdw1hjz3lj91",
+      "started_at": "2026-07-29T20:07:07.943Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T17:25:01.834Z"
+    }
+  },
+  {
+    "key": "github/9tpgqq1h4bs7",
+    "vendor": "github",
+    "native_id": "9tpgqq1h4bs7",
+    "title": "Copilot model Claude Fable 5 experiencing elevated errors",
+    "url": "https://stspg.io/45g8r57kv3n9",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-30T09:07:42.413Z",
+    "resolved_at": "2026-07-30T10:12:15.489Z",
+    "duration_minutes": 64,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "0fwv1y51nm9q",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-07-30T09:07:42.478Z"
+      },
+      {
+        "native_id": "kdqcg22bx7g4",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the Claude Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+        "created_at": "2026-07-30T09:17:26.637Z"
+      },
+      {
+        "native_id": "037n83zvm9h2",
+        "status": "investigating",
+        "body": "The issues with our upstream model provider have been resolved, and Claude Fable 5 is once again available in Copilot products and IDE surfaces.\u003cbr /\u003e\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+        "created_at": "2026-07-30T10:11:55.043Z"
+      },
+      {
+        "native_id": "7f4jmtk5hldk",
+        "status": "resolved",
+        "body": "On July 30, 2026, the Claude Fable 5 model in GitHub Copilot experienced degraded availability for approximately 73 minutes, from 08:33 to 09:46 UTC. During this time, requests to Claude Fable 5 in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for Claude Fable 5 fully recovered once the provider resolved their outage at 09:46 UTC, and we confirmed resolution at 10:12 UTC.",
+        "created_at": "2026-07-30T10:12:15.489Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-07-30T09:07:42.419Z",
+      "id": "9tpgqq1h4bs7",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On July 30, 2026, the Claude Fable 5 model in GitHub Copilot experienced degraded availability for approximately 73 minutes, from 08:33 to 09:46 UTC. During this time, requests to Claude Fable 5 in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for Claude Fable 5 fully recovered once the provider resolved their outage at 09:46 UTC, and we confirmed resolution at 10:12 UTC.",
+          "created_at": "2026-07-30T10:12:15.489Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T10:12:15.489Z",
+          "id": "7f4jmtk5hldk",
+          "incident_id": "9tpgqq1h4bs7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-04T16:34:28.845Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issues with our upstream model provider have been resolved, and Claude Fable 5 is once again available in Copilot products and IDE surfaces.\u003cbr /\u003e\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+          "created_at": "2026-07-30T10:11:55.043Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T10:11:55.043Z",
+          "id": "037n83zvm9h2",
+          "incident_id": "9tpgqq1h4bs7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T10:11:55.043Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing degraded availability for the Claude Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+          "created_at": "2026-07-30T09:17:26.637Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T09:17:26.637Z",
+          "id": "kdqcg22bx7g4",
+          "incident_id": "9tpgqq1h4bs7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T09:17:26.637Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-07-30T09:07:42.478Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T09:07:42.478Z",
+          "id": "0fwv1y51nm9q",
+          "incident_id": "9tpgqq1h4bs7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T09:07:42.478Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Copilot model Claude Fable 5 experiencing elevated errors",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-30T10:12:15.489Z",
+      "shortlink": "https://stspg.io/45g8r57kv3n9",
+      "started_at": "2026-07-30T09:07:42.413Z",
+      "status": "resolved",
+      "updated_at": "2026-08-04T16:34:28.851Z"
+    }
+  },
+  {
+    "key": "github/kk183dslzdzd",
+    "vendor": "github",
+    "native_id": "kk183dslzdzd",
+    "title": "Degraded availability GPT 5.6 Luna",
+    "url": "https://stspg.io/pj5lgggbc2rb",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-01T11:16:25.348Z",
+    "resolved_at": "2026-08-01T12:30:21.775Z",
+    "duration_minutes": 73,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "rg7ycrsx36rz",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-08-01T11:16:25.435Z"
+      },
+      {
+        "native_id": "kstwh8y5g74p",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the GPT-5.6 Luna model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot",
+        "created_at": "2026-08-01T11:20:02.543Z"
+      },
+      {
+        "native_id": "lzyhhxvf86s1",
+        "status": "investigating",
+        "body": "We keep working with our upstream model provider, and are observing recovery. We continue monitoring to ensure stability.",
+        "created_at": "2026-08-01T12:13:24.248Z"
+      },
+      {
+        "native_id": "ns4jqhby5dq0",
+        "status": "investigating",
+        "body": "The issues with our upstream model provider have been resolved, and GPT-5.6 Luna is once again available in Copilot products and IDE surfaces.\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+        "created_at": "2026-08-01T12:29:20.237Z"
+      },
+      {
+        "native_id": "fydnbprsl5lq",
+        "status": "resolved",
+        "body": "On August 1st, 2026, the GPT-5.6 Luna model in GitHub Copilot experienced degraded availability in intermittent time intervals between ~08:05 UTC and ~16:30 UTC. Specifically the timeframes observed were 10:00-10:20 UTC, 10:45-11:50 UTC, 13:00-14:25 UTC, and 16:00-16:30 UTC. During this time, requests to GPT-5.6 Luna in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for GPT-5.6 Luna fully recovered once the provider resolved their outage at 16:30 UTC.",
+        "created_at": "2026-08-01T12:30:21.775Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-08-01T11:16:25.356Z",
+      "id": "kk183dslzdzd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On August 1st, 2026, the GPT-5.6 Luna model in GitHub Copilot experienced degraded availability in intermittent time intervals between ~08:05 UTC and ~16:30 UTC. Specifically the timeframes observed were 10:00-10:20 UTC, 10:45-11:50 UTC, 13:00-14:25 UTC, and 16:00-16:30 UTC. During this time, requests to GPT-5.6 Luna in Copilot chat and IDE surfaces frequently failed or timed out. This was caused by an issue with an upstream model provider. Other Copilot models were not affected, and users could continue working by selecting another model or 'Auto'. Availability for GPT-5.6 Luna fully recovered once the provider resolved their outage at 16:30 UTC.",
+          "created_at": "2026-08-01T12:30:21.775Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T12:30:21.775Z",
+          "id": "fydnbprsl5lq",
+          "incident_id": "kk183dslzdzd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T06:56:18.810Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issues with our upstream model provider have been resolved, and GPT-5.6 Luna is once again available in Copilot products and IDE surfaces.\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+          "created_at": "2026-08-01T12:29:20.237Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T12:29:20.237Z",
+          "id": "ns4jqhby5dq0",
+          "incident_id": "kk183dslzdzd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T12:29:20.237Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We keep working with our upstream model provider, and are observing recovery. We continue monitoring to ensure stability.",
+          "created_at": "2026-08-01T12:13:24.248Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T12:13:24.248Z",
+          "id": "lzyhhxvf86s1",
+          "incident_id": "kk183dslzdzd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T12:13:24.248Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing degraded availability for the GPT-5.6 Luna model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot",
+          "created_at": "2026-08-01T11:20:02.543Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T11:20:02.543Z",
+          "id": "kstwh8y5g74p",
+          "incident_id": "kk183dslzdzd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T11:20:02.543Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-08-01T11:16:25.435Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T11:16:25.435Z",
+          "id": "rg7ycrsx36rz",
+          "incident_id": "kk183dslzdzd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T11:16:25.435Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded availability GPT 5.6 Luna",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-01T12:30:21.775Z",
+      "shortlink": "https://stspg.io/pj5lgggbc2rb",
+      "started_at": "2026-08-01T11:16:25.348Z",
+      "status": "resolved",
+      "updated_at": "2026-08-11T06:56:18.813Z"
+    }
+  },
+  {
+    "key": "github/sj1tzyrx599x",
+    "vendor": "github",
+    "native_id": "sj1tzyrx599x",
+    "title": "Incident with Copilot AI Model Providers",
+    "url": "https://stspg.io/z58g1g529hzz",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-01T18:03:05.531Z",
+    "resolved_at": "2026-08-01T18:44:28.733Z",
+    "duration_minutes": 41,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "whdtrmj4k5y1",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-08-01T18:03:05.616Z"
+      },
+      {
+        "native_id": "38y461sny38x",
+        "status": "investigating",
+        "body": "We are seeing increased error rates from specific upstream AI Model Providers",
+        "created_at": "2026-08-01T18:03:15.483Z"
+      },
+      {
+        "native_id": "gh4nm8yh653k",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+        "created_at": "2026-08-01T18:20:20.807Z"
+      },
+      {
+        "native_id": "q1v2bhz3pc36",
+        "status": "monitoring",
+        "body": "The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-01T18:20:48.941Z"
+      },
+      {
+        "native_id": "qh1zlp9xz3fm",
+        "status": "monitoring",
+        "body": "The issues with our upstream model provider have been resolved, and Fable 5 is once again available in Copilot products and IDE surfaces.\u003cbr /\u003e\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+        "created_at": "2026-08-01T18:23:40.021Z"
+      },
+      {
+        "native_id": "zfj67r3cm6rq",
+        "status": "resolved",
+        "body": "On August 1, 2026, between 17:47 UTC and 18:20 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.007%, while failures for Fable 5 peaked at 5.6%. Other models remained available. This was caused by degradation of an upstream model provider.\u003cbr /\u003e\u003cbr /\u003eThe affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future.",
+        "created_at": "2026-08-01T18:44:28.733Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-08-13T15:47:22.352Z"
+        }
+      ],
+      "created_at": "2026-08-01T18:03:05.539Z",
+      "id": "sj1tzyrx599x",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On August 1, 2026, between 17:47 UTC and 18:20 UTC, users of the Fable 5 model in GitHub Copilot experienced increased request failures and latency. The average failure rate across all Copilot requests was 0.007%, while failures for Fable 5 peaked at 5.6%. Other models remained available. This was caused by degradation of an upstream model provider.\u003cbr /\u003e\u003cbr /\u003eThe affected endpoint recovered, and we monitored the service until error rates and latency returned to normal levels. We are working to add endpoint redundancy to mitigate similar provider issues in the future.",
+          "created_at": "2026-08-01T18:44:28.733Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:44:28.733Z",
+          "id": "zfj67r3cm6rq",
+          "incident_id": "sj1tzyrx599x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T16:18:09.786Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issues with our upstream model provider have been resolved, and Fable 5 is once again available in Copilot products and IDE surfaces.\u003cbr /\u003e\u003cbr /\u003eWe will continue monitoring to ensure stability, but mitigation is complete.",
+          "created_at": "2026-08-01T18:23:40.021Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:23:40.021Z",
+          "id": "qh1zlp9xz3fm",
+          "incident_id": "sj1tzyrx599x",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T18:23:40.021Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Copilot AI Model Providers has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-01T18:20:48.941Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:20:48.941Z",
+          "id": "q1v2bhz3pc36",
+          "incident_id": "sj1tzyrx599x",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T18:20:48.941Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing degraded availability for the Fable 5 model in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+          "created_at": "2026-08-01T18:20:20.807Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:20:20.807Z",
+          "id": "gh4nm8yh653k",
+          "incident_id": "sj1tzyrx599x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T18:20:20.807Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing increased error rates from specific upstream AI Model Providers",
+          "created_at": "2026-08-01T18:03:15.483Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:03:15.483Z",
+          "id": "38y461sny38x",
+          "incident_id": "sj1tzyrx599x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T18:03:15.483Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-08-01T18:03:05.616Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-01T18:03:05.616Z",
+          "id": "whdtrmj4k5y1",
+          "incident_id": "sj1tzyrx599x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-01T18:03:05.616Z"
+        }
+      ],
+      "monitoring_at": "2026-08-01T18:20:48.941Z",
+      "name": "Incident with Copilot AI Model Providers",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-01T18:44:28.733Z",
+      "shortlink": "https://stspg.io/z58g1g529hzz",
+      "started_at": "2026-08-01T18:03:05.531Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T16:18:09.791Z"
+    }
+  }
+]

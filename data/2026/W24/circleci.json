@@ -1,0 +1,688 @@
+[
+  {
+    "key": "circleci/tqh9zwszp05w",
+    "vendor": "circleci",
+    "native_id": "tqh9zwszp05w",
+    "title": "Increased 500 Errors on Pipeline and Workflow API Endpoints and UI",
+    "url": "https://stspg.io/frwqpjlwzb9r",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-09T17:45:04.124Z",
+    "resolved_at": "2026-06-09T18:43:23.042Z",
+    "duration_minutes": 58,
+    "components": [
+      "CircleCI API",
+      "CircleCI UI"
+    ],
+    "updates": [
+      {
+        "native_id": "hrrvqbhg43r5",
+        "status": "investigating",
+        "body": "Some customers are experiencing 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. \n\nEngineers are actively investigating.",
+        "created_at": "2026-06-09T17:45:04.27Z"
+      },
+      {
+        "native_id": "gm6jrygsvftq",
+        "status": "investigating",
+        "body": "Our engineers are continuing to investigate the 500 errors customers are experiencing on the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs currently running are not impacted.",
+        "created_at": "2026-06-09T18:20:31.343Z"
+      },
+      {
+        "native_id": "kp80jcx779dv",
+        "status": "monitoring",
+        "body": "A fix has been deployed for the 500 errors customers were experiencing on the pipeline values and workflow API endpoints and in the UI. Engineers are monitoring the change. Jobs running are not impacted",
+        "created_at": "2026-06-09T18:32:33.576Z"
+      },
+      {
+        "native_id": "f3khvmv1nfmj",
+        "status": "resolved",
+        "body": "Between 13:29 UTC and 18:20 UTC on June 9, 2026, some customers experienced 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs running were not impacted during this window. The issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-06-09T18:43:23.042Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-08-06T19:54:25.350Z"
+        },
+        {
+          "created_at": "2017-08-11T03:29:32.538Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "sw1j7xsbdlk4",
+          "name": "CircleCI UI",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-02T16:29:24.413Z"
+        }
+      ],
+      "created_at": "2026-06-09T17:45:04.136Z",
+      "id": "tqh9zwszp05w",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 13:29 UTC and 18:20 UTC on June 9, 2026, some customers experienced 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs running were not impacted during this window. The issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-06-09T18:43:23.042Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:43:23.042Z",
+          "id": "f3khvmv1nfmj",
+          "incident_id": "tqh9zwszp05w",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:43:23.042Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed for the 500 errors customers were experiencing on the pipeline values and workflow API endpoints and in the UI. Engineers are monitoring the change. Jobs running are not impacted",
+          "created_at": "2026-06-09T18:32:33.576Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:32:33.576Z",
+          "id": "kp80jcx779dv",
+          "incident_id": "tqh9zwszp05w",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:32:33.576Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our engineers are continuing to investigate the 500 errors customers are experiencing on the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs currently running are not impacted.",
+          "created_at": "2026-06-09T18:20:31.343Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:20:31.343Z",
+          "id": "gm6jrygsvftq",
+          "incident_id": "tqh9zwszp05w",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:20:31.343Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some customers are experiencing 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. \n\nEngineers are actively investigating.",
+          "created_at": "2026-06-09T17:45:04.270Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T17:45:04.270Z",
+          "id": "hrrvqbhg43r5",
+          "incident_id": "tqh9zwszp05w",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T17:45:04.270Z"
+        }
+      ],
+      "monitoring_at": "2026-06-09T18:32:33.576Z",
+      "name": "Increased 500 Errors on Pipeline and Workflow API Endpoints and UI",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-09T18:43:23.042Z",
+      "shortlink": "https://stspg.io/frwqpjlwzb9r",
+      "started_at": "2026-06-09T17:45:04.124Z",
+      "status": "resolved",
+      "updated_at": "2026-06-09T18:43:23.059Z"
+    }
+  },
+  {
+    "key": "circleci/lh98c0k4pc1h",
+    "vendor": "circleci",
+    "native_id": "lh98c0k4pc1h",
+    "title": "Incident with GitHub APIs",
+    "url": "https://stspg.io/86hq0zrpf1mp",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-10T16:30:49.84Z",
+    "resolved_at": "2026-06-10T16:41:14.512Z",
+    "duration_minutes": 10,
+    "components": [
+      "GitHub API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "vrh43122pgvs",
+        "status": "investigating",
+        "body": "Some users may have seen delays or missing commit statuses on GitHub PRs due to an ongoing GitHub API incident.\n\nWe are continuing to process builds as normal.\n\nWe will provide further updates as we get more information",
+        "created_at": "2026-06-10T16:30:49.912Z"
+      },
+      {
+        "native_id": "3nckw0g0cctt",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-06-10T16:30:59.836Z"
+      },
+      {
+        "native_id": "dtrq3258gdwq",
+        "status": "monitoring",
+        "body": "We are seeing signs of recovery from the GitHub API.",
+        "created_at": "2026-06-10T16:32:33.819Z"
+      },
+      {
+        "native_id": "4nwbs704jyb9",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-06-10T16:41:14.512Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-21T21:45:32.960Z",
+          "description": null,
+          "group": false,
+          "group_id": "s21fdjds0k15",
+          "id": "ys748wcgjv2s",
+          "name": "GitHub API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T19:01:46.919Z"
+        }
+      ],
+      "created_at": "2026-06-10T16:30:49.849Z",
+      "id": "lh98c0k4pc1h",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-06-10T16:41:14.512Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T16:41:14.512Z",
+          "id": "4nwbs704jyb9",
+          "incident_id": "lh98c0k4pc1h",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T16:41:14.512Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing signs of recovery from the GitHub API.",
+          "created_at": "2026-06-10T16:32:33.819Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T16:32:33.819Z",
+          "id": "dtrq3258gdwq",
+          "incident_id": "lh98c0k4pc1h",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T16:32:33.819Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-06-10T16:30:59.836Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T16:30:59.836Z",
+          "id": "3nckw0g0cctt",
+          "incident_id": "lh98c0k4pc1h",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T16:30:59.836Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Some users may have seen delays or missing commit statuses on GitHub PRs due to an ongoing GitHub API incident.\n\nWe are continuing to process builds as normal.\n\nWe will provide further updates as we get more information",
+          "created_at": "2026-06-10T16:30:49.912Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T16:30:49.912Z",
+          "id": "vrh43122pgvs",
+          "incident_id": "lh98c0k4pc1h",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T16:30:49.912Z"
+        }
+      ],
+      "monitoring_at": "2026-06-10T16:32:33.819Z",
+      "name": "Incident with GitHub APIs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-10T16:41:14.512Z",
+      "shortlink": "https://stspg.io/86hq0zrpf1mp",
+      "started_at": "2026-06-10T16:30:49.840Z",
+      "status": "resolved",
+      "updated_at": "2026-06-10T16:41:14.526Z"
+    }
+  },
+  {
+    "key": "circleci/76fmvjmy0jfx",
+    "vendor": "circleci",
+    "native_id": "76fmvjmy0jfx",
+    "title": "Issues publishing orbs",
+    "url": "https://stspg.io/zwjbxfw5b7yy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-10T22:39:15.423Z",
+    "resolved_at": "2026-06-10T23:07:35.612Z",
+    "duration_minutes": 28,
+    "components": [
+      "CircleCI API"
+    ],
+    "updates": [
+      {
+        "native_id": "c2k0rlb7rdr5",
+        "status": "investigating",
+        "body": "We are investigating reports of orb publishing failing.",
+        "created_at": "2026-06-10T22:39:15.497Z"
+      },
+      {
+        "native_id": "z4bm4s5vbvxr",
+        "status": "identified",
+        "body": "We have identified the cause of the failure and are rolling out a change.",
+        "created_at": "2026-06-10T22:55:59.46Z"
+      },
+      {
+        "native_id": "vxzblvmr1m80",
+        "status": "monitoring",
+        "body": "The fix has been rolled out and we are monitoring for recovery.",
+        "created_at": "2026-06-10T22:56:38.34Z"
+      },
+      {
+        "native_id": "wzcpc2s6wj9x",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-06-10T23:07:35.612Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-08-06T19:54:25.350Z"
+        }
+      ],
+      "created_at": "2026-06-10T22:39:15.430Z",
+      "id": "76fmvjmy0jfx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-06-10T23:07:35.612Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T23:07:35.612Z",
+          "id": "wzcpc2s6wj9x",
+          "incident_id": "76fmvjmy0jfx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T23:07:35.612Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The fix has been rolled out and we are monitoring for recovery.",
+          "created_at": "2026-06-10T22:56:38.340Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T22:56:38.340Z",
+          "id": "vxzblvmr1m80",
+          "incident_id": "76fmvjmy0jfx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T22:56:38.340Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the cause of the failure and are rolling out a change.",
+          "created_at": "2026-06-10T22:55:59.460Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-10T22:55:59.460Z",
+          "id": "z4bm4s5vbvxr",
+          "incident_id": "76fmvjmy0jfx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T22:55:59.460Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of orb publishing failing.",
+          "created_at": "2026-06-10T22:39:15.497Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-10T22:39:15.497Z",
+          "id": "c2k0rlb7rdr5",
+          "incident_id": "76fmvjmy0jfx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-10T22:39:15.497Z"
+        }
+      ],
+      "monitoring_at": "2026-06-10T22:56:38.340Z",
+      "name": "Issues publishing orbs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-10T23:07:35.612Z",
+      "shortlink": "https://stspg.io/zwjbxfw5b7yy",
+      "started_at": "2026-06-10T22:39:15.423Z",
+      "status": "resolved",
+      "updated_at": "2026-06-10T23:07:35.626Z"
+    }
+  },
+  {
+    "key": "circleci/brp558x5kfn1",
+    "vendor": "circleci",
+    "native_id": "brp558x5kfn1",
+    "title": "Issue authenticating only Bitbucket users",
+    "url": "https://stspg.io/qjt275qv8plh",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-11T21:31:49.298Z",
+    "resolved_at": "2026-06-12T00:18:31.301Z",
+    "duration_minutes": 166,
+    "components": [
+      "Pipelines \u0026 Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "yq3yk57dtclv",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-06-11T21:31:49.406Z"
+      },
+      {
+        "native_id": "8h5hq4h8wvr2",
+        "status": "identified",
+        "body": "What's happening\nWe are investigating an issue we believe is related to an ongoing incident with Atlassian Bitbucket's authentication service. We are actively monitoring Bitbucket's status.\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Thank you for your patience while our engineers investigate.\n\nWe will provide an update as soon as we have more information.",
+        "created_at": "2026-06-11T22:05:39.277Z"
+      },
+      {
+        "native_id": "hx6fkt3rgpd3",
+        "status": "identified",
+        "body": "What's happening\nAtlassian Bitbucket has acknowledged an incident affecting their OAuth service, which is the cause of the errors our customers are experiencing. The status of their incident is available at: https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. \n\nWe will provide an update as soon as we have more information. Thank you for your patience while we monitor Bitbucket's incident and recovery.",
+        "created_at": "2026-06-11T22:57:07.693Z"
+      },
+      {
+        "native_id": "cpmrkdfs2vd3",
+        "status": "monitoring",
+        "body": "What's happening\nAtlassian Bitbucket has moved their OAuth service incident to monitoring. You can follow their status at https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. \n\nThank you for your patience while we continue to monitor recovery.",
+        "created_at": "2026-06-12T00:10:37.493Z"
+      },
+      {
+        "native_id": "q6yxsw9kgtw0",
+        "status": "resolved",
+        "body": "Customers using Bitbucket as their VCS provider or as their login provider experienced errors when interacting with Bitbucket repositories and authenticating to CircleCI. This was caused by an incident with Atlassian Bitbucket's OAuth service, which has now been resolved and all affected functionality has returned to normal.",
+        "created_at": "2026-06-12T00:18:31.301Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-12T16:43:37.822Z"
+        }
+      ],
+      "created_at": "2026-06-11T21:31:49.306Z",
+      "id": "brp558x5kfn1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers using Bitbucket as their VCS provider or as their login provider experienced errors when interacting with Bitbucket repositories and authenticating to CircleCI. This was caused by an incident with Atlassian Bitbucket's OAuth service, which has now been resolved and all affected functionality has returned to normal.",
+          "created_at": "2026-06-12T00:18:31.301Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-12T00:18:31.301Z",
+          "id": "q6yxsw9kgtw0",
+          "incident_id": "brp558x5kfn1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-12T00:18:31.301Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "What's happening\nAtlassian Bitbucket has moved their OAuth service incident to monitoring. You can follow their status at https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. \n\nThank you for your patience while we continue to monitor recovery.",
+          "created_at": "2026-06-12T00:10:37.493Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-12T00:10:37.493Z",
+          "id": "cpmrkdfs2vd3",
+          "incident_id": "brp558x5kfn1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-12T00:10:37.493Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "What's happening\nAtlassian Bitbucket has acknowledged an incident affecting their OAuth service, which is the cause of the errors our customers are experiencing. The status of their incident is available at: https://bitbucket.status.atlassian.com/incidents/h51sr145gsmx\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Customers using Bitbucket as their login provider may also be unable to authenticate to CircleCI. \n\nWe will provide an update as soon as we have more information. Thank you for your patience while we monitor Bitbucket's incident and recovery.",
+          "created_at": "2026-06-11T22:57:07.693Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-11T22:57:07.693Z",
+          "id": "hx6fkt3rgpd3",
+          "incident_id": "brp558x5kfn1",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-11T22:57:07.693Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "What's happening\nWe are investigating an issue we believe is related to an ongoing incident with Atlassian Bitbucket's authentication service. We are actively monitoring Bitbucket's status.\n\nWhat's impacted\nCustomers using Bitbucket as their VCS provider may be experiencing disruptions.\n\nWhat can you expect\nYou may see errors when CircleCI attempts to interact with your Bitbucket repositories. Thank you for your patience while our engineers investigate.\n\nWe will provide an update as soon as we have more information.",
+          "created_at": "2026-06-11T22:05:39.277Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-11T22:05:39.277Z",
+          "id": "8h5hq4h8wvr2",
+          "incident_id": "brp558x5kfn1",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-11T22:05:39.277Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-06-11T21:31:49.406Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-11T21:31:49.406Z",
+          "id": "yq3yk57dtclv",
+          "incident_id": "brp558x5kfn1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-11T21:31:49.406Z"
+        }
+      ],
+      "monitoring_at": "2026-06-12T00:10:37.493Z",
+      "name": "Issue authenticating only Bitbucket users",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-12T00:18:31.301Z",
+      "shortlink": "https://stspg.io/qjt275qv8plh",
+      "started_at": "2026-06-11T21:31:49.298Z",
+      "status": "resolved",
+      "updated_at": "2026-06-12T00:18:31.319Z"
+    }
+  }
+]

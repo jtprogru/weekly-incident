@@ -1,0 +1,182 @@
+[
+  {
+    "key": "github/5t81zk0vrk3z",
+    "vendor": "github",
+    "native_id": "5t81zk0vrk3z",
+    "title": "Disruption with Copilot next edit suggestions",
+    "url": "https://stspg.io/7tn8k5v6kzjj",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-17T17:57:49.155Z",
+    "resolved_at": "2026-06-17T19:28:16.628Z",
+    "duration_minutes": 90,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "brjnjky2kcns",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-06-17T17:57:49.252Z"
+      },
+      {
+        "native_id": "2y6908r4g1x3",
+        "status": "investigating",
+        "body": "We have identified a likely cause and are applying a mitigation",
+        "created_at": "2026-06-17T18:40:25.321Z"
+      },
+      {
+        "native_id": "4qgjh755c2fx",
+        "status": "investigating",
+        "body": "We have applied mitigation and are seeing recovery",
+        "created_at": "2026-06-17T19:09:47.843Z"
+      },
+      {
+        "native_id": "rzm08y6chxv8",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-06-17T19:14:46.327Z"
+      },
+      {
+        "native_id": "1jjks4czhmn8",
+        "status": "resolved",
+        "body": "On June 17, 2026, between 16:57 UTC and 19:14 UTC, Copilot code completions were degraded and users were unable to receive Next Edit Suggestions. Standard ghost text code completions were not affected. This was due to a configuration change that caused the service's routing layer to incorrectly discard all Next Edit Suggestion model endpoints as invalid.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by deploying a corrected configuration change at 18:55 UTC, with full recovery observed at 19:14 UTC.\u003cbr /\u003e\u003cbr /\u003eWe are working to improve the resilience of our routing layer to limit impact due to a subset of invalid configurations, and to improve our alerting to detect sudden traffic changes that are not captured by standard error rate monitors.",
+        "created_at": "2026-06-17T19:28:16.628Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-17T17:57:49.168Z",
+      "id": "5t81zk0vrk3z",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On June 17, 2026, between 16:57 UTC and 19:14 UTC, Copilot code completions were degraded and users were unable to receive Next Edit Suggestions. Standard ghost text code completions were not affected. This was due to a configuration change that caused the service's routing layer to incorrectly discard all Next Edit Suggestion model endpoints as invalid.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by deploying a corrected configuration change at 18:55 UTC, with full recovery observed at 19:14 UTC.\u003cbr /\u003e\u003cbr /\u003eWe are working to improve the resilience of our routing layer to limit impact due to a subset of invalid configurations, and to improve our alerting to detect sudden traffic changes that are not captured by standard error rate monitors.",
+          "created_at": "2026-06-17T19:28:16.628Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T19:28:16.628Z",
+          "id": "1jjks4czhmn8",
+          "incident_id": "5t81zk0vrk3z",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-19T18:50:58.601Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-06-17T19:14:46.327Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T19:14:46.327Z",
+          "id": "rzm08y6chxv8",
+          "incident_id": "5t81zk0vrk3z",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T19:14:46.327Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have applied mitigation and are seeing recovery",
+          "created_at": "2026-06-17T19:09:47.843Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T19:09:47.843Z",
+          "id": "4qgjh755c2fx",
+          "incident_id": "5t81zk0vrk3z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T19:09:47.843Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified a likely cause and are applying a mitigation",
+          "created_at": "2026-06-17T18:40:25.321Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T18:40:25.321Z",
+          "id": "2y6908r4g1x3",
+          "incident_id": "5t81zk0vrk3z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T18:40:25.321Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-06-17T17:57:49.252Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T17:57:49.252Z",
+          "id": "brjnjky2kcns",
+          "incident_id": "5t81zk0vrk3z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T17:57:49.252Z"
+        }
+      ],
+      "monitoring_at": "2026-06-17T19:14:46.327Z",
+      "name": "Disruption with Copilot next edit suggestions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-17T19:28:16.628Z",
+      "shortlink": "https://stspg.io/7tn8k5v6kzjj",
+      "started_at": "2026-06-17T17:57:49.155Z",
+      "status": "resolved",
+      "updated_at": "2026-06-19T18:50:58.607Z"
+    }
+  },
+  {
+    "key": "github/kn7gv3tlfc54",
+    "vendor": "github",
+    "native_id": "kn7gv3tlfc54",
+    "title": "Incident With Webhooks",
+    "url": "https://stspg.io/t0qkhqpm5vlm",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-06-19T14:38:09.691Z",
+    "resolved_at": "2026-06-17T19:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "xct4bf2yqdw5",
+        "status": "resolved",
+        "body": "On June 17, 2026, between 11:35 UTC and 19:20 UTC, the Webhooks service was degraded and delivered webhook payloads with missing installation information. On average, 11.3% of webhook deliveries were impacted. Customers relying on the installation field for authentication or routing were unable to process affected webhooks. A smaller subset of deliveries for the security_advisory event (0.04%) were delivered successfully but were not recorded for redelivery. This was due to a defect in a new delivery code path that failed to include installation data in webhook payloads.\n\nWe mitigated the incident by disabling the feature flag controlling the new code path.\n\nWe are working to improve our automated validation of webhook payloads, and introduce automated alerting for webhook payload regressions to reduce our time to detection and mitigation of issues like this one in the future.\n\nThe following events were affected: branch_protection_configuration, code_scanning_alert, commit_comment, custom_property, custom_property_values, dependabot_alert, deploy_key, deployment_protection_rule, deployment_review, dismissal_request_code_scanning, dismissal_request_secret_scanning, installation_target, member, membership, merge_queue_entry, org_block, organization, projects_v2, projects_v2_item, pull_request_review_thread, repository_ruleset, secret_scanning_alert, secret_scanning_alert_location, secret_scanning_scan, security_and_analysis, star, sub_issues, team, team_add, workflow_job.",
+        "created_at": "2026-06-19T14:38:09.74Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-17T19:00:00.000Z",
+      "id": "kn7gv3tlfc54",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On June 17, 2026, between 11:35 UTC and 19:20 UTC, the Webhooks service was degraded and delivered webhook payloads with missing installation information. On average, 11.3% of webhook deliveries were impacted. Customers relying on the installation field for authentication or routing were unable to process affected webhooks. A smaller subset of deliveries for the security_advisory event (0.04%) were delivered successfully but were not recorded for redelivery. This was due to a defect in a new delivery code path that failed to include installation data in webhook payloads.\n\nWe mitigated the incident by disabling the feature flag controlling the new code path.\n\nWe are working to improve our automated validation of webhook payloads, and introduce automated alerting for webhook payload regressions to reduce our time to detection and mitigation of issues like this one in the future.\n\nThe following events were affected: branch_protection_configuration, code_scanning_alert, commit_comment, custom_property, custom_property_values, dependabot_alert, deploy_key, deployment_protection_rule, deployment_review, dismissal_request_code_scanning, dismissal_request_secret_scanning, installation_target, member, membership, merge_queue_entry, org_block, organization, projects_v2, projects_v2_item, pull_request_review_thread, repository_ruleset, secret_scanning_alert, secret_scanning_alert_location, secret_scanning_scan, security_and_analysis, star, sub_issues, team, team_add, workflow_job.",
+          "created_at": "2026-06-19T14:38:09.740Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-17T19:00:00.000Z",
+          "id": "xct4bf2yqdw5",
+          "incident_id": "kn7gv3tlfc54",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-19T14:38:09.740Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incident With Webhooks",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-17T19:00:00.000Z",
+      "shortlink": "https://stspg.io/t0qkhqpm5vlm",
+      "started_at": "2026-06-19T14:38:09.691Z",
+      "status": "resolved",
+      "updated_at": "2026-06-19T14:38:09.751Z"
+    }
+  }
+]

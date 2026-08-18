@@ -1,0 +1,260 @@
+[
+  {
+    "key": "digitalocean/bfsh34myw3bc",
+    "vendor": "digitalocean",
+    "native_id": "bfsh34myw3bc",
+    "title": "Intermittent 500 Errors on Serverless/GenAI Inference API",
+    "url": "https://stspg.io/40ln0gl1x56j",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-06-16T22:00:52Z",
+    "resolved_at": "2026-06-17T00:29:42.28Z",
+    "duration_minutes": 148,
+    "components": [
+      "Inference"
+    ],
+    "updates": [
+      {
+        "native_id": "6wqq0c1s3kl4",
+        "status": "investigating",
+        "body": "We are actively investigating an issue causing elevated HTTP 500 error rates for customers utilizing our Serverless/GenAI Inference API.\nCustomer Impact: Customers making calls to the inference API—specifically targeting /v1/* endpoints—will experience intermittent HTTP 500 errors and failed requests.",
+        "created_at": "2026-06-16T22:52:52.338Z"
+      },
+      {
+        "native_id": "dxg6rkts9c07",
+        "status": "monitoring",
+        "body": "Our engineering teams have successfully begun implementing mitigation steps to resolve the connectivity issues affecting the inference API. We will provide another update once the API has fully recovered and error rates return to normal.",
+        "created_at": "2026-06-16T23:29:14.56Z"
+      },
+      {
+        "native_id": "khqhzzc3wyrx",
+        "status": "resolved",
+        "body": "The connectivity issues affecting our Serverless/GenAI Inference API have been fully resolved.\nOur engineering teams successfully completed the connectivity restoration. All systems should be functioning normally, and the endpoint should be fully operational.",
+        "created_at": "2026-06-17T00:29:42.28Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-15T07:02:10.429Z",
+          "description": "Serverless access to foundation models (e.g. Llama, Mistral, GPT) via OpenAI-compatible API.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "2z9ldz1t4dgp",
+          "name": "Inference",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2026-05-15",
+          "status": "operational",
+          "updated_at": "2026-07-23T12:36:59.981Z"
+        }
+      ],
+      "created_at": "2026-06-16T22:00:52.000Z",
+      "id": "bfsh34myw3bc",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The connectivity issues affecting our Serverless/GenAI Inference API have been fully resolved.\nOur engineering teams successfully completed the connectivity restoration. All systems should be functioning normally, and the endpoint should be fully operational.",
+          "created_at": "2026-06-17T00:29:42.280Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T00:29:42.280Z",
+          "id": "khqhzzc3wyrx",
+          "incident_id": "bfsh34myw3bc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T00:29:42.280Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Our engineering teams have successfully begun implementing mitigation steps to resolve the connectivity issues affecting the inference API. We will provide another update once the API has fully recovered and error rates return to normal.",
+          "created_at": "2026-06-16T23:29:14.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-16T23:29:14.560Z",
+          "id": "dxg6rkts9c07",
+          "incident_id": "bfsh34myw3bc",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-16T23:29:14.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are actively investigating an issue causing elevated HTTP 500 error rates for customers utilizing our Serverless/GenAI Inference API.\nCustomer Impact: Customers making calls to the inference API—specifically targeting /v1/* endpoints—will experience intermittent HTTP 500 errors and failed requests.",
+          "created_at": "2026-06-16T22:52:52.338Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-16T22:00:52.000Z",
+          "id": "6wqq0c1s3kl4",
+          "incident_id": "bfsh34myw3bc",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-16T22:53:10.064Z"
+        }
+      ],
+      "monitoring_at": "2026-06-16T23:29:14.560Z",
+      "name": "Intermittent 500 Errors on Serverless/GenAI Inference API",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-17T00:29:42.280Z",
+      "shortlink": "https://stspg.io/40ln0gl1x56j",
+      "started_at": "2026-06-16T22:00:52.000Z",
+      "status": "resolved",
+      "updated_at": "2026-06-17T00:29:46.450Z"
+    }
+  },
+  {
+    "key": "digitalocean/nqkv7bnzr4l3",
+    "vendor": "digitalocean",
+    "native_id": "nqkv7bnzr4l3",
+    "title": "Monitoring Graphs in the Cloud Control Panel",
+    "url": "https://stspg.io/8jy6pdvsszwm",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-19T14:00:32.952Z",
+    "resolved_at": "2026-06-19T16:37:38.303Z",
+    "duration_minutes": 157,
+    "components": [
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "dl0nv8khtx1y",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue affecting the visibility of monitoring graphs within the Cloud Panel. During this period, users may notice missing or unavailable monitoring graphs for services such as Droplets(with DO agent installed), Load Balancers, Databases, etc.\n\nWe apologize for the inconvenience caused. We'll update once we have more information",
+        "created_at": "2026-06-19T14:00:33.032Z"
+      },
+      {
+        "native_id": "lzgb4bq2g597",
+        "status": "monitoring",
+        "body": "Our engineering team has implemented the necessary fixes to address the issue affecting the visibility of monitoring graphs within the Cloud Panel. Users should now be able to view monitoring graphs for their services, including Droplets with DO Agent installed, Load Balancers, Databases, etc.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+        "created_at": "2026-06-19T14:50:38.405Z"
+      },
+      {
+        "native_id": "d5rtd36fyx3j",
+        "status": "resolved",
+        "body": "Between 13:22 \u0026 14:26 UTC today, users have experienced missing monitoring graphs for Droplets (with DO agent installed), Load Balancers, Databases, and other services within the Cloud Control Panel.\n\nOur engineering team has identified the root cause of the issue and has taken appropriate steps to restore functionality. We can confirm that services have been restored and are functioning as expected.\n\nWe apologize for any inconvenience this may have caused. If you continue to experience issues viewing monitoring graphs, please create a support ticket for further analysis. Thank you for your patience and understanding",
+        "created_at": "2026-06-19T16:37:38.303Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-28T21:01:01.809Z",
+          "description": null,
+          "group": false,
+          "group_id": "2d23wwyqgq6m",
+          "id": "yht2qc1zfp6x",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-28",
+          "status": "operational",
+          "updated_at": "2026-06-19T14:50:38.370Z"
+        }
+      ],
+      "created_at": "2026-06-19T14:00:32.960Z",
+      "id": "nqkv7bnzr4l3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "yht2qc1zfp6x",
+              "name": "Monitoring - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between 13:22 \u0026 14:26 UTC today, users have experienced missing monitoring graphs for Droplets (with DO agent installed), Load Balancers, Databases, and other services within the Cloud Control Panel.\n\nOur engineering team has identified the root cause of the issue and has taken appropriate steps to restore functionality. We can confirm that services have been restored and are functioning as expected.\n\nWe apologize for any inconvenience this may have caused. If you continue to experience issues viewing monitoring graphs, please create a support ticket for further analysis. Thank you for your patience and understanding",
+          "created_at": "2026-06-19T16:37:38.303Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-19T16:37:38.303Z",
+          "id": "d5rtd36fyx3j",
+          "incident_id": "nqkv7bnzr4l3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-19T16:37:38.303Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "yht2qc1zfp6x",
+              "name": "Monitoring - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our engineering team has implemented the necessary fixes to address the issue affecting the visibility of monitoring graphs within the Cloud Panel. Users should now be able to view monitoring graphs for their services, including Droplets with DO Agent installed, Load Balancers, Databases, etc.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+          "created_at": "2026-06-19T14:50:38.405Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-19T14:50:38.405Z",
+          "id": "lzgb4bq2g597",
+          "incident_id": "nqkv7bnzr4l3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-19T14:50:38.405Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "yht2qc1zfp6x",
+              "name": "Monitoring - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue affecting the visibility of monitoring graphs within the Cloud Panel. During this period, users may notice missing or unavailable monitoring graphs for services such as Droplets(with DO agent installed), Load Balancers, Databases, etc.\n\nWe apologize for the inconvenience caused. We'll update once we have more information",
+          "created_at": "2026-06-19T14:00:33.032Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-19T14:00:33.032Z",
+          "id": "dl0nv8khtx1y",
+          "incident_id": "nqkv7bnzr4l3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-19T14:00:33.032Z"
+        }
+      ],
+      "monitoring_at": "2026-06-19T14:50:38.405Z",
+      "name": "Monitoring Graphs in the Cloud Control Panel",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-19T16:37:38.303Z",
+      "shortlink": "https://stspg.io/8jy6pdvsszwm",
+      "started_at": "2026-06-19T14:00:32.952Z",
+      "status": "resolved",
+      "updated_at": "2026-06-19T16:37:38.319Z"
+    }
+  }
+]

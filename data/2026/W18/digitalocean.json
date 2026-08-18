@@ -1,0 +1,286 @@
+[
+  {
+    "key": "digitalocean/5gsk0hfctqp5",
+    "vendor": "digitalocean",
+    "native_id": "5gsk0hfctqp5",
+    "title": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+    "url": "https://stspg.io/y8cgtdqrkct1",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-04-27T10:38:30Z",
+    "resolved_at": "2026-04-27T11:37:36.467Z",
+    "duration_minutes": 59,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "rhzvd3dcjsk5",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting some customers using DigitalOcean Serverless Inference with Anthropic models. Over the last two hours, impacted customers may have experienced intermittent request failures, including HTTP 429 responses, on some Anthropic model requests. Our engineering team is actively investigating the issue. We apologize for the inconvenience and will share another update as soon as more information is available.",
+        "created_at": "2026-04-27T10:38:30.679Z"
+      },
+      {
+        "native_id": "4rrwgtfd5bpd",
+        "status": "monitoring",
+        "body": "We identified the cause of intermittent HTTP 429 responses affecting some customers using Anthropic models on DigitalOcean Serverless Inference and applied a mitigation. Service has recovered, and we are monitoring stability.",
+        "created_at": "2026-04-27T11:07:50.461Z"
+      },
+      {
+        "native_id": "mcxtbgzxf1xv",
+        "status": "resolved",
+        "body": "The issue is resolved, and service is operating normally.",
+        "created_at": "2026-04-27T11:37:36.467Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-27T10:38:30.000Z",
+      "id": "5gsk0hfctqp5",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue is resolved, and service is operating normally.",
+          "created_at": "2026-04-27T11:37:36.467Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T11:37:36.467Z",
+          "id": "mcxtbgzxf1xv",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:37:36.467Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We identified the cause of intermittent HTTP 429 responses affecting some customers using Anthropic models on DigitalOcean Serverless Inference and applied a mitigation. Service has recovered, and we are monitoring stability.",
+          "created_at": "2026-04-27T11:07:50.461Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T11:07:50.000Z",
+          "id": "4rrwgtfd5bpd",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:09:33.533Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting some customers using DigitalOcean Serverless Inference with Anthropic models. Over the last two hours, impacted customers may have experienced intermittent request failures, including HTTP 429 responses, on some Anthropic model requests. Our engineering team is actively investigating the issue. We apologize for the inconvenience and will share another update as soon as more information is available.",
+          "created_at": "2026-04-27T10:38:30.679Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T10:38:30.000Z",
+          "id": "rhzvd3dcjsk5",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:04:29.436Z"
+        }
+      ],
+      "monitoring_at": "2026-04-27T11:07:50.000Z",
+      "name": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-27T11:37:36.467Z",
+      "shortlink": "https://stspg.io/y8cgtdqrkct1",
+      "started_at": "2026-04-27T10:38:30.000Z",
+      "status": "resolved",
+      "updated_at": "2026-04-27T11:37:36.483Z"
+    }
+  },
+  {
+    "key": "digitalocean/z5fjzx3kp16z",
+    "vendor": "digitalocean",
+    "native_id": "z5fjzx3kp16z",
+    "title": "Elevated 5xx “context canceled” errors impacting serverless inference",
+    "url": "https://stspg.io/qf13crcjzkmn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-28T13:45:20.294Z",
+    "resolved_at": "2026-04-28T19:33:38.769Z",
+    "duration_minutes": 348,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "c6w10r5fj4d1",
+        "status": "investigating",
+        "body": "Serverless inference customers are experiencing elevated 5xx errors, including “context canceled” responses. This may result in intermittent request failures. Our team is actively investigating and will provide updates as more information becomes available.",
+        "created_at": "2026-04-28T13:45:20.371Z"
+      },
+      {
+        "native_id": "lj4232xqtxhm",
+        "status": "identified",
+        "body": "We have identified an issue affecting our service and are currently working to implement a fix. Our team is actively investigating and taking the necessary steps to restore normal operations as quickly as possible.\n\nWe appreciate your patience and will provide updates as soon as more information becomes available.",
+        "created_at": "2026-04-28T15:59:26.192Z"
+      },
+      {
+        "native_id": "jl0j5748fb4y",
+        "status": "monitoring",
+        "body": "Service for Serverless Inference has been restored.\nWe’ve implemented tighter rate limits to help prevent recurrence and are closely monitoring system performance. Some users may still experience intermittent latency as we complete final stabilization efforts.\nOur team remains actively engaged to ensure full recovery. We appreciate your patience and will provide further updates as needed.",
+        "created_at": "2026-04-28T19:00:24.146Z"
+      },
+      {
+        "native_id": "7hmj3f5bvs4y",
+        "status": "resolved",
+        "body": "All services are operating normally. We will continue to monitor the system to ensure ongoing reliability.\n\nThank you for your patience while we worked to resolve this issue.",
+        "created_at": "2026-04-28T19:33:38.769Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-28T13:45:20.299Z",
+      "id": "z5fjzx3kp16z",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "All services are operating normally. We will continue to monitor the system to ensure ongoing reliability.\n\nThank you for your patience while we worked to resolve this issue.",
+          "created_at": "2026-04-28T19:33:38.769Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-28T19:33:38.769Z",
+          "id": "7hmj3f5bvs4y",
+          "incident_id": "z5fjzx3kp16z",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-28T19:33:38.769Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Service for Serverless Inference has been restored.\nWe’ve implemented tighter rate limits to help prevent recurrence and are closely monitoring system performance. Some users may still experience intermittent latency as we complete final stabilization efforts.\nOur team remains actively engaged to ensure full recovery. We appreciate your patience and will provide further updates as needed.",
+          "created_at": "2026-04-28T19:00:24.146Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-28T19:00:24.146Z",
+          "id": "jl0j5748fb4y",
+          "incident_id": "z5fjzx3kp16z",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-28T19:00:24.146Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified an issue affecting our service and are currently working to implement a fix. Our team is actively investigating and taking the necessary steps to restore normal operations as quickly as possible.\n\nWe appreciate your patience and will provide updates as soon as more information becomes available.",
+          "created_at": "2026-04-28T15:59:26.192Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-28T15:59:26.192Z",
+          "id": "lj4232xqtxhm",
+          "incident_id": "z5fjzx3kp16z",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-28T15:59:26.192Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Serverless inference customers are experiencing elevated 5xx errors, including “context canceled” responses. This may result in intermittent request failures. Our team is actively investigating and will provide updates as more information becomes available.",
+          "created_at": "2026-04-28T13:45:20.371Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-28T13:45:20.371Z",
+          "id": "c6w10r5fj4d1",
+          "incident_id": "z5fjzx3kp16z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-28T13:45:20.371Z"
+        }
+      ],
+      "monitoring_at": "2026-04-28T19:00:24.146Z",
+      "name": "Elevated 5xx “context canceled” errors impacting serverless inference",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-28T19:33:38.769Z",
+      "shortlink": "https://stspg.io/qf13crcjzkmn",
+      "started_at": "2026-04-28T13:45:20.294Z",
+      "status": "resolved",
+      "updated_at": "2026-04-28T19:33:38.782Z"
+    }
+  }
+]

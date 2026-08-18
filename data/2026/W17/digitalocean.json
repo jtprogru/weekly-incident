@@ -1,0 +1,578 @@
+[
+  {
+    "key": "digitalocean/zjd34dpv45vr",
+    "vendor": "digitalocean",
+    "native_id": "zjd34dpv45vr",
+    "title": "Cloud Control Panel and API",
+    "url": "https://stspg.io/2wd37dxsqcrk",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-22T11:06:49.861Z",
+    "resolved_at": "2026-04-22T11:47:38.128Z",
+    "duration_minutes": 40,
+    "components": [
+      "API",
+      "Cloud Control Panel"
+    ],
+    "updates": [
+      {
+        "native_id": "1x228n24xgs2",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue affecting the Cloud Control Panel and API. During this time, API requests to create, destroy, or trigger events on droplets may not succeed. Additionally, the Droplets page in the Cloud Control Panel may not load properly, and users could experience issues while reviewing the droplet listing.\n\nWe are actively looking into the root cause and will provide updates as soon as more information becomes available.\n\nWe apologize for the inconvenience and appreciate your patience.",
+        "created_at": "2026-04-22T11:06:49.978Z"
+      },
+      {
+        "native_id": "mgz14d6ltwkl",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the issue affecting the DigitalOcean API and the Cloud Control Panel. We are now actively monitoring the system to ensure full stability and will provide a final update once the issue is completely resolved.\n\nWe sincerely appreciate your patience and understanding as we work to restore normal service.",
+        "created_at": "2026-04-22T11:25:30.496Z"
+      },
+      {
+        "native_id": "vhdsv397qqrj",
+        "status": "resolved",
+        "body": "Our Engineering team has resolved the issue that was impacting the DigitalOcean API and the Cloud Control Panel. The system is now operating normally.\n\nDuring the incident, users may have experienced difficulties accessing droplets, viewing the Droplets page, or performing CRUD (Create, Read, Update, Delete) operations via the API. We have verified that the issue has been fully resolved.\n\nWe apologize for the inconvenience this may have caused. If you continue to experience any issues, please submit a support ticket through the Cloud Control Panel so our team can assist you further.",
+        "created_at": "2026-04-22T11:47:38.128Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-06T18:42:45.160Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "p1x9rv4137gx",
+          "name": "API",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-05-08T19:59:48.833Z"
+        },
+        {
+          "created_at": "2023-03-06T18:42:46.098Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "czck17wcspr5",
+          "name": "Cloud Control Panel",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-08-03T16:39:40.365Z"
+        }
+      ],
+      "created_at": "2026-04-22T11:06:49.867Z",
+      "id": "zjd34dpv45vr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "p1x9rv4137gx",
+              "name": "API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has resolved the issue that was impacting the DigitalOcean API and the Cloud Control Panel. The system is now operating normally.\n\nDuring the incident, users may have experienced difficulties accessing droplets, viewing the Droplets page, or performing CRUD (Create, Read, Update, Delete) operations via the API. We have verified that the issue has been fully resolved.\n\nWe apologize for the inconvenience this may have caused. If you continue to experience any issues, please submit a support ticket through the Cloud Control Panel so our team can assist you further.",
+          "created_at": "2026-04-22T11:47:38.128Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-22T11:47:38.128Z",
+          "id": "vhdsv397qqrj",
+          "incident_id": "zjd34dpv45vr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-22T11:47:38.128Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p1x9rv4137gx",
+              "name": "API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the issue affecting the DigitalOcean API and the Cloud Control Panel. We are now actively monitoring the system to ensure full stability and will provide a final update once the issue is completely resolved.\n\nWe sincerely appreciate your patience and understanding as we work to restore normal service.",
+          "created_at": "2026-04-22T11:25:30.496Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-22T11:25:30.496Z",
+          "id": "mgz14d6ltwkl",
+          "incident_id": "zjd34dpv45vr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-22T11:25:30.496Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p1x9rv4137gx",
+              "name": "API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "degraded_performance",
+              "old_status": "under_maintenance"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue affecting the Cloud Control Panel and API. During this time, API requests to create, destroy, or trigger events on droplets may not succeed. Additionally, the Droplets page in the Cloud Control Panel may not load properly, and users could experience issues while reviewing the droplet listing.\n\nWe are actively looking into the root cause and will provide updates as soon as more information becomes available.\n\nWe apologize for the inconvenience and appreciate your patience.",
+          "created_at": "2026-04-22T11:06:49.978Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-22T11:06:49.978Z",
+          "id": "1x228n24xgs2",
+          "incident_id": "zjd34dpv45vr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-22T11:06:49.978Z"
+        }
+      ],
+      "monitoring_at": "2026-04-22T11:25:30.496Z",
+      "name": "Cloud Control Panel and API",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-22T11:47:38.128Z",
+      "shortlink": "https://stspg.io/2wd37dxsqcrk",
+      "started_at": "2026-04-22T11:06:49.861Z",
+      "status": "resolved",
+      "updated_at": "2026-04-22T11:47:38.156Z"
+    }
+  },
+  {
+    "key": "digitalocean/p1jbzg2bvhj9",
+    "vendor": "digitalocean",
+    "native_id": "p1jbzg2bvhj9",
+    "title": "Cloud UI for Managed Kubernetes",
+    "url": "https://stspg.io/3tff32qrsv77",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-23T07:01:46.693Z",
+    "resolved_at": "2026-04-23T08:46:39.799Z",
+    "duration_minutes": 104,
+    "components": [
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "smqjns94tdsz",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue impacting Managed Kubernetes UI across all regions. During this time, some users may experience the Kubernetes UI page not loading in DigitalOcean Onboarding.\n\nWe apologize for the inconvenience and will share more information as soon as it's available.",
+        "created_at": "2026-04-23T07:01:46.806Z"
+      },
+      {
+        "native_id": "vrd258www6v5",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue impacting the Create Managed Kubernetes UI across all regions. During this time, users with a Member role may experience the Kubernetes UI page not loading in the cloud console.\nAs a workaround, the DigitalOcean API and doctl (CLI) continue to function normally, and you can use them to manage your Kubernetes resources in the meantime.\nWe apologize for the inconvenience and will share more information as soon as it becomes available.",
+        "created_at": "2026-04-23T07:14:44.838Z"
+      },
+      {
+        "native_id": "tmv3h0b06hd3",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue impacting the Managed Kubernetes UI across all regions. During this time, users with a Member role may experience the Kubernetes UI page not loading in the cloud console.\nAs a workaround, the DigitalOcean API and doctl (CLI) continue to function normally, and you can use them to manage your Kubernetes resources in the meantime.\nWe apologize for the inconvenience and will share more information as soon as it becomes available",
+        "created_at": "2026-04-23T07:52:05.055Z"
+      },
+      {
+        "native_id": "44hzbhxsy8wm",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed full resolution of the issue with Cloud UI for Managed Kubernetes at 09:19 UTC.\n\nAll the services should be functioning as expected.\n\nIf you continue to experience problems, please open a ticket with our support team. Thank you for your patience throughout this incident!",
+        "created_at": "2026-04-23T08:46:39.799Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-08-16T11:33:35.622Z",
+          "description": null,
+          "group": false,
+          "group_id": "gb3gs5vj7js2",
+          "id": "ljktrzzffk6j",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-08-09T00:31:29.206Z"
+        }
+      ],
+      "created_at": "2026-04-23T07:01:46.702Z",
+      "id": "p1jbzg2bvhj9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has confirmed full resolution of the issue with Cloud UI for Managed Kubernetes at 09:19 UTC.\n\nAll the services should be functioning as expected.\n\nIf you continue to experience problems, please open a ticket with our support team. Thank you for your patience throughout this incident!",
+          "created_at": "2026-04-23T08:46:39.799Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T08:46:39.799Z",
+          "id": "44hzbhxsy8wm",
+          "incident_id": "p1jbzg2bvhj9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T08:46:39.799Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue impacting the Managed Kubernetes UI across all regions. During this time, users with a Member role may experience the Kubernetes UI page not loading in the cloud console.\nAs a workaround, the DigitalOcean API and doctl (CLI) continue to function normally, and you can use them to manage your Kubernetes resources in the meantime.\nWe apologize for the inconvenience and will share more information as soon as it becomes available",
+          "created_at": "2026-04-23T07:52:05.055Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T07:52:05.055Z",
+          "id": "tmv3h0b06hd3",
+          "incident_id": "p1jbzg2bvhj9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T07:52:05.055Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue impacting the Create Managed Kubernetes UI across all regions. During this time, users with a Member role may experience the Kubernetes UI page not loading in the cloud console.\nAs a workaround, the DigitalOcean API and doctl (CLI) continue to function normally, and you can use them to manage your Kubernetes resources in the meantime.\nWe apologize for the inconvenience and will share more information as soon as it becomes available.",
+          "created_at": "2026-04-23T07:14:44.838Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T07:14:44.838Z",
+          "id": "vrd258www6v5",
+          "incident_id": "p1jbzg2bvhj9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T07:14:44.838Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue impacting Managed Kubernetes UI across all regions. During this time, some users may experience the Kubernetes UI page not loading in DigitalOcean Onboarding.\n\nWe apologize for the inconvenience and will share more information as soon as it's available.",
+          "created_at": "2026-04-23T07:01:46.806Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T07:01:46.806Z",
+          "id": "smqjns94tdsz",
+          "incident_id": "p1jbzg2bvhj9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T07:01:46.806Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloud UI for Managed Kubernetes",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-23T08:46:39.799Z",
+      "shortlink": "https://stspg.io/3tff32qrsv77",
+      "started_at": "2026-04-23T07:01:46.693Z",
+      "status": "resolved",
+      "updated_at": "2026-04-23T08:46:39.818Z"
+    }
+  },
+  {
+    "key": "digitalocean/2rby4tk1q6mm",
+    "vendor": "digitalocean",
+    "native_id": "2rby4tk1q6mm",
+    "title": "App Platform Deployments",
+    "url": "https://stspg.io/0rby3knkk6s1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-23T08:08:37.479Z",
+    "resolved_at": "2026-04-23T10:09:54.77Z",
+    "duration_minutes": 121,
+    "components": [
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "wdkxt08zczv2",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating reports of build failures on App Platform. Users may experience errors when attempting to build their applications, resulting in failed deployments.\n\nOur Engineering team is working to fix the issue and will share an update once we have more information. \n\nWe apologize for the inconvenience this issue may be causing and appreciate your patience as we work to resolve it.",
+        "created_at": "2026-04-23T08:08:37.603Z"
+      },
+      {
+        "native_id": "w8d8px8g7hmx",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating reports of build failures on App Platform. During this time, some users may encounter errors while building their applications, which may result in failed deployments.\nIn addition, we are observing an issue where Kubernetes (DOKS) nodes are being marked as unhealthy by load balancers, which may impact traffic routing for affected services.\nOur Engineering team is actively working to resolve these issues and will share an update as soon as more information becomes available.\nWe apologize for the inconvenience this may be causing and appreciate your patience.",
+        "created_at": "2026-04-23T08:31:00.329Z"
+      },
+      {
+        "native_id": "g98d25d70tpm",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix to address the issue causing in App Platform deployments and Kubernetes (DOKS) nodes. We are actively monitoring the situation to ensure overall stability.\nUsers may already notice improvements while deploying apps and DOKS nodes. We appreciate your patience throughout the process and will provide a further update once the issue is fully confirmed to be resolved.",
+        "created_at": "2026-04-23T09:52:00.614Z"
+      },
+      {
+        "native_id": "gk4h532vs43v",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the issue impacting App Platform deployments and Kubernetes (DOKS) nodes has been fully resolved at 09:22 UTC. Users may already notice improvements while deploying apps and DOKS nodes.\n\nAll App Platform deployments are now succeeding as expected. Customers who previously encountered build failures should now be able to deploy their applications without further issues.\n\nIf you continue to experience any problems, please open a ticket with our support team. Thank you for your patience, and we apologize for any inconvenience.",
+        "created_at": "2026-04-23T10:09:54.77Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-28T21:01:12.838Z",
+          "description": null,
+          "group": false,
+          "group_id": "jjs48vwjlqjr",
+          "id": "txysr8r0gn1n",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-28",
+          "status": "operational",
+          "updated_at": "2026-08-06T20:02:03.146Z"
+        }
+      ],
+      "created_at": "2026-04-23T08:08:37.488Z",
+      "id": "2rby4tk1q6mm",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the issue impacting App Platform deployments and Kubernetes (DOKS) nodes has been fully resolved at 09:22 UTC. Users may already notice improvements while deploying apps and DOKS nodes.\n\nAll App Platform deployments are now succeeding as expected. Customers who previously encountered build failures should now be able to deploy their applications without further issues.\n\nIf you continue to experience any problems, please open a ticket with our support team. Thank you for your patience, and we apologize for any inconvenience.",
+          "created_at": "2026-04-23T10:09:54.770Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T10:09:54.770Z",
+          "id": "gk4h532vs43v",
+          "incident_id": "2rby4tk1q6mm",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T10:09:54.770Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix to address the issue causing in App Platform deployments and Kubernetes (DOKS) nodes. We are actively monitoring the situation to ensure overall stability.\nUsers may already notice improvements while deploying apps and DOKS nodes. We appreciate your patience throughout the process and will provide a further update once the issue is fully confirmed to be resolved.",
+          "created_at": "2026-04-23T09:52:00.614Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T09:52:00.614Z",
+          "id": "g98d25d70tpm",
+          "incident_id": "2rby4tk1q6mm",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T09:52:00.614Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating reports of build failures on App Platform. During this time, some users may encounter errors while building their applications, which may result in failed deployments.\nIn addition, we are observing an issue where Kubernetes (DOKS) nodes are being marked as unhealthy by load balancers, which may impact traffic routing for affected services.\nOur Engineering team is actively working to resolve these issues and will share an update as soon as more information becomes available.\nWe apologize for the inconvenience this may be causing and appreciate your patience.",
+          "created_at": "2026-04-23T08:31:00.329Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T08:31:00.329Z",
+          "id": "w8d8px8g7hmx",
+          "incident_id": "2rby4tk1q6mm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T08:31:00.329Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating reports of build failures on App Platform. Users may experience errors when attempting to build their applications, resulting in failed deployments.\n\nOur Engineering team is working to fix the issue and will share an update once we have more information. \n\nWe apologize for the inconvenience this issue may be causing and appreciate your patience as we work to resolve it.",
+          "created_at": "2026-04-23T08:08:37.603Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T08:08:37.603Z",
+          "id": "wdkxt08zczv2",
+          "incident_id": "2rby4tk1q6mm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T08:08:37.603Z"
+        }
+      ],
+      "monitoring_at": "2026-04-23T09:52:00.614Z",
+      "name": "App Platform Deployments",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-23T10:09:54.770Z",
+      "shortlink": "https://stspg.io/0rby3knkk6s1",
+      "started_at": "2026-04-23T08:08:37.479Z",
+      "status": "resolved",
+      "updated_at": "2026-04-23T10:09:54.800Z"
+    }
+  },
+  {
+    "key": "digitalocean/1y9gxbdcqb71",
+    "vendor": "digitalocean",
+    "native_id": "1y9gxbdcqb71",
+    "title": "Intermittent errors impacting some Serverless Inference models in ATL1",
+    "url": "https://stspg.io/z4pxt0jh8n97",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-23T22:26:34Z",
+    "resolved_at": "2026-04-23T23:51:58.178Z",
+    "duration_minutes": 85,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "jyf13yqty9c4",
+        "status": "investigating",
+        "body": "As of 21:53 UTC, our Engineering team is investigating reports of increased internal errors for models Llama 3.3 70B, GPT OSS 120B, GPT OSS 20B, Qwen3 32B and Deepseek R1 70B hosted in the ATL1 region, impacting Serverless Inference. At this point, users with models hosted in ATL1 may experience intermittent errors when using Serverless Inference. We apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-04-23T22:26:34.826Z"
+      },
+      {
+        "native_id": "h52c2fn4s48f",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-04-23T23:51:58.178Z"
+      }
+    ],
+    "first_seen_at": "2026-08-18T12:36:46.660317Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-23T22:26:34.000Z",
+      "id": "1y9gxbdcqb71",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-04-23T23:51:58.178Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T23:51:58.178Z",
+          "id": "h52c2fn4s48f",
+          "incident_id": "1y9gxbdcqb71",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T23:51:58.178Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of 21:53 UTC, our Engineering team is investigating reports of increased internal errors for models Llama 3.3 70B, GPT OSS 120B, GPT OSS 20B, Qwen3 32B and Deepseek R1 70B hosted in the ATL1 region, impacting Serverless Inference. At this point, users with models hosted in ATL1 may experience intermittent errors when using Serverless Inference. We apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-04-23T22:26:34.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T22:26:34.000Z",
+          "id": "jyf13yqty9c4",
+          "incident_id": "1y9gxbdcqb71",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T23:06:23.350Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Intermittent errors impacting some Serverless Inference models in ATL1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-23T23:51:58.178Z",
+      "shortlink": "https://stspg.io/z4pxt0jh8n97",
+      "started_at": "2026-04-23T22:26:34.000Z",
+      "status": "resolved",
+      "updated_at": "2026-04-23T23:51:58.201Z"
+    }
+  }
+]

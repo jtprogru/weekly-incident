@@ -1,0 +1,405 @@
+{
+  "week": "2026-W19",
+  "from": "2026-05-04T00:00:00Z",
+  "to": "2026-05-11T00:00:00Z",
+  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 43,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "slack/1551",
+      "vendor": "slack",
+      "title": "EKM customers were previously experiencing issues with channel loading and message delivery",
+      "url": "https://slack-status.com/2026-05/d284d808ed66c511",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-05-08T18:31:22Z",
+      "resolved_at": "2026-05-11T21:48:12Z",
+      "duration_minutes": 4516,
+      "ongoing": false,
+      "components": [
+        "Messaging",
+        "Files",
+        "Notifications",
+        "Apps/Integrations/APIs"
+      ],
+      "score": {
+        "value": 21676.8,
+        "duration_minutes": 4516,
+        "components": 4,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/wjrkhvg9ydc1",
+      "vendor": "datadog",
+      "title": "Delayed Monitors Notifications",
+      "url": "https://stspg.io/rbj54mc4nhgs",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-05-08T00:06:53.056Z",
+      "resolved_at": "2026-05-08T14:07:35.466Z",
+      "duration_minutes": 840,
+      "ongoing": false,
+      "components": [
+        "APM",
+        "CI Visibility",
+        "Error Tracking",
+        "Log Management",
+        "Metrics and Infra Monitoring",
+        "Monitors",
+        "RUM"
+      ],
+      "score": {
+        "value": 5880,
+        "duration_minutes": 840,
+        "components": 7,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/h9t3sfjx36l3",
+      "vendor": "digitalocean",
+      "title": "Multiple Services in NYC2",
+      "url": "https://stspg.io/tb7f2ntnj8hm",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-08T18:01:42.462Z",
+      "resolved_at": "2026-05-08T19:59:48.942Z",
+      "duration_minutes": 118,
+      "ongoing": false,
+      "components": [
+        "API",
+        "New York",
+        "NYC2",
+        "NYC2",
+        "NYC2",
+        "NYC2"
+      ],
+      "score": {
+        "value": 566.4,
+        "duration_minutes": 118,
+        "components": 6,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "slack/1549",
+      "vendor": "slack",
+      "title": "Slow behaviour in Slack",
+      "url": "https://slack-status.com/2026-05/bedf971f90be70a6",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-05-04T10:00:38Z",
+      "resolved_at": "2026-05-04T17:37:54Z",
+      "duration_minutes": 457,
+      "ongoing": false,
+      "components": [
+        "Workflows"
+      ],
+      "score": {
+        "value": 548.4,
+        "duration_minutes": 457,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1550",
+      "vendor": "slack",
+      "title": "Scheduled Grid Migrations are experiencing extended downtime",
+      "url": "https://slack-status.com/2026-05/02b2d5b45d656512",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-05-08T12:13:46Z",
+      "resolved_at": "2026-05-08T17:44:24Z",
+      "duration_minutes": 330,
+      "ongoing": false,
+      "components": [
+        "Connectivity"
+      ],
+      "score": {
+        "value": 396,
+        "duration_minutes": 330,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/p3zyn7c4jyx7",
+      "vendor": "digitalocean",
+      "title": "Let's Encrypt Outage Affecting Certificate Issuance and Managed Databases Operations",
+      "url": "https://stspg.io/rw9m9n69q6tg",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-08T20:46:22.084Z",
+      "resolved_at": "2026-05-08T21:54:44.593Z",
+      "duration_minutes": 68,
+      "ongoing": false,
+      "components": [
+        "Global",
+        "Global",
+        "Global",
+        "Global",
+        "Global"
+      ],
+      "score": {
+        "value": 272,
+        "duration_minutes": 68,
+        "components": 5,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/d4gch9k0tcsq",
+      "vendor": "circleci",
+      "title": "GitHub incident with Pull Requests",
+      "url": "https://stspg.io/pttscyh3qsv1",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-05-06T17:54:34.385Z",
+      "resolved_at": "2026-05-06T21:26:23.566Z",
+      "duration_minutes": 211,
+      "ongoing": false,
+      "components": [
+        "GitHub Pull Requests"
+      ],
+      "score": {
+        "value": 211,
+        "duration_minutes": 211,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/7hb39w1wzmwf",
+      "vendor": "digitalocean",
+      "title": "Control Panel Errors - Unable to Enable 2FA and Google/GitHub",
+      "url": "https://stspg.io/tyb995vv9ykq",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-09T11:15:11.255Z",
+      "resolved_at": "2026-05-09T14:42:15.691Z",
+      "duration_minutes": 207,
+      "ongoing": false,
+      "components": [
+        "Cloud Control Panel"
+      ],
+      "score": {
+        "value": 165.60000000000002,
+        "duration_minutes": 207,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/s1mcpzcxhr9x",
+      "vendor": "datadog",
+      "title": "Delays in APM-based Monitor Notifications",
+      "url": "https://stspg.io/rww57bn61jkp",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-05T18:14:03.749Z",
+      "resolved_at": "2026-05-05T19:52:31.844Z",
+      "duration_minutes": 98,
+      "ongoing": false,
+      "components": [
+        "Monitors"
+      ],
+      "score": {
+        "value": 98,
+        "duration_minutes": 98,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/jf3qmzzgq9k3",
+      "vendor": "stripe",
+      "title": "Dashboard authentication errors",
+      "url": "https://stspg.io/9559m3z4g1cq",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-07T13:07:18.096Z",
+      "resolved_at": "2026-05-07T13:53:06.212Z",
+      "duration_minutes": 45,
+      "ongoing": false,
+      "components": [
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 54,
+        "duration_minutes": 45,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/c1pk36f2kh25",
+      "vendor": "stripe",
+      "title": "Elevated Authentication Requests",
+      "url": "https://stspg.io/yvt9gyxgydkb",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-08T14:07:59.66Z",
+      "resolved_at": "2026-05-08T14:47:00.948Z",
+      "duration_minutes": 39,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 46.8,
+        "duration_minutes": 39,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/68kk6515ztfp",
+      "vendor": "circleci",
+      "title": "Some Pipelines are being lost",
+      "url": "https://stspg.io/m852c4blmtsk",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-05-06T19:42:48.221Z",
+      "resolved_at": "2026-05-06T20:13:46.165Z",
+      "duration_minutes": 30,
+      "ongoing": false,
+      "components": [
+        "Pipelines \u0026 Workflows"
+      ],
+      "score": {
+        "value": 30,
+        "duration_minutes": 30,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/s4ps5f7zf4zh",
+      "vendor": "stripe",
+      "title": "Elevated API error rates from 18:15 - 18:34 UTC",
+      "url": "https://stspg.io/vwp5wh5qbqlv",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-05-06T18:51:29Z",
+      "resolved_at": "2026-05-06T18:51:29Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "Stripe API"
+      ],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    }
+  ]
+}
