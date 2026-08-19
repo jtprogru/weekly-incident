@@ -2,96 +2,96 @@
   "week": "2026-W34",
   "from": "2026-08-17T00:00:00Z",
   "to": "2026-08-24T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-08-19T06:22:06.990038806Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
-      "incidents_seen": 5,
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 43,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-18T12:36:46.660317Z",
+      "fetched_at": "2026-08-19T06:22:06.990038806Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -122,6 +122,31 @@
         "value": 5460,
         "duration_minutes": 455,
         "components": 8,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/q7txxvbsftgq",
+      "vendor": "anthropic",
+      "title": "Degraded performance for multiple models",
+      "url": "https://stspg.io/tcsfmtc03xgm",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-18T16:20:22.231Z",
+      "resolved_at": "2026-08-18T19:01:45.447Z",
+      "duration_minutes": 161,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 966,
+        "duration_minutes": 161,
+        "components": 4,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -324,6 +349,26 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/pqcnjfxrycb2",
+      "vendor": "cloudflare",
+      "title": "CDNJS Elevated Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/pqcnjfxrycb2",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-18T16:16:42.924Z",
+      "resolved_at": "2026-08-18T16:34:54.405Z",
+      "duration_minutes": 18,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 32.4,
+        "duration_minutes": 18,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "circleci/bd3dy5yl5cqm",
       "vendor": "circleci",
       "title": "Insight data is currently delayed",
@@ -344,6 +389,46 @@
         "vendor_weight": 1
       },
       "above_threshold": false
+    },
+    {
+      "key": "openai/01M0B4WSV41BCFZ9VDWKSMQVSP",
+      "vendor": "openai",
+      "title": "Elevated errors deploying Sites",
+      "url": "https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-18T19:17:12Z",
+      "resolved_at": "2026-08-18T19:37:24Z",
+      "duration_minutes": 20,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 30,
+        "duration_minutes": 20,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/j0h67pnrf9cj",
+      "vendor": "grafana",
+      "title": "Cloud Logs read path outage on eu-west-2",
+      "url": "https://stspg.io/1g4dpsdmf2cf",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-08-18T22:53:27.796Z",
+      "resolved_at": "2026-08-18T22:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
     }
   ]
 }
