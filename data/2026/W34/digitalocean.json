@@ -1,0 +1,229 @@
+[
+  {
+    "key": "digitalocean/qd8v4wddyqjr",
+    "vendor": "digitalocean",
+    "native_id": "qd8v4wddyqjr",
+    "title": "Major Service Interruption in MKC1",
+    "url": "https://stspg.io/gdzqj0v18x0r",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-08-19T11:10:06.316Z",
+    "resolved_at": "2026-08-19T19:34:54.136Z",
+    "duration_minutes": 504,
+    "components": [
+      "MKC1",
+      "MKC1"
+    ],
+    "updates": [
+      {
+        "native_id": "kf9jffpjn230",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue in the MKC1 region affecting multiple racks and nodes.\n\nDuring this time, customers may experience disruptions to GPU workloads, and Kubernetes (DOKS) worker nodes may enter a NotReady state.\n\nOur team is actively working to restore connectivity and bring impacted nodes back online. If you continue to experience issues, please open a support ticket from within your account.",
+        "created_at": "2026-08-19T11:10:06.45Z"
+      },
+      {
+        "native_id": "qmw8xjwfrlyd",
+        "status": "identified",
+        "body": "We have identified the root cause of the issue in the MKC1 region affecting multiple racks and nodes. Our Engineering team is actively implementing remediation steps to restore connectivity and bring the impacted nodes back online.\nDuring this time, customers may continue to experience disruptions to GPU workloads and Serverless Inference. Kubernetes (DOKS) worker nodes may also remain in a NotReady state, and customers may be unable to reach Kubernetes API endpoints or perform cluster-management operations in affected clusters. We will provide another update as soon as we have more information.",
+        "created_at": "2026-08-19T12:22:47.13Z"
+      },
+      {
+        "native_id": "7n5nnx0d2lh0",
+        "status": "identified",
+        "body": "Our Engineering team continues to work on the issue affecting the MKC1 region. We are actively working to restore connectivity and bring the impacted nodes back online.\nWe will provide another update as soon as we have more information.",
+        "created_at": "2026-08-19T15:28:37.241Z"
+      },
+      {
+        "native_id": "lm26v8xbk4kt",
+        "status": "monitoring",
+        "body": "At this time, the regional control plane is fully healthy. CPU Droplets, Managed databases, Load balancers, Block storage and Spaces are operating normally. Droplet create, resize and other management operations are working. Kubernetes (DOKS) control planes are reachable.\n\nOur teams are continuing to work with the facility to restore all equipment. GPU Droplets in MKC1 remain offline or unreachable. DOKS GPU worker nodes may remain NotReady, and GPU-backed inference endpoints in this region may be unavailable. \n\nWe will monitor the regional control plane for a short time and then resolve this incident. GPU customers will receive personalized updates with more information in lieu of this status page. \n\nIf you have questions about your affected resources, contact support and reference this incident.",
+        "created_at": "2026-08-19T18:59:03.077Z"
+      },
+      {
+        "native_id": "xppv1s9npsqp",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed the regional control plane is healthy and CPU Droplets, Managed databases, Load balancers, Block storage, Kubernetes (DOKS) and Spaces are operating normally.\n\nGPU Droplets continue to be impacted and our teams are working to restore all nodes. We will communicate with GPU Droplet customers separately via Slack and email with more information and regular updates.\n\nThank you for your patience throughout this incident. If you continue to experience any issues, please open a support ticket from within your account.",
+        "created_at": "2026-08-19T19:34:54.136Z"
+      }
+    ],
+    "first_seen_at": "2026-08-20T06:23:05.90840083Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-15T19:35:48.602Z",
+          "description": null,
+          "group": false,
+          "group_id": "hz17hg2dwjj5",
+          "id": "dzzkx9qrqr9v",
+          "name": "MKC1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2026-07-15",
+          "status": "operational",
+          "updated_at": "2026-08-19T19:37:57.231Z"
+        },
+        {
+          "created_at": "2026-07-15T19:42:27.171Z",
+          "description": null,
+          "group": false,
+          "group_id": "gb3gs5vj7js2",
+          "id": "20bc3d63817b",
+          "name": "MKC1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2026-07-15",
+          "status": "operational",
+          "updated_at": "2026-08-19T18:59:03.042Z"
+        }
+      ],
+      "created_at": "2026-08-19T11:10:06.329Z",
+      "id": "qd8v4wddyqjr",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "20bc3d63817b",
+              "name": "Kubernetes - MKC1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "dzzkx9qrqr9v",
+              "name": "GPU Droplets - MKC1",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Our Engineering team has confirmed the regional control plane is healthy and CPU Droplets, Managed databases, Load balancers, Block storage, Kubernetes (DOKS) and Spaces are operating normally.\n\nGPU Droplets continue to be impacted and our teams are working to restore all nodes. We will communicate with GPU Droplet customers separately via Slack and email with more information and regular updates.\n\nThank you for your patience throughout this incident. If you continue to experience any issues, please open a support ticket from within your account.",
+          "created_at": "2026-08-19T19:34:54.136Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-19T19:34:54.136Z",
+          "id": "xppv1s9npsqp",
+          "incident_id": "qd8v4wddyqjr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-19T19:34:54.136Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "20bc3d63817b",
+              "name": "Kubernetes - MKC1",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "dzzkx9qrqr9v",
+              "name": "GPU Droplets - MKC1",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "At this time, the regional control plane is fully healthy. CPU Droplets, Managed databases, Load balancers, Block storage and Spaces are operating normally. Droplet create, resize and other management operations are working. Kubernetes (DOKS) control planes are reachable.\n\nOur teams are continuing to work with the facility to restore all equipment. GPU Droplets in MKC1 remain offline or unreachable. DOKS GPU worker nodes may remain NotReady, and GPU-backed inference endpoints in this region may be unavailable. \n\nWe will monitor the regional control plane for a short time and then resolve this incident. GPU customers will receive personalized updates with more information in lieu of this status page. \n\nIf you have questions about your affected resources, contact support and reference this incident.",
+          "created_at": "2026-08-19T18:59:03.077Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-19T18:59:03.077Z",
+          "id": "lm26v8xbk4kt",
+          "incident_id": "qd8v4wddyqjr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-19T18:59:03.077Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "20bc3d63817b",
+              "name": "Kubernetes - MKC1",
+              "new_status": "major_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "dzzkx9qrqr9v",
+              "name": "GPU Droplets - MKC1",
+              "new_status": "major_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team continues to work on the issue affecting the MKC1 region. We are actively working to restore connectivity and bring the impacted nodes back online.\nWe will provide another update as soon as we have more information.",
+          "created_at": "2026-08-19T15:28:37.241Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-19T15:28:37.241Z",
+          "id": "7n5nnx0d2lh0",
+          "incident_id": "qd8v4wddyqjr",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-19T15:28:37.241Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "20bc3d63817b",
+              "name": "Kubernetes - MKC1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "dzzkx9qrqr9v",
+              "name": "GPU Droplets - MKC1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the root cause of the issue in the MKC1 region affecting multiple racks and nodes. Our Engineering team is actively implementing remediation steps to restore connectivity and bring the impacted nodes back online.\nDuring this time, customers may continue to experience disruptions to GPU workloads and Serverless Inference. Kubernetes (DOKS) worker nodes may also remain in a NotReady state, and customers may be unable to reach Kubernetes API endpoints or perform cluster-management operations in affected clusters. We will provide another update as soon as we have more information.",
+          "created_at": "2026-08-19T12:22:47.130Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-19T12:22:47.000Z",
+          "id": "qmw8xjwfrlyd",
+          "incident_id": "qd8v4wddyqjr",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-19T14:36:14.910Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "20bc3d63817b",
+              "name": "Kubernetes - MKC1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "dzzkx9qrqr9v",
+              "name": "GPU Droplets - MKC1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue in the MKC1 region affecting multiple racks and nodes.\n\nDuring this time, customers may experience disruptions to GPU workloads, and Kubernetes (DOKS) worker nodes may enter a NotReady state.\n\nOur team is actively working to restore connectivity and bring impacted nodes back online. If you continue to experience issues, please open a support ticket from within your account.",
+          "created_at": "2026-08-19T11:10:06.450Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-19T11:10:06.450Z",
+          "id": "kf9jffpjn230",
+          "incident_id": "qd8v4wddyqjr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-19T11:10:06.450Z"
+        }
+      ],
+      "monitoring_at": "2026-08-19T18:59:03.077Z",
+      "name": "Major Service Interruption in MKC1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-19T19:34:54.136Z",
+      "shortlink": "https://stspg.io/gdzqj0v18x0r",
+      "started_at": "2026-08-19T11:10:06.316Z",
+      "status": "resolved",
+      "updated_at": "2026-08-19T19:34:54.152Z"
+    }
+  }
+]

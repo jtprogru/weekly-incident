@@ -2,96 +2,96 @@
   "week": "2026-W34",
   "from": "2026-08-17T00:00:00Z",
   "to": "2026-08-24T00:00:00Z",
-  "generated_at": "2026-08-19T06:22:06.990038806Z",
+  "generated_at": "2026-08-20T06:23:05.90840083Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
-      "incidents_seen": 4,
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 43,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-19T06:22:06.990038806Z",
+      "fetched_at": "2026-08-20T06:23:05.90840083Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -152,6 +152,29 @@
       "above_threshold": true
     },
     {
+      "key": "digitalocean/qd8v4wddyqjr",
+      "vendor": "digitalocean",
+      "title": "Major Service Interruption in MKC1",
+      "url": "https://stspg.io/gdzqj0v18x0r",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-08-19T11:10:06.316Z",
+      "resolved_at": "2026-08-19T19:34:54.136Z",
+      "duration_minutes": 504,
+      "ongoing": false,
+      "components": [
+        "MKC1",
+        "MKC1"
+      ],
+      "score": {
+        "value": 806.4000000000001,
+        "duration_minutes": 504,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "anthropic/zhk4v3yv1lsf",
       "vendor": "anthropic",
       "title": "Degraded performance for Claude Opus 5, Claude Sonnet 5",
@@ -175,6 +198,53 @@
         "vendor_weight": 1.5
       },
       "above_threshold": false
+    },
+    {
+      "key": "anthropic/hkcw95k7r0f4",
+      "vendor": "anthropic",
+      "title": "Degraded performance for Claude Opus 5 and Claude Haiku 4.5",
+      "url": "https://stspg.io/zg9tfmjj1th2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-19T09:42:37.402Z",
+      "resolved_at": "2026-08-19T11:02:18.264Z",
+      "duration_minutes": 79,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 474,
+        "duration_minutes": 79,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "aws/2ca9d724ab351471",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-08-19T15:15:14Z",
+      "resolved_at": "2026-08-19T18:47:20Z",
+      "duration_minutes": 212,
+      "ongoing": false,
+      "components": [
+        "ec2-eu-west-2"
+      ],
+      "score": {
+        "value": 424,
+        "duration_minutes": 212,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
     },
     {
       "key": "github/bmpybhnrky3x",
@@ -285,6 +355,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/877bn0l3ptp8",
+      "vendor": "cloudflare",
+      "title": "Elevated error rates in Chicago (ORD) region.",
+      "url": "https://www.cloudflarestatus.com/incidents/877bn0l3ptp8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-19T21:19:49.145Z",
+      "resolved_at": "2026-08-19T23:23:29.961Z",
+      "duration_minutes": 123,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 221.4,
+        "duration_minutes": 123,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/p19kmglclwy4",
       "vendor": "cloudflare",
       "title": "Cloudflare Dashboard Issues",
@@ -303,6 +395,73 @@
         "duration_minutes": 119,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/mlr8smgngv5h",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects in the Hong Kong region",
+      "url": "https://www.cloudflarestatus.com/incidents/mlr8smgngv5h",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-19T06:59:19.883Z",
+      "resolved_at": "2026-08-19T07:20:23.527Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Hong Kong - (HKG)",
+        "Durable Objects",
+        "Realtime SFU",
+        "RealtimeKit"
+      ],
+      "score": {
+        "value": 151.20000000000002,
+        "duration_minutes": 21,
+        "components": 4,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/46j9vvprj159",
+      "vendor": "cloudflare",
+      "title": "Workers AI GLM 5.2 is unavailable",
+      "url": "https://www.cloudflarestatus.com/incidents/46j9vvprj159",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-19T16:15:29.836Z",
+      "resolved_at": "2026-08-19T17:24:19.55Z",
+      "duration_minutes": 68,
+      "ongoing": false,
+      "components": [
+        "Workers AI"
+      ],
+      "score": {
+        "value": 122.4,
+        "duration_minutes": 68,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M0E7K87VJNMGW0QTMHPEQQ39",
+      "vendor": "openai",
+      "title": "Chatgpt.com is down - all signups and logins are down as of right now",
+      "url": "https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T00:02:08Z",
+      "resolved_at": "2026-08-20T00:54:17Z",
+      "duration_minutes": 52,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 78,
+        "duration_minutes": 52,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -407,6 +566,28 @@
         "duration_minutes": 20,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/5g1nlg4hc2lh",
+      "vendor": "cloudflare",
+      "title": "Network performance issue in Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/5g1nlg4hc2lh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T05:41:51.723Z",
+      "resolved_at": "2026-08-20T05:58:05.134Z",
+      "duration_minutes": 16,
+      "ongoing": false,
+      "components": [
+        "Singapore, Singapore - (SIN)"
+      ],
+      "score": {
+        "value": 28.8,
+        "duration_minutes": 16,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
