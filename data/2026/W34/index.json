@@ -2,101 +2,149 @@
   "week": "2026-W34",
   "from": "2026-08-17T00:00:00Z",
   "to": "2026-08-24T00:00:00Z",
-  "generated_at": "2026-08-20T06:23:05.90840083Z",
+  "generated_at": "2026-08-21T06:22:55.355620075Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
-      "incidents_seen": 4,
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
+      "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 43,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-20T06:23:05.90840083Z",
+      "fetched_at": "2026-08-21T06:22:55.355620075Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "gcp/utF3FMFdQfwBzJcGG6vf",
+      "vendor": "gcp",
+      "title": "We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region.",
+      "url": "https://status.cloud.google.com/incidents/utF3FMFdQfwBzJcGG6vf",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-08-20T15:40:00Z",
+      "resolved_at": "2026-08-20T19:20:00Z",
+      "duration_minutes": 220,
+      "ongoing": false,
+      "components": [
+        "AlloyDB for PostgreSQL",
+        "Apigee Edge Public Cloud",
+        "Apigee X",
+        "Artifact Registry",
+        "BigQuery Data Transfer Service",
+        "Cloud Build",
+        "Cloud Data Fusion",
+        "Cloud Filestore",
+        "Cloud Key Management Service",
+        "Cloud Monitoring",
+        "Cloud Run",
+        "Contact Center AI Platform",
+        "Dataproc Metastore",
+        "Google App Engine",
+        "Google BigQuery",
+        "Google Cloud Bigtable",
+        "Google Cloud Composer",
+        "Google Cloud Dataflow",
+        "Google Cloud Dataproc",
+        "Google Cloud Pub/Sub",
+        "Google Cloud SQL",
+        "Google Cloud Storage",
+        "Google Compute Engine",
+        "Google Kubernetes Engine",
+        "Identity and Access Management",
+        "Managed Service for Apache Kafka",
+        "Persistent Disk"
+      ],
+      "score": {
+        "value": 11880,
+        "duration_minutes": 220,
+        "components": 27,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
     {
       "key": "github/zkxwbgr0cnmx",
       "vendor": "github",
@@ -152,6 +200,26 @@
       "above_threshold": true
     },
     {
+      "key": "github/bhbcjn4n3jzp",
+      "vendor": "github",
+      "title": "Intermittent failures creating agent tasks",
+      "url": "https://stspg.io/py1yl5mnq89c",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-08-20T14:43:01.526Z",
+      "resolved_at": "2026-08-21T00:37:20.224Z",
+      "duration_minutes": 594,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 891,
+        "duration_minutes": 594,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "digitalocean/qd8v4wddyqjr",
       "vendor": "digitalocean",
       "title": "Major Service Interruption in MKC1",
@@ -173,6 +241,34 @@
         "vendor_weight": 0.8
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/f35vbpr3dv4h",
+      "vendor": "cloudflare",
+      "title": "Durable Objects and Downstream Service Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/f35vbpr3dv4h",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T16:48:25.439Z",
+      "resolved_at": "2026-08-20T17:48:08.512Z",
+      "duration_minutes": 59,
+      "ongoing": false,
+      "components": [
+        "AI Search",
+        "Artifacts",
+        "Containers",
+        "D1",
+        "Durable Objects",
+        "Workers Assets",
+        "Workflows"
+      ],
+      "score": {
+        "value": 743.4,
+        "duration_minutes": 59,
+        "components": 7,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
     },
     {
       "key": "anthropic/zhk4v3yv1lsf",
@@ -247,6 +343,50 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/jn37dmb9s37p",
+      "vendor": "cloudflare",
+      "title": "Missing R2 Audit Logs",
+      "url": "https://www.cloudflarestatus.com/incidents/jn37dmb9s37p",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-20T19:19:19.789Z",
+      "resolved_at": "2026-08-20T22:59:33.508Z",
+      "duration_minutes": 220,
+      "ongoing": false,
+      "components": [
+        "Audit Logs"
+      ],
+      "score": {
+        "value": 396,
+        "duration_minutes": 220,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/xh5t9jy2cl6x",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in India",
+      "url": "https://www.cloudflarestatus.com/incidents/xh5t9jy2cl6x",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T11:38:10.411Z",
+      "resolved_at": "2026-08-20T15:14:12.519Z",
+      "duration_minutes": 216,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 388.8,
+        "duration_minutes": 216,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/bmpybhnrky3x",
       "vendor": "github",
       "title": "Intermittent failures in runner group and runner-related permissions pages",
@@ -305,6 +445,26 @@
         "duration_minutes": 164,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M0FQAR3NNH3ANVTQMBRD47DC",
+      "vendor": "openai",
+      "title": "Elevated Errors for Thinking mode in ChatGPT",
+      "url": "https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T13:56:21Z",
+      "resolved_at": "2026-08-20T16:51:51Z",
+      "duration_minutes": 175,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 262.5,
+        "duration_minutes": 175,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -399,6 +559,56 @@
       "above_threshold": false
     },
     {
+      "key": "anthropic/6xskhw7rn4tf",
+      "vendor": "anthropic",
+      "title": "Elevated errors on Google connectors",
+      "url": "https://stspg.io/lmcgl9dpjxk0",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T18:32:13.285Z",
+      "resolved_at": "2026-08-20T19:01:03.844Z",
+      "duration_minutes": 28,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 168,
+        "duration_minutes": 28,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "anthropic/c0ncxxm2wd9r",
+      "vendor": "anthropic",
+      "title": "Elevated errors on requests to multiple models",
+      "url": "https://stspg.io/w7yghz6hfr72",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-20T19:16:24.923Z",
+      "resolved_at": "2026-08-20T19:42:38.692Z",
+      "duration_minutes": 26,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 156,
+        "duration_minutes": 26,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/mlr8smgngv5h",
       "vendor": "cloudflare",
       "title": "Increased Errors for Durable Objects in the Hong Kong region",
@@ -419,6 +629,29 @@
         "value": 151.20000000000002,
         "duration_minutes": 21,
         "components": 4,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/rq2nwg85qqn4",
+      "vendor": "cloudflare",
+      "title": "Elevated Errors R2 and Durable Objects",
+      "url": "https://www.cloudflarestatus.com/incidents/rq2nwg85qqn4",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T18:51:08.474Z",
+      "resolved_at": "2026-08-20T19:32:37.615Z",
+      "duration_minutes": 41,
+      "ongoing": false,
+      "components": [
+        "Durable Objects",
+        "R2"
+      ],
+      "score": {
+        "value": 147.6,
+        "duration_minutes": 41,
+        "components": 2,
         "vendor_weight": 1.8
       },
       "above_threshold": false
@@ -446,6 +679,48 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/76jq00tfhd4c",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects and Downstream Services in Indonesia",
+      "url": "https://www.cloudflarestatus.com/incidents/76jq00tfhd4c",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T13:10:35Z",
+      "resolved_at": "2026-08-20T14:00:10.932Z",
+      "duration_minutes": 49,
+      "ongoing": false,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 88.2,
+        "duration_minutes": 49,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M0G1RZER839AZXWMYKSZF3GR",
+      "vendor": "openai",
+      "title": "Elevated Codex API authentication errors",
+      "url": "https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-20T16:58:53Z",
+      "resolved_at": "2026-08-20T17:52:16Z",
+      "duration_minutes": 53,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 79.5,
+        "duration_minutes": 53,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M0E7K87VJNMGW0QTMHPEQQ39",
       "vendor": "openai",
       "title": "Chatgpt.com is down - all signups and logins are down as of right now",
@@ -462,6 +737,28 @@
         "duration_minutes": 52,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "aws/fc1f58873aee247e",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-08-21T02:02:22Z",
+      "resolved_at": "2026-08-21T02:40:02Z",
+      "duration_minutes": 37,
+      "ongoing": false,
+      "components": [
+        "connect-ap-northeast-1"
+      ],
+      "score": {
+        "value": 74,
+        "duration_minutes": 37,
+        "components": 1,
+        "vendor_weight": 2
       },
       "above_threshold": false
     },
@@ -586,6 +883,28 @@
       "score": {
         "value": 28.8,
         "duration_minutes": 16,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/jzv93gkq85bj",
+      "vendor": "cloudflare",
+      "title": "MTLS Validation issues",
+      "url": "https://www.cloudflarestatus.com/incidents/jzv93gkq85bj",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-21T00:05:23.393Z",
+      "resolved_at": "2026-08-21T00:13:54.635Z",
+      "duration_minutes": 8,
+      "ongoing": false,
+      "components": [
+        "Access"
+      ],
+      "score": {
+        "value": 14.4,
+        "duration_minutes": 8,
         "components": 1,
         "vendor_weight": 1.8
       },
