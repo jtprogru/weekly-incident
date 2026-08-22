@@ -225,5 +225,168 @@
       "status": "resolved",
       "updated_at": "2026-08-19T19:34:54.152Z"
     }
+  },
+  {
+    "key": "digitalocean/s0dyq97c5v72",
+    "vendor": "digitalocean",
+    "native_id": "s0dyq97c5v72",
+    "title": "Container Registry and Spaces Accessibility",
+    "url": "https://stspg.io/2b4phnbmtm49",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-21T12:59:42.681Z",
+    "resolved_at": "2026-08-21T14:52:40.373Z",
+    "duration_minutes": 112,
+    "components": [
+      "Global",
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "j1nscvzg570p",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating reports of an issue affecting Container Registry and Spaces buckets in some regions.\n\nDuring this time, customers may experience failures when pushing or pulling container images. Additionally, customers may experience issues accessing Spaces via the Cloud Control Panel, where the page may display \"Looks like something went wrong…\"\n\nOur Engineering team is actively investigating the issue and treating it with priority. We will provide another update as soon as more information becomes available.",
+        "created_at": "2026-08-21T12:59:42.783Z"
+      },
+      {
+        "native_id": "34rkxlmjgh4y",
+        "status": "monitoring",
+        "body": "Our Engineering team has identified the issue affecting Container Registry and Spaces buckets, and a fix has been applied.\n\nSpaces accessibility via the Cloud Control Panel should now be restored, and pushing and pulling container images should be back to normal. \n\nWe are continuing to monitor the results to ensure the issue has been fully resolved and will provide another update once we've confirmed normal service has been restored.",
+        "created_at": "2026-08-21T13:06:06.85Z"
+      },
+      {
+        "native_id": "f5t7ylrs5rjq",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the issue impacting Container Registry and Spaces accessibility has been resolved. \n\nSpaces accessibility via the Cloud Control Panel is now restored, and pushing and pulling container images is succeeding as expected. Customers who previously encountered these issues should now be able to access Spaces and deploy their container images without further issues.\n\nIf you continue to experience any problems, please open a ticket with our support team. Thank you for your patience, and we apologize for any inconvenience.",
+        "created_at": "2026-08-21T14:52:40.373Z"
+      }
+    ],
+    "first_seen_at": "2026-08-22T06:17:50.97408109Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-11-18T19:18:34.401Z",
+          "description": null,
+          "group": false,
+          "group_id": "fdg768pfw7v3",
+          "id": "nkx0nmdx9vrs",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-11-18",
+          "status": "operational",
+          "updated_at": "2026-08-21T13:06:06.789Z"
+        },
+        {
+          "created_at": "2024-11-18T19:18:52.512Z",
+          "description": null,
+          "group": false,
+          "group_id": "nmb3bbtqfgsj",
+          "id": "3xz669qnng8n",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-11-18",
+          "status": "operational",
+          "updated_at": "2026-08-21T13:06:06.810Z"
+        }
+      ],
+      "created_at": "2026-08-21T12:59:42.692Z",
+      "id": "s0dyq97c5v72",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3xz669qnng8n",
+              "name": "Container Registry - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "nkx0nmdx9vrs",
+              "name": "Spaces - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the issue impacting Container Registry and Spaces accessibility has been resolved. \n\nSpaces accessibility via the Cloud Control Panel is now restored, and pushing and pulling container images is succeeding as expected. Customers who previously encountered these issues should now be able to access Spaces and deploy their container images without further issues.\n\nIf you continue to experience any problems, please open a ticket with our support team. Thank you for your patience, and we apologize for any inconvenience.",
+          "created_at": "2026-08-21T14:52:40.373Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-21T14:52:40.373Z",
+          "id": "f5t7ylrs5rjq",
+          "incident_id": "s0dyq97c5v72",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-21T14:52:40.373Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3xz669qnng8n",
+              "name": "Container Registry - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nkx0nmdx9vrs",
+              "name": "Spaces - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified the issue affecting Container Registry and Spaces buckets, and a fix has been applied.\n\nSpaces accessibility via the Cloud Control Panel should now be restored, and pushing and pulling container images should be back to normal. \n\nWe are continuing to monitor the results to ensure the issue has been fully resolved and will provide another update once we've confirmed normal service has been restored.",
+          "created_at": "2026-08-21T13:06:06.850Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-21T13:06:06.850Z",
+          "id": "34rkxlmjgh4y",
+          "incident_id": "s0dyq97c5v72",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-21T13:06:06.850Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3xz669qnng8n",
+              "name": "Container Registry - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "nkx0nmdx9vrs",
+              "name": "Spaces - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating reports of an issue affecting Container Registry and Spaces buckets in some regions.\n\nDuring this time, customers may experience failures when pushing or pulling container images. Additionally, customers may experience issues accessing Spaces via the Cloud Control Panel, where the page may display \"Looks like something went wrong…\"\n\nOur Engineering team is actively investigating the issue and treating it with priority. We will provide another update as soon as more information becomes available.",
+          "created_at": "2026-08-21T12:59:42.783Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-21T12:59:42.783Z",
+          "id": "j1nscvzg570p",
+          "incident_id": "s0dyq97c5v72",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-21T12:59:42.783Z"
+        }
+      ],
+      "monitoring_at": "2026-08-21T13:06:06.850Z",
+      "name": "Container Registry and Spaces Accessibility",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-21T14:52:40.373Z",
+      "shortlink": "https://stspg.io/2b4phnbmtm49",
+      "started_at": "2026-08-21T12:59:42.681Z",
+      "status": "resolved",
+      "updated_at": "2026-08-21T14:52:40.389Z"
+    }
   }
 ]
