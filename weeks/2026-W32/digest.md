@@ -1,6 +1,6 @@
 # Week 2026-W32
 
-2026-08-03 to 2026-08-09 (UTC). Generated 2026-08-18 12:36.
+2026-08-03 to 2026-08-09 (UTC). Generated 2026-08-23 06:19.
 
 49 incidents collected, 24 above threshold. All 13 sources responded.
 
@@ -422,12 +422,12 @@ Score is duration in minutes, times component count, times vendor weight.
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
-| aws | ok | 5 | 0 |
+| aws | ok | 4 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
 | datadog | ok | 50 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 4 | 0 |
+| gcp | ok | 5 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
