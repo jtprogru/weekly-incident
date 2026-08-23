@@ -5,7 +5,7 @@
 ## 1. slack — Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled
 
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
-- Window: 2026-08-13 21:21 to not yet (4d 16h 20m (ongoing))
+- Window: 2026-08-13 21:21 to not yet (9d 16h 37m (ongoing))
 - Impact: unknown, status: investigating
 - Components: Messaging, Workspace/Org Administration
 
@@ -15,6 +15,7 @@
   - `2026-08-14 20:20` unknown — After further investigation, the custom retention settings have not fully been restored yet. Our teams have identified the technical trigger and are currently developing a mitigation plan to mitigate the impact to the custom retention settings. All custom retention jobs have been put on hold as the team works to address this issue. We apologize for the confusion, and thank you for bearing with us while we work through this issue.
   - `2026-08-14 21:39` unknown — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Custom channel retention settings have been restored for affected customers. Custom retention jobs remain on hold for some customers as we work to fully resolve the underlying cause regarding the custom message retention issues.
   - `2026-08-17 21:57` unknown — We're continuing our restoration efforts regarding this issue affecting a subset of channels with custom message retention settings. While we work to resolve this issue, data retention processing remains paused for affected customers. We will provide another update as additional information becomes available.
+  - `2026-08-20 22:54` unknown — We're continuing to work on restoring messages, message edits, and file shares for a limited number of workspaces that were affected by an issue with custom data retention settings. We've fixed what triggered the issue and are running data recovery using backup restoration methods. Custom retention settings have been restored for impacted channels, and we're gradually re-enabling retention jobs. We will provide another update as additional information becomes available.
 
 ## 2. aws — Increased Packet loss
 

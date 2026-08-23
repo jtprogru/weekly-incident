@@ -1,6 +1,6 @@
 # Week 2026-W33
 
-2026-08-10 to 2026-08-16 (UTC). Generated 2026-08-18 13:42.
+2026-08-10 to 2026-08-16 (UTC). Generated 2026-08-23 13:59.
 
 48 incidents collected, 22 above threshold. All 13 sources responded.
 
@@ -8,7 +8,7 @@
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
-| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 4d 16h 20m (ongoing) | unknown | Messaging, Workspace/Org Administration | 16176 = 6740 × 2 × 1.2 |
+| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 9d 16h 37m (ongoing) | unknown | Messaging, Workspace/Org Administration | 33497 = 13957 × 2 × 1.2 |
 | 2 | aws | [Increased Packet loss](https://health.aws.amazon.com/health/status) | 2026-08-15 03:42 | 3d 0h 18m | unknown | directconnect-eu-central-1 | 8676 = 4338 × 1 × 2.0 |
 | 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/twh93x4twdps) | 2026-08-12 13:50 | 4h 16m | minor | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 1536 = 256 × 4 × 1.5 |
 | 4 | openai | [Increased error rates](https://status.openai.com/incidents/01KZNZTPWMV06Z6TQNMY1R1QDR) | 2026-08-10 14:04 | 12h 43m | minor | — | 1144 = 763 × 1 × 1.5 |
@@ -40,7 +40,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
 - Started: 2026-08-13 21:21 UTC
 - Resolved: not yet
-- Duration: 4d 16h 20m (ongoing)
+- Duration: 9d 16h 37m (ongoing)
 - Impact: unknown, status: investigating
 - Components: Messaging, Workspace/Org Administration
 
@@ -50,6 +50,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-14 20:20` **unknown** — After further investigation, the custom retention settings have not fully been restored yet. Our teams have identified the technical trigger and are currently developing a mitigation plan to mitigate the impact to the custom retention settings. All custom retention jobs have been put on hold as the team works to address this issue. We apologize for the confusion, and thank you for bearing with us while we work through this issue.
 - `2026-08-14 21:39` **unknown** — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Custom channel retention settings have been restored for affected customers. Custom retention jobs remain on hold for some customers as we work to fully resolve the underlying cause regarding the custom message retention issues.
 - `2026-08-17 21:57` **unknown** — We're continuing our restoration efforts regarding this issue affecting a subset of channels with custom message retention settings. While we work to resolve this issue, data retention processing remains paused for affected customers. We will provide another update as additional information becomes available.
+- `2026-08-20 22:54` **unknown** — We're continuing to work on restoring messages, message edits, and file shares for a limited number of workspaces that were affected by an issue with custom data retention settings. We've fixed what triggered the issue and are running data recovery using backup restoration methods. Custom retention settings have been restored for impacted channels, and we're gradually re-enabling retention jobs. We will provide another update as additional information becomes available.
 
 ### 2. aws — Increased Packet loss
 
@@ -390,12 +391,12 @@ Score is duration in minutes, times component count, times vendor weight.
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
-| aws | ok | 5 | 0 |
+| aws | ok | 4 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
 | datadog | ok | 50 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 4 | 0 |
+| gcp | ok | 5 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
