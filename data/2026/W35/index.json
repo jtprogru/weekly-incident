@@ -1,0 +1,169 @@
+{
+  "week": "2026-W35",
+  "from": "2026-08-24T00:00:00Z",
+  "to": "2026-08-31T00:00:00Z",
+  "generated_at": "2026-08-24T06:31:43.051253112Z",
+  "sources": [
+    {
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 4,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "datadog",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 5,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 41,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "key": "cloudflare/ksy4vxmbkfdk",
+      "vendor": "cloudflare",
+      "title": "DO and D1 are degraded in Hong Kong and Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/ksy4vxmbkfdk",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-08-24T03:53:58Z",
+      "ongoing": true,
+      "components": [
+        "Hong Kong - (HKG)",
+        "D1",
+        "Durable Objects",
+        "Singapore, Singapore - (SIN)",
+        "R2"
+      ],
+      "score": {
+        "value": 1413,
+        "duration_minutes": 157,
+        "components": 5,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/vgz5psbjmt1h",
+      "vendor": "anthropic",
+      "title": "Elevated errors for multiple models",
+      "url": "https://stspg.io/5kzdprb1xsbx",
+      "impact": "major",
+      "status": "identified",
+      "started_at": "2026-08-24T05:06:39.483Z",
+      "ongoing": true,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 510,
+        "duration_minutes": 85,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/9v68b4k90mry",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 5xx Errors in Chicago",
+      "url": "https://www.cloudflarestatus.com/incidents/9v68b4k90mry",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-08-24T05:47:34Z",
+      "ongoing": true,
+      "components": [
+        "Chicago, IL, United States - (ORD)",
+        "CDN/Cache"
+      ],
+      "score": {
+        "value": 158.4,
+        "duration_minutes": 44,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    }
+  ]
+}
