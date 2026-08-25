@@ -2,96 +2,96 @@
   "week": "2026-W35",
   "from": "2026-08-24T00:00:00Z",
   "to": "2026-08-31T00:00:00Z",
-  "generated_at": "2026-08-24T06:31:43.051253112Z",
+  "generated_at": "2026-08-25T06:22:56.062790653Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 41,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-24T06:31:43.051253112Z",
+      "fetched_at": "2026-08-25T06:22:56.062790653Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -103,9 +103,11 @@
       "title": "DO and D1 are degraded in Hong Kong and Singapore",
       "url": "https://www.cloudflarestatus.com/incidents/ksy4vxmbkfdk",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-08-24T03:53:58Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-08-24T03:53:58.184Z",
+      "resolved_at": "2026-08-24T08:28:22.387Z",
+      "duration_minutes": 274,
+      "ongoing": false,
       "components": [
         "Hong Kong - (HKG)",
         "D1",
@@ -114,10 +116,31 @@
         "R2"
       ],
       "score": {
-        "value": 1413,
-        "duration_minutes": 157,
+        "value": 2466,
+        "duration_minutes": 274,
         "components": 5,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "digitalocean/4qwm6pzlx1z3",
+      "vendor": "digitalocean",
+      "title": "Cloud Control Panel and API",
+      "url": "https://stspg.io/8l5c24cxh3hr",
+      "impact": "critical",
+      "status": "monitoring",
+      "started_at": "2026-08-24T17:14:43.692Z",
+      "ongoing": true,
+      "components": [
+        "API",
+        "Cloud Control Panel"
+      ],
+      "score": {
+        "value": 1260.8000000000002,
+        "duration_minutes": 788,
+        "components": 2,
+        "vendor_weight": 0.8
       },
       "above_threshold": true
     },
@@ -127,9 +150,11 @@
       "title": "Elevated errors for multiple models",
       "url": "https://stspg.io/5kzdprb1xsbx",
       "impact": "major",
-      "status": "identified",
+      "status": "resolved",
       "started_at": "2026-08-24T05:06:39.483Z",
-      "ongoing": true,
+      "resolved_at": "2026-08-24T08:30:47.615Z",
+      "duration_minutes": 204,
+      "ongoing": false,
       "components": [
         "claude.ai",
         "Claude API (api.anthropic.com)",
@@ -137,10 +162,30 @@
         "Claude Cowork"
       ],
       "score": {
-        "value": 510,
-        "duration_minutes": 85,
+        "value": 1224,
+        "duration_minutes": 204,
         "components": 4,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/d68x0kzjwhqf",
+      "vendor": "cloudflare",
+      "title": "Increased Latency",
+      "url": "https://www.cloudflarestatus.com/incidents/d68x0kzjwhqf",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-08-24T20:38:27Z",
+      "ongoing": true,
+      "components": [
+        "CDN/Cache"
+      ],
+      "score": {
+        "value": 1051.2,
+        "duration_minutes": 584,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -150,18 +195,130 @@
       "title": "Increased HTTP 5xx Errors in Chicago",
       "url": "https://www.cloudflarestatus.com/incidents/9v68b4k90mry",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-08-24T05:47:34Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-08-24T05:47:34.882Z",
+      "resolved_at": "2026-08-24T06:53:37.78Z",
+      "duration_minutes": 66,
+      "ongoing": false,
       "components": [
         "Chicago, IL, United States - (ORD)",
         "CDN/Cache"
       ],
       "score": {
-        "value": 158.4,
-        "duration_minutes": 44,
+        "value": 237.6,
+        "duration_minutes": 66,
         "components": 2,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/wt3hjqcrczfg",
+      "vendor": "github",
+      "title": "Elevated errors on Fable 5 due to upstream provider",
+      "url": "https://stspg.io/4dz9rv14dz14",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-24T07:12:05.367Z",
+      "resolved_at": "2026-08-24T07:58:41.636Z",
+      "duration_minutes": 46,
+      "ongoing": false,
+      "components": [
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 69,
+        "duration_minutes": 46,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/n0rlp126qf8g",
+      "vendor": "anthropic",
+      "title": "Issues logging into Claude.ai",
+      "url": "https://stspg.io/6211zbpptv0y",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-24T20:11:23.924Z",
+      "resolved_at": "2026-08-24T20:26:21.577Z",
+      "duration_minutes": 14,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 63,
+        "duration_minutes": 14,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/lyppgxbq1nyk",
+      "vendor": "github",
+      "title": "Actions delays in starting runs",
+      "url": "https://stspg.io/v6ysclb9vcbd",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-24T13:56:54.964Z",
+      "resolved_at": "2026-08-24T14:34:42.451Z",
+      "duration_minutes": 37,
+      "ongoing": false,
+      "components": [
+        "Actions"
+      ],
+      "score": {
+        "value": 55.5,
+        "duration_minutes": 37,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "anthropic/w43j3xmngxgj",
+      "vendor": "anthropic",
+      "title": "Errors logging into Claude.ai",
+      "url": "https://stspg.io/kg59rclpfzsz",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-24T17:12:42.191Z",
+      "resolved_at": "2026-08-24T17:16:02.904Z",
+      "duration_minutes": 3,
+      "ongoing": false,
+      "components": [
+        "claude.ai"
+      ],
+      "score": {
+        "value": 4.5,
+        "duration_minutes": 3,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/wms44hv62t3p",
+      "vendor": "github",
+      "title": "Degraded Git Operations over SSH",
+      "url": "https://stspg.io/9nls6g9ln8p4",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-24T07:19:22.991Z",
+      "resolved_at": "2026-08-21T14:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
