@@ -173,7 +173,7 @@
       {
         "native_id": "yjlt32x9vywy",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On August 10, 2026, between 19:48 UTC and 20:49 UTC, GitHub Copilot users saw an incomplete list of available models. During this window, the service could return as few as one model instead of the full catalog. Requests that tried to use a model missing from that shortened list failed with a \"model not found\" error. Copilot requests that used an available model were not affected. This did not affect customers on data-residency (Proxima) environments.\u003cbr /\u003e\u003cbr /\u003eThe issue was caused by a change to how model data was published, which our systems could not read back correctly and fell back to a limited default list.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by 20:49 UTC and deployed a fix to prevent immediate recurrence by 21:50 UTC. We are adding validation and retry safeguards so that model data is verified before it is served.\u003cbr /\u003e\u003cbr /\u003eWe apologize for the disruption.",
         "created_at": "2026-08-10T21:50:43.756Z"
       }
     ],
@@ -186,7 +186,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On August 10, 2026, between 19:48 UTC and 20:49 UTC, GitHub Copilot users saw an incomplete list of available models. During this window, the service could return as few as one model instead of the full catalog. Requests that tried to use a model missing from that shortened list failed with a \"model not found\" error. Copilot requests that used an available model were not affected. This did not affect customers on data-residency (Proxima) environments.\u003cbr /\u003e\u003cbr /\u003eThe issue was caused by a change to how model data was published, which our systems could not read back correctly and fell back to a limited default list.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by 20:49 UTC and deployed a fix to prevent immediate recurrence by 21:50 UTC. We are adding validation and retry safeguards so that model data is verified before it is served.\u003cbr /\u003e\u003cbr /\u003eWe apologize for the disruption.",
           "created_at": "2026-08-10T21:50:43.756Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -195,7 +195,7 @@
           "incident_id": "1t7x65n7kvt1",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-08-10T21:50:43.756Z"
+          "updated_at": "2026-08-25T21:02:21.578Z"
         },
         {
           "affected_components": null,
@@ -271,7 +271,7 @@
       "shortlink": "https://stspg.io/4x5bd0ghzy0x",
       "started_at": "2026-08-10T20:27:19.704Z",
       "status": "resolved",
-      "updated_at": "2026-08-10T21:50:43.772Z"
+      "updated_at": "2026-08-25T21:02:21.586Z"
     }
   },
   {
@@ -742,7 +742,7 @@
       {
         "native_id": "6gg3pnjzw7kt",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On August 12 and 13, 2026, some anonymous (logged-out) requests to github.com experienced HTTP 5xx errors when loading pages like the sign-in page, and when downloading release assets, due to an unusual traffic pattern that repeatedly overloaded a part of our infrastructure that serves these types of requests. There were three windows of impact: (1) August 12 from 16:34 to 18:34 UTC, with an average error rate of 16.16% that peaked at 28.6%; (2) August 12 from 19:00 to 22:56 UTC, with an average error rate of 16.55% that peaked at 24.18%; and (3) August 13 from 06:19 to 08:05 UTC, with an average error rate of 2.01% that peaked at 7.49%.\u003cbr /\u003eRequests from signed-in users were unaffected.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incidents by applying traffic controls at our network edge that limited any requests matching the pattern identified previously, thereby preventing overload on our systems.\u003cbr /\u003e\u003cbr /\u003eSince these incidents occurred, we have tightened our monitoring systems to alert server-side errors that affect logged-out traffic. We are also working to further strengthen our edge protections and reduce the time to detect and mitigate similar incidents.",
         "created_at": "2026-08-12T22:56:39.025Z"
       }
     ],
@@ -755,7 +755,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On August 12 and 13, 2026, some anonymous (logged-out) requests to github.com experienced HTTP 5xx errors when loading pages like the sign-in page, and when downloading release assets, due to an unusual traffic pattern that repeatedly overloaded a part of our infrastructure that serves these types of requests. There were three windows of impact: (1) August 12 from 16:34 to 18:34 UTC, with an average error rate of 16.16% that peaked at 28.6%; (2) August 12 from 19:00 to 22:56 UTC, with an average error rate of 16.55% that peaked at 24.18%; and (3) August 13 from 06:19 to 08:05 UTC, with an average error rate of 2.01% that peaked at 7.49%.\u003cbr /\u003eRequests from signed-in users were unaffected.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incidents by applying traffic controls at our network edge that limited any requests matching the pattern identified previously, thereby preventing overload on our systems.\u003cbr /\u003e\u003cbr /\u003eSince these incidents occurred, we have tightened our monitoring systems to alert server-side errors that affect logged-out traffic. We are also working to further strengthen our edge protections and reduce the time to detect and mitigate similar incidents.",
           "created_at": "2026-08-12T22:56:39.025Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -764,7 +764,7 @@
           "incident_id": "lsvy8xsf0gxv",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-08-12T22:56:39.025Z"
+          "updated_at": "2026-08-25T19:58:06.154Z"
         },
         {
           "affected_components": null,
@@ -814,7 +814,7 @@
       "shortlink": "https://stspg.io/xp36nwz4rrh1",
       "started_at": "2026-08-12T21:39:05.221Z",
       "status": "resolved",
-      "updated_at": "2026-08-12T22:56:39.040Z"
+      "updated_at": "2026-08-25T19:58:06.161Z"
     }
   },
   {
@@ -859,7 +859,7 @@
       {
         "native_id": "7n5fhmltjghm",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On August 13th, 2026, between approximately 14:06 and 15:47 UTC, the Copilot service experienced a degradation of the Claude Fable 5 model due to an issue with our upstream provider. Users encountered elevated error rates, peaking at 43% and averaging 12%. Users who selected Auto or alternative models were unaffected.\u003cbr /\u003e\u003cbr /\u003eThe issue was resolved by a mitigation put in place by our provider. GitHub is working with our provider to further improve the resiliency of the service to prevent similar incidents in the future.",
         "created_at": "2026-08-13T15:47:22.384Z"
       }
     ],
@@ -895,7 +895,7 @@
               "old_status": "degraded_performance"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On August 13th, 2026, between approximately 14:06 and 15:47 UTC, the Copilot service experienced a degradation of the Claude Fable 5 model due to an issue with our upstream provider. Users encountered elevated error rates, peaking at 43% and averaging 12%. Users who selected Auto or alternative models were unaffected.\u003cbr /\u003e\u003cbr /\u003eThe issue was resolved by a mitigation put in place by our provider. GitHub is working with our provider to further improve the resiliency of the service to prevent similar incidents in the future.",
           "created_at": "2026-08-13T15:47:22.384Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -904,7 +904,7 @@
           "incident_id": "24t8gsgqx2qb",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-08-13T15:47:22.384Z"
+          "updated_at": "2026-08-25T12:08:46.309Z"
         },
         {
           "affected_components": [
@@ -995,7 +995,7 @@
       "shortlink": "https://stspg.io/8htrnxk0q09v",
       "started_at": "2026-08-13T14:43:25.196Z",
       "status": "resolved",
-      "updated_at": "2026-08-13T15:47:22.399Z"
+      "updated_at": "2026-08-25T12:08:46.313Z"
     }
   },
   {

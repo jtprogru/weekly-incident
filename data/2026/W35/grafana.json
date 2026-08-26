@@ -1,0 +1,157 @@
+[
+  {
+    "key": "grafana/hcmjsz6z2y4s",
+    "vendor": "grafana",
+    "native_id": "hcmjsz6z2y4s",
+    "title": "Incident Management unavailable in US Central",
+    "url": "https://stspg.io/kdhyw5xk6r56",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-25T10:39:49.171Z",
+    "resolved_at": "2026-08-25T11:02:59.909Z",
+    "duration_minutes": 23,
+    "components": [
+      "Incident Management and Response (IRM)"
+    ],
+    "updates": [
+      {
+        "native_id": "zvm8p6gkxq9d",
+        "status": "investigating",
+        "body": "We are investigating an outage affecting Grafana Incident in the US Central region (prod-us-central-0). Customers are unable to create, view, or query Incidents, and requests to the Incident public API are timing out. All customers in this region are affected.\n\nGrafana OnCall is not impacted — alert ingestion, alert group creation, and notification delivery are all operating normally.",
+        "created_at": "2026-08-25T10:39:49.26Z"
+      },
+      {
+        "native_id": "jkrj5gd7k3dn",
+        "status": "monitoring",
+        "body": "A fix has been applied and Incident Management in US Central is recovering. The Incident public API is responding normally, and customers can create, view, and query Incidents again. We are continuing to monitor the recovery to confirm the service is fully stable.",
+        "created_at": "2026-08-25T10:49:56.945Z"
+      },
+      {
+        "native_id": "psfx0ggj8yl1",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-08-25T11:01:25.702Z"
+      },
+      {
+        "native_id": "x9ypsbtvwq9d",
+        "status": "resolved",
+        "body": "This incident has been resolved. Incident Management in US Central is operating as normal. Customers can create, view, and query Incidents, and the Incident public API is fully available. Grafana OnCall was not affected at any point during this incident.",
+        "created_at": "2026-08-25T11:02:59.909Z"
+      }
+    ],
+    "first_seen_at": "2026-08-26T06:25:28.406176338Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-03-25T16:09:00.130Z",
+          "description": "Former Grafana Incident and Grafana OnCall",
+          "group": false,
+          "group_id": null,
+          "id": "1mxpk7q1bkb6",
+          "name": "Incident Management and Response (IRM)",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2024-03-25",
+          "status": "operational",
+          "updated_at": "2026-08-25T11:02:59.869Z"
+        }
+      ],
+      "created_at": "2026-08-25T10:39:49.177Z",
+      "id": "hcmjsz6z2y4s",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved. Incident Management in US Central is operating as normal. Customers can create, view, and query Incidents, and the Incident public API is fully available. Grafana OnCall was not affected at any point during this incident.",
+          "created_at": "2026-08-25T11:02:59.909Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T11:02:59.909Z",
+          "id": "x9ypsbtvwq9d",
+          "incident_id": "hcmjsz6z2y4s",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T11:02:59.909Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-08-25T11:01:25.702Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T11:01:25.702Z",
+          "id": "psfx0ggj8yl1",
+          "incident_id": "hcmjsz6z2y4s",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T11:01:25.702Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been applied and Incident Management in US Central is recovering. The Incident public API is responding normally, and customers can create, view, and query Incidents again. We are continuing to monitor the recovery to confirm the service is fully stable.",
+          "created_at": "2026-08-25T10:49:56.945Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T10:49:56.945Z",
+          "id": "jkrj5gd7k3dn",
+          "incident_id": "hcmjsz6z2y4s",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T10:49:56.945Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an outage affecting Grafana Incident in the US Central region (prod-us-central-0). Customers are unable to create, view, or query Incidents, and requests to the Incident public API are timing out. All customers in this region are affected.\n\nGrafana OnCall is not impacted — alert ingestion, alert group creation, and notification delivery are all operating normally.",
+          "created_at": "2026-08-25T10:39:49.260Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T10:39:49.260Z",
+          "id": "zvm8p6gkxq9d",
+          "incident_id": "hcmjsz6z2y4s",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T10:39:49.260Z"
+        }
+      ],
+      "monitoring_at": "2026-08-25T10:49:56.945Z",
+      "name": "Incident Management unavailable in US Central",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-25T11:02:59.909Z",
+      "shortlink": "https://stspg.io/kdhyw5xk6r56",
+      "started_at": "2026-08-25T10:39:49.171Z",
+      "status": "resolved",
+      "updated_at": "2026-08-25T11:02:59.922Z"
+    }
+  }
+]

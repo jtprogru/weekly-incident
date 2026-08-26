@@ -2,101 +2,124 @@
   "week": "2026-W35",
   "from": "2026-08-24T00:00:00Z",
   "to": "2026-08-31T00:00:00Z",
-  "generated_at": "2026-08-25T06:22:56.062790653Z",
+  "generated_at": "2026-08-26T06:25:28.406176338Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 41,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-25T06:22:56.062790653Z",
+      "fetched_at": "2026-08-26T06:25:28.406176338Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "digitalocean/4qwm6pzlx1z3",
+      "vendor": "digitalocean",
+      "title": "Cloud Control Panel and API",
+      "url": "https://stspg.io/8l5c24cxh3hr",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-08-24T17:14:43.692Z",
+      "resolved_at": "2026-08-25T19:04:33.091Z",
+      "duration_minutes": 1549,
+      "ongoing": false,
+      "components": [
+        "API",
+        "Cloud Control Panel"
+      ],
+      "score": {
+        "value": 2478.4,
+        "duration_minutes": 1549,
+        "components": 2,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "cloudflare/ksy4vxmbkfdk",
       "vendor": "cloudflare",
@@ -124,23 +147,24 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/4qwm6pzlx1z3",
-      "vendor": "digitalocean",
-      "title": "Cloud Control Panel and API",
-      "url": "https://stspg.io/8l5c24cxh3hr",
-      "impact": "critical",
-      "status": "monitoring",
-      "started_at": "2026-08-24T17:14:43.692Z",
-      "ongoing": true,
+      "key": "cloudflare/d68x0kzjwhqf",
+      "vendor": "cloudflare",
+      "title": "Increased Latency",
+      "url": "https://www.cloudflarestatus.com/incidents/d68x0kzjwhqf",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-24T20:38:27.249Z",
+      "resolved_at": "2026-08-25T14:52:41.475Z",
+      "duration_minutes": 1094,
+      "ongoing": false,
       "components": [
-        "API",
-        "Cloud Control Panel"
+        "CDN/Cache"
       ],
       "score": {
-        "value": 1260.8000000000002,
-        "duration_minutes": 788,
-        "components": 2,
-        "vendor_weight": 0.8
+        "value": 1969.2,
+        "duration_minutes": 1094,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -166,26 +190,6 @@
         "duration_minutes": 204,
         "components": 4,
         "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/d68x0kzjwhqf",
-      "vendor": "cloudflare",
-      "title": "Increased Latency",
-      "url": "https://www.cloudflarestatus.com/incidents/d68x0kzjwhqf",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-08-24T20:38:27Z",
-      "ongoing": true,
-      "components": [
-        "CDN/Cache"
-      ],
-      "score": {
-        "value": 1051.2,
-        "duration_minutes": 584,
-        "components": 1,
-        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -281,6 +285,28 @@
       "above_threshold": false
     },
     {
+      "key": "grafana/hcmjsz6z2y4s",
+      "vendor": "grafana",
+      "title": "Incident Management unavailable in US Central",
+      "url": "https://stspg.io/kdhyw5xk6r56",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-25T10:39:49.171Z",
+      "resolved_at": "2026-08-25T11:02:59.909Z",
+      "duration_minutes": 23,
+      "ongoing": false,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 23,
+        "duration_minutes": 23,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
       "key": "anthropic/w43j3xmngxgj",
       "vendor": "anthropic",
       "title": "Errors logging into Claude.ai",
@@ -319,6 +345,46 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/jfhwhy4n6199",
+      "vendor": "cloudflare",
+      "title": "Network performance issues in Los Angeles",
+      "url": "https://www.cloudflarestatus.com/incidents/jfhwhy4n6199",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-25T21:30:00Z",
+      "resolved_at": "2026-08-25T21:30:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/yxxll285k6sf",
+      "vendor": "circleci",
+      "title": "GitHub Login Disruption",
+      "url": "https://stspg.io/ns4jz57ynx52",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-25T23:20:44.933Z",
+      "resolved_at": "2026-08-25T20:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     }

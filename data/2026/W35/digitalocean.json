@@ -6,8 +6,10 @@
     "title": "Cloud Control Panel and API",
     "url": "https://stspg.io/8l5c24cxh3hr",
     "impact": "critical",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-08-24T17:14:43.692Z",
+    "resolved_at": "2026-08-25T19:04:33.091Z",
+    "duration_minutes": 1549,
     "components": [
       "API",
       "Cloud Control Panel"
@@ -42,6 +44,18 @@
         "status": "monitoring",
         "body": "Our Engineering team has implemented mitigation measures to address the issue impacting the DigitalOcean public API and Cloud Control Panel. We are seeing improvements, and users should now be able to access the Cloud Control Panel and use the public API normally. \n\nWe are continuing to monitor the service to ensure it remains stable and will provide further updates as more information becomes available. We appreciate your patience and understanding.",
         "created_at": "2026-08-25T00:54:37.371Z"
+      },
+      {
+        "native_id": "99msd8qh1vyf",
+        "status": "monitoring",
+        "body": "Our Engineering team has continued to monitor the health of all services and has observed no recurrence of impact over the past 12+ hours. We will continue to monitor services for a short period to confirm stability before we mark this incident resolved. We understand the impact this incident had for DigitalOcean users and we will publish a postmortem on the status page to provide further details on root cause and mitigation.",
+        "created_at": "2026-08-25T16:30:28.336Z"
+      },
+      {
+        "native_id": "f6xhyxkkxynp",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed all services remain stable and we will now resolve this incident. Further details on root cause and mitigation will be provided in a postmortem via this status page for users interested in learning more. \n\nThank you for your patience throughout this incident. If you continue to experience any issues, please reach out to Support from within your account",
+        "created_at": "2026-08-25T19:04:33.091Z"
       }
     ],
     "first_seen_at": "2026-08-25T06:22:56.062790653Z",
@@ -82,6 +96,58 @@
       "id": "4qwm6pzlx1z3",
       "impact": "critical",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "p1x9rv4137gx",
+              "name": "API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed all services remain stable and we will now resolve this incident. Further details on root cause and mitigation will be provided in a postmortem via this status page for users interested in learning more. \n\nThank you for your patience throughout this incident. If you continue to experience any issues, please reach out to Support from within your account",
+          "created_at": "2026-08-25T19:04:33.091Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T19:04:33.091Z",
+          "id": "f6xhyxkkxynp",
+          "incident_id": "4qwm6pzlx1z3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T19:04:33.091Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "p1x9rv4137gx",
+              "name": "API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has continued to monitor the health of all services and has observed no recurrence of impact over the past 12+ hours. We will continue to monitor services for a short period to confirm stability before we mark this incident resolved. We understand the impact this incident had for DigitalOcean users and we will publish a postmortem on the status page to provide further details on root cause and mitigation.",
+          "created_at": "2026-08-25T16:30:28.336Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-25T16:30:28.336Z",
+          "id": "99msd8qh1vyf",
+          "incident_id": "4qwm6pzlx1z3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-25T16:30:28.336Z"
+        },
         {
           "affected_components": [
             {
@@ -217,11 +283,11 @@
       "name": "Cloud Control Panel and API",
       "page_id": "w4cz49tckxhp",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-08-25T19:04:33.091Z",
       "shortlink": "https://stspg.io/8l5c24cxh3hr",
       "started_at": "2026-08-24T17:14:43.692Z",
-      "status": "monitoring",
-      "updated_at": "2026-08-25T00:54:37.374Z"
+      "status": "resolved",
+      "updated_at": "2026-08-25T19:04:33.107Z"
     }
   }
 ]
