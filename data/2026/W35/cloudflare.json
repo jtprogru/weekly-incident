@@ -68,7 +68,7 @@
           "showcase": false,
           "start_date": "2024-02-09",
           "status": "operational",
-          "updated_at": "2026-08-24T08:28:22.000Z"
+          "updated_at": "2026-08-26T23:07:31.000Z"
         },
         {
           "created_at": "2023-06-12T14:55:22.000Z",
@@ -83,7 +83,7 @@
           "showcase": false,
           "start_date": "2023-06-12",
           "status": "operational",
-          "updated_at": "2026-08-24T08:28:22.000Z"
+          "updated_at": "2026-08-26T23:07:31.000Z"
         },
         {
           "created_at": "2014-10-27T21:44:15.000Z",
@@ -308,8 +308,8 @@
           "position": 11,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-08-24T14:12:23.000Z"
+          "status": "under_maintenance",
+          "updated_at": "2026-08-26T15:47:14.000Z"
         },
         {
           "created_at": "2020-03-25T19:03:33.000Z",
@@ -626,6 +626,595 @@
       "started_at": "2026-08-25T21:30:00.000Z",
       "status": "resolved",
       "updated_at": "2026-08-26T02:10:41.171Z"
+    }
+  },
+  {
+    "key": "cloudflare/gjw0tnhh4f3f",
+    "vendor": "cloudflare",
+    "native_id": "gjw0tnhh4f3f",
+    "title": "Cloudflare MCP Portal tool invocation logging instability",
+    "url": "https://www.cloudflarestatus.com/incidents/gjw0tnhh4f3f",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-26T14:59:16.492Z",
+    "resolved_at": "2026-08-26T15:38:03.408Z",
+    "duration_minutes": 38,
+    "components": [
+      "MCP Portal"
+    ],
+    "updates": [
+      {
+        "native_id": "jmxwybdr2q8m",
+        "status": "investigating",
+        "body": "Cloudflare engineering is investigating an issue causing some tool call invocation logs to be dropped. This affects logpush and the dashboard. Portal connectivity and initial authentication logs are not impacted.",
+        "created_at": "2026-08-26T14:59:16.594Z"
+      },
+      {
+        "native_id": "jz6pq1fc675s",
+        "status": "monitoring",
+        "body": "After further investigation it was determined that the issue was isolated to internal accounts. There was no customer facing impact.",
+        "created_at": "2026-08-26T15:28:39.821Z"
+      },
+      {
+        "native_id": "lqv495497cgd",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-26T15:38:03.408Z"
+      }
+    ],
+    "first_seen_at": "2026-08-27T16:56:47.475051842Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-19T22:05:47.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "gcnzpkhvnqs7",
+          "name": "MCP Portal",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 70,
+          "showcase": false,
+          "start_date": "2026-05-19",
+          "status": "operational",
+          "updated_at": "2026-08-26T15:38:03.000Z"
+        }
+      ],
+      "created_at": "2026-08-26T14:59:16.000Z",
+      "id": "gjw0tnhh4f3f",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-26T15:38:03.408Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T15:38:03.408Z",
+          "id": "lqv495497cgd",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T15:38:03.408Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "After further investigation it was determined that the issue was isolated to internal accounts. There was no customer facing impact.",
+          "created_at": "2026-08-26T15:28:39.821Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T15:28:39.821Z",
+          "id": "jz6pq1fc675s",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T15:28:39.821Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare engineering is investigating an issue causing some tool call invocation logs to be dropped. This affects logpush and the dashboard. Portal connectivity and initial authentication logs are not impacted.",
+          "created_at": "2026-08-26T14:59:16.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T14:59:16.594Z",
+          "id": "jmxwybdr2q8m",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T14:59:16.594Z"
+        }
+      ],
+      "monitoring_at": "2026-08-26T15:28:39.821Z",
+      "name": "Cloudflare MCP Portal tool invocation logging instability",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-26T15:38:03.408Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/gjw0tnhh4f3f",
+      "started_at": "2026-08-26T14:59:16.492Z",
+      "status": "resolved",
+      "updated_at": "2026-08-26T15:38:03.425Z"
+    }
+  },
+  {
+    "key": "cloudflare/rzc0p0rk680b",
+    "vendor": "cloudflare",
+    "native_id": "rzc0p0rk680b",
+    "title": "Durable Objects and Downstream Service Errors",
+    "url": "https://www.cloudflarestatus.com/incidents/rzc0p0rk680b",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-26T20:08:32.476Z",
+    "resolved_at": "2026-08-26T21:30:32Z",
+    "duration_minutes": 81,
+    "components": [
+      "AI Search",
+      "Artifacts",
+      "Containers",
+      "D1",
+      "Durable Objects",
+      "Workers Assets",
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "0qf6gfzh9n8d",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues causing an increase of errors for Durable Objects and downstream services in ENAM region. We are working to analyze and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-08-26T20:08:32.671Z"
+      },
+      {
+        "native_id": "wwbr11dw1kgr",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-08-26T20:50:07.614Z"
+      },
+      {
+        "native_id": "t0ftgks3p4f2",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-26T23:07:32.009Z"
+      }
+    ],
+    "first_seen_at": "2026-08-27T16:56:47.475051842Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-02-13T13:28:33.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "c9mqrzw6nzvg",
+          "name": "AI Search",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2026-02-13",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2026-07-16T17:07:32.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "2cwyccg7b7xb",
+          "name": "Artifacts",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2026-07-16",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 34,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 36,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 46,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2026-03-30T11:50:12.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "pg21w9xb991r",
+          "name": "Workers Assets",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 117,
+          "showcase": false,
+          "start_date": "2026-03-30",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 122,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        }
+      ],
+      "created_at": "2026-08-26T20:08:32.000Z",
+      "id": "rzc0p0rk680b",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "c9mqrzw6nzvg",
+              "name": "Cloudflare Sites and Services - AI Search",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2cwyccg7b7xb",
+              "name": "Cloudflare Sites and Services - Artifacts",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Cloudflare Sites and Services - D1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-26T23:07:32.009Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T21:30:32.000Z",
+          "id": "t0ftgks3p4f2",
+          "incident_id": "rzc0p0rk680b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T23:07:52.629Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "c9mqrzw6nzvg",
+              "name": "Cloudflare Sites and Services - AI Search",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2cwyccg7b7xb",
+              "name": "Cloudflare Sites and Services - Artifacts",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Cloudflare Sites and Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-08-26T20:50:07.614Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T20:50:07.614Z",
+          "id": "wwbr11dw1kgr",
+          "incident_id": "rzc0p0rk680b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T20:50:07.614Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "c9mqrzw6nzvg",
+              "name": "Cloudflare Sites and Services - AI Search",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2cwyccg7b7xb",
+              "name": "Cloudflare Sites and Services - Artifacts",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Cloudflare Sites and Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues causing an increase of errors for Durable Objects and downstream services in ENAM region. We are working to analyze and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-08-26T20:08:32.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T20:08:32.671Z",
+          "id": "0qf6gfzh9n8d",
+          "incident_id": "rzc0p0rk680b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T20:08:32.671Z"
+        }
+      ],
+      "monitoring_at": "2026-08-26T20:50:07.614Z",
+      "name": "Durable Objects and Downstream Service Errors",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-26T21:30:32.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/rzc0p0rk680b",
+      "started_at": "2026-08-26T20:08:32.476Z",
+      "status": "resolved",
+      "updated_at": "2026-08-26T23:07:52.648Z"
+    }
+  },
+  {
+    "key": "cloudflare/kv7g91gcddsn",
+    "vendor": "cloudflare",
+    "native_id": "kv7g91gcddsn",
+    "title": "Realtimekit APIs failing due to breakage in DB connectivity",
+    "url": "https://www.cloudflarestatus.com/incidents/kv7g91gcddsn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-27T07:42:00Z",
+    "resolved_at": "2026-08-27T08:42:00Z",
+    "duration_minutes": 60,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "0czq1v719bf8",
+        "status": "resolved",
+        "body": "APIs for Meeting creation/ Participant creation were all failing between UTC 08:42 to UTC 08:50. Running meetings/ Recordings and session participants not impacted.",
+        "created_at": "2026-08-27T09:08:13.952Z"
+      }
+    ],
+    "first_seen_at": "2026-08-27T16:56:47.475051842Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-27T07:42:00.000Z",
+      "id": "kv7g91gcddsn",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "APIs for Meeting creation/ Participant creation were all failing between UTC 08:42 to UTC 08:50. Running meetings/ Recordings and session participants not impacted.",
+          "created_at": "2026-08-27T09:08:13.952Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T08:42:00.000Z",
+          "id": "0czq1v719bf8",
+          "incident_id": "kv7g91gcddsn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T09:08:57.491Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Realtimekit APIs failing due to breakage in DB connectivity",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-27T08:42:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/kv7g91gcddsn",
+      "started_at": "2026-08-27T07:42:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-08-27T09:08:57.560Z"
+    }
+  },
+  {
+    "key": "cloudflare/bthgp8mprw38",
+    "vendor": "cloudflare",
+    "native_id": "bthgp8mprw38",
+    "title": "Turnstile Challenge Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
+    "impact": "minor",
+    "status": "investigating",
+    "started_at": "2026-08-27T14:40:38Z",
+    "components": [
+      "Turnstile"
+    ],
+    "updates": [
+      {
+        "native_id": "2cbqblj8drm9",
+        "status": "investigating",
+        "body": "Cloudflare is investigating a potential issue with the Turnstile challenge platform. Users may experience failed challenges solve attempts.\nFurther details will be provided as more information becomes available.",
+        "created_at": "2026-08-27T14:40:38.419Z"
+      }
+    ],
+    "first_seen_at": "2026-08-27T16:56:47.475051842Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-19T17:03:40.000Z",
+          "description": "Turnstile is a user-friendly, privacy-preserving alternative to CAPTCHA.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "m4jywscr0n0k",
+          "name": "Turnstile",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 106,
+          "showcase": false,
+          "start_date": "2023-01-19",
+          "status": "degraded_performance",
+          "updated_at": "2026-08-27T14:40:38.000Z"
+        }
+      ],
+      "created_at": "2026-08-27T14:40:38.000Z",
+      "id": "bthgp8mprw38",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "m4jywscr0n0k",
+              "name": "Cloudflare Sites and Services - Turnstile",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating a potential issue with the Turnstile challenge platform. Users may experience failed challenges solve attempts.\nFurther details will be provided as more information becomes available.",
+          "created_at": "2026-08-27T14:40:38.419Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T14:40:38.419Z",
+          "id": "2cbqblj8drm9",
+          "incident_id": "bthgp8mprw38",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T14:40:38.419Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Turnstile Challenge Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
+      "started_at": "2026-08-27T14:40:38.000Z",
+      "status": "investigating",
+      "updated_at": "2026-08-27T14:40:38.000Z"
     }
   }
 ]
