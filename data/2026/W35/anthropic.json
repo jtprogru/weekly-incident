@@ -93,8 +93,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "operational",
-          "updated_at": "2026-08-24T20:26:21.534Z"
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.415Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -108,8 +108,8 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "operational",
-          "updated_at": "2026-08-24T20:26:21.549Z"
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.434Z"
         }
       ],
       "created_at": "2026-08-24T05:06:39.493Z",
@@ -481,8 +481,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "operational",
-          "updated_at": "2026-08-24T20:26:21.534Z"
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.415Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -496,8 +496,8 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "operational",
-          "updated_at": "2026-08-24T20:26:21.549Z"
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.434Z"
         }
       ],
       "created_at": "2026-08-24T20:11:23.934Z",
@@ -578,6 +578,103 @@
       "started_at": "2026-08-24T20:11:23.924Z",
       "status": "resolved",
       "updated_at": "2026-08-24T20:26:21.592Z"
+    }
+  },
+  {
+    "key": "anthropic/vr9tpk8w7zr8",
+    "vendor": "anthropic",
+    "native_id": "vr9tpk8w7zr8",
+    "title": "Elevated errors on Claude Code and Claude Cowork",
+    "url": "https://stspg.io/6rfby2z7stc2",
+    "impact": "major",
+    "status": "identified",
+    "started_at": "2026-08-28T17:22:02.368Z",
+    "components": [
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "cg9nyp880ysm",
+        "status": "identified",
+        "body": "We have identified an issue with an upstream cloud provider affecting Claude Cowork and Claude Code on the web. Some sessions may fail to start or disconnect mid-task; affected sessions can be retried. We are in contact with the provider and will provide an update as soon as possible.",
+        "created_at": "2026-08-28T17:22:02.478Z"
+      }
+    ],
+    "first_seen_at": "2026-08-28T17:46:56.846958306Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-22T21:35:29.822Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 4,
+          "showcase": true,
+          "start_date": "2025-02-06",
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.415Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "partial_outage",
+          "updated_at": "2026-08-28T17:22:02.434Z"
+        }
+      ],
+      "created_at": "2026-08-28T17:22:02.377Z",
+      "id": "vr9tpk8w7zr8",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified an issue with an upstream cloud provider affecting Claude Cowork and Claude Code on the web. Some sessions may fail to start or disconnect mid-task; affected sessions can be retried. We are in contact with the provider and will provide an update as soon as possible.",
+          "created_at": "2026-08-28T17:22:02.478Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:22:02.478Z",
+          "id": "cg9nyp880ysm",
+          "incident_id": "vr9tpk8w7zr8",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:22:02.478Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors on Claude Code and Claude Cowork",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/6rfby2z7stc2",
+      "started_at": "2026-08-28T17:22:02.368Z",
+      "status": "identified",
+      "updated_at": "2026-08-28T17:22:02.481Z"
     }
   }
 ]

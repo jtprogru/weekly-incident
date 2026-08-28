@@ -97,8 +97,8 @@
           "position": 59,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-08-24T08:28:22.000Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-08-28T17:40:33.000Z"
         },
         {
           "created_at": "2022-07-05T10:55:24.000Z",
@@ -1149,8 +1149,10 @@
     "title": "Turnstile Challenge Issues",
     "url": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
     "impact": "minor",
-    "status": "investigating",
-    "started_at": "2026-08-27T14:40:38Z",
+    "status": "resolved",
+    "started_at": "2026-08-27T14:40:38.306Z",
+    "resolved_at": "2026-08-27T19:29:35.227Z",
+    "duration_minutes": 288,
     "components": [
       "Turnstile"
     ],
@@ -1160,6 +1162,12 @@
         "status": "investigating",
         "body": "Cloudflare is investigating a potential issue with the Turnstile challenge platform. Users may experience failed challenges solve attempts.\nFurther details will be provided as more information becomes available.",
         "created_at": "2026-08-27T14:40:38.419Z"
+      },
+      {
+        "native_id": "yjwxybgv9dgv",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-27T19:29:35.227Z"
       }
     ],
     "first_seen_at": "2026-08-27T16:56:47.475051842Z",
@@ -1177,14 +1185,34 @@
           "position": 106,
           "showcase": false,
           "start_date": "2023-01-19",
-          "status": "degraded_performance",
-          "updated_at": "2026-08-27T14:40:38.000Z"
+          "status": "operational",
+          "updated_at": "2026-08-27T19:29:35.000Z"
         }
       ],
       "created_at": "2026-08-27T14:40:38.000Z",
       "id": "bthgp8mprw38",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "m4jywscr0n0k",
+              "name": "Cloudflare Sites and Services - Turnstile",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-27T19:29:35.227Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T19:29:35.227Z",
+          "id": "yjwxybgv9dgv",
+          "incident_id": "bthgp8mprw38",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T19:29:35.227Z"
+        },
         {
           "affected_components": [
             {
@@ -1210,11 +1238,406 @@
       "name": "Turnstile Challenge Issues",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-08-27T19:29:35.227Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
-      "started_at": "2026-08-27T14:40:38.000Z",
-      "status": "investigating",
-      "updated_at": "2026-08-27T14:40:38.000Z"
+      "started_at": "2026-08-27T14:40:38.306Z",
+      "status": "resolved",
+      "updated_at": "2026-08-27T19:29:35.245Z"
+    }
+  },
+  {
+    "key": "cloudflare/9g65dxfbcjln",
+    "vendor": "cloudflare",
+    "native_id": "9g65dxfbcjln",
+    "title": "Incorrect geo location for some Cloudflare WARP users",
+    "url": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-08-27T18:46:19Z",
+    "components": [
+      "WARP"
+    ],
+    "updates": [
+      {
+        "native_id": "fgk96scpz2l7",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Cloudflare WARP and Cloudflare Zero Trust users being incorrectly geolocated by some third party services.",
+        "created_at": "2026-08-27T18:46:19.105Z"
+      },
+      {
+        "native_id": "tmxm91dk7f98",
+        "status": "identified",
+        "body": "The issue has been identified and we are working with third party providers to fix it.",
+        "created_at": "2026-08-27T18:56:11.313Z"
+      },
+      {
+        "native_id": "sz6wrbzlnx1m",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-08-28T00:55:12.489Z"
+      },
+      {
+        "native_id": "gz6b2mdpbvjn",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-08-28T11:30:28.324Z"
+      }
+    ],
+    "first_seen_at": "2026-08-28T17:46:56.846958306Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-03T21:14:10.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bjvy4v384csg",
+          "name": "WARP",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 112,
+          "showcase": false,
+          "start_date": "2026-07-03",
+          "status": "degraded_performance",
+          "updated_at": "2026-08-27T18:46:19.000Z"
+        }
+      ],
+      "created_at": "2026-08-27T18:46:19.000Z",
+      "id": "9g65dxfbcjln",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bjvy4v384csg",
+              "name": "Cloudflare Sites and Services - WARP",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-08-28T11:30:28.324Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T11:30:28.324Z",
+          "id": "gz6b2mdpbvjn",
+          "incident_id": "9g65dxfbcjln",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T11:30:28.324Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bjvy4v384csg",
+              "name": "Cloudflare Sites and Services - WARP",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-08-28T00:55:12.489Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T00:55:12.489Z",
+          "id": "sz6wrbzlnx1m",
+          "incident_id": "9g65dxfbcjln",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T00:55:12.489Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bjvy4v384csg",
+              "name": "Cloudflare Sites and Services - WARP",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and we are working with third party providers to fix it.",
+          "created_at": "2026-08-27T18:56:11.313Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T18:56:11.000Z",
+          "id": "tmxm91dk7f98",
+          "incident_id": "9g65dxfbcjln",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T00:55:08.181Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bjvy4v384csg",
+              "name": "Cloudflare Sites and Services - WARP",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Cloudflare WARP and Cloudflare Zero Trust users being incorrectly geolocated by some third party services.",
+          "created_at": "2026-08-27T18:46:19.105Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T18:46:19.105Z",
+          "id": "fgk96scpz2l7",
+          "incident_id": "9g65dxfbcjln",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T18:46:19.105Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incorrect geo location for some Cloudflare WARP users",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+      "started_at": "2026-08-27T18:46:19.000Z",
+      "status": "identified",
+      "updated_at": "2026-08-28T11:30:28.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/yj2zk6n6rz1c",
+    "vendor": "cloudflare",
+    "native_id": "yj2zk6n6rz1c",
+    "title": "Workers Builds are Degraded",
+    "url": "https://www.cloudflarestatus.com/incidents/yj2zk6n6rz1c",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-27T21:19:40.639Z",
+    "resolved_at": "2026-08-27T22:58:12.068Z",
+    "duration_minutes": 98,
+    "components": [
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "qrtfm5p2fxd3",
+        "status": "investigating",
+        "body": "We are currently investigating an issue where Workers Builds are not running. Our team is actively identifying the root cause, and we will share further updates as soon as more information becomes available.",
+        "created_at": "2026-08-27T21:19:40.77Z"
+      },
+      {
+        "native_id": "d61n6r80mmmg",
+        "status": "monitoring",
+        "body": "We have identified the issue and builds are running. We are monitoring as the queue returns to normal levels.",
+        "created_at": "2026-08-27T22:07:47.275Z"
+      },
+      {
+        "native_id": "xnjk76f3rx9x",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-27T22:58:12.068Z"
+      }
+    ],
+    "first_seen_at": "2026-08-28T17:46:56.846958306Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 118,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-08-27T22:58:12.000Z"
+        }
+      ],
+      "created_at": "2026-08-27T21:19:40.000Z",
+      "id": "yj2zk6n6rz1c",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Cloudflare Sites and Services - Workers Builds",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-27T22:58:12.068Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T22:58:12.068Z",
+          "id": "xnjk76f3rx9x",
+          "incident_id": "yj2zk6n6rz1c",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T22:58:12.068Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Cloudflare Sites and Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the issue and builds are running. We are monitoring as the queue returns to normal levels.",
+          "created_at": "2026-08-27T22:07:47.275Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T22:07:47.275Z",
+          "id": "d61n6r80mmmg",
+          "incident_id": "yj2zk6n6rz1c",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T22:07:47.275Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Cloudflare Sites and Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue where Workers Builds are not running. Our team is actively identifying the root cause, and we will share further updates as soon as more information becomes available.",
+          "created_at": "2026-08-27T21:19:40.770Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T21:19:40.770Z",
+          "id": "qrtfm5p2fxd3",
+          "incident_id": "yj2zk6n6rz1c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T21:19:40.770Z"
+        }
+      ],
+      "monitoring_at": "2026-08-27T22:07:47.275Z",
+      "name": "Workers Builds are Degraded",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-27T22:58:12.068Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/yj2zk6n6rz1c",
+      "started_at": "2026-08-27T21:19:40.639Z",
+      "status": "resolved",
+      "updated_at": "2026-08-27T22:58:12.082Z"
+    }
+  },
+  {
+    "key": "cloudflare/7rlsppn13h62",
+    "vendor": "cloudflare",
+    "native_id": "7rlsppn13h62",
+    "title": "Increased HTTP 5xx Errors in Singapore",
+    "url": "https://www.cloudflarestatus.com/incidents/7rlsppn13h62",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-08-28T17:36:54Z",
+    "components": [
+      "Singapore, Singapore - (SIN)"
+    ],
+    "updates": [
+      {
+        "native_id": "sy8s7dmt4kdj",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an increased level of HTTP 5xx errors in Singapore. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-08-28T17:36:54.193Z"
+      },
+      {
+        "native_id": "7fyj86tfyrc5",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-08-28T17:39:04.949Z"
+      },
+      {
+        "native_id": "8rpvhzchtlmf",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-08-28T17:40:33.328Z"
+      }
+    ],
+    "first_seen_at": "2026-08-28T17:46:56.846958306Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T21:44:15.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "77867vxkttgw",
+          "id": "18p6r93swmbl",
+          "name": "Singapore, Singapore - (SIN)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 59,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-08-28T17:40:33.000Z"
+        }
+      ],
+      "created_at": "2026-08-28T17:36:54.000Z",
+      "id": "7rlsppn13h62",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "18p6r93swmbl",
+              "name": "Asia - Singapore, Singapore - (SIN)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-08-28T17:40:33.328Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:40:33.328Z",
+          "id": "8rpvhzchtlmf",
+          "incident_id": "7rlsppn13h62",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:40:33.328Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-08-28T17:39:04.949Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:39:04.949Z",
+          "id": "7fyj86tfyrc5",
+          "incident_id": "7rlsppn13h62",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:39:04.949Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Cloudflare is investigating an increased level of HTTP 5xx errors in Singapore. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-08-28T17:36:54.193Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:36:54.193Z",
+          "id": "sy8s7dmt4kdj",
+          "incident_id": "7rlsppn13h62",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:36:54.193Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased HTTP 5xx Errors in Singapore",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/7rlsppn13h62",
+      "started_at": "2026-08-28T17:36:54.000Z",
+      "status": "identified",
+      "updated_at": "2026-08-28T17:40:33.000Z"
     }
   }
 ]

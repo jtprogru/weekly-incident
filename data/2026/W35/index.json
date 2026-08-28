@@ -2,101 +2,121 @@
   "week": "2026-W35",
   "from": "2026-08-24T00:00:00Z",
   "to": "2026-08-31T00:00:00Z",
-  "generated_at": "2026-08-27T16:56:47.475051842Z",
+  "generated_at": "2026-08-28T17:46:56.846958306Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
-      "incidents_seen": 41,
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "incidents_seen": 40,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-27T16:56:47.475051842Z",
+      "fetched_at": "2026-08-28T17:46:56.846958306Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/9g65dxfbcjln",
+      "vendor": "cloudflare",
+      "title": "Incorrect geo location for some Cloudflare WARP users",
+      "url": "https://www.cloudflarestatus.com/incidents/9g65dxfbcjln",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-08-27T18:46:19Z",
+      "ongoing": true,
+      "components": [
+        "WARP"
+      ],
+      "score": {
+        "value": 2484,
+        "duration_minutes": 1380,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "digitalocean/4qwm6pzlx1z3",
       "vendor": "digitalocean",
@@ -174,13 +194,15 @@
       "title": "Disruption with GitHub Billing",
       "url": "https://stspg.io/cpgst4hly3mh",
       "impact": "minor",
-      "status": "investigating",
+      "status": "resolved",
       "started_at": "2026-08-26T23:37:20.57Z",
-      "ongoing": true,
+      "resolved_at": "2026-08-27T19:44:08.799Z",
+      "duration_minutes": 1206,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 1558.5,
-        "duration_minutes": 1039,
+        "value": 1809,
+        "duration_minutes": 1206,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -240,6 +262,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/bthgp8mprw38",
+      "vendor": "cloudflare",
+      "title": "Turnstile Challenge Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-27T14:40:38.306Z",
+      "resolved_at": "2026-08-27T19:29:35.227Z",
+      "duration_minutes": 288,
+      "ongoing": false,
+      "components": [
+        "Turnstile"
+      ],
+      "score": {
+        "value": 518.4,
+        "duration_minutes": 288,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/y1t7p9fzrlj2",
       "vendor": "github",
       "title": "Incident with Actions",
@@ -258,6 +302,26 @@
         "value": 507,
         "duration_minutes": 169,
         "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M1263309PD7VYV8EF95W2M2P",
+      "vendor": "openai",
+      "title": "Users may experience an increase in error rates in Workspace Agents and ChatGPT Work on Web and Mobile",
+      "url": "https://status.openai.com/incidents/01M1263309PD7VYV8EF95W2M2P",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-27T18:00:38Z",
+      "resolved_at": "2026-08-27T22:14:44Z",
+      "duration_minutes": 254,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 381,
+        "duration_minutes": 254,
+        "components": 1,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -284,26 +348,6 @@
         "vendor_weight": 1.5
       },
       "above_threshold": false
-    },
-    {
-      "key": "cloudflare/bthgp8mprw38",
-      "vendor": "cloudflare",
-      "title": "Turnstile Challenge Issues",
-      "url": "https://www.cloudflarestatus.com/incidents/bthgp8mprw38",
-      "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-08-27T14:40:38Z",
-      "ongoing": true,
-      "components": [
-        "Turnstile"
-      ],
-      "score": {
-        "value": 244.8,
-        "duration_minutes": 136,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
     },
     {
       "key": "cloudflare/9v68b4k90mry",
@@ -351,6 +395,28 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/yj2zk6n6rz1c",
+      "vendor": "cloudflare",
+      "title": "Workers Builds are Degraded",
+      "url": "https://www.cloudflarestatus.com/incidents/yj2zk6n6rz1c",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-27T21:19:40.639Z",
+      "resolved_at": "2026-08-27T22:58:12.068Z",
+      "duration_minutes": 98,
+      "ongoing": false,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 176.4,
+        "duration_minutes": 98,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/kv7g91gcddsn",
       "vendor": "cloudflare",
       "title": "Realtimekit APIs failing due to breakage in DB connectivity",
@@ -367,6 +433,26 @@
         "duration_minutes": 60,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/yrc30bc0vv19",
+      "vendor": "grafana",
+      "title": "Some Grafana UI features may be unavailable or reverting to legacy behaviour",
+      "url": "https://stspg.io/lj9v7hbqc7gp",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-28T00:58:03.931Z",
+      "resolved_at": "2026-08-28T02:40:12.86Z",
+      "duration_minutes": 102,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 102,
+        "duration_minutes": 102,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
@@ -389,6 +475,27 @@
         "vendor_weight": 1.5
       },
       "above_threshold": false
+    },
+    {
+      "key": "anthropic/vr9tpk8w7zr8",
+      "vendor": "anthropic",
+      "title": "Elevated errors on Claude Code and Claude Cowork",
+      "url": "https://stspg.io/6rfby2z7stc2",
+      "impact": "major",
+      "status": "identified",
+      "started_at": "2026-08-28T17:22:02.368Z",
+      "ongoing": true,
+      "components": [
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 72,
+        "duration_minutes": 24,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "github/wt3hjqcrczfg",
@@ -526,6 +633,26 @@
       "above_threshold": false
     },
     {
+      "key": "grafana/chcdlmf9mhsn",
+      "vendor": "grafana",
+      "title": "Partial Logs Write Outage",
+      "url": "https://stspg.io/zc28d5qtcwdf",
+      "impact": "major",
+      "status": "identified",
+      "started_at": "2026-08-28T17:12:42.732Z",
+      "ongoing": true,
+      "components": [
+        "AWS US East - prod-us-east-3"
+      ],
+      "score": {
+        "value": 34,
+        "duration_minutes": 34,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/hcmjsz6z2y4s",
       "vendor": "grafana",
       "title": "Incident Management unavailable in US Central",
@@ -544,6 +671,26 @@
         "duration_minutes": 23,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/7rlsppn13h62",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 5xx Errors in Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/7rlsppn13h62",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-08-28T17:36:54Z",
+      "ongoing": true,
+      "components": [
+        "Singapore, Singapore - (SIN)"
+      ],
+      "score": {
+        "value": 18,
+        "duration_minutes": 10,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
