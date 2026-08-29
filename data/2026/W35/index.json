@@ -2,96 +2,96 @@
   "week": "2026-W35",
   "from": "2026-08-24T00:00:00Z",
   "to": "2026-08-31T00:00:00Z",
-  "generated_at": "2026-08-28T17:46:56.846958306Z",
+  "generated_at": "2026-08-29T11:51:14.43343297Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
-      "incidents_seen": 40,
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
+      "incidents_seen": 39,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-28T17:46:56.846958306Z",
+      "fetched_at": "2026-08-29T11:51:14.43343297Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -110,8 +110,8 @@
         "WARP"
       ],
       "score": {
-        "value": 2484,
-        "duration_minutes": 1380,
+        "value": 4435.2,
+        "duration_minutes": 2464,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -260,6 +260,51 @@
         "vendor_weight": 1.8
       },
       "above_threshold": false
+    },
+    {
+      "key": "cloudflare/7rlsppn13h62",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 5xx Errors in Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/7rlsppn13h62",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-28T17:36:54.14Z",
+      "resolved_at": "2026-08-29T00:43:53.498Z",
+      "duration_minutes": 426,
+      "ongoing": false,
+      "components": [
+        "Singapore, Singapore - (SIN)"
+      ],
+      "score": {
+        "value": 766.8000000000001,
+        "duration_minutes": 426,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/vr9tpk8w7zr8",
+      "vendor": "anthropic",
+      "title": "Elevated errors on Claude Code and Claude Cowork",
+      "url": "https://stspg.io/6rfby2z7stc2",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-28T17:22:02.368Z",
+      "resolved_at": "2026-08-28T20:21:18.448Z",
+      "duration_minutes": 179,
+      "ongoing": false,
+      "components": [
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 537,
+        "duration_minutes": 179,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/bthgp8mprw38",
@@ -457,6 +502,28 @@
       "above_threshold": false
     },
     {
+      "key": "grafana/chcdlmf9mhsn",
+      "vendor": "grafana",
+      "title": "Partial Logs Write Outage",
+      "url": "https://stspg.io/zc28d5qtcwdf",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-28T17:12:42.732Z",
+      "resolved_at": "2026-08-28T18:42:09.202Z",
+      "duration_minutes": 89,
+      "ongoing": false,
+      "components": [
+        "AWS US East - prod-us-east-3"
+      ],
+      "score": {
+        "value": 89,
+        "duration_minutes": 89,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/hcbtzksccj2f",
       "vendor": "github",
       "title": "Disruption with some GitHub services",
@@ -475,27 +542,6 @@
         "vendor_weight": 1.5
       },
       "above_threshold": false
-    },
-    {
-      "key": "anthropic/vr9tpk8w7zr8",
-      "vendor": "anthropic",
-      "title": "Elevated errors on Claude Code and Claude Cowork",
-      "url": "https://stspg.io/6rfby2z7stc2",
-      "impact": "major",
-      "status": "identified",
-      "started_at": "2026-08-28T17:22:02.368Z",
-      "ongoing": true,
-      "components": [
-        "Claude Code",
-        "Claude Cowork"
-      ],
-      "score": {
-        "value": 72,
-        "duration_minutes": 24,
-        "components": 2,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
     },
     {
       "key": "github/wt3hjqcrczfg",
@@ -562,6 +608,28 @@
         "duration_minutes": 14,
         "components": 3,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/vx6s0ffrq3jf",
+      "vendor": "stripe",
+      "title": "Elevated card declines for some users in Mexico",
+      "url": "https://stspg.io/bf2rqyjxyqkv",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-08-29T06:45:18.617Z",
+      "resolved_at": "2026-08-29T07:33:38.381Z",
+      "duration_minutes": 48,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 57.599999999999994,
+        "duration_minutes": 48,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
@@ -633,26 +701,6 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/chcdlmf9mhsn",
-      "vendor": "grafana",
-      "title": "Partial Logs Write Outage",
-      "url": "https://stspg.io/zc28d5qtcwdf",
-      "impact": "major",
-      "status": "identified",
-      "started_at": "2026-08-28T17:12:42.732Z",
-      "ongoing": true,
-      "components": [
-        "AWS US East - prod-us-east-3"
-      ],
-      "score": {
-        "value": 34,
-        "duration_minutes": 34,
-        "components": 1,
-        "vendor_weight": 1
-      },
-      "above_threshold": true
-    },
-    {
       "key": "grafana/hcmjsz6z2y4s",
       "vendor": "grafana",
       "title": "Incident Management unavailable in US Central",
@@ -671,26 +719,6 @@
         "duration_minutes": 23,
         "components": 1,
         "vendor_weight": 1
-      },
-      "above_threshold": false
-    },
-    {
-      "key": "cloudflare/7rlsppn13h62",
-      "vendor": "cloudflare",
-      "title": "Increased HTTP 5xx Errors in Singapore",
-      "url": "https://www.cloudflarestatus.com/incidents/7rlsppn13h62",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-08-28T17:36:54Z",
-      "ongoing": true,
-      "components": [
-        "Singapore, Singapore - (SIN)"
-      ],
-      "score": {
-        "value": 18,
-        "duration_minutes": 10,
-        "components": 1,
-        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

@@ -93,8 +93,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.415Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.404Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -108,8 +108,8 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.434Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.421Z"
         }
       ],
       "created_at": "2026-08-24T05:06:39.493Z",
@@ -481,8 +481,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.415Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.404Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -496,8 +496,8 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.434Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.421Z"
         }
       ],
       "created_at": "2026-08-24T20:11:23.934Z",
@@ -587,8 +587,10 @@
     "title": "Elevated errors on Claude Code and Claude Cowork",
     "url": "https://stspg.io/6rfby2z7stc2",
     "impact": "major",
-    "status": "identified",
+    "status": "resolved",
     "started_at": "2026-08-28T17:22:02.368Z",
+    "resolved_at": "2026-08-28T20:21:18.448Z",
+    "duration_minutes": 179,
     "components": [
       "Claude Code",
       "Claude Cowork"
@@ -599,6 +601,18 @@
         "status": "identified",
         "body": "We have identified an issue with an upstream cloud provider affecting Claude Cowork and Claude Code on the web. Some sessions may fail to start or disconnect mid-task; affected sessions can be retried. We are in contact with the provider and will provide an update as soon as possible.",
         "created_at": "2026-08-28T17:22:02.478Z"
+      },
+      {
+        "native_id": "8346xnq7qy0g",
+        "status": "monitoring",
+        "body": "A mitigation has been applied for the issue affecting Claude Cowork and Claude Code on the web, and we are monitoring for recovery. Sessions that disconnected earlier can be retried",
+        "created_at": "2026-08-28T18:21:02.271Z"
+      },
+      {
+        "native_id": "kmk4h7fn2h79",
+        "status": "resolved",
+        "body": "The issue affecting Claude Cowork and Claude Code on the web has been resolved.",
+        "created_at": "2026-08-28T20:21:18.448Z"
       }
     ],
     "first_seen_at": "2026-08-28T17:46:56.846958306Z",
@@ -616,8 +630,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.415Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.404Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -631,14 +645,66 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "partial_outage",
-          "updated_at": "2026-08-28T17:22:02.434Z"
+          "status": "operational",
+          "updated_at": "2026-08-28T20:21:18.421Z"
         }
       ],
       "created_at": "2026-08-28T17:22:02.377Z",
       "id": "vr9tpk8w7zr8",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue affecting Claude Cowork and Claude Code on the web has been resolved.",
+          "created_at": "2026-08-28T20:21:18.448Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T20:21:18.448Z",
+          "id": "kmk4h7fn2h79",
+          "incident_id": "vr9tpk8w7zr8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T20:21:18.448Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A mitigation has been applied for the issue affecting Claude Cowork and Claude Code on the web, and we are monitoring for recovery. Sessions that disconnected earlier can be retried",
+          "created_at": "2026-08-28T18:21:02.271Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T18:21:02.271Z",
+          "id": "8346xnq7qy0g",
+          "incident_id": "vr9tpk8w7zr8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T18:21:02.271Z"
+        },
         {
           "affected_components": [
             {
@@ -666,15 +732,15 @@
           "updated_at": "2026-08-28T17:22:02.478Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-08-28T18:21:02.271Z",
       "name": "Elevated errors on Claude Code and Claude Cowork",
       "page_id": "tymt9n04zgry",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-08-28T20:21:18.448Z",
       "shortlink": "https://stspg.io/6rfby2z7stc2",
       "started_at": "2026-08-28T17:22:02.368Z",
-      "status": "identified",
-      "updated_at": "2026-08-28T17:22:02.481Z"
+      "status": "resolved",
+      "updated_at": "2026-08-28T20:21:18.464Z"
     }
   }
 ]
