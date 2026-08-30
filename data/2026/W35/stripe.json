@@ -43,7 +43,7 @@
           "showcase": false,
           "start_date": "2023-05-25",
           "status": "operational",
-          "updated_at": "2026-08-29T07:33:38.345Z"
+          "updated_at": "2026-08-29T20:44:52.341Z"
         }
       ],
       "created_at": "2026-08-29T06:45:18.625Z",
@@ -100,6 +100,137 @@
       "started_at": "2026-08-29T06:45:18.617Z",
       "status": "resolved",
       "updated_at": "2026-08-29T07:33:38.396Z"
+    }
+  },
+  {
+    "key": "stripe/hv5xshx651tz",
+    "vendor": "stripe",
+    "native_id": "hv5xshx651tz",
+    "title": "Elevated Swish errors",
+    "url": "https://stspg.io/1yfx7lx0ybwq",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-08-29T19:28:07.878Z",
+    "resolved_at": "2026-08-29T20:44:52.363Z",
+    "duration_minutes": 76,
+    "components": [
+      "Global payments",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "s5zy2f4tygf8",
+        "status": "investigating",
+        "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+        "created_at": "2026-08-29T19:28:07.993Z"
+      },
+      {
+        "native_id": "93m9w66tg7j4",
+        "status": "resolved",
+        "body": "From 18:53 UTC to 19:18 UTC on 2026-08-29, we saw elevated errors on Swish payments due to a service degradation on the Swish side. This is now resolved. We will continue to monitor for any further issues and will provide updates if needed.",
+        "created_at": "2026-08-29T20:44:52.363Z"
+      }
+    ],
+    "first_seen_at": "2026-08-30T10:48:21.054681675Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:58.953Z",
+          "description": "Checkout, Elements, Connect, Payment Links, Terminal, 3DS, and more",
+          "group": false,
+          "group_id": null,
+          "id": "qcs5gg7rz4ps",
+          "name": "Global payments",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-29T20:44:52.330Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-08-29T20:44:52.341Z"
+        }
+      ],
+      "created_at": "2026-08-29T19:28:07.888Z",
+      "id": "hv5xshx651tz",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 18:53 UTC to 19:18 UTC on 2026-08-29, we saw elevated errors on Swish payments due to a service degradation on the Swish side. This is now resolved. We will continue to monitor for any further issues and will provide updates if needed.",
+          "created_at": "2026-08-29T20:44:52.363Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-29T20:44:52.363Z",
+          "id": "93m9w66tg7j4",
+          "incident_id": "hv5xshx651tz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-29T20:44:52.363Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+          "created_at": "2026-08-29T19:28:07.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-29T19:28:07.993Z",
+          "id": "s5zy2f4tygf8",
+          "incident_id": "hv5xshx651tz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-29T19:28:07.993Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Swish errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-29T20:44:52.363Z",
+      "shortlink": "https://stspg.io/1yfx7lx0ybwq",
+      "started_at": "2026-08-29T19:28:07.878Z",
+      "status": "resolved",
+      "updated_at": "2026-08-29T20:44:52.375Z"
     }
   }
 ]
