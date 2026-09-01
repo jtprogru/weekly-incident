@@ -2,116 +2,264 @@
   "week": "2026-W36",
   "from": "2026-08-31T00:00:00Z",
   "to": "2026-09-07T00:00:00Z",
-  "generated_at": "2026-08-31T11:57:55.356253189Z",
+  "generated_at": "2026-09-01T10:37:28.279694787Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 39,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-08-31T11:57:55.356253189Z",
+      "fetched_at": "2026-09-01T10:37:28.279694787Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
     {
+      "key": "cloudflare/8x66bpk6p9kk",
+      "vendor": "cloudflare",
+      "title": "HTTP/3 issue affecting R2 custom domains",
+      "url": "https://www.cloudflarestatus.com/incidents/8x66bpk6p9kk",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-08-31T18:47:05Z",
+      "ongoing": true,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 1710,
+        "duration_minutes": 950,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M1CYZDD84XD0H56XNEV2PT98",
+      "vendor": "openai",
+      "title": "Elevated latency in the Responses API",
+      "url": "https://status.openai.com/incidents/01M1CYZDD84XD0H56XNEV2PT98",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-08-31T22:27:56Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 1093.5,
+        "duration_minutes": 729,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M1C5M4K0WC8PPT0Z175RJA1E",
+      "vendor": "openai",
+      "title": "ChatGPT Work seeing elevated errors and latency",
+      "url": "https://status.openai.com/incidents/01M1C5M4K0WC8PPT0Z175RJA1E",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-31T15:04:53Z",
+      "resolved_at": "2026-08-31T20:28:40Z",
+      "duration_minutes": 323,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 484.5,
+        "duration_minutes": 323,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/kby271yt9vwx",
       "vendor": "cloudflare",
       "title": "Workers KV experiencing elevated error rates in Western Europe Region",
       "url": "https://www.cloudflarestatus.com/incidents/kby271yt9vwx",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-08-31T11:01:59Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-08-31T11:01:59.937Z",
+      "resolved_at": "2026-08-31T15:04:13.055Z",
+      "duration_minutes": 242,
+      "ongoing": false,
       "components": [
         "Workers KV"
       ],
       "score": {
-        "value": 99,
-        "duration_minutes": 55,
+        "value": 435.6,
+        "duration_minutes": 242,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/3mjmdcmm86nx",
+      "vendor": "cloudflare",
+      "title": "Requests from wrangler or other OAuth clients may experience elevated errors",
+      "url": "https://www.cloudflarestatus.com/incidents/3mjmdcmm86nx",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-01T08:38:51Z",
+      "ongoing": true,
+      "components": [
+        "D1",
+        "Workflows"
+      ],
+      "score": {
+        "value": 424.8,
+        "duration_minutes": 118,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/fcdl2yb3q7qw",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Access bypass IP service experiencing availability issues",
+      "url": "https://www.cloudflarestatus.com/incidents/fcdl2yb3q7qw",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-31T11:40:21.655Z",
+      "resolved_at": "2026-08-31T14:50:56.052Z",
+      "duration_minutes": 190,
+      "ongoing": false,
+      "components": [
+        "Access"
+      ],
+      "score": {
+        "value": 342,
+        "duration_minutes": 190,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/r82kdk0m7vqh",
+      "vendor": "anthropic",
+      "title": "Degraded performance on claude.ai and Claude Code",
+      "url": "https://stspg.io/gny7dn3k231b",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-31T19:21:32.131Z",
+      "resolved_at": "2026-08-31T20:36:00.297Z",
+      "duration_minutes": 74,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Code"
+      ],
+      "score": {
+        "value": 222,
+        "duration_minutes": 74,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/72lc3n642lkf",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+      "url": "https://www.cloudflarestatus.com/incidents/72lc3n642lkf",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-31T20:16:29Z",
+      "resolved_at": "2026-08-31T22:02:59Z",
+      "duration_minutes": 106,
+      "ongoing": false,
+      "components": [
+        "Access"
+      ],
+      "score": {
+        "value": 190.8,
+        "duration_minutes": 106,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -140,22 +288,44 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/fcdl2yb3q7qw",
-      "vendor": "cloudflare",
-      "title": "Cloudflare Access bypass IP service experiencing availability issues",
-      "url": "https://www.cloudflarestatus.com/incidents/fcdl2yb3q7qw",
+      "key": "anthropic/9jrp5rtyzrf6",
+      "vendor": "anthropic",
+      "title": "Degraded performance on claude.ai",
+      "url": "https://stspg.io/hmpwykr9h567",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-08-31T11:40:21Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-08-31T17:23:06.231Z",
+      "resolved_at": "2026-08-31T17:52:26.026Z",
+      "duration_minutes": 29,
+      "ongoing": false,
       "components": [
-        "Access"
+        "claude.ai"
       ],
       "score": {
-        "value": 30.6,
-        "duration_minutes": 17,
+        "value": 43.5,
+        "duration_minutes": 29,
         "components": 1,
-        "vendor_weight": 1.8
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M1D6E14BQSYQA3R5CNQBB7EB",
+      "vendor": "openai",
+      "title": "Elevated errors in ChatGPT conversations for Free and Go plans",
+      "url": "https://status.openai.com/incidents/01M1D6E14BQSYQA3R5CNQBB7EB",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-01T00:38:15Z",
+      "resolved_at": "2026-09-01T01:00:01Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 31.5,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
