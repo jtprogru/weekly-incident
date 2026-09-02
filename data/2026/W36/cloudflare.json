@@ -204,7 +204,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-08-31T22:02:59.000Z"
+          "updated_at": "2026-09-02T07:16:16.000Z"
         }
       ],
       "created_at": "2026-08-31T11:40:21.000Z",
@@ -290,7 +290,7 @@
     "title": "HTTP/3 issue affecting R2 custom domains",
     "url": "https://www.cloudflarestatus.com/incidents/8x66bpk6p9kk",
     "impact": "minor",
-    "status": "investigating",
+    "status": "identified",
     "started_at": "2026-08-31T18:47:05Z",
     "components": [
       "R2"
@@ -301,6 +301,12 @@
         "status": "investigating",
         "body": "Some Firefox users may see delayed or failed asset loads on R2 custom domains due to an incorrect HTTP/3 advertisement. We are working on a fix.",
         "created_at": "2026-08-31T18:47:05.927Z"
+      },
+      {
+        "native_id": "ydvh3rh0bndr",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-01T14:46:03.896Z"
       }
     ],
     "first_seen_at": "2026-09-01T10:37:28.279694787Z",
@@ -332,6 +338,26 @@
               "code": "hb7g5sq2zz0h",
               "name": "Cloudflare Sites and Services - R2",
               "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-01T14:46:03.896Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T14:46:03.896Z",
+          "id": "ydvh3rh0bndr",
+          "incident_id": "8x66bpk6p9kk",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T14:46:03.896Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
               "old_status": "operational"
             }
           ],
@@ -354,8 +380,8 @@
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/8x66bpk6p9kk",
       "started_at": "2026-08-31T18:47:05.000Z",
-      "status": "investigating",
-      "updated_at": "2026-08-31T18:47:05.000Z"
+      "status": "identified",
+      "updated_at": "2026-09-01T14:46:03.000Z"
     }
   },
   {
@@ -414,7 +440,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-08-31T22:02:59.000Z"
+          "updated_at": "2026-09-02T07:16:16.000Z"
         }
       ],
       "created_at": "2026-08-31T20:16:29.000Z",
@@ -520,8 +546,10 @@
     "title": "Requests from wrangler or other OAuth clients may experience elevated errors",
     "url": "https://www.cloudflarestatus.com/incidents/3mjmdcmm86nx",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-09-01T08:38:51Z",
+    "status": "resolved",
+    "started_at": "2026-09-01T08:38:51.001Z",
+    "resolved_at": "2026-09-01T12:05:52.779Z",
+    "duration_minutes": 207,
     "components": [
       "D1",
       "Workflows"
@@ -544,6 +572,12 @@
         "status": "identified",
         "body": "The issue has been identified and a fix is being implemented.",
         "created_at": "2026-09-01T09:41:17.612Z"
+      },
+      {
+        "native_id": "jhr4qf1lyslc",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-01T12:05:52.779Z"
       }
     ],
     "first_seen_at": "2026-09-01T10:37:28.279694787Z",
@@ -561,8 +595,8 @@
           "position": 36,
           "showcase": false,
           "start_date": "2024-02-09",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-01T08:38:51.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-01T12:05:52.000Z"
         },
         {
           "created_at": "2025-04-04T09:39:26.000Z",
@@ -576,14 +610,40 @@
           "position": 122,
           "showcase": false,
           "start_date": "2025-04-04",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-01T08:42:47.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-01T12:05:52.000Z"
         }
       ],
       "created_at": "2026-09-01T08:38:51.000Z",
       "id": "3mjmdcmm86nx",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Cloudflare Sites and Services - D1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-01T12:05:52.779Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T12:05:52.779Z",
+          "id": "jhr4qf1lyslc",
+          "incident_id": "3mjmdcmm86nx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T12:05:52.779Z"
+        },
         {
           "affected_components": [
             {
@@ -661,11 +721,587 @@
       "name": "Requests from wrangler or other OAuth clients may experience elevated errors",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-01T12:05:52.779Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/3mjmdcmm86nx",
-      "started_at": "2026-09-01T08:38:51.000Z",
-      "status": "identified",
-      "updated_at": "2026-09-01T09:41:17.000Z"
+      "started_at": "2026-09-01T08:38:51.001Z",
+      "status": "resolved",
+      "updated_at": "2026-09-01T12:05:52.794Z"
+    }
+  },
+  {
+    "key": "cloudflare/cczd80189gvc",
+    "vendor": "cloudflare",
+    "native_id": "cczd80189gvc",
+    "title": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+    "url": "https://www.cloudflarestatus.com/incidents/cczd80189gvc",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-01T20:06:47Z",
+    "resolved_at": "2026-09-02T07:16:16.89Z",
+    "duration_minutes": 669,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "8gt23ng17wnf",
+        "status": "investigating",
+        "body": "Some customers using email security gateway like Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.",
+        "created_at": "2026-09-01T20:06:47.38Z"
+      },
+      {
+        "native_id": "sc61rx8nhqwh",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-02T07:16:16.89Z"
+      }
+    ],
+    "first_seen_at": "2026-09-02T10:02:46.004166678Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-02T07:16:16.000Z"
+        }
+      ],
+      "created_at": "2026-09-01T20:06:47.000Z",
+      "id": "cczd80189gvc",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-02T07:16:16.890Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T07:16:16.890Z",
+          "id": "sc61rx8nhqwh",
+          "incident_id": "cczd80189gvc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T07:16:16.890Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some customers using email security gateway like Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.",
+          "created_at": "2026-09-01T20:06:47.380Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T20:06:47.000Z",
+          "id": "8gt23ng17wnf",
+          "incident_id": "cczd80189gvc",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T01:33:42.131Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T07:16:16.890Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/cczd80189gvc",
+      "started_at": "2026-09-01T20:06:47.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T07:16:16.907Z"
+    }
+  },
+  {
+    "key": "cloudflare/1w42pbthkqjf",
+    "vendor": "cloudflare",
+    "native_id": "1w42pbthkqjf",
+    "title": "Network Route Leak in Palmas, Brazil",
+    "url": "https://www.cloudflarestatus.com/incidents/1w42pbthkqjf",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-09-01T21:47:09.019Z",
+    "resolved_at": "2026-09-01T22:05:44.265Z",
+    "duration_minutes": 18,
+    "components": [
+      "Palmas, Brazil - (PMW)"
+    ],
+    "updates": [
+      {
+        "native_id": "76zrc3t0h6jq",
+        "status": "monitoring",
+        "body": "One of Cloudflare's peers experienced a route leak, misdirecting some traffic to Palmas, Brazil. We are working to mitigate impact to Internet users in this region.",
+        "created_at": "2026-09-01T21:47:09.093Z"
+      },
+      {
+        "native_id": "nnhpck4v8btk",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-01T22:05:44.265Z"
+      }
+    ],
+    "first_seen_at": "2026-09-02T10:02:46.004166678Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-04-30T21:38:59.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "91blz4ztt7dm",
+          "id": "m50pw1dxjp51",
+          "name": "Palmas, Brazil - (PMW)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 60,
+          "showcase": false,
+          "start_date": "2024-04-30",
+          "status": "operational",
+          "updated_at": "2026-09-01T22:05:44.000Z"
+        }
+      ],
+      "created_at": "2026-09-01T21:47:09.000Z",
+      "id": "1w42pbthkqjf",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "m50pw1dxjp51",
+              "name": "Latin America \u0026 the Caribbean - Palmas, Brazil - (PMW)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-01T22:05:44.265Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T22:05:44.265Z",
+          "id": "nnhpck4v8btk",
+          "incident_id": "1w42pbthkqjf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T22:05:44.265Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m50pw1dxjp51",
+              "name": "Latin America \u0026 the Caribbean - Palmas, Brazil - (PMW)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "One of Cloudflare's peers experienced a route leak, misdirecting some traffic to Palmas, Brazil. We are working to mitigate impact to Internet users in this region.",
+          "created_at": "2026-09-01T21:47:09.093Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T21:47:09.093Z",
+          "id": "76zrc3t0h6jq",
+          "incident_id": "1w42pbthkqjf",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T21:47:09.093Z"
+        }
+      ],
+      "monitoring_at": "2026-09-01T21:47:09.093Z",
+      "name": "Network Route Leak in Palmas, Brazil",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-01T22:05:44.265Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/1w42pbthkqjf",
+      "started_at": "2026-09-01T21:47:09.019Z",
+      "status": "resolved",
+      "updated_at": "2026-09-01T22:05:44.282Z"
+    }
+  },
+  {
+    "key": "cloudflare/w6ng4jcxv7m1",
+    "vendor": "cloudflare",
+    "native_id": "w6ng4jcxv7m1",
+    "title": "Pipelines Creation Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/w6ng4jcxv7m1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-01T21:51:16.714Z",
+    "resolved_at": "2026-09-02T07:58:55.912Z",
+    "duration_minutes": 607,
+    "components": [
+      "Pipelines"
+    ],
+    "updates": [
+      {
+        "native_id": "56s8c419y6l7",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an issue with creating new Pipeline resources, including Pipelines, Streams, and Sinks. Existing Pipelines are unaffected. More updates to follow shortly.",
+        "created_at": "2026-09-01T21:51:16.798Z"
+      },
+      {
+        "native_id": "dnsbgk43r780",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-01T23:00:55.643Z"
+      },
+      {
+        "native_id": "h1szcqmc7ydv",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-01T23:46:44.411Z"
+      },
+      {
+        "native_id": "w8stgmwnmcyp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-02T07:58:55.912Z"
+      }
+    ],
+    "first_seen_at": "2026-09-02T10:02:46.004166678Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-08-11T12:16:30.000Z",
+          "description": "Managed streaming data pipeline service that ingests events, applies SQL transformations, and delivers them to R2 as Apache Iceberg tables or Parquet/JSON files.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "xr712w0ly7nr",
+          "name": "Pipelines",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 79,
+          "showcase": false,
+          "start_date": "2026-08-11",
+          "status": "operational",
+          "updated_at": "2026-09-02T07:58:55.000Z"
+        }
+      ],
+      "created_at": "2026-09-01T21:51:16.000Z",
+      "id": "w6ng4jcxv7m1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Cloudflare Sites and Services - Pipelines",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-02T07:58:55.912Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T07:58:55.912Z",
+          "id": "w8stgmwnmcyp",
+          "incident_id": "w6ng4jcxv7m1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T07:58:55.912Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Cloudflare Sites and Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-01T23:46:44.411Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T23:46:44.411Z",
+          "id": "h1szcqmc7ydv",
+          "incident_id": "w6ng4jcxv7m1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T23:46:44.411Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Cloudflare Sites and Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-01T23:00:55.643Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T23:00:55.643Z",
+          "id": "dnsbgk43r780",
+          "incident_id": "w6ng4jcxv7m1",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T23:00:55.643Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Cloudflare Sites and Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue with creating new Pipeline resources, including Pipelines, Streams, and Sinks. Existing Pipelines are unaffected. More updates to follow shortly.",
+          "created_at": "2026-09-01T21:51:16.798Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T21:51:16.798Z",
+          "id": "56s8c419y6l7",
+          "incident_id": "w6ng4jcxv7m1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T21:51:16.798Z"
+        }
+      ],
+      "monitoring_at": "2026-09-01T23:46:44.411Z",
+      "name": "Pipelines Creation Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T07:58:55.912Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/w6ng4jcxv7m1",
+      "started_at": "2026-09-01T21:51:16.714Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T07:58:55.929Z"
+    }
+  },
+  {
+    "key": "cloudflare/lmsfz6pcb65c",
+    "vendor": "cloudflare",
+    "native_id": "lmsfz6pcb65c",
+    "title": "Cloudflare Workers Issues in Narita",
+    "url": "https://www.cloudflarestatus.com/incidents/lmsfz6pcb65c",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-02T01:02:41.058Z",
+    "resolved_at": "2026-09-02T02:24:25.688Z",
+    "duration_minutes": 81,
+    "components": [
+      "Tokyo, Japan - (NRT)",
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "dc54ht3dm2mn",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an increased level of errors for customers running Workers scripts in Narita.\n\nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-09-02T01:02:41.145Z"
+      },
+      {
+        "native_id": "shq0qfzpplqn",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-02T02:10:36.672Z"
+      },
+      {
+        "native_id": "dyzzmfn7hk4j",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-02T02:24:25.688Z"
+      }
+    ],
+    "first_seen_at": "2026-09-02T10:02:46.004166678Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T21:42:49.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "77867vxkttgw",
+          "id": "rmjk2n758yzc",
+          "name": "Tokyo, Japan - (NRT)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 65,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-10T00:03:06.000Z"
+        },
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 115,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-02T02:24:25.000Z"
+        }
+      ],
+      "created_at": "2026-09-02T01:02:41.000Z",
+      "id": "lmsfz6pcb65c",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rmjk2n758yzc",
+              "name": "Asia - Tokyo, Japan - (NRT)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-02T02:24:25.688Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T02:24:25.688Z",
+          "id": "dyzzmfn7hk4j",
+          "incident_id": "lmsfz6pcb65c",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T02:24:25.688Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rmjk2n758yzc",
+              "name": "Asia - Tokyo, Japan - (NRT)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-02T02:10:36.672Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T02:10:36.672Z",
+          "id": "shq0qfzpplqn",
+          "incident_id": "lmsfz6pcb65c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T02:10:36.672Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "rmjk2n758yzc",
+              "name": "Asia - Tokyo, Japan - (NRT)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an increased level of errors for customers running Workers scripts in Narita.\n\nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-09-02T01:02:41.145Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T01:02:41.145Z",
+          "id": "dc54ht3dm2mn",
+          "incident_id": "lmsfz6pcb65c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T01:02:41.145Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Workers Issues in Narita",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T02:24:25.688Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/lmsfz6pcb65c",
+      "started_at": "2026-09-02T01:02:41.058Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T02:24:25.701Z"
+    }
+  },
+  {
+    "key": "cloudflare/vthcyk0986fd",
+    "vendor": "cloudflare",
+    "native_id": "vthcyk0986fd",
+    "title": "Increased latency in Taipei",
+    "url": "https://www.cloudflarestatus.com/incidents/vthcyk0986fd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-02T08:42:00Z",
+    "resolved_at": "2026-09-02T08:42:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "2k5d3p1wrwhz",
+        "status": "resolved",
+        "body": "Cloudflare is aware of, and has resolved, increased latency and packet loss in Taipei. \nThis lasted between 08:42 and 0915 UTC on the 2nd September.",
+        "created_at": "2026-09-02T09:59:38.743Z"
+      }
+    ],
+    "first_seen_at": "2026-09-02T10:02:46.004166678Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-02T08:42:00.000Z",
+      "id": "vthcyk0986fd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Cloudflare is aware of, and has resolved, increased latency and packet loss in Taipei. \nThis lasted between 08:42 and 0915 UTC on the 2nd September.",
+          "created_at": "2026-09-02T09:59:38.743Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T08:42:00.000Z",
+          "id": "2k5d3p1wrwhz",
+          "incident_id": "vthcyk0986fd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T09:59:38.743Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased latency in Taipei",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T08:42:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/vthcyk0986fd",
+      "started_at": "2026-09-02T08:42:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T10:00:27.993Z"
     }
   }
 ]
