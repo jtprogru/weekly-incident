@@ -2,96 +2,96 @@
   "week": "2026-W36",
   "from": "2026-08-31T00:00:00Z",
   "to": "2026-09-07T00:00:00Z",
-  "generated_at": "2026-09-02T10:02:46.004166678Z",
+  "generated_at": "2026-09-03T10:13:10.696217788Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 38,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-02T10:02:46.004166678Z",
+      "fetched_at": "2026-09-03T10:13:10.696217788Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -146,8 +146,8 @@
         "R2"
       ],
       "score": {
-        "value": 4239,
-        "duration_minutes": 2355,
+        "value": 6850.8,
+        "duration_minutes": 3806,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -348,6 +348,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/3qs7m80p13v2",
+      "vendor": "cloudflare",
+      "title": "Durable Objects increased errors in Western North America",
+      "url": "https://www.cloudflarestatus.com/incidents/3qs7m80p13v2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-02T13:43:26Z",
+      "resolved_at": "2026-09-02T15:51:23.581Z",
+      "duration_minutes": 127,
+      "ongoing": false,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 228.6,
+        "duration_minutes": 127,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "anthropic/r82kdk0m7vqh",
       "vendor": "anthropic",
       "title": "Degraded performance on claude.ai and Claude Code",
@@ -438,6 +460,74 @@
       "above_threshold": false
     },
     {
+      "key": "grafana/mdbl0xl76v3q",
+      "vendor": "grafana",
+      "title": "High Latency in prod-ap-south-1",
+      "url": "https://stspg.io/f6h7k3lq3v62",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-09-03T09:32:33.817Z",
+      "ongoing": true,
+      "components": [
+        "AWS India - prod-ap-south-1",
+        "AWS India - prod-ap-south-1",
+        "AWS India - prod-ap-south-1: Ingestion",
+        "AWS India - prod-ap-south-1: Ingestion"
+      ],
+      "score": {
+        "value": 160,
+        "duration_minutes": 40,
+        "components": 4,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "anthropic/ls6bn1x81m0w",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Sonnet 5",
+      "url": "https://stspg.io/9dgzwz3ymz42",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-02T21:17:58.696Z",
+      "resolved_at": "2026-09-02T21:44:28.095Z",
+      "duration_minutes": 26,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 156,
+        "duration_minutes": 26,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/vp04n6xtv51r",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 522 Errors  in Seattle (SEA)",
+      "url": "https://www.cloudflarestatus.com/incidents/vp04n6xtv51r",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T05:30:00Z",
+      "resolved_at": "2026-09-03T06:30:00Z",
+      "duration_minutes": 60,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 108,
+        "duration_minutes": 60,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "github/jk2dy5h9yp3m",
       "vendor": "github",
       "title": "Delays in commit processing",
@@ -476,6 +566,26 @@
       "score": {
         "value": 63,
         "duration_minutes": 42,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M1HN7GRR6FJNWFVX2F8QMA3R",
+      "vendor": "openai",
+      "title": "Elevated errors creating new accounts",
+      "url": "https://status.openai.com/incidents/01M1HN7GRR6FJNWFVX2F8QMA3R",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-02T18:13:48Z",
+      "resolved_at": "2026-09-02T18:45:12Z",
+      "duration_minutes": 31,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 46.5,
+        "duration_minutes": 31,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -568,6 +678,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/hv0y80k98t9b",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 5xx Errors in Hong Kong.",
+      "url": "https://www.cloudflarestatus.com/incidents/hv0y80k98t9b",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T09:21:19.178Z",
+      "resolved_at": "2026-09-03T09:36:02.061Z",
+      "duration_minutes": 14,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 25.2,
+        "duration_minutes": 14,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "datadog/6k7fhxz0q7k1",
       "vendor": "datadog",
       "title": "Delayed DBM Monitor Evaluation",
@@ -590,6 +722,26 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M1J99EDCYED5GP2W8GZ3N2NA",
+      "vendor": "openai",
+      "title": "ChatGPT Work Mode High Error Rates",
+      "url": "https://status.openai.com/incidents/01M1J99EDCYED5GP2W8GZ3N2NA",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-03T00:04:23Z",
+      "resolved_at": "2026-09-03T00:10:45Z",
+      "duration_minutes": 6,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 9,
+        "duration_minutes": 6,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/vthcyk0986fd",
       "vendor": "cloudflare",
       "title": "Increased latency in Taipei",
@@ -601,6 +753,48 @@
       "duration_minutes": 0,
       "ongoing": false,
       "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/486pg31dzsl1",
+      "vendor": "grafana",
+      "title": "Elevated Latency in Grafana Cloud Logs (prod-ap-south-1)",
+      "url": "https://stspg.io/39bjpwxypjqn",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-02T14:14:35.906Z",
+      "resolved_at": "2026-09-02T14:14:35.965Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/pzw3kysls711",
+      "vendor": "cloudflare",
+      "title": "Elevated number of R2 503 errors in Western North America region",
+      "url": "https://www.cloudflarestatus.com/incidents/pzw3kysls711",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T01:49:18.259Z",
+      "resolved_at": "2026-09-03T01:49:18.347Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
       "score": {
         "value": 0,
         "duration_minutes": 0,

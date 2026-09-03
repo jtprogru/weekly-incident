@@ -324,8 +324,8 @@
           "position": 81,
           "showcase": false,
           "start_date": "2022-07-05",
-          "status": "degraded_performance",
-          "updated_at": "2026-08-31T18:47:05.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-03T01:49:18.000Z"
         }
       ],
       "created_at": "2026-08-31T18:47:05.000Z",
@@ -874,8 +874,8 @@
           "position": 60,
           "showcase": false,
           "start_date": "2024-04-30",
-          "status": "operational",
-          "updated_at": "2026-09-01T22:05:44.000Z"
+          "status": "partial_outage",
+          "updated_at": "2026-09-02T17:22:04.000Z"
         }
       ],
       "created_at": "2026-09-01T21:47:09.000Z",
@@ -1302,6 +1302,393 @@
       "started_at": "2026-09-02T08:42:00.000Z",
       "status": "resolved",
       "updated_at": "2026-09-02T10:00:27.993Z"
+    }
+  },
+  {
+    "key": "cloudflare/3qs7m80p13v2",
+    "vendor": "cloudflare",
+    "native_id": "3qs7m80p13v2",
+    "title": "Durable Objects increased errors in Western North America",
+    "url": "https://www.cloudflarestatus.com/incidents/3qs7m80p13v2",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-02T13:43:26Z",
+    "resolved_at": "2026-09-02T15:51:23.581Z",
+    "duration_minutes": 127,
+    "components": [
+      "Durable Objects"
+    ],
+    "updates": [
+      {
+        "native_id": "y27z9b8x5c9h",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating, an increased number of errors for Durable Objects in Western North America.\nThe suspected cause is a reduction in routing capacity due to a fibre cut.  We are working to mitigate this issue, and update will follow.",
+        "created_at": "2026-09-02T14:47:26.781Z"
+      },
+      {
+        "native_id": "3lbvk0m3ndv6",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-02T14:48:27.864Z"
+      },
+      {
+        "native_id": "ynpbjzpr7hhw",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-02T15:35:24.747Z"
+      },
+      {
+        "native_id": "lf7pfqm7m3sm",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-02T15:51:23.581Z"
+      }
+    ],
+    "first_seen_at": "2026-09-03T10:13:10.696217788Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 46,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-09-02T15:51:23.000Z"
+        }
+      ],
+      "created_at": "2026-09-02T14:47:26.000Z",
+      "id": "3qs7m80p13v2",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-02T15:51:23.581Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T15:51:23.581Z",
+          "id": "lf7pfqm7m3sm",
+          "incident_id": "3qs7m80p13v2",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T15:51:23.581Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-02T15:35:24.747Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T15:35:24.747Z",
+          "id": "ynpbjzpr7hhw",
+          "incident_id": "3qs7m80p13v2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T15:35:24.747Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-02T14:48:27.864Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T14:48:27.864Z",
+          "id": "3lbvk0m3ndv6",
+          "incident_id": "3qs7m80p13v2",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T14:48:27.864Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating, an increased number of errors for Durable Objects in Western North America.\nThe suspected cause is a reduction in routing capacity due to a fibre cut.  We are working to mitigate this issue, and update will follow.",
+          "created_at": "2026-09-02T14:47:26.781Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T13:43:26.000Z",
+          "id": "y27z9b8x5c9h",
+          "incident_id": "3qs7m80p13v2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T19:06:03.893Z"
+        }
+      ],
+      "monitoring_at": "2026-09-02T15:35:24.747Z",
+      "name": "Durable Objects increased errors in Western North America",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T15:51:23.581Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3qs7m80p13v2",
+      "started_at": "2026-09-02T13:43:26.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T19:06:03.956Z"
+    }
+  },
+  {
+    "key": "cloudflare/pzw3kysls711",
+    "vendor": "cloudflare",
+    "native_id": "pzw3kysls711",
+    "title": "Elevated number of R2 503 errors in Western North America region",
+    "url": "https://www.cloudflarestatus.com/incidents/pzw3kysls711",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-03T01:49:18.259Z",
+    "resolved_at": "2026-09-03T01:49:18.347Z",
+    "duration_minutes": 0,
+    "components": [
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "ncn3kbvbhfpp",
+        "status": "resolved",
+        "body": "Between 1:04-1:28 UTC customers reaching Western North America region R2 buckets may have experienced an elevated number of 503 errors.",
+        "created_at": "2026-09-03T01:49:18.347Z"
+      }
+    ],
+    "first_seen_at": "2026-09-03T10:13:10.696217788Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 81,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-09-03T01:49:18.000Z"
+        }
+      ],
+      "created_at": "2026-09-03T01:49:18.259Z",
+      "id": "pzw3kysls711",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 1:04-1:28 UTC customers reaching Western North America region R2 buckets may have experienced an elevated number of 503 errors.",
+          "created_at": "2026-09-03T01:49:18.347Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T01:49:18.347Z",
+          "id": "ncn3kbvbhfpp",
+          "incident_id": "pzw3kysls711",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T01:49:18.347Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated number of R2 503 errors in Western North America region",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-03T01:49:18.347Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/pzw3kysls711",
+      "started_at": "2026-09-03T01:49:18.259Z",
+      "status": "resolved",
+      "updated_at": "2026-09-03T01:51:05.207Z"
+    }
+  },
+  {
+    "key": "cloudflare/vp04n6xtv51r",
+    "vendor": "cloudflare",
+    "native_id": "vp04n6xtv51r",
+    "title": "Increased HTTP 522 Errors  in Seattle (SEA)",
+    "url": "https://www.cloudflarestatus.com/incidents/vp04n6xtv51r",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-03T05:30:00Z",
+    "resolved_at": "2026-09-03T06:30:00Z",
+    "duration_minutes": 60,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "grr05d7z156b",
+        "status": "resolved",
+        "body": "Some customers may have observed 522s from 06:30UTC to 07:38 UTC for traffic landing in Seattle (SEA).  Impact windows may vary by customer.  The issue has been resolved",
+        "created_at": "2026-09-03T08:59:26.027Z"
+      }
+    ],
+    "first_seen_at": "2026-09-03T10:13:10.696217788Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-03T05:30:00.000Z",
+      "id": "vp04n6xtv51r",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Some customers may have observed 522s from 06:30UTC to 07:38 UTC for traffic landing in Seattle (SEA).  Impact windows may vary by customer.  The issue has been resolved",
+          "created_at": "2026-09-03T08:59:26.027Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T06:30:00.000Z",
+          "id": "grr05d7z156b",
+          "incident_id": "vp04n6xtv51r",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T09:21:12.270Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased HTTP 522 Errors  in Seattle (SEA)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-03T06:30:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/vp04n6xtv51r",
+      "started_at": "2026-09-03T05:30:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-03T09:21:12.342Z"
+    }
+  },
+  {
+    "key": "cloudflare/hv0y80k98t9b",
+    "vendor": "cloudflare",
+    "native_id": "hv0y80k98t9b",
+    "title": "Increased HTTP 5xx Errors in Hong Kong.",
+    "url": "https://www.cloudflarestatus.com/incidents/hv0y80k98t9b",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-03T09:21:19.178Z",
+    "resolved_at": "2026-09-03T09:36:02.061Z",
+    "duration_minutes": 14,
+    "components": [
+      "Network"
+    ],
+    "updates": [
+      {
+        "native_id": "jg742zp5mn4z",
+        "status": "monitoring",
+        "body": "We investigated an increased level of HTTP 5xx errors and latency affecting services in the Hong Kong region. The issue has now been resolved.",
+        "created_at": "2026-09-03T09:21:19.259Z"
+      },
+      {
+        "native_id": "h7n46n6k2zm3",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-03T09:36:02.061Z"
+      }
+    ],
+    "first_seen_at": "2026-09-03T10:13:10.696217788Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 73,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-09-03T09:36:02.000Z"
+        }
+      ],
+      "created_at": "2026-09-03T09:21:19.000Z",
+      "id": "hv0y80k98t9b",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-03T09:36:02.061Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T09:36:02.061Z",
+          "id": "h7n46n6k2zm3",
+          "incident_id": "hv0y80k98t9b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T09:36:02.061Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We investigated an increased level of HTTP 5xx errors and latency affecting services in the Hong Kong region. The issue has now been resolved.",
+          "created_at": "2026-09-03T09:21:19.259Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T09:21:19.259Z",
+          "id": "jg742zp5mn4z",
+          "incident_id": "hv0y80k98t9b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T09:21:19.259Z"
+        }
+      ],
+      "monitoring_at": "2026-09-03T09:21:19.259Z",
+      "name": "Increased HTTP 5xx Errors in Hong Kong.",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-03T09:36:02.061Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/hv0y80k98t9b",
+      "started_at": "2026-09-03T09:21:19.178Z",
+      "status": "resolved",
+      "updated_at": "2026-09-03T09:36:02.076Z"
     }
   }
 ]
