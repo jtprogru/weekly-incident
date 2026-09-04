@@ -2,101 +2,123 @@
   "week": "2026-W36",
   "from": "2026-08-31T00:00:00Z",
   "to": "2026-09-07T00:00:00Z",
-  "generated_at": "2026-09-03T10:13:10.696217788Z",
+  "generated_at": "2026-09-04T10:03:09.654477073Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
-      "incidents_seen": 4,
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "incidents_seen": 5,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 38,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-03T10:13:10.696217788Z",
+      "fetched_at": "2026-09-04T10:03:09.654477073Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/8x66bpk6p9kk",
+      "vendor": "cloudflare",
+      "title": "HTTP/3 issue affecting R2 custom domains",
+      "url": "https://www.cloudflarestatus.com/incidents/8x66bpk6p9kk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-31T18:47:05.841Z",
+      "resolved_at": "2026-09-03T19:32:54.106Z",
+      "duration_minutes": 4365,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 7857,
+        "duration_minutes": 4365,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "gcp/J5ia5t9p3g9Q5Wi7r8Ev",
       "vendor": "gcp",
@@ -130,26 +152,6 @@
         "duration_minutes": 248,
         "components": 15,
         "vendor_weight": 2
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/8x66bpk6p9kk",
-      "vendor": "cloudflare",
-      "title": "HTTP/3 issue affecting R2 custom domains",
-      "url": "https://www.cloudflarestatus.com/incidents/8x66bpk6p9kk",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-08-31T18:47:05Z",
-      "ongoing": true,
-      "components": [
-        "R2"
-      ],
-      "score": {
-        "value": 6850.8,
-        "duration_minutes": 3806,
-        "components": 1,
-        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -218,6 +220,56 @@
       "above_threshold": true
     },
     {
+      "key": "anthropic/461yvfrzpwtt",
+      "vendor": "anthropic",
+      "title": "Elevated errors for multiple models",
+      "url": "https://stspg.io/9xz4hhmd1jzn",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-03T13:26:04.191Z",
+      "resolved_at": "2026-09-03T16:23:12.052Z",
+      "duration_minutes": 177,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 1062,
+        "duration_minutes": 177,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/mdbl0xl76v3q",
+      "vendor": "grafana",
+      "title": "High Latency in prod-ap-south-1",
+      "url": "https://stspg.io/f6h7k3lq3v62",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-03T09:32:33.817Z",
+      "resolved_at": "2026-09-03T12:49:37.582Z",
+      "duration_minutes": 197,
+      "ongoing": false,
+      "components": [
+        "AWS India - prod-ap-south-1",
+        "AWS India - prod-ap-south-1",
+        "AWS India - prod-ap-south-1: Ingestion",
+        "AWS India - prod-ap-south-1: Ingestion"
+      ],
+      "score": {
+        "value": 788,
+        "duration_minutes": 197,
+        "components": 4,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/3mjmdcmm86nx",
       "vendor": "cloudflare",
       "title": "Requests from wrangler or other OAuth clients may experience elevated errors",
@@ -236,6 +288,53 @@
         "value": 745.2,
         "duration_minutes": 207,
         "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/lv9wsn3ksb79",
+      "vendor": "grafana",
+      "title": "Tempo and Mimir Read and Write Failures",
+      "url": "https://stspg.io/kw7xrpjrg134",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T22:13:28.286Z",
+      "resolved_at": "2026-09-04T00:55:47.579Z",
+      "duration_minutes": 162,
+      "ongoing": false,
+      "components": [
+        "AWS US West - prod-us-west-0: Querying",
+        "AWS US West - prod-us-west-0: Ingestion",
+        "AWS US West - prod-us-west-0: Querying",
+        "AWS US West - prod-us-west-0: Ingestion"
+      ],
+      "score": {
+        "value": 648,
+        "duration_minutes": 162,
+        "components": 4,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/48wc4y9p1vym",
+      "vendor": "cloudflare",
+      "title": "Workers Builds elevated queue times",
+      "url": "https://www.cloudflarestatus.com/incidents/48wc4y9p1vym",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T23:35:48.092Z",
+      "resolved_at": "2026-09-04T04:09:34.228Z",
+      "duration_minutes": 273,
+      "ongoing": false,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 491.40000000000003,
+        "duration_minutes": 273,
+        "components": 1,
         "vendor_weight": 1.8
       },
       "above_threshold": true
@@ -305,6 +404,28 @@
       "above_threshold": true
     },
     {
+      "key": "datadog/4zd1rbp4pbt5",
+      "vendor": "datadog",
+      "title": "Delayed CICD Optimization, Code Coverage, Code Security, and DORA data",
+      "url": "https://stspg.io/zstf1zx7hfy3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T17:20:26.211Z",
+      "resolved_at": "2026-09-03T23:01:22.899Z",
+      "duration_minutes": 340,
+      "ongoing": false,
+      "components": [
+        "CI Visibility"
+      ],
+      "score": {
+        "value": 340,
+        "duration_minutes": 340,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/328b9jvhlwwf",
       "vendor": "grafana",
       "title": "Investigating issues in US Central (prod-us-central-0, prod-us-central-5)",
@@ -346,6 +467,68 @@
         "vendor_weight": 1.8
       },
       "above_threshold": false
+    },
+    {
+      "key": "aws/151d07b0bd5e8d08",
+      "vendor": "aws",
+      "title": "Increased API Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-09-03T21:49:58Z",
+      "resolved_at": "2026-09-04T00:07:54Z",
+      "duration_minutes": 137,
+      "ongoing": false,
+      "components": [
+        "multipleservices-us-west-2"
+      ],
+      "score": {
+        "value": 274,
+        "duration_minutes": 137,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M1NKFZH5EEYEREC54HNAHY35",
+      "vendor": "openai",
+      "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
+      "url": "https://status.openai.com/incidents/01M1NKFZH5EEYEREC54HNAHY35",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-04T07:00:26Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 273,
+        "duration_minutes": 182,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/ktdr5t0xwnhp",
+      "vendor": "github",
+      "title": "Incident with Grok Copilot AI Model Provider",
+      "url": "https://stspg.io/p217h6l54208",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-03T14:17:27.478Z",
+      "resolved_at": "2026-09-03T17:11:47.86Z",
+      "duration_minutes": 174,
+      "ongoing": false,
+      "components": [
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 261,
+        "duration_minutes": 174,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/3qs7m80p13v2",
@@ -460,25 +643,22 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/mdbl0xl76v3q",
-      "vendor": "grafana",
-      "title": "High Latency in prod-ap-south-1",
-      "url": "https://stspg.io/f6h7k3lq3v62",
+      "key": "openai/01M1KWEDH417T2CF44YYHZDFCR",
+      "vendor": "openai",
+      "title": "Elevated errors across ChatGPT and Codex",
+      "url": "https://status.openai.com/incidents/01M1KWEDH417T2CF44YYHZDFCR",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-09-03T09:32:33.817Z",
-      "ongoing": true,
-      "components": [
-        "AWS India - prod-ap-south-1",
-        "AWS India - prod-ap-south-1",
-        "AWS India - prod-ap-south-1: Ingestion",
-        "AWS India - prod-ap-south-1: Ingestion"
-      ],
+      "status": "resolved",
+      "started_at": "2026-09-03T14:58:23Z",
+      "resolved_at": "2026-09-03T16:55:49Z",
+      "duration_minutes": 117,
+      "ongoing": false,
+      "components": [],
       "score": {
-        "value": 160,
-        "duration_minutes": 40,
-        "components": 4,
-        "vendor_weight": 1
+        "value": 175.5,
+        "duration_minutes": 117,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -528,6 +708,31 @@
       "above_threshold": false
     },
     {
+      "key": "anthropic/288w7p4hk1l1",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Sonnet 5",
+      "url": "https://stspg.io/jt14jk41pjsf",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-03T12:37:31.757Z",
+      "resolved_at": "2026-09-03T12:56:26.632Z",
+      "duration_minutes": 18,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 108,
+        "duration_minutes": 18,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/jk2dy5h9yp3m",
       "vendor": "github",
       "title": "Delays in commit processing",
@@ -568,6 +773,28 @@
         "duration_minutes": 42,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/y27rg9kcyryn",
+      "vendor": "cloudflare",
+      "title": "Elevated number of R2 503 errors in Western North America region",
+      "url": "https://www.cloudflarestatus.com/incidents/y27rg9kcyryn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T02:58:25.302Z",
+      "resolved_at": "2026-09-04T03:28:06.967Z",
+      "duration_minutes": 29,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 52.2,
+        "duration_minutes": 29,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
@@ -795,6 +1022,26 @@
       "components": [
         "R2"
       ],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/bgbz898hh98g",
+      "vendor": "cloudflare",
+      "title": "Elevated connectivity degradation in NRT",
+      "url": "https://www.cloudflarestatus.com/incidents/bgbz898hh98g",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T02:48:37Z",
+      "resolved_at": "2026-09-04T02:48:37Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
       "score": {
         "value": 0,
         "duration_minutes": 0,
