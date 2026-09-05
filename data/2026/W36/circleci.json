@@ -1,0 +1,157 @@
+[
+  {
+    "key": "circleci/wl4yqd96zl2h",
+    "vendor": "circleci",
+    "native_id": "wl4yqd96zl2h",
+    "title": "macOS Job Delays",
+    "url": "https://stspg.io/l8rtj1qhr625",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-04T15:16:02.191Z",
+    "resolved_at": "2026-09-04T16:55:41.439Z",
+    "duration_minutes": 99,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "g8wvc7wrw47w",
+        "status": "investigating",
+        "body": "We have detected network issues affecting our Mac infrastructure. We're investigating and will provide updates shortly. Customers may experience queuing during this time.",
+        "created_at": "2026-09-04T15:16:02.257Z"
+      },
+      {
+        "native_id": "hhp4rjmw9xl9",
+        "status": "identified",
+        "body": "We've identified the networking issue with our Mac infrastructure provider, and are working with them to resolve the issue. We're starting to see some recovery, but we expect customers may still see some queueing. We'll update again shortly.",
+        "created_at": "2026-09-04T15:43:59.766Z"
+      },
+      {
+        "native_id": "sgdjwk3vqgss",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has applied a fix to this networking issue and we're seeing queue times return to normal. We're going to continue keeping an eye on things for a little while longer. We'll update again shortly.",
+        "created_at": "2026-09-04T16:19:36.595Z"
+      },
+      {
+        "native_id": "t0ff6bj9sfmt",
+        "status": "resolved",
+        "body": "We've seen no further impact to queue times and everything has returned to normal. We appreciate your patience while we worked to resolve and monitor this issue.",
+        "created_at": "2026-09-04T16:55:41.439Z"
+      }
+    ],
+    "first_seen_at": "2026-09-05T09:32:31.960686983Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-04T16:19:36.564Z"
+        }
+      ],
+      "created_at": "2026-09-04T15:16:02.197Z",
+      "id": "wl4yqd96zl2h",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We've seen no further impact to queue times and everything has returned to normal. We appreciate your patience while we worked to resolve and monitor this issue.",
+          "created_at": "2026-09-04T16:55:41.439Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T16:55:41.439Z",
+          "id": "t0ff6bj9sfmt",
+          "incident_id": "wl4yqd96zl2h",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T16:55:41.439Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has applied a fix to this networking issue and we're seeing queue times return to normal. We're going to continue keeping an eye on things for a little while longer. We'll update again shortly.",
+          "created_at": "2026-09-04T16:19:36.595Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T16:19:36.595Z",
+          "id": "sgdjwk3vqgss",
+          "incident_id": "wl4yqd96zl2h",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T16:19:36.595Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified the networking issue with our Mac infrastructure provider, and are working with them to resolve the issue. We're starting to see some recovery, but we expect customers may still see some queueing. We'll update again shortly.",
+          "created_at": "2026-09-04T15:43:59.766Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T15:43:59.000Z",
+          "id": "hhp4rjmw9xl9",
+          "incident_id": "wl4yqd96zl2h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T15:45:19.431Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have detected network issues affecting our Mac infrastructure. We're investigating and will provide updates shortly. Customers may experience queuing during this time.",
+          "created_at": "2026-09-04T15:16:02.257Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T15:16:02.257Z",
+          "id": "g8wvc7wrw47w",
+          "incident_id": "wl4yqd96zl2h",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T15:16:02.257Z"
+        }
+      ],
+      "monitoring_at": "2026-09-04T16:19:36.595Z",
+      "name": "macOS Job Delays",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-04T16:55:41.439Z",
+      "shortlink": "https://stspg.io/l8rtj1qhr625",
+      "started_at": "2026-09-04T15:16:02.191Z",
+      "status": "resolved",
+      "updated_at": "2026-09-04T16:55:41.455Z"
+    }
+  }
+]

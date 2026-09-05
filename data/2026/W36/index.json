@@ -2,96 +2,96 @@
   "week": "2026-W36",
   "from": "2026-08-31T00:00:00Z",
   "to": "2026-09-07T00:00:00Z",
-  "generated_at": "2026-09-04T10:03:09.654477073Z",
+  "generated_at": "2026-09-05T09:32:31.960686983Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
-      "incidents_seen": 5,
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
+      "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
-      "incidents_seen": 38,
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
+      "incidents_seen": 37,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-04T10:03:09.654477073Z",
+      "fetched_at": "2026-09-05T09:32:31.960686983Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -152,6 +152,36 @@
         "duration_minutes": 248,
         "components": 15,
         "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/k5c91vq67f8f",
+      "vendor": "grafana",
+      "title": "US Central Region Instability",
+      "url": "https://stspg.io/b3b4ppnkx23p",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T16:45:57.426Z",
+      "resolved_at": "2026-09-04T23:00:28.417Z",
+      "duration_minutes": 374,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-0: Querying",
+        "GCP US Central - prod-us-central-0: Ingestion",
+        "GCP US Central - prod-us-central-5: Querying",
+        "GCP US Central - prod-us-central-5: Ingestion",
+        "GCP US Central - prod-us-central-0: Querying",
+        "GCP US Central - prod-us-central-0: Ingestion",
+        "GCP US Central - prod-us-central-0: Metrics Generator",
+        "GCP US Central - prod-us-central-5: Querying",
+        "GCP US Central - prod-us-central-5: Ingestion"
+      ],
+      "score": {
+        "value": 3366,
+        "duration_minutes": 374,
+        "components": 9,
+        "vendor_weight": 1
       },
       "above_threshold": true
     },
@@ -293,6 +323,30 @@
       "above_threshold": true
     },
     {
+      "key": "grafana/w1c8md3mnthx",
+      "vendor": "grafana",
+      "title": "Degradation of Hosted Grafana in US Central Region",
+      "url": "https://stspg.io/7n6x5qw9x9d5",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-04T17:03:17.221Z",
+      "resolved_at": "2026-09-04T20:42:21.213Z",
+      "duration_minutes": 219,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-3",
+        "GCP US Central - prod-us-central-4"
+      ],
+      "score": {
+        "value": 657,
+        "duration_minutes": 219,
+        "components": 3,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/lv9wsn3ksb79",
       "vendor": "grafana",
       "title": "Tempo and Mimir Read and Write Failures",
@@ -382,6 +436,51 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/ftvf8c3m4mv5",
+      "vendor": "cloudflare",
+      "title": "Elevated number of R2 503 errors in Eastern North America region",
+      "url": "https://www.cloudflarestatus.com/incidents/ftvf8c3m4mv5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T21:10:29.339Z",
+      "resolved_at": "2026-09-05T00:42:07.623Z",
+      "duration_minutes": 211,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 379.8,
+        "duration_minutes": 211,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/5847d1tvtkdd",
+      "vendor": "grafana",
+      "title": "Alert rule creation, deletion, and update degradation in prod-us-east-2",
+      "url": "https://stspg.io/8gw4nt4mmp09",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T13:36:42.283Z",
+      "resolved_at": "2026-09-04T16:32:48.288Z",
+      "duration_minutes": 176,
+      "ongoing": false,
+      "components": [
+        "AWS US East - prod-us-east-0: Alertmanager and Rules Configuration API",
+        "AWS US East - prod-us-east-0: Alertmanager"
+      ],
+      "score": {
+        "value": 352,
+        "duration_minutes": 176,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/fcdl2yb3q7qw",
       "vendor": "cloudflare",
       "title": "Cloudflare Access bypass IP service experiencing availability issues",
@@ -422,6 +521,26 @@
         "duration_minutes": 340,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M1NKFZH5EEYEREC54HNAHY35",
+      "vendor": "openai",
+      "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
+      "url": "https://status.openai.com/incidents/01M1NKFZH5EEYEREC54HNAHY35",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T07:00:26Z",
+      "resolved_at": "2026-09-04T10:46:54Z",
+      "duration_minutes": 226,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 339,
+        "duration_minutes": 226,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -491,24 +610,6 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M1NKFZH5EEYEREC54HNAHY35",
-      "vendor": "openai",
-      "title": "Users in APAC region may face increased error in ChatGPT, Work, image generation, file upload, Voice, and Codex Cloud",
-      "url": "https://status.openai.com/incidents/01M1NKFZH5EEYEREC54HNAHY35",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-09-04T07:00:26Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 273,
-        "duration_minutes": 182,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
       "key": "github/ktdr5t0xwnhp",
       "vendor": "github",
       "title": "Incident with Grok Copilot AI Model Provider",
@@ -543,6 +644,28 @@
       "ongoing": false,
       "components": [
         "Durable Objects"
+      ],
+      "score": {
+        "value": 228.6,
+        "duration_minutes": 127,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/ff0yvx1d6tby",
+      "vendor": "cloudflare",
+      "title": "Cache Purging Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/ff0yvx1d6tby",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T14:51:45.08Z",
+      "resolved_at": "2026-09-04T16:58:46.511Z",
+      "duration_minutes": 127,
+      "ongoing": false,
+      "components": [
+        "CDN Cache Purge"
       ],
       "score": {
         "value": 228.6,
@@ -663,6 +786,26 @@
       "above_threshold": false
     },
     {
+      "key": "github/zw1hbx2yyhvr",
+      "vendor": "github",
+      "title": "Disruption with Copilot Code Review",
+      "url": "https://stspg.io/dddfhld6fj0z",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-04T20:39:03.195Z",
+      "resolved_at": "2026-09-04T22:26:46.74Z",
+      "duration_minutes": 107,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 160.5,
+        "duration_minutes": 107,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "anthropic/ls6bn1x81m0w",
       "vendor": "anthropic",
       "title": "Elevated errors for Claude Sonnet 5",
@@ -731,6 +874,28 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "circleci/wl4yqd96zl2h",
+      "vendor": "circleci",
+      "title": "macOS Job Delays",
+      "url": "https://stspg.io/l8rtj1qhr625",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T15:16:02.191Z",
+      "resolved_at": "2026-09-04T16:55:41.439Z",
+      "duration_minutes": 99,
+      "ongoing": false,
+      "components": [
+        "macOS Jobs"
+      ],
+      "score": {
+        "value": 99,
+        "duration_minutes": 99,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
     },
     {
       "key": "github/jk2dy5h9yp3m",
@@ -883,6 +1048,26 @@
       "above_threshold": false
     },
     {
+      "key": "github/r05vk75c594j",
+      "vendor": "github",
+      "title": "Degradation in repos contents API",
+      "url": "https://stspg.io/vhmsw2rhdcgv",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T22:02:15.783Z",
+      "resolved_at": "2026-09-04T22:23:34.887Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 31.5,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "anthropic/nr3h7bw8b3k3",
       "vendor": "anthropic",
       "title": "Degraded performance on Claude for Microsoft Office 365",
@@ -921,6 +1106,28 @@
       "score": {
         "value": 25.2,
         "duration_minutes": 14,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/6ztvhhp2ll11",
+      "vendor": "cloudflare",
+      "title": "Zero Trust Dashboard - Posture Check Visibility Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/6ztvhhp2ll11",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-04T19:55:49.368Z",
+      "resolved_at": "2026-09-04T20:07:56.872Z",
+      "duration_minutes": 12,
+      "ongoing": false,
+      "components": [
+        "Zero Trust Dashboard"
+      ],
+      "score": {
+        "value": 21.6,
+        "duration_minutes": 12,
         "components": 1,
         "vendor_weight": 1.8
       },
