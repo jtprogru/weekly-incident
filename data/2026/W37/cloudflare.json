@@ -161,5 +161,761 @@
       "status": "resolved",
       "updated_at": "2026-09-07T07:35:46.348Z"
     }
+  },
+  {
+    "key": "cloudflare/pgn7y7hgd25l",
+    "vendor": "cloudflare",
+    "native_id": "pgn7y7hgd25l",
+    "title": "Performance degradation affecting TURN service",
+    "url": "https://www.cloudflarestatus.com/incidents/pgn7y7hgd25l",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-07T13:02:52.809Z",
+    "resolved_at": "2026-09-07T13:52:48.345Z",
+    "duration_minutes": 49,
+    "components": [
+      "Realtime TURN Service"
+    ],
+    "updates": [
+      {
+        "native_id": "695bdqzf58w4",
+        "status": "investigating",
+        "body": "We are investigating reports of performance degradation affecting our TURN service since August 22nd. Currently, a significant portion of traffic is being relayed via TCP rather than the expected UDP. Customers using Chrome browsers or other services relying on WebRTC may experience increased latency and connection lag. Our engineering team has identified the cause and a mitigation is currently being deployed. We are monitoring the rollout to ensure performance returns to expected levels.",
+        "created_at": "2026-09-07T13:02:52.918Z"
+      },
+      {
+        "native_id": "vl376g38g7vg",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-07T13:04:29.654Z"
+      },
+      {
+        "native_id": "2c59yx6gc93z",
+        "status": "resolved",
+        "body": "A fix was deployed for this issue and the impact is over for any new connections on Realtime TURN service.\n\nExisting connection will continue to use TCP until the customers clients end and restart their connections.",
+        "created_at": "2026-09-07T13:52:48.345Z"
+      }
+    ],
+    "first_seen_at": "2026-09-08T10:10:33.252315998Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-16T17:07:34.000Z",
+          "description": "Separately from the SFU, Realtime offers a managed TURN service. TURN acts as a relay point for traffic between WebRTC clients like the browser and SFUs, particularly in scenarios where direct communication is obstructed by NATs or firewalls. TURN maintains an allocation of public IP addresses and ports for each session, ensuring connectivity even in restrictive network environments.\r\n\r\nUsing Cloudflare Realtime TURN service is available free of charge when used together with the Realtime SFU. Otherwise, it costs $0.05/real-time GB outbound from Cloudflare to the TURN client.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5s616lljfwdz",
+          "name": "Realtime TURN Service",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 87,
+          "showcase": false,
+          "start_date": "2025-05-16",
+          "status": "operational",
+          "updated_at": "2026-09-07T13:52:48.000Z"
+        }
+      ],
+      "created_at": "2026-09-07T13:02:52.000Z",
+      "id": "pgn7y7hgd25l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix was deployed for this issue and the impact is over for any new connections on Realtime TURN service.\n\nExisting connection will continue to use TCP until the customers clients end and restart their connections.",
+          "created_at": "2026-09-07T13:52:48.345Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:52:48.345Z",
+          "id": "2c59yx6gc93z",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:52:48.345Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-07T13:04:29.654Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:04:29.654Z",
+          "id": "vl376g38g7vg",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:04:29.654Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of performance degradation affecting our TURN service since August 22nd. Currently, a significant portion of traffic is being relayed via TCP rather than the expected UDP. Customers using Chrome browsers or other services relying on WebRTC may experience increased latency and connection lag. Our engineering team has identified the cause and a mitigation is currently being deployed. We are monitoring the rollout to ensure performance returns to expected levels.",
+          "created_at": "2026-09-07T13:02:52.918Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:02:52.918Z",
+          "id": "695bdqzf58w4",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:02:52.918Z"
+        }
+      ],
+      "monitoring_at": "2026-09-07T13:04:29.654Z",
+      "name": "Performance degradation affecting TURN service",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-07T13:52:48.345Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/pgn7y7hgd25l",
+      "started_at": "2026-09-07T13:02:52.809Z",
+      "status": "resolved",
+      "updated_at": "2026-09-07T13:52:48.361Z"
+    }
+  },
+  {
+    "key": "cloudflare/z16209cfb1xv",
+    "vendor": "cloudflare",
+    "native_id": "z16209cfb1xv",
+    "title": "Browser Isolation Session Initialization Failures",
+    "url": "https://www.cloudflarestatus.com/incidents/z16209cfb1xv",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-07T14:25:18.599Z",
+    "resolved_at": "2026-09-07T19:14:29.265Z",
+    "duration_minutes": 289,
+    "components": [
+      "Browser Isolation",
+      "Gateway"
+    ],
+    "updates": [
+      {
+        "native_id": "vqjjw7sktt5h",
+        "status": "investigating",
+        "body": "We are investigating reports of customers encountering a white screen when attempting to access websites behind Browser Isolation. This is caused by Browser Isolation session initialization failing to complete. Our engineering team is actively working to identify and resolve the root cause.",
+        "created_at": "2026-09-07T14:25:18.728Z"
+      },
+      {
+        "native_id": "smj6xpxvmhvk",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-07T14:59:31.621Z"
+      },
+      {
+        "native_id": "wnxk5bsxx4dt",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.\n\nCustomers still experiencing the issue may attempt to close all their Browser Isolation tabs for 2 minutes before starting a new session.",
+        "created_at": "2026-09-07T15:11:43.791Z"
+      },
+      {
+        "native_id": "4zcz5yyb5jr8",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-07T19:14:29.265Z"
+      }
+    ],
+    "first_seen_at": "2026-09-08T10:10:33.252315998Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-08-10T19:01:26.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "q0dfbn0p6hyt",
+          "name": "Browser Isolation",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2021-08-10",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-07T14:25:18.000Z"
+        },
+        {
+          "created_at": "2023-01-10T09:28:36.000Z",
+          "description": "Cloudflare’s secure web gateway keeps your data safe from malware, ransomware, phishing, command \u0026 control, Shadow IT, and other Internet risks over all ports and protocols. Log every user interaction with rich details.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "gyx2yygg7lmd",
+          "name": "Gateway",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 53,
+          "showcase": false,
+          "start_date": "2023-01-10",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-07T14:25:18.000Z"
+        }
+      ],
+      "created_at": "2026-09-07T14:25:18.000Z",
+      "id": "z16209cfb1xv",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-07T19:14:29.265Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T19:14:29.265Z",
+          "id": "4zcz5yyb5jr8",
+          "incident_id": "z16209cfb1xv",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T19:14:29.265Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "q0dfbn0p6hyt",
+              "name": "Cloudflare Sites and Services - Browser Isolation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "gyx2yygg7lmd",
+              "name": "Cloudflare Sites and Services - Gateway",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.\n\nCustomers still experiencing the issue may attempt to close all their Browser Isolation tabs for 2 minutes before starting a new session.",
+          "created_at": "2026-09-07T15:11:43.791Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T15:11:43.000Z",
+          "id": "wnxk5bsxx4dt",
+          "incident_id": "z16209cfb1xv",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T15:14:40.440Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "q0dfbn0p6hyt",
+              "name": "Cloudflare Sites and Services - Browser Isolation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "gyx2yygg7lmd",
+              "name": "Cloudflare Sites and Services - Gateway",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-07T14:59:31.621Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T14:59:31.621Z",
+          "id": "smj6xpxvmhvk",
+          "incident_id": "z16209cfb1xv",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T14:59:31.621Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "q0dfbn0p6hyt",
+              "name": "Cloudflare Sites and Services - Browser Isolation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "gyx2yygg7lmd",
+              "name": "Cloudflare Sites and Services - Gateway",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of customers encountering a white screen when attempting to access websites behind Browser Isolation. This is caused by Browser Isolation session initialization failing to complete. Our engineering team is actively working to identify and resolve the root cause.",
+          "created_at": "2026-09-07T14:25:18.728Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T14:25:18.728Z",
+          "id": "vqjjw7sktt5h",
+          "incident_id": "z16209cfb1xv",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T14:25:18.728Z"
+        }
+      ],
+      "monitoring_at": "2026-09-07T15:11:43.000Z",
+      "name": "Browser Isolation Session Initialization Failures",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-07T19:14:29.265Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/z16209cfb1xv",
+      "started_at": "2026-09-07T14:25:18.599Z",
+      "status": "resolved",
+      "updated_at": "2026-09-07T19:14:29.286Z"
+    }
+  },
+  {
+    "key": "cloudflare/kjfs3vqkxkgs",
+    "vendor": "cloudflare",
+    "native_id": "kjfs3vqkxkgs",
+    "title": "Issues rendering route configuration table in Networking \u003e Routes UI",
+    "url": "https://www.cloudflarestatus.com/incidents/kjfs3vqkxkgs",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-07T15:32:27Z",
+    "resolved_at": "2026-09-07T17:12:30.142Z",
+    "duration_minutes": 100,
+    "components": [
+      "Dashboard"
+    ],
+    "updates": [
+      {
+        "native_id": "trz19wmmshrz",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an issue within the Dashboard UI (Networking \u003e Routes) where the route configuration table is failing to display destination IP addresses/hostnames, connector names, and route descriptions correctly.\n\nActual packet routing, network connectivity across the Cloudflare edge, and API-based route management remain fully operational and unaffected.\n\nOur engineering team is actively working on resolving the underlying rendering issue, and we will provide further updates as soon as more information is available.",
+        "created_at": "2026-09-07T15:32:27.81Z"
+      },
+      {
+        "native_id": "51d296234wkm",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-09-07T15:52:56.892Z"
+      },
+      {
+        "native_id": "2x2g5f02dxtj",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-07T16:11:35.293Z"
+      },
+      {
+        "native_id": "mcv94y18hm6g",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-07T16:46:13.547Z"
+      },
+      {
+        "native_id": "0ctvcn6qb692",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-07T17:12:30.142Z"
+      }
+    ],
+    "first_seen_at": "2026-09-08T10:10:33.252315998Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 39,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-09-07T15:52:56.000Z"
+        }
+      ],
+      "created_at": "2026-09-07T15:32:27.000Z",
+      "id": "kjfs3vqkxkgs",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-07T17:12:30.142Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T17:12:30.142Z",
+          "id": "0ctvcn6qb692",
+          "incident_id": "kjfs3vqkxkgs",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T17:12:30.142Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-07T16:46:13.547Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T16:46:13.547Z",
+          "id": "mcv94y18hm6g",
+          "incident_id": "kjfs3vqkxkgs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T16:46:13.547Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-07T16:11:35.293Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T16:11:35.293Z",
+          "id": "2x2g5f02dxtj",
+          "incident_id": "kjfs3vqkxkgs",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T16:11:35.293Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-09-07T15:52:56.892Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T15:52:56.892Z",
+          "id": "51d296234wkm",
+          "incident_id": "kjfs3vqkxkgs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T15:52:56.892Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Cloudflare is investigating an issue within the Dashboard UI (Networking \u003e Routes) where the route configuration table is failing to display destination IP addresses/hostnames, connector names, and route descriptions correctly.\n\nActual packet routing, network connectivity across the Cloudflare edge, and API-based route management remain fully operational and unaffected.\n\nOur engineering team is actively working on resolving the underlying rendering issue, and we will provide further updates as soon as more information is available.",
+          "created_at": "2026-09-07T15:32:27.810Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T15:32:27.000Z",
+          "id": "trz19wmmshrz",
+          "incident_id": "kjfs3vqkxkgs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T15:52:36.355Z"
+        }
+      ],
+      "monitoring_at": "2026-09-07T16:46:13.547Z",
+      "name": "Issues rendering route configuration table in Networking \u003e Routes UI",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-07T17:12:30.142Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/kjfs3vqkxkgs",
+      "started_at": "2026-09-07T15:32:27.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-07T17:12:30.163Z"
+    }
+  },
+  {
+    "key": "cloudflare/pjr4m9q1xxb1",
+    "vendor": "cloudflare",
+    "native_id": "pjr4m9q1xxb1",
+    "title": "Cloudflare Account Member Invite Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/pjr4m9q1xxb1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-08T00:35:28.617Z",
+    "resolved_at": "2026-09-08T01:42:38.512Z",
+    "duration_minutes": 67,
+    "components": [
+      "Account Management"
+    ],
+    "updates": [
+      {
+        "native_id": "j9h8b7wlp4mh",
+        "status": "investigating",
+        "body": "Cloudflare customers may experience an issue when invited to a new account. An error message is displayed, \"Invaild redirect_url\". \n\nA workaround can be used:\n* Invited members create an account directly from the dashboard (not using the email link)\n* Admin resends invitation\n* Invited member clicks new link and signs into their Cloudflare account\n* Accepts invitation to join without issue\n\nWe are continuing to investigate this issue.",
+        "created_at": "2026-09-08T00:35:28.683Z"
+      },
+      {
+        "native_id": "k08tpqwyt306",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-08T01:32:50.249Z"
+      },
+      {
+        "native_id": "2cv36b53620k",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-08T01:42:38.512Z"
+      }
+    ],
+    "first_seen_at": "2026-09-08T10:10:33.252315998Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-07T10:20:34.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "wq0b65msmwpb",
+          "name": "Account Management",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2026-07-07",
+          "status": "operational",
+          "updated_at": "2026-08-29T10:48:32.000Z"
+        }
+      ],
+      "created_at": "2026-09-08T00:35:28.000Z",
+      "id": "pjr4m9q1xxb1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "wq0b65msmwpb",
+              "name": "Cloudflare Sites and Services - Account Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-08T01:42:38.512Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T01:42:38.512Z",
+          "id": "2cv36b53620k",
+          "incident_id": "pjr4m9q1xxb1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T01:42:38.512Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wq0b65msmwpb",
+              "name": "Cloudflare Sites and Services - Account Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-08T01:32:50.249Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T01:32:50.249Z",
+          "id": "k08tpqwyt306",
+          "incident_id": "pjr4m9q1xxb1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T01:32:50.249Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wq0b65msmwpb",
+              "name": "Cloudflare Sites and Services - Account Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare customers may experience an issue when invited to a new account. An error message is displayed, \"Invaild redirect_url\". \n\nA workaround can be used:\n* Invited members create an account directly from the dashboard (not using the email link)\n* Admin resends invitation\n* Invited member clicks new link and signs into their Cloudflare account\n* Accepts invitation to join without issue\n\nWe are continuing to investigate this issue.",
+          "created_at": "2026-09-08T00:35:28.683Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T00:35:28.683Z",
+          "id": "j9h8b7wlp4mh",
+          "incident_id": "pjr4m9q1xxb1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T00:35:28.683Z"
+        }
+      ],
+      "monitoring_at": "2026-09-08T01:32:50.249Z",
+      "name": "Cloudflare Account Member Invite Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-08T01:42:38.512Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/pjr4m9q1xxb1",
+      "started_at": "2026-09-08T00:35:28.617Z",
+      "status": "resolved",
+      "updated_at": "2026-09-08T01:42:38.530Z"
+    }
+  },
+  {
+    "key": "cloudflare/qz292kvy220g",
+    "vendor": "cloudflare",
+    "native_id": "qz292kvy220g",
+    "title": "Cache Reserve Issue in Paris",
+    "url": "https://www.cloudflarestatus.com/incidents/qz292kvy220g",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-08T03:25:59.327Z",
+    "resolved_at": "2026-09-08T05:22:41.128Z",
+    "duration_minutes": 116,
+    "components": [
+      "Cache Reserve",
+      "Paris, France - (CDG)"
+    ],
+    "updates": [
+      {
+        "native_id": "fkxdtnj67ggs",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an issue with Cache Reserve errors in Paris (CDG). Customers may see an elevated request volume to origin servers in the forementioned region.\n\nWe are working to analyse and mitigate this problem.  More updates to follow shortly.",
+        "created_at": "2026-09-08T03:25:59.425Z"
+      },
+      {
+        "native_id": "zgcnngx956f5",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-08T04:42:58.905Z"
+      },
+      {
+        "native_id": "8dlx9ls051d1",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-08T05:22:41.128Z"
+      }
+    ],
+    "first_seen_at": "2026-09-08T10:10:33.252315998Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T16:52:52.000Z",
+          "description": "Cache Reserve is a large, persistent data store implemented on top of R2. By pushing a single button in the dashboard, your website’s cacheable content will be written to Cache Reserve.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3q1jnbdbn845",
+          "name": "Cache Reserve",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 24,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-09-08T05:22:41.000Z"
+        },
+        {
+          "created_at": "2014-10-27T20:36:46.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "zqxhg7y54vy8",
+          "id": "w1br383gmlwj",
+          "name": "Paris, France - (CDG)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 37,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-03-03T10:46:33.000Z"
+        }
+      ],
+      "created_at": "2026-09-08T03:25:59.000Z",
+      "id": "qz292kvy220g",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3q1jnbdbn845",
+              "name": "Cloudflare Sites and Services - Cache Reserve",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "w1br383gmlwj",
+              "name": "Europe - Paris, France - (CDG)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-08T05:22:41.128Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T05:22:41.128Z",
+          "id": "8dlx9ls051d1",
+          "incident_id": "qz292kvy220g",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T05:22:41.128Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3q1jnbdbn845",
+              "name": "Cloudflare Sites and Services - Cache Reserve",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "w1br383gmlwj",
+              "name": "Europe - Paris, France - (CDG)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-08T04:42:58.905Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T04:42:58.905Z",
+          "id": "zgcnngx956f5",
+          "incident_id": "qz292kvy220g",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T04:42:58.905Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3q1jnbdbn845",
+              "name": "Cloudflare Sites and Services - Cache Reserve",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "w1br383gmlwj",
+              "name": "Europe - Paris, France - (CDG)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue with Cache Reserve errors in Paris (CDG). Customers may see an elevated request volume to origin servers in the forementioned region.\n\nWe are working to analyse and mitigate this problem.  More updates to follow shortly.",
+          "created_at": "2026-09-08T03:25:59.425Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-08T03:25:59.425Z",
+          "id": "fkxdtnj67ggs",
+          "incident_id": "qz292kvy220g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-08T03:25:59.425Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cache Reserve Issue in Paris",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-08T05:22:41.128Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/qz292kvy220g",
+      "started_at": "2026-09-08T03:25:59.327Z",
+      "status": "resolved",
+      "updated_at": "2026-09-08T05:22:41.145Z"
+    }
   }
 ]
