@@ -48,8 +48,8 @@
           "position": 12,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-09-08T22:41:49.362Z"
+          "status": "under_maintenance",
+          "updated_at": "2026-09-10T08:00:19.314Z"
         }
       ],
       "created_at": "2026-09-08T16:14:55.371Z",
@@ -264,7 +264,7 @@
           "showcase": false,
           "start_date": "2023-03-01",
           "status": "operational",
-          "updated_at": "2026-09-08T22:41:49.256Z"
+          "updated_at": "2026-09-09T13:51:59.319Z"
         },
         {
           "created_at": "2023-10-03T13:21:19.043Z",
@@ -353,8 +353,8 @@
           "position": 11,
           "showcase": false,
           "start_date": "2023-03-21",
-          "status": "under_maintenance",
-          "updated_at": "2026-09-09T07:00:07.320Z"
+          "status": "operational",
+          "updated_at": "2026-09-09T14:01:07.328Z"
         },
         {
           "created_at": "2017-08-28T06:32:29.815Z",
@@ -368,8 +368,8 @@
           "position": 12,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-09-08T22:41:49.362Z"
+          "status": "under_maintenance",
+          "updated_at": "2026-09-10T08:00:19.314Z"
         },
         {
           "created_at": "2023-09-18T21:05:40.000Z",
@@ -384,7 +384,7 @@
           "showcase": false,
           "start_date": "2023-09-18",
           "status": "under_maintenance",
-          "updated_at": "2026-09-09T07:01:07.426Z"
+          "updated_at": "2026-09-10T07:00:07.341Z"
         },
         {
           "created_at": "2026-01-07T09:50:52.600Z",
@@ -458,8 +458,8 @@
           "position": 18,
           "showcase": false,
           "start_date": "2026-03-11",
-          "status": "operational",
-          "updated_at": "2026-09-08T22:41:49.452Z"
+          "status": "under_maintenance",
+          "updated_at": "2026-09-10T08:00:19.430Z"
         },
         {
           "created_at": "2019-04-10T08:17:36.836Z",
@@ -1125,6 +1125,135 @@
       "started_at": "2026-09-08T18:05:22.429Z",
       "status": "resolved",
       "updated_at": "2026-09-08T22:41:49.755Z"
+    }
+  },
+  {
+    "key": "grafana/25953qg7xkdj",
+    "vendor": "grafana",
+    "native_id": "25953qg7xkdj",
+    "title": "Investigating elevated database load in AWS Germany",
+    "url": "https://stspg.io/j1r7zw96mgh5",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-09T11:27:33.971Z",
+    "resolved_at": "2026-09-09T13:51:59.364Z",
+    "duration_minutes": 144,
+    "components": [
+      "AWS Germany - prod-eu-west-4"
+    ],
+    "updates": [
+      {
+        "native_id": "wclks5zj7ltg",
+        "status": "investigating",
+        "body": "We are investigating elevated database load affecting infrastructure supporting a subset of Grafana Cloud instances in the AWS Germany region (prod-eu-west-4).\n\nAffected users may experience slow responses when accessing Grafana. We will provide an update as more information becomes available.",
+        "created_at": "2026-09-09T11:27:34.118Z"
+      },
+      {
+        "native_id": "r7mljbld4vd5",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we have been seeing recovery to the affected region. We will continue to monitor.",
+        "created_at": "2026-09-09T12:44:20.723Z"
+      },
+      {
+        "native_id": "9kl3csq1wlzn",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-09T13:51:59.364Z"
+      }
+    ],
+    "first_seen_at": "2026-09-10T10:08:30.283192792Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-01T23:38:04.573Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "wdcnfc3drb8s",
+          "name": "AWS Germany - prod-eu-west-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-09-09T13:51:59.319Z"
+        }
+      ],
+      "created_at": "2026-09-09T11:27:33.985Z",
+      "id": "25953qg7xkdj",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-09T13:51:59.364Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T13:51:59.364Z",
+          "id": "9kl3csq1wlzn",
+          "incident_id": "25953qg7xkdj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T13:51:59.364Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we have been seeing recovery to the affected region. We will continue to monitor.",
+          "created_at": "2026-09-09T12:44:20.723Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T12:44:20.723Z",
+          "id": "r7mljbld4vd5",
+          "incident_id": "25953qg7xkdj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T12:44:20.723Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated database load affecting infrastructure supporting a subset of Grafana Cloud instances in the AWS Germany region (prod-eu-west-4).\n\nAffected users may experience slow responses when accessing Grafana. We will provide an update as more information becomes available.",
+          "created_at": "2026-09-09T11:27:34.118Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T11:27:34.118Z",
+          "id": "wclks5zj7ltg",
+          "incident_id": "25953qg7xkdj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T11:27:34.118Z"
+        }
+      ],
+      "monitoring_at": "2026-09-09T12:44:20.723Z",
+      "name": "Investigating elevated database load in AWS Germany",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-09T13:51:59.364Z",
+      "shortlink": "https://stspg.io/j1r7zw96mgh5",
+      "started_at": "2026-09-09T11:27:33.971Z",
+      "status": "resolved",
+      "updated_at": "2026-09-09T13:51:59.379Z"
     }
   }
 ]

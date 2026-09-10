@@ -1,0 +1,131 @@
+[
+  {
+    "key": "digitalocean/1t16vfgq3zpx",
+    "vendor": "digitalocean",
+    "native_id": "1t16vfgq3zpx",
+    "title": "Power Degradation impacting GPU Performance in ATL1",
+    "url": "https://stspg.io/g4s2358yl9tt",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-09T10:47:40.42Z",
+    "resolved_at": "2026-09-09T12:25:52.141Z",
+    "duration_minutes": 98,
+    "components": [
+      "ATL1"
+    ],
+    "updates": [
+      {
+        "native_id": "vp3bc595t1dk",
+        "status": "investigating",
+        "body": "We are investigating a power issue affecting part of our ATL1 datacenter. Redundant power systems are keeping servers online, and we have not observed any server outages.\n\nHowever, available power capacity is reduced, which may cause degraded performance for some GPU workloads, particularly during periods of high utilization.\n\nOur datacenter and infrastructure teams are working to restore full power redundancy. We will provide an update as more information becomes available. We apologize for the inconvenience and appreciate your patience.",
+        "created_at": "2026-09-09T10:47:40.518Z"
+      },
+      {
+        "native_id": "g3dvqfxj5q1f",
+        "status": "monitoring",
+        "body": "The power issue affecting part of our ATL1 datacenter has been fully resolved. Power redundancy has been restored, and any potential customer impact has been mitigated.\n\nWe will continue monitoring the environment to ensure continued stability.",
+        "created_at": "2026-09-09T11:32:30.689Z"
+      },
+      {
+        "native_id": "l803ng8p1ssl",
+        "status": "resolved",
+        "body": "This incident is now resolved. Power redundancy has been fully restored, and we have confirmed that customer impact has been mitigated. We are closing this incident.",
+        "created_at": "2026-09-09T12:25:52.141Z"
+      }
+    ],
+    "first_seen_at": "2026-09-10T10:08:30.283192792Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-06-11T14:19:58.540Z",
+          "description": null,
+          "group": false,
+          "group_id": "hz17hg2dwjj5",
+          "id": "cxxt9nh9v10h",
+          "name": "ATL1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2025-06-11",
+          "status": "operational",
+          "updated_at": "2026-09-09T11:32:30.650Z"
+        }
+      ],
+      "created_at": "2026-09-09T10:47:40.428Z",
+      "id": "1t16vfgq3zpx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cxxt9nh9v10h",
+              "name": "GPU Droplets - ATL1",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident is now resolved. Power redundancy has been fully restored, and we have confirmed that customer impact has been mitigated. We are closing this incident.",
+          "created_at": "2026-09-09T12:25:52.141Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T12:25:52.141Z",
+          "id": "l803ng8p1ssl",
+          "incident_id": "1t16vfgq3zpx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T12:25:52.141Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cxxt9nh9v10h",
+              "name": "GPU Droplets - ATL1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The power issue affecting part of our ATL1 datacenter has been fully resolved. Power redundancy has been restored, and any potential customer impact has been mitigated.\n\nWe will continue monitoring the environment to ensure continued stability.",
+          "created_at": "2026-09-09T11:32:30.689Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T11:32:30.689Z",
+          "id": "g3dvqfxj5q1f",
+          "incident_id": "1t16vfgq3zpx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T11:32:30.689Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cxxt9nh9v10h",
+              "name": "GPU Droplets - ATL1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating a power issue affecting part of our ATL1 datacenter. Redundant power systems are keeping servers online, and we have not observed any server outages.\n\nHowever, available power capacity is reduced, which may cause degraded performance for some GPU workloads, particularly during periods of high utilization.\n\nOur datacenter and infrastructure teams are working to restore full power redundancy. We will provide an update as more information becomes available. We apologize for the inconvenience and appreciate your patience.",
+          "created_at": "2026-09-09T10:47:40.518Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-09T10:47:40.518Z",
+          "id": "vp3bc595t1dk",
+          "incident_id": "1t16vfgq3zpx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-09T10:47:40.518Z"
+        }
+      ],
+      "monitoring_at": "2026-09-09T11:32:30.689Z",
+      "name": "Power Degradation impacting GPU Performance in ATL1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-09T12:25:52.141Z",
+      "shortlink": "https://stspg.io/g4s2358yl9tt",
+      "started_at": "2026-09-09T10:47:40.420Z",
+      "status": "resolved",
+      "updated_at": "2026-09-09T12:25:52.160Z"
+    }
+  }
+]
