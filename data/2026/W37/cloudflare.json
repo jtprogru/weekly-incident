@@ -534,8 +534,8 @@
           "position": 39,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-09-08T20:25:49.000Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:41:41.000Z"
         }
       ],
       "created_at": "2026-09-07T15:32:27.000Z",
@@ -1025,8 +1025,8 @@
           "position": 39,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-09-08T20:25:49.000Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:41:41.000Z"
         }
       ],
       "created_at": "2026-09-08T19:39:17.000Z",
@@ -1405,6 +1405,438 @@
       "started_at": "2026-09-09T19:17:26.000Z",
       "status": "identified",
       "updated_at": "2026-09-09T19:18:25.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/nhfcmzd1pv4p",
+    "vendor": "cloudflare",
+    "native_id": "nhfcmzd1pv4p",
+    "title": "DNS Update Delays",
+    "url": "https://www.cloudflarestatus.com/incidents/nhfcmzd1pv4p",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-10T13:58:42.909Z",
+    "resolved_at": "2026-09-10T22:22:48.225Z",
+    "duration_minutes": 504,
+    "components": [
+      "DNS Updates"
+    ],
+    "updates": [
+      {
+        "native_id": "lyq29f9rgy2l",
+        "status": "investigating",
+        "body": "Cloudflare is investigating delays in propagation of updates to DNS records. More updates to follow shortly.",
+        "created_at": "2026-09-10T13:58:42.994Z"
+      },
+      {
+        "native_id": "f0p49w2w3r10",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-10T14:17:13.545Z"
+      },
+      {
+        "native_id": "k4k7q9x9mysj",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-10T22:16:08.819Z"
+      },
+      {
+        "native_id": "2k2z9jpfmmyw",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-10T22:22:48.225Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:50:20.000Z",
+          "description": "DNS update service pushing customer DNS changes out to all data centers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "7j656z7tqk7f",
+          "name": "DNS Updates",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 45,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-10T22:22:48.000Z"
+        }
+      ],
+      "created_at": "2026-09-10T13:58:42.000Z",
+      "id": "nhfcmzd1pv4p",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "7j656z7tqk7f",
+              "name": "Cloudflare Sites and Services - DNS Updates",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-10T22:22:48.225Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T22:22:48.225Z",
+          "id": "2k2z9jpfmmyw",
+          "incident_id": "nhfcmzd1pv4p",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T22:22:48.225Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "7j656z7tqk7f",
+              "name": "Cloudflare Sites and Services - DNS Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-10T22:16:08.819Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T22:16:08.819Z",
+          "id": "k4k7q9x9mysj",
+          "incident_id": "nhfcmzd1pv4p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T22:16:08.819Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "7j656z7tqk7f",
+              "name": "Cloudflare Sites and Services - DNS Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-10T14:17:13.545Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T14:17:13.545Z",
+          "id": "f0p49w2w3r10",
+          "incident_id": "nhfcmzd1pv4p",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T14:17:13.545Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "7j656z7tqk7f",
+              "name": "Cloudflare Sites and Services - DNS Updates",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating delays in propagation of updates to DNS records. More updates to follow shortly.",
+          "created_at": "2026-09-10T13:58:42.994Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T13:58:42.994Z",
+          "id": "lyq29f9rgy2l",
+          "incident_id": "nhfcmzd1pv4p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T13:58:42.994Z"
+        }
+      ],
+      "monitoring_at": "2026-09-10T22:16:08.819Z",
+      "name": "DNS Update Delays",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-10T22:22:48.225Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/nhfcmzd1pv4p",
+      "started_at": "2026-09-10T13:58:42.909Z",
+      "status": "resolved",
+      "updated_at": "2026-09-10T22:22:48.240Z"
+    }
+  },
+  {
+    "key": "cloudflare/92j1xmlkscw3",
+    "vendor": "cloudflare",
+    "native_id": "92j1xmlkscw3",
+    "title": "Issues Editing Bulk Redirects",
+    "url": "https://www.cloudflarestatus.com/incidents/92j1xmlkscw3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-10T15:41:41.496Z",
+    "resolved_at": "2026-09-10T16:57:13.812Z",
+    "duration_minutes": 75,
+    "components": [
+      "Dashboard"
+    ],
+    "updates": [
+      {
+        "native_id": "tgs1ygxnf4lb",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue preventing users from adding new redirects to existing Bulk Redirects. Traffic processed by existing Bulk Redirects remains unaffected, and this issue is limited to the configuration of these rules. Further details will be provided as we investigate.",
+        "created_at": "2026-09-10T15:41:41.605Z"
+      },
+      {
+        "native_id": "x7jh8dp9z643",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-10T15:59:10.489Z"
+      },
+      {
+        "native_id": "b3nfg8084rs5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-10T16:57:13.812Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 39,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:41:41.000Z"
+        }
+      ],
+      "created_at": "2026-09-10T15:41:41.000Z",
+      "id": "92j1xmlkscw3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-10T16:57:13.812Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T16:57:13.812Z",
+          "id": "b3nfg8084rs5",
+          "incident_id": "92j1xmlkscw3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T16:57:13.812Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-10T15:59:10.489Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T15:59:10.489Z",
+          "id": "x7jh8dp9z643",
+          "incident_id": "92j1xmlkscw3",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T15:59:10.489Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue preventing users from adding new redirects to existing Bulk Redirects. Traffic processed by existing Bulk Redirects remains unaffected, and this issue is limited to the configuration of these rules. Further details will be provided as we investigate.",
+          "created_at": "2026-09-10T15:41:41.605Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T15:41:41.605Z",
+          "id": "tgs1ygxnf4lb",
+          "incident_id": "92j1xmlkscw3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T15:41:41.605Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Issues Editing Bulk Redirects",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-10T16:57:13.812Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/92j1xmlkscw3",
+      "started_at": "2026-09-10T15:41:41.496Z",
+      "status": "resolved",
+      "updated_at": "2026-09-10T16:57:13.828Z"
+    }
+  },
+  {
+    "key": "cloudflare/3r3qcgbb0714",
+    "vendor": "cloudflare",
+    "native_id": "3r3qcgbb0714",
+    "title": "SSL Certificate Provisioning Delays for Let's Encrypt",
+    "url": "https://www.cloudflarestatus.com/incidents/3r3qcgbb0714",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-11T02:20:44.477Z",
+    "resolved_at": "2026-09-11T04:05:00.264Z",
+    "duration_minutes": 104,
+    "components": [
+      "SSL Certificate Provisioning"
+    ],
+    "updates": [
+      {
+        "native_id": "fhby0ltt8hsp",
+        "status": "identified",
+        "body": "Let's Encrypt are seeing SSL certificates provisioning delays. You can read their public status page here:\nhttps://letsencrypt.status.io/pages/incident/55957a99e800baa4470002da/6aa35c1d892d7304f2747e01\n\nSSL certificates already in production and other CAs certificate provisioning remains unaffected and are operating normally.",
+        "created_at": "2026-09-11T02:20:44.592Z"
+      },
+      {
+        "native_id": "cvkv8fs9prpb",
+        "status": "identified",
+        "body": "Let's Encrypt incident is now resolved. Cloudflare managed certificate backlog is still clearing.",
+        "created_at": "2026-09-11T02:58:59.162Z"
+      },
+      {
+        "native_id": "44mcxbxkrkg7",
+        "status": "monitoring",
+        "body": "Let's Encrypt has resolved the incident and we are monitoring the results.",
+        "created_at": "2026-09-11T03:54:39.42Z"
+      },
+      {
+        "native_id": "563vl3zbpgfp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-11T04:05:00.264Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2016-03-17T15:27:39.000Z",
+          "description": "Provisioning service for edge certificates like Universal and Advanced SSL",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "cghykwlwsmn5",
+          "name": "SSL Certificate Provisioning",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 100,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-11T04:05:00.000Z"
+        }
+      ],
+      "created_at": "2026-09-11T02:20:44.000Z",
+      "id": "3r3qcgbb0714",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-11T04:05:00.264Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T04:05:00.264Z",
+          "id": "563vl3zbpgfp",
+          "incident_id": "3r3qcgbb0714",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T04:05:00.264Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Let's Encrypt has resolved the incident and we are monitoring the results.",
+          "created_at": "2026-09-11T03:54:39.420Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T03:54:39.420Z",
+          "id": "44mcxbxkrkg7",
+          "incident_id": "3r3qcgbb0714",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T03:54:39.420Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Let's Encrypt incident is now resolved. Cloudflare managed certificate backlog is still clearing.",
+          "created_at": "2026-09-11T02:58:59.162Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T02:58:59.162Z",
+          "id": "cvkv8fs9prpb",
+          "incident_id": "3r3qcgbb0714",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T02:58:59.162Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Let's Encrypt are seeing SSL certificates provisioning delays. You can read their public status page here:\nhttps://letsencrypt.status.io/pages/incident/55957a99e800baa4470002da/6aa35c1d892d7304f2747e01\n\nSSL certificates already in production and other CAs certificate provisioning remains unaffected and are operating normally.",
+          "created_at": "2026-09-11T02:20:44.592Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T02:20:44.592Z",
+          "id": "fhby0ltt8hsp",
+          "incident_id": "3r3qcgbb0714",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T02:20:44.592Z"
+        }
+      ],
+      "monitoring_at": "2026-09-11T03:54:39.420Z",
+      "name": "SSL Certificate Provisioning Delays for Let's Encrypt",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-11T04:05:00.264Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3r3qcgbb0714",
+      "started_at": "2026-09-11T02:20:44.477Z",
+      "status": "resolved",
+      "updated_at": "2026-09-11T04:05:00.278Z"
     }
   }
 ]

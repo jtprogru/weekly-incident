@@ -1,0 +1,131 @@
+[
+  {
+    "key": "circleci/f2w7c18std4n",
+    "vendor": "circleci",
+    "native_id": "f2w7c18std4n",
+    "title": "Issues loading pipelines for a small number of projects",
+    "url": "https://stspg.io/l0tsrtv1tkbl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-10T20:25:39.772Z",
+    "resolved_at": "2026-09-10T20:26:50Z",
+    "duration_minutes": 1,
+    "components": [
+      "CircleCI UI"
+    ],
+    "updates": [
+      {
+        "native_id": "4g0qxm4vr9gb",
+        "status": "identified",
+        "body": "A small number of customers may see errors or be unable to load the pipelines page for projects with deprecated-config warnings, when using the classic pipelines view. Customers on the new pipelines view are not affected. We’ve identified the cause and deployed a fix.",
+        "created_at": "2026-09-10T20:25:39.873Z"
+      },
+      {
+        "native_id": "9vp784113tc2",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-10T20:25:52.208Z"
+      },
+      {
+        "native_id": "w3zz0x8zy2ys",
+        "status": "resolved",
+        "body": "This incident has been resolved.  A small number of customers who created pipelines between 18:53 UTC and 19:24 UTC that contained config using deprecated config syntax will have seen their build-type jobs fail to start. Customers whose jobs or pipelines failed may rerun them.",
+        "created_at": "2026-09-10T20:26:50.973Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-08-11T03:29:32.538Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "sw1j7xsbdlk4",
+          "name": "CircleCI UI",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-10T20:26:50.930Z"
+        }
+      ],
+      "created_at": "2026-09-10T20:25:39.781Z",
+      "id": "f2w7c18std4n",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.  A small number of customers who created pipelines between 18:53 UTC and 19:24 UTC that contained config using deprecated config syntax will have seen their build-type jobs fail to start. Customers whose jobs or pipelines failed may rerun them.",
+          "created_at": "2026-09-10T20:26:50.973Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T20:26:50.000Z",
+          "id": "w3zz0x8zy2ys",
+          "incident_id": "f2w7c18std4n",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T22:39:19.125Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-10T20:25:52.208Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-10T20:25:52.208Z",
+          "id": "9vp784113tc2",
+          "incident_id": "f2w7c18std4n",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T20:25:52.208Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A small number of customers may see errors or be unable to load the pipelines page for projects with deprecated-config warnings, when using the classic pipelines view. Customers on the new pipelines view are not affected. We’ve identified the cause and deployed a fix.",
+          "created_at": "2026-09-10T20:25:39.873Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-10T20:25:39.873Z",
+          "id": "4g0qxm4vr9gb",
+          "incident_id": "f2w7c18std4n",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T20:25:39.873Z"
+        }
+      ],
+      "monitoring_at": "2026-09-10T20:25:52.208Z",
+      "name": "Issues loading pipelines for a small number of projects",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-10T20:26:50.000Z",
+      "shortlink": "https://stspg.io/l0tsrtv1tkbl",
+      "started_at": "2026-09-10T20:25:39.772Z",
+      "status": "resolved",
+      "updated_at": "2026-09-10T22:39:19.147Z"
+    }
+  }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "key": "anthropic/r1pqn1kb4hvk",
+    "vendor": "anthropic",
+    "native_id": "r1pqn1kb4hvk",
+    "title": "Degraded functionality for Claude Cowork on Windows",
+    "url": "https://stspg.io/5yp3rhhztm30",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-09-10T15:54:10Z",
+    "components": [
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "66mdw18dd63d",
+        "status": "identified",
+        "body": "A Windows update released September 8 has left Claude Cowork on Windows unable to run local commands, because its workspace can no longer reach your computer's drive. For most users, chat and file reading and editing still work. There's no in-app workaround yet, and restarting or reinstalling won't help. Microsoft has developed a fix and is working to release it. We'll post an update when we have more to share.",
+        "created_at": "2026-09-10T15:54:10.2Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:54:10.154Z"
+        }
+      ],
+      "created_at": "2026-09-10T15:54:10.108Z",
+      "id": "r1pqn1kb4hvk",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A Windows update released September 8 has left Claude Cowork on Windows unable to run local commands, because its workspace can no longer reach your computer's drive. For most users, chat and file reading and editing still work. There's no in-app workaround yet, and restarting or reinstalling won't help. Microsoft has developed a fix and is working to release it. We'll post an update when we have more to share.",
+          "created_at": "2026-09-10T15:54:10.200Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T15:54:10.000Z",
+          "id": "66mdw18dd63d",
+          "incident_id": "r1pqn1kb4hvk",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T17:20:39.530Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded functionality for Claude Cowork on Windows",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": "[]",
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/5yp3rhhztm30",
+      "started_at": "2026-09-10T15:54:10.000Z",
+      "status": "identified",
+      "updated_at": "2026-09-10T17:20:39.594Z"
+    }
+  },
+  {
+    "key": "anthropic/2pt83vlkk7x7",
+    "vendor": "anthropic",
+    "native_id": "2pt83vlkk7x7",
+    "title": "Elevated latency on the Claude API for some users",
+    "url": "https://stspg.io/hfs7749ykl14",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-10T21:43:40.209Z",
+    "resolved_at": "2026-09-10T23:24:22.978Z",
+    "duration_minutes": 100,
+    "components": [
+      "Claude API (api.anthropic.com)",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "lbz582b948bq",
+        "status": "identified",
+        "body": "We are experiencing slower than normal response times on the Claude API for some customers whose traffic enters through the US Midwest. Users may experience elevated latency and some request timeouts.",
+        "created_at": "2026-09-10T21:43:40.269Z"
+      },
+      {
+        "native_id": "p835rv6hxnw8",
+        "status": "resolved",
+        "body": "The issue affecting Claude services has been mitigated.",
+        "created_at": "2026-09-10T23:24:22.978Z"
+      }
+    ],
+    "first_seen_at": "2026-09-11T10:05:32.162101077Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-09-10T23:24:22.949Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-10T15:54:10.154Z"
+        }
+      ],
+      "created_at": "2026-09-10T21:43:40.215Z",
+      "id": "2pt83vlkk7x7",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue affecting Claude services has been mitigated.",
+          "created_at": "2026-09-10T23:24:22.978Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T23:24:22.978Z",
+          "id": "p835rv6hxnw8",
+          "incident_id": "2pt83vlkk7x7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T23:24:22.978Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing slower than normal response times on the Claude API for some customers whose traffic enters through the US Midwest. Users may experience elevated latency and some request timeouts.",
+          "created_at": "2026-09-10T21:43:40.269Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-10T21:43:40.269Z",
+          "id": "lbz582b948bq",
+          "incident_id": "2pt83vlkk7x7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-10T21:43:40.269Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated latency on the Claude API for some users",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": "[]",
+      "resolved_at": "2026-09-10T23:24:22.978Z",
+      "shortlink": "https://stspg.io/hfs7749ykl14",
+      "started_at": "2026-09-10T21:43:40.209Z",
+      "status": "resolved",
+      "updated_at": "2026-09-10T23:24:22.994Z"
+    }
+  }
+]

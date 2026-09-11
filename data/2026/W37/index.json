@@ -2,96 +2,96 @@
   "week": "2026-W37",
   "from": "2026-09-07T00:00:00Z",
   "to": "2026-09-14T00:00:00Z",
-  "generated_at": "2026-09-10T10:08:30.283192792Z",
+  "generated_at": "2026-09-11T10:05:32.162101077Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 38,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-10T10:08:30.283192792Z",
+      "fetched_at": "2026-09-11T10:05:32.162101077Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -164,10 +164,50 @@
         "Workers"
       ],
       "score": {
-        "value": 1603.8,
-        "duration_minutes": 891,
+        "value": 4190.400000000001,
+        "duration_minutes": 2328,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/r1pqn1kb4hvk",
+      "vendor": "anthropic",
+      "title": "Degraded functionality for Claude Cowork on Windows",
+      "url": "https://stspg.io/5yp3rhhztm30",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-10T15:54:10Z",
+      "ongoing": true,
+      "components": [
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 1636.5,
+        "duration_minutes": 1091,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M24HYC9SX2Q4471EVMY6EXQE",
+      "vendor": "openai",
+      "title": "Unable to open shared ChatGPT Project using direct link",
+      "url": "https://status.openai.com/incidents/01M24HYC9SX2Q4471EVMY6EXQE",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-10T02:21:57Z",
+      "resolved_at": "2026-09-10T14:28:15Z",
+      "duration_minutes": 726,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 1089,
+        "duration_minutes": 726,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -195,20 +235,24 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M24HYC9SX2Q4471EVMY6EXQE",
-      "vendor": "openai",
-      "title": "Unable to open shared ChatGPT Project using direct link",
-      "url": "https://status.openai.com/incidents/01M24HYC9SX2Q4471EVMY6EXQE",
+      "key": "cloudflare/nhfcmzd1pv4p",
+      "vendor": "cloudflare",
+      "title": "DNS Update Delays",
+      "url": "https://www.cloudflarestatus.com/incidents/nhfcmzd1pv4p",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-10T02:21:57Z",
-      "ongoing": true,
-      "components": [],
+      "status": "resolved",
+      "started_at": "2026-09-10T13:58:42.909Z",
+      "resolved_at": "2026-09-10T22:22:48.225Z",
+      "duration_minutes": 504,
+      "ongoing": false,
+      "components": [
+        "DNS Updates"
+      ],
       "score": {
-        "value": 699,
-        "duration_minutes": 466,
+        "value": 907.2,
+        "duration_minutes": 504,
         "components": 1,
-        "vendor_weight": 1.5
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -321,6 +365,29 @@
       "above_threshold": true
     },
     {
+      "key": "anthropic/2pt83vlkk7x7",
+      "vendor": "anthropic",
+      "title": "Elevated latency on the Claude API for some users",
+      "url": "https://stspg.io/hfs7749ykl14",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-10T21:43:40.209Z",
+      "resolved_at": "2026-09-10T23:24:22.978Z",
+      "duration_minutes": 100,
+      "ongoing": false,
+      "components": [
+        "Claude API (api.anthropic.com)",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 300,
+        "duration_minutes": 100,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/20y0bl1tryqv",
       "vendor": "grafana",
       "title": "High Latency in prod-us-east-2",
@@ -339,6 +406,24 @@
         "duration_minutes": 259,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M27Q9GH7WVKNA61ZR3RDMSY5",
+      "vendor": "openai",
+      "title": "Elevated errors for ChatGPT users in Europe",
+      "url": "https://status.openai.com/incidents/01M27Q9GH7WVKNA61ZR3RDMSY5",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-11T07:53:08Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 198,
+        "duration_minutes": 132,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -365,6 +450,28 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/3r3qcgbb0714",
+      "vendor": "cloudflare",
+      "title": "SSL Certificate Provisioning Delays for Let's Encrypt",
+      "url": "https://www.cloudflarestatus.com/incidents/3r3qcgbb0714",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-11T02:20:44.477Z",
+      "resolved_at": "2026-09-11T04:05:00.264Z",
+      "duration_minutes": 104,
+      "ongoing": false,
+      "components": [
+        "SSL Certificate Provisioning"
+      ],
+      "score": {
+        "value": 187.20000000000002,
+        "duration_minutes": 104,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/kjfs3vqkxkgs",
       "vendor": "cloudflare",
       "title": "Issues rendering route configuration table in Networking \u003e Routes UI",
@@ -383,6 +490,46 @@
         "duration_minutes": 100,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M26E3PPAYJMMRHX2MZJCTHMF",
+      "vendor": "openai",
+      "title": "Delays in customer support responses",
+      "url": "https://status.openai.com/incidents/01M26E3PPAYJMMRHX2MZJCTHMF",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-10T19:53:26Z",
+      "resolved_at": "2026-09-10T21:48:32Z",
+      "duration_minutes": 115,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 172.5,
+        "duration_minutes": 115,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M26DX2PP1AFHGJK5E4M6S2J6",
+      "vendor": "openai",
+      "title": "Elevated errors affecting ChatGPT Work",
+      "url": "https://status.openai.com/incidents/01M26DX2PP1AFHGJK5E4M6S2J6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-10T19:49:49Z",
+      "resolved_at": "2026-09-10T21:30:02Z",
+      "duration_minutes": 100,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 150,
+        "duration_minutes": 100,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -407,6 +554,28 @@
         "vendor_weight": 1
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/92j1xmlkscw3",
+      "vendor": "cloudflare",
+      "title": "Issues Editing Bulk Redirects",
+      "url": "https://www.cloudflarestatus.com/incidents/92j1xmlkscw3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-10T15:41:41.496Z",
+      "resolved_at": "2026-09-10T16:57:13.812Z",
+      "duration_minutes": 75,
+      "ongoing": false,
+      "components": [
+        "Dashboard"
+      ],
+      "score": {
+        "value": 135,
+        "duration_minutes": 75,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
     },
     {
       "key": "cloudflare/pjr4m9q1xxb1",
@@ -473,6 +642,24 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M27VK1VN54RQJGJEHB5JTQJJ",
+      "vendor": "openai",
+      "title": "Elevated errors for GPT-5.6 Sol on the API",
+      "url": "https://status.openai.com/incidents/01M27VK1VN54RQJGJEHB5JTQJJ",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-11T09:08:15Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 85.5,
+        "duration_minutes": 57,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/hy0gsndpkypz",
       "vendor": "cloudflare",
       "title": "Intermittent issues accessing the Dashboard on Firefox and Safari",
@@ -491,6 +678,29 @@
         "duration_minutes": 46,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/51n7sdp7zl92",
+      "vendor": "stripe",
+      "title": "Elevated Interac errors",
+      "url": "https://stspg.io/7wcb364xld9l",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-10T20:53:41.173Z",
+      "resolved_at": "2026-09-10T21:28:26.58Z",
+      "duration_minutes": 34,
+      "ongoing": false,
+      "components": [
+        "Global payments",
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 81.6,
+        "duration_minutes": 34,
+        "components": 2,
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
@@ -533,6 +743,28 @@
         "duration_minutes": 24,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/f2w7c18std4n",
+      "vendor": "circleci",
+      "title": "Issues loading pipelines for a small number of projects",
+      "url": "https://stspg.io/l0tsrtv1tkbl",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-10T20:25:39.772Z",
+      "resolved_at": "2026-09-10T20:26:50Z",
+      "duration_minutes": 1,
+      "ongoing": false,
+      "components": [
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 1,
+        "duration_minutes": 1,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
