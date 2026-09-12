@@ -2,96 +2,96 @@
   "week": "2026-W37",
   "from": "2026-09-07T00:00:00Z",
   "to": "2026-09-14T00:00:00Z",
-  "generated_at": "2026-09-11T10:05:32.162101077Z",
+  "generated_at": "2026-09-12T09:41:03.419357609Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 38,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-11T10:05:32.162101077Z",
+      "fetched_at": "2026-09-12T09:41:03.419357609Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -157,15 +157,17 @@
       "title": "Workers Cron Triggers degraded",
       "url": "https://www.cloudflarestatus.com/incidents/sjs8s0q2x4hw",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-09T19:17:26Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-09-09T19:17:26.263Z",
+      "resolved_at": "2026-09-12T03:34:16.759Z",
+      "duration_minutes": 3376,
+      "ongoing": false,
       "components": [
         "Workers"
       ],
       "score": {
-        "value": 4190.400000000001,
-        "duration_minutes": 2328,
+        "value": 6076.8,
+        "duration_minutes": 3376,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -176,7 +178,7 @@
       "vendor": "anthropic",
       "title": "Degraded functionality for Claude Cowork on Windows",
       "url": "https://stspg.io/5yp3rhhztm30",
-      "impact": "minor",
+      "impact": "major",
       "status": "identified",
       "started_at": "2026-09-10T15:54:10Z",
       "ongoing": true,
@@ -184,10 +186,32 @@
         "Claude Cowork"
       ],
       "score": {
-        "value": 1636.5,
-        "duration_minutes": 1091,
+        "value": 3759,
+        "duration_minutes": 2506,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/k7l4hzmthl3k",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Tunnel Availability Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/k7l4hzmthl3k",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-11T21:55:52.037Z",
+      "resolved_at": "2026-09-12T08:57:03.058Z",
+      "duration_minutes": 661,
+      "ongoing": false,
+      "components": [
+        "Tunnel"
+      ],
+      "score": {
+        "value": 1189.8,
+        "duration_minutes": 661,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -253,6 +277,26 @@
         "duration_minutes": 504,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M28MEQWTQJDRCRPFD9FWQ0H3",
+      "vendor": "openai",
+      "title": "1% of ChatGPT Work (mobile/web) turns are failing for existing threads",
+      "url": "https://status.openai.com/incidents/01M28MEQWTQJDRCRPFD9FWQ0H3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-11T16:22:49Z",
+      "resolved_at": "2026-09-12T01:57:37Z",
+      "duration_minutes": 574,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 861,
+        "duration_minutes": 574,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -388,6 +432,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/2njywrxj8qjf",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues with Taiwan datacenter (TPE)",
+      "url": "https://www.cloudflarestatus.com/incidents/2njywrxj8qjf",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-11T19:35:42.873Z",
+      "resolved_at": "2026-09-11T22:03:51.999Z",
+      "duration_minutes": 148,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 266.40000000000003,
+        "duration_minutes": 148,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/20y0bl1tryqv",
       "vendor": "grafana",
       "title": "High Latency in prod-us-east-2",
@@ -415,13 +481,35 @@
       "title": "Elevated errors for ChatGPT users in Europe",
       "url": "https://status.openai.com/incidents/01M27Q9GH7WVKNA61ZR3RDMSY5",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-09-11T07:53:08Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-11T10:16:31Z",
+      "duration_minutes": 143,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 198,
-        "duration_minutes": 132,
+        "value": 214.5,
+        "duration_minutes": 143,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M27VK1VN54RQJGJEHB5JTQJJ",
+      "vendor": "openai",
+      "title": "Elevated errors for GPT-5.6 Sol on the API",
+      "url": "https://status.openai.com/incidents/01M27VK1VN54RQJGJEHB5JTQJJ",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-11T09:08:15Z",
+      "resolved_at": "2026-09-11T11:21:43Z",
+      "duration_minutes": 133,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 199.5,
+        "duration_minutes": 133,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -510,6 +598,26 @@
         "duration_minutes": 115,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/t4gby3dqzbg1",
+      "vendor": "cloudflare",
+      "title": "Issues creating and updating Cloud Connector Rules",
+      "url": "https://www.cloudflarestatus.com/incidents/t4gby3dqzbg1",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-12T08:06:38Z",
+      "ongoing": true,
+      "components": [
+        "Cloud Connector"
+      ],
+      "score": {
+        "value": 169.20000000000002,
+        "duration_minutes": 94,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
@@ -620,6 +728,31 @@
       "above_threshold": false
     },
     {
+      "key": "anthropic/t33dncr5ydvl",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "url": "https://stspg.io/n9n8kfcxtkfm",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-11T14:19:51.466Z",
+      "resolved_at": "2026-09-11T14:37:11.146Z",
+      "duration_minutes": 17,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 102,
+        "duration_minutes": 17,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/pgn7y7hgd25l",
       "vendor": "cloudflare",
       "title": "Performance degradation affecting TURN service",
@@ -638,24 +771,6 @@
         "duration_minutes": 49,
         "components": 1,
         "vendor_weight": 1.8
-      },
-      "above_threshold": false
-    },
-    {
-      "key": "openai/01M27VK1VN54RQJGJEHB5JTQJJ",
-      "vendor": "openai",
-      "title": "Elevated errors for GPT-5.6 Sol on the API",
-      "url": "https://status.openai.com/incidents/01M27VK1VN54RQJGJEHB5JTQJJ",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-11T09:08:15Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 85.5,
-        "duration_minutes": 57,
-        "components": 1,
-        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -797,6 +912,26 @@
       "status": "resolved",
       "started_at": "2026-09-09T15:30:00Z",
       "resolved_at": "2026-09-09T15:30:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/9mcdtk1lphgl",
+      "vendor": "cloudflare",
+      "title": "Issues with Workers VPC hostname route resolution on 2026-09-11",
+      "url": "https://www.cloudflarestatus.com/incidents/9mcdtk1lphgl",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-11T06:22:00Z",
+      "resolved_at": "2026-09-11T06:22:00Z",
       "duration_minutes": 0,
       "ongoing": false,
       "components": [],
