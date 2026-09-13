@@ -75,5 +75,91 @@
       "type": "incident",
       "url": "https://slack-status.com/2026-09/c8ec111fea759b78"
     }
+  },
+  {
+    "key": "slack/1578",
+    "vendor": "slack",
+    "native_id": "1578",
+    "title": "Some customers experiencing blurry image previews and download issues",
+    "url": "https://slack-status.com/2026-09/f171324a097abb9a",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-09-12T11:04:17Z",
+    "resolved_at": "2026-09-12T20:00:00Z",
+    "duration_minutes": 535,
+    "components": [
+      "Files"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "We're aware there's an issue where a subset of customers are experiencing blurry images which can't be downloaded, this is happening across all clients. We're actively working to understand the cause, scope, fix, or other details.",
+        "created_at": "2026-09-12T11:04:17Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We've identified a likely technical trigger connected to a recent image-rendering service change.\nCurrent status and actions being taken: We have identified a likely technical trigger — a recent thumbnail-sharpening change to the image-rendering service. We're working to validate this, and are evaluating the rollback of the change as a possible fix.\nEstimated time to resolution: We are still confirming the technical trigger before a fix can be scoped.\nScope: Affects a subset of customers across desktop, web, and mobile clients\nCurrent impact to end users: Images uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected.\nKnown workarounds: None identified yet.\nWe appreciate your patience as we sort this out.",
+        "created_at": "2026-09-12T11:29:49Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We have rolled back the code change that caused the issue in the production environment. Validation is in progress.\nCurrent status and actions being taken: We confirmed the technical trigger (a thumbnail-sharpening code change) and completed a rollback in the production environment after successfully testing the fix in the test environment. We are performing additional validations to confirm the fix was successful.\nEstimated time to resolution: We do not have and estimated time frame at the moment,.\nScope: Affects a subset of customers across desktop, web, and mobile clients;\nCurrent impact to end users: Images uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected.\nWe appreciate your patience as we sort this out.",
+        "created_at": "2026-09-12T12:52:08Z"
+      },
+      {
+        "status": "unknown",
+        "body": "The earlier rollback did not resolve the issue, and investigation has been redirected to a file-serving problem rather than the thumbnail-generation change.\nCurrent status and actions being taken: The rollback of the thumbnail-sharpening change did not fix the issue. We have revised the technical trigger assessment to a file-serving problem, where the system returns near-empty successful responses instead of full image data. We are investigating file storage and access-policy changes, and gathering file details from affected customers to pinpoint the cause.\nEstimated time to resolution:  No confirmed estimate yet; the team is still narrowing down the cause following the pivot to file serving.\nScope: Affects a subset of customers across desktop, web, and mobile clients.\nCurrent impact to end users: Images uploaded before 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected. The earlier rollback did not change this — previously affected images remained blurry and undownloadable.\nWe appreciate your patience as we sort this out.",
+        "created_at": "2026-09-12T14:10:13Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We have confirmed the technical trigger and are preparing a fix\nCurrent status and actions being taken: We confirmed the technical trigger — a code change that caused older file records to lose their stored file names, breaking retrieval of existing images. The team is preparing a targeted fix to restore file names correctly when reading older files. The affected files are expected to recover automatically once the fix is deployed.\nEstimated time to resolution: We don't have an estimate yet.\nScope: Affects a subset of customers across desktop, web, and mobile clients.\nCurrent impact to end users: Images uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected. Previously affected images remain blurry and undownloadable.\nWe appreciate your patience as we sort this out.",
+        "created_at": "2026-09-12T15:24:18Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Some customers experienced blurry images that couldn't be downloaded across all clients, affecting files uploaded before a recent file storage update. We deployed a fix restoring proper file access, and confirmed it resolved the issue for affected customers. We apologize for how this incident affected you and your business. We will undertake a full investigation of the incident, establishing the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.",
+        "created_at": "2026-09-12T20:00:00Z"
+      }
+    ],
+    "first_seen_at": "2026-09-13T10:42:25.302529686Z",
+    "raw": {
+      "date_created": "2026-09-12T04:04:17-07:00",
+      "date_updated": "2026-09-12T13:00:00-07:00",
+      "id": 1578,
+      "notes": [
+        {
+          "body": "\u003cp\u003eWe're aware there's an issue where a subset of customers are experiencing blurry images which can't be downloaded, this is happening across all clients. We're actively working to understand the cause, scope, fix, or other details.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-09-12T04:04:17-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe've identified a likely technical trigger connected to a recent image-rendering service change.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eWe have identified a likely technical trigger — a recent thumbnail-sharpening change to the image-rendering service. We're working to validate this, and are evaluating the rollback of the change as a possible fix.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eWe\u003cstrong\u003e \u003c/strong\u003eare still confirming the technical trigger before a fix can be scoped.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eAffects a subset of customers across desktop, web, and mobile clients\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eImages uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eKnown workarounds: \u003c/strong\u003eNone identified yet.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe appreciate your patience as we sort this out.\u003c/p\u003e",
+          "date_created": "2026-09-12T04:29:49-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cstrong\u003eWe have rolled back the code change that caused the issue in the production environment. Validation is in progress.\u003cbr\u003e\u003c/strong\u003e\u003cbr\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: We \u003c/strong\u003econfirmed the technical trigger (a thumbnail-sharpening code change) and completed a rollback in the production environment after successfully testing the fix in the test environment. We are performing additional validations to confirm the fix was successful.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eWe do not have and estimated time frame at the moment,.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eAffects a subset of customers across desktop, web, and mobile clients;\u0026nbsp;\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eImages uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected.\u0026nbsp;\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe appreciate your patience as we sort this out.\u003c/p\u003e",
+          "date_created": "2026-09-12T05:52:08-07:00"
+        },
+        {
+          "body": "\u003cp\u003eT\u003cstrong\u003ehe earlier rollback did not resolve the issue, and investigation has \u003c/strong\u003ebeen redirected\u003cstrong\u003e to a file-serving problem rather than the thumbnail-generation change.\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: \u003c/strong\u003eThe rollback of the thumbnail-sharpening change did not fix the issue. We have revised the technical trigger assessment to a file-serving problem, where the system returns near-empty successful responses instead of full image data. We are investigating file storage and access-policy changes, and gathering file details from affected customers to pinpoint the cause.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003e\u0026nbsp;No confirmed estimate yet; the team is still narrowing down the cause following the pivot to file serving.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eAffects a subset of customers across desktop, web, and mobile clients.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eImages uploaded before 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected. The earlier rollback did not change this — previously affected images remained blurry and undownloadable.\u003cstrong\u003e\u0026nbsp;\u003c/strong\u003e\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe appreciate your patience as we sort this out.\u003c/p\u003e",
+          "date_created": "2026-09-12T07:10:13-07:00"
+        },
+        {
+          "body": "\u003cp\u003e\u003cstrong\u003eWe have confirmed the technical trigger and are preparing a fix\u003c/strong\u003e\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and actions being taken: We \u003c/strong\u003econfirmed the technical trigger — a code change that caused older file records to lose their stored file names, breaking retrieval of existing images. The team is preparing a targeted fix to restore file names correctly when reading older files. The affected files are expected to recover automatically once the fix is deployed.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eEstimated time to resolution: \u003c/strong\u003eWe don't have an estimate yet.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope: \u003c/strong\u003eAffects a subset of customers across desktop, web, and mobile clients.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eCurrent impact to end users: \u003c/strong\u003eImages uploaded before roughly 9:30 PM GMT on Sep 11 appear blurry in previews and fail to download. Newly uploaded images are unaffected. Previously affected images remain blurry and undownloadable.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe appreciate your patience as we sort this out.\u003c/p\u003e",
+          "date_created": "2026-09-12T08:24:18-07:00"
+        },
+        {
+          "body": "\u003cp\u003eSome customers experienced blurry images that couldn't be downloaded across all clients, affecting files uploaded before a recent file storage update. We deployed a fix restoring proper file access, and confirmed it resolved the issue for affected customers. We apologize for how this incident affected you and your business. We will undertake a full investigation of the incident, establishing the technical trigger, the underlying cause, and preventive action to avoid a repeat in the future.\u003c/p\u003e",
+          "date_created": "2026-09-12T13:00:00-07:00"
+        }
+      ],
+      "services": [
+        "Files"
+      ],
+      "status": "resolved",
+      "title": "Some customers experiencing blurry image previews and download issues",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-09/f171324a097abb9a"
+    }
   }
 ]

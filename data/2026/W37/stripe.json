@@ -59,7 +59,7 @@
           "showcase": false,
           "start_date": "2023-05-25",
           "status": "operational",
-          "updated_at": "2026-09-10T21:28:26.551Z"
+          "updated_at": "2026-09-13T05:17:56.422Z"
         }
       ],
       "created_at": "2026-09-10T20:53:41.182Z",
@@ -128,6 +128,107 @@
       "started_at": "2026-09-10T20:53:41.173Z",
       "status": "resolved",
       "updated_at": "2026-09-10T21:28:26.595Z"
+    }
+  },
+  {
+    "key": "stripe/hvy6s6zmp1mn",
+    "vendor": "stripe",
+    "native_id": "hvy6s6zmp1mn",
+    "title": "Elevated Interac errors",
+    "url": "https://stspg.io/j5s6qs75yrjz",
+    "impact": "none",
+    "status": "monitoring",
+    "started_at": "2026-09-13T04:45:27.883Z",
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "yy5sw1hv9jl7",
+        "status": "investigating",
+        "body": "Since 03:46 UTC, we’ve observed elevated error rates and increased response times with Interac payments, affecting in-person transactions in Canada. We have reached out to Interac and will share updates as soon as they are available.",
+        "created_at": "2026-09-13T04:45:27.984Z"
+      },
+      {
+        "native_id": "0x3nkjvnntw6",
+        "status": "monitoring",
+        "body": "We have observed recovery since 04:50 UTC but have been advised by Interac that ongoing maintenance will occur until 15:00 UTC. During this period, there may be intermittent errors and increased response times with Interac payments. We are monitoring closely and will share updates as soon as they are available.",
+        "created_at": "2026-09-13T05:17:56.455Z"
+      }
+    ],
+    "first_seen_at": "2026-09-13T10:42:25.302529686Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-13T05:17:56.422Z"
+        }
+      ],
+      "created_at": "2026-09-13T04:45:27.892Z",
+      "id": "hvy6s6zmp1mn",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have observed recovery since 04:50 UTC but have been advised by Interac that ongoing maintenance will occur until 15:00 UTC. During this period, there may be intermittent errors and increased response times with Interac payments. We are monitoring closely and will share updates as soon as they are available.",
+          "created_at": "2026-09-13T05:17:56.455Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-13T05:17:56.455Z",
+          "id": "0x3nkjvnntw6",
+          "incident_id": "hvy6s6zmp1mn",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T05:17:56.455Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since 03:46 UTC, we’ve observed elevated error rates and increased response times with Interac payments, affecting in-person transactions in Canada. We have reached out to Interac and will share updates as soon as they are available.",
+          "created_at": "2026-09-13T04:45:27.984Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-13T04:45:27.984Z",
+          "id": "yy5sw1hv9jl7",
+          "incident_id": "hvy6s6zmp1mn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T04:45:27.984Z"
+        }
+      ],
+      "monitoring_at": "2026-09-13T05:17:56.455Z",
+      "name": "Elevated Interac errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/j5s6qs75yrjz",
+      "started_at": "2026-09-13T04:45:27.883Z",
+      "status": "monitoring",
+      "updated_at": "2026-09-13T05:17:56.473Z"
     }
   }
 ]
