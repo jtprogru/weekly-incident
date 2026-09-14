@@ -2,96 +2,96 @@
   "week": "2026-W37",
   "from": "2026-09-07T00:00:00Z",
   "to": "2026-09-14T00:00:00Z",
-  "generated_at": "2026-09-13T10:42:25.302529686Z",
+  "generated_at": "2026-09-14T11:04:37.651840794Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 4,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 39,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-13T10:42:25.302529686Z",
+      "fetched_at": "2026-09-14T11:04:37.651840794Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -152,6 +152,26 @@
       "above_threshold": true
     },
     {
+      "key": "anthropic/r1pqn1kb4hvk",
+      "vendor": "anthropic",
+      "title": "Degraded functionality for Claude Cowork on Windows",
+      "url": "https://stspg.io/5yp3rhhztm30",
+      "impact": "major",
+      "status": "identified",
+      "started_at": "2026-09-10T15:54:10Z",
+      "ongoing": true,
+      "components": [
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 8205,
+        "duration_minutes": 5470,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/sjs8s0q2x4hw",
       "vendor": "cloudflare",
       "title": "Workers Cron Triggers degraded",
@@ -170,26 +190,6 @@
         "duration_minutes": 3376,
         "components": 1,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "anthropic/r1pqn1kb4hvk",
-      "vendor": "anthropic",
-      "title": "Degraded functionality for Claude Cowork on Windows",
-      "url": "https://stspg.io/5yp3rhhztm30",
-      "impact": "major",
-      "status": "identified",
-      "started_at": "2026-09-10T15:54:10Z",
-      "ongoing": true,
-      "components": [
-        "Claude Cowork"
-      ],
-      "score": {
-        "value": 6012,
-        "duration_minutes": 4008,
-        "components": 1,
-        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -301,6 +301,28 @@
       "above_threshold": true
     },
     {
+      "key": "stripe/hvy6s6zmp1mn",
+      "vendor": "stripe",
+      "title": "Elevated Interac errors",
+      "url": "https://stspg.io/j5s6qs75yrjz",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-13T04:45:27.883Z",
+      "resolved_at": "2026-09-13T15:49:36.459Z",
+      "duration_minutes": 664,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 796.8,
+        "duration_minutes": 664,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M20PYYYGRT9303VHAPA7YNT2",
       "vendor": "openai",
       "title": "Elevated errors for image generation",
@@ -326,9 +348,11 @@
       "title": "Incident with several GitHub Services",
       "url": "https://stspg.io/8f3xch4y0v2k",
       "impact": "critical",
-      "status": "investigating",
+      "status": "resolved",
       "started_at": "2026-09-13T09:16:11.468Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-13T10:44:55.016Z",
+      "duration_minutes": 88,
+      "ongoing": false,
       "components": [
         "API Requests",
         "Issues",
@@ -337,8 +361,8 @@
         "Pages"
       ],
       "score": {
-        "value": 645,
-        "duration_minutes": 86,
+        "value": 660,
+        "duration_minutes": 88,
         "components": 5,
         "vendor_weight": 1.5
       },
@@ -408,26 +432,6 @@
         "duration_minutes": 143,
         "components": 2,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "stripe/hvy6s6zmp1mn",
-      "vendor": "stripe",
-      "title": "Elevated Interac errors",
-      "url": "https://stspg.io/j5s6qs75yrjz",
-      "impact": "none",
-      "status": "monitoring",
-      "started_at": "2026-09-13T04:45:27.883Z",
-      "ongoing": true,
-      "components": [
-        "Acquirers and payment methods"
-      ],
-      "score": {
-        "value": 427.2,
-        "duration_minutes": 356,
-        "components": 1,
-        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -776,24 +780,6 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M2D1CZG0862JB4JHVW56QF89",
-      "vendor": "openai",
-      "title": "Codex GitHub Review and Pull Request Failures",
-      "url": "https://status.openai.com/incidents/01M2D1CZG0862JB4JHVW56QF89",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-09-13T09:26:00Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 114,
-        "duration_minutes": 76,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": false
-    },
-    {
       "key": "openai/01M23BNX5V1XT9P3NP0PX56FTN",
       "vendor": "openai",
       "title": "Increased Error Rate For Pro and Plus Plan Conversations",
@@ -928,6 +914,46 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M2DV6788RRSDZ5K98S5HN0A8",
+      "vendor": "openai",
+      "title": "Elevated errors for ChatGPT users in Europe",
+      "url": "https://status.openai.com/incidents/01M2DV6788RRSDZ5K98S5HN0A8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-13T16:56:41Z",
+      "resolved_at": "2026-09-13T17:47:55Z",
+      "duration_minutes": 51,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 76.5,
+        "duration_minutes": 51,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M2D1CZG0862JB4JHVW56QF89",
+      "vendor": "openai",
+      "title": "Codex GitHub Review and Pull Request Failures",
+      "url": "https://status.openai.com/incidents/01M2D1CZG0862JB4JHVW56QF89",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-13T09:26:00Z",
+      "resolved_at": "2026-09-13T09:53:42Z",
+      "duration_minutes": 27,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 40.5,
+        "duration_minutes": 27,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M23KG62KKK448RN434CQ64Z8",
       "vendor": "openai",
       "title": "Investigating unexpected usage limit resets",
@@ -1026,6 +1052,26 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/n1b3mc363979",
+      "vendor": "grafana",
+      "title": "Failures Submitting Self-Serve Configuration Changes for Grafana Cloud Logs in AWS Sweden (prod-eu-north-0)",
+      "url": "https://stspg.io/gcg65gc0vtw8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-12T23:00:00Z",
+      "resolved_at": "2026-09-12T23:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     }
