@@ -2,101 +2,253 @@
   "week": "2026-W38",
   "from": "2026-09-14T00:00:00Z",
   "to": "2026-09-21T00:00:00Z",
-  "generated_at": "2026-09-14T11:04:37.651840794Z",
+  "generated_at": "2026-09-15T10:33:54.452574974Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
-      "incidents_seen": 4,
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 39,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-14T11:04:37.651840794Z",
+      "fetched_at": "2026-09-15T10:33:54.452574974Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/s4x7n3nfqnyy",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Queues issues",
+      "url": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-14T20:22:30Z",
+      "ongoing": true,
+      "components": [
+        "Queues"
+      ],
+      "score": {
+        "value": 1531.8,
+        "duration_minutes": 851,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/19g1m7tsvncw",
+      "vendor": "cloudflare",
+      "title": "Some Replicate models are failing to start",
+      "url": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-14T22:25:50Z",
+      "ongoing": true,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 1310.4,
+        "duration_minutes": 728,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+      "vendor": "openai",
+      "title": "Elevated errors affecting Work Mode in ChatGPT",
+      "url": "https://status.openai.com/incidents/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T15:58:48Z",
+      "resolved_at": "2026-09-15T03:11:36Z",
+      "duration_minutes": 672,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 1008,
+        "duration_minutes": 672,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/7pq12nvfybqf",
+      "vendor": "grafana",
+      "title": "Increased Execution Time for Browser Checks in Synthetic Monitoring",
+      "url": "https://stspg.io/8gz39t6rmtrv",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-15T10:00:19.13Z",
+      "ongoing": true,
+      "components": [
+        "AWS Australia - prod-au-southeast-1: Public Probes",
+        "AWS Brazil - prod-sa-east-1: Public Probes",
+        "AWS Canada - prod-ca-east-0: Public Probes",
+        "AWS Germany - prod-eu-west-2: Public Probes",
+        "AWS India - prod-ap-south-1: Public Probes",
+        "AWS Japan - prod-ap-northeast-0: Public Probes",
+        "AWS Singapore - prod-ap-southeast-1: Public Probes",
+        "AWS Sweden - prod-eu-north-0: Public Probes",
+        "AWS US East - prod-us-east-0: Public Probes",
+        "AWS US East - prod-us-east-3: Public Probes",
+        "AWS US West - prod-us-west-0: Public Probes",
+        "Azure Netherlands - prod-eu-west-3: Public Probes",
+        "Azure US Central - prod-us-central2: Public Probes",
+        "Azure US Central - prod-us-central7: Public Probes",
+        "GCP Australia - prod-au-southeast-0: Public Probes",
+        "GCP Belgium - prod-eu-west-0: Public Probes",
+        "GCP Brazil - prod-sa-east-0: Public Probes",
+        "GCP India - prod-ap-south-0: Public Probes",
+        "GCP Singapore - prod-ap-southeast-0: Public Probes",
+        "GCP UK - prod-gb-south-0: Public Probes",
+        "GCP US Central - prod-us-central-0: Public Probes",
+        "AWS UAE - prod-me-central-1: Public Probes",
+        "AWS UK - prod-gb-south-1: Public Probes",
+        "AWS Switzerland - prod-eu-central-0: Public Probes",
+        "AWS Indonesia - prod-ap-southeast-2: Public Probes",
+        "AWS Ireland - prod-eu-west-6: Public Probes",
+        "GCP Saudi Arabia - prod-me-central-0: Public Probes",
+        "GCP US East - prod-us-east-1: Public Probes"
+      ],
+      "score": {
+        "value": 924,
+        "duration_minutes": 33,
+        "components": 28,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/rnmq02lhv5w1",
+      "vendor": "cloudflare",
+      "title": "Load Balancing Analytics and Notification Delays",
+      "url": "https://www.cloudflarestatus.com/incidents/rnmq02lhv5w1",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T23:03:54.607Z",
+      "resolved_at": "2026-09-15T02:27:03.755Z",
+      "duration_minutes": 203,
+      "ongoing": false,
+      "components": [
+        "Load Balancing and Monitoring"
+      ],
+      "score": {
+        "value": 365.40000000000003,
+        "duration_minutes": 203,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/6304r9jjhj34",
+      "vendor": "anthropic",
+      "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
+      "url": "https://stspg.io/x1qpycpg6ln7",
+      "impact": "major",
+      "status": "investigating",
+      "started_at": "2026-09-15T09:48:23.066Z",
+      "ongoing": true,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 270,
+        "duration_minutes": 45,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
     {
       "key": "openai/01M2EWYR55J47M2BPG9WC76VEG",
       "vendor": "openai",
@@ -114,6 +266,231 @@
         "duration_minutes": 70,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/kzh5j0mt7qwc",
+      "vendor": "github",
+      "title": "Actions Larger Runner Jobs for some customers may be slow to start",
+      "url": "https://stspg.io/f2b6fd4l83wy",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T18:40:25.072Z",
+      "resolved_at": "2026-09-14T19:35:48.136Z",
+      "duration_minutes": 55,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 82.5,
+        "duration_minutes": 55,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/qwdwmtqghpk5",
+      "vendor": "github",
+      "title": "Disruption with some GitHub services",
+      "url": "https://stspg.io/6pn81yd1x4hz",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-09-15T09:47:15.085Z",
+      "ongoing": true,
+      "components": [
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 69,
+        "duration_minutes": 46,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/pj1qcy7lhm11",
+      "vendor": "cloudflare",
+      "title": "Network latency affecting Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/pj1qcy7lhm11",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T07:15:57.009Z",
+      "resolved_at": "2026-09-15T07:35:44.727Z",
+      "duration_minutes": 19,
+      "ongoing": false,
+      "components": [
+        "Singapore, Singapore - (SIN)",
+        "Network"
+      ],
+      "score": {
+        "value": 68.4,
+        "duration_minutes": 19,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M2HYH64J2CZMZ63HEV2FCQFA",
+      "vendor": "openai",
+      "title": "Elevated errors from GPT-5.6 and GPT-5.6 Instant on paid plans",
+      "url": "https://status.openai.com/incidents/01M2HYH64J2CZMZ63HEV2FCQFA",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T07:12:04Z",
+      "resolved_at": "2026-09-15T07:53:36Z",
+      "duration_minutes": 41,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 61.5,
+        "duration_minutes": 41,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/q7z4zxl8mf24",
+      "vendor": "circleci",
+      "title": "Increased wait times for macOS jobs",
+      "url": "https://stspg.io/d885vgdcmp7p",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T11:59:15.776Z",
+      "resolved_at": "2026-09-14T12:59:40.333Z",
+      "duration_minutes": 60,
+      "ongoing": false,
+      "components": [
+        "macOS Jobs"
+      ],
+      "score": {
+        "value": 60,
+        "duration_minutes": 60,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M2H3J1D6Y7RHAP49GRWGJAY0",
+      "vendor": "openai",
+      "title": "Degraded Performance affecting Agents API",
+      "url": "https://status.openai.com/incidents/01M2H3J1D6Y7RHAP49GRWGJAY0",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-14T23:20:41Z",
+      "resolved_at": "2026-09-14T23:39:21Z",
+      "duration_minutes": 18,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 27,
+        "duration_minutes": 18,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "aws/33f3c8e8b99e2991",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-09-15T10:22:28Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-south-1"
+      ],
+      "score": {
+        "value": 22,
+        "duration_minutes": 11,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "aws/430be6afc66bab86",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-09-15T10:27:10Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-central-1"
+      ],
+      "score": {
+        "value": 12,
+        "duration_minutes": 6,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/jg705wgvd4bc",
+      "vendor": "grafana",
+      "title": "CloudWatch request timeouts in prod-us-central-0",
+      "url": "https://stspg.io/fbswxlld304t",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-14T13:04:22.506Z",
+      "resolved_at": "2026-09-14T12:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/95c8hvlcvxmj",
+      "vendor": "cloudflare",
+      "title": "Increased 5xx errors and latency for Los Angeles (LAX) Sept 14 22:15 - Sept 14 23:10 UTC",
+      "url": "https://www.cloudflarestatus.com/incidents/95c8hvlcvxmj",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-14T22:00:00Z",
+      "resolved_at": "2026-09-14T22:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/jjyvkl193v79",
+      "vendor": "grafana",
+      "title": "Intermittent Metric Write Errors in GCP US Central (prod-us-central-0)",
+      "url": "https://stspg.io/xh6frqpk1kxq",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T07:49:28.234Z",
+      "resolved_at": "2026-09-14T15:30:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     }
