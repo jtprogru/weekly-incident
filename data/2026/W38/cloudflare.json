@@ -6,8 +6,10 @@
     "title": "Cloudflare Queues issues",
     "url": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-09-14T20:22:30Z",
+    "status": "resolved",
+    "started_at": "2026-09-14T20:22:30.07Z",
+    "resolved_at": "2026-09-15T22:31:10.07Z",
+    "duration_minutes": 1568,
     "components": [
       "Queues"
     ],
@@ -23,6 +25,18 @@
         "status": "identified",
         "body": "We are investigating an issue where messages published to some queues are not being delivered to their consumers, resulting in delivery delays. Publishing to queues is unaffected, and messages are being received and safely retained — no messages are being lost. We have identified the root cause and are actively working on a fix. Affected messages will be delivered automatically once the issue is resolved.",
         "created_at": "2026-09-15T02:01:55.742Z"
+      },
+      {
+        "native_id": "cx280rgz0nqv",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-15T15:14:25.707Z"
+      },
+      {
+        "native_id": "3s7d75sxw7l6",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-15T22:31:10.07Z"
       }
     ],
     "first_seen_at": "2026-09-15T10:33:54.452574974Z",
@@ -40,14 +54,47 @@
           "position": 81,
           "showcase": false,
           "start_date": "2025-10-22",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-14T20:22:30.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T22:31:10.000Z"
         }
       ],
       "created_at": "2026-09-14T20:22:30.000Z",
       "id": "s4x7n3nfqnyy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Cloudflare Sites and Services - Queues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-15T22:31:10.070Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T22:31:10.070Z",
+          "id": "3s7d75sxw7l6",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T22:31:10.070Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-15T15:14:25.707Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T15:14:25.707Z",
+          "id": "cx280rgz0nqv",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T15:14:25.707Z"
+        },
         {
           "affected_components": [
             {
@@ -89,15 +136,67 @@
           "updated_at": "2026-09-14T20:22:30.141Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-09-15T15:14:25.707Z",
       "name": "Cloudflare Queues issues",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-15T22:31:10.070Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
-      "started_at": "2026-09-14T20:22:30.000Z",
-      "status": "identified",
-      "updated_at": "2026-09-15T02:01:55.000Z"
+      "started_at": "2026-09-14T20:22:30.070Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T22:31:10.087Z"
+    }
+  },
+  {
+    "key": "cloudflare/1k5ckxlq77kp",
+    "vendor": "cloudflare",
+    "native_id": "1k5ckxlq77kp",
+    "title": "Network Performance Issues in Ashburn",
+    "url": "https://www.cloudflarestatus.com/incidents/1k5ckxlq77kp",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-14T20:30:00Z",
+    "resolved_at": "2026-09-14T20:30:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "vr74fx2y7yfc",
+        "status": "resolved",
+        "body": "Between 20:55-21:52 UTC on 2026-09-15, Cloudflare experienced an elevated rate of 5xx HTTP errors affecting traffic passing through Ashburn (IAD). The issue has been  resolved, and impact to the IAD location is mitigated.",
+        "created_at": "2026-09-16T01:09:29.049Z"
+      }
+    ],
+    "first_seen_at": "2026-09-16T10:22:45.825981408Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-14T20:30:00.000Z",
+      "id": "1k5ckxlq77kp",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 20:55-21:52 UTC on 2026-09-15, Cloudflare experienced an elevated rate of 5xx HTTP errors affecting traffic passing through Ashburn (IAD). The issue has been  resolved, and impact to the IAD location is mitigated.",
+          "created_at": "2026-09-16T01:09:29.049Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-14T20:30:00.000Z",
+          "id": "vr74fx2y7yfc",
+          "incident_id": "1k5ckxlq77kp",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T01:09:29.049Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues in Ashburn",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-14T20:30:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/1k5ckxlq77kp",
+      "started_at": "2026-09-14T20:30:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-16T01:09:29.060Z"
     }
   },
   {
@@ -159,8 +258,10 @@
     "title": "Some Replicate models are failing to start",
     "url": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-09-14T22:25:50Z",
+    "status": "resolved",
+    "started_at": "2026-09-14T22:25:50.253Z",
+    "resolved_at": "2026-09-15T14:06:32.892Z",
+    "duration_minutes": 940,
     "components": [
       "Replicate"
     ],
@@ -176,6 +277,12 @@
         "status": "identified",
         "body": "Some third party models as well as https://replicate.com/qwen/qwen-edit-multiangle are affected and are unable to scale out. Please use alternate models while we work with providers to publish fixed versions.",
         "created_at": "2026-09-15T00:03:02.243Z"
+      },
+      {
+        "native_id": "r2t39cdmvnnf",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-15T14:06:32.892Z"
       }
     ],
     "first_seen_at": "2026-09-15T10:33:54.452574974Z",
@@ -193,14 +300,34 @@
           "position": 93,
           "showcase": false,
           "start_date": "2026-06-30",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-14T22:25:50.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T14:06:32.000Z"
         }
       ],
       "created_at": "2026-09-14T22:25:50.000Z",
       "id": "19g1m7tsvncw",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "Cloudflare Sites and Services - Replicate",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-15T14:06:32.892Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T14:06:32.892Z",
+          "id": "r2t39cdmvnnf",
+          "incident_id": "19g1m7tsvncw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T14:06:32.892Z"
+        },
         {
           "affected_components": null,
           "body": "Some third party models as well as https://replicate.com/qwen/qwen-edit-multiangle are affected and are unable to scale out. Please use alternate models while we work with providers to publish fixed versions.",
@@ -239,11 +366,11 @@
       "name": "Some Replicate models are failing to start",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-15T14:06:32.892Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
-      "started_at": "2026-09-14T22:25:50.000Z",
-      "status": "identified",
-      "updated_at": "2026-09-15T00:03:02.000Z"
+      "started_at": "2026-09-14T22:25:50.253Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T14:06:32.911Z"
     }
   },
   {
@@ -555,6 +682,356 @@
       "started_at": "2026-09-15T07:15:57.009Z",
       "status": "resolved",
       "updated_at": "2026-09-15T07:35:44.752Z"
+    }
+  },
+  {
+    "key": "cloudflare/qc2v4gxy3gfw",
+    "vendor": "cloudflare",
+    "native_id": "qc2v4gxy3gfw",
+    "title": "Network Performance Issues in Los Angeles",
+    "url": "https://www.cloudflarestatus.com/incidents/qc2v4gxy3gfw",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-09-16T02:03:10Z",
+    "components": [
+      "Los Angeles, CA, United States - (LAX)"
+    ],
+    "updates": [
+      {
+        "native_id": "l2my8wvp2lhg",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an increased level of HTTP 5XX errors. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-09-16T02:03:10.101Z"
+      },
+      {
+        "native_id": "mbrml69nh8t4",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-16T03:44:46.731Z"
+      }
+    ],
+    "first_seen_at": "2026-09-16T10:22:45.825981408Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T19:24:27.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "38w4zp21dlkc",
+          "name": "Los Angeles, CA, United States - (LAX)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 27,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-09-16T02:03:10.000Z"
+        }
+      ],
+      "created_at": "2026-09-16T02:03:10.000Z",
+      "id": "qc2v4gxy3gfw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "38w4zp21dlkc",
+              "name": "North America - Los Angeles, CA, United States - (LAX)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-16T03:44:46.731Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T03:44:46.731Z",
+          "id": "mbrml69nh8t4",
+          "incident_id": "qc2v4gxy3gfw",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T03:44:46.731Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "38w4zp21dlkc",
+              "name": "North America - Los Angeles, CA, United States - (LAX)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an increased level of HTTP 5XX errors. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-09-16T02:03:10.101Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T02:03:10.101Z",
+          "id": "l2my8wvp2lhg",
+          "incident_id": "qc2v4gxy3gfw",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T02:03:10.101Z"
+        }
+      ],
+      "monitoring_at": "2026-09-16T03:44:46.000Z",
+      "name": "Network Performance Issues in Los Angeles",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/qc2v4gxy3gfw",
+      "started_at": "2026-09-16T02:03:10.000Z",
+      "status": "monitoring",
+      "updated_at": "2026-09-16T03:44:46.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/zlyf7lvpp05s",
+    "vendor": "cloudflare",
+    "native_id": "zlyf7lvpp05s",
+    "title": "Support Helpdesk Availability Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/zlyf7lvpp05s",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-09-16T08:31:12Z",
+    "components": [
+      "Support Site"
+    ],
+    "updates": [
+      {
+        "native_id": "kmpzc1r4w3y0",
+        "status": "investigating",
+        "body": "Our helpdesk provider is currently experiencing issues, and as such customers might encounter errors while submitting or viewing tickets. Responses on customer inquiries may be delayed during this time.",
+        "created_at": "2026-09-16T08:31:12.349Z"
+      },
+      {
+        "native_id": "cpln79pthdy7",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-09-16T08:32:48.107Z"
+      },
+      {
+        "native_id": "0w1gd8m0148g",
+        "status": "identified",
+        "body": "Support portal and live chat support are still unavailable due to the ongoing helpdesk provider outage. Customers may still experience issues submitting or viewing tickets/chats, and overall response times may be delayed.\n\nPhone support remains fully operational for urgent inquiries.",
+        "created_at": "2026-09-16T09:11:29.019Z"
+      },
+      {
+        "native_id": "9zw9jq8lw3yz",
+        "status": "identified",
+        "body": "Support portal and live chat support are still unavailable due to the ongoing helpdesk provider outage.\n\nWe highly recommend waiting for the incident resolution to submit or update cases. If you have an urgent issue, you can reach out to us on the emergency phone support line, or email us at backupsupport@cloudflare.com, but please note that responses might be heavily delayed.",
+        "created_at": "2026-09-16T10:21:02.551Z"
+      }
+    ],
+    "first_seen_at": "2026-09-16T10:22:45.825981408Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-06-19T19:45:34.000Z",
+          "description": "Knowledge base and support ticket portal at https://support.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "jzcwkvrc4w4q",
+          "name": "Support Site",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 103,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-09-16T08:32:48.000Z"
+        }
+      ],
+      "created_at": "2026-09-16T08:31:12.000Z",
+      "id": "zlyf7lvpp05s",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "jzcwkvrc4w4q",
+              "name": "Cloudflare Sites and Services - Support Site",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Support portal and live chat support are still unavailable due to the ongoing helpdesk provider outage.\n\nWe highly recommend waiting for the incident resolution to submit or update cases. If you have an urgent issue, you can reach out to us on the emergency phone support line, or email us at backupsupport@cloudflare.com, but please note that responses might be heavily delayed.",
+          "created_at": "2026-09-16T10:21:02.551Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T10:21:02.551Z",
+          "id": "9zw9jq8lw3yz",
+          "incident_id": "zlyf7lvpp05s",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T10:21:02.551Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jzcwkvrc4w4q",
+              "name": "Cloudflare Sites and Services - Support Site",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Support portal and live chat support are still unavailable due to the ongoing helpdesk provider outage. Customers may still experience issues submitting or viewing tickets/chats, and overall response times may be delayed.\n\nPhone support remains fully operational for urgent inquiries.",
+          "created_at": "2026-09-16T09:11:29.019Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T09:11:29.019Z",
+          "id": "0w1gd8m0148g",
+          "incident_id": "zlyf7lvpp05s",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T09:11:29.019Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jzcwkvrc4w4q",
+              "name": "Cloudflare Sites and Services - Support Site",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-09-16T08:32:48.107Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T08:32:48.107Z",
+          "id": "cpln79pthdy7",
+          "incident_id": "zlyf7lvpp05s",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T08:32:48.107Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Our helpdesk provider is currently experiencing issues, and as such customers might encounter errors while submitting or viewing tickets. Responses on customer inquiries may be delayed during this time.",
+          "created_at": "2026-09-16T08:31:12.349Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T08:31:12.349Z",
+          "id": "kmpzc1r4w3y0",
+          "incident_id": "zlyf7lvpp05s",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T08:31:12.349Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Support Helpdesk Availability Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/zlyf7lvpp05s",
+      "started_at": "2026-09-16T08:31:12.000Z",
+      "status": "identified",
+      "updated_at": "2026-09-16T10:21:02.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/d4kgs6xmq9tl",
+    "vendor": "cloudflare",
+    "native_id": "d4kgs6xmq9tl",
+    "title": "Email Notifications Delayed",
+    "url": "https://www.cloudflarestatus.com/incidents/d4kgs6xmq9tl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-16T08:33:30.364Z",
+    "resolved_at": "2026-09-16T08:50:45.349Z",
+    "duration_minutes": 17,
+    "components": [
+      "Notifications"
+    ],
+    "updates": [
+      {
+        "native_id": "p7tfds6x3cfn",
+        "status": "investigating",
+        "body": "Cloudflare is investigating delays with dispatching of notification emails for some customers. Webhooks and PagerDuty notifications are not affected.",
+        "created_at": "2026-09-16T08:33:30.476Z"
+      },
+      {
+        "native_id": "bpkz2m8xqr4b",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-16T08:50:45.349Z"
+      }
+    ],
+    "first_seen_at": "2026-09-16T10:22:45.825981408Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-09-13T12:50:58.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5xvn0m7tthlf",
+          "name": "Notifications",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 74,
+          "showcase": false,
+          "start_date": "2022-09-13",
+          "status": "operational",
+          "updated_at": "2026-09-16T08:50:45.000Z"
+        }
+      ],
+      "created_at": "2026-09-16T08:33:30.000Z",
+      "id": "d4kgs6xmq9tl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "5xvn0m7tthlf",
+              "name": "Cloudflare Sites and Services - Notifications",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-16T08:50:45.349Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T08:50:45.349Z",
+          "id": "bpkz2m8xqr4b",
+          "incident_id": "d4kgs6xmq9tl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T08:50:45.349Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5xvn0m7tthlf",
+              "name": "Cloudflare Sites and Services - Notifications",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating delays with dispatching of notification emails for some customers. Webhooks and PagerDuty notifications are not affected.",
+          "created_at": "2026-09-16T08:33:30.476Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T08:33:30.476Z",
+          "id": "p7tfds6x3cfn",
+          "incident_id": "d4kgs6xmq9tl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T08:33:30.476Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Email Notifications Delayed",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-16T08:50:45.349Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/d4kgs6xmq9tl",
+      "started_at": "2026-09-16T08:33:30.364Z",
+      "status": "resolved",
+      "updated_at": "2026-09-16T08:50:45.365Z"
     }
   }
 ]

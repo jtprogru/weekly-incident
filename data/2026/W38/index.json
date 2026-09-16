@@ -2,158 +2,160 @@
   "week": "2026-W38",
   "from": "2026-09-14T00:00:00Z",
   "to": "2026-09-21T00:00:00Z",
-  "generated_at": "2026-09-15T10:33:54.452574974Z",
+  "generated_at": "2026-09-16T10:22:45.825981408Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 39,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-15T10:33:54.452574974Z",
+      "fetched_at": "2026-09-16T10:22:45.825981408Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
     {
+      "key": "aws/33f3c8e8b99e2991",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-09-15T10:22:28Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-south-1"
+      ],
+      "score": {
+        "value": 2880,
+        "duration_minutes": 1440,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "aws/430be6afc66bab86",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-09-15T10:27:10Z",
+      "ongoing": true,
+      "components": [
+        "multipleservices-me-central-1"
+      ],
+      "score": {
+        "value": 2870,
+        "duration_minutes": 1435,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/s4x7n3nfqnyy",
       "vendor": "cloudflare",
       "title": "Cloudflare Queues issues",
       "url": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-14T20:22:30Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-09-14T20:22:30.07Z",
+      "resolved_at": "2026-09-15T22:31:10.07Z",
+      "duration_minutes": 1568,
+      "ongoing": false,
       "components": [
         "Queues"
       ],
       "score": {
-        "value": 1531.8,
-        "duration_minutes": 851,
+        "value": 2822.4,
+        "duration_minutes": 1568,
         "components": 1,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/19g1m7tsvncw",
-      "vendor": "cloudflare",
-      "title": "Some Replicate models are failing to start",
-      "url": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-14T22:25:50Z",
-      "ongoing": true,
-      "components": [
-        "Replicate"
-      ],
-      "score": {
-        "value": 1310.4,
-        "duration_minutes": 728,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "openai/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
-      "vendor": "openai",
-      "title": "Elevated errors affecting Work Mode in ChatGPT",
-      "url": "https://status.openai.com/incidents/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
-      "impact": "minor",
-      "status": "resolved",
-      "started_at": "2026-09-14T15:58:48Z",
-      "resolved_at": "2026-09-15T03:11:36Z",
-      "duration_minutes": 672,
-      "ongoing": false,
-      "components": [],
-      "score": {
-        "value": 1008,
-        "duration_minutes": 672,
-        "components": 1,
-        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -163,9 +165,11 @@
       "title": "Increased Execution Time for Browser Checks in Synthetic Monitoring",
       "url": "https://stspg.io/8gz39t6rmtrv",
       "impact": "minor",
-      "status": "identified",
+      "status": "resolved",
       "started_at": "2026-09-15T10:00:19.13Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-15T11:17:10.625Z",
+      "duration_minutes": 76,
+      "ongoing": false,
       "components": [
         "AWS Australia - prod-au-southeast-1: Public Probes",
         "AWS Brazil - prod-sa-east-1: Public Probes",
@@ -197,12 +201,99 @@
         "GCP US East - prod-us-east-1: Public Probes"
       ],
       "score": {
-        "value": 924,
-        "duration_minutes": 33,
+        "value": 2128,
+        "duration_minutes": 76,
         "components": 28,
         "vendor_weight": 1
       },
       "above_threshold": false
+    },
+    {
+      "key": "cloudflare/19g1m7tsvncw",
+      "vendor": "cloudflare",
+      "title": "Some Replicate models are failing to start",
+      "url": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T22:25:50.253Z",
+      "resolved_at": "2026-09-15T14:06:32.892Z",
+      "duration_minutes": 940,
+      "ongoing": false,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 1692,
+        "duration_minutes": 940,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+      "vendor": "openai",
+      "title": "Elevated errors affecting Work Mode in ChatGPT",
+      "url": "https://status.openai.com/incidents/01M2GA8XTS6VB3QCDEGZ0HNAQ5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-14T15:58:48Z",
+      "resolved_at": "2026-09-15T03:11:36Z",
+      "duration_minutes": 672,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 1008,
+        "duration_minutes": 672,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/qc2v4gxy3gfw",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Los Angeles",
+      "url": "https://www.cloudflarestatus.com/incidents/qc2v4gxy3gfw",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-16T02:03:10Z",
+      "ongoing": true,
+      "components": [
+        "Los Angeles, CA, United States - (LAX)"
+      ],
+      "score": {
+        "value": 898.2,
+        "duration_minutes": 499,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/6304r9jjhj34",
+      "vendor": "anthropic",
+      "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
+      "url": "https://stspg.io/x1qpycpg6ln7",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-15T09:48:23.066Z",
+      "resolved_at": "2026-09-15T11:14:44.38Z",
+      "duration_minutes": 86,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 516,
+        "duration_minutes": 86,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/rnmq02lhv5w1",
@@ -227,27 +318,88 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/6304r9jjhj34",
-      "vendor": "anthropic",
-      "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
-      "url": "https://stspg.io/x1qpycpg6ln7",
+      "key": "github/nlxnbqnkdzdl",
+      "vendor": "github",
+      "title": "Degradation with Gemini 3.8 Flash",
+      "url": "https://stspg.io/hsjy12f57b24",
       "impact": "major",
       "status": "investigating",
-      "started_at": "2026-09-15T09:48:23.066Z",
+      "started_at": "2026-09-16T07:20:59.972Z",
       "ongoing": true,
       "components": [
-        "claude.ai",
-        "Claude API (api.anthropic.com)",
-        "Claude Code",
-        "Claude Cowork"
+        "Copilot AI Model Providers"
       ],
       "score": {
-        "value": 270,
-        "duration_minutes": 45,
-        "components": 4,
+        "value": 271.5,
+        "duration_minutes": 181,
+        "components": 1,
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/zlyf7lvpp05s",
+      "vendor": "cloudflare",
+      "title": "Support Helpdesk Availability Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/zlyf7lvpp05s",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-16T08:31:12Z",
+      "ongoing": true,
+      "components": [
+        "Support Site"
+      ],
+      "score": {
+        "value": 199.8,
+        "duration_minutes": 111,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/ynpn1xvjsx86",
+      "vendor": "circleci",
+      "title": "Customers may experience delays in UI updates",
+      "url": "https://stspg.io/0djh5p3ll96t",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T14:42:25.09Z",
+      "resolved_at": "2026-09-15T17:02:45.189Z",
+      "duration_minutes": 140,
+      "ongoing": false,
+      "components": [
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 140,
+        "duration_minutes": 140,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/qwdwmtqghpk5",
+      "vendor": "github",
+      "title": "Disruption with some GitHub services",
+      "url": "https://stspg.io/6pn81yd1x4hz",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T09:47:15.085Z",
+      "resolved_at": "2026-09-15T11:17:22.038Z",
+      "duration_minutes": 90,
+      "ongoing": false,
+      "components": [
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 135,
+        "duration_minutes": 90,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "openai/01M2EWYR55J47M2BPG9WC76VEG",
@@ -290,20 +442,20 @@
       "above_threshold": false
     },
     {
-      "key": "github/qwdwmtqghpk5",
+      "key": "github/bk7zgdcq7s9t",
       "vendor": "github",
       "title": "Disruption with some GitHub services",
-      "url": "https://stspg.io/6pn81yd1x4hz",
+      "url": "https://stspg.io/tbh60vgxfxj6",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-09-15T09:47:15.085Z",
-      "ongoing": true,
-      "components": [
-        "Copilot AI Model Providers"
-      ],
+      "status": "resolved",
+      "started_at": "2026-09-15T19:11:31.334Z",
+      "resolved_at": "2026-09-15T20:00:50.512Z",
+      "duration_minutes": 49,
+      "ongoing": false,
+      "components": [],
       "score": {
-        "value": 69,
-        "duration_minutes": 46,
+        "value": 73.5,
+        "duration_minutes": 49,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -375,6 +527,68 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M2KQNE5C42NEZPX6V01NHH5W",
+      "vendor": "openai",
+      "title": "Elevated errors with gpt-image-2.5-flare",
+      "url": "https://status.openai.com/incidents/01M2KQNE5C42NEZPX6V01NHH5W",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-15T23:50:32Z",
+      "resolved_at": "2026-09-16T00:30:48Z",
+      "duration_minutes": 40,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 60,
+        "duration_minutes": 40,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/d4kgs6xmq9tl",
+      "vendor": "cloudflare",
+      "title": "Email Notifications Delayed",
+      "url": "https://www.cloudflarestatus.com/incidents/d4kgs6xmq9tl",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-16T08:33:30.364Z",
+      "resolved_at": "2026-09-16T08:50:45.349Z",
+      "duration_minutes": 17,
+      "ongoing": false,
+      "components": [
+        "Notifications"
+      ],
+      "score": {
+        "value": 30.6,
+        "duration_minutes": 17,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "digitalocean/grb2v0td1nq5",
+      "vendor": "digitalocean",
+      "title": "Support Portal Service Disruption",
+      "url": "https://stspg.io/n6hr8jd64qjl",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-09-16T09:48:19.073Z",
+      "ongoing": true,
+      "components": [
+        "Support Center"
+      ],
+      "score": {
+        "value": 27.200000000000003,
+        "duration_minutes": 34,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M2H3J1D6Y7RHAP49GRWGJAY0",
       "vendor": "openai",
       "title": "Degraded Performance affecting Agents API",
@@ -395,42 +609,42 @@
       "above_threshold": false
     },
     {
-      "key": "aws/33f3c8e8b99e2991",
-      "vendor": "aws",
-      "title": "Increased Error Rates",
-      "url": "https://health.aws.amazon.com/health/status",
-      "impact": "unknown",
+      "key": "stripe/43xfzqymv1dt",
+      "vendor": "stripe",
+      "title": "Stripe Support Systems issue",
+      "url": "https://stspg.io/1pqrkshz4vdd",
+      "impact": "none",
       "status": "investigating",
-      "started_at": "2026-09-15T10:22:28Z",
+      "started_at": "2026-09-16T10:05:31.143Z",
       "ongoing": true,
       "components": [
-        "multipleservices-me-south-1"
+        "Stripe core components"
       ],
       "score": {
-        "value": 22,
-        "duration_minutes": 11,
+        "value": 20.4,
+        "duration_minutes": 17,
         "components": 1,
-        "vendor_weight": 2
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
     {
-      "key": "aws/430be6afc66bab86",
-      "vendor": "aws",
-      "title": "Increased Error Rates",
-      "url": "https://health.aws.amazon.com/health/status",
-      "impact": "unknown",
-      "status": "investigating",
-      "started_at": "2026-09-15T10:27:10Z",
-      "ongoing": true,
-      "components": [
-        "multipleservices-me-central-1"
-      ],
+      "key": "openai/01M2JZR57HRQTKQGTCWG31M3AS",
+      "vendor": "openai",
+      "title": "Ads Manager login issues",
+      "url": "https://status.openai.com/incidents/01M2JZR57HRQTKQGTCWG31M3AS",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-15T16:52:36Z",
+      "resolved_at": "2026-09-15T16:54:01Z",
+      "duration_minutes": 1,
+      "ongoing": false,
+      "components": [],
       "score": {
-        "value": 12,
-        "duration_minutes": 6,
+        "value": 1.5,
+        "duration_minutes": 1,
         "components": 1,
-        "vendor_weight": 2
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -451,6 +665,26 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/1k5ckxlq77kp",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Ashburn",
+      "url": "https://www.cloudflarestatus.com/incidents/1k5ckxlq77kp",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-14T20:30:00Z",
+      "resolved_at": "2026-09-14T20:30:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

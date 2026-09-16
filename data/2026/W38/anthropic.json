@@ -6,8 +6,10 @@
     "title": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
     "url": "https://stspg.io/x1qpycpg6ln7",
     "impact": "major",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-09-15T09:48:23.066Z",
+    "resolved_at": "2026-09-15T11:14:44.38Z",
+    "duration_minutes": 86,
     "components": [
       "claude.ai",
       "Claude API (api.anthropic.com)",
@@ -26,6 +28,18 @@
         "status": "investigating",
         "body": "We are investigating elevated errors on requests to Claude Mythos 5.1 and Claude Fable 5.1. We will provide an update as soon as possible.",
         "created_at": "2026-09-15T09:52:34.428Z"
+      },
+      {
+        "native_id": "wcr3w3f8wd4v",
+        "status": "monitoring",
+        "body": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.",
+        "created_at": "2026-09-15T10:50:26.391Z"
+      },
+      {
+        "native_id": "v5vflhx2r6c4",
+        "status": "resolved",
+        "body": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.",
+        "created_at": "2026-09-15T11:14:44.38Z"
       }
     ],
     "first_seen_at": "2026-09-15T10:33:54.452574974Z",
@@ -43,8 +57,8 @@
           "position": 1,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "partial_outage",
-          "updated_at": "2026-09-15T09:48:23.125Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T11:14:44.298Z"
         },
         {
           "created_at": "2023-07-11T17:53:10.880Z",
@@ -58,8 +72,8 @@
           "position": 3,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "partial_outage",
-          "updated_at": "2026-09-15T09:48:23.145Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T11:14:44.316Z"
         },
         {
           "created_at": "2025-05-22T21:35:29.822Z",
@@ -73,8 +87,8 @@
           "position": 4,
           "showcase": true,
           "start_date": "2025-02-06",
-          "status": "partial_outage",
-          "updated_at": "2026-09-15T09:48:23.164Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T11:14:44.332Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -88,14 +102,90 @@
           "position": 5,
           "showcase": true,
           "start_date": "2026-04-01",
-          "status": "partial_outage",
-          "updated_at": "2026-09-15T09:48:23.182Z"
+          "status": "operational",
+          "updated_at": "2026-09-15T11:14:44.350Z"
         }
       ],
       "created_at": "2026-09-15T09:48:23.076Z",
       "id": "6304r9jjhj34",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.",
+          "created_at": "2026-09-15T11:14:44.380Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T11:14:44.380Z",
+          "id": "v5vflhx2r6c4",
+          "incident_id": "6304r9jjhj34",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T11:14:44.380Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been deployed for Claude Mythos 5.1 and Claude Fable 5.1 and we are monitoring to ensure it has resolved the issue.",
+          "created_at": "2026-09-15T10:50:26.391Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T10:50:26.391Z",
+          "id": "wcr3w3f8wd4v",
+          "incident_id": "6304r9jjhj34",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T10:50:26.391Z"
+        },
         {
           "affected_components": [
             {
@@ -173,15 +263,15 @@
           "updated_at": "2026-09-15T09:48:23.229Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-09-15T10:50:26.391Z",
       "name": "Intermittent error spikes for Claude Mythos 5.1 and Claude Fable 5.1",
       "page_id": "tymt9n04zgry",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-15T11:14:44.380Z",
       "shortlink": "https://stspg.io/x1qpycpg6ln7",
       "started_at": "2026-09-15T09:48:23.066Z",
-      "status": "investigating",
-      "updated_at": "2026-09-15T09:52:34.432Z"
+      "status": "resolved",
+      "updated_at": "2026-09-15T11:14:44.396Z"
     }
   }
 ]
