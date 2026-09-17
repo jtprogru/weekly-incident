@@ -6,8 +6,10 @@
     "title": "Stripe Support Systems issue",
     "url": "https://stspg.io/1pqrkshz4vdd",
     "impact": "none",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-09-16T10:05:31.143Z",
+    "resolved_at": "2026-09-16T17:09:38.437Z",
+    "duration_minutes": 424,
     "components": [
       "Stripe core components"
     ],
@@ -17,6 +19,12 @@
         "status": "investigating",
         "body": "We're currently investigating issues with our support systems due to a downstream partner issue. We've currently disabled live support channels and are monitoring the affected service provider. We will provide further updates once we have observed recovery.",
         "created_at": "2026-09-16T10:05:31.253Z"
+      },
+      {
+        "native_id": "rys7zjt0g496",
+        "status": "resolved",
+        "body": "The partner issue affecting our support systems has been resolved. Stripe's live support channels have been restored and are operating normally. This issue has been resolved.",
+        "created_at": "2026-09-16T17:09:38.437Z"
       }
     ],
     "first_seen_at": "2026-09-16T10:22:45.825981408Z",
@@ -34,14 +42,34 @@
           "position": 5,
           "showcase": false,
           "start_date": "2023-07-28",
-          "status": "partial_outage",
-          "updated_at": "2026-09-16T10:05:31.201Z"
+          "status": "operational",
+          "updated_at": "2026-09-16T17:52:35.283Z"
         }
       ],
       "created_at": "2026-09-16T10:05:31.151Z",
       "id": "43xfzqymv1dt",
       "impact": "none",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The partner issue affecting our support systems has been resolved. Stripe's live support channels have been restored and are operating normally. This issue has been resolved.",
+          "created_at": "2026-09-16T17:09:38.437Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-16T17:09:38.437Z",
+          "id": "rys7zjt0g496",
+          "incident_id": "43xfzqymv1dt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:09:38.437Z"
+        },
         {
           "affected_components": [
             {
@@ -67,11 +95,303 @@
       "name": "Stripe Support Systems issue",
       "page_id": "d5zv7xbys5v3",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-16T17:09:38.437Z",
       "shortlink": "https://stspg.io/1pqrkshz4vdd",
       "started_at": "2026-09-16T10:05:31.143Z",
-      "status": "investigating",
-      "updated_at": "2026-09-16T10:05:31.256Z"
+      "status": "resolved",
+      "updated_at": "2026-09-16T17:09:38.450Z"
+    }
+  },
+  {
+    "key": "stripe/zmpdfkzbkjcl",
+    "vendor": "stripe",
+    "native_id": "zmpdfkzbkjcl",
+    "title": "Elevated errors on Google Pay payments",
+    "url": "https://stspg.io/j7b7wsrfq7hm",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-16T10:05:49Z",
+    "resolved_at": "2026-09-16T17:52:35.333Z",
+    "duration_minutes": 466,
+    "components": [
+      "Stripe core components",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "5tg88dymcq3d",
+        "status": "monitoring",
+        "body": "We're currently investigating elevated errors on Google Pay payments. We'll post an update soon.",
+        "created_at": "2026-09-16T17:13:49.455Z"
+      },
+      {
+        "native_id": "mdttg7zqzx8n",
+        "status": "monitoring",
+        "body": "We've confirmed with the upstream partner that the Google Pay issue is recovering. We are monitoring and will provide an update when the issue is resolved.",
+        "created_at": "2026-09-16T17:20:14.829Z"
+      },
+      {
+        "native_id": "ykq6m09n3zg4",
+        "status": "resolved",
+        "body": "The issue with Google Pay has been resolved.",
+        "created_at": "2026-09-16T17:52:35.333Z"
+      }
+    ],
+    "first_seen_at": "2026-09-17T10:32:07.261603591Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-09-16T17:52:35.283Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-17T01:17:29.437Z"
+        }
+      ],
+      "created_at": "2026-09-16T10:05:49.000Z",
+      "id": "zmpdfkzbkjcl",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue with Google Pay has been resolved.",
+          "created_at": "2026-09-16T17:52:35.333Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T17:52:35.333Z",
+          "id": "ykq6m09n3zg4",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:52:35.333Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We've confirmed with the upstream partner that the Google Pay issue is recovering. We are monitoring and will provide an update when the issue is resolved.",
+          "created_at": "2026-09-16T17:20:14.829Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T17:20:14.829Z",
+          "id": "mdttg7zqzx8n",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:20:14.829Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're currently investigating elevated errors on Google Pay payments. We'll post an update soon.",
+          "created_at": "2026-09-16T17:13:49.455Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-16T10:05:49.000Z",
+          "id": "5tg88dymcq3d",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:41:23.880Z"
+        }
+      ],
+      "monitoring_at": "2026-09-16T10:05:49.000Z",
+      "name": "Elevated errors on Google Pay payments",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-16T17:52:35.333Z",
+      "shortlink": "https://stspg.io/j7b7wsrfq7hm",
+      "started_at": "2026-09-16T10:05:49.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-16T17:52:35.352Z"
+    }
+  },
+  {
+    "key": "stripe/7h016hnd562f",
+    "vendor": "stripe",
+    "native_id": "7h016hnd562f",
+    "title": "Elevated declines on Visa",
+    "url": "https://stspg.io/rshfm81kk6pl",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-16T23:33:59.858Z",
+    "resolved_at": "2026-09-17T01:17:29.468Z",
+    "duration_minutes": 103,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "sshvd4vlc36d",
+        "status": "investigating",
+        "body": "We're currently investigating elevated error rates and response times with Visa payments. We'll post an update soon.",
+        "created_at": "2026-09-16T23:33:59.948Z"
+      },
+      {
+        "native_id": "x2mjpf6v52r7",
+        "status": "monitoring",
+        "body": "We’re currently seeing elevated card authorization errors related to an issuing bank in North America, which is impacting some Visa transactions. We've seen some recovery and are continuing to monitor.",
+        "created_at": "2026-09-17T00:10:04.568Z"
+      },
+      {
+        "native_id": "gxf6z5x6prjr",
+        "status": "resolved",
+        "body": "Between 20:15 September 16th and 00:08 September 17th UTC, we saw elevated card authorization errors related to an issuing bank in United States which impacted some Visa transactions. This is now resolved.",
+        "created_at": "2026-09-17T01:17:29.468Z"
+      }
+    ],
+    "first_seen_at": "2026-09-17T10:32:07.261603591Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-17T01:17:29.437Z"
+        }
+      ],
+      "created_at": "2026-09-16T23:33:59.866Z",
+      "id": "7h016hnd562f",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 20:15 September 16th and 00:08 September 17th UTC, we saw elevated card authorization errors related to an issuing bank in United States which impacted some Visa transactions. This is now resolved.",
+          "created_at": "2026-09-17T01:17:29.468Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-17T01:17:29.468Z",
+          "id": "gxf6z5x6prjr",
+          "incident_id": "7h016hnd562f",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-17T01:17:29.468Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We’re currently seeing elevated card authorization errors related to an issuing bank in North America, which is impacting some Visa transactions. We've seen some recovery and are continuing to monitor.",
+          "created_at": "2026-09-17T00:10:04.568Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-17T00:10:04.568Z",
+          "id": "x2mjpf6v52r7",
+          "incident_id": "7h016hnd562f",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-17T00:10:04.568Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated error rates and response times with Visa payments. We'll post an update soon.",
+          "created_at": "2026-09-16T23:33:59.948Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-16T23:33:59.948Z",
+          "id": "sshvd4vlc36d",
+          "incident_id": "7h016hnd562f",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T23:33:59.948Z"
+        }
+      ],
+      "monitoring_at": "2026-09-17T00:10:04.568Z",
+      "name": "Elevated declines on Visa",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-17T01:17:29.468Z",
+      "shortlink": "https://stspg.io/rshfm81kk6pl",
+      "started_at": "2026-09-16T23:33:59.858Z",
+      "status": "resolved",
+      "updated_at": "2026-09-17T01:17:29.487Z"
     }
   }
 ]
