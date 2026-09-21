@@ -707,5 +707,160 @@
       "status": "resolved",
       "updated_at": "2026-09-18T17:46:20.500Z"
     }
+  },
+  {
+    "key": "github/f6yrxnz5f7bs",
+    "vendor": "github",
+    "native_id": "f6yrxnz5f7bs",
+    "title": "Incident with Pull Requests",
+    "url": "https://stspg.io/cx8xcm6k8f9s",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-20T22:13:37.88Z",
+    "resolved_at": "2026-09-20T23:22:16.71Z",
+    "duration_minutes": 68,
+    "components": [
+      "Pull Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "cd4dlsl4zckx",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pull Requests",
+        "created_at": "2026-09-20T22:13:37.969Z"
+      },
+      {
+        "native_id": "r5ws33n0z0rc",
+        "status": "monitoring",
+        "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-09-20T22:27:28.769Z"
+      },
+      {
+        "native_id": "kf5423bq26q7",
+        "status": "monitoring",
+        "body": "A git fileserver issue caused a brief delay in creating some merge commits - we've isolated the underlying server and already observed recovery.",
+        "created_at": "2026-09-20T22:32:02.624Z"
+      },
+      {
+        "native_id": "lwhskmh38bsz",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-09-20T23:22:16.71Z"
+      }
+    ],
+    "first_seen_at": "2026-09-21T11:14:36.847652945Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-20T22:27:28.738Z"
+        }
+      ],
+      "created_at": "2026-09-20T22:13:37.889Z",
+      "id": "f6yrxnz5f7bs",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-09-20T23:22:16.710Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-20T23:22:16.710Z",
+          "id": "lwhskmh38bsz",
+          "incident_id": "f6yrxnz5f7bs",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-20T23:22:16.710Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A git fileserver issue caused a brief delay in creating some merge commits - we've isolated the underlying server and already observed recovery.",
+          "created_at": "2026-09-20T22:32:02.624Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-20T22:32:02.624Z",
+          "id": "kf5423bq26q7",
+          "incident_id": "f6yrxnz5f7bs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-20T22:32:02.624Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-09-20T22:27:28.769Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-20T22:27:28.769Z",
+          "id": "r5ws33n0z0rc",
+          "incident_id": "f6yrxnz5f7bs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-20T22:27:28.769Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pull Requests",
+          "created_at": "2026-09-20T22:13:37.969Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-20T22:13:37.969Z",
+          "id": "cd4dlsl4zckx",
+          "incident_id": "f6yrxnz5f7bs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-20T22:13:37.969Z"
+        }
+      ],
+      "monitoring_at": "2026-09-20T22:27:28.769Z",
+      "name": "Incident with Pull Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-20T23:22:16.710Z",
+      "shortlink": "https://stspg.io/cx8xcm6k8f9s",
+      "started_at": "2026-09-20T22:13:37.880Z",
+      "status": "resolved",
+      "updated_at": "2026-09-20T23:22:16.725Z"
+    }
   }
 ]
