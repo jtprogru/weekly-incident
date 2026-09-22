@@ -1,0 +1,56 @@
+[
+  {
+    "key": "aws/f5f654e733c72f13",
+    "vendor": "aws",
+    "native_id": "f5f654e733c72f13",
+    "title": "Increased Error Rates",
+    "url": "https://health.aws.amazon.com/health/status",
+    "impact": "unknown",
+    "status": "investigating",
+    "started_at": "2026-09-21T23:26:48Z",
+    "components": [
+      "ec2-us-east-1"
+    ],
+    "updates": [
+      {
+        "status": "investigating",
+        "body": "We are investigating increased API error rates in the US-EAST-1 Region.",
+        "created_at": "2026-09-21T23:26:48Z"
+      },
+      {
+        "status": "investigating",
+        "body": "We can confirm increased error rates affecting new instance launches, including elevated API error rates for RunInstances, CreateFleet, and related EC2 launch workflows in the US-EAST-1 Region. Customers attempting to launch new EC2 instances may experience launch failures or elevated API response latency. Our engineers are actively engaged and working towards recovering the issue. We are seeing initial signs of recovery. Existing instances remain unaffected. We recommend retrying failed RunInstances and CreateFleet API calls. We will provide an update by 5:30 PM PDT or sooner.",
+        "created_at": "2026-09-21T23:44:15Z"
+      },
+      {
+        "status": "investigating",
+        "body": "Between 3:49 PM and 5:06 PM PDT, we experienced increased error rates affecting new instance launches in the US-EAST-1 Region. During this time, customers may have experienced elevated error rates when attempting to launch new EC2 instances through RunInstances, CreateFleet, and related EC2 launch workflows. AWS services that launch EC2 instances on behalf of customers, including Amazon ECS, AWS Fargate, Amazon EMR, amongst others were also impacted during this period. We identified the root cause as a recent deployment to a subsystem within the EC2 service responsible for processing instance launch requests. We initiated a rollback of the problematic deployment and began observing initial signs of recovery at 4:44 PM. Existing instances remain unaffected. The issue has been resolved and the service is operating normally.",
+        "created_at": "2026-09-22T00:24:18Z"
+      }
+    ],
+    "first_seen_at": "2026-09-22T10:26:37.692550721Z",
+    "raw": [
+      {
+        "description": "We are investigating increased API error rates in the US-EAST-1 Region.",
+        "guid": "https://status.aws.amazon.com/#ec2-us-east-1_1790033208",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 21 Sep 2026 16:26:48 PDT",
+        "title": "Service impact: Increased Error Rates"
+      },
+      {
+        "description": "We can confirm increased error rates affecting new instance launches, including elevated API error rates for RunInstances, CreateFleet, and related EC2 launch workflows in the US-EAST-1 Region. Customers attempting to launch new EC2 instances may experience launch failures or elevated API response latency. Our engineers are actively engaged and working towards recovering the issue. We are seeing initial signs of recovery. Existing instances remain unaffected. We recommend retrying failed RunInstances and CreateFleet API calls. We will provide an update by 5:30 PM PDT or sooner. ",
+        "guid": "https://status.aws.amazon.com/#ec2-us-east-1_1790034255",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 21 Sep 2026 16:44:15 PDT",
+        "title": "Service impact: Increased Error Rates"
+      },
+      {
+        "description": "Between 3:49 PM and 5:06 PM PDT, we experienced increased error rates affecting new instance launches in the US-EAST-1 Region. During this time, customers may have experienced elevated error rates when attempting to launch new EC2 instances through RunInstances, CreateFleet, and related EC2 launch workflows. AWS services that launch EC2 instances on behalf of customers, including Amazon ECS, AWS Fargate, Amazon EMR, amongst others were also impacted during this period. We identified the root cause as a recent deployment to a subsystem within the EC2 service responsible for processing instance launch requests. We initiated a rollback of the problematic deployment and began observing initial signs of recovery at 4:44 PM. Existing instances remain unaffected. The issue has been resolved and the service is operating normally.",
+        "guid": "https://status.aws.amazon.com/#ec2-us-east-1_1790036658",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Mon, 21 Sep 2026 17:24:18 PDT",
+        "title": "Service impact: Increased Error Rates"
+      }
+    ]
+  }
+]

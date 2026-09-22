@@ -2,101 +2,252 @@
   "week": "2026-W39",
   "from": "2026-09-21T00:00:00Z",
   "to": "2026-09-28T00:00:00Z",
-  "generated_at": "2026-09-21T11:14:36.847652945Z",
+  "generated_at": "2026-09-22T10:26:37.692550721Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 38,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-21T11:14:36.847652945Z",
+      "fetched_at": "2026-09-22T10:26:37.692550721Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "aws/f5f654e733c72f13",
+      "vendor": "aws",
+      "title": "Increased Error Rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-09-21T23:26:48Z",
+      "ongoing": true,
+      "components": [
+        "ec2-us-east-1"
+      ],
+      "score": {
+        "value": 1318,
+        "duration_minutes": 659,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/7g1qpkyz5gxh",
+      "vendor": "anthropic",
+      "title": "Elevated errors for multiple models",
+      "url": "https://stspg.io/90s4l9yywzbk",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-22T00:57:26.117Z",
+      "resolved_at": "2026-09-22T02:35:23.836Z",
+      "duration_minutes": 97,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 582,
+        "duration_minutes": 97,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/nhf2kr8q3nfw",
+      "vendor": "cloudflare",
+      "title": "Network connectivity issues in LHR, London",
+      "url": "https://www.cloudflarestatus.com/incidents/nhf2kr8q3nfw",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-22T02:25:45.694Z",
+      "resolved_at": "2026-09-22T03:36:56.633Z",
+      "duration_minutes": 71,
+      "ongoing": false,
+      "components": [
+        "London, United Kingdom - (LHR)"
+      ],
+      "score": {
+        "value": 127.8,
+        "duration_minutes": 71,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/g4vvd0xrc2m8",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in San Jose (SJC-A)",
+      "url": "https://www.cloudflarestatus.com/incidents/g4vvd0xrc2m8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-22T07:20:00Z",
+      "resolved_at": "2026-09-22T08:20:00Z",
+      "duration_minutes": 60,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 108,
+        "duration_minutes": 60,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/dcmwvjwfyhjg",
+      "vendor": "cloudflare",
+      "title": "Partial loss of analytics for Fedramp High customers",
+      "url": "https://www.cloudflarestatus.com/incidents/dcmwvjwfyhjg",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-22T09:36:11Z",
+      "ongoing": true,
+      "components": [
+        "Analytics"
+      ],
+      "score": {
+        "value": 90,
+        "duration_minutes": 50,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/rxmmx07ys7qg",
+      "vendor": "cloudflare",
+      "title": "Unable to start containers in Asia-Pacific",
+      "url": "https://www.cloudflarestatus.com/incidents/rxmmx07ys7qg",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-21T12:42:26.18Z",
+      "resolved_at": "2026-09-21T13:23:38.015Z",
+      "duration_minutes": 41,
+      "ongoing": false,
+      "components": [
+        "Containers"
+      ],
+      "score": {
+        "value": 73.8,
+        "duration_minutes": 41,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/3kx4rv23998z",
+      "vendor": "circleci",
+      "title": "Delays starting Linux Machine jobs",
+      "url": "https://stspg.io/8gpc503nlf95",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-21T16:22:48.43Z",
+      "resolved_at": "2026-09-21T17:09:52.388Z",
+      "duration_minutes": 47,
+      "ongoing": false,
+      "components": [
+        "Machine Jobs"
+      ],
+      "score": {
+        "value": 47,
+        "duration_minutes": 47,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
     {
       "key": "datadog/g67lc6tmjnlt",
       "vendor": "datadog",
@@ -120,6 +271,24 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M348TX2DX7KPM9X857N4APNV",
+      "vendor": "openai",
+      "title": "Increased error rate for Plus and Pro users.",
+      "url": "https://status.openai.com/incidents/01M348TX2DX7KPM9X857N4APNV",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-09-22T09:58:28Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 42,
+        "duration_minutes": 28,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/lb5514cvngd7",
       "vendor": "cloudflare",
       "title": "Unable to register certain domains",
@@ -138,6 +307,46 @@
         "duration_minutes": 11,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/mrqb4d6q0y26",
+      "vendor": "cloudflare",
+      "title": "Increased Cache Failures",
+      "url": "https://www.cloudflarestatus.com/incidents/mrqb4d6q0y26",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-21T18:15:16.56Z",
+      "resolved_at": "2026-09-21T18:15:16.618Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/gtdjr6zl1jp0",
+      "vendor": "grafana",
+      "title": "Mimir write request errors",
+      "url": "https://stspg.io/j6zm954jcg7m",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-21T19:16:18.103Z",
+      "resolved_at": "2026-09-21T18:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     }
