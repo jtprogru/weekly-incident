@@ -50,7 +50,7 @@
           "showcase": true,
           "start_date": "2023-03-01",
           "status": "operational",
-          "updated_at": "2026-09-22T22:47:11.738Z"
+          "updated_at": "2026-09-23T16:26:42.375Z"
         },
         {
           "created_at": "2023-05-25T21:27:58.262Z",
@@ -65,7 +65,7 @@
           "showcase": false,
           "start_date": "2023-07-28",
           "status": "operational",
-          "updated_at": "2026-09-22T22:47:11.750Z"
+          "updated_at": "2026-09-23T16:26:42.390Z"
         }
       ],
       "created_at": "2026-09-22T20:32:28.612Z",
@@ -160,6 +160,137 @@
       "started_at": "2026-09-22T20:32:28.602Z",
       "status": "resolved",
       "updated_at": "2026-09-22T22:47:11.791Z"
+    }
+  },
+  {
+    "key": "stripe/45t05tqxy5w7",
+    "vendor": "stripe",
+    "native_id": "45t05tqxy5w7",
+    "title": "Elevated API errors",
+    "url": "https://stspg.io/zxkgb0lnrxc8",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-23T15:53:25.886Z",
+    "resolved_at": "2026-09-23T16:26:42.423Z",
+    "duration_minutes": 33,
+    "components": [
+      "Stripe API",
+      "Stripe core components"
+    ],
+    "updates": [
+      {
+        "native_id": "7wy3kzw8n0sz",
+        "status": "identified",
+        "body": "We're currently seeing elevated error rates and response times with the API. We've identified the cause, and are working on a fix.",
+        "created_at": "2026-09-23T15:53:26.009Z"
+      },
+      {
+        "native_id": "68qkp4tp01v4",
+        "status": "resolved",
+        "body": "From 15:30 UTC–16:07 UTC, we saw elevated error rates and response times with the API. This is now resolved.",
+        "created_at": "2026-09-23T16:26:42.423Z"
+      }
+    ],
+    "first_seen_at": "2026-09-24T10:37:02.482449866Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-09-23T16:26:42.375Z"
+        },
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-09-23T16:26:42.390Z"
+        }
+      ],
+      "created_at": "2026-09-23T15:53:25.899Z",
+      "id": "45t05tqxy5w7",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 15:30 UTC–16:07 UTC, we saw elevated error rates and response times with the API. This is now resolved.",
+          "created_at": "2026-09-23T16:26:42.423Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-23T16:26:42.423Z",
+          "id": "68qkp4tp01v4",
+          "incident_id": "45t05tqxy5w7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T16:26:42.423Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently seeing elevated error rates and response times with the API. We've identified the cause, and are working on a fix.",
+          "created_at": "2026-09-23T15:53:26.009Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-23T15:53:26.009Z",
+          "id": "7wy3kzw8n0sz",
+          "incident_id": "45t05tqxy5w7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T15:53:26.009Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated API errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-23T16:26:42.423Z",
+      "shortlink": "https://stspg.io/zxkgb0lnrxc8",
+      "started_at": "2026-09-23T15:53:25.886Z",
+      "status": "resolved",
+      "updated_at": "2026-09-23T16:26:42.441Z"
     }
   }
 ]

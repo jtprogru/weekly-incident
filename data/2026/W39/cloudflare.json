@@ -889,7 +889,7 @@
     "title": "Cloudflare One Clients are incorrectly challenged on some sites",
     "url": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
     "impact": "minor",
-    "status": "investigating",
+    "status": "identified",
     "started_at": "2026-09-22T19:23:17Z",
     "components": [
       "Cloudflare One Client"
@@ -900,6 +900,12 @@
         "status": "investigating",
         "body": "Cloudflare is investigating an issue where Cloudflare One Client customers are incorrectly challenged while visiting some websites.",
         "created_at": "2026-09-22T19:23:17.37Z"
+      },
+      {
+        "native_id": "73x1h0xgpbvv",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-23T11:02:41.67Z"
       }
     ],
     "first_seen_at": "2026-09-23T10:22:02.340258828Z",
@@ -931,6 +937,26 @@
               "code": "k04jkcpzxn94",
               "name": "Cloudflare Sites and Services - Cloudflare One Client",
               "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-23T11:02:41.670Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T11:02:41.670Z",
+          "id": "73x1h0xgpbvv",
+          "incident_id": "tl0vrgjy99r0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T11:02:41.670Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "k04jkcpzxn94",
+              "name": "Cloudflare Sites and Services - Cloudflare One Client",
+              "new_status": "degraded_performance",
               "old_status": "operational"
             }
           ],
@@ -953,8 +979,8 @@
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
       "started_at": "2026-09-22T19:23:17.000Z",
-      "status": "investigating",
-      "updated_at": "2026-09-22T19:23:17.000Z"
+      "status": "identified",
+      "updated_at": "2026-09-23T11:02:41.000Z"
     }
   },
   {
@@ -1189,8 +1215,8 @@
           "position": 83,
           "showcase": false,
           "start_date": "2022-07-05",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-23T09:08:53.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-23T20:59:35.000Z"
         }
       ],
       "created_at": "2026-09-23T04:08:46.000Z",
@@ -1475,8 +1501,10 @@
     "title": "Intermittent authentication errors for API and R2",
     "url": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-09-23T09:08:53Z",
+    "status": "resolved",
+    "started_at": "2026-09-23T09:08:53.712Z",
+    "resolved_at": "2026-09-23T20:59:35.579Z",
+    "duration_minutes": 710,
     "components": [
       "R2"
     ],
@@ -1486,6 +1514,18 @@
         "status": "identified",
         "body": "A known issue affected authentication for a small percentage of requests to the API and R2.\nThe issue was identified on Sep 22 at 13:30 UTC, and major impact was mitigated at 19:00 UTC.\nOur team is actively working to resolve the residual impact.",
         "created_at": "2026-09-23T09:08:53.816Z"
+      },
+      {
+        "native_id": "jvyjyn0b0g8p",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-23T20:09:18.55Z"
+      },
+      {
+        "native_id": "tf3c2990d8mg",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-23T20:59:35.579Z"
       }
     ],
     "first_seen_at": "2026-09-23T10:22:02.340258828Z",
@@ -1503,14 +1543,54 @@
           "position": 83,
           "showcase": false,
           "start_date": "2022-07-05",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-23T09:08:53.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-23T20:59:35.000Z"
         }
       ],
       "created_at": "2026-09-23T09:08:53.000Z",
       "id": "jg6ys8sbd6ny",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-23T20:59:35.579Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T20:59:35.579Z",
+          "id": "tf3c2990d8mg",
+          "incident_id": "jg6ys8sbd6ny",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T20:59:35.579Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-23T20:09:18.550Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T20:09:18.550Z",
+          "id": "jvyjyn0b0g8p",
+          "incident_id": "jg6ys8sbd6ny",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T20:09:18.550Z"
+        },
         {
           "affected_components": [
             {
@@ -1532,15 +1612,322 @@
           "updated_at": "2026-09-23T09:08:53.816Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-09-23T20:09:18.550Z",
       "name": "Intermittent authentication errors for API and R2",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-23T20:59:35.579Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
-      "started_at": "2026-09-23T09:08:53.000Z",
+      "started_at": "2026-09-23T09:08:53.712Z",
+      "status": "resolved",
+      "updated_at": "2026-09-23T20:59:35.598Z"
+    }
+  },
+  {
+    "key": "cloudflare/f8wg5htd3zz4",
+    "vendor": "cloudflare",
+    "native_id": "f8wg5htd3zz4",
+    "title": "Elevated Errors with any / all in http_response_cache_settings",
+    "url": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-23T15:54:28Z",
+    "resolved_at": "2026-09-23T18:08:18.013Z",
+    "duration_minutes": 133,
+    "components": [
+      "Rules"
+    ],
+    "updates": [
+      {
+        "native_id": "t941qhlvjdxb",
+        "status": "identified",
+        "body": "We have identified an issue causing unexpected errors when creating or updating configurations using any or all expressions in the http_response_cache_settings. \nThis issue strictly affects API operations; existing active configurations and live traffic are not impacted. A fix is currently being deployed, and we will provide an update once the rollout is complete.",
+        "created_at": "2026-09-23T15:54:28.98Z"
+      },
+      {
+        "native_id": "35d3hmzwvb1d",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-23T18:08:18.013Z"
+      }
+    ],
+    "first_seen_at": "2026-09-24T10:37:02.482449866Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-01-19T14:56:52.000Z",
+          "description": "This component includes WAF Rules, Transform Rules, Configuration Rules, Origin Rules, Compression Rules, Redirect Rules, Cache Rules, Waiting Room Bypass Rules, URL Normalization, DDoS L4/L7 Rules, Super Bot Fight Mode Rules, Rate Limiting Rules and others",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "ch3mwx0hr4k6",
+          "name": "Rules",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 95,
+          "showcase": false,
+          "start_date": "2024-01-19",
+          "status": "operational",
+          "updated_at": "2026-09-23T18:08:17.000Z"
+        }
+      ],
+      "created_at": "2026-09-23T15:54:28.863Z",
+      "id": "f8wg5htd3zz4",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "ch3mwx0hr4k6",
+              "name": "Cloudflare Sites and Services - Rules",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-23T18:08:18.013Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T18:08:18.013Z",
+          "id": "35d3hmzwvb1d",
+          "incident_id": "f8wg5htd3zz4",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T18:08:18.013Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ch3mwx0hr4k6",
+              "name": "Cloudflare Sites and Services - Rules",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified an issue causing unexpected errors when creating or updating configurations using any or all expressions in the http_response_cache_settings. \nThis issue strictly affects API operations; existing active configurations and live traffic are not impacted. A fix is currently being deployed, and we will provide an update once the rollout is complete.",
+          "created_at": "2026-09-23T15:54:28.980Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T15:54:28.000Z",
+          "id": "t941qhlvjdxb",
+          "incident_id": "f8wg5htd3zz4",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T15:55:51.899Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Errors with any / all in http_response_cache_settings",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-23T18:08:18.013Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
+      "started_at": "2026-09-23T15:54:28.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-23T18:08:18.030Z"
+    }
+  },
+  {
+    "key": "cloudflare/8wmvkv5jkf15",
+    "vendor": "cloudflare",
+    "native_id": "8wmvkv5jkf15",
+    "title": "Network Performance Degradation — Asia-Pacific",
+    "url": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-09-23T18:42:39Z",
+    "components": [
+      "Network"
+    ],
+    "updates": [
+      {
+        "native_id": "vj9wj4n2yfct",
+        "status": "investigating",
+        "body": "Since September 21, 2026 at 02:20 UTC, multiple subsea cable outages have caused congestion between Tokyo and Singapore datacenters. We have rerouted traffic to reduce impact and are working with third-party vendors to restore capacity.",
+        "created_at": "2026-09-23T18:42:39.661Z"
+      },
+      {
+        "native_id": "nrzdl0br8zl1",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-23T18:44:55.594Z"
+      }
+    ],
+    "first_seen_at": "2026-09-24T10:37:02.482449866Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 74,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-23T18:42:39.000Z"
+        }
+      ],
+      "created_at": "2026-09-23T18:42:39.000Z",
+      "id": "8wmvkv5jkf15",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-23T18:44:55.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T18:44:55.594Z",
+          "id": "nrzdl0br8zl1",
+          "incident_id": "8wmvkv5jkf15",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T18:44:55.594Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since September 21, 2026 at 02:20 UTC, multiple subsea cable outages have caused congestion between Tokyo and Singapore datacenters. We have rerouted traffic to reduce impact and are working with third-party vendors to restore capacity.",
+          "created_at": "2026-09-23T18:42:39.661Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T18:42:39.661Z",
+          "id": "vj9wj4n2yfct",
+          "incident_id": "8wmvkv5jkf15",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T18:42:39.661Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Degradation — Asia-Pacific",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+      "started_at": "2026-09-23T18:42:39.000Z",
       "status": "identified",
-      "updated_at": "2026-09-23T09:08:53.000Z"
+      "updated_at": "2026-09-23T18:44:55.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/gwrzznc9f642",
+    "vendor": "cloudflare",
+    "native_id": "gwrzznc9f642",
+    "title": "Customers using BYOIP can have issues updating their BGP prefixes, including advertising or withdrawing prefixes.",
+    "url": "https://www.cloudflarestatus.com/incidents/gwrzznc9f642",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-24T10:22:34.763Z",
+    "resolved_at": "2026-09-24T10:25:52.106Z",
+    "duration_minutes": 3,
+    "components": [
+      "Bring Your Own IP (BYOIP)"
+    ],
+    "updates": [
+      {
+        "native_id": "p3hr9blzwy76",
+        "status": "investigating",
+        "body": "We are currently investigating an issue where customers with BYOIP addresses will be unable to update their BGP prefixes, including advertising or withdrawing prefixes.",
+        "created_at": "2026-09-24T10:22:34.862Z"
+      },
+      {
+        "native_id": "krlcnf01fw30",
+        "status": "resolved",
+        "body": "This incident has now been resolved - Customers with BYOIP addresses were unable to update their BGP prefixes, including advertising or withdrawing prefixes. Customers making changes to their address maps may also have experienced delays.",
+        "created_at": "2026-09-24T10:25:52.106Z"
+      }
+    ],
+    "first_seen_at": "2026-09-24T10:37:02.482449866Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-01T13:09:11.000Z",
+          "description": "Allows Cloudflare customers to advertise their own IPs for use with Magic Transit, Spectrum, or CDN services",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4msl4k5wdcbv",
+          "name": "Bring Your Own IP (BYOIP)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2020-09-01",
+          "status": "operational",
+          "updated_at": "2026-09-24T10:25:52.000Z"
+        }
+      ],
+      "created_at": "2026-09-24T10:22:34.000Z",
+      "id": "gwrzznc9f642",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4msl4k5wdcbv",
+              "name": "Cloudflare Sites and Services - Bring Your Own IP (BYOIP)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has now been resolved - Customers with BYOIP addresses were unable to update their BGP prefixes, including advertising or withdrawing prefixes. Customers making changes to their address maps may also have experienced delays.",
+          "created_at": "2026-09-24T10:25:52.106Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T10:25:52.106Z",
+          "id": "krlcnf01fw30",
+          "incident_id": "gwrzznc9f642",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T10:25:52.106Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4msl4k5wdcbv",
+              "name": "Cloudflare Sites and Services - Bring Your Own IP (BYOIP)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue where customers with BYOIP addresses will be unable to update their BGP prefixes, including advertising or withdrawing prefixes.",
+          "created_at": "2026-09-24T10:22:34.862Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T10:22:34.862Z",
+          "id": "p3hr9blzwy76",
+          "incident_id": "gwrzznc9f642",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T10:22:34.862Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Customers using BYOIP can have issues updating their BGP prefixes, including advertising or withdrawing prefixes.",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-24T10:25:52.106Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/gwrzznc9f642",
+      "started_at": "2026-09-24T10:22:34.763Z",
+      "status": "resolved",
+      "updated_at": "2026-09-24T10:25:52.127Z"
     }
   }
 ]

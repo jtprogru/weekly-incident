@@ -3,11 +3,13 @@
     "key": "github/8zc63m64hy36",
     "vendor": "github",
     "native_id": "8zc63m64hy36",
-    "title": "Incident with API Requests and Projects",
+    "title": "Incident across several services",
     "url": "https://stspg.io/m1ps7yrhp4n8",
     "impact": "minor",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-09-23T10:11:12.836Z",
+    "resolved_at": "2026-09-24T04:55:33.949Z",
+    "duration_minutes": 1124,
     "components": [
       "API Requests"
     ],
@@ -23,6 +25,90 @@
         "status": "investigating",
         "body": "Database replicas have detached. We're working to restore the database replicas. Users may experience issues beyond creating organizations and a degraded experience with the GitHub API and Projects.",
         "created_at": "2026-09-23T10:20:06.97Z"
+      },
+      {
+        "native_id": "8z5fl9yqbrkg",
+        "status": "investigating",
+        "body": "Database replicas have been restored. Org creation and the GitHub API are no longer degraded.",
+        "created_at": "2026-09-23T10:57:57.451Z"
+      },
+      {
+        "native_id": "tkm705cgt7fx",
+        "status": "investigating",
+        "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-09-23T10:58:27.097Z"
+      },
+      {
+        "native_id": "twss7bj15qyr",
+        "status": "investigating",
+        "body": "We are seeing recovery for Projects. Users may experience stale search results for Projects while indexing catches up.",
+        "created_at": "2026-09-23T11:38:30.053Z"
+      },
+      {
+        "native_id": "9yhg3t6ns4yp",
+        "status": "investigating",
+        "body": "Users may experience stale Project search results. We are working to increase indexing speed. All other services are available.",
+        "created_at": "2026-09-23T13:35:44.672Z"
+      },
+      {
+        "native_id": "ycx4xz63whcc",
+        "status": "investigating",
+        "body": "Updates to issue labels may be delayed in being reflected in Projects by about ~10 minutes. We have added some capacity to work through the backlog more quickly, but it'll likely be a few hours to complete processing the full backlog of messages. All other services are available.",
+        "created_at": "2026-09-23T17:01:27.947Z"
+      },
+      {
+        "native_id": "nl04bvgdj78d",
+        "status": "investigating",
+        "body": "We will post another update in approximately one hour to share our progress.",
+        "created_at": "2026-09-23T17:30:30.444Z"
+      },
+      {
+        "native_id": "3nkhd8d37m7q",
+        "status": "investigating",
+        "body": "Continuing to investigate the lag that may be experienced in issue labels being accurately reflected in Projects. We are working on alternate solutions to process the backlog of label updates.",
+        "created_at": "2026-09-23T18:42:01.379Z"
+      },
+      {
+        "native_id": "kzyj2r78x8sr",
+        "status": "investigating",
+        "body": "We are preparing to deploy a change that will mitigate the impact.",
+        "created_at": "2026-09-23T20:26:02.259Z"
+      },
+      {
+        "native_id": "kpnn3vrsd5bg",
+        "status": "investigating",
+        "body": "Updates to issue labels may be delayed in being reflected in Projects. We are continuing to deploy a change that will accelerate processing of the backlog of label updates. All other services are available. We will provide another update within the next hour.",
+        "created_at": "2026-09-23T21:39:30.068Z"
+      },
+      {
+        "native_id": "yxvtwgr1tjt8",
+        "status": "investigating",
+        "body": "We've deployed a change intended to accelerate processing of the backlog of issue label updates in Projects. A sizable backlog still remains and we continue working through it. All other services are operating normally. We will provide another update within the next hour.",
+        "created_at": "2026-09-24T00:16:49.448Z"
+      },
+      {
+        "native_id": "4p5yfrsx5c1d",
+        "status": "investigating",
+        "body": "We are continuing to process the backlog of issue label updates for Projects. Users may still see delays before label changes are reflected in Projects. All other services are operating normally.",
+        "created_at": "2026-09-24T02:00:37.04Z"
+      },
+      {
+        "native_id": "rr0l0ssf3193",
+        "status": "investigating",
+        "body": "We are continuing to process the backlog of issue label updates for Projects. Label changes may still be delayed. All other services are operating normally.",
+        "created_at": "2026-09-24T03:14:15.709Z"
+      },
+      {
+        "native_id": "p80cx5ps8ypg",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-09-24T04:55:27.414Z"
+      },
+      {
+        "native_id": "j2xw2r3yc2cd",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-09-24T04:55:33.949Z"
       }
     ],
     "first_seen_at": "2026-09-23T10:22:02.340258828Z",
@@ -40,14 +126,294 @@
           "position": 4,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-09-23T10:11:12.887Z"
+          "status": "operational",
+          "updated_at": "2026-09-23T10:58:27.066Z"
         }
       ],
       "created_at": "2026-09-23T10:11:12.845Z",
       "id": "8zc63m64hy36",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-09-24T04:55:33.949Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T04:55:33.949Z",
+          "id": "j2xw2r3yc2cd",
+          "incident_id": "8zc63m64hy36",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T04:55:33.949Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-09-24T04:55:27.414Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T04:55:27.414Z",
+          "id": "p80cx5ps8ypg",
+          "incident_id": "8zc63m64hy36",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T04:55:27.414Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to process the backlog of issue label updates for Projects. Label changes may still be delayed. All other services are operating normally.",
+          "created_at": "2026-09-24T03:14:15.709Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T03:14:15.709Z",
+          "id": "rr0l0ssf3193",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T03:14:15.709Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to process the backlog of issue label updates for Projects. Users may still see delays before label changes are reflected in Projects. All other services are operating normally.",
+          "created_at": "2026-09-24T02:00:37.040Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T02:00:37.040Z",
+          "id": "4p5yfrsx5c1d",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T02:00:37.040Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We've deployed a change intended to accelerate processing of the backlog of issue label updates in Projects. A sizable backlog still remains and we continue working through it. All other services are operating normally. We will provide another update within the next hour.",
+          "created_at": "2026-09-24T00:16:49.448Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-24T00:16:49.448Z",
+          "id": "yxvtwgr1tjt8",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-24T00:16:49.448Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Updates to issue labels may be delayed in being reflected in Projects. We are continuing to deploy a change that will accelerate processing of the backlog of label updates. All other services are available. We will provide another update within the next hour.",
+          "created_at": "2026-09-23T21:39:30.068Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T21:39:30.068Z",
+          "id": "kpnn3vrsd5bg",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T21:39:30.068Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are preparing to deploy a change that will mitigate the impact.",
+          "created_at": "2026-09-23T20:26:02.259Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T20:26:02.259Z",
+          "id": "kzyj2r78x8sr",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T20:26:02.259Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Continuing to investigate the lag that may be experienced in issue labels being accurately reflected in Projects. We are working on alternate solutions to process the backlog of label updates.",
+          "created_at": "2026-09-23T18:42:01.379Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T18:42:01.379Z",
+          "id": "3nkhd8d37m7q",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T18:42:01.379Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We will post another update in approximately one hour to share our progress.",
+          "created_at": "2026-09-23T17:30:30.444Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T17:30:30.444Z",
+          "id": "nl04bvgdj78d",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T17:30:30.444Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Updates to issue labels may be delayed in being reflected in Projects by about ~10 minutes. We have added some capacity to work through the backlog more quickly, but it'll likely be a few hours to complete processing the full backlog of messages. All other services are available.",
+          "created_at": "2026-09-23T17:01:27.947Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T17:01:27.947Z",
+          "id": "ycx4xz63whcc",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T17:01:27.947Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Users may experience stale Project search results. We are working to increase indexing speed. All other services are available.",
+          "created_at": "2026-09-23T13:35:44.672Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T13:35:44.672Z",
+          "id": "9yhg3t6ns4yp",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T13:35:44.672Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are seeing recovery for Projects. Users may experience stale search results for Projects while indexing catches up.",
+          "created_at": "2026-09-23T11:38:30.053Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T11:38:30.053Z",
+          "id": "twss7bj15qyr",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T11:38:30.053Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-09-23T10:58:27.097Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T10:58:27.097Z",
+          "id": "tkm705cgt7fx",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T10:58:27.097Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Database replicas have been restored. Org creation and the GitHub API are no longer degraded.",
+          "created_at": "2026-09-23T10:57:57.451Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-23T10:57:57.451Z",
+          "id": "8z5fl9yqbrkg",
+          "incident_id": "8zc63m64hy36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-23T10:57:57.451Z"
+        },
         {
           "affected_components": [
             {
@@ -89,15 +455,15 @@
           "updated_at": "2026-09-23T10:11:12.927Z"
         }
       ],
-      "monitoring_at": null,
-      "name": "Incident with API Requests and Projects",
+      "monitoring_at": "2026-09-24T04:55:27.414Z",
+      "name": "Incident across several services",
       "page_id": "kctbh9vrtdwd",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-24T04:55:33.949Z",
       "shortlink": "https://stspg.io/m1ps7yrhp4n8",
       "started_at": "2026-09-23T10:11:12.836Z",
-      "status": "investigating",
-      "updated_at": "2026-09-23T10:20:06.973Z"
+      "status": "resolved",
+      "updated_at": "2026-09-24T04:55:33.964Z"
     }
   }
 ]

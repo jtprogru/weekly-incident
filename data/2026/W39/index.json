@@ -2,96 +2,96 @@
   "week": "2026-W39",
   "from": "2026-09-21T00:00:00Z",
   "to": "2026-09-28T00:00:00Z",
-  "generated_at": "2026-09-23T10:22:02.340258828Z",
+  "generated_at": "2026-09-24T10:37:02.482449866Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
-      "incidents_seen": 37,
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
+      "incidents_seen": 36,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-23T10:22:02.340258828Z",
+      "fetched_at": "2026-09-24T10:37:02.482449866Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -110,8 +110,8 @@
         "ec2-us-east-1"
       ],
       "score": {
-        "value": 4190,
-        "duration_minutes": 2095,
+        "value": 7100,
+        "duration_minutes": 3550,
         "components": 1,
         "vendor_weight": 2
       },
@@ -123,15 +123,79 @@
       "title": "Cloudflare One Clients are incorrectly challenged on some sites",
       "url": "https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0",
       "impact": "minor",
-      "status": "investigating",
+      "status": "identified",
       "started_at": "2026-09-22T19:23:17Z",
       "ongoing": true,
       "components": [
         "Cloudflare One Client"
       ],
       "score": {
-        "value": 1616.4,
-        "duration_minutes": 898,
+        "value": 4235.400000000001,
+        "duration_minutes": 2353,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/8wmvkv5jkf15",
+      "vendor": "cloudflare",
+      "title": "Network Performance Degradation — Asia-Pacific",
+      "url": "https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-09-23T18:42:39Z",
+      "ongoing": true,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 1717.2,
+        "duration_minutes": 954,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/8zc63m64hy36",
+      "vendor": "github",
+      "title": "Incident across several services",
+      "url": "https://stspg.io/m1ps7yrhp4n8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-23T10:11:12.836Z",
+      "resolved_at": "2026-09-24T04:55:33.949Z",
+      "duration_minutes": 1124,
+      "ongoing": false,
+      "components": [
+        "API Requests"
+      ],
+      "score": {
+        "value": 1686,
+        "duration_minutes": 1124,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/jg6ys8sbd6ny",
+      "vendor": "cloudflare",
+      "title": "Intermittent authentication errors for API and R2",
+      "url": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-23T09:08:53.712Z",
+      "resolved_at": "2026-09-23T20:59:35.579Z",
+      "duration_minutes": 710,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 1278,
+        "duration_minutes": 710,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -143,15 +207,17 @@
       "title": "IRM Access Issues for a Small Group of Users",
       "url": "https://stspg.io/cqfnrz8bdkvz",
       "impact": "major",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-09-22T14:57:11.239Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-23T11:07:27.41Z",
+      "duration_minutes": 1210,
+      "ongoing": false,
       "components": [
         "Incident Management and Response (IRM)"
       ],
       "score": {
-        "value": 1164,
-        "duration_minutes": 1164,
+        "value": 1210,
+        "duration_minutes": 1210,
         "components": 1,
         "vendor_weight": 1
       },
@@ -163,15 +229,17 @@
       "title": "Kubernetes Observability Billing \u0026 Usage Incorrect",
       "url": "https://stspg.io/4ntjl2yr75n4",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-09-22T21:27:47.348Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-23T14:06:20.11Z",
+      "duration_minutes": 998,
+      "ongoing": false,
       "components": [
         "Cost Management and Billing"
       ],
       "score": {
-        "value": 774,
-        "duration_minutes": 774,
+        "value": 998,
+        "duration_minutes": 998,
         "components": 1,
         "vendor_weight": 1
       },
@@ -248,6 +316,28 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/f8wg5htd3zz4",
+      "vendor": "cloudflare",
+      "title": "Elevated Errors with any / all in http_response_cache_settings",
+      "url": "https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-23T15:54:28Z",
+      "resolved_at": "2026-09-23T18:08:18.013Z",
+      "duration_minutes": 133,
+      "ongoing": false,
+      "components": [
+        "Rules"
+      ],
+      "score": {
+        "value": 239.4,
+        "duration_minutes": 133,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/78c19w4xw4z2",
       "vendor": "cloudflare",
       "title": "Increased Errors for Durable Objects",
@@ -264,26 +354,6 @@
       "score": {
         "value": 198,
         "duration_minutes": 110,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": false
-    },
-    {
-      "key": "cloudflare/jg6ys8sbd6ny",
-      "vendor": "cloudflare",
-      "title": "Intermittent authentication errors for API and R2",
-      "url": "https://www.cloudflarestatus.com/incidents/jg6ys8sbd6ny",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-09-23T09:08:53Z",
-      "ongoing": true,
-      "components": [
-        "R2"
-      ],
-      "score": {
-        "value": 131.4,
-        "duration_minutes": 73,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -330,6 +400,28 @@
         "duration_minutes": 63,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/zxqlp0926vcz",
+      "vendor": "circleci",
+      "title": "Delays in processing new signups and plan changes",
+      "url": "https://stspg.io/qdgh114h7kwz",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-23T18:13:41.063Z",
+      "resolved_at": "2026-09-23T20:06:12.033Z",
+      "duration_minutes": 112,
+      "ongoing": false,
+      "components": [
+        "Billing \u0026 Account"
+      ],
+      "score": {
+        "value": 112,
+        "duration_minutes": 112,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
@@ -392,6 +484,29 @@
         "duration_minutes": 54,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/45t05tqxy5w7",
+      "vendor": "stripe",
+      "title": "Elevated API errors",
+      "url": "https://stspg.io/zxkgb0lnrxc8",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-23T15:53:25.886Z",
+      "resolved_at": "2026-09-23T16:26:42.423Z",
+      "duration_minutes": 33,
+      "ongoing": false,
+      "components": [
+        "Stripe API",
+        "Stripe core components"
+      ],
+      "score": {
+        "value": 79.2,
+        "duration_minutes": 33,
+        "components": 2,
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
@@ -545,6 +660,26 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M389CDQ97B11QPMSRAAYSE5S",
+      "vendor": "openai",
+      "title": "Mobile users unable to see Work Mode and the Model Picker",
+      "url": "https://status.openai.com/incidents/01M389CDQ97B11QPMSRAAYSE5S",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-23T23:25:00Z",
+      "resolved_at": "2026-09-23T23:49:06Z",
+      "duration_minutes": 24,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 36,
+        "duration_minutes": 24,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/lb5514cvngd7",
       "vendor": "cloudflare",
       "title": "Unable to register certain domains",
@@ -567,22 +702,24 @@
       "above_threshold": false
     },
     {
-      "key": "github/8zc63m64hy36",
-      "vendor": "github",
-      "title": "Incident with API Requests and Projects",
-      "url": "https://stspg.io/m1ps7yrhp4n8",
+      "key": "cloudflare/gwrzznc9f642",
+      "vendor": "cloudflare",
+      "title": "Customers using BYOIP can have issues updating their BGP prefixes, including advertising or withdrawing prefixes.",
+      "url": "https://www.cloudflarestatus.com/incidents/gwrzznc9f642",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-09-23T10:11:12.836Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-09-24T10:22:34.763Z",
+      "resolved_at": "2026-09-24T10:25:52.106Z",
+      "duration_minutes": 3,
+      "ongoing": false,
       "components": [
-        "API Requests"
+        "Bring Your Own IP (BYOIP)"
       ],
       "score": {
-        "value": 15,
-        "duration_minutes": 10,
+        "value": 5.4,
+        "duration_minutes": 3,
         "components": 1,
-        "vendor_weight": 1.5
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
