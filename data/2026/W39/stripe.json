@@ -292,5 +292,136 @@
       "status": "resolved",
       "updated_at": "2026-09-23T16:26:42.441Z"
     }
+  },
+  {
+    "key": "stripe/3g746nm5qf15",
+    "vendor": "stripe",
+    "native_id": "3g746nm5qf15",
+    "title": "Elevated Klarna errors",
+    "url": "https://stspg.io/4kvs6zwpn12h",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-25T06:23:45.824Z",
+    "resolved_at": "2026-09-25T07:42:50.829Z",
+    "duration_minutes": 79,
+    "components": [
+      "Global payments",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "19wvfsn97c1n",
+        "status": "investigating",
+        "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+        "created_at": "2026-09-25T06:23:45.912Z"
+      },
+      {
+        "native_id": "1h0pzxh5psj2",
+        "status": "resolved",
+        "body": "From 06:03 to 06:26 UTC, we saw elevated error rates and response times for payments using Klarna. This issue is now resolved.",
+        "created_at": "2026-09-25T07:42:50.829Z"
+      }
+    ],
+    "first_seen_at": "2026-09-25T10:40:42.808900938Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:58.953Z",
+          "description": "Checkout, Elements, Connect, Payment Links, Terminal, 3DS, and more",
+          "group": false,
+          "group_id": null,
+          "id": "qcs5gg7rz4ps",
+          "name": "Global payments",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-25T07:42:50.766Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-25T07:42:50.789Z"
+        }
+      ],
+      "created_at": "2026-09-25T06:23:45.831Z",
+      "id": "3g746nm5qf15",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 06:03 to 06:26 UTC, we saw elevated error rates and response times for payments using Klarna. This issue is now resolved.",
+          "created_at": "2026-09-25T07:42:50.829Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-25T07:42:50.829Z",
+          "id": "1h0pzxh5psj2",
+          "incident_id": "3g746nm5qf15",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-25T07:42:50.829Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated error rates and response times with payments. We'll post an update soon.",
+          "created_at": "2026-09-25T06:23:45.912Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-25T06:23:45.912Z",
+          "id": "19wvfsn97c1n",
+          "incident_id": "3g746nm5qf15",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-25T06:23:45.912Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Klarna errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-25T07:42:50.829Z",
+      "shortlink": "https://stspg.io/4kvs6zwpn12h",
+      "started_at": "2026-09-25T06:23:45.824Z",
+      "status": "resolved",
+      "updated_at": "2026-09-25T07:42:50.849Z"
+    }
   }
 ]
