@@ -1394,8 +1394,8 @@
           "position": 47,
           "showcase": false,
           "start_date": "2023-06-12",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-25T02:32:19.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-25T14:49:01.000Z"
         }
       ],
       "created_at": "2026-09-23T08:09:23.000Z",
@@ -2439,8 +2439,10 @@
     "title": "Issues with Durable Objects",
     "url": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
     "impact": "minor",
-    "status": "monitoring",
-    "started_at": "2026-09-25T00:03:24Z",
+    "status": "resolved",
+    "started_at": "2026-09-25T00:03:24.505Z",
+    "resolved_at": "2026-09-25T14:49:01.414Z",
+    "duration_minutes": 885,
     "components": [
       "Durable Objects"
     ],
@@ -2468,6 +2470,12 @@
         "status": "monitoring",
         "body": "A fix has been implemented and we are monitoring the results.",
         "created_at": "2026-09-25T08:48:52.382Z"
+      },
+      {
+        "native_id": "3sfqtj6l1lt4",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-25T14:49:01.414Z"
       }
     ],
     "first_seen_at": "2026-09-25T10:40:42.808900938Z",
@@ -2485,14 +2493,34 @@
           "position": 47,
           "showcase": false,
           "start_date": "2023-06-12",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-25T02:32:19.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-25T14:49:01.000Z"
         }
       ],
       "created_at": "2026-09-25T00:03:24.000Z",
       "id": "gv29fd076q2t",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-25T14:49:01.414Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-25T14:49:01.414Z",
+          "id": "3sfqtj6l1lt4",
+          "incident_id": "gv29fd076q2t",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-25T14:49:01.414Z"
+        },
         {
           "affected_components": [
             {
@@ -2574,15 +2602,15 @@
           "updated_at": "2026-09-25T00:03:24.600Z"
         }
       ],
-      "monitoring_at": "2026-09-25T01:31:54.000Z",
+      "monitoring_at": "2026-09-25T01:31:54.374Z",
       "name": "Issues with Durable Objects",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-25T14:49:01.414Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/gv29fd076q2t",
-      "started_at": "2026-09-25T00:03:24.000Z",
-      "status": "monitoring",
-      "updated_at": "2026-09-25T08:48:52.000Z"
+      "started_at": "2026-09-25T00:03:24.505Z",
+      "status": "resolved",
+      "updated_at": "2026-09-25T14:49:01.432Z"
     }
   },
   {
@@ -2790,6 +2818,81 @@
       "started_at": "2026-09-25T10:10:32.246Z",
       "status": "resolved",
       "updated_at": "2026-09-25T10:10:47.079Z"
+    }
+  },
+  {
+    "key": "cloudflare/39dzwkhzcvv5",
+    "vendor": "cloudflare",
+    "native_id": "39dzwkhzcvv5",
+    "title": "Cloudflare Cloud Access Security Broker (CASB) Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/39dzwkhzcvv5",
+    "impact": "minor",
+    "status": "investigating",
+    "started_at": "2026-09-26T10:20:37Z",
+    "components": [
+      "Cloud Access Security Broker (CASB)"
+    ],
+    "updates": [
+      {
+        "native_id": "9pk01kq26h95",
+        "status": "investigating",
+        "body": "CASB is not able to refresh customer's vendor credentials on time due to increased Temporal schedule-to-start latency, causing some issues in scanning customer's resources. They may experience delay in reporting of CASB findings.",
+        "created_at": "2026-09-26T10:20:37.454Z"
+      }
+    ],
+    "first_seen_at": "2026-09-26T10:24:07.437509173Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-02T19:27:40.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "h2p0jj4ltvcq",
+          "name": "Cloud Access Security Broker (CASB)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 28,
+          "showcase": false,
+          "start_date": "2023-02-02",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-26T10:20:37.000Z"
+        }
+      ],
+      "created_at": "2026-09-26T10:20:37.000Z",
+      "id": "39dzwkhzcvv5",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h2p0jj4ltvcq",
+              "name": "Cloudflare Sites and Services - Cloud Access Security Broker (CASB)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "CASB is not able to refresh customer's vendor credentials on time due to increased Temporal schedule-to-start latency, causing some issues in scanning customer's resources. They may experience delay in reporting of CASB findings.",
+          "created_at": "2026-09-26T10:20:37.454Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-26T10:20:37.454Z",
+          "id": "9pk01kq26h95",
+          "incident_id": "39dzwkhzcvv5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-26T10:20:37.454Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Cloud Access Security Broker (CASB) Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/39dzwkhzcvv5",
+      "started_at": "2026-09-26T10:20:37.000Z",
+      "status": "investigating",
+      "updated_at": "2026-09-26T10:20:37.000Z"
     }
   }
 ]
