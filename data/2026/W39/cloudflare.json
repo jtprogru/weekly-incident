@@ -2827,8 +2827,10 @@
     "title": "Cloudflare Cloud Access Security Broker (CASB) Issues",
     "url": "https://www.cloudflarestatus.com/incidents/39dzwkhzcvv5",
     "impact": "minor",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-09-26T10:20:37Z",
+    "resolved_at": "2026-09-26T10:58:05.152Z",
+    "duration_minutes": 37,
     "components": [
       "Cloud Access Security Broker (CASB)"
     ],
@@ -2836,8 +2838,26 @@
       {
         "native_id": "9pk01kq26h95",
         "status": "investigating",
-        "body": "CASB is not able to refresh customer's vendor credentials on time due to increased Temporal schedule-to-start latency, causing some issues in scanning customer's resources. They may experience delay in reporting of CASB findings.",
+        "body": "Cloudflare is investigating degraded availability impacting Cloudflare CASB and policy sharing between accounts in Cloudflare Organizations. CASB findings may be delayed, and changes to shared policies may take longer to propagate to destination accounts.",
         "created_at": "2026-09-26T10:20:37.454Z"
+      },
+      {
+        "native_id": "84pt0ntkvlv9",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-09-26T10:44:49.063Z"
+      },
+      {
+        "native_id": "lp5s15yb3qnw",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-26T10:47:41.207Z"
+      },
+      {
+        "native_id": "cz6t57kjbnvl",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-26T10:58:05.152Z"
       }
     ],
     "first_seen_at": "2026-09-26T10:24:07.437509173Z",
@@ -2855,8 +2875,8 @@
           "position": 28,
           "showcase": false,
           "start_date": "2023-02-02",
-          "status": "degraded_performance",
-          "updated_at": "2026-09-26T10:20:37.000Z"
+          "status": "operational",
+          "updated_at": "2026-09-26T10:58:05.000Z"
         }
       ],
       "created_at": "2026-09-26T10:20:37.000Z",
@@ -2868,31 +2888,136 @@
             {
               "code": "h2p0jj4ltvcq",
               "name": "Cloudflare Sites and Services - Cloud Access Security Broker (CASB)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-26T10:58:05.152Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-26T10:58:05.152Z",
+          "id": "cz6t57kjbnvl",
+          "incident_id": "39dzwkhzcvv5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-26T10:58:05.152Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-26T10:47:41.207Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-26T10:47:41.207Z",
+          "id": "lp5s15yb3qnw",
+          "incident_id": "39dzwkhzcvv5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-26T10:47:41.207Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h2p0jj4ltvcq",
+              "name": "Cloudflare Sites and Services - Cloud Access Security Broker (CASB)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-09-26T10:44:49.063Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-26T10:44:49.063Z",
+          "id": "84pt0ntkvlv9",
+          "incident_id": "39dzwkhzcvv5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-26T10:44:49.063Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h2p0jj4ltvcq",
+              "name": "Cloudflare Sites and Services - Cloud Access Security Broker (CASB)",
               "new_status": "degraded_performance",
               "old_status": "operational"
             }
           ],
-          "body": "CASB is not able to refresh customer's vendor credentials on time due to increased Temporal schedule-to-start latency, causing some issues in scanning customer's resources. They may experience delay in reporting of CASB findings.",
+          "body": "Cloudflare is investigating degraded availability impacting Cloudflare CASB and policy sharing between accounts in Cloudflare Organizations. CASB findings may be delayed, and changes to shared policies may take longer to propagate to destination accounts.",
           "created_at": "2026-09-26T10:20:37.454Z",
           "custom_tweet": null,
           "deliver_notifications": true,
-          "display_at": "2026-09-26T10:20:37.454Z",
+          "display_at": "2026-09-26T10:20:37.000Z",
           "id": "9pk01kq26h95",
           "incident_id": "39dzwkhzcvv5",
           "status": "investigating",
           "tweet_id": null,
-          "updated_at": "2026-09-26T10:20:37.454Z"
+          "updated_at": "2026-09-26T10:44:11.499Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-09-26T10:47:41.207Z",
       "name": "Cloudflare Cloud Access Security Broker (CASB) Issues",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-09-26T10:58:05.152Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/39dzwkhzcvv5",
       "started_at": "2026-09-26T10:20:37.000Z",
-      "status": "investigating",
-      "updated_at": "2026-09-26T10:20:37.000Z"
+      "status": "resolved",
+      "updated_at": "2026-09-26T10:58:05.167Z"
+    }
+  },
+  {
+    "key": "cloudflare/6m2w2ls1gv75",
+    "vendor": "cloudflare",
+    "native_id": "6m2w2ls1gv75",
+    "title": "R2 Service Issues in Western North America (WNAM)",
+    "url": "https://www.cloudflarestatus.com/incidents/6m2w2ls1gv75",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-26T18:06:56.817Z",
+    "resolved_at": "2026-09-26T16:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "z4q85rgj2ylq",
+        "status": "resolved",
+        "body": "Between 17:13 and 17:36 UTC, an issue affected R2 buckets in the Western North America (WNAM) region. This incident has been resolved.",
+        "created_at": "2026-09-26T18:06:56.866Z"
+      }
+    ],
+    "first_seen_at": "2026-09-27T10:55:21.673626598Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-26T16:00:00.000Z",
+      "id": "6m2w2ls1gv75",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 17:13 and 17:36 UTC, an issue affected R2 buckets in the Western North America (WNAM) region. This incident has been resolved.",
+          "created_at": "2026-09-26T18:06:56.866Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-26T16:00:00.000Z",
+          "id": "z4q85rgj2ylq",
+          "incident_id": "6m2w2ls1gv75",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-26T18:06:56.866Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "R2 Service Issues in Western North America (WNAM)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-26T16:00:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/6m2w2ls1gv75",
+      "started_at": "2026-09-26T18:06:56.817Z",
+      "status": "resolved",
+      "updated_at": "2026-09-26T18:06:56.873Z"
     }
   }
 ]
