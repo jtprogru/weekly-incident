@@ -2,101 +2,165 @@
   "week": "2026-W40",
   "from": "2026-09-28T00:00:00Z",
   "to": "2026-10-05T00:00:00Z",
-  "generated_at": "2026-09-28T12:09:05.152603203Z",
+  "generated_at": "2026-09-29T11:40:52.783675051Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
-      "incidents_seen": 35,
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-28T12:09:05.152603203Z",
+      "fetched_at": "2026-09-29T11:40:52.783675051Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "grafana/2grcbfvdxsf7",
+      "vendor": "grafana",
+      "title": "Grafana Access Issues",
+      "url": "https://stspg.io/tblzdh8qw6qb",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-09-28T17:32:41.295Z",
+      "resolved_at": "2026-09-28T19:21:57.115Z",
+      "duration_minutes": 109,
+      "ongoing": false,
+      "components": [
+        "AWS US East - prod-us-east-3"
+      ],
+      "score": {
+        "value": 109,
+        "duration_minutes": 109,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/169pg72gg9jr",
+      "vendor": "github",
+      "title": "Copilot Code Review is unable to complete reviews",
+      "url": "https://stspg.io/phqvtmdm3y2m",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-09-28T21:16:39.006Z",
+      "resolved_at": "2026-09-28T22:08:20.216Z",
+      "duration_minutes": 51,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 76.5,
+        "duration_minutes": 51,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/smn1d93zd3hr",
+      "vendor": "cloudflare",
+      "title": "Replicate Flux Hotswap Models Stuck",
+      "url": "https://www.cloudflarestatus.com/incidents/smn1d93zd3hr",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-28T20:11:05.769Z",
+      "resolved_at": "2026-09-28T20:28:58.448Z",
+      "duration_minutes": 17,
+      "ongoing": false,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 30.6,
+        "duration_minutes": 17,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
     {
       "key": "grafana/zz75y4xkqrk1",
       "vendor": "grafana",
@@ -116,6 +180,26 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/32sg73xwyq89",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Eastern North America",
+      "url": "https://www.cloudflarestatus.com/incidents/32sg73xwyq89",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-28T20:36:00.145Z",
+      "resolved_at": "2026-09-28T20:36:00.227Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     }
