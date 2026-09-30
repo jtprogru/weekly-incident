@@ -2,101 +2,223 @@
   "week": "2026-W40",
   "from": "2026-09-28T00:00:00Z",
   "to": "2026-10-05T00:00:00Z",
-  "generated_at": "2026-09-29T11:40:52.783675051Z",
+  "generated_at": "2026-09-30T11:27:41.850793101Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-29T11:40:52.783675051Z",
+      "fetched_at": "2026-09-30T11:27:41.850793101Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "anthropic/4xvtc2gnq73l",
+      "vendor": "anthropic",
+      "title": "Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API",
+      "url": "https://stspg.io/br61xzj05pp5",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-29T14:21:37.18Z",
+      "resolved_at": "2026-09-29T16:27:21.369Z",
+      "duration_minutes": 125,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Console (platform.claude.com)",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 937.5,
+        "duration_minutes": 125,
+        "components": 5,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3R1T4FCR1337FBBYY9K2RPB",
+      "vendor": "openai",
+      "title": "Elevated errors in ChatGPT Space Pages",
+      "url": "https://status.openai.com/incidents/01M3R1T4FCR1337FBBYY9K2RPB",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-30T02:20:32Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 820.5,
+        "duration_minutes": 547,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3RDNY37CAPQGRKPBVMNRT4K",
+      "vendor": "openai",
+      "title": "Elevated error rates for ChatGPT Pro and Plus users",
+      "url": "https://status.openai.com/incidents/01M3RDNY37CAPQGRKPBVMNRT4K",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-30T05:47:57Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 508.5,
+        "duration_minutes": 339,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3Q4HMNP8SZ27DTZKW6F5BJ4",
+      "vendor": "openai",
+      "title": "Support available via email",
+      "url": "https://status.openai.com/incidents/01M3Q4HMNP8SZ27DTZKW6F5BJ4",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-29T17:49:05Z",
+      "resolved_at": "2026-09-29T23:18:57Z",
+      "duration_minutes": 329,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 493.5,
+        "duration_minutes": 329,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3Q4RK1SM4EMK445GGPG7C0N",
+      "vendor": "openai",
+      "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
+      "url": "https://status.openai.com/incidents/01M3Q4RK1SM4EMK445GGPG7C0N",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-29T17:52:52Z",
+      "resolved_at": "2026-09-29T23:14:02Z",
+      "duration_minutes": 321,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 481.5,
+        "duration_minutes": 321,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/drn27663z90v",
+      "vendor": "stripe",
+      "title": "Visa authorization errors",
+      "url": "https://stspg.io/t5mhk2s9lbb1",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-09-30T02:00:58.246Z",
+      "resolved_at": "2026-09-30T03:40:04.311Z",
+      "duration_minutes": 99,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 118.8,
+        "duration_minutes": 99,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
     {
       "key": "grafana/2grcbfvdxsf7",
       "vendor": "grafana",
@@ -120,6 +242,24 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/fs7dz54l226c",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Madrid",
+      "url": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-09-30T10:31:12Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 100.8,
+        "duration_minutes": 56,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "github/169pg72gg9jr",
       "vendor": "github",
       "title": "Copilot Code Review is unable to complete reviews",
@@ -138,6 +278,28 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/vcstgt8gqkyk",
+      "vendor": "cloudflare",
+      "title": "OTP Deliverability Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/vcstgt8gqkyk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-29T20:11:20.057Z",
+      "resolved_at": "2026-09-29T20:50:35.186Z",
+      "duration_minutes": 39,
+      "ongoing": false,
+      "components": [
+        "Access"
+      ],
+      "score": {
+        "value": 70.2,
+        "duration_minutes": 39,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
     },
     {
       "key": "cloudflare/smn1d93zd3hr",
@@ -192,6 +354,26 @@
       "status": "resolved",
       "started_at": "2026-09-28T20:36:00.145Z",
       "resolved_at": "2026-09-28T20:36:00.227Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/0dq5fbp2xwbj",
+      "vendor": "cloudflare",
+      "title": "WARP connectivity in Newark, NJ",
+      "url": "https://www.cloudflarestatus.com/incidents/0dq5fbp2xwbj",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T00:45:00Z",
+      "resolved_at": "2026-09-30T00:45:00Z",
       "duration_minutes": 0,
       "ongoing": false,
       "components": [],
