@@ -230,5 +230,186 @@
       "status": "resolved",
       "updated_at": "2026-09-28T19:21:57.138Z"
     }
+  },
+  {
+    "key": "grafana/pypb5l7bbsn6",
+    "vendor": "grafana",
+    "native_id": "pypb5l7bbsn6",
+    "title": "Elevated Latency and Errors for Grafana Cloud Logs in AWS US East (VA)",
+    "url": "https://stspg.io/tpz4xkmrd835",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-30T12:40:54.51Z",
+    "resolved_at": "2026-09-30T15:39:53.381Z",
+    "duration_minutes": 178,
+    "components": [
+      "AWS US East - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "pxgylqtspt7m",
+        "status": "investigating",
+        "body": "We are investigating elevated latency and a small number of failed requests for Grafana Cloud Logs in AWS US East (VA). Some customers writing logs to this region may see delayed ingestion or occasional write errors. We are actively investigating and will share more as we learn it. Next update by 13:38 UTC.",
+        "created_at": "2026-09-30T12:40:54.59Z"
+      },
+      {
+        "native_id": "hsrqknjvwvsm",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-09-30T13:40:40.246Z"
+      },
+      {
+        "native_id": "rwy6dbh51sh2",
+        "status": "identified",
+        "body": "We have identified a contributing factor to the elevated latency and are rolling out a mitigation to increase write capacity in AWS US East (VA). We continue to investigate a related, longer-running pattern. Next update by 14:40 UTC.",
+        "created_at": "2026-09-30T13:43:46.228Z"
+      },
+      {
+        "native_id": "z5q6h0k12zvw",
+        "status": "identified",
+        "body": "An additional brief recurrence affected a small number of requests after our mitigation was deployed, though impact was smaller than earlier today. We continue to monitor and investigate a related, longer-running pattern. Next update by 15:40 UTC.",
+        "created_at": "2026-09-30T14:31:29.128Z"
+      },
+      {
+        "native_id": "dr3vj185fsvv",
+        "status": "resolved",
+        "body": "Between 12:09 and 15:39 UTC on September 30, Grafana Cloud Logs in AWS US East (VA) experienced intermittent elevated latency and a small number of failed requests. Impact has returned to normal levels and all services are operating as expected. Thank you for your patience.",
+        "created_at": "2026-09-30T15:39:53.381Z"
+      }
+    ],
+    "first_seen_at": "2026-10-01T11:55:53.955402Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-24T17:00:57.332Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "vgv3t5h3q1qy",
+          "name": "AWS US East - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": "2026-07-24",
+          "status": "operational",
+          "updated_at": "2026-09-30T15:39:53.313Z"
+        }
+      ],
+      "created_at": "2026-09-30T12:40:54.520Z",
+      "id": "pypb5l7bbsn6",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 12:09 and 15:39 UTC on September 30, Grafana Cloud Logs in AWS US East (VA) experienced intermittent elevated latency and a small number of failed requests. Impact has returned to normal levels and all services are operating as expected. Thank you for your patience.",
+          "created_at": "2026-09-30T15:39:53.381Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T15:39:53.381Z",
+          "id": "dr3vj185fsvv",
+          "incident_id": "pypb5l7bbsn6",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T15:39:53.381Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "An additional brief recurrence affected a small number of requests after our mitigation was deployed, though impact was smaller than earlier today. We continue to monitor and investigate a related, longer-running pattern. Next update by 15:40 UTC.",
+          "created_at": "2026-09-30T14:31:29.128Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T14:31:29.128Z",
+          "id": "z5q6h0k12zvw",
+          "incident_id": "pypb5l7bbsn6",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T14:31:29.128Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified a contributing factor to the elevated latency and are rolling out a mitigation to increase write capacity in AWS US East (VA). We continue to investigate a related, longer-running pattern. Next update by 14:40 UTC.",
+          "created_at": "2026-09-30T13:43:46.228Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T13:43:46.228Z",
+          "id": "rwy6dbh51sh2",
+          "incident_id": "pypb5l7bbsn6",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T13:43:46.228Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-09-30T13:40:40.246Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T13:40:40.246Z",
+          "id": "hsrqknjvwvsm",
+          "incident_id": "pypb5l7bbsn6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T13:40:40.246Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated latency and a small number of failed requests for Grafana Cloud Logs in AWS US East (VA). Some customers writing logs to this region may see delayed ingestion or occasional write errors. We are actively investigating and will share more as we learn it. Next update by 13:38 UTC.",
+          "created_at": "2026-09-30T12:40:54.590Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T12:40:54.590Z",
+          "id": "pxgylqtspt7m",
+          "incident_id": "pypb5l7bbsn6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T12:40:54.590Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Latency and Errors for Grafana Cloud Logs in AWS US East (VA)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-30T15:39:53.381Z",
+      "shortlink": "https://stspg.io/tpz4xkmrd835",
+      "started_at": "2026-09-30T12:40:54.510Z",
+      "status": "resolved",
+      "updated_at": "2026-09-30T15:39:53.410Z"
+    }
   }
 ]

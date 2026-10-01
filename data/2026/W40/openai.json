@@ -278,6 +278,12 @@
         "status": "monitoring",
         "body": "All impacted services are recovered, we are continuing to monitor for any reoccurrence.",
         "created_at": "2026-09-30T10:34:34Z"
+      },
+      {
+        "native_id": "01M3SD8XPS5NZ1EZ1WGWC1V2Y0",
+        "status": "monitoring",
+        "body": "We have applied mitigations and are monitoring the recovery.",
+        "created_at": "2026-09-30T15:00:05Z"
       }
     ],
     "first_seen_at": "2026-09-30T11:27:41.850793101Z",
@@ -286,6 +292,15 @@
       "id": "01M3R1T4FCR1337FBBYY9K2RPB",
       "impact": "minor",
       "incident_updates": [
+        {
+          "body": "We have applied mitigations and are monitoring the recovery.",
+          "created_at": "2026-09-30T15:00:05Z",
+          "display_at": "2026-09-30T15:00:05Z",
+          "id": "01M3SD8XPS5NZ1EZ1WGWC1V2Y0",
+          "incident_id": "01M3R1T4FCR1337FBBYY9K2RPB",
+          "status": "monitoring",
+          "updated_at": "2026-09-30T15:00:05Z"
+        },
         {
           "body": "All impacted services are recovered, we are continuing to monitor for any reoccurrence.",
           "created_at": "2026-09-30T10:34:34Z",
@@ -318,7 +333,7 @@
       "name": "Elevated errors in ChatGPT Space Pages",
       "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
       "status": "monitoring",
-      "updated_at": "2026-09-30T10:34:34Z"
+      "updated_at": "2026-09-30T15:00:05Z"
     }
   },
   {
@@ -328,8 +343,10 @@
     "title": "Elevated error rates for ChatGPT Pro and Plus users",
     "url": "https://status.openai.com/incidents/01M3RDNY37CAPQGRKPBVMNRT4K",
     "impact": "minor",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-09-30T05:47:57Z",
+    "resolved_at": "2026-09-30T13:23:37Z",
+    "duration_minutes": 455,
     "components": [],
     "updates": [
       {
@@ -349,6 +366,12 @@
         "status": "monitoring",
         "body": "All impacted services are recovered, we are continuing to monitor for any reoccurrence.",
         "created_at": "2026-09-30T10:36:34Z"
+      },
+      {
+        "native_id": "01M3S7R9QR7M2JR5DF5YCT322W",
+        "status": "resolved",
+        "body": "All impacted services have now fully recovered.",
+        "created_at": "2026-09-30T13:23:37Z"
       }
     ],
     "first_seen_at": "2026-09-30T11:27:41.850793101Z",
@@ -357,6 +380,15 @@
       "id": "01M3RDNY37CAPQGRKPBVMNRT4K",
       "impact": "minor",
       "incident_updates": [
+        {
+          "body": "All impacted services have now fully recovered.",
+          "created_at": "2026-09-30T13:23:37Z",
+          "display_at": "2026-09-30T13:23:37Z",
+          "id": "01M3S7R9QR7M2JR5DF5YCT322W",
+          "incident_id": "01M3RDNY37CAPQGRKPBVMNRT4K",
+          "status": "resolved",
+          "updated_at": "2026-09-30T13:23:37Z"
+        },
         {
           "body": "All impacted services are recovered, we are continuing to monitor for any reoccurrence.",
           "created_at": "2026-09-30T10:36:34Z",
@@ -385,11 +417,114 @@
           "updated_at": "2026-09-30T05:47:57Z"
         }
       ],
-      "monitoring_at": "2026-09-30T05:56:48Z",
       "name": "Elevated error rates for ChatGPT Pro and Plus users",
       "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
-      "status": "monitoring",
-      "updated_at": "2026-09-30T10:36:34Z"
+      "resolved_at": "2026-09-30T13:23:37Z",
+      "status": "resolved",
+      "updated_at": "2026-09-30T13:23:37Z"
+    }
+  },
+  {
+    "key": "openai/01M3SMF1Q0TDCQVNYSXYG37QMR",
+    "vendor": "openai",
+    "native_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+    "title": "Elevated latency for some API requests",
+    "url": "https://status.openai.com/incidents/01M3SMF1Q0TDCQVNYSXYG37QMR",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-30T17:05:46Z",
+    "resolved_at": "2026-09-30T20:35:46Z",
+    "duration_minutes": 210,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M3SMF1Q0H8471KPS2XE2ME4W",
+        "status": "identified",
+        "body": "We have identified that users are experiencing elevated latency for the impacted services.\n\nWe are working on implementing a mitigation.",
+        "created_at": "2026-09-30T17:05:46Z"
+      },
+      {
+        "native_id": "01M3SMWPSHQCZSH3B1BYCJYJ9E",
+        "status": "identified",
+        "body": "We have identified that users are experiencing elevated latency for the impacted services.\n\nWe are working on implementing a mitigation.",
+        "created_at": "2026-09-30T17:13:13Z"
+      },
+      {
+        "native_id": "01M3SQ338215J61X3XQZK7S3YC",
+        "status": "identified",
+        "body": "We have implemented an initial mitigation and are seeing improvements in API latency. We are continuing to investigate the scope of the issue and apply additional mitigations as needed. Some requests to the Responses and Chat Completions APIs may still experience elevated latency or timeouts.",
+        "created_at": "2026-09-30T17:51:40Z"
+      },
+      {
+        "native_id": "01M3SRTE4DMVKG9A369CBW1CWX",
+        "status": "monitoring",
+        "body": "We have applied the mitigation and are monitoring the recovery.",
+        "created_at": "2026-09-30T18:21:53Z"
+      },
+      {
+        "native_id": "01M3T0FJS0Z3B9D3YCJ82N21M2",
+        "status": "resolved",
+        "body": "All impacted services have now fully recovered.",
+        "created_at": "2026-09-30T20:35:46Z"
+      }
+    ],
+    "first_seen_at": "2026-10-01T11:55:53.955402Z",
+    "raw": {
+      "created_at": "2026-09-30T17:05:46Z",
+      "id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "body": "All impacted services have now fully recovered.",
+          "created_at": "2026-09-30T20:35:46Z",
+          "display_at": "2026-09-30T20:35:46Z",
+          "id": "01M3T0FJS0Z3B9D3YCJ82N21M2",
+          "incident_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "status": "resolved",
+          "updated_at": "2026-09-30T20:35:46Z"
+        },
+        {
+          "body": "We have applied the mitigation and are monitoring the recovery.",
+          "created_at": "2026-09-30T18:21:53Z",
+          "display_at": "2026-09-30T18:21:53Z",
+          "id": "01M3SRTE4DMVKG9A369CBW1CWX",
+          "incident_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "status": "monitoring",
+          "updated_at": "2026-09-30T18:21:53Z"
+        },
+        {
+          "body": "We have implemented an initial mitigation and are seeing improvements in API latency. We are continuing to investigate the scope of the issue and apply additional mitigations as needed. Some requests to the Responses and Chat Completions APIs may still experience elevated latency or timeouts.",
+          "created_at": "2026-09-30T17:51:40Z",
+          "display_at": "2026-09-30T17:51:40Z",
+          "id": "01M3SQ338215J61X3XQZK7S3YC",
+          "incident_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "status": "identified",
+          "updated_at": "2026-09-30T17:51:40Z"
+        },
+        {
+          "body": "We have identified that users are experiencing elevated latency for the impacted services.\n\nWe are working on implementing a mitigation.",
+          "created_at": "2026-09-30T17:13:13Z",
+          "display_at": "2026-09-30T17:13:13Z",
+          "id": "01M3SMWPSHQCZSH3B1BYCJYJ9E",
+          "incident_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "status": "identified",
+          "updated_at": "2026-09-30T17:13:13Z"
+        },
+        {
+          "body": "We have identified that users are experiencing elevated latency for the impacted services.\n\nWe are working on implementing a mitigation.",
+          "created_at": "2026-09-30T17:05:46Z",
+          "display_at": "2026-09-30T17:05:46Z",
+          "id": "01M3SMF1Q0H8471KPS2XE2ME4W",
+          "incident_id": "01M3SMF1Q0TDCQVNYSXYG37QMR",
+          "status": "identified",
+          "updated_at": "2026-09-30T17:05:46Z"
+        }
+      ],
+      "name": "Elevated latency for some API requests",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "resolved_at": "2026-09-30T20:35:46Z",
+      "status": "resolved",
+      "updated_at": "2026-09-30T20:35:46Z"
     }
   }
 ]

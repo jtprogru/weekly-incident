@@ -316,7 +316,7 @@
     "title": "Network Performance Issues in Madrid",
     "url": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
     "impact": "minor",
-    "status": "investigating",
+    "status": "monitoring",
     "started_at": "2026-09-30T10:31:12Z",
     "components": [],
     "updates": [
@@ -325,6 +325,18 @@
         "status": "investigating",
         "body": "Cloudflare is investigating issues with network performance in Madrid (MAD). \nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
         "created_at": "2026-09-30T10:31:12.858Z"
+      },
+      {
+        "native_id": "v16f2m1rqzz7",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-30T11:31:16.708Z"
+      },
+      {
+        "native_id": "9xqcc40y5kw6",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-30T14:06:40.522Z"
       }
     ],
     "first_seen_at": "2026-09-30T11:27:41.850793101Z",
@@ -334,6 +346,32 @@
       "id": "fs7dz54l226c",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-30T14:06:40.522Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T14:06:40.522Z",
+          "id": "9xqcc40y5kw6",
+          "incident_id": "fs7dz54l226c",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T14:06:40.522Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-30T11:31:16.708Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T11:31:16.708Z",
+          "id": "v16f2m1rqzz7",
+          "incident_id": "fs7dz54l226c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T11:31:16.708Z"
+        },
         {
           "affected_components": null,
           "body": "Cloudflare is investigating issues with network performance in Madrid (MAD). \nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
@@ -348,15 +386,476 @@
           "updated_at": "2026-09-30T10:31:12.858Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-09-30T14:06:40.000Z",
       "name": "Network Performance Issues in Madrid",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
       "started_at": "2026-09-30T10:31:12.000Z",
-      "status": "investigating",
-      "updated_at": "2026-09-30T10:31:26.000Z"
+      "status": "monitoring",
+      "updated_at": "2026-09-30T14:06:40.000Z"
+    }
+  },
+  {
+    "key": "cloudflare/2h896759fg2f",
+    "vendor": "cloudflare",
+    "native_id": "2h896759fg2f",
+    "title": "Membership Permission Change Delays",
+    "url": "https://www.cloudflarestatus.com/incidents/2h896759fg2f",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-30T13:36:42.588Z",
+    "resolved_at": "2026-09-30T18:10:55.604Z",
+    "duration_minutes": 274,
+    "components": [
+      "API"
+    ],
+    "updates": [
+      {
+        "native_id": "y0y6jrxp8jkc",
+        "status": "investigating",
+        "body": "Cloudflare is investigating delays in applying changes to account member roles and permissions. Recently updated permissions may not be immediately reflected in some Cloudflare services. We are working to mitigate this issue.",
+        "created_at": "2026-09-30T13:36:42.92Z"
+      },
+      {
+        "native_id": "3tppgshg7yd5",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-30T18:04:02.751Z"
+      },
+      {
+        "native_id": "ylcd8wwtt4lj",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-30T18:10:55.604Z"
+      }
+    ],
+    "first_seen_at": "2026-10-01T11:55:53.955402Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Application programming interface (API) for customers to read and write their configurations at https://api.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "g4tb35rs9yw7",
+          "name": "API",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-30T18:10:55.000Z"
+        }
+      ],
+      "created_at": "2026-09-30T13:36:42.000Z",
+      "id": "2h896759fg2f",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-30T18:10:55.604Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T18:10:55.604Z",
+          "id": "ylcd8wwtt4lj",
+          "incident_id": "2h896759fg2f",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T18:10:55.604Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-30T18:04:02.751Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T18:04:02.751Z",
+          "id": "3tppgshg7yd5",
+          "incident_id": "2h896759fg2f",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T18:04:02.751Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating delays in applying changes to account member roles and permissions. Recently updated permissions may not be immediately reflected in some Cloudflare services. We are working to mitigate this issue.",
+          "created_at": "2026-09-30T13:36:42.920Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T13:36:42.920Z",
+          "id": "y0y6jrxp8jkc",
+          "incident_id": "2h896759fg2f",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T13:36:42.920Z"
+        }
+      ],
+      "monitoring_at": "2026-09-30T18:04:02.751Z",
+      "name": "Membership Permission Change Delays",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-30T18:10:55.604Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/2h896759fg2f",
+      "started_at": "2026-09-30T13:36:42.588Z",
+      "status": "resolved",
+      "updated_at": "2026-09-30T18:10:55.630Z"
+    }
+  },
+  {
+    "key": "cloudflare/mq69fw5ykdwb",
+    "vendor": "cloudflare",
+    "native_id": "mq69fw5ykdwb",
+    "title": "Network Performance Issues in Los Angeles (LAX)",
+    "url": "https://www.cloudflarestatus.com/incidents/mq69fw5ykdwb",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-30T13:49:25Z",
+    "resolved_at": "2026-09-30T19:18:41.309Z",
+    "duration_minutes": 329,
+    "components": [
+      "Containers",
+      "Durable Objects",
+      "Hyperdrive",
+      "R2",
+      "Stream",
+      "Vectorize"
+    ],
+    "updates": [
+      {
+        "native_id": "p9bfgrnv5ggl",
+        "status": "investigating",
+        "body": "Cloudflare is investigating possible network congestion in Los Angeles (LAX) affecting Vectorize, Durable Objects, R2, Hyperdrive, Stream, and Cloudchamber. We are working to mitigate the impact to Internet users in the region.",
+        "created_at": "2026-09-30T13:49:25.727Z"
+      },
+      {
+        "native_id": "6k1f76t0bd9n",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-09-30T14:39:04.313Z"
+      },
+      {
+        "native_id": "y6v37b9xdqkv",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-30T19:18:41.309Z"
+      }
+    ],
+    "first_seen_at": "2026-10-01T11:55:53.955402Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 35,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:26:56.000Z"
+        },
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-09-25T14:49:01.000Z"
+        },
+        {
+          "created_at": "2024-04-04T09:42:44.000Z",
+          "description": "Hyperdrive is a service that accelerates queries you make to existing databases, making it faster to access your data from across the globe, irrespective of your users’ location.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "d0x62dsm4c9n",
+          "name": "Hyperdrive",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 57,
+          "showcase": false,
+          "start_date": "2024-04-04",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:26:29.000Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 83,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-09-30T19:18:41.000Z"
+        },
+        {
+          "created_at": "2019-01-24T16:53:34.000Z",
+          "description": "Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "47xg28c02lnk",
+          "name": "Stream",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 100,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-22T19:26:06.000Z"
+        },
+        {
+          "created_at": "2025-04-07T09:12:08.000Z",
+          "description": "Vectorize is a globally distributed vector database that powers full-stack AI applications, seamlessly integrated with Cloudflare Workers.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "dfrxmxffp7r2",
+          "name": "Vectorize",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 111,
+          "showcase": false,
+          "start_date": "2025-04-07",
+          "status": "operational",
+          "updated_at": "2026-09-30T19:18:41.000Z"
+        }
+      ],
+      "created_at": "2026-09-30T13:49:25.000Z",
+      "id": "mq69fw5ykdwb",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "d0x62dsm4c9n",
+              "name": "Cloudflare Sites and Services - Hyperdrive",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "47xg28c02lnk",
+              "name": "Cloudflare Sites and Services - Stream",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "dfrxmxffp7r2",
+              "name": "Cloudflare Sites and Services - Vectorize",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-30T19:18:41.309Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T19:18:41.309Z",
+          "id": "y6v37b9xdqkv",
+          "incident_id": "mq69fw5ykdwb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T19:18:41.309Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "dfrxmxffp7r2",
+              "name": "Cloudflare Sites and Services - Vectorize",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-09-30T14:39:04.313Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T14:39:04.313Z",
+          "id": "6k1f76t0bd9n",
+          "incident_id": "mq69fw5ykdwb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T14:39:04.313Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating possible network congestion in Los Angeles (LAX) affecting Vectorize, Durable Objects, R2, Hyperdrive, Stream, and Cloudchamber. We are working to mitigate the impact to Internet users in the region.",
+          "created_at": "2026-09-30T13:49:25.727Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T13:49:25.000Z",
+          "id": "p9bfgrnv5ggl",
+          "incident_id": "mq69fw5ykdwb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T19:16:43.017Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues in Los Angeles (LAX)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-30T19:18:41.309Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/mq69fw5ykdwb",
+      "started_at": "2026-09-30T13:49:25.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-30T19:18:41.334Z"
+    }
+  },
+  {
+    "key": "cloudflare/4m03612lprhr",
+    "vendor": "cloudflare",
+    "native_id": "4m03612lprhr",
+    "title": "Cloudflare Workers build delays",
+    "url": "https://www.cloudflarestatus.com/incidents/4m03612lprhr",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-09-30T15:33:06Z",
+    "components": [
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "tg5yy0p3t4jx",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers build delays which potentially impacts multiple customers. Further detail will be provided as more information becomes available.",
+        "created_at": "2026-09-30T15:33:06.717Z"
+      },
+      {
+        "native_id": "r7q84y7xphqk",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-30T17:42:28.924Z"
+      }
+    ],
+    "first_seen_at": "2026-10-01T11:55:53.955402Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 119,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-10-01T08:57:07.000Z"
+        }
+      ],
+      "created_at": "2026-09-30T15:33:06.000Z",
+      "id": "4m03612lprhr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-30T17:42:28.924Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T17:42:28.924Z",
+          "id": "r7q84y7xphqk",
+          "incident_id": "4m03612lprhr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T17:42:28.924Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Cloudflare Sites and Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers build delays which potentially impacts multiple customers. Further detail will be provided as more information becomes available.",
+          "created_at": "2026-09-30T15:33:06.717Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-30T15:33:06.717Z",
+          "id": "tg5yy0p3t4jx",
+          "incident_id": "4m03612lprhr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-30T15:33:06.717Z"
+        }
+      ],
+      "monitoring_at": "2026-09-30T17:42:28.000Z",
+      "name": "Cloudflare Workers build delays",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/4m03612lprhr",
+      "started_at": "2026-09-30T15:33:06.000Z",
+      "status": "monitoring",
+      "updated_at": "2026-09-30T17:42:28.000Z"
     }
   }
 ]

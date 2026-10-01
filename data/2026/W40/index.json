@@ -2,101 +2,184 @@
   "week": "2026-W40",
   "from": "2026-09-28T00:00:00Z",
   "to": "2026-10-05T00:00:00Z",
-  "generated_at": "2026-09-30T11:27:41.850793101Z",
+  "generated_at": "2026-10-01T11:55:53.955402Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-30T11:27:41.850793101Z",
+      "fetched_at": "2026-10-01T11:55:53.955402Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/mq69fw5ykdwb",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Los Angeles (LAX)",
+      "url": "https://www.cloudflarestatus.com/incidents/mq69fw5ykdwb",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T13:49:25Z",
+      "resolved_at": "2026-09-30T19:18:41.309Z",
+      "duration_minutes": 329,
+      "ongoing": false,
+      "components": [
+        "Containers",
+        "Durable Objects",
+        "Hyperdrive",
+        "R2",
+        "Stream",
+        "Vectorize"
+      ],
+      "score": {
+        "value": 3553.2000000000003,
+        "duration_minutes": 329,
+        "components": 6,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3R1T4FCR1337FBBYY9K2RPB",
+      "vendor": "openai",
+      "title": "Elevated errors in ChatGPT Space Pages",
+      "url": "https://status.openai.com/incidents/01M3R1T4FCR1337FBBYY9K2RPB",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-30T02:20:32Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 3022.5,
+        "duration_minutes": 2015,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/fs7dz54l226c",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Madrid",
+      "url": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-30T10:31:12Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 2743.2000000000003,
+        "duration_minutes": 1524,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/4m03612lprhr",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers build delays",
+      "url": "https://www.cloudflarestatus.com/incidents/4m03612lprhr",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-09-30T15:33:06Z",
+      "ongoing": true,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 2199.6,
+        "duration_minutes": 1222,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "anthropic/4xvtc2gnq73l",
       "vendor": "anthropic",
@@ -124,36 +207,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M3R1T4FCR1337FBBYY9K2RPB",
-      "vendor": "openai",
-      "title": "Elevated errors in ChatGPT Space Pages",
-      "url": "https://status.openai.com/incidents/01M3R1T4FCR1337FBBYY9K2RPB",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-09-30T02:20:32Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 820.5,
-        "duration_minutes": 547,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
       "key": "openai/01M3RDNY37CAPQGRKPBVMNRT4K",
       "vendor": "openai",
       "title": "Elevated error rates for ChatGPT Pro and Plus users",
       "url": "https://status.openai.com/incidents/01M3RDNY37CAPQGRKPBVMNRT4K",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-09-30T05:47:57Z",
-      "ongoing": true,
+      "resolved_at": "2026-09-30T13:23:37Z",
+      "duration_minutes": 455,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 508.5,
-        "duration_minutes": 339,
+        "value": 682.5,
+        "duration_minutes": 455,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -180,6 +247,28 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/2h896759fg2f",
+      "vendor": "cloudflare",
+      "title": "Membership Permission Change Delays",
+      "url": "https://www.cloudflarestatus.com/incidents/2h896759fg2f",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T13:36:42.588Z",
+      "resolved_at": "2026-09-30T18:10:55.604Z",
+      "duration_minutes": 274,
+      "ongoing": false,
+      "components": [
+        "API"
+      ],
+      "score": {
+        "value": 493.2,
+        "duration_minutes": 274,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M3Q4RK1SM4EMK445GGPG7C0N",
       "vendor": "openai",
       "title": "Elevated errors across ChatGPT, Codex, and the API including the Agents API",
@@ -196,6 +285,74 @@
         "duration_minutes": 321,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M3SMF1Q0TDCQVNYSXYG37QMR",
+      "vendor": "openai",
+      "title": "Elevated latency for some API requests",
+      "url": "https://status.openai.com/incidents/01M3SMF1Q0TDCQVNYSXYG37QMR",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T17:05:46Z",
+      "resolved_at": "2026-09-30T20:35:46Z",
+      "duration_minutes": 210,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 315,
+        "duration_minutes": 210,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/41hx12qtkl7x",
+      "vendor": "datadog",
+      "title": "Delayed Events",
+      "url": "https://stspg.io/8fknzl9hmvs7",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T18:02:40.333Z",
+      "resolved_at": "2026-09-30T18:51:03.098Z",
+      "duration_minutes": 48,
+      "ongoing": false,
+      "components": [
+        "APM",
+        "CI Visibility",
+        "Cloud Network Monitoring",
+        "Error Tracking",
+        "RUM"
+      ],
+      "score": {
+        "value": 240,
+        "duration_minutes": 48,
+        "components": 5,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/pypb5l7bbsn6",
+      "vendor": "grafana",
+      "title": "Elevated Latency and Errors for Grafana Cloud Logs in AWS US East (VA)",
+      "url": "https://stspg.io/tpz4xkmrd835",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-30T12:40:54.51Z",
+      "resolved_at": "2026-09-30T15:39:53.381Z",
+      "duration_minutes": 178,
+      "ongoing": false,
+      "components": [
+        "AWS US East - prod-us-east-3"
+      ],
+      "score": {
+        "value": 178,
+        "duration_minutes": 178,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": true
     },
@@ -242,20 +399,24 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/fs7dz54l226c",
-      "vendor": "cloudflare",
-      "title": "Network Performance Issues in Madrid",
-      "url": "https://www.cloudflarestatus.com/incidents/fs7dz54l226c",
+      "key": "circleci/22mrv46g6n7g",
+      "vendor": "circleci",
+      "title": "Delays starting Gen 2 Docker Jobs",
+      "url": "https://stspg.io/4jm2frmlcq2q",
       "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-09-30T10:31:12Z",
-      "ongoing": true,
-      "components": [],
+      "status": "resolved",
+      "started_at": "2026-10-01T09:06:09.779Z",
+      "resolved_at": "2026-10-01T10:45:22.574Z",
+      "duration_minutes": 99,
+      "ongoing": false,
+      "components": [
+        "Docker Jobs"
+      ],
       "score": {
-        "value": 100.8,
-        "duration_minutes": 56,
+        "value": 99,
+        "duration_minutes": 99,
         "components": 1,
-        "vendor_weight": 1.8
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
@@ -324,6 +485,28 @@
       "above_threshold": false
     },
     {
+      "key": "stripe/f45340rc0qm0",
+      "vendor": "stripe",
+      "title": "Elevated API errors",
+      "url": "https://stspg.io/0cknvjm6mzq6",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-01T02:38:24.785Z",
+      "resolved_at": "2026-10-01T03:02:57.079Z",
+      "duration_minutes": 24,
+      "ongoing": false,
+      "components": [
+        "Stripe API"
+      ],
+      "score": {
+        "value": 28.799999999999997,
+        "duration_minutes": 24,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/zz75y4xkqrk1",
       "vendor": "grafana",
       "title": "Elevated Log Ingestion Errors for Grafana Cloud Logs in Azure Netherlands (EU)",
@@ -382,6 +565,26 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/dqn46wtvbdzv",
+      "vendor": "github",
+      "title": "[Retroactive] Actions workflow run failures after deployment gate approvals",
+      "url": "https://stspg.io/f0yg8jk2gm80",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-01T11:34:16.856Z",
+      "resolved_at": "2026-10-01T02:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
