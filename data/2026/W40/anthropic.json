@@ -98,7 +98,7 @@
           "showcase": true,
           "start_date": "2023-07-11",
           "status": "operational",
-          "updated_at": "2026-09-29T15:30:44.450Z"
+          "updated_at": "2026-10-01T18:23:02.671Z"
         },
         {
           "created_at": "2023-07-11T17:53:10.880Z",
@@ -113,7 +113,7 @@
           "showcase": true,
           "start_date": "2023-07-11",
           "status": "operational",
-          "updated_at": "2026-09-29T16:27:21.330Z"
+          "updated_at": "2026-10-01T18:23:02.697Z"
         },
         {
           "created_at": "2025-05-22T21:35:29.822Z",
@@ -494,6 +494,156 @@
       "started_at": "2026-09-29T14:21:37.180Z",
       "status": "resolved",
       "updated_at": "2026-09-29T16:27:21.393Z"
+    }
+  },
+  {
+    "key": "anthropic/k0h22tsvnydg",
+    "vendor": "anthropic",
+    "native_id": "k0h22tsvnydg",
+    "title": "Delayed credits on the Claude Platform",
+    "url": "https://stspg.io/jg26d0skzh27",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-01T16:20:40.767Z",
+    "resolved_at": "2026-10-01T22:36:22.21Z",
+    "duration_minutes": 375,
+    "components": [
+      "Claude Console (platform.claude.com)",
+      "Claude API (api.anthropic.com)"
+    ],
+    "updates": [
+      {
+        "native_id": "bp7mz04t4xb8",
+        "status": "investigating",
+        "body": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additional update as soon as possible.",
+        "created_at": "2026-10-01T16:20:40.928Z"
+      },
+      {
+        "native_id": "svgmzqzwyzxk",
+        "status": "monitoring",
+        "body": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues.",
+        "created_at": "2026-10-01T18:23:02.729Z"
+      },
+      {
+        "native_id": "5w4972nptx2s",
+        "status": "resolved",
+        "body": "This issue has been resolved.",
+        "created_at": "2026-10-01T22:36:22.21Z"
+      }
+    ],
+    "first_seen_at": "2026-10-02T11:27:28.993580785Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:49.982Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "0qbwn08sd68x",
+          "name": "Claude Console (platform.claude.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 2,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-01T18:23:02.671Z"
+        },
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-01T18:23:02.697Z"
+        }
+      ],
+      "created_at": "2026-10-01T16:20:40.775Z",
+      "id": "k0h22tsvnydg",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This issue has been resolved.",
+          "created_at": "2026-10-01T22:36:22.210Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-01T22:36:22.210Z",
+          "id": "5w4972nptx2s",
+          "incident_id": "k0h22tsvnydg",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-01T22:36:22.210Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have resolved the issue causing delays in credits being applied after purchase. We are monitoring closely to ensure no further issues.",
+          "created_at": "2026-10-01T18:23:02.729Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-01T18:23:02.729Z",
+          "id": "svgmzqzwyzxk",
+          "incident_id": "k0h22tsvnydg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-01T18:23:02.729Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating delays in credit purchases being reflected in account balances, resulting in some requests failing for insufficient credit balance. We will provide an additional update as soon as possible.",
+          "created_at": "2026-10-01T16:20:40.928Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-01T16:20:40.928Z",
+          "id": "bp7mz04t4xb8",
+          "incident_id": "k0h22tsvnydg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-01T16:20:40.928Z"
+        }
+      ],
+      "monitoring_at": "2026-10-01T18:23:02.729Z",
+      "name": "Delayed credits on the Claude Platform",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-01T22:36:22.210Z",
+      "shortlink": "https://stspg.io/jg26d0skzh27",
+      "started_at": "2026-10-01T16:20:40.767Z",
+      "status": "resolved",
+      "updated_at": "2026-10-01T22:36:22.239Z"
     }
   }
 ]
