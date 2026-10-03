@@ -36,8 +36,8 @@
           "position": 14,
           "showcase": false,
           "start_date": "2023-09-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-02T11:03:11.301Z"
+          "status": "operational",
+          "updated_at": "2026-10-02T14:03:18.127Z"
         }
       ],
       "created_at": "2026-09-28T12:02:16.989Z",
@@ -419,8 +419,10 @@
     "title": "Elevated Write Latency and Errors for Grafana Cloud Logs in Azure Netherlands",
     "url": "https://stspg.io/4wvrl2q1vm5f",
     "impact": "minor",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-10-02T10:03:11Z",
+    "resolved_at": "2026-10-02T14:03:18.211Z",
+    "duration_minutes": 240,
     "components": [
       "Azure Netherlands - prod-eu-west-3"
     ],
@@ -436,6 +438,18 @@
         "status": "investigating",
         "body": "We are continuing to investigate this issue. Next update by 11:30 UTC.",
         "created_at": "2026-10-02T11:06:24.737Z"
+      },
+      {
+        "native_id": "xfwms2txw0wg",
+        "status": "identified",
+        "body": "We have identified the issue as related to a cloud provider dependency affecting the write path for Grafana Cloud Logs in Azure Netherlands. Latency has recovered to normal levels. We are continuing to monitor before fully closing this incident.",
+        "created_at": "2026-10-02T14:02:56.824Z"
+      },
+      {
+        "native_id": "nznhk9lw0v54",
+        "status": "resolved",
+        "body": "Between 10:03 and 12:37 UTC, Grafana Cloud Logs in Azure Netherlands experienced elevated write latency and intermittent errors due to a cloud provider dependency issue. Service has fully recovered and is operating normally. Thank you for your patience.",
+        "created_at": "2026-10-02T14:03:18.211Z"
       }
     ],
     "first_seen_at": "2026-10-02T11:27:28.993580785Z",
@@ -453,14 +467,54 @@
           "position": 14,
           "showcase": false,
           "start_date": "2023-09-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-02T11:03:11.301Z"
+          "status": "operational",
+          "updated_at": "2026-10-02T14:03:18.127Z"
         }
       ],
-      "created_at": "2026-10-02T11:03:11.251Z",
+      "created_at": "2026-10-02T10:03:11.000Z",
       "id": "9kg64q3pygpx",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hqf81r9207h6",
+              "name": "Logs - Azure Netherlands - prod-eu-west-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 10:03 and 12:37 UTC, Grafana Cloud Logs in Azure Netherlands experienced elevated write latency and intermittent errors due to a cloud provider dependency issue. Service has fully recovered and is operating normally. Thank you for your patience.",
+          "created_at": "2026-10-02T14:03:18.211Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-02T14:03:18.211Z",
+          "id": "nznhk9lw0v54",
+          "incident_id": "9kg64q3pygpx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-02T14:03:18.211Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hqf81r9207h6",
+              "name": "Logs - Azure Netherlands - prod-eu-west-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the issue as related to a cloud provider dependency affecting the write path for Grafana Cloud Logs in Azure Netherlands. Latency has recovered to normal levels. We are continuing to monitor before fully closing this incident.",
+          "created_at": "2026-10-02T14:02:56.824Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-02T14:02:56.824Z",
+          "id": "xfwms2txw0wg",
+          "incident_id": "9kg64q3pygpx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-02T14:02:56.824Z"
+        },
         {
           "affected_components": [
             {
@@ -506,11 +560,11 @@
       "name": "Elevated Write Latency and Errors for Grafana Cloud Logs in Azure Netherlands",
       "page_id": "6r99zhljywjf",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-02T14:03:18.211Z",
       "shortlink": "https://stspg.io/4wvrl2q1vm5f",
       "started_at": "2026-10-02T10:03:11.000Z",
-      "status": "investigating",
-      "updated_at": "2026-10-02T11:09:50.232Z"
+      "status": "resolved",
+      "updated_at": "2026-10-02T14:03:18.245Z"
     }
   }
 ]

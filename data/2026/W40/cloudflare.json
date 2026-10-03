@@ -834,8 +834,8 @@
           "position": 119,
           "showcase": false,
           "start_date": "2025-05-27",
-          "status": "operational",
-          "updated_at": "2026-10-01T08:57:07.000Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-10-03T05:54:59.000Z"
         }
       ],
       "created_at": "2026-09-30T15:33:06.000Z",
@@ -1165,6 +1165,283 @@
       "started_at": "2026-10-01T20:59:56.244Z",
       "status": "resolved",
       "updated_at": "2026-10-01T21:18:42.764Z"
+    }
+  },
+  {
+    "key": "cloudflare/2xnmsnv8yv5x",
+    "vendor": "cloudflare",
+    "native_id": "2xnmsnv8yv5x",
+    "title": "Cloudflare CDN experiencing increase in errors.",
+    "url": "https://www.cloudflarestatus.com/incidents/2xnmsnv8yv5x",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-10-02T21:46:34Z",
+    "resolved_at": "2026-10-02T21:57:57.692Z",
+    "duration_minutes": 11,
+    "components": [
+      "CDN/Cache",
+      "CDN Cache Purge"
+    ],
+    "updates": [
+      {
+        "native_id": "1wfg30sqql65",
+        "status": "monitoring",
+        "body": "Cloudflare is investigating an increase in errors for CDN configuration changes and purge calls specifically issued from the dashboard. Purges sent via API were unaffected. CDN configuration changes across the dashboard, API and others saw impact.",
+        "created_at": "2026-10-02T21:46:34.988Z"
+      },
+      {
+        "native_id": "781mfj9g5k81",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-02T21:57:57.692Z"
+      }
+    ],
+    "first_seen_at": "2026-10-03T10:43:44.513459026Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-03-25T19:03:33.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5wnz34mhfhrk",
+          "name": "CDN/Cache",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-02T21:57:57.000Z"
+        },
+        {
+          "created_at": "2019-01-31T16:54:52.000Z",
+          "description": "CDN single file cache purging service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fbvx0hxhhdj0",
+          "name": "CDN Cache Purge",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-02T21:57:57.000Z"
+        }
+      ],
+      "created_at": "2026-10-02T21:46:34.000Z",
+      "id": "2xnmsnv8yv5x",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "Cloudflare Sites and Services - CDN/Cache",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "Cloudflare Sites and Services - CDN Cache Purge",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-02T21:57:57.692Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-02T21:57:57.692Z",
+          "id": "781mfj9g5k81",
+          "incident_id": "2xnmsnv8yv5x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-02T21:57:57.692Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "Cloudflare Sites and Services - CDN/Cache",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "Cloudflare Sites and Services - CDN Cache Purge",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an increase in errors for CDN configuration changes and purge calls specifically issued from the dashboard. Purges sent via API were unaffected. CDN configuration changes across the dashboard, API and others saw impact.",
+          "created_at": "2026-10-02T21:46:34.988Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-02T21:46:34.000Z",
+          "id": "1wfg30sqql65",
+          "incident_id": "2xnmsnv8yv5x",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-02T21:56:31.723Z"
+        }
+      ],
+      "monitoring_at": "2026-10-02T21:46:34.000Z",
+      "name": "Cloudflare CDN experiencing increase in errors.",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-02T21:57:57.692Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/2xnmsnv8yv5x",
+      "started_at": "2026-10-02T21:46:34.000Z",
+      "status": "resolved",
+      "updated_at": "2026-10-02T21:57:57.716Z"
+    }
+  },
+  {
+    "key": "cloudflare/0kj5cjjq93xn",
+    "vendor": "cloudflare",
+    "native_id": "0kj5cjjq93xn",
+    "title": "Network Performance Issues - Seoul (ICN)",
+    "url": "https://www.cloudflarestatus.com/incidents/0kj5cjjq93xn",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-02T22:33:54.489Z",
+    "resolved_at": "2026-10-02T16:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "5jsccf9qzdvr",
+        "status": "resolved",
+        "body": "Between 17:11 and 17:22 UTC, Cloudflare experienced network performance degradation impacting Seoul, South Korea (ICN).\nThe issue has been identified and fully mitigated, and network performance has returned to normal levels.",
+        "created_at": "2026-10-02T22:33:54.556Z"
+      }
+    ],
+    "first_seen_at": "2026-10-03T10:43:44.513459026Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-02T16:00:00.000Z",
+      "id": "0kj5cjjq93xn",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 17:11 and 17:22 UTC, Cloudflare experienced network performance degradation impacting Seoul, South Korea (ICN).\nThe issue has been identified and fully mitigated, and network performance has returned to normal levels.",
+          "created_at": "2026-10-02T22:33:54.556Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-02T16:00:00.000Z",
+          "id": "5jsccf9qzdvr",
+          "incident_id": "0kj5cjjq93xn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-02T22:33:54.556Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues - Seoul (ICN)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-02T16:00:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/0kj5cjjq93xn",
+      "started_at": "2026-10-02T22:33:54.489Z",
+      "status": "resolved",
+      "updated_at": "2026-10-02T22:33:54.564Z"
+    }
+  },
+  {
+    "key": "cloudflare/q2bck6r39bzk",
+    "vendor": "cloudflare",
+    "native_id": "q2bck6r39bzk",
+    "title": "Issues with Workers Build failing to start",
+    "url": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-10-03T05:54:59Z",
+    "components": [
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "gmdzyd6zm9dc",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers build failing to start. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-10-03T05:54:59.979Z"
+      },
+      {
+        "native_id": "n56031b9b940",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-03T08:54:50.818Z"
+      }
+    ],
+    "first_seen_at": "2026-10-03T10:43:44.513459026Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 119,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "degraded_performance",
+          "updated_at": "2026-10-03T05:54:59.000Z"
+        }
+      ],
+      "created_at": "2026-10-03T05:54:59.000Z",
+      "id": "q2bck6r39bzk",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-03T08:54:50.818Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-03T08:54:50.818Z",
+          "id": "n56031b9b940",
+          "incident_id": "q2bck6r39bzk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-03T08:54:50.818Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Cloudflare Sites and Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers build failing to start. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-10-03T05:54:59.979Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-03T05:54:59.979Z",
+          "id": "gmdzyd6zm9dc",
+          "incident_id": "q2bck6r39bzk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-03T05:54:59.979Z"
+        }
+      ],
+      "monitoring_at": "2026-10-03T08:54:50.000Z",
+      "name": "Issues with Workers Build failing to start",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
+      "started_at": "2026-10-03T05:54:59.000Z",
+      "status": "monitoring",
+      "updated_at": "2026-10-03T08:54:50.000Z"
     }
   }
 ]
