@@ -675,5 +675,220 @@
       "status": "resolved",
       "updated_at": "2026-10-03T19:43:28.142Z"
     }
+  },
+  {
+    "key": "grafana/9tzsfy13vrfj",
+    "vendor": "grafana",
+    "native_id": "9tzsfy13vrfj",
+    "title": "Degraded data source queries",
+    "url": "https://stspg.io/zf8d8bx0228f",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-04T18:20:21.933Z",
+    "resolved_at": "2026-10-04T18:33:59.057Z",
+    "duration_minutes": 13,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-4",
+      "AWS US East - prod-us-east-2",
+      "GCP Australia - prod-au-southeast-0",
+      "GCP US Central - prod-us-central-4"
+    ],
+    "updates": [
+      {
+        "native_id": "nfh3xzfdvvg2",
+        "status": "investigating",
+        "body": "We are investigating reduced query throughput for some data source plugins in multiple regions. Some queries may fail or be slow.",
+        "created_at": "2026-10-04T18:20:22.302Z"
+      },
+      {
+        "native_id": "k0w6162rphl3",
+        "status": "resolved",
+        "body": "Incident started around 15:51 UTC, resolved around 18:11 UTC. After investigation, we found that no customer queries were affected; only our internal metrics systems were impacted.",
+        "created_at": "2026-10-04T18:33:59.057Z"
+      }
+    ],
+    "first_seen_at": "2026-10-05T12:49:28.855377553Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-01T23:37:22.739Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "6wgslg1s3bzr",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-10-04T18:33:58.910Z"
+        },
+        {
+          "created_at": "2023-03-01T23:38:04.573Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "wdcnfc3drb8s",
+          "name": "AWS Germany - prod-eu-west-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-10-04T18:33:58.938Z"
+        },
+        {
+          "created_at": "2017-08-28T06:32:29.815Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "t0592d5sxhgh",
+          "name": "AWS US East - prod-us-east-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-04T18:33:58.960Z"
+        },
+        {
+          "created_at": "2019-04-10T08:16:51.482Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "sc8qqdx6j1h5",
+          "name": "GCP Australia - prod-au-southeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 20,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-04T18:33:58.983Z"
+        },
+        {
+          "created_at": "2023-04-03T08:44:26.276Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "jky8f03q6zfj",
+          "name": "GCP US Central - prod-us-central-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 28,
+          "showcase": false,
+          "start_date": "2023-04-01",
+          "status": "operational",
+          "updated_at": "2026-10-04T18:33:59.005Z"
+        }
+      ],
+      "created_at": "2026-10-04T18:20:22.091Z",
+      "id": "9tzsfy13vrfj",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t0592d5sxhgh",
+              "name": "Grafana - AWS US East - prod-us-east-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "sc8qqdx6j1h5",
+              "name": "Grafana - GCP Australia - prod-au-southeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Incident started around 15:51 UTC, resolved around 18:11 UTC. After investigation, we found that no customer queries were affected; only our internal metrics systems were impacted.",
+          "created_at": "2026-10-04T18:33:59.057Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-04T18:33:59.057Z",
+          "id": "k0w6162rphl3",
+          "incident_id": "9tzsfy13vrfj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-04T18:33:59.057Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "t0592d5sxhgh",
+              "name": "Grafana - AWS US East - prod-us-east-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "sc8qqdx6j1h5",
+              "name": "Grafana - GCP Australia - prod-au-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reduced query throughput for some data source plugins in multiple regions. Some queries may fail or be slow.",
+          "created_at": "2026-10-04T18:20:22.302Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-04T18:20:22.302Z",
+          "id": "nfh3xzfdvvg2",
+          "incident_id": "9tzsfy13vrfj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-04T18:20:22.302Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded data source queries",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-04T18:33:59.057Z",
+      "shortlink": "https://stspg.io/zf8d8bx0228f",
+      "started_at": "2026-10-04T18:20:21.933Z",
+      "status": "resolved",
+      "updated_at": "2026-10-04T18:33:59.080Z"
+    }
   }
 ]

@@ -1,0 +1,131 @@
+[
+  {
+    "key": "digitalocean/5fxykytg48dx",
+    "vendor": "digitalocean",
+    "native_id": "5fxykytg48dx",
+    "title": "VPC Networking Availability",
+    "url": "https://stspg.io/1n5v2k9sxq46",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-05T10:38:07.077Z",
+    "resolved_at": "2026-10-05T12:13:16.206Z",
+    "duration_minutes": 95,
+    "components": [
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "4qgpdzk6fdbv",
+        "status": "identified",
+        "body": "Our Engineering team identified a disruption affecting VPC Networking operations that began at approximately 08:48 UTC. During this time, customers may have experienced delays or failures when creating or deleting VPC peerings, VPC Native DOKS clusters, or Private Network Connections (PNCs), as well as when adding cluster members. Creating routes and subnets may also have been affected.\n\nOperations are now returning to normal, and our Engineering team is monitoring the affected systems to ensure continued stability. Existing VPC resources and network connectivity remain unaffected. We will provide another update as soon as more information becomes available.",
+        "created_at": "2026-10-05T10:38:07.186Z"
+      },
+      {
+        "native_id": "gbcy573rtq9z",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the VPC Networking disruption. Customers should now be able to create and delete VPC peering connections, subnets, and routes as expected.\n\nPreviously pending operations have been cleared, and VPC Networking operations are returning to normal. Our Engineering team is monitoring the affected systems to ensure continued stability and verify that operations remain healthy.\n\nWe appreciate your patience and will provide another update once normal operation has been fully confirmed.",
+        "created_at": "2026-10-05T11:02:41.452Z"
+      },
+      {
+        "native_id": "3444nm3wgkjb",
+        "status": "resolved",
+        "body": "Our Engineering team fully resolved the VPC Networking disruption as of 10:29 UTC. Customers can now create and delete VPC peering connections, subnets, and routes as expected.\n\nFollowing the recovery, we monitored the affected systems and confirmed that VPC Networking operations remain stable.\n\nWe apologize for any inconvenience this disruption may have caused. If you continue to experience unexpected behavior, please open a ticket with our Support team for further assistance.",
+        "created_at": "2026-10-05T12:13:16.206Z"
+      }
+    ],
+    "first_seen_at": "2026-10-05T12:49:28.855377553Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-28T21:09:29.142Z",
+          "description": null,
+          "group": false,
+          "group_id": "0m9zj5r96xhd",
+          "id": "kwqnp70p9wjy",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-28",
+          "status": "operational",
+          "updated_at": "2026-10-05T11:02:41.398Z"
+        }
+      ],
+      "created_at": "2026-10-05T10:38:07.086Z",
+      "id": "5fxykytg48dx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "kwqnp70p9wjy",
+              "name": "VPC - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team fully resolved the VPC Networking disruption as of 10:29 UTC. Customers can now create and delete VPC peering connections, subnets, and routes as expected.\n\nFollowing the recovery, we monitored the affected systems and confirmed that VPC Networking operations remain stable.\n\nWe apologize for any inconvenience this disruption may have caused. If you continue to experience unexpected behavior, please open a ticket with our Support team for further assistance.",
+          "created_at": "2026-10-05T12:13:16.206Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T12:13:16.206Z",
+          "id": "3444nm3wgkjb",
+          "incident_id": "5fxykytg48dx",
+          "status": "resolved",
+          "tweet_id": 2107081687305965765,
+          "updated_at": "2026-10-05T12:13:16.780Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kwqnp70p9wjy",
+              "name": "VPC - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the VPC Networking disruption. Customers should now be able to create and delete VPC peering connections, subnets, and routes as expected.\n\nPreviously pending operations have been cleared, and VPC Networking operations are returning to normal. Our Engineering team is monitoring the affected systems to ensure continued stability and verify that operations remain healthy.\n\nWe appreciate your patience and will provide another update once normal operation has been fully confirmed.",
+          "created_at": "2026-10-05T11:02:41.452Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T11:02:41.452Z",
+          "id": "gbcy573rtq9z",
+          "incident_id": "5fxykytg48dx",
+          "status": "monitoring",
+          "tweet_id": 2107063925741326542,
+          "updated_at": "2026-10-05T11:02:42.071Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kwqnp70p9wjy",
+              "name": "VPC - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team identified a disruption affecting VPC Networking operations that began at approximately 08:48 UTC. During this time, customers may have experienced delays or failures when creating or deleting VPC peerings, VPC Native DOKS clusters, or Private Network Connections (PNCs), as well as when adding cluster members. Creating routes and subnets may also have been affected.\n\nOperations are now returning to normal, and our Engineering team is monitoring the affected systems to ensure continued stability. Existing VPC resources and network connectivity remain unaffected. We will provide another update as soon as more information becomes available.",
+          "created_at": "2026-10-05T10:38:07.186Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T10:38:07.186Z",
+          "id": "4qgpdzk6fdbv",
+          "incident_id": "5fxykytg48dx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T10:38:07.186Z"
+        }
+      ],
+      "monitoring_at": "2026-10-05T11:02:41.452Z",
+      "name": "VPC Networking Availability",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-05T12:13:16.206Z",
+      "shortlink": "https://stspg.io/1n5v2k9sxq46",
+      "started_at": "2026-10-05T10:38:07.077Z",
+      "status": "resolved",
+      "updated_at": "2026-10-05T12:13:16.787Z"
+    }
+  }
+]

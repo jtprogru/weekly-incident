@@ -2,101 +2,123 @@
   "week": "2026-W40",
   "from": "2026-09-28T00:00:00Z",
   "to": "2026-10-05T00:00:00Z",
-  "generated_at": "2026-10-04T11:24:49.151684691Z",
+  "generated_at": "2026-10-05T12:49:28.855377553Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 35,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-04T11:24:49.151684691Z",
+      "fetched_at": "2026-10-05T12:49:28.855377553Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/q2bck6r39bzk",
+      "vendor": "cloudflare",
+      "title": "Issues with Workers Build failing to start",
+      "url": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-03T05:54:59.716Z",
+      "resolved_at": "2026-10-05T07:28:10.019Z",
+      "duration_minutes": 2973,
+      "ongoing": false,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 5351.400000000001,
+        "duration_minutes": 2973,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "cloudflare/fs7dz54l226c",
       "vendor": "cloudflare",
@@ -181,26 +203,6 @@
       "score": {
         "value": 3229.2000000000003,
         "duration_minutes": 1794,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/q2bck6r39bzk",
-      "vendor": "cloudflare",
-      "title": "Issues with Workers Build failing to start",
-      "url": "https://www.cloudflarestatus.com/incidents/q2bck6r39bzk",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-10-03T05:54:59.716Z",
-      "ongoing": true,
-      "components": [
-        "Workers Builds"
-      ],
-      "score": {
-        "value": 3184.2000000000003,
-        "duration_minutes": 1769,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -376,6 +378,28 @@
         "duration_minutes": 349,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "aws/604a6eabb58b32e8",
+      "vendor": "aws",
+      "title": "Elevated packet loss",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-10-04T16:14:56Z",
+      "resolved_at": "2026-10-04T18:56:53Z",
+      "duration_minutes": 161,
+      "ongoing": false,
+      "components": [
+        "internetconnectivity-eu-south-2"
+      ],
+      "score": {
+        "value": 322,
+        "duration_minutes": 161,
+        "components": 1,
+        "vendor_weight": 2
       },
       "above_threshold": true
     },
@@ -656,6 +680,32 @@
         "duration_minutes": 39,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/9tzsfy13vrfj",
+      "vendor": "grafana",
+      "title": "Degraded data source queries",
+      "url": "https://stspg.io/zf8d8bx0228f",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-04T18:20:21.933Z",
+      "resolved_at": "2026-10-04T18:33:59.057Z",
+      "duration_minutes": 13,
+      "ongoing": false,
+      "components": [
+        "AWS Germany - prod-eu-west-2",
+        "AWS Germany - prod-eu-west-4",
+        "AWS US East - prod-us-east-2",
+        "GCP Australia - prod-au-southeast-0",
+        "GCP US Central - prod-us-central-4"
+      ],
+      "score": {
+        "value": 65,
+        "duration_minutes": 13,
+        "components": 5,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
