@@ -2,114 +2,142 @@
   "week": "2026-W41",
   "from": "2026-10-05T00:00:00Z",
   "to": "2026-10-12T00:00:00Z",
-  "generated_at": "2026-10-05T12:49:28.855377553Z",
+  "generated_at": "2026-10-06T12:18:23.576404692Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
-      "incidents_seen": 7,
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
-      "incidents_seen": 35,
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-05T12:49:28.855377553Z",
+      "fetched_at": "2026-10-06T12:18:23.576404692Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
     {
+      "key": "cloudflare/z28czd65h29l",
+      "vendor": "cloudflare",
+      "title": "Durable Objects Availability Issue in Eastern North America",
+      "url": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-05T17:14:30.673Z",
+      "resolved_at": "2026-10-05T22:35:46.526Z",
+      "duration_minutes": 321,
+      "ongoing": false,
+      "components": [
+        "Containers",
+        "Durable Objects",
+        "R2",
+        "Workers Assets",
+        "Workflows"
+      ],
+      "score": {
+        "value": 2889,
+        "duration_minutes": 321,
+        "components": 5,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M45E0JFFJZ6EQ3BWYPW74R2Z",
       "vendor": "openai",
       "title": "Elevated Work Mode errors",
       "url": "https://status.openai.com/incidents/01M45E0JFFJZ6EQ3BWYPW74R2Z",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-10-05T07:03:53Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-06T02:10:00Z",
+      "duration_minutes": 1146,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 517.5,
-        "duration_minutes": 345,
+        "value": 1719,
+        "duration_minutes": 1146,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -121,15 +149,229 @@
       "title": "API Shield JWT Validation Errors",
       "url": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-05T10:55:29Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-10-05T10:55:29.133Z",
+      "resolved_at": "2026-10-05T22:39:04.109Z",
+      "duration_minutes": 703,
+      "ongoing": false,
       "components": [
         "API Shield"
       ],
       "score": {
-        "value": 203.4,
-        "duration_minutes": 113,
+        "value": 1265.4,
+        "duration_minutes": 703,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/6x77ccl9shpy",
+      "vendor": "grafana",
+      "title": "IRM Unable to Send SMS to Austrian Numbers",
+      "url": "https://stspg.io/9l8htmqt82s2",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-05T16:17:43.408Z",
+      "ongoing": true,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 1200,
+        "duration_minutes": 1200,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/3q1yb5m7ltvb",
+      "vendor": "github",
+      "title": "Incident with Actions",
+      "url": "https://stspg.io/c11dc9nb1zdq",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-10-05T19:11:58.373Z",
+      "resolved_at": "2026-10-05T22:49:42.66Z",
+      "duration_minutes": 217,
+      "ongoing": false,
+      "components": [
+        "Actions",
+        "Pages"
+      ],
+      "score": {
+        "value": 651,
+        "duration_minutes": 217,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M46G248GGHV9RSAJE82BZY1X",
+      "vendor": "openai",
+      "title": "Elevated errors in ChatGPT conversations",
+      "url": "https://status.openai.com/incidents/01M46G248GGHV9RSAJE82BZY1X",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-05T16:58:56Z",
+      "resolved_at": "2026-10-06T00:01:04Z",
+      "duration_minutes": 422,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 633,
+        "duration_minutes": 422,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M46KED6KQ6PR195KZYYVNY8W",
+      "vendor": "openai",
+      "title": "Elevated error rates in Codex Cloud",
+      "url": "https://status.openai.com/incidents/01M46KED6KQ6PR195KZYYVNY8W",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-05T17:58:04Z",
+      "resolved_at": "2026-10-06T00:01:00Z",
+      "duration_minutes": 362,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 543,
+        "duration_minutes": 362,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M46C47WYYD9NMZVGH83X3ZR1",
+      "vendor": "openai",
+      "title": "Admin Console Intermittently Inaccessible",
+      "url": "https://status.openai.com/incidents/01M46C47WYYD9NMZVGH83X3ZR1",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-05T15:50:11Z",
+      "resolved_at": "2026-10-05T21:07:22Z",
+      "duration_minutes": 317,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 475.5,
+        "duration_minutes": 317,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/0zs9ncsr6t0l",
+      "vendor": "stripe",
+      "title": "Elevated Swish errors",
+      "url": "https://stspg.io/m7j171ppknbs",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-06T00:30:50.391Z",
+      "resolved_at": "2026-10-06T07:04:06.56Z",
+      "duration_minutes": 393,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 471.59999999999997,
+        "duration_minutes": 393,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/2kxnqcxcrr7f",
+      "vendor": "github",
+      "title": "Disruption with some GitHub services",
+      "url": "https://stspg.io/pjcfc4c3pm7g",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-05T23:47:45.195Z",
+      "resolved_at": "2026-10-06T01:32:43.679Z",
+      "duration_minutes": 104,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 156,
+        "duration_minutes": 104,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/bhphxz3vr58g",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
+      "url": "https://stspg.io/wdqhxt8xt574",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-05T13:05:44.48Z",
+      "resolved_at": "2026-10-05T13:21:37.611Z",
+      "duration_minutes": 15,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 90,
+        "duration_minutes": 15,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M47AFBNRNXKJWN549T3PMYV8",
+      "vendor": "openai",
+      "title": "Elevated errors in API Platform login and administration APIs.",
+      "url": "https://status.openai.com/incidents/01M47AFBNRNXKJWN549T3PMYV8",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-06T00:40:32Z",
+      "resolved_at": "2026-10-06T01:35:53Z",
+      "duration_minutes": 55,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 82.5,
+        "duration_minutes": 55,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/6mlprt9v5si5",
+      "vendor": "cloudflare",
+      "title": "RSA Keyless SSL handshake issues",
+      "url": "https://www.cloudflarestatus.com/incidents/6mlprt9v5si5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-06T08:22:24.366Z",
+      "resolved_at": "2026-10-06T09:06:33.532Z",
+      "duration_minutes": 44,
+      "ongoing": false,
+      "components": [
+        "Keyless SSL"
+      ],
+      "score": {
+        "value": 79.2,
+        "duration_minutes": 44,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -158,18 +400,40 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M47HC9SGHGFPBN44KGC6SKAQ",
+      "vendor": "openai",
+      "title": "Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots.",
+      "url": "https://status.openai.com/incidents/01M47HC9SGHGFPBN44KGC6SKAQ",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-06T02:41:12Z",
+      "resolved_at": "2026-10-06T03:17:11Z",
+      "duration_minutes": 35,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 52.5,
+        "duration_minutes": 35,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M461GYDMCVJJK8330PVCH42C",
       "vendor": "openai",
       "title": "Issues saving and editing Pages",
       "url": "https://status.openai.com/incidents/01M461GYDMCVJJK8330PVCH42C",
       "impact": "minor",
-      "status": "investigating",
+      "status": "resolved",
       "started_at": "2026-10-05T12:44:53Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-05T13:04:30Z",
+      "duration_minutes": 19,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 6,
-        "duration_minutes": 4,
+        "value": 28.5,
+        "duration_minutes": 19,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -178,11 +442,11 @@
     {
       "key": "cloudflare/y3hstd1lvhc9",
       "vendor": "cloudflare",
-      "title": "Increase in Latency in Paris, France region (CDG)",
+      "title": "Increase in Latency Across Multiple Locations",
       "url": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
       "impact": "minor",
       "status": "resolved",
-      "started_at": "2026-10-05T12:19:40.329Z",
+      "started_at": "2026-10-05T09:30:00Z",
       "resolved_at": "2026-10-05T09:30:00Z",
       "duration_minutes": 0,
       "ongoing": false,

@@ -1,13 +1,67 @@
 [
   {
+    "key": "cloudflare/y3hstd1lvhc9",
+    "vendor": "cloudflare",
+    "native_id": "y3hstd1lvhc9",
+    "title": "Increase in Latency Across Multiple Locations",
+    "url": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-05T09:30:00Z",
+    "resolved_at": "2026-10-05T09:30:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "tdhggn7ybcst",
+        "status": "resolved",
+        "body": "Cloudflare investigated reports of increased latency affecting requests for cacheable assets across multiple locations between 09:30 and 11:10 UTC. The issue is now resolved.",
+        "created_at": "2026-10-05T12:19:40.418Z"
+      }
+    ],
+    "first_seen_at": "2026-10-05T12:49:28.855377553Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-05T09:30:00.000Z",
+      "id": "y3hstd1lvhc9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Cloudflare investigated reports of increased latency affecting requests for cacheable assets across multiple locations between 09:30 and 11:10 UTC. The issue is now resolved.",
+          "created_at": "2026-10-05T12:19:40.418Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T09:30:00.000Z",
+          "id": "tdhggn7ybcst",
+          "incident_id": "y3hstd1lvhc9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T13:11:07.339Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increase in Latency Across Multiple Locations",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-05T09:30:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
+      "started_at": "2026-10-05T09:30:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-10-05T13:11:07.425Z"
+    }
+  },
+  {
     "key": "cloudflare/ts295zqycqn7",
     "vendor": "cloudflare",
     "native_id": "ts295zqycqn7",
     "title": "API Shield JWT Validation Errors",
     "url": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-10-05T10:55:29Z",
+    "status": "resolved",
+    "started_at": "2026-10-05T10:55:29.133Z",
+    "resolved_at": "2026-10-05T22:39:04.109Z",
+    "duration_minutes": 703,
     "components": [
       "API Shield"
     ],
@@ -23,6 +77,18 @@
         "status": "identified",
         "body": "The issue has been identified and a fix is being implemented.",
         "created_at": "2026-10-05T11:24:33.467Z"
+      },
+      {
+        "native_id": "bgqh5439sz5s",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-05T20:09:56.81Z"
+      },
+      {
+        "native_id": "9yysfs2ym3lk",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-05T22:39:04.109Z"
       }
     ],
     "first_seen_at": "2026-10-05T12:49:28.855377553Z",
@@ -40,14 +106,54 @@
           "position": 9,
           "showcase": false,
           "start_date": "2023-06-15",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-05T10:55:29.000Z"
+          "status": "operational",
+          "updated_at": "2026-10-05T22:39:04.000Z"
         }
       ],
       "created_at": "2026-10-05T10:55:29.000Z",
       "id": "ts295zqycqn7",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "g9yx473yjk9t",
+              "name": "Cloudflare Sites and Services - API Shield",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-05T22:39:04.109Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T22:39:04.109Z",
+          "id": "9yysfs2ym3lk",
+          "incident_id": "ts295zqycqn7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T22:39:04.109Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "g9yx473yjk9t",
+              "name": "Cloudflare Sites and Services - API Shield",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-05T20:09:56.810Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T20:09:56.810Z",
+          "id": "bgqh5439sz5s",
+          "incident_id": "ts295zqycqn7",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T20:09:56.810Z"
+        },
         {
           "affected_components": null,
           "body": "The issue has been identified and a fix is being implemented.",
@@ -82,67 +188,371 @@
           "updated_at": "2026-10-05T10:55:29.272Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-10-05T20:09:56.810Z",
       "name": "API Shield JWT Validation Errors",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-05T22:39:04.109Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7",
-      "started_at": "2026-10-05T10:55:29.000Z",
-      "status": "identified",
-      "updated_at": "2026-10-05T11:24:33.000Z"
+      "started_at": "2026-10-05T10:55:29.133Z",
+      "status": "resolved",
+      "updated_at": "2026-10-05T22:39:04.140Z"
     }
   },
   {
-    "key": "cloudflare/y3hstd1lvhc9",
+    "key": "cloudflare/z28czd65h29l",
     "vendor": "cloudflare",
-    "native_id": "y3hstd1lvhc9",
-    "title": "Increase in Latency in Paris, France region (CDG)",
-    "url": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
+    "native_id": "z28czd65h29l",
+    "title": "Durable Objects Availability Issue in Eastern North America",
+    "url": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
     "impact": "minor",
     "status": "resolved",
-    "started_at": "2026-10-05T12:19:40.329Z",
-    "resolved_at": "2026-10-05T09:30:00Z",
-    "duration_minutes": 0,
-    "components": [],
+    "started_at": "2026-10-05T17:14:30.673Z",
+    "resolved_at": "2026-10-05T22:35:46.526Z",
+    "duration_minutes": 321,
+    "components": [
+      "Containers",
+      "Durable Objects",
+      "R2",
+      "Workers Assets",
+      "Workflows"
+    ],
     "updates": [
       {
-        "native_id": "tdhggn7ybcst",
+        "native_id": "cgd55k1vd18n",
+        "status": "investigating",
+        "body": "We are investigating an issue leading to decreased availability for Durable Objects and dependent services in the Eastern North America region. Our engineering team is actively working to mitigate the impact, and further updates will be provided as soon as more information becomes available.",
+        "created_at": "2026-10-05T17:14:30.85Z"
+      },
+      {
+        "native_id": "t7t3h8d2yq0g",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-05T17:53:19.966Z"
+      },
+      {
+        "native_id": "pq9t8w0tcn0m",
         "status": "resolved",
-        "body": "Cloudflare investigated reports of increased latency affecting requests to the CDG data center for cacheable assets between 09:30 and 11:10 UTC. The issue is now resolved.",
-        "created_at": "2026-10-05T12:19:40.418Z"
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-05T22:35:46.526Z"
       }
     ],
-    "first_seen_at": "2026-10-05T12:49:28.855377553Z",
+    "first_seen_at": "2026-10-06T12:18:23.576404692Z",
     "raw": {
-      "components": [],
-      "created_at": "2026-10-05T09:30:00.000Z",
-      "id": "y3hstd1lvhc9",
+      "components": [
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 35,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-10-05T22:35:46.000Z"
+        },
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-10-05T22:35:46.000Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 83,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-10-05T22:35:46.000Z"
+        },
+        {
+          "created_at": "2026-03-30T11:50:12.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "pg21w9xb991r",
+          "name": "Workers Assets",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 118,
+          "showcase": false,
+          "start_date": "2026-03-30",
+          "status": "operational",
+          "updated_at": "2026-10-05T22:35:46.000Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 123,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-10-05T22:35:46.000Z"
+        }
+      ],
+      "created_at": "2026-10-05T17:14:30.000Z",
+      "id": "z28czd65h29l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-05T22:35:46.526Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T22:35:46.526Z",
+          "id": "pq9t8w0tcn0m",
+          "incident_id": "z28czd65h29l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T22:35:46.526Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-05T17:53:19.966Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T17:53:19.966Z",
+          "id": "t7t3h8d2yq0g",
+          "incident_id": "z28czd65h29l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T17:53:19.966Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue leading to decreased availability for Durable Objects and dependent services in the Eastern North America region. Our engineering team is actively working to mitigate the impact, and further updates will be provided as soon as more information becomes available.",
+          "created_at": "2026-10-05T17:14:30.850Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T17:14:30.850Z",
+          "id": "cgd55k1vd18n",
+          "incident_id": "z28czd65h29l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T17:14:30.850Z"
+        }
+      ],
+      "monitoring_at": "2026-10-05T17:53:19.966Z",
+      "name": "Durable Objects Availability Issue in Eastern North America",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-05T22:35:46.526Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
+      "started_at": "2026-10-05T17:14:30.673Z",
+      "status": "resolved",
+      "updated_at": "2026-10-05T22:35:46.554Z"
+    }
+  },
+  {
+    "key": "cloudflare/6mlprt9v5si5",
+    "vendor": "cloudflare",
+    "native_id": "6mlprt9v5si5",
+    "title": "RSA Keyless SSL handshake issues",
+    "url": "https://www.cloudflarestatus.com/incidents/6mlprt9v5si5",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-06T08:22:24.366Z",
+    "resolved_at": "2026-10-06T09:06:33.532Z",
+    "duration_minutes": 44,
+    "components": [
+      "Keyless SSL"
+    ],
+    "updates": [
+      {
+        "native_id": "bkzk35z5qkz2",
+        "status": "identified",
+        "body": "Cloudflare is aware of and is investigating an issue with Keyless SSL, which results in TLS handshake failures, only affecting RSA Keyless SSL with specific key backend configurations.  We are working to resolve this. Updates to follow.",
+        "created_at": "2026-10-06T08:22:24.366Z"
+      },
+      {
+        "native_id": "qph2dehhn0yq",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-06T08:55:24.376Z"
+      },
+      {
+        "native_id": "7h6og63zhmk2",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-06T09:06:33.532Z"
+      }
+    ],
+    "first_seen_at": "2026-10-06T12:18:23.576404692Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-10-06T08:18:22.871Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "sbnpi75rpxuf",
+          "name": "Keyless SSL",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 130,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-06T09:06:33.532Z"
+        }
+      ],
+      "created_at": "2026-10-06T08:22:24.366Z",
+      "id": "6mlprt9v5si5",
       "impact": "minor",
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "Cloudflare investigated reports of increased latency affecting requests to the CDG data center for cacheable assets between 09:30 and 11:10 UTC. The issue is now resolved.",
-          "created_at": "2026-10-05T12:19:40.418Z",
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-06T09:06:33.532Z",
           "custom_tweet": null,
           "deliver_notifications": true,
-          "display_at": "2026-10-05T09:30:00.000Z",
-          "id": "tdhggn7ybcst",
-          "incident_id": "y3hstd1lvhc9",
+          "display_at": "2026-10-06T09:06:33.532Z",
+          "id": "7h6og63zhmk2",
+          "incident_id": "6mlprt9v5si5",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-05T12:19:40.418Z"
+          "updated_at": "2026-10-06T09:06:33.532Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-06T08:55:24.376Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T08:55:24.376Z",
+          "id": "qph2dehhn0yq",
+          "incident_id": "6mlprt9v5si5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T08:55:24.376Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sbnpi75rpxuf",
+              "name": "Cloudflare Sites and Services - Keyless SSL",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and is investigating an issue with Keyless SSL, which results in TLS handshake failures, only affecting RSA Keyless SSL with specific key backend configurations.  We are working to resolve this. Updates to follow.\n",
+          "created_at": "2026-10-06T08:22:24.366Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T08:22:24.366Z",
+          "id": "bkzk35z5qkz2",
+          "incident_id": "6mlprt9v5si5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T08:22:24.366Z"
         }
       ],
       "monitoring_at": null,
-      "name": "Increase in Latency in Paris, France region (CDG)",
+      "name": "RSA Keyless SSL handshake issues",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": "2026-10-05T09:30:00.000Z",
-      "shortlink": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
-      "started_at": "2026-10-05T12:19:40.329Z",
+      "resolved_at": "2026-10-06T09:06:33.532Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/6mlprt9v5si5",
+      "started_at": "2026-10-06T08:22:24.366Z",
       "status": "resolved",
-      "updated_at": "2026-10-05T12:21:04.224Z"
+      "updated_at": "2026-10-06T09:06:33.532Z"
     }
   }
 ]
