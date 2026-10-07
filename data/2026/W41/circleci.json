@@ -1,0 +1,453 @@
+[
+  {
+    "key": "circleci/z4hbq8h49j8c",
+    "vendor": "circleci",
+    "native_id": "z4hbq8h49j8c",
+    "title": "Delays in pipelines, workflows, UI data, and notifications",
+    "url": "https://stspg.io/s7tpg47srxdd",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-06T16:00:24.856Z",
+    "resolved_at": "2026-10-06T21:18:47.358Z",
+    "duration_minutes": 318,
+    "components": [
+      "Pipelines \u0026 Workflows",
+      "Notifications \u0026 Status Updates"
+    ],
+    "updates": [
+      {
+        "native_id": "sz8rww3fh539",
+        "status": "investigating",
+        "body": "What's impacted\nCustomers using CircleCI pipelines and workflows, including UI data display, outbound notifications, and outbound webhooks.\n\nWhat can you expect\nDelays in pipelines being created and in workflows and jobs starting. Job, workflow, and pipeline data may take up to 15 minutes to appear in the UI. Outbound notifications and webhooks are delayed by up to 1 minute.\n\nNext update\nWe will provide another update within 30 minutes or as we have more information to share.",
+        "created_at": "2026-10-06T16:00:25.178Z"
+      },
+      {
+        "native_id": "rszkvn2gkf8r",
+        "status": "investigating",
+        "body": "Since 15:47 UTC, customers may also see failed jobs, in addition to the delays previously reported. Our engineers are continuing to investigate and mitigate the issue.",
+        "created_at": "2026-10-06T16:10:36.145Z"
+      },
+      {
+        "native_id": "cks9hlwvcbx9",
+        "status": "identified",
+        "body": "As of 16:02 UTC, pipelines are failing entirely, so no new workflows or jobs are running at this point. This is in addition to the delays and failed jobs reported earlier. Our engineers are continuing to work on mitigating the issue, and we will share more information as soon as we have it.",
+        "created_at": "2026-10-06T16:31:56.35Z"
+      },
+      {
+        "native_id": "7zpj37yf8b68",
+        "status": "identified",
+        "body": "As of 16:39 UTC, we are starting to see recovery for new pipelines and workflows being submitted, and jobs are beginning to run again. Our engineers are continuing to work on the recovery and will share more information as soon as we have it.",
+        "created_at": "2026-10-06T16:42:54.91Z"
+      },
+      {
+        "native_id": "jcmyln14m75x",
+        "status": "identified",
+        "body": "While Pipelines, workflows, and jobs are running again, customers may continue to see longer than usual delays between jobs in a workflow, and outbound notifications are delayed by approximately 1 minute. Notifications and status updates to your version control system are beginning to go out again. \n\nOur engineers are continuing to work toward a full recovery.",
+        "created_at": "2026-10-06T17:21:11.996Z"
+      },
+      {
+        "native_id": "wtq33gvwxj6v",
+        "status": "identified",
+        "body": "Customers continue to experience longer than usual delays between jobs in a workflow, as well as delays in outbound notifications.\n\nWe thank you for your patience while our engineers continue to investigate and work on mitigating the issue. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+        "created_at": "2026-10-06T18:04:06.237Z"
+      },
+      {
+        "native_id": "65q938fmscxh",
+        "status": "identified",
+        "body": "Customers continue to experience longer than usual delays before workflows and jobs start, in some cases up to approximately 30 minutes. This is improved from earlier in the incident, but delays remain. Delays in outbound notifications have improved.\n\nWe thank you for your patience while our engineers continue to work toward restoring normal job start times. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+        "created_at": "2026-10-06T18:55:02.051Z"
+      },
+      {
+        "native_id": "lc9l7sp7tj9q",
+        "status": "identified",
+        "body": "Customers continue to experience delays. Most are now starting within approximately 20 minutes, improved from approximately 40 minutes earlier in the incident. A very small number of workflows may have waited more than 1 hour. \n\nOur engineers have made changes that have improved service stability, and the remaining delay is due to a backlog of work that built up during the incident. The backlog is decreasing, and we are focused on clearing it faster. We will share more information as progress continues.\n\nWe thank you for your patience while our engineers work through the backlog. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+        "created_at": "2026-10-06T19:16:13.098Z"
+      },
+      {
+        "native_id": "ncz9ky7sjgy2",
+        "status": "identified",
+        "body": "Delays for workflows and jobs to start are continuing to decrease. Most are now starting within approximately 10 minutes, improved from approximately 40 minutes earlier in the incident. A very small number of workflows may have waited more than 1 hour. If your job failed to start, please rerun the job. Delays in outbound notifications have improved.\n\nThe remaining delay is due to a backlog of work that built up during the incident, and that backlog has reduced by more than half. We expect the backlog to be cleared in approximately 15 minutes. We will share another update once it has cleared, or within the next 30 minutes at the latest.",
+        "created_at": "2026-10-06T19:51:17.334Z"
+      },
+      {
+        "native_id": "hbscw6pcznfg",
+        "status": "identified",
+        "body": "The backlog of delayed work has been cleared, and workflows are starting again with no delays in notifications. However, customers using Docker and Linux jobs across multiple resource classes, including medium, large, and 2xlarge gen2, may now see jobs waiting in the queue for few minutes before they start. Our engineers are continuing to work on mitigating this issue. If your job failed to start, please rerun the job.\n\nWe thank you for your patience while our engineers work on this. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+        "created_at": "2026-10-06T20:13:54.101Z"
+      },
+      {
+        "native_id": "bg1v3m96t8jh",
+        "status": "monitoring",
+        "body": "Workflows and jobs are starting normally, and wait times for Docker and Linux jobs have returned to normal. Our engineers are continuing to monitor this issue. If your job failed to start, please rerun the job.\n\nWe thank you for your patience while our engineers work on this. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+        "created_at": "2026-10-06T20:31:55.281Z"
+      },
+      {
+        "native_id": "6rj212rkhy2h",
+        "status": "resolved",
+        "body": "Between approximately 15:30 UTC and 20:30 UTC on October 6, 2026, customers experienced delays and failures affecting pipelines, workflows, and jobs.\n\nFrom approximately 16:02 UTC to 16:39 UTC, pipelines were failing and no new workflows or jobs could start. After service resumed, workflows and jobs continued to start with delays until approximately 20:00 UTC. Start times averaged up to approximately 40 minutes at their peak, and a very small number of workflows waited more than 1 hour. Outbound notifications and webhooks were also delayed until approximately 19:00 UTC, typically by about a minute.\n\nAs the backlog of delayed work cleared, the resulting increase in demand placed pressure on our execution capacity, causing further delays for Docker and Linux jobs. From approximately 19:45 UTC to 20:30 UTC, these jobs waited in the queue longer than usual before starting. At the peak, around 20:05 UTC, waits reached up to approximately 8 minutes for 2xlarge gen2, 6 minutes for xlarge gen2, and less than 5 minutes for a few other resource classes.\n\nThe issue has been resolved, and all affected functionality has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-10-06T21:18:47.358Z"
+      }
+    ],
+    "first_seen_at": "2026-10-07T12:09:50.53762556Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-07T04:05:16.563Z"
+        },
+        {
+          "created_at": "2019-01-21T21:45:43.473Z",
+          "description": "GitHub Checks, Statuses, and status badges.",
+          "group": false,
+          "group_id": null,
+          "id": "rms1xkdxxqx1",
+          "name": "Notifications \u0026 Status Updates",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 13,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-07T04:05:16.613Z"
+        }
+      ],
+      "created_at": "2026-10-06T16:00:24.868Z",
+      "id": "z4hbq8h49j8c",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between approximately 15:30 UTC and 20:30 UTC on October 6, 2026, customers experienced delays and failures affecting pipelines, workflows, and jobs.\n\nFrom approximately 16:02 UTC to 16:39 UTC, pipelines were failing and no new workflows or jobs could start. After service resumed, workflows and jobs continued to start with delays until approximately 20:00 UTC. Start times averaged up to approximately 40 minutes at their peak, and a very small number of workflows waited more than 1 hour. Outbound notifications and webhooks were also delayed until approximately 19:00 UTC, typically by about a minute.\n\nAs the backlog of delayed work cleared, the resulting increase in demand placed pressure on our execution capacity, causing further delays for Docker and Linux jobs. From approximately 19:45 UTC to 20:30 UTC, these jobs waited in the queue longer than usual before starting. At the peak, around 20:05 UTC, waits reached up to approximately 8 minutes for 2xlarge gen2, 6 minutes for xlarge gen2, and less than 5 minutes for a few other resource classes.\n\nThe issue has been resolved, and all affected functionality has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-10-06T21:18:47.358Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T21:18:47.358Z",
+          "id": "6rj212rkhy2h",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T21:18:47.358Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Workflows and jobs are starting normally, and wait times for Docker and Linux jobs have returned to normal. Our engineers are continuing to monitor this issue. If your job failed to start, please rerun the job.\n\nWe thank you for your patience while our engineers work on this. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+          "created_at": "2026-10-06T20:31:55.281Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:31:55.281Z",
+          "id": "bg1v3m96t8jh",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:31:55.281Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The backlog of delayed work has been cleared, and workflows are starting again with no delays in notifications. However, customers using Docker and Linux jobs across multiple resource classes, including medium, large, and 2xlarge gen2, may now see jobs waiting in the queue for few minutes before they start. Our engineers are continuing to work on mitigating this issue. If your job failed to start, please rerun the job.\n\nWe thank you for your patience while our engineers work on this. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+          "created_at": "2026-10-06T20:13:54.101Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:13:54.101Z",
+          "id": "hbscw6pcznfg",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:13:54.101Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Delays for workflows and jobs to start are continuing to decrease. Most are now starting within approximately 10 minutes, improved from approximately 40 minutes earlier in the incident. A very small number of workflows may have waited more than 1 hour. If your job failed to start, please rerun the job. Delays in outbound notifications have improved.\n\nThe remaining delay is due to a backlog of work that built up during the incident, and that backlog has reduced by more than half. We expect the backlog to be cleared in approximately 15 minutes. We will share another update once it has cleared, or within the next 30 minutes at the latest.",
+          "created_at": "2026-10-06T19:51:17.334Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T19:51:17.334Z",
+          "id": "ncz9ky7sjgy2",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T19:51:17.334Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers continue to experience delays. Most are now starting within approximately 20 minutes, improved from approximately 40 minutes earlier in the incident. A very small number of workflows may have waited more than 1 hour. \n\nOur engineers have made changes that have improved service stability, and the remaining delay is due to a backlog of work that built up during the incident. The backlog is decreasing, and we are focused on clearing it faster. We will share more information as progress continues.\n\nWe thank you for your patience while our engineers work through the backlog. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+          "created_at": "2026-10-06T19:16:13.098Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T19:16:13.098Z",
+          "id": "lc9l7sp7tj9q",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T19:16:13.098Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers continue to experience longer than usual delays before workflows and jobs start, in some cases up to approximately 30 minutes. This is improved from earlier in the incident, but delays remain. Delays in outbound notifications have improved.\n\nWe thank you for your patience while our engineers continue to work toward restoring normal job start times. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+          "created_at": "2026-10-06T18:55:02.051Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T18:55:02.051Z",
+          "id": "65q938fmscxh",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T18:55:02.051Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers continue to experience longer than usual delays between jobs in a workflow, as well as delays in outbound notifications.\n\nWe thank you for your patience while our engineers continue to investigate and work on mitigating the issue. We will share another update within the next 30 minutes, or sooner if more information becomes available.",
+          "created_at": "2026-10-06T18:04:06.237Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T18:04:06.237Z",
+          "id": "wtq33gvwxj6v",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T18:04:06.237Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "While Pipelines, workflows, and jobs are running again, customers may continue to see longer than usual delays between jobs in a workflow, and outbound notifications are delayed by approximately 1 minute. Notifications and status updates to your version control system are beginning to go out again. \n\nOur engineers are continuing to work toward a full recovery.",
+          "created_at": "2026-10-06T17:21:11.996Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T17:21:11.996Z",
+          "id": "jcmyln14m75x",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T17:21:11.996Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 16:39 UTC, we are starting to see recovery for new pipelines and workflows being submitted, and jobs are beginning to run again. Our engineers are continuing to work on the recovery and will share more information as soon as we have it.",
+          "created_at": "2026-10-06T16:42:54.910Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T16:42:54.910Z",
+          "id": "7zpj37yf8b68",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T16:42:54.910Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "As of 16:02 UTC, pipelines are failing entirely, so no new workflows or jobs are running at this point. This is in addition to the delays and failed jobs reported earlier. Our engineers are continuing to work on mitigating the issue, and we will share more information as soon as we have it.",
+          "created_at": "2026-10-06T16:31:56.350Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T16:31:56.350Z",
+          "id": "cks9hlwvcbx9",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T16:31:56.350Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Since 15:47 UTC, customers may also see failed jobs, in addition to the delays previously reported. Our engineers are continuing to investigate and mitigate the issue.",
+          "created_at": "2026-10-06T16:10:36.145Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T16:10:36.145Z",
+          "id": "rszkvn2gkf8r",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T16:10:36.145Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "rms1xkdxxqx1",
+              "name": "Notifications \u0026 Status Updates",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "What's impacted\nCustomers using CircleCI pipelines and workflows, including UI data display, outbound notifications, and outbound webhooks.\n\nWhat can you expect\nDelays in pipelines being created and in workflows and jobs starting. Job, workflow, and pipeline data may take up to 15 minutes to appear in the UI. Outbound notifications and webhooks are delayed by up to 1 minute.\n\nNext update\nWe will provide another update within 30 minutes or as we have more information to share.",
+          "created_at": "2026-10-06T16:00:25.178Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T16:00:25.178Z",
+          "id": "sz8rww3fh539",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T16:00:25.178Z"
+        }
+      ],
+      "monitoring_at": "2026-10-06T20:31:55.281Z",
+      "name": "Delays in pipelines, workflows, UI data, and notifications",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-06T21:18:47.358Z",
+      "shortlink": "https://stspg.io/s7tpg47srxdd",
+      "started_at": "2026-10-06T16:00:24.856Z",
+      "status": "resolved",
+      "updated_at": "2026-10-06T21:18:47.381Z"
+    }
+  }
+]

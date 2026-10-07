@@ -84,7 +84,7 @@
       {
         "native_id": "lxmjwp1dn494",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 5, 2026, between 18:48 and 22:49 UTC, GitHub Actions and Hosted Runners experienced degraded performance. Over the full incident, 14.3% of workflow runs using GitHub-hosted runners and 26.5% of individual GitHub-hosted jobs did not start within five minutes. \u003cbr /\u003e\u003cbr /\u003e \u003cbr /\u003eDuring the roughly 90-minute period of highest impact, 47.0% of workflow runs using GitHub-hosted runners failed and 71.9% of GitHub-hosted jobs did not start within five minutes, while existing Pages sites continued to serve normally. A portion of customers also encountered intermittent errors in repository lists, licensing and billing pages, and some Copilot features. Self-hosted runners were not affected. \u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a partial networking failure that disrupted connectivity between one of our on-premises datacenter regions and a subset of cloud-hosted regional database and storage services. \u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by shifting database and storage traffic to healthy regions and endpoints and increasing capacity for affected compute services. GitHub Actions and Hosted Runners recovered by 21:54 UTC, and all affected services recovered by 22:49 UTC. \u003cbr /\u003e\u003cbr /\u003e  \u003cbr /\u003eWe are partnering with our cloud provider to understand the network failure and identify improvements to network-path resilience, detection, and recovery for similar incidents.",
         "created_at": "2026-10-05T22:49:42.66Z"
       }
     ],
@@ -104,7 +104,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-05T21:54:22.987Z"
+          "updated_at": "2026-10-06T23:22:06.906Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -141,7 +141,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 5, 2026, between 18:48 and 22:49 UTC, GitHub Actions and Hosted Runners experienced degraded performance. Over the full incident, 14.3% of workflow runs using GitHub-hosted runners and 26.5% of individual GitHub-hosted jobs did not start within five minutes. \u003cbr /\u003e\u003cbr /\u003e \u003cbr /\u003eDuring the roughly 90-minute period of highest impact, 47.0% of workflow runs using GitHub-hosted runners failed and 71.9% of GitHub-hosted jobs did not start within five minutes, while existing Pages sites continued to serve normally. A portion of customers also encountered intermittent errors in repository lists, licensing and billing pages, and some Copilot features. Self-hosted runners were not affected. \u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a partial networking failure that disrupted connectivity between one of our on-premises datacenter regions and a subset of cloud-hosted regional database and storage services. \u003cbr /\u003e\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by shifting database and storage traffic to healthy regions and endpoints and increasing capacity for affected compute services. GitHub Actions and Hosted Runners recovered by 21:54 UTC, and all affected services recovered by 22:49 UTC. \u003cbr /\u003e\u003cbr /\u003e  \u003cbr /\u003eWe are partnering with our cloud provider to understand the network failure and identify improvements to network-path resilience, detection, and recovery for similar incidents.",
           "created_at": "2026-10-05T22:49:42.660Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -150,7 +150,7 @@
           "incident_id": "3q1yb5m7ltvb",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-05T22:49:42.660Z"
+          "updated_at": "2026-10-06T22:48:02.337Z"
         },
         {
           "affected_components": [
@@ -411,7 +411,7 @@
       "shortlink": "https://stspg.io/c11dc9nb1zdq",
       "started_at": "2026-10-05T19:11:58.373Z",
       "status": "resolved",
-      "updated_at": "2026-10-05T22:49:42.685Z"
+      "updated_at": "2026-10-06T22:48:02.341Z"
     }
   },
   {
@@ -502,6 +502,361 @@
       "started_at": "2026-10-05T23:47:45.195Z",
       "status": "resolved",
       "updated_at": "2026-10-06T01:32:43.705Z"
+    }
+  },
+  {
+    "key": "github/cjwszcf57bff",
+    "vendor": "github",
+    "native_id": "cjwszcf57bff",
+    "title": "Several services are degraded",
+    "url": "https://stspg.io/w3rcssslq22w",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-10-06T19:57:35.439Z",
+    "resolved_at": "2026-10-06T23:40:44.165Z",
+    "duration_minutes": 223,
+    "components": [
+      "Webhooks",
+      "Pull Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "303rwvy6ydwt",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pull Requests and Webhooks",
+        "created_at": "2026-10-06T19:57:35.58Z"
+      },
+      {
+        "native_id": "mswf2zcr4v9q",
+        "status": "investigating",
+        "body": "Webhooks is operating normally.",
+        "created_at": "2026-10-06T20:04:28.72Z"
+      },
+      {
+        "native_id": "w479phx2y0g2",
+        "status": "investigating",
+        "body": "Pull Requests is operating normally.",
+        "created_at": "2026-10-06T20:12:00.989Z"
+      },
+      {
+        "native_id": "ykmq2zptpqr2",
+        "status": "investigating",
+        "body": "A number of services including issues, pull requests, and webhooks, were briefly degraded, but have now recovered. Enterprise migrations are paused while we validate causes and mitigations.",
+        "created_at": "2026-10-06T20:22:31.621Z"
+      },
+      {
+        "native_id": "xld0m7bdngsj",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-06T20:26:46.442Z"
+      },
+      {
+        "native_id": "wn3cgyprvwvh",
+        "status": "investigating",
+        "body": "All services are functioning normally except for enterprise migrations, which are still paused. They will resume soon.",
+        "created_at": "2026-10-06T20:57:19.844Z"
+      },
+      {
+        "native_id": "5ngpc9brzq58",
+        "status": "investigating",
+        "body": "We are working towards a mitigation that will allow us to resume processing enterprise migrations.",
+        "created_at": "2026-10-06T21:29:46.918Z"
+      },
+      {
+        "native_id": "pcy2b2fl63yk",
+        "status": "investigating",
+        "body": "We are deploying a mitigation and plan to resume migrations shortly thereafter",
+        "created_at": "2026-10-06T22:40:56.734Z"
+      },
+      {
+        "native_id": "r2bbj6fszx3x",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-10-06T23:40:44.165Z"
+      }
+    ],
+    "first_seen_at": "2026-10-07T12:09:50.53762556Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-06T20:04:28.677Z"
+        },
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-06T20:12:00.947Z"
+        }
+      ],
+      "created_at": "2026-10-06T19:57:35.445Z",
+      "id": "cjwszcf57bff",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-10-06T23:40:44.165Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T23:40:44.165Z",
+          "id": "r2bbj6fszx3x",
+          "incident_id": "cjwszcf57bff",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T23:40:44.165Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are deploying a mitigation and plan to resume migrations shortly thereafter",
+          "created_at": "2026-10-06T22:40:56.734Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T22:40:56.734Z",
+          "id": "pcy2b2fl63yk",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T22:40:56.734Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are working towards a mitigation that will allow us to resume processing enterprise migrations.",
+          "created_at": "2026-10-06T21:29:46.918Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T21:29:46.918Z",
+          "id": "5ngpc9brzq58",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T21:29:46.918Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "All services are functioning normally except for enterprise migrations, which are still paused. They will resume soon.",
+          "created_at": "2026-10-06T20:57:19.844Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:57:19.844Z",
+          "id": "wn3cgyprvwvh",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:57:19.844Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-06T20:26:46.442Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:26:46.442Z",
+          "id": "xld0m7bdngsj",
+          "incident_id": "cjwszcf57bff",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:26:46.442Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A number of services including issues, pull requests, and webhooks, were briefly degraded, but have now recovered. Enterprise migrations are paused while we validate causes and mitigations.",
+          "created_at": "2026-10-06T20:22:31.621Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:22:31.621Z",
+          "id": "ykmq2zptpqr2",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:22:31.621Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pull Requests is operating normally.",
+          "created_at": "2026-10-06T20:12:00.989Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:12:00.989Z",
+          "id": "w479phx2y0g2",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:12:00.989Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Webhooks is operating normally.",
+          "created_at": "2026-10-06T20:04:28.720Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T20:04:28.720Z",
+          "id": "mswf2zcr4v9q",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T20:04:28.720Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pull Requests and Webhooks",
+          "created_at": "2026-10-06T19:57:35.580Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T19:57:35.580Z",
+          "id": "303rwvy6ydwt",
+          "incident_id": "cjwszcf57bff",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T19:57:35.580Z"
+        }
+      ],
+      "monitoring_at": "2026-10-06T20:26:46.442Z",
+      "name": "Several services are degraded",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-06T23:40:44.165Z",
+      "shortlink": "https://stspg.io/w3rcssslq22w",
+      "started_at": "2026-10-06T19:57:35.439Z",
+      "status": "resolved",
+      "updated_at": "2026-10-06T23:40:44.194Z"
     }
   }
 ]

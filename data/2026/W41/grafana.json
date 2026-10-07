@@ -3,7 +3,7 @@
     "key": "grafana/6x77ccl9shpy",
     "vendor": "grafana",
     "native_id": "6x77ccl9shpy",
-    "title": "IRM Unable to Send SMS to Austrian Numbers",
+    "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
     "url": "https://stspg.io/9l8htmqt82s2",
     "impact": "minor",
     "status": "identified",
@@ -23,6 +23,12 @@
         "status": "identified",
         "body": "The issue has been identified. \n\nWe are working on a resolution, but do not have an ETA at this time. We will provide another update as soon as we have more information to share.\n\nUsers should configure mobile push or phone calls as notifications.",
         "created_at": "2026-10-05T21:47:01.541Z"
+      },
+      {
+        "native_id": "cyr6xjklx1pv",
+        "status": "identified",
+        "body": "This issue is also impacting numbers from Thailand and Bangladesh. The title of this status page has been updated to reflect this.\n\nUsers should configure mobile push or phone calls as notifications. We are working on a resolution, and we will provide another update as soon as we have more information to share.",
+        "created_at": "2026-10-06T13:42:39.415Z"
       }
     ],
     "first_seen_at": "2026-10-06T12:18:23.576404692Z",
@@ -48,6 +54,26 @@
       "id": "6x77ccl9shpy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This issue is also impacting numbers from Thailand and Bangladesh. The title of this status page has been updated to reflect this.\n\nUsers should configure mobile push or phone calls as notifications. We are working on a resolution, and we will provide another update as soon as we have more information to share.",
+          "created_at": "2026-10-06T13:42:39.415Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T13:42:39.415Z",
+          "id": "cyr6xjklx1pv",
+          "incident_id": "6x77ccl9shpy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T13:42:39.415Z"
+        },
         {
           "affected_components": [
             {
@@ -90,14 +116,66 @@
         }
       ],
       "monitoring_at": null,
-      "name": "IRM Unable to Send SMS to Austrian Numbers",
+      "name": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
       "page_id": "6r99zhljywjf",
       "reminder_intervals": null,
       "resolved_at": null,
       "shortlink": "https://stspg.io/9l8htmqt82s2",
       "started_at": "2026-10-05T16:17:43.408Z",
       "status": "identified",
-      "updated_at": "2026-10-05T21:47:01.544Z"
+      "updated_at": "2026-10-06T13:42:39.417Z"
+    }
+  },
+  {
+    "key": "grafana/1t50vxwq2q11",
+    "vendor": "grafana",
+    "native_id": "1t50vxwq2q11",
+    "title": "Grafana Cloud k6 – Brief metrics unavailability",
+    "url": "https://stspg.io/lw22c35nvf3l",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-07T08:40:00Z",
+    "resolved_at": "2026-10-07T08:40:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "lvq4dcx1cjk5",
+        "status": "resolved",
+        "body": "A transient issue prevented Grafana Cloud k6 from serving metrics to a small number of customers for approximately 3–4 minutes. The issue has been resolved, and normal service has been restored.",
+        "created_at": "2026-10-07T09:29:27.806Z"
+      }
+    ],
+    "first_seen_at": "2026-10-07T12:09:50.53762556Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-07T00:00:00.000Z",
+      "id": "1t50vxwq2q11",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "A transient issue prevented Grafana Cloud k6 from serving metrics to a small number of customers for approximately 3–4 minutes. The issue has been resolved, and normal service has been restored.",
+          "created_at": "2026-10-07T09:29:27.806Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-07T08:40:00.000Z",
+          "id": "lvq4dcx1cjk5",
+          "incident_id": "1t50vxwq2q11",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T09:34:09.106Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Grafana Cloud k6 – Brief metrics unavailability",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T08:40:00.000Z",
+      "shortlink": "https://stspg.io/lw22c35nvf3l",
+      "started_at": "2026-10-07T08:40:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-10-07T09:34:09.229Z"
     }
   }
 ]

@@ -46,7 +46,7 @@
           "showcase": true,
           "start_date": "2023-07-11",
           "status": "operational",
-          "updated_at": "2026-10-05T13:21:37.485Z"
+          "updated_at": "2026-10-06T12:43:02.833Z"
         },
         {
           "created_at": "2023-07-11T17:53:10.880Z",
@@ -61,7 +61,7 @@
           "showcase": true,
           "start_date": "2023-07-11",
           "status": "operational",
-          "updated_at": "2026-10-05T13:21:37.516Z"
+          "updated_at": "2026-10-06T12:43:02.867Z"
         },
         {
           "created_at": "2025-05-22T21:35:29.822Z",
@@ -76,7 +76,7 @@
           "showcase": true,
           "start_date": "2025-02-06",
           "status": "operational",
-          "updated_at": "2026-10-05T13:21:37.544Z"
+          "updated_at": "2026-10-06T12:43:02.904Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -91,7 +91,7 @@
           "showcase": true,
           "start_date": "2026-04-01",
           "status": "operational",
-          "updated_at": "2026-10-05T13:21:37.570Z"
+          "updated_at": "2026-10-06T12:43:02.939Z"
         }
       ],
       "created_at": "2026-10-05T13:05:44.488Z",
@@ -184,6 +184,340 @@
       "started_at": "2026-10-05T13:05:44.480Z",
       "status": "resolved",
       "updated_at": "2026-10-05T13:21:37.638Z"
+    }
+  },
+  {
+    "key": "anthropic/ch27pb90bn85",
+    "vendor": "anthropic",
+    "native_id": "ch27pb90bn85",
+    "title": "Elevated errors for Claude Opus 5.5",
+    "url": "https://stspg.io/bzc81gbv1b99",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-06T12:24:32.621Z",
+    "resolved_at": "2026-10-06T12:43:02.988Z",
+    "duration_minutes": 18,
+    "components": [
+      "claude.ai",
+      "Claude API (api.anthropic.com)",
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "xh6kqhbd4733",
+        "status": "investigating",
+        "body": "We are investigating elevated errors on requests to Claude Opus 5.5. We will provide an update as soon as possible.",
+        "created_at": "2026-10-06T12:24:33.002Z"
+      },
+      {
+        "native_id": "s6tnmvz621mx",
+        "status": "identified",
+        "body": "We have identified the cause of elevated errors on requests to Claude Opus 5.5 and are working on a fix. We will provide an update as soon as possible.",
+        "created_at": "2026-10-06T12:37:38.65Z"
+      },
+      {
+        "native_id": "7fgxzl8102hk",
+        "status": "resolved",
+        "body": "The issue affecting Claude Opus 5.5 has been resolved.",
+        "created_at": "2026-10-06T12:43:02.988Z"
+      }
+    ],
+    "first_seen_at": "2026-10-07T12:09:50.53762556Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:24.275Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-06T12:43:02.833Z"
+        },
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-06T12:43:02.867Z"
+        },
+        {
+          "created_at": "2025-05-22T21:35:29.822Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 4,
+          "showcase": true,
+          "start_date": "2025-02-06",
+          "status": "operational",
+          "updated_at": "2026-10-06T12:43:02.904Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "operational",
+          "updated_at": "2026-10-06T12:43:02.939Z"
+        }
+      ],
+      "created_at": "2026-10-06T12:24:32.630Z",
+      "id": "ch27pb90bn85",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue affecting Claude Opus 5.5 has been resolved.",
+          "created_at": "2026-10-06T12:43:02.988Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T12:43:02.988Z",
+          "id": "7fgxzl8102hk",
+          "incident_id": "ch27pb90bn85",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T12:43:02.988Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the cause of elevated errors on requests to Claude Opus 5.5 and are working on a fix. We will provide an update as soon as possible.",
+          "created_at": "2026-10-06T12:37:38.650Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T12:37:38.650Z",
+          "id": "s6tnmvz621mx",
+          "incident_id": "ch27pb90bn85",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T12:37:38.650Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated errors on requests to Claude Opus 5.5. We will provide an update as soon as possible.",
+          "created_at": "2026-10-06T12:24:33.002Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-06T12:24:33.002Z",
+          "id": "xh6kqhbd4733",
+          "incident_id": "ch27pb90bn85",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-06T12:24:33.002Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors for Claude Opus 5.5",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-06T12:43:02.988Z",
+      "shortlink": "https://stspg.io/bzc81gbv1b99",
+      "started_at": "2026-10-06T12:24:32.621Z",
+      "status": "resolved",
+      "updated_at": "2026-10-06T12:43:03.020Z"
+    }
+  },
+  {
+    "key": "anthropic/wf2v8ms031sx",
+    "vendor": "anthropic",
+    "native_id": "wf2v8ms031sx",
+    "title": "Elevated errors loading usage data on platform.claude.com",
+    "url": "https://stspg.io/scdhhnplc2jn",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-07T01:20:26.673Z",
+    "resolved_at": "2026-10-07T02:33:38.815Z",
+    "duration_minutes": 73,
+    "components": [
+      "Claude Console (platform.claude.com)"
+    ],
+    "updates": [
+      {
+        "native_id": "psnbtphy46b0",
+        "status": "investigating",
+        "body": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not affected. We will provide an update as soon as possible.",
+        "created_at": "2026-10-07T01:20:26.956Z"
+      },
+      {
+        "native_id": "h01v76lvx6j4",
+        "status": "resolved",
+        "body": "This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the platform.claude.com Usage page and the Admin API usage report returned errors.",
+        "created_at": "2026-10-07T02:33:38.815Z"
+      }
+    ],
+    "first_seen_at": "2026-10-07T12:09:50.53762556Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:49.982Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "0qbwn08sd68x",
+          "name": "Claude Console (platform.claude.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 2,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-07T02:33:38.618Z"
+        }
+      ],
+      "created_at": "2026-10-07T01:20:26.681Z",
+      "id": "wf2v8ms031sx",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved. From 17:00 PT on October 6 / 00:00 UTC on October 7 to 18:40 PT on October 6 / 01:40 UTC on October 7, many requests to load usage data on the platform.claude.com Usage page and the Admin API usage report returned errors.",
+          "created_at": "2026-10-07T02:33:38.815Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T02:33:38.815Z",
+          "id": "h01v76lvx6j4",
+          "incident_id": "wf2v8ms031sx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T02:33:38.815Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated errors loading usage data on the platform.claude.com Usage page and the Admin API usage report endpoint since 5 PM PT. Messages API requests are not affected. We will provide an update as soon as possible.",
+          "created_at": "2026-10-07T01:20:26.956Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T01:20:26.956Z",
+          "id": "psnbtphy46b0",
+          "incident_id": "wf2v8ms031sx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T01:20:26.956Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors loading usage data on platform.claude.com",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T02:33:38.815Z",
+      "shortlink": "https://stspg.io/scdhhnplc2jn",
+      "started_at": "2026-10-07T01:20:26.673Z",
+      "status": "resolved",
+      "updated_at": "2026-10-07T02:33:38.847Z"
     }
   }
 ]
