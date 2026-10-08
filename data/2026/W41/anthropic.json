@@ -460,8 +460,8 @@
           "position": 2,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "operational",
-          "updated_at": "2026-10-07T02:33:38.618Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-10-07T21:44:41.416Z"
         }
       ],
       "created_at": "2026-10-07T01:20:26.681Z",
@@ -518,6 +518,211 @@
       "started_at": "2026-10-07T01:20:26.673Z",
       "status": "resolved",
       "updated_at": "2026-10-07T02:33:38.847Z"
+    }
+  },
+  {
+    "key": "anthropic/978mjkgw6mh7",
+    "vendor": "anthropic",
+    "native_id": "978mjkgw6mh7",
+    "title": "Elevated errors on platform.claude.com",
+    "url": "https://stspg.io/sjkw7njwf0mt",
+    "impact": "major",
+    "status": "monitoring",
+    "started_at": "2026-10-07T13:25:04.155Z",
+    "components": [
+      "Claude Console (platform.claude.com)"
+    ],
+    "updates": [
+      {
+        "native_id": "c56sq7q6flhm",
+        "status": "investigating",
+        "body": "We are investigating elevated errors affecting usage data on the platform.claude.com Usage page and the Admin API usage report. Core functionality is not affected. We will provide an update as soon as possible.",
+        "created_at": "2026-10-07T13:25:04.271Z"
+      },
+      {
+        "native_id": "lkt8xyfbql3f",
+        "status": "investigating",
+        "body": "We are continuing to work on elevated errors affecting usage data on the platform.claude.com Usage and Rate limits pages and the Admin API usage report. A mitigation for the Usage page and the Admin API usage report is rolling out; once it is in place, the most recent usage may take about 30 minutes to appear there. Core functionality is not affected.",
+        "created_at": "2026-10-07T16:36:44.789Z"
+      },
+      {
+        "native_id": "l3390gw3zj8k",
+        "status": "identified",
+        "body": "We've identified the cause of errors loading usage data. The Admin API usage report has recovered, and fixes for the platform.claude.com Usage and Rate limits pages are in progress. The most recent 30 minutes of usage may be delayed. Core functionality is not affected.",
+        "created_at": "2026-10-07T17:28:02.568Z"
+      },
+      {
+        "native_id": "1nnyzdbn2qkg",
+        "status": "monitoring",
+        "body": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take longer to appear on the platform.claude.com. API requests are not affected, and we will provide additional updates here.",
+        "created_at": "2026-10-07T21:44:41.466Z"
+      }
+    ],
+    "first_seen_at": "2026-10-08T12:20:37.47217167Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:49.982Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "0qbwn08sd68x",
+          "name": "Claude Console (platform.claude.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 2,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "degraded_performance",
+          "updated_at": "2026-10-07T21:44:41.416Z"
+        }
+      ],
+      "created_at": "2026-10-07T13:25:04.163Z",
+      "id": "978mjkgw6mh7",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take longer to appear on the platform.claude.com. API requests are not affected, and we will provide additional updates here.",
+          "created_at": "2026-10-07T21:44:41.466Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T21:44:41.466Z",
+          "id": "1nnyzdbn2qkg",
+          "incident_id": "978mjkgw6mh7",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T21:44:41.466Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We've identified the cause of errors loading usage data. The Admin API usage report has recovered, and fixes for the platform.claude.com Usage and Rate limits pages are in progress. The most recent 30 minutes of usage may be delayed. Core functionality is not affected.",
+          "created_at": "2026-10-07T17:28:02.568Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T17:28:02.568Z",
+          "id": "l3390gw3zj8k",
+          "incident_id": "978mjkgw6mh7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T17:28:02.568Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to work on elevated errors affecting usage data on the platform.claude.com Usage and Rate limits pages and the Admin API usage report. A mitigation for the Usage page and the Admin API usage report is rolling out; once it is in place, the most recent usage may take about 30 minutes to appear there. Core functionality is not affected.",
+          "created_at": "2026-10-07T16:36:44.789Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T16:36:44.789Z",
+          "id": "lkt8xyfbql3f",
+          "incident_id": "978mjkgw6mh7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T16:36:44.789Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated errors affecting usage data on the platform.claude.com Usage page and the Admin API usage report. Core functionality is not affected. We will provide an update as soon as possible.",
+          "created_at": "2026-10-07T13:25:04.271Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T13:25:04.271Z",
+          "id": "c56sq7q6flhm",
+          "incident_id": "978mjkgw6mh7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T13:25:04.271Z"
+        }
+      ],
+      "monitoring_at": "2026-10-07T21:44:41.466Z",
+      "name": "Elevated errors on platform.claude.com",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": "[]",
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/sjkw7njwf0mt",
+      "started_at": "2026-10-07T13:25:04.155Z",
+      "status": "monitoring",
+      "updated_at": "2026-10-07T21:45:27.699Z"
+    }
+  },
+  {
+    "key": "anthropic/vmys9qn874h4",
+    "vendor": "anthropic",
+    "native_id": "vmys9qn874h4",
+    "title": "Issue with spend limits",
+    "url": "https://stspg.io/frlrjsqqn605",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-07T21:23:29.599Z",
+    "resolved_at": "2026-10-07T21:23:29.656Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "p4pg9q0fk9t0",
+        "status": "resolved",
+        "body": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Claude.ai, Claude Code, Claude Security, and Claude Cowork. This is now resolved.",
+        "created_at": "2026-10-07T21:23:29.656Z"
+      }
+    ],
+    "first_seen_at": "2026-10-08T12:20:37.47217167Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-07T21:23:29.603Z",
+      "id": "vmys9qn874h4",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We have identified an issue which resulted in some organizations to be incorrectly paused for having reached their spend limit, resulting in refused requests on the Claude API, Claude.ai, Claude Code, Claude Security, and Claude Cowork. This is now resolved.",
+          "created_at": "2026-10-07T21:23:29.656Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T21:23:29.656Z",
+          "id": "p4pg9q0fk9t0",
+          "incident_id": "vmys9qn874h4",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T21:23:29.656Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Issue with spend limits",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T21:23:29.656Z",
+      "shortlink": "https://stspg.io/frlrjsqqn605",
+      "started_at": "2026-10-07T21:23:29.599Z",
+      "status": "resolved",
+      "updated_at": "2026-10-07T21:23:29.665Z"
     }
   }
 ]

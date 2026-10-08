@@ -6,7 +6,7 @@
     "title": "Delays in pipelines, workflows, UI data, and notifications",
     "url": "https://stspg.io/s7tpg47srxdd",
     "impact": "major",
-    "status": "resolved",
+    "status": "postmortem",
     "started_at": "2026-10-06T16:00:24.856Z",
     "resolved_at": "2026-10-06T21:18:47.358Z",
     "duration_minutes": 318,
@@ -86,6 +86,12 @@
         "status": "resolved",
         "body": "Between approximately 15:30 UTC and 20:30 UTC on October 6, 2026, customers experienced delays and failures affecting pipelines, workflows, and jobs.\n\nFrom approximately 16:02 UTC to 16:39 UTC, pipelines were failing and no new workflows or jobs could start. After service resumed, workflows and jobs continued to start with delays until approximately 20:00 UTC. Start times averaged up to approximately 40 minutes at their peak, and a very small number of workflows waited more than 1 hour. Outbound notifications and webhooks were also delayed until approximately 19:00 UTC, typically by about a minute.\n\nAs the backlog of delayed work cleared, the resulting increase in demand placed pressure on our execution capacity, causing further delays for Docker and Linux jobs. From approximately 19:45 UTC to 20:30 UTC, these jobs waited in the queue longer than usual before starting. At the peak, around 20:05 UTC, waits reached up to approximately 8 minutes for 2xlarge gen2, 6 minutes for xlarge gen2, and less than 5 minutes for a few other resource classes.\n\nThe issue has been resolved, and all affected functionality has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix.",
         "created_at": "2026-10-06T21:18:47.358Z"
+      },
+      {
+        "native_id": "23rv3zpsl5ld",
+        "status": "postmortem",
+        "body": "## Summary\n\nOn October 6, 2026, from 15:30 to 20:30 UTC, CircleCI customers experienced delays creating pipelines and starting workflows and jobs. From 15:48 to 16:38 UTC, no workflows or jobs started, and pipelines triggered from 16:02 UTC failed. Shorter, intermittent delays began earlier, at 13:30 UTC. Data in the CircleCI UI, notifications, and commit status updates to version control providers were also delayed.\n\nThe incident started in the database behind our workflow orchestration service, which coordinates every pipeline, workflow and job on CircleCI. Routine maintenance on the database's largest tables wrote transaction logs faster than the database could archive them, and the logs filled the storage volume set aside for them. To keep the database from becoming read-only, our engineers moved the logs to the database's main storage volume. That move took the database offline for 50 minutes. When the database came back, it processed work at about half its normal rate until our engineers changed a database setting at 18:19 UTC. We then worked through the backlog, and job start times returned to normal by 20:30 UTC.\n\nCustomers whose jobs failed during this window may rerun them.\n\nThe original status page can be found [here](https://status.circleci.com/incidents/z4hbq8h49j8c).\n\n## Background\n\nWhen you trigger a pipeline, CircleCI hands it to a workflow orchestration service. That service tracks the state of every workflow and job, decides when each job is ready to run, and passes ready jobs to our execution fleet. It also drives the job data you see in the UI and the notifications and commit statuses we send when work finishes.\n\nThe orchestration service stores its state in a database. The database writes every change to a transaction log before applying it, and it keeps those logs on a dedicated storage volume. It archives the logs continuously so it can reuse that space. If archiving falls behind and the volume fills, the database stops accepting writes, and no new work can move forward.\n\nThe database also runs a periodic maintenance process \\(autovacuums\\) on each table to keep its internal records valid over time. On a very large table, this process reads every page of the table and writes a large volume of transaction logs.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nFrom 10:02 on October 6, our monitoring raised short-lived alerts about errors in the orchestration service. Each alert cleared on its own within about 15 minutes. Our engineers had seen similar brief alerts before, and the system showed no other signs of stress, so they followed the runbook each time, and each alert cleared on its own partway through and also started work to make the alerts less sensitive.\n\nAround 12:40, along with the regular workload which generates its own transaction logs, the maintenance process on several of the database's largest tables began writing additional transaction logs faster than the database could archive them, and the log volume started to fill.\n\nAt 13:30, the orchestration service began to slow down. Through 15:30, some pipelines and jobs took longer to start, in short bursts. At 13:35, our monitoring alerted again, this time alongside related alerts from several other services.  Infrastructure Engineers followed the alert runbooks, clearing up some of the alerts.  The alerts returned again at around 14:30 and after investigating further, we declared an incident at 14:54. We should have recognized the combination of alerts sooner, and we have covered how we are fixing that below.\n\nAfter declaring the incident, our engineers traced the slowdown to the maintenance process \\(anti-wraparound autovacuum\\). The database restarts this process automatically if it is cancelled, so our engineers changed its settings to help it finish faster. By 15:30, the delays were continuous, and some jobs began to fail.\n\nAt 15:43, the transaction log volume was close to full. If it filled, the database would stop accepting writes and no work could run. Our engineers decided to move the transaction logs onto the database's main storage volume, which had plenty of free space. The move required the database to go offline, and we could not predict in advance how long that would take.\n\nThe move started at 15:47. From 15:48 to 16:38, the orchestration service could not process any work. Customers could still trigger pipelines, but no workflows or jobs started, and from 16:02 newly triggered pipelines failed. We posted to our status page at 15:58 and raised it to a major outage at 16:20. While the database was offline, our engineers prepared a replacement database as a fallback. The original database came back first, so we kept it in service.\n\nAt 16:38, the database came back online and work started flowing again. With transaction logs and regular data now sharing the same storage, the database ran more slowly than before. From 16:38 to 18:19, the orchestration service processed work at about half its normal rate, and jobs waited tens of minutes to start, up to about 50 minutes at the longest. During that time, the database had to finish archiving its backlog of transaction logs before we could move them back to a dedicated volume.  We also investigated and implemented several  database parameter changes to stop further maintenance runs from starting and prepared ways to reduce the work reaching the service.  Along with the replacement database, we also prepared a complete stack of the service during that time so that we could move to it at the risk of data loss and opted against that move. \n\nAt 18:19, our engineers changed a database setting to cut the time each write spent waiting on storage.  Processing speed recovered, and the backlog began to clear. To clear it faster, we added database and server capacity to the systems that hand jobs to our execution fleet. By about 19:55, new jobs were again starting on time.\n\nThe backlog then reached our execution fleet. From 19:49 to 20:30, some Docker jobs on larger resource classes waited up to about 10 minutes to start while capacity scaled up. By 20:30, job start times were back to normal. We moved the status page to monitoring at 20:32 and resolved the incident at 21:19.\n\nAbout 3,500 jobs failed to start during the incident. Customers may rerun these jobs. We found no evidence that CircleCI ran any job more than once. Customers who reran a workflow while the original run was still delayed may have seen both runs complete. Annual plan customers can work with their account team to review usage. \n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are adding alerts on the conditions that caused this incident.** Our monitoring caught the slowdown, but we had no alert on how full the transaction log volume was or on how far archiving had fallen behind. We are adding alerts on both, along with alerts on the database maintenance that drives them, so we can act earlier. We are also revisiting all our alerts to ensure noisy or sensitive alerts don’t hide real issues. \n\n**We are tuning how maintenance process \\(autovacuum\\) runs on our database.** We are looking at the frequency and the aggressiveness with which the autovacuums run on our database. We are also tracking the size of these tables over time so they stay within safe limits. \n\n**We are removing the single transaction log bottleneck.** All of the orchestration service's writes currently go through one database and one transaction log, so when that log fell behind, every pipeline, workflow and job slowed down with it. We are evaluating two approaches: splitting the service across multiple database instances, each with its own transaction log, and moving it to a distributed database built to spread writes across many nodes. Either approach would limit the effect of a backlog to part of the workload.\n\n**We are making our systems wait for the orchestration service to recover.** During the incident, some jobs failed because our systems gave up after retrying. We are working on changing that behavior.\n\n**We are improving our status page updates during long incidents.** Customers told us our early updates did not give enough detail. We are updating our guidance so updates include specific impact and timing sooner.\n\n‌\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve this incident. Please reach out to our support team with any questions or concerns.",
+        "created_at": "2026-10-07T22:08:13.884Z"
       }
     ],
     "first_seen_at": "2026-10-07T12:09:50.53762556Z",
@@ -104,7 +110,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-07T04:05:16.563Z"
+          "updated_at": "2026-10-07T15:21:09.753Z"
         },
         {
           "created_at": "2019-01-21T21:45:43.473Z",
@@ -126,6 +132,19 @@
       "id": "z4hbq8h49j8c",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nOn October 6, 2026, from 15:30 to 20:30 UTC, CircleCI customers experienced delays creating pipelines and starting workflows and jobs. From 15:48 to 16:38 UTC, no workflows or jobs started, and pipelines triggered from 16:02 UTC failed. Shorter, intermittent delays began earlier, at 13:30 UTC. Data in the CircleCI UI, notifications, and commit status updates to version control providers were also delayed.\n\nThe incident started in the database behind our workflow orchestration service, which coordinates every pipeline, workflow and job on CircleCI. Routine maintenance on the database's largest tables wrote transaction logs faster than the database could archive them, and the logs filled the storage volume set aside for them. To keep the database from becoming read-only, our engineers moved the logs to the database's main storage volume. That move took the database offline for 50 minutes. When the database came back, it processed work at about half its normal rate until our engineers changed a database setting at 18:19 UTC. We then worked through the backlog, and job start times returned to normal by 20:30 UTC.\n\nCustomers whose jobs failed during this window may rerun them.\n\nThe original status page can be found [here](https://status.circleci.com/incidents/z4hbq8h49j8c).\n\n## Background\n\nWhen you trigger a pipeline, CircleCI hands it to a workflow orchestration service. That service tracks the state of every workflow and job, decides when each job is ready to run, and passes ready jobs to our execution fleet. It also drives the job data you see in the UI and the notifications and commit statuses we send when work finishes.\n\nThe orchestration service stores its state in a database. The database writes every change to a transaction log before applying it, and it keeps those logs on a dedicated storage volume. It archives the logs continuously so it can reuse that space. If archiving falls behind and the volume fills, the database stops accepting writes, and no new work can move forward.\n\nThe database also runs a periodic maintenance process \\(autovacuums\\) on each table to keep its internal records valid over time. On a very large table, this process reads every page of the table and writes a large volume of transaction logs.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nFrom 10:02 on October 6, our monitoring raised short-lived alerts about errors in the orchestration service. Each alert cleared on its own within about 15 minutes. Our engineers had seen similar brief alerts before, and the system showed no other signs of stress, so they followed the runbook each time, and each alert cleared on its own partway through and also started work to make the alerts less sensitive.\n\nAround 12:40, along with the regular workload which generates its own transaction logs, the maintenance process on several of the database's largest tables began writing additional transaction logs faster than the database could archive them, and the log volume started to fill.\n\nAt 13:30, the orchestration service began to slow down. Through 15:30, some pipelines and jobs took longer to start, in short bursts. At 13:35, our monitoring alerted again, this time alongside related alerts from several other services.  Infrastructure Engineers followed the alert runbooks, clearing up some of the alerts.  The alerts returned again at around 14:30 and after investigating further, we declared an incident at 14:54. We should have recognized the combination of alerts sooner, and we have covered how we are fixing that below.\n\nAfter declaring the incident, our engineers traced the slowdown to the maintenance process \\(anti-wraparound autovacuum\\). The database restarts this process automatically if it is cancelled, so our engineers changed its settings to help it finish faster. By 15:30, the delays were continuous, and some jobs began to fail.\n\nAt 15:43, the transaction log volume was close to full. If it filled, the database would stop accepting writes and no work could run. Our engineers decided to move the transaction logs onto the database's main storage volume, which had plenty of free space. The move required the database to go offline, and we could not predict in advance how long that would take.\n\nThe move started at 15:47. From 15:48 to 16:38, the orchestration service could not process any work. Customers could still trigger pipelines, but no workflows or jobs started, and from 16:02 newly triggered pipelines failed. We posted to our status page at 15:58 and raised it to a major outage at 16:20. While the database was offline, our engineers prepared a replacement database as a fallback. The original database came back first, so we kept it in service.\n\nAt 16:38, the database came back online and work started flowing again. With transaction logs and regular data now sharing the same storage, the database ran more slowly than before. From 16:38 to 18:19, the orchestration service processed work at about half its normal rate, and jobs waited tens of minutes to start, up to about 50 minutes at the longest. During that time, the database had to finish archiving its backlog of transaction logs before we could move them back to a dedicated volume.  We also investigated and implemented several  database parameter changes to stop further maintenance runs from starting and prepared ways to reduce the work reaching the service.  Along with the replacement database, we also prepared a complete stack of the service during that time so that we could move to it at the risk of data loss and opted against that move. \n\nAt 18:19, our engineers changed a database setting to cut the time each write spent waiting on storage.  Processing speed recovered, and the backlog began to clear. To clear it faster, we added database and server capacity to the systems that hand jobs to our execution fleet. By about 19:55, new jobs were again starting on time.\n\nThe backlog then reached our execution fleet. From 19:49 to 20:30, some Docker jobs on larger resource classes waited up to about 10 minutes to start while capacity scaled up. By 20:30, job start times were back to normal. We moved the status page to monitoring at 20:32 and resolved the incident at 21:19.\n\nAbout 3,500 jobs failed to start during the incident. Customers may rerun these jobs. We found no evidence that CircleCI ran any job more than once. Customers who reran a workflow while the original run was still delayed may have seen both runs complete. Annual plan customers can work with their account team to review usage. \n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are adding alerts on the conditions that caused this incident.** Our monitoring caught the slowdown, but we had no alert on how full the transaction log volume was or on how far archiving had fallen behind. We are adding alerts on both, along with alerts on the database maintenance that drives them, so we can act earlier. We are also revisiting all our alerts to ensure noisy or sensitive alerts don’t hide real issues. \n\n**We are tuning how maintenance process \\(autovacuum\\) runs on our database.** We are looking at the frequency and the aggressiveness with which the autovacuums run on our database. We are also tracking the size of these tables over time so they stay within safe limits. \n\n**We are removing the single transaction log bottleneck.** All of the orchestration service's writes currently go through one database and one transaction log, so when that log fell behind, every pipeline, workflow and job slowed down with it. We are evaluating two approaches: splitting the service across multiple database instances, each with its own transaction log, and moving it to a distributed database built to spread writes across many nodes. Either approach would limit the effect of a backlog to part of the workload.\n\n**We are making our systems wait for the orchestration service to recover.** During the incident, some jobs failed because our systems gave up after retrying. We are working on changing that behavior.\n\n**We are improving our status page updates during long incidents.** Customers told us our early updates did not give enough detail. We are updating our guidance so updates include specific impact and timing sooner.\n\n‌\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve this incident. Please reach out to our support team with any questions or concerns.",
+          "created_at": "2026-10-07T22:08:13.884Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "23rv3zpsl5ld",
+          "incident_id": "z4hbq8h49j8c",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T22:17:33.229Z"
+        },
         {
           "affected_components": [
             {
@@ -446,8 +465,421 @@
       "resolved_at": "2026-10-06T21:18:47.358Z",
       "shortlink": "https://stspg.io/s7tpg47srxdd",
       "started_at": "2026-10-06T16:00:24.856Z",
+      "status": "postmortem",
+      "updated_at": "2026-10-07T22:17:33.231Z"
+    }
+  },
+  {
+    "key": "circleci/tj6wdnfjwr64",
+    "vendor": "circleci",
+    "native_id": "tj6wdnfjwr64",
+    "title": "Delay on starting Machine Job Tasks",
+    "url": "https://stspg.io/7q8hkm5sgt8h",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-07T13:40:00.506Z",
+    "resolved_at": "2026-10-07T14:06:21.413Z",
+    "duration_minutes": 26,
+    "components": [
+      "Machine Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "czrth7bzk3tc",
+        "status": "investigating",
+        "body": "Customers may be experiencing elevated wait times for Machine Job Tasks, we are investigating the root cause and will update when we know more.",
+        "created_at": "2026-10-07T13:40:00.628Z"
+      },
+      {
+        "native_id": "2cj0ndc82432",
+        "status": "monitoring",
+        "body": "We are seeing signs of recovery and monitoring the situation.",
+        "created_at": "2026-10-07T13:52:28.041Z"
+      },
+      {
+        "native_id": "vjx1p1g05prb",
+        "status": "resolved",
+        "body": "The incident has been resolved. Thank you for your patience",
+        "created_at": "2026-10-07T14:06:21.413Z"
+      }
+    ],
+    "first_seen_at": "2026-10-08T12:20:37.47217167Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-05-02T20:42:22.366Z",
+          "description": "CircleCI jobs using the machine executor, and jobs using the setup_remote_docker step.",
+          "group": false,
+          "group_id": null,
+          "id": "0l5xn1l7qs8f",
+          "name": "Machine Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-07T14:06:21.366Z"
+        }
+      ],
+      "created_at": "2026-10-07T13:40:00.514Z",
+      "id": "tj6wdnfjwr64",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "0l5xn1l7qs8f",
+              "name": "Machine Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The incident has been resolved. Thank you for your patience",
+          "created_at": "2026-10-07T14:06:21.413Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T14:06:21.413Z",
+          "id": "vjx1p1g05prb",
+          "incident_id": "tj6wdnfjwr64",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T14:06:21.413Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0l5xn1l7qs8f",
+              "name": "Machine Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing signs of recovery and monitoring the situation.",
+          "created_at": "2026-10-07T13:52:28.041Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T13:52:28.041Z",
+          "id": "2cj0ndc82432",
+          "incident_id": "tj6wdnfjwr64",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T13:52:28.041Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0l5xn1l7qs8f",
+              "name": "Machine Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Customers may be experiencing elevated wait times for Machine Job Tasks, we are investigating the root cause and will update when we know more.",
+          "created_at": "2026-10-07T13:40:00.628Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T13:40:00.628Z",
+          "id": "czrth7bzk3tc",
+          "incident_id": "tj6wdnfjwr64",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T13:40:00.628Z"
+        }
+      ],
+      "monitoring_at": "2026-10-07T13:52:28.041Z",
+      "name": "Delay on starting Machine Job Tasks",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T14:06:21.413Z",
+      "shortlink": "https://stspg.io/7q8hkm5sgt8h",
+      "started_at": "2026-10-07T13:40:00.506Z",
       "status": "resolved",
-      "updated_at": "2026-10-06T21:18:47.381Z"
+      "updated_at": "2026-10-07T14:06:21.442Z"
+    }
+  },
+  {
+    "key": "circleci/0z31ldjd8m5v",
+    "vendor": "circleci",
+    "native_id": "0z31ldjd8m5v",
+    "title": "Elevated level of infra fails on customer jobs",
+    "url": "https://stspg.io/n2l0044kmkdr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-07T14:27:38.295Z",
+    "resolved_at": "2026-10-07T15:21:09.797Z",
+    "duration_minutes": 53,
+    "components": [
+      "Pipelines \u0026 Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "mc02d8lrsnbp",
+        "status": "investigating",
+        "body": "We are investigating a rise in infra fails for customer jobs.",
+        "created_at": "2026-10-07T14:27:38.426Z"
+      },
+      {
+        "native_id": "zlc4bnnjrl9m",
+        "status": "monitoring",
+        "body": "We're seeing signs of recovery. Docker Gen2 wait times are slightly elevated and we're monitoring.",
+        "created_at": "2026-10-07T14:44:08.552Z"
+      },
+      {
+        "native_id": "y441qp1yzxzz",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-07T15:21:09.797Z"
+      }
+    ],
+    "first_seen_at": "2026-10-08T12:20:37.47217167Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-07T15:21:09.753Z"
+        }
+      ],
+      "created_at": "2026-10-07T14:27:38.305Z",
+      "id": "0z31ldjd8m5v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-07T15:21:09.797Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T15:21:09.797Z",
+          "id": "y441qp1yzxzz",
+          "incident_id": "0z31ldjd8m5v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T15:21:09.797Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're seeing signs of recovery. Docker Gen2 wait times are slightly elevated and we're monitoring.",
+          "created_at": "2026-10-07T14:44:08.552Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T14:44:08.552Z",
+          "id": "zlc4bnnjrl9m",
+          "incident_id": "0z31ldjd8m5v",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T14:44:08.552Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating a rise in infra fails for customer jobs.",
+          "created_at": "2026-10-07T14:27:38.426Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T14:27:38.426Z",
+          "id": "mc02d8lrsnbp",
+          "incident_id": "0z31ldjd8m5v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T14:27:38.426Z"
+        }
+      ],
+      "monitoring_at": "2026-10-07T14:44:08.552Z",
+      "name": "Elevated level of infra fails on customer jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T15:21:09.797Z",
+      "shortlink": "https://stspg.io/n2l0044kmkdr",
+      "started_at": "2026-10-07T14:27:38.295Z",
+      "status": "resolved",
+      "updated_at": "2026-10-07T15:21:09.822Z"
+    }
+  },
+  {
+    "key": "circleci/39rfrjmk5pvd",
+    "vendor": "circleci",
+    "native_id": "39rfrjmk5pvd",
+    "title": "Increased task wait times for Docker Gen2",
+    "url": "https://stspg.io/fpv4m66zyd77",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-07T18:54:58.628Z",
+    "resolved_at": "2026-10-07T20:05:32.007Z",
+    "duration_minutes": 70,
+    "components": [
+      "Docker Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "5cczh7q5t1mr",
+        "status": "identified",
+        "body": "There is an increased wait time for jobs on Docker Gen2.",
+        "created_at": "2026-10-07T18:54:58.747Z"
+      },
+      {
+        "native_id": "4njvkczy2mn3",
+        "status": "identified",
+        "body": "Note: delays will be more noticeable for people running on Docker `xlarge` and above.",
+        "created_at": "2026-10-07T19:00:45.704Z"
+      },
+      {
+        "native_id": "59ktttj99rng",
+        "status": "monitoring",
+        "body": "We're still seeing spikes in task wait times but on average wait times are looking better for all Docker Gen2.",
+        "created_at": "2026-10-07T19:52:41.159Z"
+      },
+      {
+        "native_id": "ptv6dtzzcvfm",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-07T20:05:32.007Z"
+      }
+    ],
+    "first_seen_at": "2026-10-08T12:20:37.47217167Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-17T19:43:18.878Z",
+          "description": "CircleCI jobs using the docker executor.",
+          "group": false,
+          "group_id": null,
+          "id": "x1v3t5qrnlhk",
+          "name": "Docker Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 1,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-07T20:05:31.957Z"
+        }
+      ],
+      "created_at": "2026-10-07T18:54:58.635Z",
+      "id": "39rfrjmk5pvd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-07T20:05:32.007Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T20:05:32.007Z",
+          "id": "ptv6dtzzcvfm",
+          "incident_id": "39rfrjmk5pvd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T20:05:32.007Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're still seeing spikes in task wait times but on average wait times are looking better for all Docker Gen2.",
+          "created_at": "2026-10-07T19:52:41.159Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T19:52:41.159Z",
+          "id": "59ktttj99rng",
+          "incident_id": "39rfrjmk5pvd",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T19:52:41.159Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Note: delays will be more noticeable for people running on Docker `xlarge` and above.",
+          "created_at": "2026-10-07T19:00:45.704Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T19:00:45.704Z",
+          "id": "4njvkczy2mn3",
+          "incident_id": "39rfrjmk5pvd",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T19:00:45.704Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "There is an increased wait time for jobs on Docker Gen2.",
+          "created_at": "2026-10-07T18:54:58.747Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-07T18:54:58.747Z",
+          "id": "5cczh7q5t1mr",
+          "incident_id": "39rfrjmk5pvd",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-07T18:54:58.747Z"
+        }
+      ],
+      "monitoring_at": "2026-10-07T19:52:41.159Z",
+      "name": "Increased task wait times for Docker Gen2",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-07T20:05:32.007Z",
+      "shortlink": "https://stspg.io/fpv4m66zyd77",
+      "started_at": "2026-10-07T18:54:58.628Z",
+      "status": "resolved",
+      "updated_at": "2026-10-07T20:05:32.037Z"
     }
   }
 ]

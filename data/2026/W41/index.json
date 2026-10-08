@@ -2,101 +2,121 @@
   "week": "2026-W41",
   "from": "2026-10-05T00:00:00Z",
   "to": "2026-10-12T00:00:00Z",
-  "generated_at": "2026-10-07T12:09:50.53762556Z",
+  "generated_at": "2026-10-08T12:20:37.47217167Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
-      "incidents_seen": 34,
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "incidents_seen": 33,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-07T12:09:50.53762556Z",
+      "fetched_at": "2026-10-08T12:20:37.47217167Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "grafana/6x77ccl9shpy",
+      "vendor": "grafana",
+      "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
+      "url": "https://stspg.io/9l8htmqt82s2",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-05T16:17:43.408Z",
+      "ongoing": true,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 4082,
+        "duration_minutes": 4082,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
     {
       "key": "cloudflare/z28czd65h29l",
       "vendor": "cloudflare",
@@ -124,22 +144,22 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/6x77ccl9shpy",
-      "vendor": "grafana",
-      "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
-      "url": "https://stspg.io/9l8htmqt82s2",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-05T16:17:43.408Z",
+      "key": "anthropic/978mjkgw6mh7",
+      "vendor": "anthropic",
+      "title": "Elevated errors on platform.claude.com",
+      "url": "https://stspg.io/sjkw7njwf0mt",
+      "impact": "major",
+      "status": "monitoring",
+      "started_at": "2026-10-07T13:25:04.155Z",
       "ongoing": true,
       "components": [
-        "Incident Management and Response (IRM)"
+        "Claude Console (platform.claude.com)"
       ],
       "score": {
-        "value": 2632,
-        "duration_minutes": 2632,
+        "value": 2062.5,
+        "duration_minutes": 1375,
         "components": 1,
-        "vendor_weight": 1
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -260,7 +280,7 @@
       "title": "Delays in pipelines, workflows, UI data, and notifications",
       "url": "https://stspg.io/s7tpg47srxdd",
       "impact": "major",
-      "status": "resolved",
+      "status": "postmortem",
       "started_at": "2026-10-06T16:00:24.856Z",
       "resolved_at": "2026-10-06T21:18:47.358Z",
       "duration_minutes": 318,
@@ -338,6 +358,32 @@
       "above_threshold": true
     },
     {
+      "key": "github/djlmxz2zd0j7",
+      "vendor": "github",
+      "title": "Incident with Git Operations, Pull Requests and Actions",
+      "url": "https://stspg.io/96smrcth8bpg",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-10-07T15:14:45.606Z",
+      "resolved_at": "2026-10-07T16:25:14.613Z",
+      "duration_minutes": 70,
+      "ongoing": false,
+      "components": [
+        "Git Operations",
+        "Webhooks",
+        "Issues",
+        "Pull Requests",
+        "Actions"
+      ],
+      "score": {
+        "value": 525,
+        "duration_minutes": 70,
+        "components": 5,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M46C47WYYD9NMZVGH83X3ZR1",
       "vendor": "openai",
       "title": "Admin Console Intermittently Inaccessible",
@@ -376,6 +422,31 @@
         "duration_minutes": 393,
         "components": 1,
         "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/qpfv5p86dmrl",
+      "vendor": "github",
+      "title": "Incident with Git Operations, Issues, Actions and Pull Requests",
+      "url": "https://stspg.io/4p8x0jnnsx7m",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-10-07T17:17:05.768Z",
+      "resolved_at": "2026-10-07T18:04:49.441Z",
+      "duration_minutes": 47,
+      "ongoing": false,
+      "components": [
+        "Git Operations",
+        "Issues",
+        "Pull Requests",
+        "Actions"
+      ],
+      "score": {
+        "value": 282,
+        "duration_minutes": 47,
+        "components": 4,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -482,6 +553,46 @@
       "above_threshold": true
     },
     {
+      "key": "openai/01M4BK9J2M83R4SSC71D9FXW45",
+      "vendor": "openai",
+      "title": "Dot in Codex may fail to create new threads",
+      "url": "https://status.openai.com/incidents/01M4BK9J2M83R4SSC71D9FXW45",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T16:31:37Z",
+      "resolved_at": "2026-10-07T18:06:37Z",
+      "duration_minutes": 95,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 142.5,
+        "duration_minutes": 95,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M4CR8GCAFC1RYQXZDXAZP2VT",
+      "vendor": "openai",
+      "title": "Some APAC users are seeing errors in ChatGPT Work, conversations, and GPTs.",
+      "url": "https://status.openai.com/incidents/01M4CR8GCAFC1RYQXZDXAZP2VT",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-08T03:17:40Z",
+      "resolved_at": "2026-10-08T04:51:39Z",
+      "duration_minutes": 93,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 139.5,
+        "duration_minutes": 93,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "anthropic/wf2v8ms031sx",
       "vendor": "anthropic",
       "title": "Elevated errors loading usage data on platform.claude.com",
@@ -543,6 +654,26 @@
       "score": {
         "value": 97.5,
         "duration_minutes": 65,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M4BP5JE7DKJSP3VG2S2DCWF2",
+      "vendor": "openai",
+      "title": "Degraded performance in Codex and Work mode: Dot turn failures, delayed responses, and reduced proactivity",
+      "url": "https://status.openai.com/incidents/01M4BP5JE7DKJSP3VG2S2DCWF2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T17:21:52Z",
+      "resolved_at": "2026-10-07T18:23:25Z",
+      "duration_minutes": 61,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 91.5,
+        "duration_minutes": 61,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -616,6 +747,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/p86jkvmrc3pc",
+      "vendor": "cloudflare",
+      "title": "Cloudflare API service issues",
+      "url": "https://www.cloudflarestatus.com/incidents/p86jkvmrc3pc",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T14:41:00Z",
+      "resolved_at": "2026-10-07T15:24:55.871Z",
+      "duration_minutes": 43,
+      "ongoing": false,
+      "components": [
+        "API"
+      ],
+      "score": {
+        "value": 77.4,
+        "duration_minutes": 43,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "digitalocean/5fxykytg48dx",
       "vendor": "digitalocean",
       "title": "VPC Networking Availability",
@@ -634,6 +787,50 @@
         "duration_minutes": 95,
         "components": 1,
         "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/39rfrjmk5pvd",
+      "vendor": "circleci",
+      "title": "Increased task wait times for Docker Gen2",
+      "url": "https://stspg.io/fpv4m66zyd77",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T18:54:58.628Z",
+      "resolved_at": "2026-10-07T20:05:32.007Z",
+      "duration_minutes": 70,
+      "ongoing": false,
+      "components": [
+        "Docker Jobs"
+      ],
+      "score": {
+        "value": 70,
+        "duration_minutes": 70,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/0z31ldjd8m5v",
+      "vendor": "circleci",
+      "title": "Elevated level of infra fails on customer jobs",
+      "url": "https://stspg.io/n2l0044kmkdr",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T14:27:38.295Z",
+      "resolved_at": "2026-10-07T15:21:09.797Z",
+      "duration_minutes": 53,
+      "ongoing": false,
+      "components": [
+        "Pipelines \u0026 Workflows"
+      ],
+      "score": {
+        "value": 53,
+        "duration_minutes": 53,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
@@ -658,6 +855,26 @@
       "above_threshold": false
     },
     {
+      "key": "openai/01M4CBXZ62A9SVH8D74KVYQC8M",
+      "vendor": "openai",
+      "title": "Elevated errors with GPT-5.6 Instant in FedRAMP workspaces",
+      "url": "https://status.openai.com/incidents/01M4CBXZ62A9SVH8D74KVYQC8M",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T23:42:12Z",
+      "resolved_at": "2026-10-08T00:03:18Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 31.5,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M461GYDMCVJJK8330PVCH42C",
       "vendor": "openai",
       "title": "Issues saving and editing Pages",
@@ -674,6 +891,28 @@
         "duration_minutes": 19,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "circleci/tj6wdnfjwr64",
+      "vendor": "circleci",
+      "title": "Delay on starting Machine Job Tasks",
+      "url": "https://stspg.io/7q8hkm5sgt8h",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-07T13:40:00.506Z",
+      "resolved_at": "2026-10-07T14:06:21.413Z",
+      "duration_minutes": 26,
+      "ongoing": false,
+      "components": [
+        "Machine Jobs"
+      ],
+      "score": {
+        "value": 26,
+        "duration_minutes": 26,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": false
     },
@@ -714,6 +953,26 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "anthropic/vmys9qn874h4",
+      "vendor": "anthropic",
+      "title": "Issue with spend limits",
+      "url": "https://stspg.io/frlrjsqqn605",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-07T21:23:29.599Z",
+      "resolved_at": "2026-10-07T21:23:29.656Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
