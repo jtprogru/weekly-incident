@@ -177,5 +177,758 @@
       "status": "resolved",
       "updated_at": "2026-10-07T09:34:09.229Z"
     }
+  },
+  {
+    "key": "grafana/91ct2lc9xfmn",
+    "vendor": "grafana",
+    "native_id": "91ct2lc9xfmn",
+    "title": "Degraded Performance with Increased Latency for Grafana Cloud Metrics and Traces in GCP US Central",
+    "url": "https://stspg.io/cjbf6knm4jq4",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-08T13:06:20.473Z",
+    "resolved_at": "2026-10-09T00:39:26.028Z",
+    "duration_minutes": 693,
+    "components": [
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-5",
+      "GCP US Central - prod-us-central-0: Ingestion",
+      "GCP US Central - prod-us-central-5: Ingestion",
+      "GCP US Central - prod-us-central-0: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "yfc7c41kp2xd",
+        "status": "investigating",
+        "body": "Beginning around 10:20 UTC, we have been seeing intermittent elevated error rates and latency affecting Grafana Cloud Metrics and Logs in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency and occasional errors affecting Grafana Cloud Traces in prod-us-central-0. Customers may see errors or delays when sending metrics, logs and traces. We are actively investigating. Next update by 13:40 UTC.",
+        "created_at": "2026-10-08T13:06:20.911Z"
+      },
+      {
+        "native_id": "1y1rrrdnvktb",
+        "status": "investigating",
+        "body": "We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics and Logs in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Error rates have decreased, but intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+        "created_at": "2026-10-08T13:25:32.654Z"
+      },
+      {
+        "native_id": "yvsb1mthk9pc",
+        "status": "investigating",
+        "body": "Update to scope: we have not confirmed any impact to Grafana Cloud Logs, and Logs has been removed from the affected components. We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Error rates have decreased, but intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+        "created_at": "2026-10-08T13:39:48.29Z"
+      },
+      {
+        "native_id": "pb45hg0xf16p",
+        "status": "investigating",
+        "body": "We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+        "created_at": "2026-10-08T13:52:32.947Z"
+      },
+      {
+        "native_id": "fx90ck2shvsv",
+        "status": "investigating",
+        "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We are investigating this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 15:30 UTC.",
+        "created_at": "2026-10-08T14:40:15.463Z"
+      },
+      {
+        "native_id": "9gpt3bync3qf",
+        "status": "investigating",
+        "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We are investigating this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 16:30 UTC.",
+        "created_at": "2026-10-08T15:19:19.599Z"
+      },
+      {
+        "native_id": "r26p5f54c0q9",
+        "status": "investigating",
+        "body": "We continue seeing elevated error rates and latency, and keep working with our cloud provider on this issue.\n\nNext update by 17:30 UTC.",
+        "created_at": "2026-10-08T16:21:48.562Z"
+      },
+      {
+        "native_id": "xcmrjq4tn5qm",
+        "status": "investigating",
+        "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We continue to investigate this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 18:30 UTC",
+        "created_at": "2026-10-08T17:30:50.14Z"
+      },
+      {
+        "native_id": "zf2xq5tcrvm5",
+        "status": "investigating",
+        "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. We have also received reports that some customers using Google Managed Prometheus in this region are experiencing issues when querying their GMP instances.\n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+        "created_at": "2026-10-08T18:15:32.348Z"
+      },
+      {
+        "native_id": "smqg7t5z3472",
+        "status": "investigating",
+        "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. We have also received reports that some customers using Google Managed Prometheus in this region are experiencing issues when querying their GMP instances.\n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+        "created_at": "2026-10-08T19:13:07.529Z"
+      },
+      {
+        "native_id": "0q76p7hjy2fz",
+        "status": "investigating",
+        "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. \n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+        "created_at": "2026-10-08T20:41:14.374Z"
+      },
+      {
+        "native_id": "tv2ggj798p0l",
+        "status": "investigating",
+        "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. \n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+        "created_at": "2026-10-08T21:42:28.807Z"
+      },
+      {
+        "native_id": "9zf4hgz87hwn",
+        "status": "resolved",
+        "body": "This incident has been resolved",
+        "created_at": "2026-10-09T00:39:26.028Z"
+      }
+    ],
+    "first_seen_at": "2026-10-09T12:10:41.663366425Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-12-10T22:16:56.701Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "l72f5c7651n5",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-08T13:52:32.681Z"
+        },
+        {
+          "created_at": "2024-07-16T13:33:08.758Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "98skfgrdgchf",
+          "name": "GCP US Central - prod-us-central-5",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 24,
+          "showcase": false,
+          "start_date": "2024-07-16",
+          "status": "operational",
+          "updated_at": "2026-10-08T13:52:32.718Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:09.523Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "1tt4gx4t4q87",
+          "name": "GCP US Central - prod-us-central-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 43,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-09T00:39:25.891Z"
+        },
+        {
+          "created_at": "2025-08-07T05:29:06.482Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "l778xg16mls4",
+          "name": "GCP US Central - prod-us-central-5: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 45,
+          "showcase": false,
+          "start_date": "2025-08-07",
+          "status": "operational",
+          "updated_at": "2026-10-09T00:39:25.925Z"
+        },
+        {
+          "created_at": "2020-11-03T15:41:20.075Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "t7pbglh025rz",
+          "name": "GCP US Central - prod-us-central-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 60,
+          "showcase": false,
+          "start_date": "2020-11-03",
+          "status": "operational",
+          "updated_at": "2026-10-09T00:39:25.953Z"
+        }
+      ],
+      "created_at": "2026-10-08T13:06:20.495Z",
+      "id": "91ct2lc9xfmn",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved",
+          "created_at": "2026-10-09T00:39:26.028Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T00:39:26.028Z",
+          "id": "9zf4hgz87hwn",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T00:39:26.028Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. \n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+          "created_at": "2026-10-08T21:42:28.807Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T21:42:28.807Z",
+          "id": "tv2ggj798p0l",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T21:42:28.807Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. \n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+          "created_at": "2026-10-08T20:41:14.374Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T20:41:14.374Z",
+          "id": "0q76p7hjy2fz",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T20:41:14.374Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. We have also received reports that some customers using Google Managed Prometheus in this region are experiencing issues when querying their GMP instances.\n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+          "created_at": "2026-10-08T19:13:07.529Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T19:13:07.529Z",
+          "id": "smqg7t5z3472",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T19:13:07.529Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance and increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and Grafana Cloud Traces in prod-us-central-0.\n\nCustomers may experience intermittent errors or delays when sending metrics and traces. We have also received reports that some customers using Google Managed Prometheus in this region are experiencing issues when querying their GMP instances.\n\nWe continue to investigate the issue with our cloud provider. We do not have an estimated time to resolution at this time.",
+          "created_at": "2026-10-08T18:15:32.348Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T18:15:32.348Z",
+          "id": "zf2xq5tcrvm5",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T18:15:32.348Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We continue to investigate this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 18:30 UTC",
+          "created_at": "2026-10-08T17:30:50.140Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T17:30:50.140Z",
+          "id": "xcmrjq4tn5qm",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T17:30:50.140Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue seeing elevated error rates and latency, and keep working with our cloud provider on this issue.\n\nNext update by 17:30 UTC.",
+          "created_at": "2026-10-08T16:21:48.562Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T16:21:48.562Z",
+          "id": "r26p5f54c0q9",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T16:21:48.562Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We are investigating this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 16:30 UTC.",
+          "created_at": "2026-10-08T15:19:19.599Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T15:19:19.599Z",
+          "id": "9gpt3bync3qf",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T15:19:19.599Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating degraded performance with increased latency in the ingestion path for Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5) and for Grafana Cloud Traces in prod-us-central-0. Customers may experience intermittent errors or delays when sending metrics and traces. We are investigating this with our cloud provider. We do not have an estimated time of resolution at this time. Next update by 15:30 UTC.",
+          "created_at": "2026-10-08T14:40:15.463Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T14:40:15.463Z",
+          "id": "fx90ck2shvsv",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T14:40:15.463Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+          "created_at": "2026-10-08T13:52:32.947Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T13:52:32.947Z",
+          "id": "pb45hg0xf16p",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T13:52:32.947Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Update to scope: we have not confirmed any impact to Grafana Cloud Logs, and Logs has been removed from the affected components. We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Error rates have decreased, but intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+          "created_at": "2026-10-08T13:39:48.290Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T13:39:48.290Z",
+          "id": "yvsb1mthk9pc",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T13:39:48.290Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to investigate intermittent elevated error rates and latency affecting Grafana Cloud Metrics and Logs in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency affecting Grafana Cloud Traces in prod-us-central-0. Error rates have decreased, but intermittent errors and latency may still occur. We are working with our cloud provider as part of the investigation. We do not have an estimated time of resolution at this time. Next update by 14:30 UTC.",
+          "created_at": "2026-10-08T13:25:32.654Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T13:25:32.654Z",
+          "id": "1y1rrrdnvktb",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T13:25:32.654Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "l778xg16mls4",
+              "name": "Metrics - GCP US Central - prod-us-central-5: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Beginning around 10:20 UTC, we have been seeing intermittent elevated error rates and latency affecting Grafana Cloud Metrics and Logs in GCP US Central (prod-us-central-0 and prod-us-central-5), and periodic increased latency and occasional errors affecting Grafana Cloud Traces in prod-us-central-0. Customers may see errors or delays when sending metrics, logs and traces. We are actively investigating. Next update by 13:40 UTC.",
+          "created_at": "2026-10-08T13:06:20.911Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-08T13:06:20.911Z",
+          "id": "yfc7c41kp2xd",
+          "incident_id": "91ct2lc9xfmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-08T13:06:20.911Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded Performance with Increased Latency for Grafana Cloud Metrics and Traces in GCP US Central",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-09T00:39:26.028Z",
+      "shortlink": "https://stspg.io/cjbf6knm4jq4",
+      "started_at": "2026-10-08T13:06:20.473Z",
+      "status": "resolved",
+      "updated_at": "2026-10-09T00:40:17.794Z"
+    }
   }
 ]
