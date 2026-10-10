@@ -2,96 +2,96 @@
   "week": "2026-W41",
   "from": "2026-10-05T00:00:00Z",
   "to": "2026-10-12T00:00:00Z",
-  "generated_at": "2026-10-09T12:10:41.663366425Z",
+  "generated_at": "2026-10-10T11:28:07.824738728Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
-      "incidents_seen": 33,
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-09T12:10:41.663366425Z",
+      "fetched_at": "2026-10-10T11:28:07.824738728Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -110,8 +110,8 @@
         "Incident Management and Response (IRM)"
       ],
       "score": {
-        "value": 5512,
-        "duration_minutes": 5512,
+        "value": 6910,
+        "duration_minutes": 6910,
         "components": 1,
         "vendor_weight": 1
       },
@@ -130,8 +130,8 @@
         "Claude Console (platform.claude.com)"
       ],
       "score": {
-        "value": 4207.5,
-        "duration_minutes": 2805,
+        "value": 6304.5,
+        "duration_minutes": 4203,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -213,6 +213,29 @@
       "above_threshold": true
     },
     {
+      "key": "circleci/6cfhhlr4rmm0",
+      "vendor": "circleci",
+      "title": "Delay in data appearing in UI and API",
+      "url": "https://stspg.io/hkfkwz292bz8",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-09T11:33:00.284Z",
+      "resolved_at": "2026-10-10T02:08:45.055Z",
+      "duration_minutes": 875,
+      "ongoing": false,
+      "components": [
+        "CircleCI API",
+        "CircleCI UI"
+      ],
+      "score": {
+        "value": 1750,
+        "duration_minutes": 875,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M45E0JFFJZ6EQ3BWYPW74R2Z",
       "vendor": "openai",
       "title": "Elevated Work Mode errors",
@@ -229,6 +252,68 @@
         "duration_minutes": 1146,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M4GV1M2A3K38T73JCVCD9G0R",
+      "vendor": "openai",
+      "title": "Delayed Costs data in the Compliance API",
+      "url": "https://status.openai.com/incidents/01M4GV1M2A3K38T73JCVCD9G0R",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-09T17:23:18Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 1626,
+        "duration_minutes": 1084,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/4knp3pzs3qvx",
+      "vendor": "cloudflare",
+      "title": "Cloudflare DNS Resolver 1.1.1.1 and Gateway DNS are having issues in SIN",
+      "url": "https://www.cloudflarestatus.com/incidents/4knp3pzs3qvx",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-09T14:41:09Z",
+      "resolved_at": "2026-10-09T19:30:32.638Z",
+      "duration_minutes": 289,
+      "ongoing": false,
+      "components": [
+        "Gateway",
+        "Singapore, Singapore - (SIN)",
+        "Recursive DNS"
+      ],
+      "score": {
+        "value": 1560.6000000000001,
+        "duration_minutes": 289,
+        "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1580",
+      "vendor": "slack",
+      "title": "Slack for iOS closing unexpectedly when opening channels",
+      "url": "https://slack-status.com/2026-10/a0cfb0208a1d2032",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-10-09T15:35:31Z",
+      "ongoing": true,
+      "components": [
+        "Connectivity"
+      ],
+      "score": {
+        "value": 1430.3999999999999,
+        "duration_minutes": 1192,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -271,6 +356,48 @@
       "score": {
         "value": 1265.4,
         "duration_minutes": 703,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/x8n12150xwf6",
+      "vendor": "cloudflare",
+      "title": "Cloudflare API service issues",
+      "url": "https://www.cloudflarestatus.com/incidents/x8n12150xwf6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-09T18:52:55.656Z",
+      "resolved_at": "2026-10-10T02:12:01.119Z",
+      "duration_minutes": 439,
+      "ongoing": false,
+      "components": [
+        "API"
+      ],
+      "score": {
+        "value": 790.2,
+        "duration_minutes": 439,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/cyxclg7nnhjy",
+      "vendor": "cloudflare",
+      "title": "Elevated Errors in China Network Colos",
+      "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-10T04:13:17Z",
+      "ongoing": true,
+      "components": [
+        "China Network"
+      ],
+      "score": {
+        "value": 781.2,
+        "duration_minutes": 434,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -494,6 +621,26 @@
       "above_threshold": true
     },
     {
+      "key": "openai/01M4H7FKXDA425TDNP2CRGEYA3",
+      "vendor": "openai",
+      "title": "Some ChatGPT content may be unavailable on Android",
+      "url": "https://status.openai.com/incidents/01M4H7FKXDA425TDNP2CRGEYA3",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-09T21:00:39Z",
+      "resolved_at": "2026-10-10T00:26:44Z",
+      "duration_minutes": 206,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 309,
+        "duration_minutes": 206,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/qpfv5p86dmrl",
       "vendor": "github",
       "title": "Incident with Git Operations, Issues, Actions and Pull Requests",
@@ -637,6 +784,26 @@
       "score": {
         "value": 156,
         "duration_minutes": 104,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M4HA7BCCXVHTR5DCYMSBQF2H",
+      "vendor": "openai",
+      "title": "Workspace admins may be unable to manage plugins",
+      "url": "https://status.openai.com/incidents/01M4HA7BCCXVHTR5DCYMSBQF2H",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-09T21:48:34Z",
+      "resolved_at": "2026-10-09T23:26:59Z",
+      "duration_minutes": 98,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 147,
+        "duration_minutes": 98,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -901,27 +1068,6 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/6cfhhlr4rmm0",
-      "vendor": "circleci",
-      "title": "Delay in data appearing in UI and API",
-      "url": "https://stspg.io/hkfkwz292bz8",
-      "impact": "major",
-      "status": "identified",
-      "started_at": "2026-10-09T11:33:00.284Z",
-      "ongoing": true,
-      "components": [
-        "CircleCI API",
-        "CircleCI UI"
-      ],
-      "score": {
-        "value": 74,
-        "duration_minutes": 37,
-        "components": 2,
-        "vendor_weight": 1
-      },
-      "above_threshold": true
-    },
-    {
       "key": "circleci/39rfrjmk5pvd",
       "vendor": "circleci",
       "title": "Increased task wait times for Docker Gen2",
@@ -940,6 +1086,29 @@
         "duration_minutes": 70,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/60w284knplry",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Queretaro",
+      "url": "https://www.cloudflarestatus.com/incidents/60w284knplry",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-09T18:50:41.201Z",
+      "resolved_at": "2026-10-09T19:10:37.806Z",
+      "duration_minutes": 19,
+      "ongoing": false,
+      "components": [
+        "Queretaro, MX, Mexico - (QRO)",
+        "Network"
+      ],
+      "score": {
+        "value": 68.4,
+        "duration_minutes": 19,
+        "components": 2,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

@@ -505,7 +505,7 @@
       {
         "native_id": "r3xqq2w1gq6j",
         "status": "postmortem",
-        "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+        "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
         "created_at": "2026-10-08T17:55:29.006Z"
       }
     ],
@@ -534,7 +534,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+          "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
           "created_at": "2026-10-08T17:55:29.006Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -543,7 +543,7 @@
           "incident_id": "tj6wdnfjwr64",
           "status": "postmortem",
           "tweet_id": null,
-          "updated_at": "2026-10-08T17:55:30.335Z"
+          "updated_at": "2026-10-09T22:36:25.846Z"
         },
         {
           "affected_components": [
@@ -614,7 +614,7 @@
       "shortlink": "https://stspg.io/7q8hkm5sgt8h",
       "started_at": "2026-10-07T13:40:00.506Z",
       "status": "postmortem",
-      "updated_at": "2026-10-08T17:55:30.337Z"
+      "updated_at": "2026-10-09T22:36:25.849Z"
     }
   },
   {
@@ -653,7 +653,7 @@
       {
         "native_id": "y149qbnqsxnh",
         "status": "postmortem",
-        "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+        "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
         "created_at": "2026-10-08T17:55:06.059Z"
       }
     ],
@@ -682,7 +682,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+          "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
           "created_at": "2026-10-08T17:55:06.059Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -691,7 +691,7 @@
           "incident_id": "0z31ldjd8m5v",
           "status": "postmortem",
           "tweet_id": null,
-          "updated_at": "2026-10-08T17:55:10.791Z"
+          "updated_at": "2026-10-09T22:36:00.320Z"
         },
         {
           "affected_components": [
@@ -762,7 +762,7 @@
       "shortlink": "https://stspg.io/n2l0044kmkdr",
       "started_at": "2026-10-07T14:27:38.295Z",
       "status": "postmortem",
-      "updated_at": "2026-10-08T17:55:10.794Z"
+      "updated_at": "2026-10-09T22:36:00.323Z"
     }
   },
   {
@@ -807,7 +807,7 @@
       {
         "native_id": "wgkqf4q1bph8",
         "status": "postmortem",
-        "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+        "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
         "created_at": "2026-10-08T17:54:52.865Z"
       }
     ],
@@ -836,7 +836,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+          "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
           "created_at": "2026-10-08T17:54:52.865Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -845,7 +845,7 @@
           "incident_id": "39rfrjmk5pvd",
           "status": "postmortem",
           "tweet_id": null,
-          "updated_at": "2026-10-08T17:54:55.571Z"
+          "updated_at": "2026-10-09T22:35:41.854Z"
         },
         {
           "affected_components": [
@@ -936,7 +936,7 @@
       "shortlink": "https://stspg.io/fpv4m66zyd77",
       "started_at": "2026-10-07T18:54:58.628Z",
       "status": "postmortem",
-      "updated_at": "2026-10-08T17:54:55.573Z"
+      "updated_at": "2026-10-09T22:35:41.857Z"
     }
   },
   {
@@ -1011,7 +1011,7 @@
       {
         "native_id": "567678xmqr2y",
         "status": "postmortem",
-        "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+        "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
         "created_at": "2026-10-08T17:54:29.818Z"
       }
     ],
@@ -1040,7 +1040,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "## Summary\n\nSince October 1, CircleCI customers have experienced multiple incidents which have caused delays and failures in customer pipeline execution. There are two \\(unrelated\\) causes, both of which the CircleCI engineering team is actively mitigating:\n\n* Available Cloud Computing Capacity\n* Internal Infrastructure\n\n## Available Cloud Computing Capacity\n\n* **Problem**: Demand for high-performance cloud instances is rising extremely rapidly across the industry, which puts pressure on the cloud provider instance types that we use to execute customer jobs.\n* **Incidents**:\n\n    * [Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n    \n        * [Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n        * [Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n        * [Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n        * [Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n        \n    \n* **Mitigations and Resolutions**:\n\n    * We are expanding our set of cloud computing regions to include additional regions with available high-performance instances.\n    * We are also working to secure additional guaranteed capacity from our cloud computing partners in our existing regions.\n    * We are further expanding the set of instance types we can offer to customers.\n    * We will publish a detailed Incident Report on these incidents on October 9, 2026.\n    \n\n## Internal Infrastructure\n\n* **Problem**: We assign customer workflows over multiple compute providers via a workflow orchestration service. This service is currently gated by the write throughput of a single database.\n* **Incidents:**\n\n    * [Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c)\n    * [Emergency Infrastructure Maintenance](https://status.circleci.com/incidents/g60yc9bvvkmx)\n    \n* **Mitigations and Resolutions**:\n\n    * By October 23, 2026, we plan to implement multiple redundant workflow orchestration service instances, each with its own database, which will enable us split the orchestration load between them.\n    \n\n## Our Commitment\n\nFor avoidance of doubt,\n\n* These particular incidents are not related to ongoing outages at Github\n* We are not currently migrating our infrastructure or services\n* We are not currently under cyberattack\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents and works to prevent future incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+          "body": "## **Summary**\n\nBetween October 1 and October 8, 2026, CircleCI customers experienced five separate incidents in which jobs waited longer than normal to start, or failed to start. Three of the incidents were driven by limited instance availability from our cloud provider. One was caused by a configuration issue in our scheduling infrastructure, and one by memory limits on an internal service, which we raised during the incident.\n\n* **October 1, 07:57 to 10:24 UTC:** Docker Gen 2 jobs waited up to 30 minutes to start. A configuration issue prevented the Gen 2 scheduling servers from using their high-performance local disks. During a burst in traffic, the fallback disks saturated and job placement slowed.\n* **October 7, 13:27 to 14:06 UTC:** Machine jobs waited longer than normal because we could not acquire enough virtual machines from our cloud provider.\n* **October 7, 14:24 to 15:21 UTC:** Some jobs failed with an infrastructure error, and workflows were delayed. The service that gives each job its configuration at startup ran out of memory and restarted.\n* **October 7, 18:49 to 20:05 UTC:** Docker Gen 2 jobs waited longer than normal because we could not acquire enough instances from our cloud provider.\n* **October 8, 12:48 to 16:00 UTC:** Linux machine jobs and remote Docker jobs waited up to 50 minutes to start. Our cloud provider did not have enough of the instance type we request, and a defect in the logic that picks a different instance type kept us from using alternatives.\n\nJobs that waited during these incidents were delayed, not lost. Customers whose jobs failed with an infrastructure error during the October 7 incident from 14:24 to 15:21 UTC can rerun them.\n\nThe original status pages can be found below:\n\n* [October 1 - Delays starting Gen 2 Docker Jobs](https://status.circleci.com/incidents/22mrv46g6n7g)\n* [October 7 - Delay on starting Machine Job Tasks](https://status.circleci.com/incidents/tj6wdnfjwr64)\n* [October 7 - Elevated level of infra fails on customer jobs](https://status.circleci.com/incidents/0z31ldjd8m5v)\n* [October 7 - Increased task wait times for Docker Gen2](https://status.circleci.com/incidents/39rfrjmk5pvd)\n* [October 8 - Elevated wait times for machine jobs](https://status.circleci.com/incidents/jn756xtsy4xg)\n\n## **Background**\n\nEvery job that runs on CircleCI needs compute. Where that compute comes from depends on the executor.\n\nDocker jobs run on clusters of servers that schedule work onto a fleet of instances. The scheduler is the software on those servers that decides which instance runs each job. Gen 2 Docker jobs ran on one such cluster at the time of the October 1 incident. Gen 1 Docker jobs are spread across several clusters.\n\nMachine jobs, including remote Docker jobs, get a dedicated virtual machine. A remote Docker job is handled as a Linux machine job from submission through provisioning. Our machine provisioning service requests each machine from our cloud provider in one of the two regions we normally use for machine jobs. When the provider cannot supply the instance type we request, the service falls back: it requests a different instance type, or a different region, from a list we maintain. A job waits until a machine is available.\n\nWhen any job starts, it asks a job configuration service for its configuration. That service runs as a set of pods, which are small copies of the same program. If too many pods stop, the remaining pods carry more load, and jobs cannot start until the service recovers.\n\nThese paths depend on three kinds of capacity: the throughput of our scheduling systems, the supply of instances from our cloud provider, and the memory and number of copies of the services that start jobs. A shortfall in any of them makes jobs wait or fail.\n\n## **What Happened**\n\n_\\(All times UTC\\)_\n\n### **October 1: Docker Gen 2 jobs delayed up to 30 minutes**\n\nAt 07:44, disk activity on the servers that schedule Gen 2 Docker jobs rose to 90% of capacity and stayed there. At 07:57, the number of Docker jobs waiting to start began to grow, and wait times rose with it. An automated alert paged the on-call engineer at 08:08. We declared an incident at 08:42.\n\nAt 08:43, engineers identified high disk latency on the scheduling servers. They first believed the disks were too slow for the load, so they prepared a change to a faster disk type. At 09:01, the team agreed on two workstreams: move the servers to faster disks, and add a second Gen 2 cluster so that jobs would split across two clusters.\n\nAt 09:41, engineers found the root cause. Each scheduling server has fast disks attached directly to it, and the scheduler is meant to keep its working data there. These servers run on a security-hardened operating system image, and on that image the fast disks were not being used. The scheduler wrote its data to slower network-attached disks instead. The script that sets up the fast disks failed without an error, and a gap in logging on these servers hid the failure. Gen 2 traffic had also become increasingly bursty. The slower disks saturated during those bursts, and the scheduler fell behind.\n\nWait times peaked at 09:54, when jobs on the Gen 2 medium resource class waited up to 30 minutes. At 09:55, engineers applied a fix that set up the fast disks correctly. At 10:11, the scheduler began placing jobs faster, which confirmed the servers could keep up with new jobs. Wait times for Gen 2 medium fell to 13 minutes at 10:14, 7 minutes at 10:17, and 1 minute 30 seconds at 10:20. We moved the status page to monitoring at 10:24 and resolved the incident at 10:45.\n\nAt 11:20, the second Gen 2 cluster began running jobs.\n\n### **October 7, 13:27 to 14:06: Elevated wait times for machine jobs**\n\nWe declared an incident at 13:27 after seeing elevated queueing and wait times. We posted to the status page at 13:31. At 13:31, engineers saw that we were struggling to acquire virtual machines for machine jobs, and that the number of jobs waiting to start was high mainly for machine jobs. At 13:34, wait times were elevated across executors.\n\nAt 13:48, wait times began to recover as more machines became available, and we resolved the incident at 14:06.\n\n### **October 7, 14:24 to 15:21: Job failures and workflow delays**\n\nShortly after the previous incident was marked as resolved, we declared a new incident at 14:24 due to a sharp drop in the number of jobs submitted to our execution systems. At 14:26, engineers saw that pods of the job configuration service were restarting. Pods that restart leave fewer copies of the service to answer requests, and jobs that could not retrieve their configuration after repeated attempts failed with an infrastructure error. Workflows that were already running waited for updates from jobs that had not started.\n\nAt 14:35, engineers increased the amount of available memory to the pods and increased the number of pods, which gave the service more copies to share the load. We also increased the amount of memory available Job submissions began recovering, and the number of messages flowing through our workflow system returned to normal levels. At 14:44, we moved the status page to monitoring.\n\nPods in the job configuration service reached their memory limits and restarted. We increased memory allocations and pod counts, and the service recovered. At 15:13, we increased the number of instances in our Gen 2 Docker clusters so we could work through the backlog of waiting jobs quickly. We resolved the incident at 15:21.\n\n### **October 7, 18:49 to 20:05: Elevated wait times for Docker Gen 2 jobs**\n\nWe declared a new incident at 18:49 after Docker Gen 2 wait times rose. At 18:51, engineers confirmed that a shortage of available instances kept us from acquiring enough of them, which raised wait times. Wait times differed by resource class size.\n\nAt 19:52, average wait times were lower than an hour earlier as more capacity became available, though brief spikes continued, and we moved the status page to monitoring. We resolved the incident at 20:05.\n\n### **October 8: Linux machine and remote Docker jobs wait up to 50 minutes**\n\nWe declared an incident at 12:48 after seeing a large number of jobs waiting to start and long wait times for machine and remote Docker jobs. At 12:49, engineers saw that our cloud provider could not supply enough instances. Delays continued to climb as we investigated.\n\nAt 13:13, we began examining the logic that chooses a different instance type or region when our first choice is unavailable. At 13:24, we suspected that a defect in that logic was stopping us from using other instance types in our primary region, so we disabled our fallback region and confirmed the cause of the defect. Engineers began working on a fix and deployed it at 14:49. The service began requesting other instance types and started machines in large numbers. At 14:58, the queue of jobs waiting for a machine dropped steadily. Average wait times across resource classes continued to drop over the next hour as we worked through the backlog of waiting jobs.\n\nAt 16:00, the queue of jobs waiting for a machine cleared and the number of waiting jobs returned to normal. We moved the status page to monitoring at 16:09 and resolved the incident at 16:35.\n\n## **Future Prevention and Process Improvement**\n\nWe are taking the following steps to strengthen the resilience of job start times, including supply diversification, fallback logic, and earlier detection.\n\n**We are expanding our compute regions.** In the October 7 and October 8 incidents, our cloud provider could not supply enough instances in the regions we used. We are adding new regions to our fallback logic in order handle spikes for demand that outpace our preferred regions.\n\n**We are fixing the logic that picks a different instance type.** On October 8, a defect kept the machine provisioning service from using other instance types in the same region. We deployed a fix during the incident and are now reviewing and refactoring this logic as a whole, with tests, so that a shortage of one instance type moves work to another.\n\n**We are expanding the instance types we offer and securing additional capacity.** We are working with our cloud provider to reserve additional capacity in our existing regions, and we are adding instance types that jobs can run on. Industry demand for high-performance compute is growing. We are diversifying where and how we source capacity so our customers are insulated from supply variation.\n\n**We added a second Gen 2 Docker cluster so traffic bursts are distributed across two clusters.** We are also adding alerts on scheduling server disk saturation and on how fast the scheduler places jobs, and an alert that fires when a server starts without its fast disks in use. We made the disk setup script fail with an error, and we restored log shipping from these servers so that a similar problem is visible sooner.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents. Please reach out to our support team with any questions or concerns.",
           "created_at": "2026-10-08T17:54:29.818Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1049,7 +1049,7 @@
           "incident_id": "jn756xtsy4xg",
           "status": "postmortem",
           "tweet_id": null,
-          "updated_at": "2026-10-08T17:56:57.648Z"
+          "updated_at": "2026-10-09T22:35:19.144Z"
         },
         {
           "affected_components": [
@@ -1240,7 +1240,7 @@
       "shortlink": "https://stspg.io/vcsrgfwdsy4z",
       "started_at": "2026-10-08T13:00:30.832Z",
       "status": "postmortem",
-      "updated_at": "2026-10-08T17:56:57.650Z"
+      "updated_at": "2026-10-09T22:35:19.147Z"
     }
   },
   {
@@ -1250,8 +1250,10 @@
     "title": "Delay in data appearing in UI and API",
     "url": "https://stspg.io/hkfkwz292bz8",
     "impact": "major",
-    "status": "identified",
+    "status": "resolved",
     "started_at": "2026-10-09T11:33:00.284Z",
+    "resolved_at": "2026-10-10T02:08:45.055Z",
+    "duration_minutes": 875,
     "components": [
       "CircleCI API",
       "CircleCI UI"
@@ -1262,6 +1264,156 @@
         "status": "identified",
         "body": "There is a delay in our data infrastructure causing delays before build data and some notifications become visible. We are working on a mitigation.",
         "created_at": "2026-10-09T11:33:00.542Z"
+      },
+      {
+        "native_id": "yjnhth0t8yh8",
+        "status": "identified",
+        "body": "What's impacted: \nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect\nSince 11:15 UTC:\n - Pipelines are still being created while this is ongoing but not yet processed, so retriggering may result in duplicate pipelines.\n - Outbound webhooks and transactional notifications (Slack and email) are not being sent.\n - Pipeline statuses may not be visible. \n - Usage charge data on the Project Usage page will be stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update: \nWe will provide another update by 13:30 UTC.",
+        "created_at": "2026-10-09T13:00:40.161Z"
+      },
+      {
+        "native_id": "88ds0hhr371x",
+        "status": "identified",
+        "body": "Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted:\nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect:\n- Since about 13:00 UTC, pipelines are being processed again and jobs are starting.\n- Most jobs are currently starting within about 4 minutes, and some are waiting up to about 10 minutes. Pipelines triggered during the incident are still being processed and may take longer to start.\n- Outbound webhooks and notifications have resumed. \n- Pipelines are still being processed from the backlog, so retriggering may result in duplicate pipelines.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update:\nWe will provide another update by 14:00 UTC.",
+        "created_at": "2026-10-09T13:30:31.975Z"
+      },
+      {
+        "native_id": "nd0zqb74k0hw",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Pipelines are being processed again, including those triggered during the incident.\n- Since about 13:25 UTC, workflows and jobs have been starting with increasing delays as we work through the backlog. Most jobs are currently starting within about 10 minutes, and some are waiting up to about 25 minutes.\n- We expect to work through this backlog by about 14:35 UTC.\n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows. \n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 14:30 UTC.",
+        "created_at": "2026-10-09T14:00:23.628Z"
+      },
+      {
+        "native_id": "76l1sfjdf53g",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are improving. Most jobs are now starting within about 3 minutes, down from about 10 minutes at 13:50 UTC.\n- Some workflows from pipelines triggered during the incident are still waiting up to about 40 minutes to start.\n- Working through the backlog is taking slightly longer than expected. We now expect to clear it by about 14:45 UTC. \n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 15:00 UTC.",
+        "created_at": "2026-10-09T14:29:58.944Z"
+      },
+      {
+        "native_id": "6l23l9vg00p7",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of workflows from pipelines triggered during the incident cleared at about 14:40 UTC.\n- Most jobs are now starting within about 30 seconds, and some are waiting up to about 3 minutes.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers continue to work on the underlying issue.\n\nNext update\nWe will provide another update by 15:10 UTC.",
+        "created_at": "2026-10-09T14:43:52.603Z"
+      },
+      {
+        "native_id": "bctws6py234x",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of pipelines and workflows from the incident has cleared.\n- Since about 14:45 UTC, most workflows and jobs are starting within about 15 seconds, and start times are continuing to return to normal.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers monitor the recovery.\n\nNext update\nWe will provide another update by 15:20 UTC.",
+        "created_at": "2026-10-09T14:54:02.94Z"
+      },
+      {
+        "native_id": "f9jb7ggjpsxy",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Workflows and jobs are running on time.\n- The CircleCI UI is about 30 minutes behind. New workflows and status changes may take that long to appear.\n- Our engineers are actively working to speed up processing so the UI can catch up.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to reduce this delay.\n\nNext update\nWe will provide another update by 16:00 UTC.",
+        "created_at": "2026-10-09T15:32:03.279Z"
+      },
+      {
+        "native_id": "ymxbztqs0prv",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Since about 15:15 UTC, workflows and jobs have been starting with increasing delays. Most jobs are currently starting within about 4 minutes, and some are waiting up to about 20 minutes.\n- The CircleCI UI remains about 30 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 16:30 UTC.",
+        "created_at": "2026-10-09T16:02:42.495Z"
+      },
+      {
+        "native_id": "zp01djn036zf",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs have stopped increasing and are beginning to ease. Most jobs are starting within about 4 minutes, and some are waiting up to about 25 minutes.\n- The CircleCI UI is now about 20 minutes behind, down from about 30 minutes. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:00 UTC.",
+        "created_at": "2026-10-09T16:32:53.245Z"
+      },
+      {
+        "native_id": "m77xw2dm51zs",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are holding steady. Most jobs are starting within about 4 minutes, and some are waiting up to about 8 minutes, down from about 25 minutes.\n- The CircleCI UI remains about 20 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:30 UTC.",
+        "created_at": "2026-10-09T17:06:30.17Z"
+      },
+      {
+        "native_id": "ywrkgdr5qxpv",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Since about 17:00 UTC, delays have increased significantly. Most jobs are now taking about 12 minutes to start, and some are waiting up to about 30 minutes.\n- Since about 17:15 UTC, some jobs are failing to start. \n- Pipelines are being processed more slowly, so some may take longer to start. \n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear. \n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 18:00 UTC.",
+        "created_at": "2026-10-09T17:34:01.223Z"
+      },
+      {
+        "native_id": "rr745bm3mdpr",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat to expect\n- Since about 17:00 UTC, we are seeing an increase in delays. Most jobs are now taking about 25 minutes to start, and some are waiting up to about an hour.\n- Since about 17:15 UTC, some in-progress workflows have failed and a small number of jobs are failing to start.\n- New pipelines are being queued and are taking longer to start.\n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nOur engineers continue to work to resolve the issue at hand. \n\nNext update\nWe will provide another update by 18:30 UTC.",
+        "created_at": "2026-10-09T18:08:03.166Z"
+      },
+      {
+        "native_id": "t14nr135wscg",
+        "status": "identified",
+        "body": "What's changed since our last update\n\n* The CircleCI UI is about an hour behind, and up to about 90 minutes for some updates. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Jobs that are running are starting faster. Most are now starting within about 15 minutes, down from about 28 minutes, though some are still waiting over an hour.\n* New pipelines are increasingly delayed.\n* Some workflows are still failing. Workflows that could not be processed in time are being marked as failed.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n\nStill ongoing: \nUsage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:00 UTC.",
+        "created_at": "2026-10-09T18:32:52.602Z"
+      },
+      {
+        "native_id": "phlrcb2qhh92",
+        "status": "identified",
+        "body": "What's changed since our last update\n\n* Jobs are starting faster. Most are now starting within about 8 minutes, down from about 15 minutes, and the longest waits have dropped from over an hour to about 45 minutes.\n* The CircleCI UI is beginning to catch up, but it is still behind. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Pipelines are being processed faster, but new pipelines are still delayed.\n\nStill ongoing\n* Some workflows and jobs are still failing.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n* Usage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:30 UTC.",
+        "created_at": "2026-10-09T18:57:01.746Z"
+      },
+      {
+        "native_id": "zznj02llzfvt",
+        "status": "identified",
+        "body": "Since our last update, jobs are starting faster: most are now starting within about 6 minutes, down from about 8 minutes. The CircleCI UI is catching up but still about an hour behind. New pipelines are being processed as they arrive. \n\nJobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI. \n\nWe will provide another update by 20:00 UTC.",
+        "created_at": "2026-10-09T19:29:54.594Z"
+      },
+      {
+        "native_id": "vxwn1x5xj418",
+        "status": "identified",
+        "body": "Jobs are starting faster and fewer are failing: most jobs are now starting within about 4 minutes, down from about 6 minutes, and the longest waits have dropped from about 30 minutes to about 20 minutes. \n\nPipelines from earlier in the incident are now being worked through. \n\nThe CircleCI UI is still behind, and some older updates may take longer to appear. Jobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI.\n\nWe will provide another update by 20:30 UTC.",
+        "created_at": "2026-10-09T20:06:36.341Z"
+      },
+      {
+        "native_id": "7d56g12hwjlm",
+        "status": "identified",
+        "body": "Since about 20:48 UTC, new workflows and jobs are not starting. We have temporarily paused starting new work so that our systems can catch up on work already in progress, including delayed updates to the CircleCI UI and API. Older updates are now appearing in the UI and API as this backlog clears. New pipelines are still being accepted and queued\n\nPlease avoid retriggering pipelines or workflows during this time, as this may create duplicates once work resumes.\n\nWe will provide another update by 22:00 UTC.",
+        "created_at": "2026-10-09T21:22:37.747Z"
+      },
+      {
+        "native_id": "4t1ztc23mt5p",
+        "status": "identified",
+        "body": "Since our last update, most of the pipelines that were delayed earlier in the incident have now been processed, and their workflows are queued to start. New workflows and jobs remain paused while we prepare to resume work safely. Delayed updates continue to appear in the CircleCI UI and API. \n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates once work resumes. \n\nWe will provide another update by 22:30 UTC.",
+        "created_at": "2026-10-09T22:09:04.56Z"
+      },
+      {
+        "native_id": "jjc9y44qb8jb",
+        "status": "identified",
+        "body": "Since our last update, we have begun gradually resuming work, and some queued workflows and jobs are starting again. Most queued work is still waiting, and jobs that do start may have waited over an hour. We are increasing the rate carefully to avoid overloading our systems. Delayed updates continue to appear in the CircleCI UI and API.\n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates as queued work resumes. \n\nWe will provide another update by 23:00 UTC.",
+        "created_at": "2026-10-09T22:28:06.582Z"
+      },
+      {
+        "native_id": "kn8lpnsykn0b",
+        "status": "identified",
+        "body": "A large number of queued workflows and jobs have started, and the CircleCI UI and API have caught up and are showing updates normally with few delays. We are continuing to work through the remaining queued work. Jobs from the queue may have waited about an hour or more to start, and some Linux jobs are waiting up to about 10 minutes for capacity.\n\nPlease continue to avoid retriggering while queued work continues to process. \n\nWe will provide another update by 23:30 UTC.",
+        "created_at": "2026-10-09T23:00:06.282Z"
+      },
+      {
+        "native_id": "slddcgnpwq08",
+        "status": "identified",
+        "body": "We are still working through a significant backlog of queued workflows and jobs. Wait times are improving but they remain longer than normal and some jobs have waited over an hour. The CircleCI UI and API remain up to date. Please avoid retriggering pipelines or workflows while the backlog clears, as this may create duplicates. We will provide another update by 00:00 UTC.",
+        "created_at": "2026-10-09T23:38:12.044Z"
+      },
+      {
+        "native_id": "njsd66nx1hyw",
+        "status": "identified",
+        "body": "Since our last update, the backlog of queued workflows and jobs has cleared, as of about 23:47 UTC. Workflows and jobs are now starting within seconds, and the CircleCI UI and API are up to date. We are monitoring our systems closely to make sure they remain stable. We will provide another update by 00:30 UTC.",
+        "created_at": "2026-10-09T23:59:55.337Z"
+      },
+      {
+        "native_id": "1x9pgyt80fkg",
+        "status": "identified",
+        "body": "Workflows and jobs have continued to start normally, within seconds, and the CircleCI UI and API remain up to date. Slack and email notifications delayed earlier in the incident are still being delivered. \n\nUsage charge data on the Project Usage page is stale. \n\nWe are continuing to monitor our systems closely and will provide another update by 01:15 UTC.",
+        "created_at": "2026-10-10T00:45:09.426Z"
+      },
+      {
+        "native_id": "kx623r35xmcs",
+        "status": "monitoring",
+        "body": "Workflows and jobs are starting and running normally, and the CircleCI UI and API are up to date. We are continuing to monitor our systems closely to make sure they remain stable. \n\nWe will provide another update by 02:00 UTC.",
+        "created_at": "2026-10-10T01:23:13.373Z"
+      },
+      {
+        "native_id": "tc0kt3x23wgk",
+        "status": "resolved",
+        "body": "Between 11:15 UTC and 23:47 UTC on October 9, customers experienced delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\nFrom 11:15 to about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent. From about 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nFrom about 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n\nFrom 20:48 to about 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time. From about 22:10 to 23:47 UTC, queued workflows and jobs resumed and were processed. Some of them had waited up to about 2 hours.\n\nThe issue has been resolved and all affected functionality has returned to normal. Usage charge data on the Project Usage page is not yet up to date and will be updated once our data backfills complete. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our engineers worked on implementing a fix.",
+        "created_at": "2026-10-10T02:08:45.055Z"
       }
     ],
     "first_seen_at": "2026-10-09T12:10:41.663366425Z",
@@ -1279,8 +1431,8 @@
           "position": 6,
           "showcase": true,
           "start_date": "2025-05-02",
-          "status": "partial_outage",
-          "updated_at": "2026-10-09T11:33:00.328Z"
+          "status": "operational",
+          "updated_at": "2026-10-10T02:08:44.983Z"
         },
         {
           "created_at": "2017-08-11T03:29:32.538Z",
@@ -1294,14 +1446,664 @@
           "position": 7,
           "showcase": true,
           "start_date": null,
-          "status": "partial_outage",
-          "updated_at": "2026-10-09T11:33:00.495Z"
+          "status": "operational",
+          "updated_at": "2026-10-10T02:08:45.012Z"
         }
       ],
       "created_at": "2026-10-09T11:33:00.290Z",
       "id": "6cfhhlr4rmm0",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 11:15 UTC and 23:47 UTC on October 9, customers experienced delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\nFrom 11:15 to about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent. From about 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nFrom about 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n\nFrom 20:48 to about 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time. From about 22:10 to 23:47 UTC, queued workflows and jobs resumed and were processed. Some of them had waited up to about 2 hours.\n\nThe issue has been resolved and all affected functionality has returned to normal. Usage charge data on the Project Usage page is not yet up to date and will be updated once our data backfills complete. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our engineers worked on implementing a fix.",
+          "created_at": "2026-10-10T02:08:45.055Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T02:08:45.055Z",
+          "id": "tc0kt3x23wgk",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T02:08:45.055Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Workflows and jobs are starting and running normally, and the CircleCI UI and API are up to date. We are continuing to monitor our systems closely to make sure they remain stable. \n\nWe will provide another update by 02:00 UTC.",
+          "created_at": "2026-10-10T01:23:13.373Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T01:23:13.373Z",
+          "id": "kx623r35xmcs",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T01:23:13.373Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Workflows and jobs have continued to start normally, within seconds, and the CircleCI UI and API remain up to date. Slack and email notifications delayed earlier in the incident are still being delivered. \n\nUsage charge data on the Project Usage page is stale. \n\nWe are continuing to monitor our systems closely and will provide another update by 01:15 UTC.",
+          "created_at": "2026-10-10T00:45:09.426Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T00:45:09.426Z",
+          "id": "1x9pgyt80fkg",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T00:45:09.426Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, the backlog of queued workflows and jobs has cleared, as of about 23:47 UTC. Workflows and jobs are now starting within seconds, and the CircleCI UI and API are up to date. We are monitoring our systems closely to make sure they remain stable. We will provide another update by 00:30 UTC.",
+          "created_at": "2026-10-09T23:59:55.337Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:59:55.337Z",
+          "id": "njsd66nx1hyw",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:59:55.337Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are still working through a significant backlog of queued workflows and jobs. Wait times are improving but they remain longer than normal and some jobs have waited over an hour. The CircleCI UI and API remain up to date. Please avoid retriggering pipelines or workflows while the backlog clears, as this may create duplicates. We will provide another update by 00:00 UTC.",
+          "created_at": "2026-10-09T23:38:12.044Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:38:12.044Z",
+          "id": "slddcgnpwq08",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:38:12.044Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A large number of queued workflows and jobs have started, and the CircleCI UI and API have caught up and are showing updates normally with few delays. We are continuing to work through the remaining queued work. Jobs from the queue may have waited about an hour or more to start, and some Linux jobs are waiting up to about 10 minutes for capacity.\n\nPlease continue to avoid retriggering while queued work continues to process. \n\nWe will provide another update by 23:30 UTC.",
+          "created_at": "2026-10-09T23:00:06.282Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:00:06.282Z",
+          "id": "kn8lpnsykn0b",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:00:06.282Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, we have begun gradually resuming work, and some queued workflows and jobs are starting again. Most queued work is still waiting, and jobs that do start may have waited over an hour. We are increasing the rate carefully to avoid overloading our systems. Delayed updates continue to appear in the CircleCI UI and API.\n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates as queued work resumes. \n\nWe will provide another update by 23:00 UTC.",
+          "created_at": "2026-10-09T22:28:06.582Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T22:28:06.582Z",
+          "id": "jjc9y44qb8jb",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T22:28:06.582Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, most of the pipelines that were delayed earlier in the incident have now been processed, and their workflows are queued to start. New workflows and jobs remain paused while we prepare to resume work safely. Delayed updates continue to appear in the CircleCI UI and API. \n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates once work resumes. \n\nWe will provide another update by 22:30 UTC.",
+          "created_at": "2026-10-09T22:09:04.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T22:09:04.560Z",
+          "id": "4t1ztc23mt5p",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T22:09:04.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since about 20:48 UTC, new workflows and jobs are not starting. We have temporarily paused starting new work so that our systems can catch up on work already in progress, including delayed updates to the CircleCI UI and API. Older updates are now appearing in the UI and API as this backlog clears. New pipelines are still being accepted and queued\n\nPlease avoid retriggering pipelines or workflows during this time, as this may create duplicates once work resumes.\n\nWe will provide another update by 22:00 UTC.",
+          "created_at": "2026-10-09T21:22:37.747Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T21:22:37.747Z",
+          "id": "7d56g12hwjlm",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T21:22:37.747Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Jobs are starting faster and fewer are failing: most jobs are now starting within about 4 minutes, down from about 6 minutes, and the longest waits have dropped from about 30 minutes to about 20 minutes. \n\nPipelines from earlier in the incident are now being worked through. \n\nThe CircleCI UI is still behind, and some older updates may take longer to appear. Jobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI.\n\nWe will provide another update by 20:30 UTC.",
+          "created_at": "2026-10-09T20:06:36.341Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T20:06:36.341Z",
+          "id": "vxwn1x5xj418",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T20:06:36.341Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, jobs are starting faster: most are now starting within about 6 minutes, down from about 8 minutes. The CircleCI UI is catching up but still about an hour behind. New pipelines are being processed as they arrive. \n\nJobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI. \n\nWe will provide another update by 20:00 UTC.",
+          "created_at": "2026-10-09T19:29:54.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T19:29:54.594Z",
+          "id": "zznj02llzfvt",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T19:29:54.594Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's changed since our last update\n\n* Jobs are starting faster. Most are now starting within about 8 minutes, down from about 15 minutes, and the longest waits have dropped from over an hour to about 45 minutes.\n* The CircleCI UI is beginning to catch up, but it is still behind. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Pipelines are being processed faster, but new pipelines are still delayed.\n\nStill ongoing\n* Some workflows and jobs are still failing.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n* Usage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:30 UTC.",
+          "created_at": "2026-10-09T18:57:01.746Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:57:01.746Z",
+          "id": "phlrcb2qhh92",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:57:01.746Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's changed since our last update\n\n* The CircleCI UI is about an hour behind, and up to about 90 minutes for some updates. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Jobs that are running are starting faster. Most are now starting within about 15 minutes, down from about 28 minutes, though some are still waiting over an hour.\n* New pipelines are increasingly delayed.\n* Some workflows are still failing. Workflows that could not be processed in time are being marked as failed.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n\nStill ongoing: \nUsage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:00 UTC.",
+          "created_at": "2026-10-09T18:32:52.602Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:32:52.602Z",
+          "id": "t14nr135wscg",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:32:52.602Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat to expect\n- Since about 17:00 UTC, we are seeing an increase in delays. Most jobs are now taking about 25 minutes to start, and some are waiting up to about an hour.\n- Since about 17:15 UTC, some in-progress workflows have failed and a small number of jobs are failing to start.\n- New pipelines are being queued and are taking longer to start.\n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nOur engineers continue to work to resolve the issue at hand. \n\nNext update\nWe will provide another update by 18:30 UTC.",
+          "created_at": "2026-10-09T18:08:03.166Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:08:03.166Z",
+          "id": "rr745bm3mdpr",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:08:03.166Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Since about 17:00 UTC, delays have increased significantly. Most jobs are now taking about 12 minutes to start, and some are waiting up to about 30 minutes.\n- Since about 17:15 UTC, some jobs are failing to start. \n- Pipelines are being processed more slowly, so some may take longer to start. \n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear. \n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 18:00 UTC.",
+          "created_at": "2026-10-09T17:34:01.223Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T17:34:01.223Z",
+          "id": "ywrkgdr5qxpv",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T17:34:01.223Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are holding steady. Most jobs are starting within about 4 minutes, and some are waiting up to about 8 minutes, down from about 25 minutes.\n- The CircleCI UI remains about 20 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:30 UTC.",
+          "created_at": "2026-10-09T17:06:30.170Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T17:06:30.170Z",
+          "id": "m77xw2dm51zs",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T17:06:30.170Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs have stopped increasing and are beginning to ease. Most jobs are starting within about 4 minutes, and some are waiting up to about 25 minutes.\n- The CircleCI UI is now about 20 minutes behind, down from about 30 minutes. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:00 UTC.",
+          "created_at": "2026-10-09T16:32:53.245Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T16:32:53.245Z",
+          "id": "zp01djn036zf",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T16:32:53.245Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Since about 15:15 UTC, workflows and jobs have been starting with increasing delays. Most jobs are currently starting within about 4 minutes, and some are waiting up to about 20 minutes.\n- The CircleCI UI remains about 30 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 16:30 UTC.",
+          "created_at": "2026-10-09T16:02:42.495Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T16:02:42.495Z",
+          "id": "ymxbztqs0prv",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T16:02:42.495Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Workflows and jobs are running on time.\n- The CircleCI UI is about 30 minutes behind. New workflows and status changes may take that long to appear.\n- Our engineers are actively working to speed up processing so the UI can catch up.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to reduce this delay.\n\nNext update\nWe will provide another update by 16:00 UTC.",
+          "created_at": "2026-10-09T15:32:03.279Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T15:32:03.279Z",
+          "id": "f9jb7ggjpsxy",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T15:32:03.279Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of pipelines and workflows from the incident has cleared.\n- Since about 14:45 UTC, most workflows and jobs are starting within about 15 seconds, and start times are continuing to return to normal.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers monitor the recovery.\n\nNext update\nWe will provide another update by 15:20 UTC.",
+          "created_at": "2026-10-09T14:54:02.940Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:54:02.940Z",
+          "id": "bctws6py234x",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:54:02.940Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of workflows from pipelines triggered during the incident cleared at about 14:40 UTC.\n- Most jobs are now starting within about 30 seconds, and some are waiting up to about 3 minutes.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers continue to work on the underlying issue.\n\nNext update\nWe will provide another update by 15:10 UTC.",
+          "created_at": "2026-10-09T14:43:52.603Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:43:52.603Z",
+          "id": "6l23l9vg00p7",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:43:52.603Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are improving. Most jobs are now starting within about 3 minutes, down from about 10 minutes at 13:50 UTC.\n- Some workflows from pipelines triggered during the incident are still waiting up to about 40 minutes to start.\n- Working through the backlog is taking slightly longer than expected. We now expect to clear it by about 14:45 UTC. \n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 15:00 UTC.",
+          "created_at": "2026-10-09T14:29:58.944Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:29:58.944Z",
+          "id": "76l1sfjdf53g",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:29:58.944Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Pipelines are being processed again, including those triggered during the incident.\n- Since about 13:25 UTC, workflows and jobs have been starting with increasing delays as we work through the backlog. Most jobs are currently starting within about 10 minutes, and some are waiting up to about 25 minutes.\n- We expect to work through this backlog by about 14:35 UTC.\n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows. \n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 14:30 UTC.",
+          "created_at": "2026-10-09T14:00:23.628Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:00:23.628Z",
+          "id": "nd0zqb74k0hw",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:00:23.628Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted:\nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect:\n- Since about 13:00 UTC, pipelines are being processed again and jobs are starting.\n- Most jobs are currently starting within about 4 minutes, and some are waiting up to about 10 minutes. Pipelines triggered during the incident are still being processed and may take longer to start.\n- Outbound webhooks and notifications have resumed. \n- Pipelines are still being processed from the backlog, so retriggering may result in duplicate pipelines.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update:\nWe will provide another update by 14:00 UTC.",
+          "created_at": "2026-10-09T13:30:31.975Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T13:30:31.975Z",
+          "id": "88ds0hhr371x",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T13:30:31.975Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's impacted: \nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect\nSince 11:15 UTC:\n - Pipelines are still being created while this is ongoing but not yet processed, so retriggering may result in duplicate pipelines.\n - Outbound webhooks and transactional notifications (Slack and email) are not being sent.\n - Pipeline statuses may not be visible. \n - Usage charge data on the Project Usage page will be stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update: \nWe will provide another update by 13:30 UTC.",
+          "created_at": "2026-10-09T13:00:40.161Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T13:00:40.161Z",
+          "id": "yjnhth0t8yh8",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T13:00:40.161Z"
+        },
         {
           "affected_components": [
             {
@@ -1329,15 +2131,15 @@
           "updated_at": "2026-10-09T11:33:00.542Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-10-09T14:54:02.940Z",
       "name": "Delay in data appearing in UI and API",
       "page_id": "6w4r0ttlx5ft",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-10T02:08:45.055Z",
       "shortlink": "https://stspg.io/hkfkwz292bz8",
       "started_at": "2026-10-09T11:33:00.284Z",
-      "status": "identified",
-      "updated_at": "2026-10-09T11:33:00.544Z"
+      "status": "resolved",
+      "updated_at": "2026-10-10T02:08:45.079Z"
     }
   }
 ]

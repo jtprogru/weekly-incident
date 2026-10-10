@@ -341,7 +341,7 @@
       {
         "native_id": "x5hd07s6r4mh",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 1, 2026, GitHub Actions experienced two periods of delayed and failed job starts on GitHub-hosted runners, beginning at approximately 14:15 UTC. Across the 14:15–17:56 UTC incident-response window, approximately 0.68% of workflow runs experienced start delays, and 0.196% of jobs failed to start. \u003cbr /\u003e\u003cbr /\u003eA routing change at our cloud provider concentrated API traffic on a single backend, causing an increase in rate-limit errors. Incorrect retry behavior in the provider’s inventory service added load to the affected APIs, compounding the rate limiting. This disrupted runner provisioning and reduced available capacity in affected regions. The resulting increase in demand in unaffected regions exposed a concurrency limit in our job-assignment system, delaying jobs even where runners were available. \u003cbr /\u003e\u003cbr /\u003eDuring the response, we increased job-assignment concurrency, scaled runner capacity, and worked with our cloud provider to reduce API load by excluding our runner subscriptions from its inventory service. By approximately 16:15 UTC, jobs were starting and executing as expected. We continued mitigation and monitoring until the incident was resolved at 17:56 UTC. \u003cbr /\u003e\u003cbr /\u003eOur cloud provider has since increased resource-management API rate limits for our workloads. To reduce the likelihood and impact of similar incidents, we are also adding more granular rate-limiting alerts and updating our job-assignment system to handle increased demand across fewer available regions.",
         "created_at": "2026-10-01T17:56:54.26Z"
       }
     ],
@@ -377,7 +377,7 @@
               "old_status": "degraded_performance"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 1, 2026, GitHub Actions experienced two periods of delayed and failed job starts on GitHub-hosted runners, beginning at approximately 14:15 UTC. Across the 14:15–17:56 UTC incident-response window, approximately 0.68% of workflow runs experienced start delays, and 0.196% of jobs failed to start. \u003cbr /\u003e\u003cbr /\u003eA routing change at our cloud provider concentrated API traffic on a single backend, causing an increase in rate-limit errors. Incorrect retry behavior in the provider’s inventory service added load to the affected APIs, compounding the rate limiting. This disrupted runner provisioning and reduced available capacity in affected regions. The resulting increase in demand in unaffected regions exposed a concurrency limit in our job-assignment system, delaying jobs even where runners were available. \u003cbr /\u003e\u003cbr /\u003eDuring the response, we increased job-assignment concurrency, scaled runner capacity, and worked with our cloud provider to reduce API load by excluding our runner subscriptions from its inventory service. By approximately 16:15 UTC, jobs were starting and executing as expected. We continued mitigation and monitoring until the incident was resolved at 17:56 UTC. \u003cbr /\u003e\u003cbr /\u003eOur cloud provider has since increased resource-management API rate limits for our workloads. To reduce the likelihood and impact of similar incidents, we are also adding more granular rate-limiting alerts and updating our job-assignment system to handle increased demand across fewer available regions.",
           "created_at": "2026-10-01T17:56:54.260Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -386,7 +386,7 @@
           "incident_id": "2dpbcq5j165n",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-01T17:56:54.260Z"
+          "updated_at": "2026-10-09T21:52:10.197Z"
         },
         {
           "affected_components": [
@@ -577,7 +577,7 @@
       "shortlink": "https://stspg.io/kdqxfjn5qg6q",
       "started_at": "2026-10-01T14:47:48.132Z",
       "status": "resolved",
-      "updated_at": "2026-10-01T17:56:54.289Z"
+      "updated_at": "2026-10-09T21:52:10.203Z"
     }
   }
 ]
