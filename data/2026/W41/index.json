@@ -2,121 +2,101 @@
   "week": "2026-W41",
   "from": "2026-10-05T00:00:00Z",
   "to": "2026-10-12T00:00:00Z",
-  "generated_at": "2026-10-10T11:28:07.824738728Z",
+  "generated_at": "2026-10-11T11:41:37.147602521Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-10T11:28:07.824738728Z",
+      "fetched_at": "2026-10-11T11:41:37.147602521Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
-    {
-      "key": "grafana/6x77ccl9shpy",
-      "vendor": "grafana",
-      "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
-      "url": "https://stspg.io/9l8htmqt82s2",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-05T16:17:43.408Z",
-      "ongoing": true,
-      "components": [
-        "Incident Management and Response (IRM)"
-      ],
-      "score": {
-        "value": 6910,
-        "duration_minutes": 6910,
-        "components": 1,
-        "vendor_weight": 1
-      },
-      "above_threshold": true
-    },
     {
       "key": "anthropic/978mjkgw6mh7",
       "vendor": "anthropic",
@@ -130,8 +110,46 @@
         "Claude Console (platform.claude.com)"
       ],
       "score": {
-        "value": 6304.5,
-        "duration_minutes": 4203,
+        "value": 8484,
+        "duration_minutes": 5656,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/6x77ccl9shpy",
+      "vendor": "grafana",
+      "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
+      "url": "https://stspg.io/9l8htmqt82s2",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-05T16:17:43.408Z",
+      "ongoing": true,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 8363,
+        "duration_minutes": 8363,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M4GV1M2A3K38T73JCVCD9G0R",
+      "vendor": "openai",
+      "title": "Delayed Costs data in the Compliance API",
+      "url": "https://status.openai.com/incidents/01M4GV1M2A3K38T73JCVCD9G0R",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-09T17:23:18Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 3807,
+        "duration_minutes": 2538,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -160,6 +178,46 @@
         "duration_minutes": 693,
         "components": 5,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/cyxclg7nnhjy",
+      "vendor": "cloudflare",
+      "title": "Elevated Errors in China Network Colos",
+      "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-10T04:13:17Z",
+      "ongoing": true,
+      "components": [
+        "China Network"
+      ],
+      "score": {
+        "value": 3398.4,
+        "duration_minutes": 1888,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "slack/1580",
+      "vendor": "slack",
+      "title": "Slack for iOS closing unexpectedly when opening channels",
+      "url": "https://slack-status.com/2026-10/a0cfb0208a1d2032",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-10-09T15:35:31Z",
+      "ongoing": true,
+      "components": [
+        "Connectivity"
+      ],
+      "score": {
+        "value": 3175.2,
+        "duration_minutes": 2646,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -256,24 +314,6 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4GV1M2A3K38T73JCVCD9G0R",
-      "vendor": "openai",
-      "title": "Delayed Costs data in the Compliance API",
-      "url": "https://status.openai.com/incidents/01M4GV1M2A3K38T73JCVCD9G0R",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-10-09T17:23:18Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 1626,
-        "duration_minutes": 1084,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
       "key": "cloudflare/4knp3pzs3qvx",
       "vendor": "cloudflare",
       "title": "Cloudflare DNS Resolver 1.1.1.1 and Gateway DNS are having issues in SIN",
@@ -294,26 +334,6 @@
         "duration_minutes": 289,
         "components": 3,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "slack/1580",
-      "vendor": "slack",
-      "title": "Slack for iOS closing unexpectedly when opening channels",
-      "url": "https://slack-status.com/2026-10/a0cfb0208a1d2032",
-      "impact": "unknown",
-      "status": "investigating",
-      "started_at": "2026-10-09T15:35:31Z",
-      "ongoing": true,
-      "components": [
-        "Connectivity"
-      ],
-      "score": {
-        "value": 1430.3999999999999,
-        "duration_minutes": 1192,
-        "components": 1,
-        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -378,26 +398,6 @@
       "score": {
         "value": 790.2,
         "duration_minutes": 439,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/cyxclg7nnhjy",
-      "vendor": "cloudflare",
-      "title": "Elevated Errors in China Network Colos",
-      "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-10T04:13:17Z",
-      "ongoing": true,
-      "components": [
-        "China Network"
-      ],
-      "score": {
-        "value": 781.2,
-        "duration_minutes": 434,
         "components": 1,
         "vendor_weight": 1.8
       },
