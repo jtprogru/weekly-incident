@@ -49,6 +49,8 @@ func New(s config.Source) (Source, error) {
 		return &gcp{base: b}, nil
 	case config.KindAWSRSS:
 		return &awsRSS{base: b}, nil
+	case config.KindYandexCloud:
+		return &yandexCloud{base: b}, nil
 	default:
 		return nil, fmt.Errorf("unknown source kind %q", s.Kind)
 	}

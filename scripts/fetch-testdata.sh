@@ -5,9 +5,9 @@
 # the point of the goldens is that the tests describe the feeds as they really
 # are, so they have to be refreshed from the real endpoints, not hand-edited.
 #
-# The captures are trimmed to keep the repository small. Statuspage, Slack and
-# GCP are cut to a handful of incidents; the AWS feed is kept whole because its
-# grouping logic needs several chains to exercise.
+# The captures are trimmed to keep the repository small. Statuspage, Slack, GCP
+# and Yandex Cloud are cut to a handful of incidents; the AWS feed is kept whole
+# because its grouping logic needs several chains to exercise.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -39,6 +39,18 @@ dump('testdata/slack_history.json',
 # Two GCP incidents is enough: one of them carries a full postmortem.
 dump('testdata/gcp_incidents.json',
      json.loads(get('https://status.cloud.google.com/incidents.json'))[:2])
+
+# Yandex Cloud: the newest five, plus the newest incident with a published
+# report, because reports land weeks late and the recent window rarely holds
+# one. `page` is cumulative, so one deep page is the whole history. A zone-wide
+# outage names eighty-odd services and each drags an inline SVG icon along, so
+# every service list is cut to three. The old host is deliberate: see the note
+# on this source in config.yaml.
+yc = json.loads(get('https://status.cloud.yandex.ru/api/incidents?lang=en&page=99'))
+yc['items'] = yc['items'][:5] + [i for i in yc['items'][5:] if i['isReportPublished']][:1]
+for item in yc['items']:
+    item['services'] = item['services'][:3]
+dump('testdata/yandexcloud_incidents.json', yc)
 
 # AWS is kept in full: the grouping needs several service chains, one closed by
 # a [RESOLVED] headline and the others only by the gap rule.

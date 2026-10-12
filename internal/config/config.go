@@ -19,10 +19,11 @@ import (
 type Kind string
 
 const (
-	KindStatuspage Kind = "statuspage"
-	KindSlack      Kind = "slack"
-	KindGCP        Kind = "gcp"
-	KindAWSRSS     Kind = "aws-rss"
+	KindStatuspage  Kind = "statuspage"
+	KindSlack       Kind = "slack"
+	KindGCP         Kind = "gcp"
+	KindAWSRSS      Kind = "aws-rss"
+	KindYandexCloud Kind = "yandex-cloud"
 )
 
 // Duration wraps time.Duration so durations can be written as "30s" in YAML,
@@ -161,7 +162,7 @@ func (c *Config) Validate() error {
 			return fmt.Errorf("source %q: empty url", s.Vendor)
 		}
 		switch s.Kind {
-		case KindStatuspage, KindSlack, KindGCP, KindAWSRSS:
+		case KindStatuspage, KindSlack, KindGCP, KindAWSRSS, KindYandexCloud:
 		default:
 			return fmt.Errorf("source %q: unknown kind %q", s.Vendor, s.Kind)
 		}
