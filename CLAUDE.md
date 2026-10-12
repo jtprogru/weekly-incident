@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A Go pipeline that collects incidents from thirteen vendor status pages into a git-versioned JSON archive (`data/`) and renders one Markdown fact sheet per ISO week (`weeks/`). No LLM, no database, no API keys. `README.md` describes the product; `PLAN.md` (Russian) holds the design and the reasoning behind every decision, including section 16 on what changed once the code met the live feeds.
+A Go pipeline that collects incidents from fourteen vendor status pages into a git-versioned JSON archive (`data/`) and renders one Markdown fact sheet per ISO week (`weeks/`). No LLM, no database, no API keys. `README.md` describes the product; `PLAN.md` (Russian) holds the design and the reasoning behind every decision, including section 16 on what changed once the code met the live feeds.
 
 ## Commands
 
@@ -64,3 +64,7 @@ Parser tests run offline against captured feed responses in `testdata/`, one per
 `status.stripe.com` 404s; the live host is `www.stripestatus.com`. `status.anthropic.com` redirects to `status.claude.com`, which is configured directly. AWS still serves the undocumented `rss/all.rss`; the documented replacement is a current-state snapshot with no history.
 
 The AWS feed emits *updates*, not incidents. The epoch in its `guid` is the item's own `pubDate`, not the event start, so chains are grouped by service key and cut at a `[RESOLVED]` headline or a gap wider than 24h. Its key is derived from the first visible update, which means a chain straddling the 50-item boundary can be re-keyed and duplicated — accepted knowingly.
+
+Yandex Cloud's `/api/incidents` is undocumented and was read out of the status board's frontend bundle. Three things in its URL are deliberate, so do not "clean it up". The host is the board's former address, `status.cloud.yandex.ru`: a cold request to `status.yandex.cloud` gets a 403 from Yandex's antirobot, and the old host redirects there and passes. `page` is cumulative — `page=N` returns the newest 10×(N+1) incidents — so depth is that number, not a loop. `installation=ru` must stay out: it silently drops incidents filed without an installation, the zone-wide outages among them.
+
+The Yandex Cloud parser drops `services[].icon` from `Raw` on purpose (inline SVG, three quarters of the response), takes impact from `maxLevelId` rather than `levelId`, and falls back to the last comment when a resolved incident has no `endDate`. PLAN.md section 18 has the measurements.

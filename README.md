@@ -6,7 +6,7 @@
 [![Go](https://img.shields.io/badge/go-1.26-00ADD8?logo=go&logoColor=white)](go.mod)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-Collects incidents from thirteen vendor status pages into a versioned JSON archive, and renders one Markdown fact sheet per ISO week.
+Collects incidents from fourteen vendor status pages into a versioned JSON archive, and renders one Markdown fact sheet per ISO week.
 
 It exists to feed a weekly write-up. The code gathers and ranks; a human decides what the story of the week is and writes it. There is no LLM anywhere in the pipeline, no network access in the render step, and no API key needed to run any of it.
 
@@ -29,11 +29,11 @@ The first run backfilled everything the feeds still held: 511 incidents across 7
 
 ## Sources
 
-Ten vendors serve the Atlassian Statuspage v2 schema and share one parser: GitHub, Cloudflare, Datadog, Atlassian, Stripe, OpenAI, Anthropic, Grafana, CircleCI, DigitalOcean. Three need their own: Slack, GCP, AWS.
+Ten vendors serve the Atlassian Statuspage v2 schema and share one parser: GitHub, Cloudflare, Datadog, Atlassian, Stripe, OpenAI, Anthropic, Grafana, CircleCI, DigitalOcean. Four need their own: Slack, GCP, AWS, Yandex Cloud.
 
 Adding a vendor on the Statuspage schema is one entry in `config.yaml`. Adding one on a new schema is a file in `internal/source` and a case in the dispatcher.
 
-A few endpoints are not where you would guess. `status.stripe.com` answers 404; the live host is `www.stripestatus.com`. `status.anthropic.com` redirects to `status.claude.com`. AWS still serves `status.aws.amazon.com/rss/all.rss` despite the documentation pointing at a replacement that only reports current state.
+A few endpoints are not where you would guess. `status.stripe.com` answers 404; the live host is `www.stripestatus.com`. `status.anthropic.com` redirects to `status.claude.com`. AWS still serves `status.aws.amazon.com/rss/all.rss` despite the documentation pointing at a replacement that only reports current state. Yandex Cloud is fetched through its former address, `status.cloud.yandex.ru`: a cold request to `status.yandex.cloud` itself is answered 403 by Yandex's antirobot, while the old host redirects to the same endpoint and gets through.
 
 ## Running it
 
@@ -83,7 +83,13 @@ An incident earns a full entry in the digest if it ran at least `min_duration_mi
 
 **History before the first run is unrecoverable.** The backfill got whatever the feeds happened to hold that day, which is deep for GitHub and shallow for Cloudflare. Feed depth is finite and unpaginated, so a long gap between runs leaves a permanent hole; that is why `collect` warns when the archive goes stale.
 
-**AWS and Slack use undocumented endpoints.** They can change shape or disappear without notice.
+**AWS, Slack and Yandex Cloud use undocumented endpoints.** They can change shape or disappear without notice.
+
+**Yandex Cloud is reached through a redirect that is observed, not understood.** The 403 on a direct request and the pass through the old host were measured from one European address on 2026-10-12. Nothing explains the difference, so this is the source most likely to go dark, and the first thing to re-check when it does.
+
+**Yandex Cloud has two severity levels in practice.** `Minor` and `Unavailable`. The second covers anything from one service to a whole availability zone and is recorded as `major`.
+
+**Yandex Cloud names every affected service.** A zone-wide outage lists eighty-odd components and the score multiplies by that count, so such an incident outscores the rest of its week dozens of times over. The ordering is right; the margin says nothing.
 
 **AWS incidents have no stable identifier.** The key is derived from the first update visible in the feed, so a chain sitting on the boundary of the 50-item window can be re-keyed and land in the archive twice. Accepted knowingly: a duplicate is cheaper than complicating the merge for a feed that may vanish anyway.
 
@@ -97,7 +103,7 @@ An incident earns a full entry in the digest if it ran at least `min_duration_mi
 
 The code is MIT licensed. The incident data is collected from public vendor status pages; the wording of those updates belongs to the vendors who wrote it. What gets published elsewhere are the facts — who, what, when, how long, which components — with a link to the source. Direct quotes stay short and in quotation marks.
 
-The crawler sends a `User-Agent` naming this repository, and makes thirteen requests a day.
+The crawler sends a `User-Agent` naming this repository, and makes fourteen requests a day.
 
 `data/` and `weeks/` are written by the scheduled workflows and committed by them. Do not hand-edit either: change the code or `config.yaml` and re-render.
 
@@ -108,7 +114,7 @@ cmd/collect      fetch and merge
 cmd/digest       render a week from the archive
 internal/model   canonical Incident, Update, Score, WeekIndex
 internal/config  config.yaml
-internal/source  statuspage.go, slack.go, gcp.go, awsrss.go
+internal/source  statuspage.go, slack.go, gcp.go, awsrss.go, yandexcloud.go
 internal/archive ISO weeks, upsert, state
 internal/clock   -now, so a run can be pinned to a moment
 internal/score   ranking and the week index
