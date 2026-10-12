@@ -14,8 +14,8 @@ import (
 	"github.com/jtprogru/weekly-incident/internal/model"
 )
 
-// Kind identifies which parser handles a source. Ten of the thirteen vendors
-// are KindStatuspage; the other three each need their own.
+// Kind identifies which parser handles a source. Ten of the fourteen vendors
+// are KindStatuspage; the other four each need their own.
 type Kind string
 
 const (

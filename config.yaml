@@ -1,6 +1,7 @@
 ---
 # Source list and policy for the collector and the weekly digest.
-# Endpoints verified 2026-08-18; see PLAN.md section 3 for measured feed depth.
+# Endpoints verified 2026-08-18, Yandex Cloud on 2026-10-12; see PLAN.md
+# section 3 for measured feed depth.
 
 user_agent: "weekly-incident/0.1 (+https://github.com/jtprogru/weekly-incident)"
 
@@ -107,3 +108,18 @@ sources:
     kind: aws-rss
     url: https://status.aws.amazon.com/rss/all.rss
     weight: 2.0
+
+  # Undocumented endpoint behind the board's own frontend. Three things in this
+  # URL are deliberate.
+  # The host: a cold request to status.yandex.cloud is answered 403 by Yandex's
+  # antirobot, while the board's former address redirects there and gets
+  # through. Measured from one European address on 2026-10-12; if this source
+  # starts failing, that is the first thing to re-check.
+  # No installation=ru: that filter hides incidents filed without an
+  # installation, zone-wide outages among them.
+  # page=4: page is cumulative, so this is the newest 50 incidents in one
+  # response, about six months. A larger number reaches back to 2020.
+  - vendor: yandexcloud
+    kind: yandex-cloud
+    url: https://status.cloud.yandex.ru/api/incidents?lang=en&page=4
+    weight: 1.5

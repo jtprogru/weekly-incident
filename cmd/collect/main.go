@@ -103,7 +103,7 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 			incidents = append(incidents, res.Incidents...)
 			seen += len(res.Incidents)
 			state.Sources[sc.Vendor] = now
-			// A healthy source says nothing. Thirteen "0 parse errors" lines
+			// A healthy source says nothing. Fourteen "0 parse errors" lines
 			// every day are noise that trains you to skip the log, and the
 			// per-source counts are kept in index.json anyway. Only the
 			// notable cases speak up.

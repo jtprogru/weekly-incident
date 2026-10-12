@@ -1,10 +1,11 @@
 // Package source turns vendor status feeds into canonical incidents.
 //
-// Ten of the thirteen configured vendors share the Statuspage schema and go
-// through one parser. Slack, GCP and AWS each need their own. A parser never
-// aborts a whole feed over one malformed record: it skips the record, counts it
-// in Result.ParseErrors and carries on, because the two undocumented feeds
-// (AWS RSS, Slack history) can change shape without warning.
+// Ten of the fourteen configured vendors share the Statuspage schema and go
+// through one parser. Slack, GCP, AWS and Yandex Cloud each need their own. A
+// parser never aborts a whole feed over one malformed record: it skips the
+// record, counts it in Result.ParseErrors and carries on, because the three
+// undocumented feeds (AWS RSS, Slack history, Yandex Cloud) can change shape
+// without warning.
 package source
 
 import (
@@ -57,7 +58,7 @@ func New(s config.Source) (Source, error) {
 }
 
 // Fetcher performs HTTP GETs with the project's User-Agent and retry policy.
-// Thirteen requests a day need no concurrency and no aggression.
+// Fourteen requests a day need no concurrency and no aggression.
 type Fetcher struct {
 	Client    *http.Client
 	UserAgent string

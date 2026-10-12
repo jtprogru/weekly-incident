@@ -12,7 +12,7 @@ import (
 )
 
 // statuspage parses the Atlassian Statuspage v2 schema, which ten of the
-// thirteen configured vendors serve verbatim.
+// fourteen configured vendors serve verbatim.
 //
 // The feed has no pagination: ?page=N returns the same bytes, and history.json
 // does not exist. Depth is whatever fits in the vendor's incident window, which

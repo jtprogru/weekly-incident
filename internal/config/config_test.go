@@ -15,8 +15,8 @@ func TestLoadShippedConfig(t *testing.T) {
 	if err != nil {
 		t.Fatalf("load config.yaml: %v", err)
 	}
-	if len(c.Sources) != 13 {
-		t.Errorf("got %d sources, want 13", len(c.Sources))
+	if len(c.Sources) != 14 {
+		t.Errorf("got %d sources, want 14", len(c.Sources))
 	}
 
 	byKind := map[Kind]int{}
@@ -26,12 +26,12 @@ func TestLoadShippedConfig(t *testing.T) {
 			t.Errorf("source %q has weight %v", s.Vendor, s.Weight)
 		}
 	}
-	// Ten of the thirteen vendors share the Statuspage schema; the other three
+	// Ten of the fourteen vendors share the Statuspage schema; the other four
 	// each need their own parser.
 	if byKind[KindStatuspage] != 10 {
 		t.Errorf("got %d statuspage sources, want 10", byKind[KindStatuspage])
 	}
-	for _, k := range []Kind{KindSlack, KindGCP, KindAWSRSS} {
+	for _, k := range []Kind{KindSlack, KindGCP, KindAWSRSS, KindYandexCloud} {
 		if byKind[k] != 1 {
 			t.Errorf("got %d %q sources, want 1", byKind[k], k)
 		}
