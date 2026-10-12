@@ -127,5 +127,134 @@
       "status": "resolved",
       "updated_at": "2026-10-05T12:13:16.787Z"
     }
+  },
+  {
+    "key": "digitalocean/qfg5hmfhxw5d",
+    "vendor": "digitalocean",
+    "native_id": "qfg5hmfhxw5d",
+    "title": "DNS Resolution for Managed Kubernetes",
+    "url": "https://stspg.io/61n77v08qp0j",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-11T22:01:39.852Z",
+    "resolved_at": "2026-10-11T23:29:01.69Z",
+    "duration_minutes": 87,
+    "components": [
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "xfcp2jsndqvd",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue causing intermittent external DNS lookup failures for Managed Kubernetes clusters in multiple regions. Applications running on affected clusters may intermittently fail to resolve external domain names.\n\nWe apologize for the inconvenience and will provide further updates as more information becomes available.",
+        "created_at": "2026-10-11T22:01:39.992Z"
+      },
+      {
+        "native_id": "pckkchwq8rsw",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix to address the intermittent external DNS lookup failures affecting Managed Kubernetes clusters in multiple regions. We are currently monitoring the results to ensure the issue is fully resolved.\n\nWe will provide another update as soon as the issue is confirmed to be resolved.",
+        "created_at": "2026-10-11T22:54:23.884Z"
+      },
+      {
+        "native_id": "bbgqc4nkwwg9",
+        "status": "resolved",
+        "body": "Our Engineering team has resolved the external DNS resolution failures affecting Managed Kubernetes across multiple regions. Applications running on Managed Kubernetes can now resolve external domain names.\n\nWe sincerely apologize for any inconvenience this disruption may have caused to your operations. If you continue to experience problems, please open a ticket with our Support team: https://cloudsupport.digitalocean.com/s/",
+        "created_at": "2026-10-11T23:29:01.69Z"
+      }
+    ],
+    "first_seen_at": "2026-10-12T13:40:42.011289027Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-08-16T11:33:35.622Z",
+          "description": null,
+          "group": false,
+          "group_id": "gb3gs5vj7js2",
+          "id": "ljktrzzffk6j",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-10-11T23:29:01.644Z"
+        }
+      ],
+      "created_at": "2026-10-11T22:01:39.863Z",
+      "id": "qfg5hmfhxw5d",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has resolved the external DNS resolution failures affecting Managed Kubernetes across multiple regions. Applications running on Managed Kubernetes can now resolve external domain names.\n\nWe sincerely apologize for any inconvenience this disruption may have caused to your operations. If you continue to experience problems, please open a ticket with our Support team: https://cloudsupport.digitalocean.com/s/",
+          "created_at": "2026-10-11T23:29:01.690Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-11T23:29:01.690Z",
+          "id": "bbgqc4nkwwg9",
+          "incident_id": "qfg5hmfhxw5d",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-11T23:29:01.690Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix to address the intermittent external DNS lookup failures affecting Managed Kubernetes clusters in multiple regions. We are currently monitoring the results to ensure the issue is fully resolved.\n\nWe will provide another update as soon as the issue is confirmed to be resolved.",
+          "created_at": "2026-10-11T22:54:23.884Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-11T22:54:23.884Z",
+          "id": "pckkchwq8rsw",
+          "incident_id": "qfg5hmfhxw5d",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-11T22:54:23.884Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue causing intermittent external DNS lookup failures for Managed Kubernetes clusters in multiple regions. Applications running on affected clusters may intermittently fail to resolve external domain names.\n\nWe apologize for the inconvenience and will provide further updates as more information becomes available.",
+          "created_at": "2026-10-11T22:01:39.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-11T22:01:39.992Z",
+          "id": "xfcp2jsndqvd",
+          "incident_id": "qfg5hmfhxw5d",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-11T22:01:39.992Z"
+        }
+      ],
+      "monitoring_at": "2026-10-11T22:54:23.884Z",
+      "name": "DNS Resolution for Managed Kubernetes",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-11T23:29:01.690Z",
+      "shortlink": "https://stspg.io/61n77v08qp0j",
+      "started_at": "2026-10-11T22:01:39.852Z",
+      "status": "resolved",
+      "updated_at": "2026-10-11T23:29:01.711Z"
+    }
   }
 ]

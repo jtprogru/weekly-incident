@@ -1666,6 +1666,12 @@
         "status": "identified",
         "body": "The issue has been identified and a fix is being implemented.",
         "created_at": "2026-10-10T05:48:24.702Z"
+      },
+      {
+        "native_id": "p0k13x9wvtsg",
+        "status": "identified",
+        "body": "We are investigating reports of degraded performance for traffic traversing the public internet between certain cities and provinces in mainland China and origin servers located outside the region. The impact is being reported across multiple ISPs and manifests as slower speeds or intermittent timeouts. \n\nWhile this congestion occurs upstream of Cloudflare's network, our engineering team is actively working to mitigate the effects. Intermittent 524 timeout errors is expected to continue due to ongoing congestion. While there is no fixed timeline for full resolution, as there are dependencies outside our network, we are taking steps to reduce customer impact.",
+        "created_at": "2026-10-12T04:23:57.604Z"
       }
     ],
     "first_seen_at": "2026-10-10T11:28:07.824738728Z",
@@ -1691,6 +1697,26 @@
       "id": "cyxclg7nnhjy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for traffic traversing the public internet between certain cities and provinces in mainland China and origin servers located outside the region. The impact is being reported across multiple ISPs and manifests as slower speeds or intermittent timeouts. \n\nWhile this congestion occurs upstream of Cloudflare's network, our engineering team is actively working to mitigate the effects. Intermittent 524 timeout errors is expected to continue due to ongoing congestion. While there is no fixed timeline for full resolution, as there are dependencies outside our network, we are taking steps to reduce customer impact.",
+          "created_at": "2026-10-12T04:23:57.604Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T04:23:57.604Z",
+          "id": "p0k13x9wvtsg",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T04:23:57.604Z"
+        },
         {
           "affected_components": [
             {
@@ -1740,7 +1766,7 @@
       "shortlink": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
       "started_at": "2026-10-10T04:13:17.000Z",
       "status": "identified",
-      "updated_at": "2026-10-10T05:48:24.000Z"
+      "updated_at": "2026-10-12T04:23:57.000Z"
     }
   }
 ]
