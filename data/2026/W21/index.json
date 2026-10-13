@@ -2,101 +2,143 @@
   "week": "2026-W21",
   "from": "2026-05-18T00:00:00Z",
   "to": "2026-05-25T00:00:00Z",
-  "generated_at": "2026-10-06T12:18:23.576404692Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-06T12:18:23.576404692Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "yandexcloud/1772",
+      "vendor": "yandexcloud",
+      "title": "The problem is with Virtual Private Cloud services",
+      "url": "https://status.yandex.cloud/en/incidents/1772",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-22T09:21:43.935Z",
+      "resolved_at": "2026-05-22T14:26:00Z",
+      "duration_minutes": 304,
+      "ongoing": false,
+      "components": [
+        "Compute Cloud",
+        "Managed Service for Kubernetes®",
+        "Managed Service for PostgreSQL",
+        "Managed Service for ClickHouse®",
+        "Yandex StoreDoc",
+        "Managed Service for MySQL®",
+        "Managed Service for Valkey™",
+        "Managed Service for Apache Kafka®",
+        "Managed Service for GitLab",
+        "Managed Service for OpenSearch",
+        "Managed Service for Prometheus®",
+        "Managed Service for Apache Spark™",
+        "Managed Service for YTsaurus",
+        "Managed Service for Sharded PostgreSQL"
+      ],
+      "score": {
+        "value": 6384,
+        "duration_minutes": 304,
+        "components": 14,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
     {
       "key": "stripe/0plg9bpr660h",
       "vendor": "stripe",
@@ -120,6 +162,40 @@
       "above_threshold": true
     },
     {
+      "key": "yandexcloud/1763",
+      "vendor": "yandexcloud",
+      "title": "The problem of creating resources in ru-central1-A.",
+      "url": "https://status.yandex.cloud/en/incidents/1763",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-19T14:50:00Z",
+      "resolved_at": "2026-05-19T15:23:00Z",
+      "duration_minutes": 33,
+      "ongoing": false,
+      "components": [
+        "Compute Cloud",
+        "Managed Service for PostgreSQL",
+        "Managed Service for ClickHouse®",
+        "Yandex StoreDoc",
+        "Managed Service for MySQL®",
+        "Managed Service for Valkey™",
+        "Managed Service for Apache Kafka®",
+        "Managed Service for GitLab",
+        "Managed Service for OpenSearch",
+        "Managed Service for Prometheus®",
+        "Managed Service for Apache Spark™",
+        "Managed Service for YTsaurus",
+        "Managed Service for Sharded PostgreSQL"
+      ],
+      "score": {
+        "value": 643.5,
+        "duration_minutes": 33,
+        "components": 13,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "digitalocean/spgd2scvttth",
       "vendor": "digitalocean",
       "title": "Block Storage Volume Performance",
@@ -140,6 +216,28 @@
         "vendor_weight": 0.8
       },
       "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1775",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the services",
+      "url": "https://status.yandex.cloud/en/incidents/1775",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-23T18:10:00Z",
+      "resolved_at": "2026-05-23T19:48:00Z",
+      "duration_minutes": 98,
+      "ongoing": false,
+      "components": [
+        "Virtual Private Cloud"
+      ],
+      "score": {
+        "value": 147,
+        "duration_minutes": 98,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "slack/1555",
@@ -204,6 +302,50 @@
         "duration_minutes": 54,
         "components": 1,
         "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1770",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the Yandex Managed Service for Trino",
+      "url": "https://status.yandex.cloud/en/incidents/1770",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-21T08:34:06.076Z",
+      "resolved_at": "2026-05-21T09:02:00Z",
+      "duration_minutes": 27,
+      "ongoing": false,
+      "components": [
+        "Yandex Managed Service for Trino"
+      ],
+      "score": {
+        "value": 40.5,
+        "duration_minutes": 27,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1756",
+      "vendor": "yandexcloud",
+      "title": "The problem is with Compute Cloud services",
+      "url": "https://status.yandex.cloud/en/incidents/1756",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-05-18T13:54:55.199Z",
+      "resolved_at": "2026-05-18T14:16:00Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Compute Cloud"
+      ],
+      "score": {
+        "value": 31.5,
+        "duration_minutes": 21,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },

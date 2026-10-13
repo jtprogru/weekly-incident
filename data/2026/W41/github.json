@@ -103,8 +103,8 @@
           "position": 7,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-10-12T12:21:48.078Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T14:36:09.389Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -571,7 +571,7 @@
       {
         "native_id": "r2bbj6fszx3x",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 6, 2026, from 19:44 to 19:50 UTC, GitHub experienced a service outage with elevated error rates peaking at 1.30% of all requests, totaling approximately 1.16 million failed requests. This impacted 12 services across GitHub, including Pull Requests, Webhooks, Repos, OAuth, Git over SSH, Codespaces, and Gists. The incident was triggered by GitHub Enterprise Importer (GEI) making multiple, long duration queries which saturated a database connection pool. Recovery was seen at approximately 19:50 UTC once the migration's calls stopped; GEI migrations were reenabled at 23:32 UTC after a code fix was merged.\u003cbr /\u003e\u003cbr /\u003eWe have completed a detailed root-cause review and are implementing improved database-health safeguards. We will continue to review and add additional safeguards to prevent future recurrence.",
         "created_at": "2026-10-06T23:40:44.165Z"
       }
     ],
@@ -628,7 +628,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 6, 2026, from 19:44 to 19:50 UTC, GitHub experienced a service outage with elevated error rates peaking at 1.30% of all requests, totaling approximately 1.16 million failed requests. This impacted 12 services across GitHub, including Pull Requests, Webhooks, Repos, OAuth, Git over SSH, Codespaces, and Gists. The incident was triggered by GitHub Enterprise Importer (GEI) making multiple, long duration queries which saturated a database connection pool. Recovery was seen at approximately 19:50 UTC once the migration's calls stopped; GEI migrations were reenabled at 23:32 UTC after a code fix was merged.\u003cbr /\u003e\u003cbr /\u003eWe have completed a detailed root-cause review and are implementing improved database-health safeguards. We will continue to review and add additional safeguards to prevent future recurrence.",
           "created_at": "2026-10-06T23:40:44.165Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -637,7 +637,7 @@
           "incident_id": "cjwszcf57bff",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-06T23:40:44.165Z"
+          "updated_at": "2026-10-12T18:18:45.808Z"
         },
         {
           "affected_components": [
@@ -856,7 +856,7 @@
       "shortlink": "https://stspg.io/w3rcssslq22w",
       "started_at": "2026-10-06T19:57:35.439Z",
       "status": "resolved",
-      "updated_at": "2026-10-06T23:40:44.194Z"
+      "updated_at": "2026-10-12T18:18:45.812Z"
     }
   },
   {
@@ -867,9 +867,9 @@
     "url": "https://stspg.io/96smrcth8bpg",
     "impact": "critical",
     "status": "resolved",
-    "started_at": "2026-10-07T15:14:45.606Z",
-    "resolved_at": "2026-10-07T16:25:14.613Z",
-    "duration_minutes": 70,
+    "started_at": "2026-10-07T16:25:14Z",
+    "resolved_at": "2026-10-07T16:25:14Z",
+    "duration_minutes": 0,
     "components": [
       "Git Operations",
       "Webhooks",
@@ -995,7 +995,7 @@
       {
         "native_id": "74wb3jvprb5r",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 7, 2026, GitHub had two outages of write operations with the same cause, totaling about 19 minutes. The first ran from 15:06 to 15:16 UTC (about 10 minutes) and the second from 16:52 to 17:01 UTC (about 9 minutes). In both windows, actions that save or change data failed across Git operations, pull requests, issues, GitHub Actions, the API, webhooks, sign-in and authentication, GitHub Apps and OAuth, code scanning, Codespaces, and Copilot. Reading data was largely unaffected.\n\nIn the first outage, 5.6% of all web and API requests failed, peaking at 8.9%, and more than 12,000 organizations saw failed requests. Up to 26% of Git authentication requests failed, and 17% of Actions workflow runs failed with infrastructure errors. In the second outage, 6.2% of web and API requests failed, peaking at 9.3%, and more than 11,000 organizations were affected. Up to 25% of Git authentication requests failed, and 19% of Actions workflow runs failed. No databases experienced data loss, and operations retried after recovery succeeded.\n\nGitHub relies on an internal service that keeps track of which database servers should receive new and updated data. While replacing machines that run this service as part of regular maintenance, one of the new machines started with an outdated copy of its records, which still listed database servers we had already retired. When this node came online, it incorrectly modified routing configuration with the outdated records, routing write requests to non-existent database servers.\n\nEach outage ended when one of our established machines with correct configuration became the leader of the quorum and sent the correct configuration. After the first outage, we identified the new machine as the source and paused automated maintenance to stop it from being leader again. At 16:52 UTC, an automated maintenance task that did not honor the pause put it back in charge, and the outage happened again. We shut that machine down at 17:02 UTC and have since removed it, and the automation now honors the pause, which was a new regression due to an update of our puppet infrastructure.\n\nTo prevent recurrence, we are clearing retired database servers from the service's records before any new machine is added, and we are keeping new machines from being elected leader until their records have been checked. We are also changing our systems to reject configuration that point to servers that don't exist and to keep using the last known-good settings instead. Finally, we are giving responders a faster way to take a misbehaving machine out of service, and adding alerts so changes like this are spotted within seconds.\n\nWe will share a more detailed write-up of these incidents in our monthly availability report, along with the status of the repairs we are making to prevent issues like these in the future.",
         "created_at": "2026-10-07T16:25:14.613Z"
       }
     ],
@@ -1044,8 +1044,8 @@
           "position": 5,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-10-12T12:21:48.028Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T14:35:49.205Z"
         },
         {
           "created_at": "2020-09-02T15:39:06.329Z",
@@ -1074,8 +1074,8 @@
           "position": 7,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-10-12T12:21:48.078Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T14:36:09.389Z"
         }
       ],
       "created_at": "2026-10-07T15:14:45.614Z",
@@ -1115,16 +1115,16 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 7, 2026, GitHub had two outages of write operations with the same cause, totaling about 19 minutes. The first ran from 15:06 to 15:16 UTC (about 10 minutes) and the second from 16:52 to 17:01 UTC (about 9 minutes). In both windows, actions that save or change data failed across Git operations, pull requests, issues, GitHub Actions, the API, webhooks, sign-in and authentication, GitHub Apps and OAuth, code scanning, Codespaces, and Copilot. Reading data was largely unaffected.\n\nIn the first outage, 5.6% of all web and API requests failed, peaking at 8.9%, and more than 12,000 organizations saw failed requests. Up to 26% of Git authentication requests failed, and 17% of Actions workflow runs failed with infrastructure errors. In the second outage, 6.2% of web and API requests failed, peaking at 9.3%, and more than 11,000 organizations were affected. Up to 25% of Git authentication requests failed, and 19% of Actions workflow runs failed. No databases experienced data loss, and operations retried after recovery succeeded.\n\nGitHub relies on an internal service that keeps track of which database servers should receive new and updated data. While replacing machines that run this service as part of regular maintenance, one of the new machines started with an outdated copy of its records, which still listed database servers we had already retired. When this node came online, it incorrectly modified routing configuration with the outdated records, routing write requests to non-existent database servers.\n\nEach outage ended when one of our established machines with correct configuration became the leader of the quorum and sent the correct configuration. After the first outage, we identified the new machine as the source and paused automated maintenance to stop it from being leader again. At 16:52 UTC, an automated maintenance task that did not honor the pause put it back in charge, and the outage happened again. We shut that machine down at 17:02 UTC and have since removed it, and the automation now honors the pause, which was a new regression due to an update of our puppet infrastructure.\n\nTo prevent recurrence, we are clearing retired database servers from the service's records before any new machine is added, and we are keeping new machines from being elected leader until their records have been checked. We are also changing our systems to reject configuration that point to servers that don't exist and to keep using the last known-good settings instead. Finally, we are giving responders a faster way to take a misbehaving machine out of service, and adding alerts so changes like this are spotted within seconds.\n\nWe will share a more detailed write-up of these incidents in our monthly availability report, along with the status of the repairs we are making to prevent issues like these in the future.",
           "created_at": "2026-10-07T16:25:14.613Z",
           "custom_tweet": null,
           "deliver_notifications": true,
-          "display_at": "2026-10-07T16:25:14.613Z",
+          "display_at": "2026-10-07T16:25:14.000Z",
           "id": "74wb3jvprb5r",
           "incident_id": "djlmxz2zd0j7",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-07T16:25:14.613Z"
+          "updated_at": "2026-10-12T19:23:37.674Z"
         },
         {
           "affected_components": [
@@ -1949,11 +1949,11 @@
       "name": "Incident with Git Operations, Pull Requests and Actions",
       "page_id": "kctbh9vrtdwd",
       "reminder_intervals": null,
-      "resolved_at": "2026-10-07T16:25:14.613Z",
+      "resolved_at": "2026-10-07T16:25:14.000Z",
       "shortlink": "https://stspg.io/96smrcth8bpg",
-      "started_at": "2026-10-07T15:14:45.606Z",
+      "started_at": "2026-10-07T16:25:14.000Z",
       "status": "resolved",
-      "updated_at": "2026-10-07T16:25:14.647Z"
+      "updated_at": "2026-10-12T19:23:37.760Z"
     }
   },
   {
@@ -2001,7 +2001,7 @@
       {
         "native_id": "s6930z4l0q5y",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 7, 2026, from 16:52 to 17:01 UTC, GitHub experienced a recurrence of the write-operation outage from earlier that day. Both outages shared the same root cause. Please refer to the combined summary covering both incidents, their impact, and our prevention measures: https://www.githubstatus.com/incidents/djlmxz2zd0j7",
         "created_at": "2026-10-07T18:04:49.441Z"
       }
     ],
@@ -2035,8 +2035,8 @@
           "position": 5,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-10-12T12:21:48.028Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T14:35:49.205Z"
         },
         {
           "created_at": "2020-09-02T15:39:06.329Z",
@@ -2065,8 +2065,8 @@
           "position": 7,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-10-12T12:21:48.078Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T14:36:09.389Z"
         }
       ],
       "created_at": "2026-10-07T17:17:05.776Z",
@@ -2100,7 +2100,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 7, 2026, from 16:52 to 17:01 UTC, GitHub experienced a recurrence of the write-operation outage from earlier that day. Both outages shared the same root cause. Please refer to the combined summary covering both incidents, their impact, and our prevention measures: https://www.githubstatus.com/incidents/djlmxz2zd0j7",
           "created_at": "2026-10-07T18:04:49.441Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -2109,7 +2109,7 @@
           "incident_id": "qpfv5p86dmrl",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-07T18:04:49.441Z"
+          "updated_at": "2026-10-12T19:19:29.595Z"
         },
         {
           "affected_components": [
@@ -2272,7 +2272,7 @@
       "shortlink": "https://stspg.io/4p8x0jnnsx7m",
       "started_at": "2026-10-07T17:17:05.768Z",
       "status": "resolved",
-      "updated_at": "2026-10-07T18:04:49.479Z"
+      "updated_at": "2026-10-12T19:19:29.599Z"
     }
   }
 ]

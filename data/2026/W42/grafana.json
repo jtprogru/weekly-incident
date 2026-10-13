@@ -6,8 +6,10 @@
     "title": "Elevated Errors Ingesting Metrics in AWS US East (VA)",
     "url": "https://stspg.io/q5r4k8bnw6l6",
     "impact": "major",
-    "status": "identified",
+    "status": "resolved",
     "started_at": "2026-10-12T09:45:54.197Z",
+    "resolved_at": "2026-10-12T16:42:47.858Z",
+    "duration_minutes": 416,
     "components": [
       "AWS US East (VA) - prod-us-east-3"
     ],
@@ -41,6 +43,24 @@
         "status": "identified",
         "body": "We have identified the cause of an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA) - prod-us-east-3. Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. We are continuing to work on mitigations and are monitoring the impact to Grafana Cloud Metrics. Next update by 14:00 UTC.",
         "created_at": "2026-10-12T12:53:20.877Z"
+      },
+      {
+        "native_id": "vblkbsslpfd6",
+        "status": "identified",
+        "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+        "created_at": "2026-10-12T14:01:30.671Z"
+      },
+      {
+        "native_id": "cz5dq11qv4nf",
+        "status": "identified",
+        "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+        "created_at": "2026-10-12T15:01:30.993Z"
+      },
+      {
+        "native_id": "vw9xnkqhkm63",
+        "status": "resolved",
+        "body": "From 09:45 UTC on 2026-10-12, customers in AWS US East (VA) experienced failed or delayed metric writes to Grafana Cloud Metrics, which may have also affected Frontend Observability and Synthetic Monitoring data in that region. This has been fully resolved and all services are operating normally again.",
+        "created_at": "2026-10-12T16:42:47.858Z"
       }
     ],
     "first_seen_at": "2026-10-12T13:40:42.011289027Z",
@@ -58,14 +78,74 @@
           "position": 52,
           "showcase": false,
           "start_date": "2026-10-12",
-          "status": "partial_outage",
-          "updated_at": "2026-10-12T09:45:54.260Z"
+          "status": "operational",
+          "updated_at": "2026-10-12T16:42:47.801Z"
         }
       ],
       "created_at": "2026-10-12T09:45:54.207Z",
       "id": "c5zm69crkl0t",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 09:45 UTC on 2026-10-12, customers in AWS US East (VA) experienced failed or delayed metric writes to Grafana Cloud Metrics, which may have also affected Frontend Observability and Synthetic Monitoring data in that region. This has been fully resolved and all services are operating normally again.",
+          "created_at": "2026-10-12T16:42:47.858Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T16:42:47.858Z",
+          "id": "vw9xnkqhkm63",
+          "incident_id": "c5zm69crkl0t",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T16:42:47.858Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+          "created_at": "2026-10-12T15:01:30.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T15:01:30.993Z",
+          "id": "cz5dq11qv4nf",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T15:01:30.993Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+          "created_at": "2026-10-12T14:01:30.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T14:01:30.671Z",
+          "id": "vblkbsslpfd6",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T14:01:30.671Z"
+        },
         {
           "affected_components": [
             {
@@ -171,11 +251,11 @@
       "name": "Elevated Errors Ingesting Metrics in AWS US East (VA)",
       "page_id": "6r99zhljywjf",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-12T16:42:47.858Z",
       "shortlink": "https://stspg.io/q5r4k8bnw6l6",
       "started_at": "2026-10-12T09:45:54.197Z",
-      "status": "identified",
-      "updated_at": "2026-10-12T12:53:20.879Z"
+      "status": "resolved",
+      "updated_at": "2026-10-12T16:42:47.883Z"
     }
   },
   {
@@ -228,6 +308,133 @@
       "started_at": "2026-10-12T09:58:32.604Z",
       "status": "resolved",
       "updated_at": "2026-10-12T09:58:32.697Z"
+    }
+  },
+  {
+    "key": "grafana/wsv6lbbbcq09",
+    "vendor": "grafana",
+    "native_id": "wsv6lbbbcq09",
+    "title": "Elevated Errors Ingesting Metrics in AWS US East (OH) - prod-us-east-0",
+    "url": "https://stspg.io/d55l9zxy7f8v",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-12T16:07:11.166Z",
+    "resolved_at": "2026-10-12T01:30:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "thw2qs1mdnsb",
+        "status": "resolved",
+        "body": "Between 14:40 and 15:00 UTC on 2026-10-12 (approximately 20 minutes), customers in AWS US East (OH) - prod-us-east-0, may have experienced failed metric writes to Grafana Cloud Metrics. This has been fully resolved and all services are operating normally.",
+        "created_at": "2026-10-12T16:07:11.243Z"
+      }
+    ],
+    "first_seen_at": "2026-10-13T13:02:26.166769166Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-12T01:30:00.000Z",
+      "id": "wsv6lbbbcq09",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 14:40 and 15:00 UTC on 2026-10-12 (approximately 20 minutes), customers in AWS US East (OH) - prod-us-east-0, may have experienced failed metric writes to Grafana Cloud Metrics. This has been fully resolved and all services are operating normally.",
+          "created_at": "2026-10-12T16:07:11.243Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-12T01:30:00.000Z",
+          "id": "thw2qs1mdnsb",
+          "incident_id": "wsv6lbbbcq09",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T16:07:11.243Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Errors Ingesting Metrics in AWS US East (OH) - prod-us-east-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-12T01:30:00.000Z",
+      "shortlink": "https://stspg.io/d55l9zxy7f8v",
+      "started_at": "2026-10-12T16:07:11.166Z",
+      "status": "resolved",
+      "updated_at": "2026-10-12T16:07:11.252Z"
+    }
+  },
+  {
+    "key": "grafana/fj19hw3kzfry",
+    "vendor": "grafana",
+    "native_id": "fj19hw3kzfry",
+    "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
+    "url": "https://stspg.io/3kqkpqlqm6f5",
+    "impact": "minor",
+    "status": "investigating",
+    "started_at": "2026-10-13T09:23:32.31Z",
+    "components": [
+      "Incident Management and Response (IRM)"
+    ],
+    "updates": [
+      {
+        "native_id": "lhh6qbqvwl15",
+        "status": "investigating",
+        "body": "Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
+        "created_at": "2026-10-13T09:23:32.383Z"
+      }
+    ],
+    "first_seen_at": "2026-10-13T13:02:26.166769166Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-03-25T16:09:00.130Z",
+          "description": "Former Grafana Incident and Grafana OnCall",
+          "group": false,
+          "group_id": null,
+          "id": "1mxpk7q1bkb6",
+          "name": "Incident Management and Response (IRM)",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2024-03-25",
+          "status": "degraded_performance",
+          "updated_at": "2026-10-05T16:17:43.468Z"
+        }
+      ],
+      "created_at": "2026-10-13T09:23:32.316Z",
+      "id": "fj19hw3kzfry",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
+          "created_at": "2026-10-13T09:23:32.383Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-13T09:23:32.383Z",
+          "id": "lhh6qbqvwl15",
+          "incident_id": "fj19hw3kzfry",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-13T09:23:32.383Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/3kqkpqlqm6f5",
+      "started_at": "2026-10-13T09:23:32.310Z",
+      "status": "investigating",
+      "updated_at": "2026-10-13T09:23:32.384Z"
     }
   }
 ]

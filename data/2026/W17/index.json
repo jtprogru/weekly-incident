@@ -2,101 +2,130 @@
   "week": "2026-W17",
   "from": "2026-04-20T00:00:00Z",
   "to": "2026-04-27T00:00:00Z",
-  "generated_at": "2026-09-25T10:40:42.808900938Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
-      "incidents_seen": 36,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-09-25T10:40:42.808900938Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "yandexcloud/1688",
+      "vendor": "yandexcloud",
+      "title": "Unavailability of Yandex Cloud Backup during maintenance work",
+      "url": "https://status.yandex.cloud/en/incidents/1688",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-04-21T08:00:00Z",
+      "resolved_at": "2026-04-21T15:10:00Z",
+      "duration_minutes": 430,
+      "ongoing": false,
+      "components": [
+        "Cloud Backup"
+      ],
+      "score": {
+        "value": 645,
+        "duration_minutes": 430,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
     {
       "key": "slack/1546",
       "vendor": "slack",
@@ -138,6 +167,28 @@
         "duration_minutes": 121,
         "components": 1,
         "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1686",
+      "vendor": "yandexcloud",
+      "title": "Unavailability of dashboards in Monium",
+      "url": "https://status.yandex.cloud/en/incidents/1686",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-04-20T14:34:00Z",
+      "resolved_at": "2026-04-20T15:55:00Z",
+      "duration_minutes": 81,
+      "ongoing": false,
+      "components": [
+        "Monium"
+      ],
+      "score": {
+        "value": 121.5,
+        "duration_minutes": 81,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -204,6 +255,28 @@
         "duration_minutes": 71,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1687",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the services",
+      "url": "https://status.yandex.cloud/en/incidents/1687",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-04-20T16:16:35.044Z",
+      "resolved_at": "2026-04-20T17:03:00Z",
+      "duration_minutes": 46,
+      "ongoing": false,
+      "components": [
+        "Yandex AI Studio"
+      ],
+      "score": {
+        "value": 69,
+        "duration_minutes": 46,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },

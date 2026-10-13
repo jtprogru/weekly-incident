@@ -2,96 +2,103 @@
   "week": "2026-W27",
   "from": "2026-06-29T00:00:00Z",
   "to": "2026-07-06T00:00:00Z",
-  "generated_at": "2026-10-12T13:40:42.011289027Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -284,6 +291,28 @@
         "duration_minutes": 1199,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1869",
+      "vendor": "yandexcloud",
+      "title": "The problem is with SpeechKit speech recognition services.",
+      "url": "https://status.yandex.cloud/en/incidents/1869",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-30T21:00:00Z",
+      "resolved_at": "2026-07-01T09:00:00Z",
+      "duration_minutes": 720,
+      "ongoing": false,
+      "components": [
+        "SpeechKit"
+      ],
+      "score": {
+        "value": 1080,
+        "duration_minutes": 720,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -578,6 +607,28 @@
       "above_threshold": true
     },
     {
+      "key": "yandexcloud/1865",
+      "vendor": "yandexcloud",
+      "title": "Partial unavailability of Virtual Private Cloud services",
+      "url": "https://status.yandex.cloud/en/incidents/1865",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-30T10:20:00Z",
+      "resolved_at": "2026-06-30T11:26:00Z",
+      "duration_minutes": 66,
+      "ongoing": false,
+      "components": [
+        "Virtual Private Cloud"
+      ],
+      "score": {
+        "value": 99,
+        "duration_minutes": 66,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "datadog/rpj3lwgx1s3s",
       "vendor": "datadog",
       "title": "Errors Pulling Container Images",
@@ -681,6 +732,28 @@
       "score": {
         "value": 15,
         "duration_minutes": 10,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1861",
+      "vendor": "yandexcloud",
+      "title": "Yandex Cloud Console Availability Issue",
+      "url": "https://status.yandex.cloud/en/incidents/1861",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-30T10:20:00Z",
+      "resolved_at": "2026-06-30T10:28:00Z",
+      "duration_minutes": 8,
+      "ongoing": false,
+      "components": [
+        "Yandex Cloud Console"
+      ],
+      "score": {
+        "value": 12,
+        "duration_minutes": 8,
         "components": 1,
         "vendor_weight": 1.5
       },

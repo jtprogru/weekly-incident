@@ -1415,7 +1415,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-10T12:07:53.000Z"
+          "updated_at": "2026-10-12T22:39:08.000Z"
         },
         {
           "created_at": "2023-01-13T13:39:19.000Z",
@@ -1672,6 +1672,12 @@
         "status": "identified",
         "body": "We are investigating reports of degraded performance for traffic traversing the public internet between certain cities and provinces in mainland China and origin servers located outside the region. The impact is being reported across multiple ISPs and manifests as slower speeds or intermittent timeouts. \n\nWhile this congestion occurs upstream of Cloudflare's network, our engineering team is actively working to mitigate the effects. Intermittent 524 timeout errors is expected to continue due to ongoing congestion. While there is no fixed timeline for full resolution, as there are dependencies outside our network, we are taking steps to reduce customer impact.",
         "created_at": "2026-10-12T04:23:57.604Z"
+      },
+      {
+        "native_id": "v0h93l868z8k",
+        "status": "identified",
+        "body": "We have identified that increased latency and 5xx errors affecting certain China Network colos are caused by cross-border routing instability in the China network. \nWe are actively working to mitigate impact for affected customers by adjusting traffic routing, and are continuing to work with our network partners on a resolution. Customers experiencing issues may contact Cloudflare Support.",
+        "created_at": "2026-10-12T15:33:07.052Z"
       }
     ],
     "first_seen_at": "2026-10-10T11:28:07.824738728Z",
@@ -1697,6 +1703,26 @@
       "id": "cyxclg7nnhjy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified that increased latency and 5xx errors affecting certain China Network colos are caused by cross-border routing instability in the China network. \nWe are actively working to mitigate impact for affected customers by adjusting traffic routing, and are continuing to work with our network partners on a resolution. Customers experiencing issues may contact Cloudflare Support.",
+          "created_at": "2026-10-12T15:33:07.052Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T15:33:07.052Z",
+          "id": "v0h93l868z8k",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T15:33:07.052Z"
+        },
         {
           "affected_components": [
             {
@@ -1766,7 +1792,7 @@
       "shortlink": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
       "started_at": "2026-10-10T04:13:17.000Z",
       "status": "identified",
-      "updated_at": "2026-10-12T04:23:57.000Z"
+      "updated_at": "2026-10-12T15:33:07.000Z"
     }
   }
 ]

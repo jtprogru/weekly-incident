@@ -2,96 +2,103 @@
   "week": "2026-W23",
   "from": "2026-06-01T00:00:00Z",
   "to": "2026-06-08T00:00:00Z",
-  "generated_at": "2026-10-12T13:40:42.011289027Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -122,6 +129,28 @@
       "above_threshold": true
     },
     {
+      "key": "yandexcloud/1824",
+      "vendor": "yandexcloud",
+      "title": "Incorrect charge of funds.",
+      "url": "https://status.yandex.cloud/en/incidents/1824",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-05T12:25:00Z",
+      "resolved_at": "2026-06-05T20:55:00Z",
+      "duration_minutes": 510,
+      "ongoing": false,
+      "components": [
+        "Yandex Cloud Billing"
+      ],
+      "score": {
+        "value": 765,
+        "duration_minutes": 510,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "stripe/jkxl171k6zq7",
       "vendor": "stripe",
       "title": "Elevated declines on Cartes Bancaires",
@@ -140,6 +169,28 @@
         "duration_minutes": 548,
         "components": 1,
         "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1807",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the AI Studio service",
+      "url": "https://status.yandex.cloud/en/incidents/1807",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-01T02:37:00Z",
+      "resolved_at": "2026-06-01T06:51:36Z",
+      "duration_minutes": 254,
+      "ongoing": false,
+      "components": [
+        "Yandex AI Studio"
+      ],
+      "score": {
+        "value": 381,
+        "duration_minutes": 254,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -167,6 +218,50 @@
         "vendor_weight": 0.8
       },
       "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1822",
+      "vendor": "yandexcloud",
+      "title": "Partial unavailability of services",
+      "url": "https://status.yandex.cloud/en/incidents/1822",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-04T08:30:00Z",
+      "resolved_at": "2026-06-04T11:30:00Z",
+      "duration_minutes": 180,
+      "ongoing": false,
+      "components": [
+        "Yandex BareMetal"
+      ],
+      "score": {
+        "value": 270,
+        "duration_minutes": 180,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1820",
+      "vendor": "yandexcloud",
+      "title": "Problems getting a list of models in the AI Studio service",
+      "url": "https://status.yandex.cloud/en/incidents/1820",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-03T13:08:00Z",
+      "resolved_at": "2026-06-03T15:21:00Z",
+      "duration_minutes": 133,
+      "ongoing": false,
+      "components": [
+        "Yandex AI Studio"
+      ],
+      "score": {
+        "value": 199.5,
+        "duration_minutes": 133,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "circleci/wcsh4hxwkrh7",

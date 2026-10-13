@@ -2,96 +2,103 @@
   "week": "2026-W36",
   "from": "2026-08-31T00:00:00Z",
   "to": "2026-09-07T00:00:00Z",
-  "generated_at": "2026-10-12T13:40:42.011289027Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -201,6 +208,41 @@
         "value": 1855.5,
         "duration_minutes": 1237,
         "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1992",
+      "vendor": "yandexcloud",
+      "title": "Problems with multiple services in the kz1-a availability zone",
+      "url": "https://status.yandex.cloud/en/incidents/1992",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-09-01T16:47:00Z",
+      "resolved_at": "2026-09-01T18:00:00Z",
+      "duration_minutes": 73,
+      "ongoing": false,
+      "components": [
+        "Identity and Access Management",
+        "Managed Service for PostgreSQL",
+        "Managed Service for ClickHouse®",
+        "Managed Service for MySQL®",
+        "Managed Service for Valkey™",
+        "SpeechKit",
+        "Managed Service for YDB",
+        "Data Transfer",
+        "Managed Service for Apache Kafka®",
+        "Cloud DNS",
+        "Yandex MPP Analytics Engine for PostgreSQL",
+        "Managed Service for OpenSearch",
+        "Yandex Cloud Console",
+        "Managed Service for Apache Spark™"
+      ],
+      "score": {
+        "value": 1533,
+        "duration_minutes": 73,
+        "components": 14,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -671,6 +713,28 @@
       "score": {
         "value": 261,
         "duration_minutes": 174,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1993",
+      "vendor": "yandexcloud",
+      "title": "Partial unavailability of the Cloud Backup service",
+      "url": "https://status.yandex.cloud/en/incidents/1993",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-09-02T07:00:00Z",
+      "resolved_at": "2026-09-02T09:51:00Z",
+      "duration_minutes": 171,
+      "ongoing": false,
+      "components": [
+        "Cloud Backup"
+      ],
+      "score": {
+        "value": 256.5,
+        "duration_minutes": 171,
         "components": 1,
         "vendor_weight": 1.5
       },

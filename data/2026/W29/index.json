@@ -2,96 +2,103 @@
   "week": "2026-W29",
   "from": "2026-07-13T00:00:00Z",
   "to": "2026-07-20T00:00:00Z",
-  "generated_at": "2026-10-12T13:40:42.011289027Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -548,6 +555,28 @@
       "above_threshold": true
     },
     {
+      "key": "yandexcloud/1883",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the UI for the Managed Service for YDB",
+      "url": "https://status.yandex.cloud/en/incidents/1883",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-13T12:40:00Z",
+      "resolved_at": "2026-07-13T16:10:00Z",
+      "duration_minutes": 210,
+      "ongoing": false,
+      "components": [
+        "Managed Service for YDB"
+      ],
+      "score": {
+        "value": 315,
+        "duration_minutes": 210,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/d35pngcy6sb9",
       "vendor": "github",
       "title": "Disruption with some GitHub services",
@@ -638,6 +667,28 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1888",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the API Gateway service",
+      "url": "https://status.yandex.cloud/en/incidents/1888",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-07-19T14:40:35.281Z",
+      "resolved_at": "2026-07-19T16:35:00Z",
+      "duration_minutes": 114,
+      "ongoing": false,
+      "components": [
+        "API Gateway"
+      ],
+      "score": {
+        "value": 171,
+        "duration_minutes": 114,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "circleci/gsyjwybg477g",

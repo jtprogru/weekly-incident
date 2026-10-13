@@ -2,96 +2,103 @@
   "week": "2026-W26",
   "from": "2026-06-22T00:00:00Z",
   "to": "2026-06-29T00:00:00Z",
-  "generated_at": "2026-10-08T12:20:37.47217167Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
-      "incidents_seen": 33,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-08T12:20:37.47217167Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -116,6 +123,31 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1847",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the services",
+      "url": "https://status.yandex.cloud/en/incidents/1847",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-06-23T09:45:00Z",
+      "resolved_at": "2026-06-23T10:35:00Z",
+      "duration_minutes": 50,
+      "ongoing": false,
+      "components": [
+        "Cloud Functions",
+        "API Gateway",
+        "Serverless Containers",
+        "Yandex AI Studio"
+      ],
+      "score": {
+        "value": 300,
+        "duration_minutes": 50,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "github/0rkjjs2ssp7z",
@@ -180,6 +212,28 @@
         "value": 222,
         "duration_minutes": 37,
         "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1851",
+      "vendor": "yandexcloud",
+      "title": "Errors when accessing Object Storage",
+      "url": "https://status.yandex.cloud/en/incidents/1851",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-06-23T17:00:00Z",
+      "resolved_at": "2026-06-23T18:34:00Z",
+      "duration_minutes": 94,
+      "ongoing": false,
+      "components": [
+        "Object Storage"
+      ],
+      "score": {
+        "value": 141,
+        "duration_minutes": 94,
+        "components": 1,
         "vendor_weight": 1.5
       },
       "above_threshold": true

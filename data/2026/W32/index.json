@@ -2,96 +2,103 @@
   "week": "2026-W32",
   "from": "2026-08-03T00:00:00Z",
   "to": "2026-08-10T00:00:00Z",
-  "generated_at": "2026-10-12T13:40:42.011289027Z",
+  "generated_at": "2026-10-13T13:02:26.166769166Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-12T13:40:42.011289027Z",
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "vendor": "yandexcloud",
+      "ok": true,
+      "fetched_at": "2026-10-13T13:02:26.166769166Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -307,6 +314,30 @@
       "above_threshold": false
     },
     {
+      "key": "yandexcloud/1904",
+      "vendor": "yandexcloud",
+      "title": "Degradation of network connectivity",
+      "url": "https://status.yandex.cloud/en/incidents/1904",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-04T08:30:00Z",
+      "resolved_at": "2026-08-04T10:50:00Z",
+      "duration_minutes": 140,
+      "ongoing": false,
+      "components": [
+        "Virtual Private Cloud",
+        "Object Storage",
+        "Container Registry"
+      ],
+      "score": {
+        "value": 630,
+        "duration_minutes": 140,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01KZ9DMQD2GJ8JJWDN7572RH78",
       "vendor": "openai",
       "title": "Issues with Custom GPT actions",
@@ -416,6 +447,28 @@
         "vendor_weight": 1.8
       },
       "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1916",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the services",
+      "url": "https://status.yandex.cloud/en/incidents/1916",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-07T07:15:00Z",
+      "resolved_at": "2026-08-07T11:13:00Z",
+      "duration_minutes": 238,
+      "ongoing": false,
+      "components": [
+        "Compute Cloud"
+      ],
+      "score": {
+        "value": 357,
+        "duration_minutes": 238,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/ydgyl9v3g02s",
@@ -544,6 +597,29 @@
         "value": 241.5,
         "duration_minutes": 161,
         "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "yandexcloud/1910",
+      "vendor": "yandexcloud",
+      "title": "Partial unavailability of services",
+      "url": "https://status.yandex.cloud/en/incidents/1910",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-08-05T09:30:00Z",
+      "resolved_at": "2026-08-05T10:50:00Z",
+      "duration_minutes": 80,
+      "ongoing": false,
+      "components": [
+        "DataLens",
+        "Yandex Cloud Console"
+      ],
+      "score": {
+        "value": 240,
+        "duration_minutes": 80,
+        "components": 2,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -990,6 +1066,28 @@
         "duration_minutes": 50,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "yandexcloud/1912",
+      "vendor": "yandexcloud",
+      "title": "The problem is with the services",
+      "url": "https://status.yandex.cloud/en/incidents/1912",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-08-05T13:15:00Z",
+      "resolved_at": "2026-08-05T13:58:00Z",
+      "duration_minutes": 43,
+      "ongoing": false,
+      "components": [
+        "Compute Cloud"
+      ],
+      "score": {
+        "value": 64.5,
+        "duration_minutes": 43,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
