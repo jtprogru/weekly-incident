@@ -6,8 +6,10 @@
     "title": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
     "url": "https://status.openai.com/incidents/01M4T4ZCM54D3ZPTQXRSWFG0XS",
     "impact": "minor",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-10-13T08:10:00Z",
+    "resolved_at": "2026-10-13T16:36:42Z",
+    "duration_minutes": 506,
     "components": [],
     "updates": [
       {
@@ -33,6 +35,12 @@
         "status": "monitoring",
         "body": "We have applied the mitigation and are monitoring the recovery.",
         "created_at": "2026-10-13T09:30:00Z"
+      },
+      {
+        "native_id": "01M4V1Z5R8G88Z72ASVZZ9JFHV",
+        "status": "resolved",
+        "body": "We have resolved the issue causing degraded performance with GPT-6.1 Sol in Codex and ChatGPT Work.",
+        "created_at": "2026-10-13T16:36:42Z"
       }
     ],
     "first_seen_at": "2026-10-13T13:02:26.166769166Z",
@@ -41,6 +49,15 @@
       "id": "01M4T4ZCM54D3ZPTQXRSWFG0XS",
       "impact": "minor",
       "incident_updates": [
+        {
+          "body": "We have resolved the issue causing degraded performance with GPT-6.1 Sol in Codex and ChatGPT Work.",
+          "created_at": "2026-10-13T16:36:42Z",
+          "display_at": "2026-10-13T16:36:42Z",
+          "id": "01M4V1Z5R8G88Z72ASVZZ9JFHV",
+          "incident_id": "01M4T4ZCM54D3ZPTQXRSWFG0XS",
+          "status": "resolved",
+          "updated_at": "2026-10-13T16:36:42Z"
+        },
         {
           "body": "We have applied the mitigation and are monitoring the recovery.",
           "created_at": "2026-10-13T09:30:00Z",
@@ -78,11 +95,140 @@
           "updated_at": "2026-10-13T08:10:00Z"
         }
       ],
-      "monitoring_at": "2026-10-13T09:30:00Z",
       "name": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
       "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "resolved_at": "2026-10-13T16:36:42Z",
+      "status": "resolved",
+      "updated_at": "2026-10-13T16:36:42Z"
+    }
+  },
+  {
+    "key": "openai/01M4WKPE1EY48ZB4RZJ80YH7ES",
+    "vendor": "openai",
+    "native_id": "01M4WKPE1EY48ZB4RZJ80YH7ES",
+    "title": "Degraded performance in Codex and ChatGPT Work",
+    "url": "https://status.openai.com/incidents/01M4WKPE1EY48ZB4RZJ80YH7ES",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-14T07:05:44Z",
+    "resolved_at": "2026-10-14T09:53:11Z",
+    "duration_minutes": 167,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M4WKPE1E2EM1QWXDGRYMJ8EZ",
+        "status": "identified",
+        "body": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation.",
+        "created_at": "2026-10-14T07:05:44Z"
+      },
+      {
+        "native_id": "01M4WVBTV71NE3A4NEGZ5EFD9S",
+        "status": "identified",
+        "body": "We have identified that users are experiencing elevated errors for the impacted services.\nWe are still implementing the mitigation.",
+        "created_at": "2026-10-14T09:19:46Z"
+      },
+      {
+        "native_id": "01M4WX91GC41Q1JX9S8RCP77RS",
+        "status": "resolved",
+        "body": "All impacted services have now fully recovered.",
+        "created_at": "2026-10-14T09:53:11Z"
+      }
+    ],
+    "first_seen_at": "2026-10-14T10:43:38.349422874Z",
+    "raw": {
+      "created_at": "2026-10-14T07:05:44Z",
+      "id": "01M4WKPE1EY48ZB4RZJ80YH7ES",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "body": "All impacted services have now fully recovered.",
+          "created_at": "2026-10-14T09:53:11Z",
+          "display_at": "2026-10-14T09:53:11Z",
+          "id": "01M4WX91GC41Q1JX9S8RCP77RS",
+          "incident_id": "01M4WKPE1EY48ZB4RZJ80YH7ES",
+          "status": "resolved",
+          "updated_at": "2026-10-14T09:53:11Z"
+        },
+        {
+          "body": "We have identified that users are experiencing elevated errors for the impacted services.\nWe are still implementing the mitigation.",
+          "created_at": "2026-10-14T09:19:46Z",
+          "display_at": "2026-10-14T09:19:46Z",
+          "id": "01M4WVBTV71NE3A4NEGZ5EFD9S",
+          "incident_id": "01M4WKPE1EY48ZB4RZJ80YH7ES",
+          "status": "identified",
+          "updated_at": "2026-10-14T09:19:46Z"
+        },
+        {
+          "body": "We have identified that users are experiencing elevated errors for the impacted services.\n\nWe are working on implementing a mitigation.",
+          "created_at": "2026-10-14T07:05:44Z",
+          "display_at": "2026-10-14T07:05:44Z",
+          "id": "01M4WKPE1E2EM1QWXDGRYMJ8EZ",
+          "incident_id": "01M4WKPE1EY48ZB4RZJ80YH7ES",
+          "status": "identified",
+          "updated_at": "2026-10-14T07:05:44Z"
+        }
+      ],
+      "name": "Degraded performance in Codex and ChatGPT Work",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "resolved_at": "2026-10-14T09:53:11Z",
+      "status": "resolved",
+      "updated_at": "2026-10-14T09:53:11Z"
+    }
+  },
+  {
+    "key": "openai/01M4WYPP5QA0CJ3JV76KH285K8",
+    "vendor": "openai",
+    "native_id": "01M4WYPP5QA0CJ3JV76KH285K8",
+    "title": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+    "url": "https://status.openai.com/incidents/01M4WYPP5QA0CJ3JV76KH285K8",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-10-14T10:18:07Z",
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M4WYPP5QAVHFD9384M0WJV8F",
+        "status": "investigating",
+        "body": "We are investigating limited availability when using gpt-image-2.5-flare and gpt-image-2.5-sunburst in the API.",
+        "created_at": "2026-10-14T10:18:07Z"
+      },
+      {
+        "native_id": "01M4WZZ2RPD0JA4MGSNCDNAXND",
+        "status": "monitoring",
+        "body": "We have applied the mitigation and are monitoring the recovery.",
+        "created_at": "2026-10-14T10:40:11Z"
+      }
+    ],
+    "first_seen_at": "2026-10-14T10:43:38.349422874Z",
+    "raw": {
+      "created_at": "2026-10-14T10:18:07Z",
+      "id": "01M4WYPP5QA0CJ3JV76KH285K8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "body": "We have applied the mitigation and are monitoring the recovery.",
+          "created_at": "2026-10-14T10:40:11Z",
+          "display_at": "2026-10-14T10:40:11Z",
+          "id": "01M4WZZ2RPD0JA4MGSNCDNAXND",
+          "incident_id": "01M4WYPP5QA0CJ3JV76KH285K8",
+          "status": "monitoring",
+          "updated_at": "2026-10-14T10:40:11Z"
+        },
+        {
+          "body": "We are investigating limited availability when using gpt-image-2.5-flare and gpt-image-2.5-sunburst in the API.",
+          "created_at": "2026-10-14T10:18:07Z",
+          "display_at": "2026-10-14T10:18:07Z",
+          "id": "01M4WYPP5QAVHFD9384M0WJV8F",
+          "incident_id": "01M4WYPP5QA0CJ3JV76KH285K8",
+          "status": "investigating",
+          "updated_at": "2026-10-14T10:18:07Z"
+        }
+      ],
+      "monitoring_at": "2026-10-14T10:40:11Z",
+      "name": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
       "status": "monitoring",
-      "updated_at": "2026-10-13T09:30:00Z"
+      "updated_at": "2026-10-14T10:40:11Z"
     }
   }
 ]

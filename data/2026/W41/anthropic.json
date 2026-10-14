@@ -460,8 +460,8 @@
           "position": 2,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-07T21:44:41.416Z"
+          "status": "operational",
+          "updated_at": "2026-10-13T18:00:04.315Z"
         }
       ],
       "created_at": "2026-10-07T01:20:26.681Z",
@@ -527,8 +527,10 @@
     "title": "Elevated errors on platform.claude.com",
     "url": "https://stspg.io/sjkw7njwf0mt",
     "impact": "major",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-10-07T13:25:04.155Z",
+    "resolved_at": "2026-10-13T18:00:04.363Z",
+    "duration_minutes": 8915,
     "components": [
       "Claude Console (platform.claude.com)"
     ],
@@ -556,6 +558,12 @@
         "status": "monitoring",
         "body": "We've mitigated the errors loading usage data on platform.claude.com and in the Admin API usage report. While we work on a full fix, the most recent ~30 minutes of usage may take longer to appear on the platform.claude.com. API requests are not affected, and we will provide additional updates here.",
         "created_at": "2026-10-07T21:44:41.466Z"
+      },
+      {
+        "native_id": "q420b7ymc050",
+        "status": "resolved",
+        "body": "This issue has been resolved.",
+        "created_at": "2026-10-13T18:00:04.363Z"
       }
     ],
     "first_seen_at": "2026-10-08T12:20:37.47217167Z",
@@ -573,14 +581,34 @@
           "position": 2,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-07T21:44:41.416Z"
+          "status": "operational",
+          "updated_at": "2026-10-13T18:00:04.315Z"
         }
       ],
       "created_at": "2026-10-07T13:25:04.163Z",
       "id": "978mjkgw6mh7",
       "impact": "major",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This issue has been resolved.",
+          "created_at": "2026-10-13T18:00:04.363Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-13T18:00:04.363Z",
+          "id": "q420b7ymc050",
+          "incident_id": "978mjkgw6mh7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-13T18:00:04.363Z"
+        },
         {
           "affected_components": [
             {
@@ -666,11 +694,11 @@
       "name": "Elevated errors on platform.claude.com",
       "page_id": "tymt9n04zgry",
       "reminder_intervals": "[]",
-      "resolved_at": null,
+      "resolved_at": "2026-10-13T18:00:04.363Z",
       "shortlink": "https://stspg.io/sjkw7njwf0mt",
       "started_at": "2026-10-07T13:25:04.155Z",
-      "status": "monitoring",
-      "updated_at": "2026-10-07T21:45:27.699Z"
+      "status": "resolved",
+      "updated_at": "2026-10-13T18:00:04.390Z"
     }
   },
   {

@@ -2,103 +2,103 @@
   "week": "2026-W42",
   "from": "2026-10-12T00:00:00Z",
   "to": "2026-10-19T00:00:00Z",
-  "generated_at": "2026-10-13T13:02:26.166769166Z",
+  "generated_at": "2026-10-14T10:43:38.349422874Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
-      "incidents_seen": 34,
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
+      "incidents_seen": 35,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
       "ok": true,
-      "fetched_at": "2026-10-13T13:02:26.166769166Z",
+      "fetched_at": "2026-10-14T10:43:38.349422874Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -110,15 +110,37 @@
       "title": "Elevated errors in Los Angeles (LAX)",
       "url": "https://www.cloudflarestatus.com/incidents/vyy1a1dspusg",
       "impact": "minor",
-      "status": "identified",
+      "status": "resolved",
       "started_at": "2026-10-12T08:52:23.535Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-13T17:40:37.437Z",
+      "duration_minutes": 1968,
+      "ongoing": false,
       "components": [
         "Los Angeles, CA, United States - (LAX)"
       ],
       "score": {
-        "value": 3042,
-        "duration_minutes": 1690,
+        "value": 3542.4,
+        "duration_minutes": 1968,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/hpmrg8d5vwr6",
+      "vendor": "cloudflare",
+      "title": "Audit Logs v2 ingestion is missing multiple Cloudflare products",
+      "url": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-13T10:14:58.278Z",
+      "ongoing": true,
+      "components": [
+        "Audit Logs"
+      ],
+      "score": {
+        "value": 2642.4,
+        "duration_minutes": 1468,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -149,20 +171,64 @@
       "above_threshold": true
     },
     {
+      "key": "grafana/fj19hw3kzfry",
+      "vendor": "grafana",
+      "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
+      "url": "https://stspg.io/3kqkpqlqm6f5",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-10-13T09:23:32.31Z",
+      "ongoing": true,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 1520,
+        "duration_minutes": 1520,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/gqm2xrm9wk8t",
       "vendor": "cloudflare",
       "title": "Network performance issues in Ashburn, US (IAD)",
       "url": "https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-10-13T04:00:44.604Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-13T14:56:50.599Z",
+      "duration_minutes": 656,
+      "ongoing": false,
       "components": [
         "Ashburn, VA, United States - (IAD)"
       ],
       "score": {
-        "value": 973.8000000000001,
-        "duration_minutes": 541,
+        "value": 1180.8,
+        "duration_minutes": 656,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/cbvocc87nsne",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers - Cron Trigger Activation Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/cbvocc87nsne",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-13T15:18:01.555Z",
+      "resolved_at": "2026-10-14T00:09:26.984Z",
+      "duration_minutes": 531,
+      "ongoing": false,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 955.8000000000001,
+        "duration_minutes": 531,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -218,15 +284,37 @@
       "title": "Degraded performance in GPT-6.1 Sol Codex and Work mode",
       "url": "https://status.openai.com/incidents/01M4T4ZCM54D3ZPTQXRSWFG0XS",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-10-13T08:10:00Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-13T16:36:42Z",
+      "duration_minutes": 506,
+      "ongoing": false,
       "components": [],
       "score": {
-        "value": 438,
-        "duration_minutes": 292,
+        "value": 759,
+        "duration_minutes": 506,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/npjny9agana8",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers - Cron Trigger Activation Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/npjny9agana8",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-14T05:36:12.243Z",
+      "ongoing": true,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 552.6,
+        "duration_minutes": 307,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -275,42 +363,66 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/hpmrg8d5vwr6",
-      "vendor": "cloudflare",
-      "title": "Audit Logs v2 ingestion is missing multiple Cloudflare products",
-      "url": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
+      "key": "openai/01M4WKPE1EY48ZB4RZJ80YH7ES",
+      "vendor": "openai",
+      "title": "Degraded performance in Codex and ChatGPT Work",
+      "url": "https://status.openai.com/incidents/01M4WKPE1EY48ZB4RZJ80YH7ES",
       "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-10-13T10:14:58.278Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-10-14T07:05:44Z",
+      "resolved_at": "2026-10-14T09:53:11Z",
+      "duration_minutes": 167,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 250.5,
+        "duration_minutes": 167,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/fdgz8zlmfhw6",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in LAX",
+      "url": "https://www.cloudflarestatus.com/incidents/fdgz8zlmfhw6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-13T20:37:59.232Z",
+      "resolved_at": "2026-10-13T22:44:56.599Z",
+      "duration_minutes": 126,
+      "ongoing": false,
       "components": [
-        "Audit Logs"
+        "Los Angeles, CA, United States - (LAX)"
       ],
       "score": {
-        "value": 300.6,
-        "duration_minutes": 167,
+        "value": 226.8,
+        "duration_minutes": 126,
         "components": 1,
         "vendor_weight": 1.8
       },
       "above_threshold": true
     },
     {
-      "key": "grafana/fj19hw3kzfry",
-      "vendor": "grafana",
-      "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
-      "url": "https://stspg.io/3kqkpqlqm6f5",
-      "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-10-13T09:23:32.31Z",
-      "ongoing": true,
+      "key": "cloudflare/7hicc5bfkvx3",
+      "vendor": "cloudflare",
+      "title": "Elevated number of 5XX errors in PDX",
+      "url": "https://www.cloudflarestatus.com/incidents/7hicc5bfkvx3",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-14T04:40:32.403Z",
+      "resolved_at": "2026-10-14T06:45:43.255Z",
+      "duration_minutes": 125,
+      "ongoing": false,
       "components": [
-        "Incident Management and Response (IRM)"
+        "Portland, OR, United States - (PDX)"
       ],
       "score": {
-        "value": 218,
-        "duration_minutes": 218,
+        "value": 225,
+        "duration_minutes": 125,
         "components": 1,
-        "vendor_weight": 1
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -333,6 +445,154 @@
         "duration_minutes": 33,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/npdd5p4wt0qh",
+      "vendor": "grafana",
+      "title": "Errors when querying Prometheus datasource",
+      "url": "https://stspg.io/tkdwbmz3gpx0",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-13T19:55:20.905Z",
+      "resolved_at": "2026-10-13T20:46:44.698Z",
+      "duration_minutes": 51,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-4"
+      ],
+      "score": {
+        "value": 51,
+        "duration_minutes": 51,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/z7vongh8rqc1",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Service Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/z7vongh8rqc1",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-13T16:39:00Z",
+      "resolved_at": "2026-10-13T17:07:00Z",
+      "duration_minutes": 28,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 50.4,
+        "duration_minutes": 28,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/rip4d46xzsez",
+      "vendor": "cloudflare",
+      "title": "Possible Network Congestion in Dallas, TX, United States (DFW)",
+      "url": "https://www.cloudflarestatus.com/incidents/rip4d46xzsez",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-14T03:02:00Z",
+      "resolved_at": "2026-10-14T03:30:00Z",
+      "duration_minutes": 28,
+      "ongoing": false,
+      "components": [
+        "Dallas, TX, United States - (DFW)"
+      ],
+      "score": {
+        "value": 50.4,
+        "duration_minutes": 28,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/l6if0sptyjvw",
+      "vendor": "cloudflare",
+      "title": "Elevated errors in Los Angeles (LAX)",
+      "url": "https://www.cloudflarestatus.com/incidents/l6if0sptyjvw",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-14T04:55:00Z",
+      "resolved_at": "2026-10-14T05:20:00Z",
+      "duration_minutes": 25,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 45,
+        "duration_minutes": 25,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/73pslms8eann",
+      "vendor": "cloudflare",
+      "title": "OBS API availability",
+      "url": "https://www.cloudflarestatus.com/incidents/73pslms8eann",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-14T03:48:00Z",
+      "resolved_at": "2026-10-14T04:12:00Z",
+      "duration_minutes": 24,
+      "ongoing": false,
+      "components": [
+        "Observatory"
+      ],
+      "score": {
+        "value": 43.2,
+        "duration_minutes": 24,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M4WYPP5QA0CJ3JV76KH285K8",
+      "vendor": "openai",
+      "title": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
+      "url": "https://status.openai.com/incidents/01M4WYPP5QA0CJ3JV76KH285K8",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-14T10:18:07Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 37.5,
+        "duration_minutes": 25,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "slack/1581",
+      "vendor": "slack",
+      "title": "Single Sign On errors",
+      "url": "https://slack-status.com/2026-10/6aeafd6248f59a8a",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-10-14T00:23:07Z",
+      "resolved_at": "2026-10-14T00:28:54Z",
+      "duration_minutes": 5,
+      "ongoing": false,
+      "components": [
+        "Login/SSO"
+      ],
+      "score": {
+        "value": 6,
+        "duration_minutes": 5,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
@@ -373,6 +633,48 @@
         "duration_minutes": 0,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "digitalocean/rl0fl1jtxw7l",
+      "vendor": "digitalocean",
+      "title": "App Platform Deployments",
+      "url": "https://stspg.io/txrkbrvfl4bz",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-13T17:09:47.482Z",
+      "resolved_at": "2026-10-13T17:09:47.56Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "Global"
+      ],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 0.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/6yk962mhlr3h",
+      "vendor": "github",
+      "title": "[Retroactive] Actions workflow run logs delayed",
+      "url": "https://stspg.io/6ky9bv9gkkd1",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-14T00:12:44.5Z",
+      "resolved_at": "2026-10-13T20:30:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
