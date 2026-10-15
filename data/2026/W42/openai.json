@@ -182,8 +182,10 @@
     "title": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
     "url": "https://status.openai.com/incidents/01M4WYPP5QA0CJ3JV76KH285K8",
     "impact": "minor",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-10-14T10:18:07Z",
+    "resolved_at": "2026-10-14T10:58:07Z",
+    "duration_minutes": 40,
     "components": [],
     "updates": [
       {
@@ -197,6 +199,12 @@
         "status": "monitoring",
         "body": "We have applied the mitigation and are monitoring the recovery.",
         "created_at": "2026-10-14T10:40:11Z"
+      },
+      {
+        "native_id": "01M4X0ZYBQ38DNCSARZHYVRESN",
+        "status": "resolved",
+        "body": "All impacted services have now fully recovered.",
+        "created_at": "2026-10-14T10:58:07Z"
       }
     ],
     "first_seen_at": "2026-10-14T10:43:38.349422874Z",
@@ -205,6 +213,15 @@
       "id": "01M4WYPP5QA0CJ3JV76KH285K8",
       "impact": "minor",
       "incident_updates": [
+        {
+          "body": "All impacted services have now fully recovered.",
+          "created_at": "2026-10-14T10:58:07Z",
+          "display_at": "2026-10-14T10:58:07Z",
+          "id": "01M4X0ZYBQ38DNCSARZHYVRESN",
+          "incident_id": "01M4WYPP5QA0CJ3JV76KH285K8",
+          "status": "resolved",
+          "updated_at": "2026-10-14T10:58:07Z"
+        },
         {
           "body": "We have applied the mitigation and are monitoring the recovery.",
           "created_at": "2026-10-14T10:40:11Z",
@@ -224,11 +241,81 @@
           "updated_at": "2026-10-14T10:18:07Z"
         }
       ],
-      "monitoring_at": "2026-10-14T10:40:11Z",
       "name": "Limited availability on gpt-image-2.5-flare and gpt-image-2.5-sunburst",
       "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
-      "status": "monitoring",
-      "updated_at": "2026-10-14T10:40:11Z"
+      "resolved_at": "2026-10-14T10:58:07Z",
+      "status": "resolved",
+      "updated_at": "2026-10-14T10:58:07Z"
+    }
+  },
+  {
+    "key": "openai/01M4XNQX7C6RCBNGX9H711WFSG",
+    "vendor": "openai",
+    "native_id": "01M4XNQX7C6RCBNGX9H711WFSG",
+    "title": "Delayed Costs data in the Compliance API",
+    "url": "https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-10-14T17:00:44Z",
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M4XNQX7CGEK7WYR0TY2YS0HC",
+        "status": "identified",
+        "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.",
+        "created_at": "2026-10-14T17:00:44Z"
+      },
+      {
+        "native_id": "01M4XNVN4QKEF7VQHDK9E2F03N",
+        "status": "identified",
+        "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.",
+        "created_at": "2026-10-14T17:02:47Z"
+      },
+      {
+        "native_id": "01M4Y017SBZVNTAV6CNX15DVZG",
+        "status": "identified",
+        "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. A fix is in progress and currently undergoing testing. API and ChatGPT usage are not affected, and other reporting channels remain available. We are continuing work to restore normal data freshness.",
+        "created_at": "2026-10-14T20:00:36Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "created_at": "2026-10-14T17:00:44Z",
+      "id": "01M4XNQX7C6RCBNGX9H711WFSG",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. A fix is in progress and currently undergoing testing. API and ChatGPT usage are not affected, and other reporting channels remain available. We are continuing work to restore normal data freshness.",
+          "created_at": "2026-10-14T20:00:36Z",
+          "display_at": "2026-10-14T20:00:36Z",
+          "id": "01M4Y017SBZVNTAV6CNX15DVZG",
+          "incident_id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "status": "identified",
+          "updated_at": "2026-10-14T20:00:36Z"
+        },
+        {
+          "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.",
+          "created_at": "2026-10-14T17:02:47Z",
+          "display_at": "2026-10-14T17:02:47Z",
+          "id": "01M4XNVN4QKEF7VQHDK9E2F03N",
+          "incident_id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "status": "identified",
+          "updated_at": "2026-10-14T17:02:47Z"
+        },
+        {
+          "body": "We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.",
+          "created_at": "2026-10-14T17:00:44Z",
+          "display_at": "2026-10-14T17:00:44Z",
+          "id": "01M4XNQX7CGEK7WYR0TY2YS0HC",
+          "incident_id": "01M4XNQX7C6RCBNGX9H711WFSG",
+          "status": "identified",
+          "updated_at": "2026-10-14T17:00:44Z"
+        }
+      ],
+      "name": "Delayed Costs data in the Compliance API",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "status": "identified",
+      "updated_at": "2026-10-14T20:00:36Z"
     }
   }
 ]

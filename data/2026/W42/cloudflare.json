@@ -240,7 +240,7 @@
           "position": 116,
           "showcase": false,
           "start_date": null,
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-10-12T22:20:15.000Z"
         }
       ],
@@ -477,7 +477,7 @@
           "position": 116,
           "showcase": false,
           "start_date": null,
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-10-12T22:20:15.000Z"
         }
       ],
@@ -909,7 +909,7 @@
           "position": 116,
           "showcase": false,
           "start_date": null,
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-10-12T22:20:15.000Z"
         }
       ],
@@ -1496,8 +1496,10 @@
     "title": "Cloudflare Workers - Cron Trigger Activation Issues",
     "url": "https://www.cloudflarestatus.com/incidents/npjny9agana8",
     "impact": "minor",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-10-14T05:36:12.243Z",
+    "resolved_at": "2026-10-15T01:29:39.862Z",
+    "duration_minutes": 1193,
     "components": [
       "Workers"
     ],
@@ -1519,6 +1521,12 @@
         "status": "monitoring",
         "body": "We are continuing to monitor for any further issues.",
         "created_at": "2026-10-14T08:14:16.627Z"
+      },
+      {
+        "native_id": "8zhph8bt64sh",
+        "status": "resolved",
+        "body": "Workers Cron Trigger backlogs have cleared and appear healthy. Cron Trigger schedules should be executing as expected. Some schedule redeploys may be required for a small fraction of Workers who were impacted during the incident.",
+        "created_at": "2026-10-15T01:29:39.862Z"
       }
     ],
     "first_seen_at": "2026-10-14T10:43:38.349422874Z",
@@ -1536,7 +1544,7 @@
           "position": 116,
           "showcase": false,
           "start_date": null,
-          "status": "degraded_performance",
+          "status": "operational",
           "updated_at": "2026-10-12T22:20:15.000Z"
         }
       ],
@@ -1544,6 +1552,19 @@
       "id": "npjny9agana8",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Workers Cron Trigger backlogs have cleared and appear healthy. Cron Trigger schedules should be executing as expected. Some schedule redeploys may be required for a small fraction of Workers who were impacted during the incident.",
+          "created_at": "2026-10-15T01:29:39.862Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T01:29:39.862Z",
+          "id": "8zhph8bt64sh",
+          "incident_id": "npjny9agana8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T01:29:39.862Z"
+        },
         {
           "affected_components": null,
           "body": "We are continuing to monitor for any further issues.",
@@ -1595,11 +1616,440 @@
       "name": "Cloudflare Workers - Cron Trigger Activation Issues",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-15T01:29:39.862Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/npjny9agana8",
       "started_at": "2026-10-14T05:36:12.243Z",
-      "status": "monitoring",
-      "updated_at": "2026-10-14T08:14:16.627Z"
+      "status": "resolved",
+      "updated_at": "2026-10-15T01:29:39.862Z"
+    }
+  },
+  {
+    "key": "cloudflare/ak3kgdz2nyog",
+    "vendor": "cloudflare",
+    "native_id": "ak3kgdz2nyog",
+    "title": "Increased HTTP Errors in London (LHR)",
+    "url": "https://www.cloudflarestatus.com/incidents/ak3kgdz2nyog",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-14T07:43:00Z",
+    "resolved_at": "2026-10-14T07:51:00Z",
+    "duration_minutes": 8,
+    "components": [
+      "Network"
+    ],
+    "updates": [
+      {
+        "native_id": "808u5k7k4fbh",
+        "status": "resolved",
+        "body": "Cloudflare is aware of, and has resolved, an increased level of HTTP errors in London (LHR), between 07:43 UTC and 07:51 UTC. Services have resumed normal operation after this time.",
+        "created_at": "2026-10-14T10:54:23.731Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 74,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-09-29T23:01:27.000Z"
+        }
+      ],
+      "created_at": "2026-10-14T10:54:23.731Z",
+      "id": "ak3kgdz2nyog",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and has resolved, an increased level of HTTP errors in London (LHR), between 07:43 UTC and 07:51 UTC. Services have resumed normal operation after this time.",
+          "created_at": "2026-10-14T10:54:23.731Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T07:51:00.000Z",
+          "id": "808u5k7k4fbh",
+          "incident_id": "ak3kgdz2nyog",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T10:54:52.901Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased HTTP Errors in London (LHR)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-14T07:51:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/ak3kgdz2nyog",
+      "started_at": "2026-10-14T07:43:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-10-14T10:54:52.901Z"
+    }
+  },
+  {
+    "key": "cloudflare/9tmkb5hagxvp",
+    "vendor": "cloudflare",
+    "native_id": "9tmkb5hagxvp",
+    "title": "Degraded performance for Cloudflare Browser Run",
+    "url": "https://www.cloudflarestatus.com/incidents/9tmkb5hagxvp",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T05:57:52.574Z",
+    "resolved_at": "2026-10-15T06:46:30.724Z",
+    "duration_minutes": 48,
+    "components": [
+      "Browser Run"
+    ],
+    "updates": [
+      {
+        "native_id": "k6f3jfgb5ldd",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an issue causing degraded performance for Browser Run. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-10-15T05:57:52.574Z"
+      },
+      {
+        "native_id": "lgy1i0dmpdgr",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-10-15T06:37:16.305Z"
+      },
+      {
+        "native_id": "slji0ato2s07",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-15T06:44:45.697Z"
+      },
+      {
+        "native_id": "kqfaiodq6e3x",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T06:46:30.724Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-10-21T15:12:23.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "q9p27cmrspf8",
+          "name": "Browser Run",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 21,
+          "showcase": false,
+          "start_date": "2025-10-21",
+          "status": "operational",
+          "updated_at": "2026-07-16T17:10:07.000Z"
+        }
+      ],
+      "created_at": "2026-10-15T05:57:52.574Z",
+      "id": "9tmkb5hagxvp",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T06:46:30.724Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T06:46:30.724Z",
+          "id": "kqfaiodq6e3x",
+          "incident_id": "9tmkb5hagxvp",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T06:46:30.724Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-15T06:44:45.697Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T06:44:45.697Z",
+          "id": "slji0ato2s07",
+          "incident_id": "9tmkb5hagxvp",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T06:44:45.697Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-10-15T06:37:16.305Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T06:37:16.305Z",
+          "id": "lgy1i0dmpdgr",
+          "incident_id": "9tmkb5hagxvp",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T06:37:16.305Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "q9p27cmrspf8",
+              "name": "Cloudflare Sites and Services - Browser Run",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue causing degraded performance for Browser Run. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-10-15T05:57:52.574Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T05:57:52.574Z",
+          "id": "k6f3jfgb5ldd",
+          "incident_id": "9tmkb5hagxvp",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T05:57:52.574Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded performance for Cloudflare Browser Run",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T06:46:30.724Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/9tmkb5hagxvp",
+      "started_at": "2026-10-15T05:57:52.574Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T06:46:30.724Z"
+    }
+  },
+  {
+    "key": "cloudflare/alzmexlqangd",
+    "vendor": "cloudflare",
+    "native_id": "alzmexlqangd",
+    "title": "Cloudflare Workers AI Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T07:10:58.804Z",
+    "resolved_at": "2026-10-15T09:37:03.607Z",
+    "duration_minutes": 146,
+    "components": [
+      "Workers AI"
+    ],
+    "updates": [
+      {
+        "native_id": "rukd8zsf3xtz",
+        "status": "investigating",
+        "body": "Cloudflare has identified an issue whereby customers might experience errors from inference requests to certain models using Workers AI.\n\nThese are the list of impacted model:\n@cf/deepseek-ai/deepseek-v4-flash-0731\n@cf/deepseek-ai/deepseek-v4-pro-0813\n@cf/zai-org/glm-5.2\n@cf/zai-org/glm-5.3\n@cf/zai-org/glm-5.3-flash\n\nWe are working to mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-10-15T07:10:58.804Z"
+      },
+      {
+        "native_id": "29ymq9ewq8so",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-15T07:57:49.667Z"
+      },
+      {
+        "native_id": "atmhcwv1tcuc",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T09:37:03.607Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-02-14T15:05:51.000Z",
+          "description": "Workers AI allows you to run machine learning models, on the Cloudflare network, from your own code – whether that be from Workers, Pages, or anywhere via REST API.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "zvm7mqn92xzc",
+          "name": "Workers AI",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 117,
+          "showcase": false,
+          "start_date": "2024-02-14",
+          "status": "operational",
+          "updated_at": "2026-09-09T20:09:37.000Z"
+        }
+      ],
+      "created_at": "2026-10-15T07:10:58.804Z",
+      "id": "alzmexlqangd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T09:37:03.607Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T09:37:03.607Z",
+          "id": "atmhcwv1tcuc",
+          "incident_id": "alzmexlqangd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T09:37:03.607Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-15T07:57:49.667Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T07:57:49.667Z",
+          "id": "29ymq9ewq8so",
+          "incident_id": "alzmexlqangd",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T07:57:49.667Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zvm7mqn92xzc",
+              "name": "Cloudflare Sites and Services - Workers AI",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has identified an issue whereby customers might experience errors from inference requests to certain models using Workers AI.\n\nThese are the list of impacted model:\n@cf/deepseek-ai/deepseek-v4-flash-0731\n@cf/deepseek-ai/deepseek-v4-pro-0813\n@cf/zai-org/glm-5.2\n@cf/zai-org/glm-5.3\n@cf/zai-org/glm-5.3-flash\n\nWe are working to mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-10-15T07:10:58.804Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T07:10:58.804Z",
+          "id": "rukd8zsf3xtz",
+          "incident_id": "alzmexlqangd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T07:10:58.804Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Workers AI Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T09:37:03.607Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/alzmexlqangd",
+      "started_at": "2026-10-15T07:10:58.804Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T09:37:03.607Z"
+    }
+  },
+  {
+    "key": "cloudflare/wvzqdm21spz0",
+    "vendor": "cloudflare",
+    "native_id": "wvzqdm21spz0",
+    "title": "Increased Errors for Durable Objects and Downstream Services in Western Europe",
+    "url": "https://www.cloudflarestatus.com/incidents/wvzqdm21spz0",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T09:18:32.991Z",
+    "resolved_at": "2026-10-15T10:02:23.199Z",
+    "duration_minutes": 43,
+    "components": [
+      "Durable Objects"
+    ],
+    "updates": [
+      {
+        "native_id": "5h9fdlvdd4xq",
+        "status": "monitoring",
+        "body": "Cloudflare is investigating issues causing an increase of errors for Durable Objects and downstream services in Western Europe from 09:00 UTC. This is currently recovering. More updates to follow shortly.",
+        "created_at": "2026-10-15T09:18:33.26Z"
+      },
+      {
+        "native_id": "0ctc2hhgxnf8",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T10:02:23.199Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-10-15T10:02:23.000Z"
+        }
+      ],
+      "created_at": "2026-10-15T09:18:33.002Z",
+      "id": "wvzqdm21spz0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T10:02:23.199Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T10:02:23.199Z",
+          "id": "0ctc2hhgxnf8",
+          "incident_id": "wvzqdm21spz0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T10:02:23.199Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues causing an increase of errors for Durable Objects and downstream services in Western Europe from 09:00 UTC. This is currently recovering. More updates to follow shortly.",
+          "created_at": "2026-10-15T09:18:33.260Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T09:18:33.260Z",
+          "id": "5h9fdlvdd4xq",
+          "incident_id": "wvzqdm21spz0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T09:18:33.260Z"
+        }
+      ],
+      "monitoring_at": "2026-10-15T09:18:33.260Z",
+      "name": "Increased Errors for Durable Objects and Downstream Services in Western Europe",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T10:02:23.199Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/wvzqdm21spz0",
+      "started_at": "2026-10-15T09:18:32.991Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T10:02:23.231Z"
     }
   }
 ]

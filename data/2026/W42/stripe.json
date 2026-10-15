@@ -1,0 +1,133 @@
+[
+  {
+    "key": "stripe/scbk6p6p2btt",
+    "vendor": "stripe",
+    "native_id": "scbk6p6p2btt",
+    "title": "Elevated Amazon Pay errors",
+    "url": "https://stspg.io/wv3mtgwc5r38",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-15T02:06:22.19Z",
+    "resolved_at": "2026-10-15T02:18:40.96Z",
+    "duration_minutes": 12,
+    "components": [
+      "Global payments",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "8zry6hrl9tk8",
+        "status": "investigating",
+        "body": "We're currently investigating elevated error rates and response times with Amazon Pay payments. We'll post an update soon.",
+        "created_at": "2026-10-15T02:06:22.326Z"
+      },
+      {
+        "native_id": "npkykyxp68fq",
+        "status": "resolved",
+        "body": "From 01:30–01:56 UTC, we saw elevated error rates on Amazon Pay payments due to issues with an upstream payment processor. This is now resolved.",
+        "created_at": "2026-10-15T02:18:40.96Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:58.953Z",
+          "description": "Checkout, Elements, Connect, Payment Links, Terminal, 3DS, and more",
+          "group": false,
+          "group_id": null,
+          "id": "qcs5gg7rz4ps",
+          "name": "Global payments",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-10-15T02:18:40.899Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-10-15T02:18:40.923Z"
+        }
+      ],
+      "created_at": "2026-10-15T02:06:22.199Z",
+      "id": "scbk6p6p2btt",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 01:30–01:56 UTC, we saw elevated error rates on Amazon Pay payments due to issues with an upstream payment processor. This is now resolved.",
+          "created_at": "2026-10-15T02:18:40.960Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T02:18:40.960Z",
+          "id": "npkykyxp68fq",
+          "incident_id": "scbk6p6p2btt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T02:18:40.960Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qcs5gg7rz4ps",
+              "name": "Global payments",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated error rates and response times with Amazon Pay payments. We'll post an update soon.",
+          "created_at": "2026-10-15T02:06:22.326Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T02:06:22.326Z",
+          "id": "8zry6hrl9tk8",
+          "incident_id": "scbk6p6p2btt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T02:06:22.326Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Amazon Pay errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T02:18:40.960Z",
+      "shortlink": "https://stspg.io/wv3mtgwc5r38",
+      "started_at": "2026-10-15T02:06:22.190Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T02:18:40.990Z"
+    }
+  }
+]

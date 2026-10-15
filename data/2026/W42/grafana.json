@@ -617,5 +617,186 @@
       "status": "resolved",
       "updated_at": "2026-10-13T20:46:44.720Z"
     }
+  },
+  {
+    "key": "grafana/wxxw35jkm52b",
+    "vendor": "grafana",
+    "native_id": "wxxw35jkm52b",
+    "title": "Authentication errors in prod-us-west-0",
+    "url": "https://stspg.io/wrxbbbsyx0f7",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-14T12:57:24.138Z",
+    "resolved_at": "2026-10-14T15:45:59.832Z",
+    "duration_minutes": 168,
+    "components": [
+      "AWS US West - prod-us-west-0"
+    ],
+    "updates": [
+      {
+        "native_id": "ysfll1cfb49q",
+        "status": "investigating",
+        "body": "We are investigating increased authentication errors affecting Grafana Cloud in the prod-us-west-0 region.\n\nCustomers may experience intermittent failures for requests that require authentication.\n\nOur engineering team has identified database performance degradation affecting the authentication service and is investigating the underlying cause.\n\nWe will provide another update as more information becomes available.",
+        "created_at": "2026-10-14T12:57:24.259Z"
+      },
+      {
+        "native_id": "djzpnrkrmf5m",
+        "status": "identified",
+        "body": "The issue has been identified, and we have applied mitigations on our end. We are currently observing the progress.",
+        "created_at": "2026-10-14T13:58:12.45Z"
+      },
+      {
+        "native_id": "lh3995n2d91m",
+        "status": "identified",
+        "body": "We have noticed improvements across services. We will now be applying a more permanent fix. Impacted users may experience a disruption in the auth-api service of up to 15min while we apply a DB patch that will improve performance.",
+        "created_at": "2026-10-14T15:00:04.003Z"
+      },
+      {
+        "native_id": "l7w9mk9dzzx6",
+        "status": "monitoring",
+        "body": "The fix has been implemented, and we are monitoring the results.",
+        "created_at": "2026-10-14T15:25:26.834Z"
+      },
+      {
+        "native_id": "fgvgx5g4jx4x",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-14T15:45:59.832Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-18T21:05:40.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "8wq97lhx59x7",
+          "name": "AWS US West - prod-us-west-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2023-09-18",
+          "status": "operational",
+          "updated_at": "2026-10-14T15:45:59.783Z"
+        }
+      ],
+      "created_at": "2026-10-14T12:57:24.148Z",
+      "id": "wxxw35jkm52b",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-14T15:45:59.832Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T15:45:59.832Z",
+          "id": "fgvgx5g4jx4x",
+          "incident_id": "wxxw35jkm52b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T15:45:59.832Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The fix has been implemented, and we are monitoring the results.",
+          "created_at": "2026-10-14T15:25:26.834Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T15:25:26.834Z",
+          "id": "l7w9mk9dzzx6",
+          "incident_id": "wxxw35jkm52b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T15:25:26.834Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have noticed improvements across services. We will now be applying a more permanent fix. Impacted users may experience a disruption in the auth-api service of up to 15min while we apply a DB patch that will improve performance.",
+          "created_at": "2026-10-14T15:00:04.003Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T15:00:04.003Z",
+          "id": "lh3995n2d91m",
+          "incident_id": "wxxw35jkm52b",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T15:00:04.003Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified, and we have applied mitigations on our end. We are currently observing the progress.",
+          "created_at": "2026-10-14T13:58:12.450Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T13:58:12.450Z",
+          "id": "djzpnrkrmf5m",
+          "incident_id": "wxxw35jkm52b",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T13:58:12.450Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased authentication errors affecting Grafana Cloud in the prod-us-west-0 region.\n\nCustomers may experience intermittent failures for requests that require authentication.\n\nOur engineering team has identified database performance degradation affecting the authentication service and is investigating the underlying cause.\n\nWe will provide another update as more information becomes available.",
+          "created_at": "2026-10-14T12:57:24.259Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T12:57:24.259Z",
+          "id": "ysfll1cfb49q",
+          "incident_id": "wxxw35jkm52b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T12:57:24.259Z"
+        }
+      ],
+      "monitoring_at": "2026-10-14T15:25:26.834Z",
+      "name": "Authentication errors in prod-us-west-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-14T15:45:59.832Z",
+      "shortlink": "https://stspg.io/wrxbbbsyx0f7",
+      "started_at": "2026-10-14T12:57:24.138Z",
+      "status": "resolved",
+      "updated_at": "2026-10-14T15:45:59.854Z"
+    }
   }
 ]

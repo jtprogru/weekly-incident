@@ -268,7 +268,7 @@
           "showcase": false,
           "start_date": "2023-06-12",
           "status": "operational",
-          "updated_at": "2026-10-05T22:35:46.000Z"
+          "updated_at": "2026-10-15T10:02:23.000Z"
         },
         {
           "created_at": "2022-07-05T10:55:24.000Z",
@@ -1415,7 +1415,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-12T22:39:08.000Z"
+          "updated_at": "2026-10-15T09:45:08.000Z"
         },
         {
           "created_at": "2023-01-13T13:39:19.000Z",
@@ -1649,8 +1649,10 @@
     "title": "Elevated Errors in China Network Colos",
     "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
     "impact": "minor",
-    "status": "identified",
-    "started_at": "2026-10-10T04:13:17Z",
+    "status": "resolved",
+    "started_at": "2026-10-10T04:13:17.714Z",
+    "resolved_at": "2026-10-15T09:28:39.015Z",
+    "duration_minutes": 7515,
     "components": [
       "China Network"
     ],
@@ -1678,6 +1680,18 @@
         "status": "identified",
         "body": "We have identified that increased latency and 5xx errors affecting certain China Network colos are caused by cross-border routing instability in the China network. \nWe are actively working to mitigate impact for affected customers by adjusting traffic routing, and are continuing to work with our network partners on a resolution. Customers experiencing issues may contact Cloudflare Support.",
         "created_at": "2026-10-12T15:33:07.052Z"
+      },
+      {
+        "native_id": "b450bqcs63hy",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-14T17:50:10.585Z"
+      },
+      {
+        "native_id": "72bz4bp99gfy",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T09:28:39.015Z"
       }
     ],
     "first_seen_at": "2026-10-10T11:28:07.824738728Z",
@@ -1695,14 +1709,54 @@
           "position": 131,
           "showcase": false,
           "start_date": "2026-10-10",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-10T04:13:17.000Z"
+          "status": "operational",
+          "updated_at": "2026-10-15T09:28:38.000Z"
         }
       ],
       "created_at": "2026-10-10T04:13:17.000Z",
       "id": "cyxclg7nnhjy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T09:28:39.015Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T09:28:39.015Z",
+          "id": "72bz4bp99gfy",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T09:28:39.015Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-14T17:50:10.585Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T17:50:10.585Z",
+          "id": "b450bqcs63hy",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T17:50:10.585Z"
+        },
         {
           "affected_components": [
             {
@@ -1784,15 +1838,15 @@
           "updated_at": "2026-10-10T04:13:17.834Z"
         }
       ],
-      "monitoring_at": null,
+      "monitoring_at": "2026-10-14T17:50:10.585Z",
       "name": "Elevated Errors in China Network Colos",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-15T09:28:39.015Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
-      "started_at": "2026-10-10T04:13:17.000Z",
-      "status": "identified",
-      "updated_at": "2026-10-12T15:33:07.000Z"
+      "started_at": "2026-10-10T04:13:17.714Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T09:28:39.043Z"
     }
   }
 ]

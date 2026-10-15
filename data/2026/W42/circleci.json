@@ -1,0 +1,131 @@
+[
+  {
+    "key": "circleci/xc1s7vqky9rd",
+    "vendor": "circleci",
+    "native_id": "xc1s7vqky9rd",
+    "title": "Delays starting macOS jobs that use Xcode 26.6.0",
+    "url": "https://stspg.io/nhpcykblrb28",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-14T14:47:47.993Z",
+    "resolved_at": "2026-10-14T16:01:16.75Z",
+    "duration_minutes": 73,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "c6fbf1b0xrg5",
+        "status": "investigating",
+        "body": "Since approximately 14:00 UTC, customers running macOS jobs that use Xcode 26.6.0 on the M4 Pro large resource class are experiencing delays starting jobs. Wait times have reached 30 minutes or more. \n\nThank you for your patience while our engineers investigate. We will provide another update by 15:30 UTC.",
+        "created_at": "2026-10-14T14:47:48.245Z"
+      },
+      {
+        "native_id": "2h0nzgm2kfnl",
+        "status": "identified",
+        "body": "Delays starting macOS jobs that use Xcode 26.6.0 have recovered. Since approximately 15:11 UTC, macOS jobs that use Xcode 26.4 are experiencing delays starting, with wait times of about 30 minutes. \n\nThank you for your patience while our engineers work to resolve this. We will provide another update by 15:45 UTC.",
+        "created_at": "2026-10-14T15:17:16.952Z"
+      },
+      {
+        "native_id": "zfrjzr0703bt",
+        "status": "resolved",
+        "body": "Between approximately 14:00 UTC and 15:51 UTC on October 14, customers running macOS jobs that use Xcode 26.6.0 or Xcode 26.4 experienced delays starting jobs. From approximately 14:00 UTC, jobs that use Xcode 26.6.0 on the M4 Pro large resource class waited 30 minutes or more to start, and these delays recovered at approximately 15:12 UTC. From approximately 15:11 UTC, jobs that use Xcode 26.4 waited about 30 minutes to start. \n\nThe issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-10-14T16:01:16.75Z"
+      }
+    ],
+    "first_seen_at": "2026-10-15T10:26:50.063942853Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-14T16:01:16.704Z"
+        }
+      ],
+      "created_at": "2026-10-14T14:47:48.002Z",
+      "id": "xc1s7vqky9rd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between approximately 14:00 UTC and 15:51 UTC on October 14, customers running macOS jobs that use Xcode 26.6.0 or Xcode 26.4 experienced delays starting jobs. From approximately 14:00 UTC, jobs that use Xcode 26.6.0 on the M4 Pro large resource class waited 30 minutes or more to start, and these delays recovered at approximately 15:12 UTC. From approximately 15:11 UTC, jobs that use Xcode 26.4 waited about 30 minutes to start. \n\nThe issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-10-14T16:01:16.750Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T16:01:16.750Z",
+          "id": "zfrjzr0703bt",
+          "incident_id": "xc1s7vqky9rd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T16:01:16.750Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Delays starting macOS jobs that use Xcode 26.6.0 have recovered. Since approximately 15:11 UTC, macOS jobs that use Xcode 26.4 are experiencing delays starting, with wait times of about 30 minutes. \n\nThank you for your patience while our engineers work to resolve this. We will provide another update by 15:45 UTC.",
+          "created_at": "2026-10-14T15:17:16.952Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T15:17:16.952Z",
+          "id": "2h0nzgm2kfnl",
+          "incident_id": "xc1s7vqky9rd",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T15:17:16.952Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since approximately 14:00 UTC, customers running macOS jobs that use Xcode 26.6.0 on the M4 Pro large resource class are experiencing delays starting jobs. Wait times have reached 30 minutes or more. \n\nThank you for your patience while our engineers investigate. We will provide another update by 15:30 UTC.",
+          "created_at": "2026-10-14T14:47:48.245Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T14:47:48.245Z",
+          "id": "c6fbf1b0xrg5",
+          "incident_id": "xc1s7vqky9rd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T14:47:48.245Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Delays starting macOS jobs that use Xcode 26.6.0",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-14T16:01:16.750Z",
+      "shortlink": "https://stspg.io/nhpcykblrb28",
+      "started_at": "2026-10-14T14:47:47.993Z",
+      "status": "resolved",
+      "updated_at": "2026-10-14T16:01:16.776Z"
+    }
+  }
+]
