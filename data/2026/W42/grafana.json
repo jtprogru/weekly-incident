@@ -798,5 +798,289 @@
       "status": "resolved",
       "updated_at": "2026-10-14T15:45:59.854Z"
     }
+  },
+  {
+    "key": "grafana/r2qy9bfwfqy9",
+    "vendor": "grafana",
+    "native_id": "r2qy9bfwfqy9",
+    "title": "Tempo: High Latency in prod-eu-west-2",
+    "url": "https://stspg.io/qth8ndlqhdj1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T14:35:17.451Z",
+    "resolved_at": "2026-10-15T16:58:25.105Z",
+    "duration_minutes": 143,
+    "components": [
+      "AWS Germany - prod-eu-west-2: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "7hhvxdh64pn3",
+        "status": "identified",
+        "body": "We observed some spikes in latency starting at approximately 12:50 UTC. We are working on a resolution. \n\nNext update by 15:30 UTC",
+        "created_at": "2026-10-15T14:35:17.734Z"
+      },
+      {
+        "native_id": "jjl9hfvrnmf0",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.\n\nNext update by 16:30 UTC",
+        "created_at": "2026-10-15T15:20:22.103Z"
+      },
+      {
+        "native_id": "mhp2l0zm8h0g",
+        "status": "identified",
+        "body": "Things are starting to stabilize as we continue to work on a mitigation.",
+        "created_at": "2026-10-15T16:08:52.028Z"
+      },
+      {
+        "native_id": "0t1hkb71mqnd",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T16:58:25.105Z"
+      }
+    ],
+    "first_seen_at": "2026-10-16T10:14:26.768377212Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:54:44.557Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "bg7pryvvh19l",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-15T16:58:25.023Z"
+        }
+      ],
+      "created_at": "2026-10-15T14:35:17.461Z",
+      "id": "r2qy9bfwfqy9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T16:58:25.105Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T16:58:25.105Z",
+          "id": "0t1hkb71mqnd",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T16:58:25.105Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Things are starting to stabilize as we continue to work on a mitigation.",
+          "created_at": "2026-10-15T16:08:52.028Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T16:08:52.028Z",
+          "id": "mhp2l0zm8h0g",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T16:08:52.028Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.\n\nNext update by 16:30 UTC",
+          "created_at": "2026-10-15T15:20:22.103Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T15:20:22.103Z",
+          "id": "jjl9hfvrnmf0",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T15:20:22.103Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We observed some spikes in latency starting at approximately 12:50 UTC. We are working on a resolution. \n\nNext update by 15:30 UTC",
+          "created_at": "2026-10-15T14:35:17.734Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T14:35:17.734Z",
+          "id": "7hhvxdh64pn3",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T14:35:17.734Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Tempo: High Latency in prod-eu-west-2",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T16:58:25.105Z",
+      "shortlink": "https://stspg.io/qth8ndlqhdj1",
+      "started_at": "2026-10-15T14:35:17.451Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T16:58:25.135Z"
+    }
+  },
+  {
+    "key": "grafana/ktd658zvsw36",
+    "vendor": "grafana",
+    "native_id": "ktd658zvsw36",
+    "title": "Tempo Write Failures in prod-us-central-0",
+    "url": "https://stspg.io/0w7m43wy213v",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-15T16:10:22.122Z",
+    "resolved_at": "2026-10-15T21:53:13.502Z",
+    "duration_minutes": 342,
+    "components": [
+      "GCP US Central - prod-us-central-0: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "yjpp8xqjjpg0",
+        "status": "investigating",
+        "body": "We are investigating Intermittent write failures in tempo-prod (prod-us-central-0) due to Google Cloud Storage internal errors.",
+        "created_at": "2026-10-15T16:10:22.276Z"
+      },
+      {
+        "native_id": "mwxx82pfyf17",
+        "status": "monitoring",
+        "body": "Things are starting to recover, and we continue to monitor the issue.",
+        "created_at": "2026-10-15T18:00:51.459Z"
+      },
+      {
+        "native_id": "wprfcmzx0c8t",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T21:53:13.502Z"
+      }
+    ],
+    "first_seen_at": "2026-10-16T10:14:26.768377212Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-11-03T15:41:20.075Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "t7pbglh025rz",
+          "name": "GCP US Central - prod-us-central-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 60,
+          "showcase": false,
+          "start_date": "2020-11-03",
+          "status": "operational",
+          "updated_at": "2026-10-15T21:53:13.453Z"
+        }
+      ],
+      "created_at": "2026-10-15T16:10:22.136Z",
+      "id": "ktd658zvsw36",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T21:53:13.502Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T21:53:13.502Z",
+          "id": "wprfcmzx0c8t",
+          "incident_id": "ktd658zvsw36",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T21:53:13.502Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Things are starting to recover, and we continue to monitor the issue.",
+          "created_at": "2026-10-15T18:00:51.459Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T18:00:51.459Z",
+          "id": "mwxx82pfyf17",
+          "incident_id": "ktd658zvsw36",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T18:00:51.459Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "t7pbglh025rz",
+              "name": "Traces - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating Intermittent write failures in tempo-prod (prod-us-central-0) due to Google Cloud Storage internal errors.",
+          "created_at": "2026-10-15T16:10:22.276Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T16:10:22.276Z",
+          "id": "yjpp8xqjjpg0",
+          "incident_id": "ktd658zvsw36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T16:10:22.276Z"
+        }
+      ],
+      "monitoring_at": "2026-10-15T18:00:51.459Z",
+      "name": "Tempo Write Failures in prod-us-central-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T21:53:13.502Z",
+      "shortlink": "https://stspg.io/0w7m43wy213v",
+      "started_at": "2026-10-15T16:10:22.122Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T21:53:13.525Z"
+    }
   }
 ]

@@ -91,7 +91,7 @@
       {
         "native_id": "zypcxn80fzqb",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 12th 2026 11:51 UTC GitHub experienced elevated 500 responses across several application pages. This caused failures on Issues and Pull Requests as well as Projects and Actions. Customers also experienced delayed notifications in their web inbox and via email. \u003cbr /\u003e\u003cbr /\u003eThe immediate impact to Issues, Pull Requests, Projects, and Actions was mitigated by 12:41 UTC on October 12th. Notifications deliveries to the web inbox and via email were recovering at 15:27 UTC and fully mitigated by 20:16 UTC. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered through a latent condition in our notifications delivery pipeline that put a high volume of an expensive query on our sharded database replicas. This reduced available database capacity to serve requests for Issues, Pull Requests, Projects, and Actions.\u003cbr /\u003e\u003cbr /\u003eWe have fixed the notifications pipeline’s code path that issued the expensive query. We are also improving resilience of the database layer to reduce the likelihood and impact of similar incidents.",
         "created_at": "2026-10-12T20:16:07.447Z"
       }
     ],
@@ -169,7 +169,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 12th 2026 11:51 UTC GitHub experienced elevated 500 responses across several application pages. This caused failures on Issues and Pull Requests as well as Projects and Actions. Customers also experienced delayed notifications in their web inbox and via email. \u003cbr /\u003e\u003cbr /\u003eThe immediate impact to Issues, Pull Requests, Projects, and Actions was mitigated by 12:41 UTC on October 12th. Notifications deliveries to the web inbox and via email were recovering at 15:27 UTC and fully mitigated by 20:16 UTC. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered through a latent condition in our notifications delivery pipeline that put a high volume of an expensive query on our sharded database replicas. This reduced available database capacity to serve requests for Issues, Pull Requests, Projects, and Actions.\u003cbr /\u003e\u003cbr /\u003eWe have fixed the notifications pipeline’s code path that issued the expensive query. We are also improving resilience of the database layer to reduce the likelihood and impact of similar incidents.",
           "created_at": "2026-10-12T20:16:07.447Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -178,7 +178,7 @@
           "incident_id": "93njd414rpbx",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-12T20:16:07.447Z"
+          "updated_at": "2026-10-15T17:28:05.697Z"
         },
         {
           "affected_components": [
@@ -573,7 +573,7 @@
       "shortlink": "https://stspg.io/flldq0dn2wdz",
       "started_at": "2026-10-12T12:21:47.965Z",
       "status": "resolved",
-      "updated_at": "2026-10-12T20:16:07.472Z"
+      "updated_at": "2026-10-15T17:28:05.702Z"
     }
   },
   {
@@ -626,6 +626,115 @@
       "started_at": "2026-10-14T00:12:44.500Z",
       "status": "resolved",
       "updated_at": "2026-10-14T00:13:11.803Z"
+    }
+  },
+  {
+    "key": "github/vlxrztp88101",
+    "vendor": "github",
+    "native_id": "vlxrztp88101",
+    "title": "CCA Automations are delayed when starting an Automation",
+    "url": "https://stspg.io/vk8t78vtswmg",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T18:31:49.832Z",
+    "resolved_at": "2026-10-15T18:56:04.25Z",
+    "duration_minutes": 24,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "ny9ht49qmg8d",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-15T18:31:49.894Z"
+      },
+      {
+        "native_id": "94vqsrw6j1wp",
+        "status": "investigating",
+        "body": "CCA Automations are experiencing delays when users start an Automation",
+        "created_at": "2026-10-15T18:34:34.711Z"
+      },
+      {
+        "native_id": "v08tp5cdc474",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-15T18:53:04.477Z"
+      },
+      {
+        "native_id": "lj7tkmj2m8rx",
+        "status": "resolved",
+        "body": "We suspected that CCA Automations were experiencing delays when users start an Automation, but further investigation found that there was no delay or impact to CCA Automations.\u003cbr /\u003e",
+        "created_at": "2026-10-15T18:56:04.25Z"
+      }
+    ],
+    "first_seen_at": "2026-10-16T10:14:26.768377212Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-15T18:31:49.838Z",
+      "id": "vlxrztp88101",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We suspected that CCA Automations were experiencing delays when users start an Automation, but further investigation found that there was no delay or impact to CCA Automations.\u003cbr /\u003e",
+          "created_at": "2026-10-15T18:56:04.250Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T18:56:04.250Z",
+          "id": "lj7tkmj2m8rx",
+          "incident_id": "vlxrztp88101",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T19:00:06.024Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-15T18:53:04.477Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T18:53:04.477Z",
+          "id": "v08tp5cdc474",
+          "incident_id": "vlxrztp88101",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T18:53:04.477Z"
+        },
+        {
+          "affected_components": null,
+          "body": "CCA Automations are experiencing delays when users start an Automation",
+          "created_at": "2026-10-15T18:34:34.711Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T18:34:34.711Z",
+          "id": "94vqsrw6j1wp",
+          "incident_id": "vlxrztp88101",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T18:34:34.711Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-15T18:31:49.894Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T18:31:49.894Z",
+          "id": "ny9ht49qmg8d",
+          "incident_id": "vlxrztp88101",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T18:31:49.894Z"
+        }
+      ],
+      "monitoring_at": "2026-10-15T18:53:04.477Z",
+      "name": "CCA Automations are delayed when starting an Automation",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T18:56:04.250Z",
+      "shortlink": "https://stspg.io/vk8t78vtswmg",
+      "started_at": "2026-10-15T18:31:49.832Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T19:00:06.028Z"
     }
   }
 ]

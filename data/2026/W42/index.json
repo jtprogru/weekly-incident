@@ -2,103 +2,103 @@
   "week": "2026-W42",
   "from": "2026-10-12T00:00:00Z",
   "to": "2026-10-19T00:00:00Z",
-  "generated_at": "2026-10-15T10:26:50.063942853Z",
+  "generated_at": "2026-10-16T10:14:26.768377212Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 35,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
       "ok": true,
-      "fetched_at": "2026-10-15T10:26:50.063942853Z",
+      "fetched_at": "2026-10-16T10:14:26.768377212Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
@@ -110,17 +110,57 @@
       "title": "Audit Logs v2 ingestion is missing multiple Cloudflare products",
       "url": "https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-10-13T10:14:58.278Z",
-      "ongoing": true,
+      "resolved_at": "2026-10-16T00:36:52.547Z",
+      "duration_minutes": 3741,
+      "ongoing": false,
       "components": [
         "Audit Logs"
       ],
       "score": {
-        "value": 5203.8,
-        "duration_minutes": 2891,
+        "value": 6733.8,
+        "duration_minutes": 3741,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/fj19hw3kzfry",
+      "vendor": "grafana",
+      "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
+      "url": "https://stspg.io/3kqkpqlqm6f5",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-10-13T09:23:32.31Z",
+      "ongoing": true,
+      "components": [
+        "Incident Management and Response (IRM)"
+      ],
+      "score": {
+        "value": 4370,
+        "duration_minutes": 4370,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M4XNQX7C6RCBNGX9H711WFSG",
+      "vendor": "openai",
+      "title": "Delayed Costs data in the Compliance API",
+      "url": "https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-10-14T17:00:44Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 3709.5,
+        "duration_minutes": 2473,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -143,26 +183,6 @@
         "duration_minutes": 1968,
         "components": 1,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "grafana/fj19hw3kzfry",
-      "vendor": "grafana",
-      "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
-      "url": "https://stspg.io/3kqkpqlqm6f5",
-      "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-10-13T09:23:32.31Z",
-      "ongoing": true,
-      "components": [
-        "Incident Management and Response (IRM)"
-      ],
-      "score": {
-        "value": 2943,
-        "duration_minutes": 2943,
-        "components": 1,
-        "vendor_weight": 1
       },
       "above_threshold": true
     },
@@ -213,20 +233,53 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4XNQX7C6RCBNGX9H711WFSG",
-      "vendor": "openai",
-      "title": "Delayed Costs data in the Compliance API",
-      "url": "https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG",
+      "key": "cloudflare/mxthd6onaplz",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 502 Errors",
+      "url": "https://www.cloudflarestatus.com/incidents/mxthd6onaplz",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-14T17:00:44Z",
-      "ongoing": true,
-      "components": [],
+      "status": "resolved",
+      "started_at": "2026-10-15T10:47:18.984Z",
+      "resolved_at": "2026-10-15T20:39:01.906Z",
+      "duration_minutes": 591,
+      "ongoing": false,
+      "components": [
+        "CDN/Cache",
+        "Network"
+      ],
       "score": {
-        "value": 1569,
-        "duration_minutes": 1046,
-        "components": 1,
-        "vendor_weight": 1.5
+        "value": 2127.6,
+        "duration_minutes": 591,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/9yl8m5h16g1z",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects",
+      "url": "https://www.cloudflarestatus.com/incidents/9yl8m5h16g1z",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T15:37:05.14Z",
+      "resolved_at": "2026-10-15T18:00:10Z",
+      "duration_minutes": 143,
+      "ongoing": false,
+      "components": [
+        "AI Search",
+        "Artifacts",
+        "Containers",
+        "D1",
+        "Durable Objects",
+        "Workers Assets",
+        "Workflows"
+      ],
+      "score": {
+        "value": 1801.8,
+        "duration_minutes": 143,
+        "components": 7,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -339,6 +392,28 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/5py8l9ees6di",
+      "vendor": "cloudflare",
+      "title": "Pages.dev sites experiencing availability issues in Norway",
+      "url": "https://www.cloudflarestatus.com/incidents/5py8l9ees6di",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T16:42:45.547Z",
+      "resolved_at": "2026-10-15T21:26:33.906Z",
+      "duration_minutes": 283,
+      "ongoing": false,
+      "components": [
+        "Pages"
+      ],
+      "score": {
+        "value": 509.40000000000003,
+        "duration_minutes": 283,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/c5zm69crkl0t",
       "vendor": "grafana",
       "title": "Elevated Errors Ingesting Metrics in AWS US East (VA)",
@@ -378,6 +453,74 @@
         "value": 342,
         "duration_minutes": 190,
         "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/ktd658zvsw36",
+      "vendor": "grafana",
+      "title": "Tempo Write Failures in prod-us-central-0",
+      "url": "https://stspg.io/0w7m43wy213v",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-15T16:10:22.122Z",
+      "resolved_at": "2026-10-15T21:53:13.502Z",
+      "duration_minutes": 342,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-0: Ingestion"
+      ],
+      "score": {
+        "value": 342,
+        "duration_minutes": 342,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/wpq9v3pzhcwl",
+      "vendor": "cloudflare",
+      "title": "DNS Update Delays",
+      "url": "https://www.cloudflarestatus.com/incidents/wpq9v3pzhcwl",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T15:33:46.408Z",
+      "resolved_at": "2026-10-15T18:19:17.953Z",
+      "duration_minutes": 165,
+      "ongoing": false,
+      "components": [
+        "DNS Updates"
+      ],
+      "score": {
+        "value": 297,
+        "duration_minutes": 165,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/fiv2bu3zf8kx",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Eastern North America",
+      "url": "https://www.cloudflarestatus.com/incidents/fiv2bu3zf8kx",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-15T20:48:17.704Z",
+      "resolved_at": "2026-10-15T21:38:12.057Z",
+      "duration_minutes": 49,
+      "ongoing": false,
+      "components": [
+        "Ashburn, VA, United States - (IAD)",
+        "Newark, NJ, United States - (EWR)",
+        "Network"
+      ],
+      "score": {
+        "value": 264.6,
+        "duration_minutes": 49,
+        "components": 3,
         "vendor_weight": 1.8
       },
       "above_threshold": true
@@ -469,6 +612,26 @@
       "above_threshold": true
     },
     {
+      "key": "openai/01M506BA4XRSWH7THR53HQGN3Z",
+      "vendor": "openai",
+      "title": "Widespread feature degradation",
+      "url": "https://status.openai.com/incidents/01M506BA4XRSWH7THR53HQGN3Z",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-15T16:29:26Z",
+      "resolved_at": "2026-10-15T18:56:00Z",
+      "duration_minutes": 146,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 219,
+        "duration_minutes": 146,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/wxxw35jkm52b",
       "vendor": "grafana",
       "title": "Authentication errors in prod-us-west-0",
@@ -487,6 +650,119 @@
         "duration_minutes": 168,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/rwg302l45yc3",
+      "vendor": "stripe",
+      "title": "Elevated declines on Mastercard",
+      "url": "https://stspg.io/csnmnfc5cgjv",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-15T18:35:08.54Z",
+      "resolved_at": "2026-10-15T20:53:25.517Z",
+      "duration_minutes": 138,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 165.6,
+        "duration_minutes": 138,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/r2qy9bfwfqy9",
+      "vendor": "grafana",
+      "title": "Tempo: High Latency in prod-eu-west-2",
+      "url": "https://stspg.io/qth8ndlqhdj1",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T14:35:17.451Z",
+      "resolved_at": "2026-10-15T16:58:25.105Z",
+      "duration_minutes": 143,
+      "ongoing": false,
+      "components": [
+        "AWS Germany - prod-eu-west-2: Ingestion"
+      ],
+      "score": {
+        "value": 143,
+        "duration_minutes": 143,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/51udczr46uj2",
+      "vendor": "cloudflare",
+      "title": "Workers Cron Triggers issues",
+      "url": "https://www.cloudflarestatus.com/incidents/51udczr46uj2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-16T00:01:49.615Z",
+      "resolved_at": "2026-10-16T01:06:26.662Z",
+      "duration_minutes": 64,
+      "ongoing": false,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 115.2,
+        "duration_minutes": 64,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/w43n5lblyvu8",
+      "vendor": "cloudflare",
+      "title": "Network issues in Incheon (ICN)",
+      "url": "https://www.cloudflarestatus.com/incidents/w43n5lblyvu8",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-16T01:13:00Z",
+      "resolved_at": "2026-10-16T02:11:00Z",
+      "duration_minutes": 58,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 104.4,
+        "duration_minutes": 58,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/ybyy2whvd8ef",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in London",
+      "url": "https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-15T17:33:04.996Z",
+      "resolved_at": "2026-10-15T17:46:19.926Z",
+      "duration_minutes": 13,
+      "ongoing": false,
+      "components": [
+        "London, United Kingdom - (LHR)",
+        "Durable Objects",
+        "R2",
+        "RealtimeKit"
+      ],
+      "score": {
+        "value": 93.60000000000001,
+        "duration_minutes": 13,
+        "components": 4,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -535,6 +811,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/vt8q2vjyx9vd",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Thailand",
+      "url": "https://www.cloudflarestatus.com/incidents/vt8q2vjyx9vd",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-16T06:48:00Z",
+      "resolved_at": "2026-10-16T07:30:00Z",
+      "duration_minutes": 42,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 75.60000000000001,
+        "duration_minutes": 42,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "circleci/xc1s7vqky9rd",
       "vendor": "circleci",
       "title": "Delays starting macOS jobs that use Xcode 26.6.0",
@@ -553,6 +851,50 @@
         "duration_minutes": 73,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/xh6wdjrte1ez",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Access Availability Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/xh6wdjrte1ez",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-16T09:20:43.089Z",
+      "resolved_at": "2026-10-16T09:59:03.27Z",
+      "duration_minutes": 38,
+      "ongoing": false,
+      "components": [
+        "Access"
+      ],
+      "score": {
+        "value": 68.4,
+        "duration_minutes": 38,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "stripe/lmd6ls9nt7l0",
+      "vendor": "stripe",
+      "title": "Elevated declines on Visa",
+      "url": "https://stspg.io/f68wb7j65qf6",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-10-15T17:07:18.865Z",
+      "resolved_at": "2026-10-15T18:01:17.165Z",
+      "duration_minutes": 53,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 63.599999999999994,
+        "duration_minutes": 53,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": false
     },
@@ -707,6 +1049,26 @@
       "above_threshold": false
     },
     {
+      "key": "github/vlxrztp88101",
+      "vendor": "github",
+      "title": "CCA Automations are delayed when starting an Automation",
+      "url": "https://stspg.io/vk8t78vtswmg",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T18:31:49.832Z",
+      "resolved_at": "2026-10-15T18:56:04.25Z",
+      "duration_minutes": 24,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 36,
+        "duration_minutes": 24,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "stripe/scbk6p6p2btt",
       "vendor": "stripe",
       "title": "Elevated Amazon Pay errors",
@@ -746,6 +1108,26 @@
       "score": {
         "value": 14.4,
         "duration_minutes": 8,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/594dc44q2dcc",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Kuala Lumpur",
+      "url": "https://www.cloudflarestatus.com/incidents/594dc44q2dcc",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-15T16:05:00Z",
+      "resolved_at": "2026-10-15T16:10:00Z",
+      "duration_minutes": 5,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 9,
+        "duration_minutes": 5,
         "components": 1,
         "vendor_weight": 1.8
       },
