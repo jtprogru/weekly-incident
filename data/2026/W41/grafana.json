@@ -3,7 +3,7 @@
     "key": "grafana/6x77ccl9shpy",
     "vendor": "grafana",
     "native_id": "6x77ccl9shpy",
-    "title": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
+    "title": "IRM Unable to Send SMS to Thailand Numbers",
     "url": "https://stspg.io/9l8htmqt82s2",
     "impact": "minor",
     "status": "identified",
@@ -47,6 +47,12 @@
         "status": "identified",
         "body": "SMS delivery to Austrian numbers has been restored. SMS delivery to Thailand and Bangladesh is still affected, and we are continuing to work on a resolution. We will provide another update as soon as we have more information to share.\n\nIn the meantime, we recommend that affected users configure mobile push or phone calls as notifications.",
         "created_at": "2026-10-15T09:33:27.851Z"
+      },
+      {
+        "native_id": "2cj4m7mr447k",
+        "status": "identified",
+        "body": "SMS delivery to Bangladesh has been restored. SMS delivery to Thailand is still affected, and we are continuing to work on a resolution. We will provide another update as soon as we have more information to share.\n\nIn the meantime, we recommend that affected users configure mobile push or phone calls as notifications.",
+        "created_at": "2026-10-16T15:20:06.227Z"
       }
     ],
     "first_seen_at": "2026-10-06T12:18:23.576404692Z",
@@ -72,6 +78,26 @@
       "id": "6x77ccl9shpy",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "SMS delivery to Bangladesh has been restored. SMS delivery to Thailand is still affected, and we are continuing to work on a resolution. We will provide another update as soon as we have more information to share.\n\nIn the meantime, we recommend that affected users configure mobile push or phone calls as notifications.",
+          "created_at": "2026-10-16T15:20:06.227Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-16T15:20:06.227Z",
+          "id": "2cj4m7mr447k",
+          "incident_id": "6x77ccl9shpy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T15:20:06.227Z"
+        },
         {
           "affected_components": [
             {
@@ -194,14 +220,14 @@
         }
       ],
       "monitoring_at": null,
-      "name": "IRM Unable to Send SMS to Thailand, Bangladesh, and Austrian Numbers",
+      "name": "IRM Unable to Send SMS to Thailand Numbers",
       "page_id": "6r99zhljywjf",
       "reminder_intervals": null,
       "resolved_at": null,
       "shortlink": "https://stspg.io/9l8htmqt82s2",
       "started_at": "2026-10-05T16:17:43.408Z",
       "status": "identified",
-      "updated_at": "2026-10-15T09:33:27.854Z"
+      "updated_at": "2026-10-16T15:20:22.903Z"
     }
   },
   {

@@ -79,7 +79,7 @@
           "showcase": false,
           "start_date": "2026-10-12",
           "status": "operational",
-          "updated_at": "2026-10-12T16:42:47.801Z"
+          "updated_at": "2026-10-17T01:55:47.501Z"
         }
       ],
       "created_at": "2026-10-12T09:45:54.207Z",
@@ -386,6 +386,12 @@
         "status": "investigating",
         "body": "Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
         "created_at": "2026-10-13T21:35:33.247Z"
+      },
+      {
+        "native_id": "hrttqx09wfkm",
+        "status": "investigating",
+        "body": "Phone call notifications to numbers in Russia and Kazakhstan are still blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
+        "created_at": "2026-10-16T19:44:21.695Z"
       }
     ],
     "first_seen_at": "2026-10-13T13:02:26.166769166Z",
@@ -411,6 +417,26 @@
       "id": "fj19hw3kzfry",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Phone call notifications to numbers in Russia and Kazakhstan are still blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
+          "created_at": "2026-10-16T19:44:21.695Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-16T19:44:21.695Z",
+          "id": "hrttqx09wfkm",
+          "incident_id": "fj19hw3kzfry",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T19:44:21.695Z"
+        },
         {
           "affected_components": [
             {
@@ -460,7 +486,7 @@
       "shortlink": "https://stspg.io/3kqkpqlqm6f5",
       "started_at": "2026-10-13T09:23:32.310Z",
       "status": "investigating",
-      "updated_at": "2026-10-13T21:35:33.249Z"
+      "updated_at": "2026-10-16T19:44:21.698Z"
     }
   },
   {
@@ -1081,6 +1107,180 @@
       "started_at": "2026-10-15T16:10:22.122Z",
       "status": "resolved",
       "updated_at": "2026-10-15T21:53:13.525Z"
+    }
+  },
+  {
+    "key": "grafana/pw8kpyjrznp3",
+    "vendor": "grafana",
+    "native_id": "pw8kpyjrznp3",
+    "title": "Metric reads and rule evaluations are degraded in mimir-prod-66",
+    "url": "https://stspg.io/489nw4cdzhsw",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-16T21:05:53.224Z",
+    "resolved_at": "2026-10-17T01:55:47.563Z",
+    "duration_minutes": 289,
+    "components": [
+      "AWS US East (VA) - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "444p5qslfwwg",
+        "status": "investigating",
+        "body": "We’re currently investigating an issue affecting metrics reads and rule evaluations in mimir-prod-66. Our team is actively working to identify the cause. Thank you for your patience.",
+        "created_at": "2026-10-16T21:05:53.293Z"
+      },
+      {
+        "native_id": "64rnp20qtfny",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-10-16T21:08:16.641Z"
+      },
+      {
+        "native_id": "tfw32wsdkts2",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-16T23:27:03.637Z"
+      },
+      {
+        "native_id": "bnrjf4w6vwmx",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-16T23:28:08.349Z"
+      },
+      {
+        "native_id": "zjpqfcqsxbq1",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-17T01:55:47.563Z"
+      }
+    ],
+    "first_seen_at": "2026-10-17T09:48:05.538675525Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-10-12T09:45:00.793Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "h9pkmw6sc47g",
+          "name": "AWS US East (VA) - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 52,
+          "showcase": false,
+          "start_date": "2026-10-12",
+          "status": "operational",
+          "updated_at": "2026-10-17T01:55:47.501Z"
+        }
+      ],
+      "created_at": "2026-10-16T21:05:53.230Z",
+      "id": "pw8kpyjrznp3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-17T01:55:47.563Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-17T01:55:47.563Z",
+          "id": "zjpqfcqsxbq1",
+          "incident_id": "pw8kpyjrznp3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-17T01:55:47.563Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-16T23:28:08.349Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-16T23:28:08.349Z",
+          "id": "bnrjf4w6vwmx",
+          "incident_id": "pw8kpyjrznp3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T23:28:08.349Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-16T23:27:03.637Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-16T23:27:03.637Z",
+          "id": "tfw32wsdkts2",
+          "incident_id": "pw8kpyjrznp3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T23:27:03.637Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-10-16T21:08:16.641Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-16T21:08:16.641Z",
+          "id": "64rnp20qtfny",
+          "incident_id": "pw8kpyjrznp3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T21:08:16.641Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re currently investigating an issue affecting metrics reads and rule evaluations in mimir-prod-66. Our team is actively working to identify the cause. Thank you for your patience.",
+          "created_at": "2026-10-16T21:05:53.293Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-16T21:05:53.293Z",
+          "id": "444p5qslfwwg",
+          "incident_id": "pw8kpyjrznp3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-16T21:05:53.293Z"
+        }
+      ],
+      "monitoring_at": "2026-10-16T23:27:03.637Z",
+      "name": "Metric reads and rule evaluations are degraded in mimir-prod-66",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-17T01:55:47.563Z",
+      "shortlink": "https://stspg.io/489nw4cdzhsw",
+      "started_at": "2026-10-16T21:05:53.224Z",
+      "status": "resolved",
+      "updated_at": "2026-10-17T01:55:47.591Z"
     }
   }
 ]
