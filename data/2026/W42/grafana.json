@@ -369,8 +369,10 @@
     "title": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
     "url": "https://stspg.io/3kqkpqlqm6f5",
     "impact": "minor",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-10-13T09:23:32.31Z",
+    "resolved_at": "2026-10-19T11:39:04.436Z",
+    "duration_minutes": 8775,
     "components": [
       "Incident Management and Response (IRM)"
     ],
@@ -392,6 +394,12 @@
         "status": "investigating",
         "body": "Phone call notifications to numbers in Russia and Kazakhstan are still blocked. We are working to resolve the issue.\nAs SMS support is limited in these countries, we recommend using mobile push notifications as an alternative.\n\nWe do not currently have an estimated resolution time. We will provide further updates as more information becomes available.",
         "created_at": "2026-10-16T19:44:21.695Z"
+      },
+      {
+        "native_id": "73vkcs1fl32c",
+        "status": "resolved",
+        "body": "Following further investigation, we've confirmed that SMS delivery to certain destinations is not currently supported. We've updated our documentation to clarify the supported destinations and available notification options.\n\nWe recommend using mobile push notifications or phone calls as alternatives where SMS delivery is unavailable.",
+        "created_at": "2026-10-19T11:39:04.436Z"
       }
     ],
     "first_seen_at": "2026-10-13T13:02:26.166769166Z",
@@ -409,14 +417,34 @@
           "position": 17,
           "showcase": false,
           "start_date": "2024-03-25",
-          "status": "degraded_performance",
-          "updated_at": "2026-10-05T16:17:43.468Z"
+          "status": "operational",
+          "updated_at": "2026-10-19T11:39:04.381Z"
         }
       ],
       "created_at": "2026-10-13T09:23:32.316Z",
       "id": "fj19hw3kzfry",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Following further investigation, we've confirmed that SMS delivery to certain destinations is not currently supported. We've updated our documentation to clarify the supported destinations and available notification options.\n\nWe recommend using mobile push notifications or phone calls as alternatives where SMS delivery is unavailable.",
+          "created_at": "2026-10-19T11:39:04.436Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-19T11:39:04.436Z",
+          "id": "73vkcs1fl32c",
+          "incident_id": "fj19hw3kzfry",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-19T11:39:04.436Z"
+        },
         {
           "affected_components": [
             {
@@ -482,11 +510,11 @@
       "name": "Phone call notifications to numbers in Russia and Kazakhstan are blocked",
       "page_id": "6r99zhljywjf",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-10-19T11:39:04.436Z",
       "shortlink": "https://stspg.io/3kqkpqlqm6f5",
       "started_at": "2026-10-13T09:23:32.310Z",
-      "status": "investigating",
-      "updated_at": "2026-10-16T19:44:21.698Z"
+      "status": "resolved",
+      "updated_at": "2026-10-19T11:39:04.461Z"
     }
   },
   {
