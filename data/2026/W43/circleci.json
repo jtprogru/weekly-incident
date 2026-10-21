@@ -1,0 +1,183 @@
+[
+  {
+    "key": "circleci/rrrvc4lqplb5",
+    "vendor": "circleci",
+    "native_id": "rrrvc4lqplb5",
+    "title": "Increased wait times for macOS jobs on m4pro.large",
+    "url": "https://stspg.io/pp6wqy3vlms3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-20T15:58:25Z",
+    "resolved_at": "2026-10-20T18:14:04.397Z",
+    "duration_minutes": 135,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "ntxc3bthybzz",
+        "status": "investigating",
+        "body": "We're seeing increased wait times for some macOS jobs using the m4pro.large resource class. We're investigating and will provide another update soon. Thank you for your patience.",
+        "created_at": "2026-10-20T15:58:25.357Z"
+      },
+      {
+        "native_id": "2yymsz0tzn0f",
+        "status": "monitoring",
+        "body": "Customers running macOS jobs on the m4pro.large resource class are still seeing increased wait times, with some jobs waiting up to 30 minutes to start. We're continuing to monitor this and will share another update shortly.",
+        "created_at": "2026-10-20T16:32:17.257Z"
+      },
+      {
+        "native_id": "v8gr9qxgsvmq",
+        "status": "monitoring",
+        "body": "Wait times for m4pro.large are still elevated due to heavy large demand. All m4pro.medium are normal. We're actively monitoring, we appreciate patience.",
+        "created_at": "2026-10-20T17:02:28.332Z"
+      },
+      {
+        "native_id": "233q78brq5gc",
+        "status": "monitoring",
+        "body": "Wait times for macOS jobs on the m4pro.large resource class are recovering. Jobs using Xcode 27.0 are now waiting about ~3.5 minutes on average, down from about ~40 minutes at the peak. Jobs using Xcode 26.6 and 26.4.1 are still working through a backlog, which is clearing. Wait times on m4pro.medium are normal. We will share another update soon as we continue to monitor.",
+        "created_at": "2026-10-20T17:31:54.658Z"
+      },
+      {
+        "native_id": "85b06f5qg36t",
+        "status": "resolved",
+        "body": "Wait times for macOS jobs on the m4pro.large resource class have returned to normal. We thank you for your patience while the backlogs cleared.",
+        "created_at": "2026-10-20T18:14:04.397Z"
+      }
+    ],
+    "first_seen_at": "2026-10-21T10:42:43.998754756Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-20T18:14:04.359Z"
+        }
+      ],
+      "created_at": "2026-10-20T15:58:25.000Z",
+      "id": "rrrvc4lqplb5",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for macOS jobs on the m4pro.large resource class have returned to normal. We thank you for your patience while the backlogs cleared.",
+          "created_at": "2026-10-20T18:14:04.397Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T18:14:04.397Z",
+          "id": "85b06f5qg36t",
+          "incident_id": "rrrvc4lqplb5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T18:14:04.397Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for macOS jobs on the m4pro.large resource class are recovering. Jobs using Xcode 27.0 are now waiting about ~3.5 minutes on average, down from about ~40 minutes at the peak. Jobs using Xcode 26.6 and 26.4.1 are still working through a backlog, which is clearing. Wait times on m4pro.medium are normal. We will share another update soon as we continue to monitor.",
+          "created_at": "2026-10-20T17:31:54.658Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T17:31:54.658Z",
+          "id": "233q78brq5gc",
+          "incident_id": "rrrvc4lqplb5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T17:31:54.658Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for m4pro.large are still elevated due to heavy large demand. All m4pro.medium are normal. We're actively monitoring, we appreciate patience.",
+          "created_at": "2026-10-20T17:02:28.332Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T17:02:28.332Z",
+          "id": "v8gr9qxgsvmq",
+          "incident_id": "rrrvc4lqplb5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T17:02:28.332Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Customers running macOS jobs on the m4pro.large resource class are still seeing increased wait times, with some jobs waiting up to 30 minutes to start. We're continuing to monitor this and will share another update shortly.",
+          "created_at": "2026-10-20T16:32:17.257Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T16:32:17.000Z",
+          "id": "2yymsz0tzn0f",
+          "incident_id": "rrrvc4lqplb5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T16:34:00.192Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're seeing increased wait times for some macOS jobs using the m4pro.large resource class. We're investigating and will provide another update soon. Thank you for your patience.",
+          "created_at": "2026-10-20T15:58:25.357Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T15:58:25.000Z",
+          "id": "ntxc3bthybzz",
+          "incident_id": "rrrvc4lqplb5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T16:31:38.541Z"
+        }
+      ],
+      "monitoring_at": "2026-10-20T16:32:17.000Z",
+      "name": "Increased wait times for macOS jobs on m4pro.large",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-20T18:14:04.397Z",
+      "shortlink": "https://stspg.io/pp6wqy3vlms3",
+      "started_at": "2026-10-20T15:58:25.000Z",
+      "status": "resolved",
+      "updated_at": "2026-10-20T18:14:04.419Z"
+    }
+  }
+]
