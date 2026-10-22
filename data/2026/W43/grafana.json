@@ -5066,7 +5066,7 @@
           "showcase": false,
           "start_date": "2024-07-11",
           "status": "operational",
-          "updated_at": "2026-10-20T16:08:06.157Z"
+          "updated_at": "2026-10-21T15:29:58.240Z"
         }
       ],
       "created_at": "2026-10-20T14:36:59.692Z",
@@ -5445,6 +5445,290 @@
       "started_at": "2026-10-21T07:10:04.892Z",
       "status": "resolved",
       "updated_at": "2026-10-21T07:10:04.976Z"
+    }
+  },
+  {
+    "key": "grafana/bpld6z1v27qx",
+    "vendor": "grafana",
+    "native_id": "bpld6z1v27qx",
+    "title": "Increased timeout errors in alert rule evaluations (AWS Germany, prod-eu-west-2)",
+    "url": "https://stspg.io/xk032xv99zbr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-21T11:48:27.997Z",
+    "resolved_at": "2026-10-21T13:26:30.885Z",
+    "duration_minutes": 98,
+    "components": [
+      "AWS Germany - prod-eu-west-2: Rule Evaluation"
+    ],
+    "updates": [
+      {
+        "native_id": "gffm5m31nt0q",
+        "status": "investigating",
+        "body": "Since approximately 20:30 UTC on October 20, we have observed an increase in alert rule evaluation errors affecting rules that query Grafana Cloud Prometheus (Mimir) data sources in Cluster AWS Germany.\nOur engineering team is actively investigating and working on remediation.",
+        "created_at": "2026-10-21T11:48:28.108Z"
+      },
+      {
+        "native_id": "zxmpqs5mx1k7",
+        "status": "identified",
+        "body": "The root cause of the issue has been indentified and we are working on the remediation steps.",
+        "created_at": "2026-10-21T12:12:54.904Z"
+      },
+      {
+        "native_id": "cmfcvykvxqgl",
+        "status": "monitoring",
+        "body": "Remediation measures have been applied, and we are monitoring the recovery.",
+        "created_at": "2026-10-21T13:12:32.418Z"
+      },
+      {
+        "native_id": "cn1fnvv9xbgf",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-21T13:26:30.885Z"
+      }
+    ],
+    "first_seen_at": "2026-10-22T10:44:40.122146863Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:33:40.251Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "hcj5p68bp2kc",
+          "name": "AWS Germany - prod-eu-west-2: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-21T13:12:32.364Z"
+        }
+      ],
+      "created_at": "2026-10-21T11:48:28.005Z",
+      "id": "bpld6z1v27qx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-21T13:26:30.885Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T13:26:30.885Z",
+          "id": "cn1fnvv9xbgf",
+          "incident_id": "bpld6z1v27qx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T13:26:30.885Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Remediation measures have been applied, and we are monitoring the recovery.",
+          "created_at": "2026-10-21T13:12:32.418Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T13:12:32.418Z",
+          "id": "cmfcvykvxqgl",
+          "incident_id": "bpld6z1v27qx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T13:12:32.418Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The root cause of the issue has been indentified and we are working on the remediation steps.",
+          "created_at": "2026-10-21T12:12:54.904Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T12:12:54.904Z",
+          "id": "zxmpqs5mx1k7",
+          "incident_id": "bpld6z1v27qx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T12:12:54.904Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since approximately 20:30 UTC on October 20, we have observed an increase in alert rule evaluation errors affecting rules that query Grafana Cloud Prometheus (Mimir) data sources in Cluster AWS Germany.\nOur engineering team is actively investigating and working on remediation.",
+          "created_at": "2026-10-21T11:48:28.108Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T11:48:28.108Z",
+          "id": "gffm5m31nt0q",
+          "incident_id": "bpld6z1v27qx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T11:48:28.108Z"
+        }
+      ],
+      "monitoring_at": "2026-10-21T13:12:32.418Z",
+      "name": "Increased timeout errors in alert rule evaluations (AWS Germany, prod-eu-west-2)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-21T13:26:30.885Z",
+      "shortlink": "https://stspg.io/xk032xv99zbr",
+      "started_at": "2026-10-21T11:48:27.997Z",
+      "status": "resolved",
+      "updated_at": "2026-10-21T13:26:30.916Z"
+    }
+  },
+  {
+    "key": "grafana/zdwn7zxghn9q",
+    "vendor": "grafana",
+    "native_id": "zdwn7zxghn9q",
+    "title": "Some GCK6 App Project Pages are Failing to Load",
+    "url": "https://stspg.io/wh6fr7yf9j5h",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-21T13:22:18.834Z",
+    "resolved_at": "2026-10-21T15:29:58.285Z",
+    "duration_minutes": 127,
+    "components": [
+      "GCk6 App"
+    ],
+    "updates": [
+      {
+        "native_id": "c6xjwjbfb1r1",
+        "status": "identified",
+        "body": "We are currently investigating this issue impacting some GCK6 app project pages. We are in the process of providing a fix for this.",
+        "created_at": "2026-10-21T13:22:18.974Z"
+      },
+      {
+        "native_id": "s2lp4qtm1b18",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-10-21T14:22:14.116Z"
+      },
+      {
+        "native_id": "j5ngzmygymcd",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-21T15:29:58.285Z"
+      }
+    ],
+    "first_seen_at": "2026-10-22T10:44:40.122146863Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-09-24T09:44:40.563Z",
+          "description": null,
+          "group": false,
+          "group_id": "wk83fl3yzlzn",
+          "id": "3gvy1n7fg4x4",
+          "name": "GCk6 App",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-21T15:29:58.240Z"
+        }
+      ],
+      "created_at": "2026-10-21T13:22:18.853Z",
+      "id": "zdwn7zxghn9q",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3gvy1n7fg4x4",
+              "name": "Performance and Load Testing - GCk6 App",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-21T15:29:58.285Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T15:29:58.285Z",
+          "id": "j5ngzmygymcd",
+          "incident_id": "zdwn7zxghn9q",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T15:29:58.285Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3gvy1n7fg4x4",
+              "name": "Performance and Load Testing - GCk6 App",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-10-21T14:22:14.116Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T14:22:14.116Z",
+          "id": "s2lp4qtm1b18",
+          "incident_id": "zdwn7zxghn9q",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T14:22:14.116Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3gvy1n7fg4x4",
+              "name": "Performance and Load Testing - GCk6 App",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue impacting some GCK6 app project pages. We are in the process of providing a fix for this.",
+          "created_at": "2026-10-21T13:22:18.974Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T13:22:18.974Z",
+          "id": "c6xjwjbfb1r1",
+          "incident_id": "zdwn7zxghn9q",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T13:22:18.974Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Some GCK6 App Project Pages are Failing to Load",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-21T15:29:58.285Z",
+      "shortlink": "https://stspg.io/wh6fr7yf9j5h",
+      "started_at": "2026-10-21T13:22:18.834Z",
+      "status": "resolved",
+      "updated_at": "2026-10-21T15:29:58.306Z"
     }
   }
 ]

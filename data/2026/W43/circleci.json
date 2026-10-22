@@ -179,5 +179,212 @@
       "status": "resolved",
       "updated_at": "2026-10-20T18:14:04.419Z"
     }
+  },
+  {
+    "key": "circleci/5jb50gh55gtj",
+    "vendor": "circleci",
+    "native_id": "5jb50gh55gtj",
+    "title": "Increased Docker gen2 wait times",
+    "url": "https://stspg.io/8g54j07z69lb",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-21T19:31:05.329Z",
+    "resolved_at": "2026-10-21T20:54:46.671Z",
+    "duration_minutes": 83,
+    "components": [
+      "Docker Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "x0ryrjdchnkp",
+        "status": "identified",
+        "body": "Some users might see increased wait times for gen2 Docker jobs due to capacity issues.",
+        "created_at": "2026-10-21T19:31:05.416Z"
+      },
+      {
+        "native_id": "27mq666303jj",
+        "status": "identified",
+        "body": "We are adding additional capacity to help mitigate the issue. Note: We are still seeing delays up to 20 minutes on 2xlarge.",
+        "created_at": "2026-10-21T20:03:35.498Z"
+      },
+      {
+        "native_id": "cv891p8g78ml",
+        "status": "identified",
+        "body": "Wait times for 2xlarge docker jobs are recovering. We will continue to update as capacity comes online.",
+        "created_at": "2026-10-21T20:22:53.499Z"
+      },
+      {
+        "native_id": "7vfgg8shy11c",
+        "status": "identified",
+        "body": "Wait times for 2xlarge docker jobs are now under 60 seconds.\n\nWait times for other resource sizes were not impacted by this incident and remain under 10 seconds.",
+        "created_at": "2026-10-21T20:35:42.888Z"
+      },
+      {
+        "native_id": "4wz4sfm9d91v",
+        "status": "monitoring",
+        "body": "We have seen a full recovery of wait times for docker jobs.",
+        "created_at": "2026-10-21T20:40:44.495Z"
+      },
+      {
+        "native_id": "syj6pmr2751w",
+        "status": "resolved",
+        "body": "Wait times for gen2 Docker jobs have recovered and jobs are running within normal wait times.",
+        "created_at": "2026-10-21T20:54:46.671Z"
+      }
+    ],
+    "first_seen_at": "2026-10-22T10:44:40.122146863Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-03-17T19:43:18.878Z",
+          "description": "CircleCI jobs using the docker executor.",
+          "group": false,
+          "group_id": null,
+          "id": "x1v3t5qrnlhk",
+          "name": "Docker Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 1,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-21T20:54:46.627Z"
+        }
+      ],
+      "created_at": "2026-10-21T19:31:05.335Z",
+      "id": "5jb50gh55gtj",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for gen2 Docker jobs have recovered and jobs are running within normal wait times.",
+          "created_at": "2026-10-21T20:54:46.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T20:54:46.671Z",
+          "id": "syj6pmr2751w",
+          "incident_id": "5jb50gh55gtj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T20:54:46.671Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have seen a full recovery of wait times for docker jobs.",
+          "created_at": "2026-10-21T20:40:44.495Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T20:40:44.495Z",
+          "id": "4wz4sfm9d91v",
+          "incident_id": "5jb50gh55gtj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T20:40:44.495Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for 2xlarge docker jobs are now under 60 seconds.\n\nWait times for other resource sizes were not impacted by this incident and remain under 10 seconds.",
+          "created_at": "2026-10-21T20:35:42.888Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T20:35:42.000Z",
+          "id": "7vfgg8shy11c",
+          "incident_id": "5jb50gh55gtj",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T20:37:51.135Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Wait times for 2xlarge docker jobs are recovering. We will continue to update as capacity comes online.",
+          "created_at": "2026-10-21T20:22:53.499Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T20:22:53.499Z",
+          "id": "cv891p8g78ml",
+          "incident_id": "5jb50gh55gtj",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T20:22:53.499Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are adding additional capacity to help mitigate the issue. Note: We are still seeing delays up to 20 minutes on 2xlarge.",
+          "created_at": "2026-10-21T20:03:35.498Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T20:03:35.498Z",
+          "id": "27mq666303jj",
+          "incident_id": "5jb50gh55gtj",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T20:03:35.498Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "x1v3t5qrnlhk",
+              "name": "Docker Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some users might see increased wait times for gen2 Docker jobs due to capacity issues.",
+          "created_at": "2026-10-21T19:31:05.416Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T19:31:05.416Z",
+          "id": "x0ryrjdchnkp",
+          "incident_id": "5jb50gh55gtj",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T19:31:05.416Z"
+        }
+      ],
+      "monitoring_at": "2026-10-21T20:40:44.495Z",
+      "name": "Increased Docker gen2 wait times",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-21T20:54:46.671Z",
+      "shortlink": "https://stspg.io/8g54j07z69lb",
+      "started_at": "2026-10-21T19:31:05.329Z",
+      "status": "resolved",
+      "updated_at": "2026-10-21T20:54:46.696Z"
+    }
   }
 ]
