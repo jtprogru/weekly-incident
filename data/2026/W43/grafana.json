@@ -5730,5 +5730,136 @@
       "status": "resolved",
       "updated_at": "2026-10-21T15:29:58.306Z"
     }
+  },
+  {
+    "key": "grafana/x264qsyj6cgd",
+    "vendor": "grafana",
+    "native_id": "x264qsyj6cgd",
+    "title": "Elevated Trace Ingestion Latency and Errors for Grafana Cloud Traces in AWS Germany",
+    "url": "https://stspg.io/p5hhk4h6k6dm",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-23T09:31:53.795Z",
+    "resolved_at": "2026-10-23T10:16:30.215Z",
+    "duration_minutes": 44,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "6tl7p2vqqjmz",
+        "status": "investigating",
+        "body": "We are investigating elevated latency and intermittent errors when ingesting traces for Grafana Cloud Traces in AWS Germany. Customers may see delayed trace ingestion and failed trace writes. Next update by 10:30 UTC.",
+        "created_at": "2026-10-23T09:31:53.924Z"
+      },
+      {
+        "native_id": "hdgvrwj7dn2t",
+        "status": "resolved",
+        "body": "Between 09:31 and 10:13 UTC on 23 October 2026 (42 minutes), Grafana Cloud Traces in AWS Germany experienced elevated ingestion latency and intermittent trace write failures, affecting both direct trace ingestion and ingestion via the OpenTelemetry endpoint. All services are now operating normally.",
+        "created_at": "2026-10-23T10:16:30.215Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-04-26T07:10:11.637Z",
+          "description": null,
+          "group": false,
+          "group_id": "mnrssd8vqsf2",
+          "id": "14rfvnlhlt5n",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-04-26",
+          "status": "operational",
+          "updated_at": "2026-10-23T10:16:30.146Z"
+        },
+        {
+          "created_at": "2023-09-20T15:54:44.557Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "bg7pryvvh19l",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-23T10:16:30.171Z"
+        }
+      ],
+      "created_at": "2026-10-23T09:31:53.805Z",
+      "id": "x264qsyj6cgd",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 09:31 and 10:13 UTC on 23 October 2026 (42 minutes), Grafana Cloud Traces in AWS Germany experienced elevated ingestion latency and intermittent trace write failures, affecting both direct trace ingestion and ingestion via the OpenTelemetry endpoint. All services are now operating normally.",
+          "created_at": "2026-10-23T10:16:30.215Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T10:16:30.215Z",
+          "id": "hdgvrwj7dn2t",
+          "incident_id": "x264qsyj6cgd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T10:16:30.215Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated latency and intermittent errors when ingesting traces for Grafana Cloud Traces in AWS Germany. Customers may see delayed trace ingestion and failed trace writes. Next update by 10:30 UTC.",
+          "created_at": "2026-10-23T09:31:53.924Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:31:53.924Z",
+          "id": "6tl7p2vqqjmz",
+          "incident_id": "x264qsyj6cgd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:31:53.924Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Trace Ingestion Latency and Errors for Grafana Cloud Traces in AWS Germany",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T10:16:30.215Z",
+      "shortlink": "https://stspg.io/p5hhk4h6k6dm",
+      "started_at": "2026-10-23T09:31:53.795Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T10:16:30.236Z"
+    }
   }
 ]

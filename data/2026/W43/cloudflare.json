@@ -372,7 +372,7 @@
           "showcase": false,
           "start_date": "2021-04-08",
           "status": "operational",
-          "updated_at": "2026-10-16T18:03:25.000Z"
+          "updated_at": "2026-10-23T00:10:52.000Z"
         }
       ],
       "created_at": "2026-10-20T03:20:42.381Z",
@@ -681,7 +681,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-02T21:57:57.000Z"
+          "updated_at": "2026-10-22T17:31:27.000Z"
         }
       ],
       "created_at": "2026-10-21T16:42:14.640Z",
@@ -791,7 +791,7 @@
           "showcase": false,
           "start_date": "2023-06-12",
           "status": "operational",
-          "updated_at": "2026-10-15T21:30:10.000Z"
+          "updated_at": "2026-10-23T00:09:09.000Z"
         },
         {
           "created_at": "2022-07-05T10:55:24.000Z",
@@ -924,7 +924,7 @@
           "showcase": false,
           "start_date": "2023-06-12",
           "status": "operational",
-          "updated_at": "2026-10-15T21:30:10.000Z"
+          "updated_at": "2026-10-23T00:09:09.000Z"
         }
       ],
       "created_at": "2026-10-21T23:50:36.035Z",
@@ -1117,6 +1117,1040 @@
       "started_at": "2026-10-22T00:23:17.052Z",
       "status": "resolved",
       "updated_at": "2026-10-22T02:09:33.617Z"
+    }
+  },
+  {
+    "key": "cloudflare/lhdg2tq46faq",
+    "vendor": "cloudflare",
+    "native_id": "lhdg2tq46faq",
+    "title": "Cloudflare Workers API Latency",
+    "url": "https://www.cloudflarestatus.com/incidents/lhdg2tq46faq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-22T15:33:17.354Z",
+    "resolved_at": "2026-10-22T16:15:52.382Z",
+    "duration_minutes": 42,
+    "components": [
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "ns1korreirif",
+        "status": "identified",
+        "body": "Cloudflare is investigating an increased latency when interacting with Workers API and Workers configuration in the dashboard. Customers might experience longer wait times on Workers endpoints, particularly when deploying a script. Workers that are already running in production are not affected. More updates to follow shortly.",
+        "created_at": "2026-10-22T15:33:17.354Z"
+      },
+      {
+        "native_id": "ukpq0s0tsq5f",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-22T16:04:05.152Z"
+      },
+      {
+        "native_id": "zsfiktx4vm01",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-22T16:15:52.382Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 117,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T17:31:27.000Z"
+        }
+      ],
+      "created_at": "2026-10-22T15:33:17.354Z",
+      "id": "lhdg2tq46faq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-22T16:15:52.382Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T16:15:52.382Z",
+          "id": "zsfiktx4vm01",
+          "incident_id": "lhdg2tq46faq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T16:15:52.382Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-22T16:04:05.152Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T16:04:05.152Z",
+          "id": "ukpq0s0tsq5f",
+          "incident_id": "lhdg2tq46faq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T16:04:05.152Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an increased latency when interacting with Workers API and Workers configuration in the dashboard. Customers might experience longer wait times on Workers endpoints, particularly when deploying a script. Workers that are already running in production are not affected. More updates to follow shortly.",
+          "created_at": "2026-10-22T15:33:17.354Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T15:33:17.354Z",
+          "id": "ns1korreirif",
+          "incident_id": "lhdg2tq46faq",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T15:33:17.354Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Workers API Latency",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-22T16:15:52.382Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/lhdg2tq46faq",
+      "started_at": "2026-10-22T15:33:17.354Z",
+      "status": "resolved",
+      "updated_at": "2026-10-22T16:15:52.382Z"
+    }
+  },
+  {
+    "key": "cloudflare/l3d16334tgjp",
+    "vendor": "cloudflare",
+    "native_id": "l3d16334tgjp",
+    "title": "Network Error Log Processing Unavailable",
+    "url": "https://www.cloudflarestatus.com/incidents/l3d16334tgjp",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-22T16:30:31.707Z",
+    "resolved_at": "2026-10-22T22:00:59.292Z",
+    "duration_minutes": 330,
+    "components": [
+      "Logs"
+    ],
+    "updates": [
+      {
+        "native_id": "8qq5c7kkdr9f",
+        "status": "investigating",
+        "body": "Since 20:19 UTC, new Network Error Logging (NEL) reports are not being processed. Reports received during this period will not appear in Network Error Logging analytics. Website traffic and other services are not affected. We are investigating and will provide an update as soon as possible.",
+        "created_at": "2026-10-22T16:30:31.826Z"
+      },
+      {
+        "native_id": "qhf3d06wrpbq",
+        "status": "investigating",
+        "body": "Partial service restored. Root cause investigation is currently underway.",
+        "created_at": "2026-10-22T20:08:02.753Z"
+      },
+      {
+        "native_id": "cr36jvf5s8d9",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-22T21:36:22.439Z"
+      },
+      {
+        "native_id": "k32gx5xj7dvz",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-22T22:00:59.292Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2016-03-20T18:49:07.000Z",
+          "description": "Enterprise Logpull and Logpush services",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "k0mgxrls5y1b",
+          "name": "Logs",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 66,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T22:00:59.000Z"
+        }
+      ],
+      "created_at": "2026-10-22T16:30:31.718Z",
+      "id": "l3d16334tgjp",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "k0mgxrls5y1b",
+              "name": "Cloudflare Sites and Services - Logs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-22T22:00:59.292Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T22:00:59.292Z",
+          "id": "k32gx5xj7dvz",
+          "incident_id": "l3d16334tgjp",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T22:00:59.292Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "k0mgxrls5y1b",
+              "name": "Cloudflare Sites and Services - Logs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-22T21:36:22.439Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T21:36:22.439Z",
+          "id": "cr36jvf5s8d9",
+          "incident_id": "l3d16334tgjp",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T21:36:22.439Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "k0mgxrls5y1b",
+              "name": "Cloudflare Sites and Services - Logs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Partial service restored. Root cause investigation is currently underway.",
+          "created_at": "2026-10-22T20:08:02.753Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T20:08:02.753Z",
+          "id": "qhf3d06wrpbq",
+          "incident_id": "l3d16334tgjp",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T20:08:02.753Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "k0mgxrls5y1b",
+              "name": "Cloudflare Sites and Services - Logs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since 20:19 UTC, new Network Error Logging (NEL) reports are not being processed. Reports received during this period will not appear in Network Error Logging analytics. Website traffic and other services are not affected. We are investigating and will provide an update as soon as possible.",
+          "created_at": "2026-10-22T16:30:31.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T16:30:31.826Z",
+          "id": "8qq5c7kkdr9f",
+          "incident_id": "l3d16334tgjp",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T16:30:31.826Z"
+        }
+      ],
+      "monitoring_at": "2026-10-22T21:36:22.439Z",
+      "name": "Network Error Log Processing Unavailable",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-22T22:00:59.292Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/l3d16334tgjp",
+      "started_at": "2026-10-22T16:30:31.707Z",
+      "status": "resolved",
+      "updated_at": "2026-10-22T22:00:59.318Z"
+    }
+  },
+  {
+    "key": "cloudflare/l0gsc0sccx2v",
+    "vendor": "cloudflare",
+    "native_id": "l0gsc0sccx2v",
+    "title": "Elevated errors for some requests in Ashburn, Virginia",
+    "url": "https://www.cloudflarestatus.com/incidents/l0gsc0sccx2v",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-22T17:01:31.311Z",
+    "resolved_at": "2026-10-22T17:31:27.138Z",
+    "duration_minutes": 29,
+    "components": [
+      "Ashburn, VA, United States - (IAD)",
+      "CDN/Cache",
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "pp6xbp9mrrkk",
+        "status": "investigating",
+        "body": "We are investigating elevated error rates (HTTP 502) for some requests handled by our Ashburn, Virginia data center. Some customers may see failed or intermittent responses for websites and applications, including Workers, served through this location. We are actively investigating and will provide updates as we learn more.",
+        "created_at": "2026-10-22T17:01:31.51Z"
+      },
+      {
+        "native_id": "n0ng90dfzlvw",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-22T17:31:27.138Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T20:30:01.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "3t0npclljyyg",
+          "name": "Ashburn, VA, United States - (IAD)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T17:31:27.000Z"
+        },
+        {
+          "created_at": "2020-03-25T19:03:33.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5wnz34mhfhrk",
+          "name": "CDN/Cache",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 25,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T17:31:27.000Z"
+        },
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 117,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T17:31:27.000Z"
+        }
+      ],
+      "created_at": "2026-10-22T17:01:31.000Z",
+      "id": "l0gsc0sccx2v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, VA, United States - (IAD)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "Cloudflare Sites and Services - CDN/Cache",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-22T17:31:27.138Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:31:27.138Z",
+          "id": "n0ng90dfzlvw",
+          "incident_id": "l0gsc0sccx2v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:31:27.138Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, VA, United States - (IAD)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "Cloudflare Sites and Services - CDN/Cache",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated error rates (HTTP 502) for some requests handled by our Ashburn, Virginia data center. Some customers may see failed or intermittent responses for websites and applications, including Workers, served through this location. We are actively investigating and will provide updates as we learn more.",
+          "created_at": "2026-10-22T17:01:31.510Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:01:31.510Z",
+          "id": "pp6xbp9mrrkk",
+          "incident_id": "l0gsc0sccx2v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:01:31.510Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors for some requests in Ashburn, Virginia",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-22T17:31:27.138Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/l0gsc0sccx2v",
+      "started_at": "2026-10-22T17:01:31.311Z",
+      "status": "resolved",
+      "updated_at": "2026-10-22T17:31:27.163Z"
+    }
+  },
+  {
+    "key": "cloudflare/qwrtvb4jfvk7",
+    "vendor": "cloudflare",
+    "native_id": "qwrtvb4jfvk7",
+    "title": "Delayed audit log delivery for WARP and Zero Trust services",
+    "url": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-22T17:32:32.247Z",
+    "resolved_at": "2026-10-23T00:10:52.675Z",
+    "duration_minutes": 398,
+    "components": [
+      "Audit Logs",
+      "Zero Trust"
+    ],
+    "updates": [
+      {
+        "native_id": "9xgb018fnpl2",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting audit log delivery for WARP API. Audit logs for some customers may be delayed or not delivered, and some dependent services may also be affected.\n\nWe have identified the cause as a capacity problem in a shared internal data pipeline in our PDX region. Mitigations are in place and the pipeline is partially recovered. We are continuing to monitor and work toward full recovery.",
+        "created_at": "2026-10-22T17:32:32.382Z"
+      },
+      {
+        "native_id": "kk28t07smdlz",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-22T17:50:19.008Z"
+      },
+      {
+        "native_id": "r06vff147vk5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T00:10:52.675Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-08-01T04:49:28.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "2469qcw8rvjp",
+          "name": "Audit Logs",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2022-08-01",
+          "status": "operational",
+          "updated_at": "2026-10-23T00:10:52.000Z"
+        },
+        {
+          "created_at": "2021-04-08T15:53:09.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "kf0ktv29xrfy",
+          "name": "Zero Trust",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 127,
+          "showcase": false,
+          "start_date": "2021-04-08",
+          "status": "operational",
+          "updated_at": "2026-10-23T00:10:52.000Z"
+        }
+      ],
+      "created_at": "2026-10-22T17:32:32.000Z",
+      "id": "qwrtvb4jfvk7",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Cloudflare Sites and Services - Audit Logs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Cloudflare Sites and Services - Zero Trust",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T00:10:52.675Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T00:10:52.675Z",
+          "id": "r06vff147vk5",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T00:10:52.675Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Cloudflare Sites and Services - Audit Logs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Cloudflare Sites and Services - Zero Trust",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-22T17:50:19.008Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:50:19.008Z",
+          "id": "kk28t07smdlz",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:50:19.008Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Cloudflare Sites and Services - Audit Logs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Cloudflare Sites and Services - Zero Trust",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting audit log delivery for WARP API. Audit logs for some customers may be delayed or not delivered, and some dependent services may also be affected.\n\nWe have identified the cause as a capacity problem in a shared internal data pipeline in our PDX region. Mitigations are in place and the pipeline is partially recovered. We are continuing to monitor and work toward full recovery.",
+          "created_at": "2026-10-22T17:32:32.382Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:32:32.382Z",
+          "id": "9xgb018fnpl2",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:32:32.382Z"
+        }
+      ],
+      "monitoring_at": "2026-10-22T17:50:19.008Z",
+      "name": "Delayed audit log delivery for WARP and Zero Trust services",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T00:10:52.675Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
+      "started_at": "2026-10-22T17:32:32.247Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T00:10:52.697Z"
+    }
+  },
+  {
+    "key": "cloudflare/v967mz6rrcxw",
+    "vendor": "cloudflare",
+    "native_id": "v967mz6rrcxw",
+    "title": "Elevated error rates for Durable Objects in Western Europe",
+    "url": "https://www.cloudflarestatus.com/incidents/v967mz6rrcxw",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-22T17:51:09.928Z",
+    "resolved_at": "2026-10-23T00:09:09.707Z",
+    "duration_minutes": 377,
+    "components": [
+      "Durable Objects"
+    ],
+    "updates": [
+      {
+        "native_id": "jqmgl476fn2p",
+        "status": "investigating",
+        "body": "We are investigating elevated error rates affecting Durable Objects in Western Europe. Customers may see errors when using Durable Objects and related services. We will post updates as we learn more.",
+        "created_at": "2026-10-22T17:51:10.039Z"
+      },
+      {
+        "native_id": "9r1b4pqxz0bk",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-22T18:19:52.207Z"
+      },
+      {
+        "native_id": "5yzm8n02g2sc",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T00:09:09.707Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-10-23T00:09:09.000Z"
+        }
+      ],
+      "created_at": "2026-10-22T17:51:09.000Z",
+      "id": "v967mz6rrcxw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T00:09:09.707Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T00:09:09.707Z",
+          "id": "5yzm8n02g2sc",
+          "incident_id": "v967mz6rrcxw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T00:09:09.707Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-22T18:19:52.207Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T18:19:52.207Z",
+          "id": "9r1b4pqxz0bk",
+          "incident_id": "v967mz6rrcxw",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T18:19:52.207Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated error rates affecting Durable Objects in Western Europe. Customers may see errors when using Durable Objects and related services. We will post updates as we learn more.",
+          "created_at": "2026-10-22T17:51:10.039Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:51:10.039Z",
+          "id": "jqmgl476fn2p",
+          "incident_id": "v967mz6rrcxw",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:51:10.039Z"
+        }
+      ],
+      "monitoring_at": "2026-10-22T18:19:52.207Z",
+      "name": "Elevated error rates for Durable Objects in Western Europe",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T00:09:09.707Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/v967mz6rrcxw",
+      "started_at": "2026-10-22T17:51:09.928Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T00:09:09.734Z"
+    }
+  },
+  {
+    "key": "cloudflare/8m9a1fjjwxp5",
+    "vendor": "cloudflare",
+    "native_id": "8m9a1fjjwxp5",
+    "title": "Support Helpdesk Availability Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/8m9a1fjjwxp5",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-23T03:03:09.059Z",
+    "resolved_at": "2026-10-23T09:42:16.255Z",
+    "duration_minutes": 399,
+    "components": [
+      "Support Site"
+    ],
+    "updates": [
+      {
+        "native_id": "r99pnvrym7xq",
+        "status": "investigating",
+        "body": "Our helpdesk provider is currently experiencing issues, and as such customers might encounter errors while submitting or viewing tickets. Responses on customer inquiries may be delayed during this time.",
+        "created_at": "2026-10-23T03:03:09.059Z"
+      },
+      {
+        "native_id": "jbnr2tkas7vo",
+        "status": "identified",
+        "body": "Support portal, live chat support and emergency telephone line are still unavailable due to the ongoing helpdesk provider outage. Customers may experience issues submitting or viewing tickets/chats, and overall response times may be delayed. \n\n\nCustomers with urgent issues should revert to using the support email address (backupsupport@cloudflare.com).",
+        "created_at": "2026-10-23T03:37:46.862Z"
+      },
+      {
+        "native_id": "eki1sj1dqf0y",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-10-23T04:43:47.961Z"
+      },
+      {
+        "native_id": "g91yykp88xf1",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-10-23T05:56:54.483Z"
+      },
+      {
+        "native_id": "bju7wydtb41r",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-23T06:37:40.206Z"
+      },
+      {
+        "native_id": "5qznrdkg9oy7",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T09:42:16.255Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-06-19T19:45:34.000Z",
+          "description": "Knowledge base and support ticket portal at https://support.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "jzcwkvrc4w4q",
+          "name": "Support Site",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 105,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:05.000Z"
+        }
+      ],
+      "created_at": "2026-10-23T03:03:09.059Z",
+      "id": "8m9a1fjjwxp5",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T09:42:16.255Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:42:16.255Z",
+          "id": "5qznrdkg9oy7",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:42:16.255Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-23T06:37:40.206Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T06:37:40.206Z",
+          "id": "bju7wydtb41r",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T06:37:40.206Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-10-23T05:56:54.483Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T05:56:54.483Z",
+          "id": "g91yykp88xf1",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T05:56:54.483Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-10-23T04:43:47.961Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T04:43:47.961Z",
+          "id": "eki1sj1dqf0y",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T04:43:47.961Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Support portal, live chat support and emergency telephone line are still unavailable due to the ongoing helpdesk provider outage. Customers may experience issues submitting or viewing tickets/chats, and overall response times may be delayed. \n\n\nCustomers with urgent issues should revert to using the support email address (backupsupport@cloudflare.com).",
+          "created_at": "2026-10-23T03:37:46.862Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T03:37:46.862Z",
+          "id": "jbnr2tkas7vo",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T04:51:14.010Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jzcwkvrc4w4q",
+              "name": "Cloudflare Sites and Services - Support Site",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our helpdesk provider is currently experiencing issues, and as such customers might encounter errors while submitting or viewing tickets. Responses on customer inquiries may be delayed during this time.",
+          "created_at": "2026-10-23T03:03:09.059Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T03:03:09.059Z",
+          "id": "r99pnvrym7xq",
+          "incident_id": "8m9a1fjjwxp5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T03:36:23.360Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Support Helpdesk Availability Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T09:42:16.255Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/8m9a1fjjwxp5",
+      "started_at": "2026-10-23T03:03:09.059Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T09:42:16.255Z"
+    }
+  },
+  {
+    "key": "cloudflare/t0p23w62n13j",
+    "vendor": "cloudflare",
+    "native_id": "t0p23w62n13j",
+    "title": "Cloudflare Access Availability Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/t0p23w62n13j",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-23T09:01:51.903Z",
+    "resolved_at": "2026-10-23T09:22:34.144Z",
+    "duration_minutes": 20,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "d70bmwqcvv1q",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Cloudflare Access when using Microsoft Entra ID. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-10-23T09:01:52.065Z"
+      },
+      {
+        "native_id": "6wcmd9ffw9r5",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-10-23T09:12:01.236Z"
+      },
+      {
+        "native_id": "y8ths4yv0j8b",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-23T09:15:14.627Z"
+      },
+      {
+        "native_id": "87wkqjrcjbs1",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T09:22:34.144Z"
+      }
+    ],
+    "first_seen_at": "2026-10-23T10:36:24.291542651Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-23T09:22:34.000Z"
+        }
+      ],
+      "created_at": "2026-10-23T09:01:51.000Z",
+      "id": "t0p23w62n13j",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T09:22:34.144Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:22:34.144Z",
+          "id": "87wkqjrcjbs1",
+          "incident_id": "t0p23w62n13j",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:22:34.144Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-23T09:15:14.627Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:15:14.627Z",
+          "id": "y8ths4yv0j8b",
+          "incident_id": "t0p23w62n13j",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:15:14.627Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-10-23T09:12:01.236Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:12:01.236Z",
+          "id": "6wcmd9ffw9r5",
+          "incident_id": "t0p23w62n13j",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:12:01.236Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Cloudflare Access when using Microsoft Entra ID. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-10-23T09:01:52.065Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T09:01:52.065Z",
+          "id": "d70bmwqcvv1q",
+          "incident_id": "t0p23w62n13j",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T09:01:52.065Z"
+        }
+      ],
+      "monitoring_at": "2026-10-23T09:15:14.627Z",
+      "name": "Cloudflare Access Availability Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T09:22:34.144Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/t0p23w62n13j",
+      "started_at": "2026-10-23T09:01:51.903Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T09:22:34.177Z"
     }
   }
 ]
