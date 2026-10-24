@@ -1169,7 +1169,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-22T17:31:27.000Z"
+          "updated_at": "2026-10-23T20:37:06.000Z"
         }
       ],
       "created_at": "2026-10-22T15:33:17.354Z",
@@ -1465,7 +1465,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-22T17:31:27.000Z"
+          "updated_at": "2026-10-23T20:37:06.000Z"
         }
       ],
       "created_at": "2026-10-22T17:01:31.000Z",
@@ -2151,6 +2151,647 @@
       "started_at": "2026-10-23T09:01:51.903Z",
       "status": "resolved",
       "updated_at": "2026-10-23T09:22:34.177Z"
+    }
+  },
+  {
+    "key": "cloudflare/3ts1mfzs0khz",
+    "vendor": "cloudflare",
+    "native_id": "3ts1mfzs0khz",
+    "title": "Delayed, missed, and duplicated Workers Cron Triggers",
+    "url": "https://www.cloudflarestatus.com/incidents/3ts1mfzs0khz",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-23T15:27:34.542Z",
+    "resolved_at": "2026-10-23T20:37:06.552Z",
+    "duration_minutes": 309,
+    "components": [
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "kj1xnrk0084h",
+        "status": "investigating",
+        "body": "We are investigating reports that some Workers Cron Triggers are running late, being skipped, or running more than once. Affected customers may see scheduled Workers invocations that do not run on time or run more than once. We will post an update as we learn more.",
+        "created_at": "2026-10-23T15:27:34.806Z"
+      },
+      {
+        "native_id": "8fp2n4wqtn69",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-23T20:29:51.871Z"
+      },
+      {
+        "native_id": "0htr9pb3d817",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T20:37:06.552Z"
+      }
+    ],
+    "first_seen_at": "2026-10-24T09:53:58.95834526Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 117,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-23T20:37:06.000Z"
+        }
+      ],
+      "created_at": "2026-10-23T15:27:34.000Z",
+      "id": "3ts1mfzs0khz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T20:37:06.552Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T20:37:06.552Z",
+          "id": "0htr9pb3d817",
+          "incident_id": "3ts1mfzs0khz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T20:37:06.552Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-23T20:29:51.871Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T20:29:51.871Z",
+          "id": "8fp2n4wqtn69",
+          "incident_id": "3ts1mfzs0khz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T20:29:51.871Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports that some Workers Cron Triggers are running late, being skipped, or running more than once. Affected customers may see scheduled Workers invocations that do not run on time or run more than once. We will post an update as we learn more.",
+          "created_at": "2026-10-23T15:27:34.806Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T15:27:34.806Z",
+          "id": "kj1xnrk0084h",
+          "incident_id": "3ts1mfzs0khz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T15:27:34.806Z"
+        }
+      ],
+      "monitoring_at": "2026-10-23T20:29:51.871Z",
+      "name": "Delayed, missed, and duplicated Workers Cron Triggers",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T20:37:06.552Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3ts1mfzs0khz",
+      "started_at": "2026-10-23T15:27:34.542Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T20:37:06.579Z"
+    }
+  },
+  {
+    "key": "cloudflare/sufgcbe8rrwt",
+    "vendor": "cloudflare",
+    "native_id": "sufgcbe8rrwt",
+    "title": "Network connectivity issues affecting services in North America",
+    "url": "https://www.cloudflarestatus.com/incidents/sufgcbe8rrwt",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-23T15:47:08.918Z",
+    "resolved_at": "2026-10-23T18:43:19.155Z",
+    "duration_minutes": 176,
+    "components": [
+      "Network"
+    ],
+    "updates": [
+      {
+        "native_id": "akuhvja87dio",
+        "status": "investigating",
+        "body": "We are investigating degraded network performance affecting some traffic between our Ashburn and Atlanta data centers. \nSome customers may see increased latency, packet loss, or intermittent errors on Workers and other services in the Eastern US. \nOur network team is actively working on mitigation.",
+        "created_at": "2026-10-23T15:47:08.918Z"
+      },
+      {
+        "native_id": "x73eknf7x63z",
+        "status": "identified",
+        "body": "We have identified a connectivity provider outage causing network congestion and degraded performance for some customers in North America. Affected customers may experience increased latency, packet loss, and intermittent errors across multiple services.\n\nOur network team is rerouting traffic away from affected paths, and we are working directly with our provider on restoration.",
+        "created_at": "2026-10-23T16:07:54.202Z"
+      },
+      {
+        "native_id": "zeyk8oph2zn4",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-23T16:27:45.455Z"
+      },
+      {
+        "native_id": "ftbqp6jmrxc6",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-10-23T16:59:55.715Z"
+      },
+      {
+        "native_id": "pmrmbg6rbo2k",
+        "status": "identified",
+        "body": "The infrastructure provider has experienced a recurrence of the failure. Cloudflare is continuing to apply traffic management actions to further remediate the issue.",
+        "created_at": "2026-10-23T17:03:50.267Z"
+      },
+      {
+        "native_id": "2w6zmg19t0vm",
+        "status": "identified",
+        "body": "The team is continuing to perform traffic engineering actions to route around impacted paths. The team will continue performing traffic engineering actions until all packet drops are mitigated.",
+        "created_at": "2026-10-23T17:33:04.567Z"
+      },
+      {
+        "native_id": "5b5szq7kekdx",
+        "status": "monitoring",
+        "body": "Our network team has rerouted traffic around the impacted paths and we are no longer seeing packet drops. Our connectivity provider reports that its service has been restored, but some links are still being brought back, so we are keeping our traffic management changes in place.",
+        "created_at": "2026-10-23T18:18:42.992Z"
+      },
+      {
+        "native_id": "151tyrgz1o6q",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T18:43:19.155Z"
+      }
+    ],
+    "first_seen_at": "2026-10-24T09:53:58.95834526Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 75,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:41.000Z"
+        }
+      ],
+      "created_at": "2026-10-23T15:47:08.918Z",
+      "id": "sufgcbe8rrwt",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T18:43:19.155Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T18:43:19.155Z",
+          "id": "151tyrgz1o6q",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T18:43:19.155Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Our network team has rerouted traffic around the impacted paths and we are no longer seeing packet drops. Our connectivity provider reports that its service has been restored, but some links are still being brought back, so we are keeping our traffic management changes in place.",
+          "created_at": "2026-10-23T18:18:42.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T18:18:42.992Z",
+          "id": "5b5szq7kekdx",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T18:18:42.992Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The team is continuing to perform traffic engineering actions to route around impacted paths. The team will continue performing traffic engineering actions until all packet drops are mitigated.",
+          "created_at": "2026-10-23T17:33:04.567Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T17:33:04.567Z",
+          "id": "2w6zmg19t0vm",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T17:36:26.179Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The infrastructure provider has experienced a recurrence of the failure. Cloudflare is continuing to apply traffic management actions to further remediate the issue.",
+          "created_at": "2026-10-23T17:03:50.267Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T17:03:50.267Z",
+          "id": "pmrmbg6rbo2k",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T17:03:50.267Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-10-23T16:59:55.715Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T16:59:55.715Z",
+          "id": "ftbqp6jmrxc6",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T16:59:55.715Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-23T16:27:45.455Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T16:27:45.455Z",
+          "id": "zeyk8oph2zn4",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T16:27:45.455Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified a connectivity provider outage causing network congestion and degraded performance for some customers in North America. Affected customers may experience increased latency, packet loss, and intermittent errors across multiple services.\n\nOur network team is rerouting traffic away from affected paths, and we are working directly with our provider on restoration.",
+          "created_at": "2026-10-23T16:07:54.202Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T16:07:54.202Z",
+          "id": "x73eknf7x63z",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T16:07:54.202Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating degraded network performance affecting some traffic between our Ashburn and Atlanta data centers. \nSome customers may see increased latency, packet loss, or intermittent errors on Workers and other services in the Eastern US. \nOur network team is actively working on mitigation.",
+          "created_at": "2026-10-23T15:47:08.918Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T15:47:08.918Z",
+          "id": "akuhvja87dio",
+          "incident_id": "sufgcbe8rrwt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T15:47:08.918Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network connectivity issues affecting services in North America",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T18:43:19.155Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/sufgcbe8rrwt",
+      "started_at": "2026-10-23T15:47:08.918Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T18:43:19.155Z"
+    }
+  },
+  {
+    "key": "cloudflare/39fz3wkl42tr",
+    "vendor": "cloudflare",
+    "native_id": "39fz3wkl42tr",
+    "title": "Network Performance Issues in Ashburn",
+    "url": "https://www.cloudflarestatus.com/incidents/39fz3wkl42tr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-24T01:01:09.147Z",
+    "resolved_at": "2026-10-24T03:09:11.258Z",
+    "duration_minutes": 128,
+    "components": [
+      "Ashburn, VA, United States - (IAD)",
+      "Artifacts",
+      "D1",
+      "Durable Objects",
+      "Network",
+      "Queues",
+      "R2",
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "553ftwbptuk0",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Network Performance in Ashburn, VA.\n\nWe are working to analyze and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-10-24T01:01:09.147Z"
+      },
+      {
+        "native_id": "xodaoxmn63wu",
+        "status": "investigating",
+        "body": "Affected services: Durable Objects, R2, Workflows, Queues, D1 and Artifacts.",
+        "created_at": "2026-10-24T01:05:17.906Z"
+      },
+      {
+        "native_id": "c8fzznr9xt87",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-24T01:28:05.195Z"
+      },
+      {
+        "native_id": "ht2ej0phv0k5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-24T03:09:11.258Z"
+      }
+    ],
+    "first_seen_at": "2026-10-24T09:53:58.95834526Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T20:30:01.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "3t0npclljyyg",
+          "name": "Ashburn, VA, United States - (IAD)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T17:31:27.000Z"
+        },
+        {
+          "created_at": "2026-07-16T17:07:32.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "2cwyccg7b7xb",
+          "name": "Artifacts",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2026-07-16",
+          "status": "operational",
+          "updated_at": "2026-10-15T21:30:10.000Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 37,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-10-15T21:30:10.000Z"
+        },
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-10-23T00:09:09.000Z"
+        },
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 75,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:41.000Z"
+        },
+        {
+          "created_at": "2025-10-22T09:19:59.000Z",
+          "description": "Send and receive messages with guaranteed delivery and no charges for egress bandwidth.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3z7cmdfch5kb",
+          "name": "Queues",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 83,
+          "showcase": false,
+          "start_date": "2025-10-22",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:42.000Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 84,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:42.000Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 124,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:03:25.000Z"
+        }
+      ],
+      "created_at": "2026-10-24T01:01:09.147Z",
+      "id": "39fz3wkl42tr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, VA, United States - (IAD)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-24T03:09:11.258Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-24T03:09:11.258Z",
+          "id": "ht2ej0phv0k5",
+          "incident_id": "39fz3wkl42tr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-24T03:09:11.258Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-24T01:28:05.195Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-24T01:28:05.195Z",
+          "id": "c8fzznr9xt87",
+          "incident_id": "39fz3wkl42tr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-24T01:28:05.195Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Cloudflare Sites and Services - D1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Cloudflare Sites and Services - Queues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "2cwyccg7b7xb",
+              "name": "Cloudflare Sites and Services - Artifacts",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Affected services: Durable Objects, R2, Workflows, Queues, D1 and Artifacts.",
+          "created_at": "2026-10-24T01:05:17.906Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-24T01:05:17.906Z",
+          "id": "xodaoxmn63wu",
+          "incident_id": "39fz3wkl42tr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-24T01:05:17.906Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, VA, United States - (IAD)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Cloudflare Sites and Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Network Performance in Ashburn, VA.\n\nWe are working to analyze and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-10-24T01:01:09.147Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-24T01:01:09.147Z",
+          "id": "553ftwbptuk0",
+          "incident_id": "39fz3wkl42tr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-24T01:01:09.147Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues in Ashburn",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-24T03:09:11.258Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/39fz3wkl42tr",
+      "started_at": "2026-10-24T01:01:09.147Z",
+      "status": "resolved",
+      "updated_at": "2026-10-24T03:09:11.258Z"
     }
   }
 ]
