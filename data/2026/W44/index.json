@@ -2,108 +2,219 @@
   "week": "2026-W44",
   "from": "2026-10-26T00:00:00Z",
   "to": "2026-11-02T00:00:00Z",
-  "generated_at": "2026-10-26T11:40:46.797276625Z",
+  "generated_at": "2026-10-27T11:09:32.104504615Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 32,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
       "ok": true,
-      "fetched_at": "2026-10-26T11:40:46.797276625Z",
+      "fetched_at": "2026-10-27T11:09:32.104504615Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/97y1vy5nsjrn",
+      "vendor": "cloudflare",
+      "title": "Delayed, missed, and duplicated Workers Cron Triggers",
+      "url": "https://www.cloudflarestatus.com/incidents/97y1vy5nsjrn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-26T21:48:46.945Z",
+      "resolved_at": "2026-10-27T01:15:15.525Z",
+      "duration_minutes": 206,
+      "ongoing": false,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 370.8,
+        "duration_minutes": 206,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M5Y60NQGGN514EB3943V94EN",
+      "vendor": "openai",
+      "title": "Elevated error rates for most hosted Code Reviews and Security Reviews on private GitHub repositories",
+      "url": "https://status.openai.com/incidents/01M5Y60NQGGN514EB3943V94EN",
+      "impact": "none",
+      "status": "monitoring",
+      "started_at": "2026-10-27T08:00:50Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 282,
+        "duration_minutes": 188,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/0q89dylg9vjk",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Sonnet 5.5",
+      "url": "https://stspg.io/rql9h590npxd",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-27T09:14:35.04Z",
+      "resolved_at": "2026-10-27T09:56:46.355Z",
+      "duration_minutes": 42,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 252,
+        "duration_minutes": 42,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "datadog/hnk297tpxhyk",
+      "vendor": "datadog",
+      "title": "Elevated Error Rates for Workflow Automation, App Builder, Bits Code, Bits Agent Builder",
+      "url": "https://stspg.io/rq69kpmmw7h6",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-26T17:26:43.452Z",
+      "resolved_at": "2026-10-26T18:23:21.476Z",
+      "duration_minutes": 56,
+      "ongoing": false,
+      "components": [
+        "App Builder",
+        "Bits AI",
+        "Workflow Automation"
+      ],
+      "score": {
+        "value": 168,
+        "duration_minutes": 56,
+        "components": 3,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/dv2vbq9kbgxn",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers build delays",
+      "url": "https://www.cloudflarestatus.com/incidents/dv2vbq9kbgxn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-26T15:12:34.756Z",
+      "resolved_at": "2026-10-26T16:03:32.129Z",
+      "duration_minutes": 50,
+      "ongoing": false,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 90,
+        "duration_minutes": 50,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
     {
       "key": "cloudflare/s5io0kegzlsz",
       "vendor": "cloudflare",
@@ -143,6 +254,74 @@
         "duration_minutes": 60,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/f1vvv30224wd",
+      "vendor": "github",
+      "title": "Incident with Actions, Issues, API Requests and Pull Requests",
+      "url": "https://stspg.io/0622ty903b4d",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-26T18:48:26.225Z",
+      "resolved_at": "2026-10-26T18:57:22.958Z",
+      "duration_minutes": 8,
+      "ongoing": false,
+      "components": [
+        "API Requests",
+        "Issues",
+        "Pull Requests",
+        "Actions"
+      ],
+      "score": {
+        "value": 48,
+        "duration_minutes": 8,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/j3llzsq3m17a",
+      "vendor": "cloudflare",
+      "title": "Some customers may notice their Pages and/or workers builds are intermittently failing.",
+      "url": "https://www.cloudflarestatus.com/incidents/j3llzsq3m17a",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-27T08:04:03.697Z",
+      "resolved_at": "2026-10-27T08:17:26.151Z",
+      "duration_minutes": 13,
+      "ongoing": false,
+      "components": [
+        "Pages",
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 46.800000000000004,
+        "duration_minutes": 13,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M5WPZTT0385GMEV1353ZC4AM",
+      "vendor": "openai",
+      "title": "Elevated error rates for Ads POST requests",
+      "url": "https://status.openai.com/incidents/01M5WPZTT0385GMEV1353ZC4AM",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-26T18:19:00Z",
+      "resolved_at": "2026-10-26T18:30:18Z",
+      "duration_minutes": 11,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 16.5,
+        "duration_minutes": 11,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }
