@@ -273,5 +273,57 @@
       "status": "resolved",
       "updated_at": "2026-10-26T18:57:22.985Z"
     }
+  },
+  {
+    "key": "github/dnslv7xdl4fj",
+    "vendor": "github",
+    "native_id": "dnslv7xdl4fj",
+    "title": "Elevated 404s for GitHub App s2s tokens in git/API",
+    "url": "https://stspg.io/4z5lmy7gqjk1",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-27T20:21:53.803Z",
+    "resolved_at": "2026-10-27T08:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "vkjjy8pm6d6t",
+        "status": "resolved",
+        "body": "Between 0655 and 0801 UTC on 10/27, customers experienced increased failure rates for API and git requests authenticated with server-to-server tokens for GitHub Apps (excluding Actions tokens). During this window, authenticated git operations mistakenly returned 404 for 1.24% (2.6x) of requests on average and 2.49% (5.3x) at peak.\n\nThese failures were caused by a scheduled maintenance event where GitHub migrated 7 tables between two MySQL clusters in our IAD and Azure Central US datacenters. One of the affected tables stores installation records for GitHub App server-to-server tokens (excluding Actions). We've successfully completed several of these migrations in recent months without notable customer impact. However, in this case, the migration coincided with a scheduled cleanup job on the installation records table, which deleted approximately 59 million records from 0444-0617 UTC. As a result, the gh-ost tooling used in the migration experienced inter-cluster replication delays (up to 1 hour at peak).\n\nAt 0655 UTC, we begin transitioning reads of the target tables to the new MySQL cluster, with 100% of reads cutover at 0721 UTC. Customer impact began, but was not detected, throughout the read cutover and persisted until completion of the write cutover at 0801 UTC. We are updating our processes and automation to prevent a repeat of this incident, including disabling overlapping cleanup jobs prior to these migrations and blocking the cutover of reads when replication delays are high.",
+        "created_at": "2026-10-27T20:21:53.872Z"
+      }
+    ],
+    "first_seen_at": "2026-10-28T11:43:54.974183746Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-27T08:00:00.000Z",
+      "id": "dnslv7xdl4fj",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 0655 and 0801 UTC on 10/27, customers experienced increased failure rates for API and git requests authenticated with server-to-server tokens for GitHub Apps (excluding Actions tokens). During this window, authenticated git operations mistakenly returned 404 for 1.24% (2.6x) of requests on average and 2.49% (5.3x) at peak.\n\nThese failures were caused by a scheduled maintenance event where GitHub migrated 7 tables between two MySQL clusters in our IAD and Azure Central US datacenters. One of the affected tables stores installation records for GitHub App server-to-server tokens (excluding Actions). We've successfully completed several of these migrations in recent months without notable customer impact. However, in this case, the migration coincided with a scheduled cleanup job on the installation records table, which deleted approximately 59 million records from 0444-0617 UTC. As a result, the gh-ost tooling used in the migration experienced inter-cluster replication delays (up to 1 hour at peak).\n\nAt 0655 UTC, we begin transitioning reads of the target tables to the new MySQL cluster, with 100% of reads cutover at 0721 UTC. Customer impact began, but was not detected, throughout the read cutover and persisted until completion of the write cutover at 0801 UTC. We are updating our processes and automation to prevent a repeat of this incident, including disabling overlapping cleanup jobs prior to these migrations and blocking the cutover of reads when replication delays are high.",
+          "created_at": "2026-10-27T20:21:53.872Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-27T08:00:00.000Z",
+          "id": "vkjjy8pm6d6t",
+          "incident_id": "dnslv7xdl4fj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-27T20:21:53.872Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated 404s for GitHub App s2s tokens in git/API",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-27T08:00:00.000Z",
+      "shortlink": "https://stspg.io/4z5lmy7gqjk1",
+      "started_at": "2026-10-27T20:21:53.803Z",
+      "status": "resolved",
+      "updated_at": "2026-10-27T20:21:53.884Z"
+    }
   }
 ]
