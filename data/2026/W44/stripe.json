@@ -1,0 +1,223 @@
+[
+  {
+    "key": "stripe/k0m9vtfvkcjz",
+    "vendor": "stripe",
+    "native_id": "k0m9vtfvkcjz",
+    "title": "Elevated Issuing errors from 17:13 - 20:41 UTC",
+    "url": "https://stspg.io/kj9ch2nd498j",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-28T17:39:01.864Z",
+    "resolved_at": "2026-10-28T22:15:06.958Z",
+    "duration_minutes": 276,
+    "components": [
+      "Stripe API",
+      "Banking-as-a-service"
+    ],
+    "updates": [
+      {
+        "native_id": "lvs1h92v9y0g",
+        "status": "investigating",
+        "body": "We’re currently investigating elevated API errors beginning at 17:13 UTC. We’ll post an update soon.",
+        "created_at": "2026-10-28T17:39:01.97Z"
+      },
+      {
+        "native_id": "cww2k7kzydx9",
+        "status": "identified",
+        "body": "We’re currently seeing elevated errors related to newly created Issuing cards beginning at 17:13 UTC. We’ve identified the cause, and are working on a fix.",
+        "created_at": "2026-10-28T18:29:40.102Z"
+      },
+      {
+        "native_id": "4br2w2gpd7wc",
+        "status": "identified",
+        "body": "Beginning at 17:13 UTC, we are experiencing elevated error rates for API requests involving Issuing cards that were created or updated between 17:13–17:54 UTC. We are currently working to correct the affected card data, and will update you soon.",
+        "created_at": "2026-10-28T20:13:40.822Z"
+      },
+      {
+        "native_id": "zv4ryfwhjq7m",
+        "status": "identified",
+        "body": "From 17:15 - 20:41 UTC, Stripe Issuing cards that were created or updated between 17:15–17:54 UTC experienced elevated error rates for API requests. The majority of errors subsided by 19:32 UTC, with full resolution occurring at 20:41 UTC. We have corrected the affected card data, and this issue is now resolved.",
+        "created_at": "2026-10-28T21:08:45.225Z"
+      },
+      {
+        "native_id": "7gb5vg7ngllk",
+        "status": "resolved",
+        "body": "From 17:15 - 20:41 UTC, Stripe Issuing cards that were created or updated between 17:15–17:54 UTC experienced elevated error rates for API requests. The majority of errors subsided by 19:32 UTC, with full resolution occurring at 20:41 UTC. We have corrected the affected card data, and this issue is now resolved.",
+        "created_at": "2026-10-28T22:15:06.958Z"
+      }
+    ],
+    "first_seen_at": "2026-10-29T11:52:25.981929879Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-10-28T21:21:36.244Z"
+        },
+        {
+          "created_at": "2023-05-25T21:27:40.139Z",
+          "description": "Capital, Issuing, and Treasury",
+          "group": false,
+          "group_id": null,
+          "id": "51gsjcp6h48z",
+          "name": "Banking-as-a-service",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-10-28T21:21:50.708Z"
+        }
+      ],
+      "created_at": "2026-10-28T17:39:01.872Z",
+      "id": "k0m9vtfvkcjz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "51gsjcp6h48z",
+              "name": "Banking-as-a-service",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 17:15 - 20:41 UTC, Stripe Issuing cards that were created or updated between 17:15–17:54 UTC experienced elevated error rates for API requests. The majority of errors subsided by 19:32 UTC, with full resolution occurring at 20:41 UTC. We have corrected the affected card data, and this issue is now resolved.",
+          "created_at": "2026-10-28T22:15:06.958Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-28T22:15:06.958Z",
+          "id": "7gb5vg7ngllk",
+          "incident_id": "k0m9vtfvkcjz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T22:15:06.958Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "51gsjcp6h48z",
+              "name": "Banking-as-a-service",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 17:15 - 20:41 UTC, Stripe Issuing cards that were created or updated between 17:15–17:54 UTC experienced elevated error rates for API requests. The majority of errors subsided by 19:32 UTC, with full resolution occurring at 20:41 UTC. We have corrected the affected card data, and this issue is now resolved.",
+          "created_at": "2026-10-28T21:08:45.225Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T21:08:45.225Z",
+          "id": "zv4ryfwhjq7m",
+          "incident_id": "k0m9vtfvkcjz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T21:08:45.225Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "51gsjcp6h48z",
+              "name": "Banking-as-a-service",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Beginning at 17:13 UTC, we are experiencing elevated error rates for API requests involving Issuing cards that were created or updated between 17:13–17:54 UTC. We are currently working to correct the affected card data, and will update you soon.",
+          "created_at": "2026-10-28T20:13:40.822Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T20:13:40.822Z",
+          "id": "4br2w2gpd7wc",
+          "incident_id": "k0m9vtfvkcjz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T20:13:40.822Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "51gsjcp6h48z",
+              "name": "Banking-as-a-service",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re currently seeing elevated errors related to newly created Issuing cards beginning at 17:13 UTC. We’ve identified the cause, and are working on a fix.",
+          "created_at": "2026-10-28T18:29:40.102Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T18:29:40.000Z",
+          "id": "cww2k7kzydx9",
+          "incident_id": "k0m9vtfvkcjz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T18:30:47.654Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re currently investigating elevated API errors beginning at 17:13 UTC. We’ll post an update soon.",
+          "created_at": "2026-10-28T17:39:01.970Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T17:39:01.970Z",
+          "id": "lvs1h92v9y0g",
+          "incident_id": "k0m9vtfvkcjz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T17:39:01.970Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Issuing errors from 17:13 - 20:41 UTC",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-28T22:15:06.958Z",
+      "shortlink": "https://stspg.io/kj9ch2nd498j",
+      "started_at": "2026-10-28T17:39:01.864Z",
+      "status": "resolved",
+      "updated_at": "2026-10-28T22:15:06.983Z"
+    }
+  }
+]

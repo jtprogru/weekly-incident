@@ -2,108 +2,130 @@
   "week": "2026-W44",
   "from": "2026-10-26T00:00:00Z",
   "to": "2026-11-02T00:00:00Z",
-  "generated_at": "2026-10-28T11:43:54.974183746Z",
+  "generated_at": "2026-10-29T11:52:25.981929879Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 31,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
       "ok": true,
-      "fetched_at": "2026-10-28T11:43:54.974183746Z",
+      "fetched_at": "2026-10-29T11:52:25.981929879Z",
       "incidents_seen": 50,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/snth5ero95rz",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Ashburn, IAD",
+      "url": "https://www.cloudflarestatus.com/incidents/snth5ero95rz",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T04:39:13.459Z",
+      "resolved_at": "2026-10-28T22:18:26.488Z",
+      "duration_minutes": 1059,
+      "ongoing": false,
+      "components": [
+        "Ashburn, United States - (IAD)"
+      ],
+      "score": {
+        "value": 1906.2,
+        "duration_minutes": 1059,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "cloudflare/klub12zy71b4",
       "vendor": "cloudflare",
@@ -116,8 +138,8 @@
       "duration_minutes": 191,
       "ongoing": false,
       "components": [
-        "D1",
         "Durable Objects",
+        "D1",
         "Queues",
         "Workflows"
       ],
@@ -130,22 +152,103 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/snth5ero95rz",
-      "vendor": "cloudflare",
-      "title": "Network Performance Issues in Ashburn, IAD",
-      "url": "https://www.cloudflarestatus.com/incidents/snth5ero95rz",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-10-28T04:39:13.459Z",
-      "ongoing": true,
+      "key": "datadog/z0b1h0ylmhm5",
+      "vendor": "datadog",
+      "title": "Metrics query are disrupted",
+      "url": "https://stspg.io/d4klp5znv9c7",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-28T16:10:15.807Z",
+      "resolved_at": "2026-10-28T18:39:19.518Z",
+      "duration_minutes": 149,
+      "ongoing": false,
       "components": [
-        "Ashburn, United States - (IAD)"
+        "APM",
+        "Bits AI",
+        "Cloud Cost Management",
+        "Cloud Network Monitoring",
+        "Metrics and Infra Monitoring",
+        "Monitors",
+        "Product Analytics",
+        "RUM"
       ],
       "score": {
-        "value": 763.2,
-        "duration_minutes": 424,
-        "components": 1,
+        "value": 1192,
+        "duration_minutes": 149,
+        "components": 8,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/6yfpsos7ksp3",
+      "vendor": "cloudflare",
+      "title": "Increased Worker services errors",
+      "url": "https://www.cloudflarestatus.com/incidents/6yfpsos7ksp3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T09:22:53.373Z",
+      "resolved_at": "2026-10-29T11:49:16.376Z",
+      "duration_minutes": 146,
+      "ongoing": false,
+      "components": [
+        "Containers",
+        "D1",
+        "Workers Assets",
+        "Workflows"
+      ],
+      "score": {
+        "value": 1051.2,
+        "duration_minutes": 146,
+        "components": 4,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/phg1y2yh07n2",
+      "vendor": "anthropic",
+      "title": "Elevated errors affecting the Google Calendar connector",
+      "url": "https://stspg.io/75qq31h8672d",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T16:19:09.935Z",
+      "resolved_at": "2026-10-28T20:05:18.208Z",
+      "duration_minutes": 226,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 1017,
+        "duration_minutes": 226,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/k0m9vtfvkcjz",
+      "vendor": "stripe",
+      "title": "Elevated Issuing errors from 17:13 - 20:41 UTC",
+      "url": "https://stspg.io/kj9ch2nd498j",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T17:39:01.864Z",
+      "resolved_at": "2026-10-28T22:15:06.958Z",
+      "duration_minutes": 276,
+      "ongoing": false,
+      "components": [
+        "Stripe API",
+        "Banking-as-a-service"
+      ],
+      "score": {
+        "value": 662.4,
+        "duration_minutes": 276,
+        "components": 2,
+        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -161,8 +264,8 @@
       "duration_minutes": 85,
       "ongoing": false,
       "components": [
-        "D1",
         "Durable Objects",
+        "D1",
         "Queues",
         "Workflows"
       ],
@@ -221,6 +324,29 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/oco7f885d2v4",
+      "vendor": "cloudflare",
+      "title": "Increased errors and latency for CNI 2.0 traffic in LAX",
+      "url": "https://www.cloudflarestatus.com/incidents/oco7f885d2v4",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T06:55:41.568Z",
+      "resolved_at": "2026-10-29T08:28:13.765Z",
+      "duration_minutes": 92,
+      "ongoing": false,
+      "components": [
+        "Cloud Network Interconnect (CNI)",
+        "Los Angeles, United States - (LAX)"
+      ],
+      "score": {
+        "value": 331.2,
+        "duration_minutes": 92,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/dk2obcyw2aew",
       "vendor": "cloudflare",
       "title": "ERR_TIMED_OUT and ERR_EMPTY_RESPONSE being observed by Cloudflare Customers",
@@ -239,6 +365,27 @@
         "vendor_weight": 1.8
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/k2cd9e1fyskp",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
+      "url": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-10-29T10:31:52.863Z",
+      "ongoing": true,
+      "components": [
+        "Dashboard",
+        "Support Site"
+      ],
+      "score": {
+        "value": 288,
+        "duration_minutes": 80,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
     },
     {
       "key": "grafana/jl41d84gp27h",
@@ -336,6 +483,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/bc7e93q3eigp",
+      "vendor": "cloudflare",
+      "title": "Issues with Durable Objects availability in Eastern Europe",
+      "url": "https://www.cloudflarestatus.com/incidents/bc7e93q3eigp",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T10:06:17.343Z",
+      "resolved_at": "2026-10-29T11:47:23.364Z",
+      "duration_minutes": 101,
+      "ongoing": false,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 181.8,
+        "duration_minutes": 101,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "digitalocean/ckmpdk5z9xj9",
       "vendor": "digitalocean",
       "title": "Kubernetes Cluster Management Operations",
@@ -382,6 +551,24 @@
       "above_threshold": true
     },
     {
+      "key": "github/rn76zdy367m2",
+      "vendor": "github",
+      "title": "Disruption with Copilot Cloud services",
+      "url": "https://stspg.io/22p3vp78z20q",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-10-29T10:19:55.313Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 138,
+        "duration_minutes": 92,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/2eno8w1fk27j",
       "vendor": "cloudflare",
       "title": "We are seeing some customers having issues with Workers Builds",
@@ -398,6 +585,28 @@
       "score": {
         "value": 136.8,
         "duration_minutes": 76,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/jajp50huvxtz",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Queretaro, MX",
+      "url": "https://www.cloudflarestatus.com/incidents/jajp50huvxtz",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T23:25:00Z",
+      "resolved_at": "2026-10-29T00:35:00Z",
+      "duration_minutes": 70,
+      "ongoing": false,
+      "components": [
+        "Queretaro, Mexico - (QRO)"
+      ],
+      "score": {
+        "value": 126,
+        "duration_minutes": 70,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -422,6 +631,28 @@
         "vendor_weight": 1.5
       },
       "above_threshold": false
+    },
+    {
+      "key": "github/l7ycmglmykgg",
+      "vendor": "github",
+      "title": "Disruption with some Copilot services",
+      "url": "https://stspg.io/bwcyq078jzms",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-10-28T14:12:53.814Z",
+      "resolved_at": "2026-10-28T15:28:19.237Z",
+      "duration_minutes": 75,
+      "ongoing": false,
+      "components": [
+        "Copilot"
+      ],
+      "score": {
+        "value": 112.5,
+        "duration_minutes": 75,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/mbq512v9oe4s",
@@ -550,6 +781,28 @@
       "above_threshold": false
     },
     {
+      "key": "circleci/8q9j33r2rssy",
+      "vendor": "circleci",
+      "title": "Delays for gen2 dedicated IP range jobs",
+      "url": "https://stspg.io/t4pc57wmjnql",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T18:15:52.747Z",
+      "resolved_at": "2026-10-28T19:19:03.311Z",
+      "duration_minutes": 63,
+      "ongoing": false,
+      "components": [
+        "Docker Jobs"
+      ],
+      "score": {
+        "value": 63,
+        "duration_minutes": 63,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/wcvm832ndmhp",
       "vendor": "grafana",
       "title": "ingestion errors in mimir-prod-66",
@@ -568,6 +821,30 @@
         "duration_minutes": 60,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/h6fgl47h6iht",
+      "vendor": "cloudflare",
+      "title": "Increased latency and error rate for R2 in ENAM",
+      "url": "https://www.cloudflarestatus.com/incidents/h6fgl47h6iht",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-28T21:01:39.386Z",
+      "resolved_at": "2026-10-28T21:12:24.884Z",
+      "duration_minutes": 10,
+      "ongoing": false,
+      "components": [
+        "Durable Objects",
+        "Artifacts",
+        "R2"
+      ],
+      "score": {
+        "value": 54,
+        "duration_minutes": 10,
+        "components": 3,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
