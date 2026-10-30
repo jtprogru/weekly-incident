@@ -2,104 +2,106 @@
   "week": "2026-W44",
   "from": "2026-10-26T00:00:00Z",
   "to": "2026-11-02T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-10-30T11:45:15.662649227Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
-      "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 50,
+      "ok": false,
+      "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 31,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
-      "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 50,
+      "ok": false,
+      "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
+      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
@@ -147,6 +149,52 @@
         "value": 1375.2,
         "duration_minutes": 191,
         "components": 4,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "aws/0fd29a8bd6906892",
+      "vendor": "aws",
+      "title": "Increased invoke error rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-10-30T01:28:38Z",
+      "ongoing": true,
+      "components": [
+        "apigateway-us-west-2"
+      ],
+      "score": {
+        "value": 1232,
+        "duration_minutes": 616,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/r4mz367vddi7",
+      "vendor": "cloudflare",
+      "title": "Increased Durable Objects, D1 and Workflows Error Rates",
+      "url": "https://www.cloudflarestatus.com/incidents/r4mz367vddi7",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T14:16:46.205Z",
+      "resolved_at": "2026-10-29T16:33:43.687Z",
+      "duration_minutes": 136,
+      "ongoing": false,
+      "components": [
+        "Durable Objects",
+        "Artifacts",
+        "D1",
+        "Workers Assets",
+        "Workflows"
+      ],
+      "score": {
+        "value": 1224,
+        "duration_minutes": 136,
+        "components": 5,
         "vendor_weight": 1.8
       },
       "above_threshold": true
@@ -324,6 +372,54 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/10m2bxjztzwh",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects and Downstream Services in Eastern North America (ENAM)",
+      "url": "https://www.cloudflarestatus.com/incidents/10m2bxjztzwh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T16:00:00Z",
+      "resolved_at": "2026-10-29T16:50:03.928Z",
+      "duration_minutes": 50,
+      "ongoing": false,
+      "components": [
+        "Durable Objects",
+        "Artifacts",
+        "D1",
+        "R2"
+      ],
+      "score": {
+        "value": 360,
+        "duration_minutes": 50,
+        "components": 4,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/k2cd9e1fyskp",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
+      "url": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T10:31:52.863Z",
+      "resolved_at": "2026-10-29T12:10:59.965Z",
+      "duration_minutes": 99,
+      "ongoing": false,
+      "components": [
+        "Dashboard",
+        "Support Site"
+      ],
+      "score": {
+        "value": 356.40000000000003,
+        "duration_minutes": 99,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/oco7f885d2v4",
       "vendor": "cloudflare",
       "title": "Increased errors and latency for CNI 2.0 traffic in LAX",
@@ -365,27 +461,6 @@
         "vendor_weight": 1.8
       },
       "above_threshold": true
-    },
-    {
-      "key": "cloudflare/k2cd9e1fyskp",
-      "vendor": "cloudflare",
-      "title": "Increased HTTP 429 Rate Limit Errors on Cloudflare Dashboard",
-      "url": "https://www.cloudflarestatus.com/incidents/k2cd9e1fyskp",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-10-29T10:31:52.863Z",
-      "ongoing": true,
-      "components": [
-        "Dashboard",
-        "Support Site"
-      ],
-      "score": {
-        "value": 288,
-        "duration_minutes": 80,
-        "components": 2,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": false
     },
     {
       "key": "grafana/jl41d84gp27h",
@@ -483,6 +558,48 @@
       "above_threshold": false
     },
     {
+      "key": "github/rn76zdy367m2",
+      "vendor": "github",
+      "title": "Disruption with Copilot Cloud services",
+      "url": "https://stspg.io/22p3vp78z20q",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T10:19:55.313Z",
+      "resolved_at": "2026-10-29T12:49:52.145Z",
+      "duration_minutes": 149,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 223.5,
+        "duration_minutes": 149,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/kp28d3kzgft1",
+      "vendor": "cloudflare",
+      "title": "R2 Elevated Latency in Eastern Europe",
+      "url": "https://www.cloudflarestatus.com/incidents/kp28d3kzgft1",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-29T19:57:28.577Z",
+      "resolved_at": "2026-10-29T21:50:51.475Z",
+      "duration_minutes": 113,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 203.4,
+        "duration_minutes": 113,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/bc7e93q3eigp",
       "vendor": "cloudflare",
       "title": "Issues with Durable Objects availability in Eastern Europe",
@@ -551,24 +668,6 @@
       "above_threshold": true
     },
     {
-      "key": "github/rn76zdy367m2",
-      "vendor": "github",
-      "title": "Disruption with Copilot Cloud services",
-      "url": "https://stspg.io/22p3vp78z20q",
-      "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-10-29T10:19:55.313Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 138,
-        "duration_minutes": 92,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": false
-    },
-    {
       "key": "cloudflare/2eno8w1fk27j",
       "vendor": "cloudflare",
       "title": "We are seeing some customers having issues with Workers Builds",
@@ -607,6 +706,28 @@
       "score": {
         "value": 126,
         "duration_minutes": 70,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/2xiv8fdhk0bh",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Browser Run",
+      "url": "https://www.cloudflarestatus.com/incidents/2xiv8fdhk0bh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-30T02:41:48.427Z",
+      "resolved_at": "2026-10-30T03:48:59.143Z",
+      "duration_minutes": 67,
+      "ongoing": false,
+      "components": [
+        "Browser Run"
+      ],
+      "score": {
+        "value": 120.60000000000001,
+        "duration_minutes": 67,
         "components": 1,
         "vendor_weight": 1.8
       },
