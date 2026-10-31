@@ -2,40 +2,40 @@
   "week": "2026-W44",
   "from": "2026-10-26T00:00:00Z",
   "to": "2026-11-02T00:00:00Z",
-  "generated_at": "2026-10-30T11:45:15.662649227Z",
+  "generated_at": "2026-10-31T11:18:52.40902942Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
-      "incidents_seen": 7,
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
+      "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
-      "incidents_seen": 31,
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
+      "incidents_seen": 30,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,12 +100,32 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-10-30T11:45:15.662649227Z",
+      "fetched_at": "2026-10-31T11:18:52.40902942Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "aws/0fd29a8bd6906892",
+      "vendor": "aws",
+      "title": "Increased invoke error rates",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "investigating",
+      "started_at": "2026-10-30T01:28:38Z",
+      "ongoing": true,
+      "components": [
+        "apigateway-us-west-2"
+      ],
+      "score": {
+        "value": 4060,
+        "duration_minutes": 2030,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
     {
       "key": "cloudflare/snth5ero95rz",
       "vendor": "cloudflare",
@@ -150,26 +170,6 @@
         "duration_minutes": 191,
         "components": 4,
         "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "aws/0fd29a8bd6906892",
-      "vendor": "aws",
-      "title": "Increased invoke error rates",
-      "url": "https://health.aws.amazon.com/health/status",
-      "impact": "unknown",
-      "status": "investigating",
-      "started_at": "2026-10-30T01:28:38Z",
-      "ongoing": true,
-      "components": [
-        "apigateway-us-west-2"
-      ],
-      "score": {
-        "value": 1232,
-        "duration_minutes": 616,
-        "components": 1,
-        "vendor_weight": 2
       },
       "above_threshold": true
     },
@@ -350,6 +350,30 @@
       "above_threshold": false
     },
     {
+      "key": "github/pwxsjgnvrk6b",
+      "vendor": "github",
+      "title": "Incident with Actions, Pages, and Webhooks",
+      "url": "https://stspg.io/5cd2m4n59spv",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-10-30T17:50:54.67Z",
+      "resolved_at": "2026-10-30T19:23:40.177Z",
+      "duration_minutes": 92,
+      "ongoing": false,
+      "components": [
+        "Webhooks",
+        "Actions",
+        "Pages"
+      ],
+      "score": {
+        "value": 414,
+        "duration_minutes": 92,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/97y1vy5nsjrn",
       "vendor": "cloudflare",
       "title": "Delayed, missed, and duplicated Workers Cron Triggers",
@@ -368,6 +392,26 @@
         "duration_minutes": 206,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M66KSDH67V5BQ73PE8AD2W8S",
+      "vendor": "openai",
+      "title": "Elevated errors for GPT Image 2 API image edits",
+      "url": "https://status.openai.com/incidents/01M66KSDH67V5BQ73PE8AD2W8S",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-30T14:35:28Z",
+      "resolved_at": "2026-10-30T18:36:55Z",
+      "duration_minutes": 241,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 361.5,
+        "duration_minutes": 241,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -578,6 +622,26 @@
       "above_threshold": true
     },
     {
+      "key": "github/lyyfm7j4pkgl",
+      "vendor": "github",
+      "title": "Incident with Dependabot",
+      "url": "https://stspg.io/5bh6qnzn76tk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-30T20:59:14.215Z",
+      "resolved_at": "2026-10-30T23:29:06.291Z",
+      "duration_minutes": 149,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 223.5,
+        "duration_minutes": 149,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/kp28d3kzgft1",
       "vendor": "cloudflare",
       "title": "R2 Elevated Latency in Eastern Europe",
@@ -666,6 +730,26 @@
         "vendor_weight": 1
       },
       "above_threshold": true
+    },
+    {
+      "key": "openai/01M6754SR14HCQ3E9FX426E2N7",
+      "vendor": "openai",
+      "title": "Elevated errors with search in Dots, ChatGPT Work, and certain ChatGPT thinking experiences",
+      "url": "https://status.openai.com/incidents/01M6754SR14HCQ3E9FX426E2N7",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-30T19:38:47Z",
+      "resolved_at": "2026-10-30T21:14:12Z",
+      "duration_minutes": 95,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 142.5,
+        "duration_minutes": 95,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "cloudflare/2eno8w1fk27j",
@@ -771,6 +855,29 @@
         "value": 112.5,
         "duration_minutes": 75,
         "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/nxy2l0ssxm10",
+      "vendor": "github",
+      "title": "Disruption with GitHub services",
+      "url": "https://stspg.io/6p81rf34z4nc",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-10-30T14:31:16.529Z",
+      "resolved_at": "2026-10-30T15:02:51.002Z",
+      "duration_minutes": 31,
+      "ongoing": false,
+      "components": [
+        "Issues",
+        "Pages"
+      ],
+      "score": {
+        "value": 93,
+        "duration_minutes": 31,
+        "components": 2,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -907,7 +1014,7 @@
       "title": "Delays for gen2 dedicated IP range jobs",
       "url": "https://stspg.io/t4pc57wmjnql",
       "impact": "minor",
-      "status": "resolved",
+      "status": "postmortem",
       "started_at": "2026-10-28T18:15:52.747Z",
       "resolved_at": "2026-10-28T19:19:03.311Z",
       "duration_minutes": 63,
@@ -1034,6 +1141,28 @@
         "duration_minutes": 29,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/5tlm9r9j9rpo",
+      "vendor": "cloudflare",
+      "title": "Cache purge delays in Qingdao Shandong, China",
+      "url": "https://www.cloudflarestatus.com/incidents/5tlm9r9j9rpo",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-10-31T06:41:15.562Z",
+      "resolved_at": "2026-10-31T06:57:35.247Z",
+      "duration_minutes": 16,
+      "ongoing": false,
+      "components": [
+        "CDN Cache Purge"
+      ],
+      "score": {
+        "value": 28.8,
+        "duration_minutes": 16,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

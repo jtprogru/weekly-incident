@@ -750,7 +750,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-28T14:30:39.261Z"
+          "updated_at": "2026-10-31T06:57:35.247Z"
         },
         {
           "created_at": "2014-10-27T20:36:25.000Z",
@@ -764,8 +764,8 @@
           "position": 46,
           "showcase": false,
           "start_date": null,
-          "status": "operational",
-          "updated_at": "2026-10-28T06:00:30.716Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-10-31T06:24:48.628Z"
         }
       ],
       "created_at": "2026-10-27T15:10:35.555Z",
@@ -3218,6 +3218,121 @@
       "started_at": "2026-10-30T02:41:48.427Z",
       "status": "resolved",
       "updated_at": "2026-10-30T03:48:59.143Z"
+    }
+  },
+  {
+    "key": "cloudflare/5tlm9r9j9rpo",
+    "vendor": "cloudflare",
+    "native_id": "5tlm9r9j9rpo",
+    "title": "Cache purge delays in Qingdao Shandong, China",
+    "url": "https://www.cloudflarestatus.com/incidents/5tlm9r9j9rpo",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-31T06:41:15.562Z",
+    "resolved_at": "2026-10-31T06:57:35.247Z",
+    "duration_minutes": 16,
+    "components": [
+      "CDN Cache Purge"
+    ],
+    "updates": [
+      {
+        "native_id": "720gr5nsexlu",
+        "status": "investigating",
+        "body": "Cloudflare is observing cache purge delay in Qingdao in Shandong, China. \nWe are working to resolve this issue as soon as possible. More updates to follow.",
+        "created_at": "2026-10-31T06:41:15.562Z"
+      },
+      {
+        "native_id": "6fpjoonmorik",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-31T06:50:05.303Z"
+      },
+      {
+        "native_id": "6vh4ckda98ba",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-31T06:57:35.247Z"
+      }
+    ],
+    "first_seen_at": "2026-10-31T11:18:52.40902942Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-31T16:54:52.000Z",
+          "description": "CDN single file cache purging service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fbvx0hxhhdj0",
+          "name": "CDN Cache Purge",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-31T06:57:35.247Z"
+        }
+      ],
+      "created_at": "2026-10-31T06:41:15.562Z",
+      "id": "5tlm9r9j9rpo",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-31T06:57:35.247Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-31T06:57:35.247Z",
+          "id": "6vh4ckda98ba",
+          "incident_id": "5tlm9r9j9rpo",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-31T06:57:35.247Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-31T06:50:05.303Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-31T06:50:05.303Z",
+          "id": "6fpjoonmorik",
+          "incident_id": "5tlm9r9j9rpo",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-31T06:50:05.303Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "CDN \u0026 Performance - CDN Cache Purge",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is observing cache purge delay in Qingdao in Shandong, China. \nWe are working to resolve this issue as soon as possible. More updates to follow.",
+          "created_at": "2026-10-31T06:41:15.562Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-31T06:41:15.562Z",
+          "id": "720gr5nsexlu",
+          "incident_id": "5tlm9r9j9rpo",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-31T06:41:15.562Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cache purge delays in Qingdao Shandong, China",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-31T06:57:35.247Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/5tlm9r9j9rpo",
+      "started_at": "2026-10-31T06:41:15.562Z",
+      "status": "resolved",
+      "updated_at": "2026-10-31T06:57:35.247Z"
     }
   }
 ]
