@@ -219,5 +219,134 @@
       "status": "resolved",
       "updated_at": "2026-10-28T22:15:06.983Z"
     }
+  },
+  {
+    "key": "stripe/kl8wz1n0z7m7",
+    "vendor": "stripe",
+    "native_id": "kl8wz1n0z7m7",
+    "title": "Elevated Instant Payouts failures",
+    "url": "https://stspg.io/3gk09h1d44ts",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-01T12:31:24.182Z",
+    "resolved_at": "2026-11-01T14:36:29.257Z",
+    "duration_minutes": 125,
+    "components": [
+      "Stripe core components"
+    ],
+    "updates": [
+      {
+        "native_id": "48hrsg9mdbpv",
+        "status": "investigating",
+        "body": "We're currently investigating elevated failure rates affecting Instant Payouts to cards in some countries. As of November 1, 2026 at 05:00 UTC, we've identified that a significant portion of failures are due to issuer-bank maintenance affecting payment networks. We're monitoring the situation closely and will provide further updates as the maintenance window progresses.",
+        "created_at": "2026-11-01T12:31:24.269Z"
+      },
+      {
+        "native_id": "6rvvl7681cnh",
+        "status": "identified",
+        "body": "Instant Payouts to cards are experiencing elevated failure rates mainly in Canada and US. Since 05:00 UTC, a significant portion of these failures have been attributed to issuer-bank maintenance affecting payment networks. We are monitoring the situation and will provide updates as the maintenance window progresses.",
+        "created_at": "2026-11-01T12:50:05.343Z"
+      },
+      {
+        "native_id": "fpvnbxsk7jvx",
+        "status": "resolved",
+        "body": "From 05:00–14:00 UTC on November 1, 2026, Instant Payouts to cards experienced elevated failure rates due to issuer-bank maintenance affecting payment networks, primarily impacting the US and Canada. This issue is now resolved, and payment processing has returned to normal.",
+        "created_at": "2026-11-01T14:36:29.257Z"
+      }
+    ],
+    "first_seen_at": "2026-11-02T13:58:07.593417993Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-11-01T14:36:29.221Z"
+        }
+      ],
+      "created_at": "2026-11-01T12:31:24.187Z",
+      "id": "kl8wz1n0z7m7",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 05:00–14:00 UTC on November 1, 2026, Instant Payouts to cards experienced elevated failure rates due to issuer-bank maintenance affecting payment networks, primarily impacting the US and Canada. This issue is now resolved, and payment processing has returned to normal.",
+          "created_at": "2026-11-01T14:36:29.257Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-01T14:36:29.257Z",
+          "id": "fpvnbxsk7jvx",
+          "incident_id": "kl8wz1n0z7m7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-01T14:36:29.257Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Instant Payouts to cards are experiencing elevated failure rates mainly in Canada and US. Since 05:00 UTC, a significant portion of these failures have been attributed to issuer-bank maintenance affecting payment networks. We are monitoring the situation and will provide updates as the maintenance window progresses.",
+          "created_at": "2026-11-01T12:50:05.343Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-01T12:50:05.343Z",
+          "id": "6rvvl7681cnh",
+          "incident_id": "kl8wz1n0z7m7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-01T12:50:05.343Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating elevated failure rates affecting Instant Payouts to cards in some countries. As of November 1, 2026 at 05:00 UTC, we've identified that a significant portion of failures are due to issuer-bank maintenance affecting payment networks. We're monitoring the situation closely and will provide further updates as the maintenance window progresses.",
+          "created_at": "2026-11-01T12:31:24.269Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-01T12:31:24.269Z",
+          "id": "48hrsg9mdbpv",
+          "incident_id": "kl8wz1n0z7m7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-01T12:31:24.269Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Instant Payouts failures",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-01T14:36:29.257Z",
+      "shortlink": "https://stspg.io/3gk09h1d44ts",
+      "started_at": "2026-11-01T12:31:24.182Z",
+      "status": "resolved",
+      "updated_at": "2026-11-01T14:36:29.279Z"
+    }
   }
 ]
