@@ -548,7 +548,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-03T07:24:51.706Z"
+          "updated_at": "2026-11-03T13:36:48.453Z"
         }
       ],
       "created_at": "2026-11-03T07:24:51.706Z",
@@ -597,6 +597,255 @@
       "started_at": "2026-11-03T06:20:00.000Z",
       "status": "resolved",
       "updated_at": "2026-11-03T07:25:13.683Z"
+    }
+  },
+  {
+    "key": "cloudflare/nbyxn84kvb6o",
+    "vendor": "cloudflare",
+    "native_id": "nbyxn84kvb6o",
+    "title": "Cloudflare Workers and Pages build errors",
+    "url": "https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-03T14:46:56.697Z",
+    "resolved_at": "2026-11-03T19:38:09.321Z",
+    "duration_minutes": 291,
+    "components": [
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "cg3e91vl53yf",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers and Pages build failures which potentially impacts multiple customers. Further detail will be provided as more information becomes available.",
+        "created_at": "2026-11-03T14:46:56.697Z"
+      },
+      {
+        "native_id": "knn6y70uzl92",
+        "status": "identified",
+        "body": "Customers may experience increased queue times for Workers Builders",
+        "created_at": "2026-11-03T15:15:31.333Z"
+      },
+      {
+        "native_id": "vkbp45e9trv7",
+        "status": "monitoring",
+        "body": "Queue times are returning to normal. Customers with failed builds can \"Retry\" via the Dashboard or pushing a new commit.",
+        "created_at": "2026-11-03T17:23:58.613Z"
+      },
+      {
+        "native_id": "ngberykpymcn",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-03T19:38:09.321Z"
+      }
+    ],
+    "first_seen_at": "2026-11-04T13:22:47.624903213Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-11-03T19:38:09.321Z"
+        }
+      ],
+      "created_at": "2026-11-03T14:46:56.697Z",
+      "id": "nbyxn84kvb6o",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-03T19:38:09.321Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T19:38:09.321Z",
+          "id": "ngberykpymcn",
+          "incident_id": "nbyxn84kvb6o",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T19:38:09.321Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Queue times are returning to normal. Customers with failed builds can \"Retry\" via the Dashboard or pushing a new commit.",
+          "created_at": "2026-11-03T17:23:58.613Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T17:23:58.613Z",
+          "id": "vkbp45e9trv7",
+          "incident_id": "nbyxn84kvb6o",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T17:23:58.613Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Customers may experience increased queue times for Workers Builders",
+          "created_at": "2026-11-03T15:15:31.333Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T15:15:31.333Z",
+          "id": "knn6y70uzl92",
+          "incident_id": "nbyxn84kvb6o",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T15:15:31.333Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Developer Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue with Cloudflare Workers and Pages build failures which potentially impacts multiple customers. Further detail will be provided as more information becomes available.",
+          "created_at": "2026-11-03T14:46:56.697Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T14:46:56.697Z",
+          "id": "cg3e91vl53yf",
+          "incident_id": "nbyxn84kvb6o",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T14:46:56.697Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Workers and Pages build errors ",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-03T19:38:09.321Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o",
+      "started_at": "2026-11-03T14:46:56.697Z",
+      "status": "resolved",
+      "updated_at": "2026-11-03T19:38:09.321Z"
+    }
+  },
+  {
+    "key": "cloudflare/7gixemnw9oei",
+    "vendor": "cloudflare",
+    "native_id": "7gixemnw9oei",
+    "title": "Increased Durable Object Errors in the Dallas, TX US region",
+    "url": "https://www.cloudflarestatus.com/incidents/7gixemnw9oei",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-03T15:38:17.484Z",
+    "resolved_at": "2026-11-03T16:42:01.479Z",
+    "duration_minutes": 63,
+    "components": [
+      "Durable Objects"
+    ],
+    "updates": [
+      {
+        "native_id": "uf8neyjg30uf",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an increased number of errors from Durable Objects in Dallas, Texas, USA.  More updates to follow.",
+        "created_at": "2026-11-03T15:38:17.485Z"
+      },
+      {
+        "native_id": "8tuxof6krpni",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-11-03T16:13:24.412Z"
+      },
+      {
+        "native_id": "543unnwa1n3g",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-03T16:42:01.479Z"
+      }
+    ],
+    "first_seen_at": "2026-11-04T13:22:47.624903213Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-11-03T16:42:01.479Z"
+        }
+      ],
+      "created_at": "2026-11-03T15:38:17.485Z",
+      "id": "7gixemnw9oei",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-03T16:42:01.479Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T16:42:01.479Z",
+          "id": "543unnwa1n3g",
+          "incident_id": "7gixemnw9oei",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T16:42:01.479Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-11-03T16:13:24.412Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T16:13:24.412Z",
+          "id": "8tuxof6krpni",
+          "incident_id": "7gixemnw9oei",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T16:13:24.412Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Developer Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an increased number of errors from Durable Objects in Dallas, Texas, USA.  More updates to follow.",
+          "created_at": "2026-11-03T15:38:17.485Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T15:38:17.485Z",
+          "id": "uf8neyjg30uf",
+          "incident_id": "7gixemnw9oei",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T15:38:17.485Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Durable Object Errors in the Dallas, TX US region",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-03T16:42:01.479Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/7gixemnw9oei",
+      "started_at": "2026-11-03T15:38:17.484Z",
+      "status": "resolved",
+      "updated_at": "2026-11-03T16:42:01.479Z"
     }
   }
 ]

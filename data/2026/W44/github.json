@@ -58,7 +58,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-22T16:35:07.537Z"
+          "updated_at": "2026-11-04T11:30:42.176Z"
         },
         {
           "created_at": "2017-01-31T20:01:46.638Z",
@@ -73,7 +73,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-30T14:45:58.543Z"
+          "updated_at": "2026-11-04T11:30:42.209Z"
         },
         {
           "created_at": "2020-09-02T15:39:06.329Z",
@@ -88,7 +88,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-22T17:41:38.589Z"
+          "updated_at": "2026-11-04T11:30:42.240Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -103,7 +103,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-30T18:32:39.736Z"
+          "updated_at": "2026-11-04T11:43:51.981Z"
         }
       ],
       "created_at": "2026-10-26T18:48:26.235Z",
@@ -406,7 +406,7 @@
           "showcase": true,
           "start_date": "2022-06-21",
           "status": "operational",
-          "updated_at": "2026-10-28T15:26:14.682Z"
+          "updated_at": "2026-11-03T13:51:46.173Z"
         }
       ],
       "created_at": "2026-10-28T14:12:53.821Z",
@@ -778,7 +778,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-30T14:45:58.543Z"
+          "updated_at": "2026-11-04T11:30:42.209Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -1038,7 +1038,7 @@
       {
         "native_id": "pcz4pwz6xt9n",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 30, 2026, from 17:50 to 18:32 UTC, Actions, Pages, and Webhooks experienced degraded performance. Actions workflow processing, Pages deployments, and webhook deliveries were delayed, and code search and live updates returned errors. Some Actions queues took additional time to drain after mitigation, and the incident was resolved at 19:23 UTC. \u003cbr /\u003e\u003cbr /\u003eThe impact was triggered by maintenance on a cloud network gateway connecting an Actions service in the GitHub data center to Redis clusters in the Central US Azure region. The service's Redis client retried aggressively and redialed those connections. That produced a connection storm that saturated the gateway, with about 90% of connection attempts failing. Other services sharing the same network path were degraded as well. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the affected resources from rotation, which ended the connection storm and allowed the gateway to recover. We have already reduced the number of connection retries in the impacted service and are further improving retry behavior with jittered backoff, shorter connect timeouts, and retry budgets. We are also working with our infrastructure team to make GitHub more resilient to gateway maintenance.",
         "created_at": "2026-10-30T19:23:40.177Z"
       }
     ],
@@ -1073,7 +1073,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-10-30T18:32:39.736Z"
+          "updated_at": "2026-11-04T11:43:51.981Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -1116,7 +1116,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 30, 2026, from 17:50 to 18:32 UTC, Actions, Pages, and Webhooks experienced degraded performance. Actions workflow processing, Pages deployments, and webhook deliveries were delayed, and code search and live updates returned errors. Some Actions queues took additional time to drain after mitigation, and the incident was resolved at 19:23 UTC. \u003cbr /\u003e\u003cbr /\u003eThe impact was triggered by maintenance on a cloud network gateway connecting an Actions service in the GitHub data center to Redis clusters in the Central US Azure region. The service's Redis client retried aggressively and redialed those connections. That produced a connection storm that saturated the gateway, with about 90% of connection attempts failing. Other services sharing the same network path were degraded as well. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the affected resources from rotation, which ended the connection storm and allowed the gateway to recover. We have already reduced the number of connection retries in the impacted service and are further improving retry behavior with jittered backoff, shorter connect timeouts, and retry budgets. We are also working with our infrastructure team to make GitHub more resilient to gateway maintenance.",
           "created_at": "2026-10-30T19:23:40.177Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1125,7 +1125,7 @@
           "incident_id": "pwxsjgnvrk6b",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-30T19:23:40.177Z"
+          "updated_at": "2026-11-03T17:39:38.137Z"
         },
         {
           "affected_components": [
@@ -1290,7 +1290,7 @@
       "shortlink": "https://stspg.io/5cd2m4n59spv",
       "started_at": "2026-10-30T17:50:54.670Z",
       "status": "resolved",
-      "updated_at": "2026-10-30T19:23:40.203Z"
+      "updated_at": "2026-11-03T17:39:38.143Z"
     }
   },
   {

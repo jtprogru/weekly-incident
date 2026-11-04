@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-03T13:06:29.904302434Z",
+  "generated_at": "2026-11-04T13:22:47.624903213Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
-      "incidents_seen": 30,
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "incidents_seen": 29,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,27 +100,95 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-03T13:06:29.904302434Z",
+      "fetched_at": "2026-11-04T13:22:47.624903213Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
   "incidents": [
     {
+      "key": "grafana/djhnhnnbh6tg",
+      "vendor": "grafana",
+      "title": "GitHub returning 403 for all Git Sync repositories",
+      "url": "https://stspg.io/c1s5cmykytmk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-04T03:02:14.651Z",
+      "resolved_at": "2026-11-04T04:59:52.299Z",
+      "duration_minutes": 117,
+      "ongoing": false,
+      "components": [
+        "AWS Australia - prod-au-southeast-1",
+        "AWS Australia - prod-au-southeast-2",
+        "AWS Brazil - prod-sa-east-1",
+        "AWS Canada prod-ca-central-1",
+        "AWS Canada - prod-ca-east-0",
+        "AWS Germany - prod-eu-west-2",
+        "AWS Germany - prod-eu-west-4",
+        "AWS Germany prod-eu-central-1",
+        "AWS India - prod-ap-south-1",
+        "AWS Indonesia - prod-ap-southeast-2",
+        "AWS Indonesia - prod-ap-southeast-3",
+        "AWS Ireland eu-west-1",
+        "AWS Ireland - prod-eu-west-6",
+        "AWS Japan - prod-ap-northeast-0",
+        "AWS Singapore - prod-ap-southeast-1",
+        "AWS Sweden eu-north-1",
+        "AWS Sweden - prod-eu-north-0",
+        "AWS Switzerland - prod-eu-central-0",
+        "AWS Switzerland eu-central-2",
+        "AWS UAE - prod-me-central-1",
+        "AWS UK - prod-gb-south-1",
+        "AWS US East (OH) - prod-us-east-0",
+        "AWS East (VA) prod-us-east-1",
+        "AWS US East (OH) - prod-us-east-2",
+        "AWS US West - prod-us-west-0",
+        "AWS US East (VA) - prod-us-east-3",
+        "AWS West prod-us-west-2",
+        "Azure US Central - us-central2",
+        "Azure Netherlands - prod-eu-west-3",
+        "Azure UAE - prod-me-central-2",
+        "GCP Australia - prod-au-southeast-0",
+        "GCP Belgium - prod-eu-west-0",
+        "GCP Brazil - prod-sa-east-0",
+        "GCP India - prod-ap-south-0",
+        "GCP Saudi Arabia - prod-me-central-0",
+        "GCP Singapore - prod-ap-southeast-0",
+        "GCP UK - prod-gb-south-0",
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-3",
+        "GCP US Central - prod-us-central-4",
+        "GCP US Central - prod-us-central-7",
+        "GCP US East - prod-us-east-1",
+        "play.grafana.org",
+        "Federal Cloud - AWS US Gov West",
+        "Azure Malasia - azure-malaysiawest-0"
+      ],
+      "score": {
+        "value": 5265,
+        "duration_minutes": 117,
+        "components": 45,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/507h3wxc3mdh",
       "vendor": "grafana",
       "title": "IRM Unable to Voice Call Brazil Numbers",
       "url": "https://stspg.io/m1k738p976cl",
       "impact": "major",
-      "status": "investigating",
+      "status": "resolved",
       "started_at": "2026-11-02T00:36:09.475Z",
-      "ongoing": true,
+      "resolved_at": "2026-11-04T08:45:14.12Z",
+      "duration_minutes": 3369,
+      "ongoing": false,
       "components": [
         "Incident Management and Response (IRM)"
       ],
       "score": {
-        "value": 2190,
-        "duration_minutes": 2190,
+        "value": 3369,
+        "duration_minutes": 3369,
         "components": 1,
         "vendor_weight": 1
       },
@@ -132,9 +200,11 @@
       "title": "Elevated Request Errors for Grafana Across Multiple Regions",
       "url": "https://stspg.io/jmzh1gddhwsr",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-11-03T12:40:38.502Z",
-      "ongoing": true,
+      "resolved_at": "2026-11-03T13:42:01.228Z",
+      "duration_minutes": 61,
+      "ongoing": false,
       "components": [
         "AWS Australia - prod-au-southeast-1",
         "AWS Australia - prod-au-southeast-2",
@@ -182,12 +252,80 @@
         "Federal Cloud - AWS US Gov West"
       ],
       "score": {
-        "value": 1100,
-        "duration_minutes": 25,
+        "value": 2684,
+        "duration_minutes": 61,
         "components": 44,
         "vendor_weight": 1
       },
       "above_threshold": false
+    },
+    {
+      "key": "grafana/sytnxyqfmbwg",
+      "vendor": "grafana",
+      "title": "October usage report visualization issue",
+      "url": "https://stspg.io/ksvgzjk4ctnl",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-03T22:00:09.66Z",
+      "ongoing": true,
+      "components": [
+        "Cost Management and Billing"
+      ],
+      "score": {
+        "value": 922,
+        "duration_minutes": 922,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/smtdswd1h2w4",
+      "vendor": "github",
+      "title": "Incident with Pull Requests, Git Operations and Issues",
+      "url": "https://stspg.io/18blsgwnbyy6",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-04T09:49:55.675Z",
+      "resolved_at": "2026-11-04T11:50:06.424Z",
+      "duration_minutes": 120,
+      "ongoing": false,
+      "components": [
+        "Git Operations",
+        "API Requests",
+        "Issues",
+        "Pull Requests",
+        "Actions"
+      ],
+      "score": {
+        "value": 900,
+        "duration_minutes": 120,
+        "components": 5,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/nbyxn84kvb6o",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers and Pages build errors",
+      "url": "https://www.cloudflarestatus.com/incidents/nbyxn84kvb6o",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T14:46:56.697Z",
+      "resolved_at": "2026-11-03T19:38:09.321Z",
+      "duration_minutes": 291,
+      "ongoing": false,
+      "components": [
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 523.8000000000001,
+        "duration_minutes": 291,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
     },
     {
       "key": "openai/01M6FDZ89W4PKDS19K496J307G",
@@ -254,6 +392,75 @@
       "above_threshold": true
     },
     {
+      "key": "grafana/zvqy74jln4zq",
+      "vendor": "grafana",
+      "title": "Increased query latency for Logs in GCP US Central (prod-us-central-0)",
+      "url": "https://stspg.io/8w9r2df60c3j",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T13:54:03.933Z",
+      "resolved_at": "2026-11-03T15:25:01.581Z",
+      "duration_minutes": 90,
+      "ongoing": false,
+      "components": [
+        "GCP US Central - prod-us-central-0",
+        "GCP US Central - prod-us-central-0: Rule Evaluation"
+      ],
+      "score": {
+        "value": 180,
+        "duration_minutes": 90,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/13b6lyl8d7bz",
+      "vendor": "github",
+      "title": "Incident with Git Operations",
+      "url": "https://stspg.io/n478rfsspcmr",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T20:57:14.432Z",
+      "resolved_at": "2026-11-03T22:41:03.289Z",
+      "duration_minutes": 103,
+      "ongoing": false,
+      "components": [
+        "Git Operations"
+      ],
+      "score": {
+        "value": 154.5,
+        "duration_minutes": 103,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/rxlj89wpk7px",
+      "vendor": "github",
+      "title": "Incident with API, Git, and Copilot requests",
+      "url": "https://stspg.io/h1xqhrcn5gqn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T13:25:19.609Z",
+      "resolved_at": "2026-11-03T13:56:18.729Z",
+      "duration_minutes": 30,
+      "ongoing": false,
+      "components": [
+        "API Requests",
+        "Issues",
+        "Copilot"
+      ],
+      "score": {
+        "value": 135,
+        "duration_minutes": 30,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/n5mvqjs26jg9",
       "vendor": "cloudflare",
       "title": "Cloudflare Container Issues",
@@ -270,6 +477,48 @@
       "score": {
         "value": 126,
         "duration_minutes": 70,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/tc28c0wzrnpz",
+      "vendor": "github",
+      "title": "Increased task-related errors for Copilot Mission Control",
+      "url": "https://stspg.io/hj74883wgn0t",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-04T08:45:00.272Z",
+      "resolved_at": "2026-11-04T10:01:44.56Z",
+      "duration_minutes": 76,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 114,
+        "duration_minutes": 76,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/7gixemnw9oei",
+      "vendor": "cloudflare",
+      "title": "Increased Durable Object Errors in the Dallas, TX US region",
+      "url": "https://www.cloudflarestatus.com/incidents/7gixemnw9oei",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T15:38:17.484Z",
+      "resolved_at": "2026-11-03T16:42:01.479Z",
+      "duration_minutes": 63,
+      "ongoing": false,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 113.4,
+        "duration_minutes": 63,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -366,6 +615,28 @@
       "above_threshold": false
     },
     {
+      "key": "circleci/qqh50c0z6mn3",
+      "vendor": "circleci",
+      "title": "Increased wait time for Machine and Remote Docker jobs",
+      "url": "https://stspg.io/pf820dqbcwhc",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T14:14:39Z",
+      "resolved_at": "2026-11-03T15:08:13.535Z",
+      "duration_minutes": 53,
+      "ongoing": false,
+      "components": [
+        "Machine Jobs"
+      ],
+      "score": {
+        "value": 53,
+        "duration_minutes": 53,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/xtcvvd5p4v73",
       "vendor": "grafana",
       "title": "Missing Metrics for Some Synthetic Monitoring Checks using the Montreal, North Virginia, and North California public probes",
@@ -374,6 +645,26 @@
       "status": "resolved",
       "started_at": "2026-11-02T12:14:44.986Z",
       "resolved_at": "2026-11-02T08:00:00Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/2l051sx0k394",
+      "vendor": "grafana",
+      "title": "Grafana Cloud: k6 timeouts",
+      "url": "https://stspg.io/lb883jzqhsdz",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-02T16:04:39Z",
+      "resolved_at": "2026-11-02T16:04:39Z",
       "duration_minutes": 0,
       "ongoing": false,
       "components": [],
