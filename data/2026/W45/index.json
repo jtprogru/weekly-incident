@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-04T13:22:47.624903213Z",
+  "generated_at": "2026-11-05T13:36:16.844525228Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
-      "incidents_seen": 29,
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-04T13:22:47.624903213Z",
+      "fetched_at": "2026-11-05T13:36:16.844525228Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -195,6 +195,30 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/dr9s0uvzwk6n",
+      "vendor": "cloudflare",
+      "title": "Increased Latency and Errors for R2 and Downstream Services in Western North America (WNAM)",
+      "url": "https://www.cloudflarestatus.com/incidents/dr9s0uvzwk6n",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-03T13:00:00Z",
+      "resolved_at": "2026-11-03T22:15:00Z",
+      "duration_minutes": 555,
+      "ongoing": false,
+      "components": [
+        "Stream",
+        "Pipelines",
+        "R2"
+      ],
+      "score": {
+        "value": 2997,
+        "duration_minutes": 555,
+        "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/qcknj94tk03k",
       "vendor": "grafana",
       "title": "Elevated Request Errors for Grafana Across Multiple Regions",
@@ -272,8 +296,8 @@
         "Cost Management and Billing"
       ],
       "score": {
-        "value": 922,
-        "duration_minutes": 922,
+        "value": 2376,
+        "duration_minutes": 2376,
         "components": 1,
         "vendor_weight": 1
       },
@@ -348,6 +372,29 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/nbnize4e990z",
+      "vendor": "cloudflare",
+      "title": "Network latency issues in NRT",
+      "url": "https://www.cloudflarestatus.com/incidents/nbnize4e990z",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-04T13:39:26.803Z",
+      "resolved_at": "2026-11-04T15:33:09.877Z",
+      "duration_minutes": 113,
+      "ongoing": false,
+      "components": [
+        "Network",
+        "Tokyo, Japan - (NRT)"
+      ],
+      "score": {
+        "value": 406.8,
+        "duration_minutes": 113,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/j25w3rpv45gs",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in APJC",
@@ -392,6 +439,30 @@
       "above_threshold": true
     },
     {
+      "key": "github/xr3myzj7ms51",
+      "vendor": "github",
+      "title": "Incident with Actions and Pages",
+      "url": "https://stspg.io/pjgptg3cfc6n",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-04T16:05:31.572Z",
+      "resolved_at": "2026-11-04T17:01:11.503Z",
+      "duration_minutes": 55,
+      "ongoing": false,
+      "components": [
+        "Webhooks",
+        "Actions",
+        "Pages"
+      ],
+      "score": {
+        "value": 247.5,
+        "duration_minutes": 55,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/zvqy74jln4zq",
       "vendor": "grafana",
       "title": "Increased query latency for Logs in GCP US Central (prod-us-central-0)",
@@ -411,6 +482,26 @@
         "duration_minutes": 90,
         "components": 2,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M6MBCX427A7113A3T4FJ1N6Y",
+      "vendor": "openai",
+      "title": "Elevated error rates across paid ChatGPT plans",
+      "url": "https://status.openai.com/incidents/01M6MBCX427A7113A3T4FJ1N6Y",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-04T22:38:12Z",
+      "resolved_at": "2026-11-05T00:32:37Z",
+      "duration_minutes": 114,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 171,
+        "duration_minutes": 114,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -620,7 +711,7 @@
       "title": "Increased wait time for Machine and Remote Docker jobs",
       "url": "https://stspg.io/pf820dqbcwhc",
       "impact": "minor",
-      "status": "resolved",
+      "status": "postmortem",
       "started_at": "2026-11-03T14:14:39Z",
       "resolved_at": "2026-11-03T15:08:13.535Z",
       "duration_minutes": 53,
@@ -633,6 +724,70 @@
         "duration_minutes": 53,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/h02n9572mx9y",
+      "vendor": "github",
+      "title": "Incident with Actions",
+      "url": "https://stspg.io/7pwv28hvkmz8",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-04T17:40:33.662Z",
+      "resolved_at": "2026-11-04T18:16:08.361Z",
+      "duration_minutes": 35,
+      "ongoing": false,
+      "components": [
+        "Actions"
+      ],
+      "score": {
+        "value": 52.5,
+        "duration_minutes": 35,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/oy8gxjb38yse",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects in Western Europe",
+      "url": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-05T13:23:55.345Z",
+      "ongoing": true,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 21.6,
+        "duration_minutes": 12,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/c3pjgxk8xnzn",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects and Downstream Services in Eastern North America (ENAM)",
+      "url": "https://www.cloudflarestatus.com/incidents/c3pjgxk8xnzn",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-04T21:20:00Z",
+      "resolved_at": "2026-11-04T21:22:00Z",
+      "duration_minutes": 2,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 3.6,
+        "duration_minutes": 2,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

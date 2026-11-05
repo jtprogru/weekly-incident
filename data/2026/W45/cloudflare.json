@@ -266,7 +266,7 @@
           "showcase": false,
           "start_date": "2023-01-13",
           "status": "operational",
-          "updated_at": "2026-11-03T07:24:51.706Z"
+          "updated_at": "2026-11-04T15:33:09.877Z"
         }
       ],
       "created_at": "2026-11-03T04:44:12.062Z",
@@ -518,7 +518,7 @@
           "showcase": false,
           "start_date": "2023-01-13",
           "status": "operational",
-          "updated_at": "2026-11-03T07:24:51.706Z"
+          "updated_at": "2026-11-04T15:33:09.877Z"
         },
         {
           "created_at": "2025-02-21T21:32:45.000Z",
@@ -548,7 +548,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-03T13:36:48.453Z"
+          "updated_at": "2026-11-04T19:00:32.517Z"
         }
       ],
       "created_at": "2026-11-03T07:24:51.706Z",
@@ -597,6 +597,127 @@
       "started_at": "2026-11-03T06:20:00.000Z",
       "status": "resolved",
       "updated_at": "2026-11-03T07:25:13.683Z"
+    }
+  },
+  {
+    "key": "cloudflare/dr9s0uvzwk6n",
+    "vendor": "cloudflare",
+    "native_id": "dr9s0uvzwk6n",
+    "title": "Increased Latency and Errors for R2 and Downstream Services in Western North America (WNAM)",
+    "url": "https://www.cloudflarestatus.com/incidents/dr9s0uvzwk6n",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-03T13:00:00Z",
+    "resolved_at": "2026-11-03T22:15:00Z",
+    "duration_minutes": 555,
+    "components": [
+      "Stream",
+      "Pipelines",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "kth4aiozl0ft",
+        "status": "resolved",
+        "body": "Cloudflare has resolved an issue affecting R2 and downstream services in the Western North America region. Some customers may have seen elevated latency and errors between approximately 13:00 and 22:15 UTC on November 3, 2026. This may also have affected downstream services such as Stream and Pipelines.",
+        "created_at": "2026-11-04T14:43:39.555Z"
+      }
+    ],
+    "first_seen_at": "2026-11-05T13:36:16.844525228Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:53:34.000Z",
+          "description": "Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "47xg28c02lnk",
+          "name": "Stream",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        },
+        {
+          "created_at": "2026-08-11T12:16:30.000Z",
+          "description": "Managed streaming data pipeline service that ingests events, applies SQL transformations, and delivers them to R2 as Apache Iceberg tables or Parquet/JSON files.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "xr712w0ly7nr",
+          "name": "Pipelines",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-08-11",
+          "status": "operational",
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-04T22:21:26.035Z"
+        }
+      ],
+      "created_at": "2026-11-04T14:43:39.555Z",
+      "id": "dr9s0uvzwk6n",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "47xg28c02lnk",
+              "name": "Media - Stream",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Developer Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has resolved an issue affecting R2 and downstream services in the Western North America region. Some customers may have seen elevated latency and errors between approximately 13:00 and 22:15 UTC on November 3, 2026. This may also have affected downstream services such as Stream and Pipelines.",
+          "created_at": "2026-11-04T14:43:39.555Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T22:15:00.000Z",
+          "id": "kth4aiozl0ft",
+          "incident_id": "dr9s0uvzwk6n",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Latency and Errors for R2 and Downstream Services in Western North America (WNAM)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-03T22:15:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/dr9s0uvzwk6n",
+      "started_at": "2026-11-03T13:00:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T14:44:03.960Z"
     }
   },
   {
@@ -782,8 +903,8 @@
           "position": 2,
           "showcase": false,
           "start_date": "2023-06-12",
-          "status": "operational",
-          "updated_at": "2026-11-03T16:42:01.479Z"
+          "status": "degraded_performance",
+          "updated_at": "2026-11-05T13:23:55.346Z"
         }
       ],
       "created_at": "2026-11-03T15:38:17.485Z",
@@ -846,6 +967,314 @@
       "started_at": "2026-11-03T15:38:17.484Z",
       "status": "resolved",
       "updated_at": "2026-11-03T16:42:01.479Z"
+    }
+  },
+  {
+    "key": "cloudflare/nbnize4e990z",
+    "vendor": "cloudflare",
+    "native_id": "nbnize4e990z",
+    "title": "Network latency issues in NRT",
+    "url": "https://www.cloudflarestatus.com/incidents/nbnize4e990z",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-04T13:39:26.803Z",
+    "resolved_at": "2026-11-04T15:33:09.877Z",
+    "duration_minutes": 113,
+    "components": [
+      "Network",
+      "Tokyo, Japan - (NRT)"
+    ],
+    "updates": [
+      {
+        "native_id": "2w6vvh4632o9",
+        "status": "investigating",
+        "body": "We are currently investigating a network latency issue in NRT",
+        "created_at": "2026-11-04T13:39:26.804Z"
+      },
+      {
+        "native_id": "nkv7uxf0dttn",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-04T14:58:43.9Z"
+      },
+      {
+        "native_id": "9oxfdr40d2v4",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-04T15:19:51.217Z"
+      },
+      {
+        "native_id": "x8epllrbr80j",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-04T15:33:09.877Z"
+      }
+    ],
+    "first_seen_at": "2026-11-05T13:36:16.844525228Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-11-04T15:33:09.877Z"
+        },
+        {
+          "created_at": "2014-10-27T21:42:49.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "77867vxkttgw",
+          "id": "rmjk2n758yzc",
+          "name": "Tokyo, Japan - (NRT)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 65,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T18:25:01.916Z"
+        }
+      ],
+      "created_at": "2026-11-04T13:39:26.804Z",
+      "id": "nbnize4e990z",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-04T15:33:09.877Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T15:33:09.877Z",
+          "id": "x8epllrbr80j",
+          "incident_id": "nbnize4e990z",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T15:33:09.877Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-04T15:19:51.217Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T15:19:51.217Z",
+          "id": "9oxfdr40d2v4",
+          "incident_id": "nbnize4e990z",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T15:19:51.217Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-04T14:58:43.900Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T14:58:43.900Z",
+          "id": "nkv7uxf0dttn",
+          "incident_id": "nbnize4e990z",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T14:58:43.900Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rmjk2n758yzc",
+              "name": "Asia - Tokyo, Japan - (NRT)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Network Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating a network latency issue in NRT",
+          "created_at": "2026-11-04T13:39:26.804Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T13:39:26.804Z",
+          "id": "2w6vvh4632o9",
+          "incident_id": "nbnize4e990z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T13:39:26.804Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network latency issues in NRT",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-04T15:33:09.877Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/nbnize4e990z",
+      "started_at": "2026-11-04T13:39:26.803Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T15:33:09.877Z"
+    }
+  },
+  {
+    "key": "cloudflare/c3pjgxk8xnzn",
+    "vendor": "cloudflare",
+    "native_id": "c3pjgxk8xnzn",
+    "title": "Increased Errors for Durable Objects and Downstream Services in Eastern North America (ENAM)",
+    "url": "https://www.cloudflarestatus.com/incidents/c3pjgxk8xnzn",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-04T21:20:00Z",
+    "resolved_at": "2026-11-04T21:22:00Z",
+    "duration_minutes": 2,
+    "components": [
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "f77b7qt0egib",
+        "status": "resolved",
+        "body": "Cloudflare has resolved an issue affecting Durable Objects and downstream services in the Eastern North America (ENAM) region. Some customers may have seen elevated errors between approximately 21:20 and 21:22 UTC on November 4, 2026. This also affected downstream services such as R2.",
+        "created_at": "2026-11-04T22:21:26.035Z"
+      }
+    ],
+    "first_seen_at": "2026-11-05T13:36:16.844525228Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-04T22:21:26.035Z"
+        }
+      ],
+      "created_at": "2026-11-04T22:21:26.035Z",
+      "id": "c3pjgxk8xnzn",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has resolved an issue affecting Durable Objects and downstream services in the Eastern North America (ENAM) region. Some customers may have seen elevated errors between approximately 21:20 and 21:22 UTC on November 4, 2026. This also affected downstream services such as R2.",
+          "created_at": "2026-11-04T22:21:26.035Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T21:22:00.000Z",
+          "id": "f77b7qt0egib",
+          "incident_id": "c3pjgxk8xnzn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T22:21:26.035Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Errors for Durable Objects and Downstream Services in Eastern North America (ENAM)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-04T21:22:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/c3pjgxk8xnzn",
+      "started_at": "2026-11-04T21:20:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T22:21:42.480Z"
+    }
+  },
+  {
+    "key": "cloudflare/oy8gxjb38yse",
+    "vendor": "cloudflare",
+    "native_id": "oy8gxjb38yse",
+    "title": "Increased Errors for Durable Objects in Western Europe",
+    "url": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-11-05T13:23:55.345Z",
+    "components": [
+      "Durable Objects"
+    ],
+    "updates": [
+      {
+        "native_id": "7kns470lln7x",
+        "status": "monitoring",
+        "body": "Cloudflare investigated an issue that caused an increase of errors for Durable Objects in Western Europe. \nThe issue has been resolved and we are monitoring the results.",
+        "created_at": "2026-11-05T13:23:55.346Z"
+      }
+    ],
+    "first_seen_at": "2026-11-05T13:36:16.844525228Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-05T13:23:55.346Z"
+        }
+      ],
+      "created_at": "2026-11-05T13:23:55.346Z",
+      "id": "oy8gxjb38yse",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Developer Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare investigated an issue that caused an increase of errors for Durable Objects in Western Europe. \nThe issue has been resolved and we are monitoring the results.",
+          "created_at": "2026-11-05T13:23:55.346Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-05T13:23:55.346Z",
+          "id": "7kns470lln7x",
+          "incident_id": "oy8gxjb38yse",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-05T13:23:55.346Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Errors for Durable Objects in Western Europe",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
+      "started_at": "2026-11-05T13:23:55.345Z",
+      "status": "monitoring",
+      "updated_at": "2026-11-05T13:24:21.153Z"
     }
   }
 ]
