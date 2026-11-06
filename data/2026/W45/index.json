@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-05T13:36:16.844525228Z",
+  "generated_at": "2026-11-06T13:19:40.97949741Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-05T13:36:16.844525228Z",
+      "fetched_at": "2026-11-06T13:19:40.97949741Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -171,6 +171,26 @@
         "vendor_weight": 1
       },
       "above_threshold": false
+    },
+    {
+      "key": "grafana/sytnxyqfmbwg",
+      "vendor": "grafana",
+      "title": "October usage report visualization issue",
+      "url": "https://stspg.io/ksvgzjk4ctnl",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-03T22:00:09.66Z",
+      "ongoing": true,
+      "components": [
+        "Cost Management and Billing"
+      ],
+      "score": {
+        "value": 3799,
+        "duration_minutes": 3799,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
     },
     {
       "key": "grafana/507h3wxc3mdh",
@@ -284,22 +304,44 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/sytnxyqfmbwg",
-      "vendor": "grafana",
-      "title": "October usage report visualization issue",
-      "url": "https://stspg.io/ksvgzjk4ctnl",
+      "key": "cloudflare/oy8gxjb38yse",
+      "vendor": "cloudflare",
+      "title": "Increased Errors for Durable Objects in Western Europe",
+      "url": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
       "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-11-03T22:00:09.66Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-11-05T13:23:55.345Z",
+      "resolved_at": "2026-11-06T09:05:19.945Z",
+      "duration_minutes": 1181,
+      "ongoing": false,
       "components": [
-        "Cost Management and Billing"
+        "Durable Objects"
       ],
       "score": {
-        "value": 2376,
-        "duration_minutes": 2376,
+        "value": 2125.8,
+        "duration_minutes": 1181,
         "components": 1,
-        "vendor_weight": 1
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M6P50GPP1V98EF8MJ9SH393R",
+      "vendor": "openai",
+      "title": "ChatGPT Work and Dots Errors",
+      "url": "https://status.openai.com/incidents/01M6P50GPP1V98EF8MJ9SH393R",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-05T15:25:03Z",
+      "resolved_at": "2026-11-06T04:31:37Z",
+      "duration_minutes": 786,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 1179,
+        "duration_minutes": 786,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -417,6 +459,31 @@
       "above_threshold": true
     },
     {
+      "key": "github/pfbmpxxfq1cy",
+      "vendor": "github",
+      "title": "Degraded performance for multiple GitHub services",
+      "url": "https://stspg.io/s5bs6jn41fwh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-05T23:36:06.109Z",
+      "resolved_at": "2026-11-06T00:20:49.344Z",
+      "duration_minutes": 44,
+      "ongoing": false,
+      "components": [
+        "Git Operations",
+        "Issues",
+        "Actions",
+        "Pages"
+      ],
+      "score": {
+        "value": 264,
+        "duration_minutes": 44,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/3bv9locsg7ln",
       "vendor": "cloudflare",
       "title": "Cloudflare Gateway DNS-over-TLS Connectivity Issues over IPv4",
@@ -461,6 +528,28 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/3ehw20ozwlkr",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Singapore",
+      "url": "https://www.cloudflarestatus.com/incidents/3ehw20ozwlkr",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-06T08:54:00.338Z",
+      "resolved_at": "2026-11-06T10:43:38.174Z",
+      "duration_minutes": 109,
+      "ongoing": false,
+      "components": [
+        "Singapore, Singapore - (SIN)"
+      ],
+      "score": {
+        "value": 196.20000000000002,
+        "duration_minutes": 109,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
     },
     {
       "key": "grafana/zvqy74jln4zq",
@@ -552,6 +641,26 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/1i6fnludjh1m",
+      "vendor": "cloudflare",
+      "title": "Network disruption across multiple colocations in India",
+      "url": "https://www.cloudflarestatus.com/incidents/1i6fnludjh1m",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-05T15:05:13.792Z",
+      "resolved_at": "2026-11-05T16:16:48.247Z",
+      "duration_minutes": 71,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 127.8,
+        "duration_minutes": 71,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/n5mvqjs26jg9",
       "vendor": "cloudflare",
       "title": "Cloudflare Container Issues",
@@ -616,6 +725,30 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/wtsd415cavkc",
+      "vendor": "cloudflare",
+      "title": "Wrangler Deployments, Pages, and Workers Builds failures",
+      "url": "https://www.cloudflarestatus.com/incidents/wtsd415cavkc",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-06T09:47:17.426Z",
+      "resolved_at": "2026-11-06T10:08:30.899Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Pages",
+        "Workers Builds",
+        "Wrangler"
+      ],
+      "score": {
+        "value": 113.4,
+        "duration_minutes": 21,
+        "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "grafana/x7ddtqs4j7ty",
       "vendor": "grafana",
       "title": "Metrics Alert Rule Evaluation Failures in AWS Australia (prod-au-southeast-1)",
@@ -656,6 +789,28 @@
         "duration_minutes": 48,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/t89g2q1800fr",
+      "vendor": "github",
+      "title": "Incident with Actions",
+      "url": "https://stspg.io/lv4q3xm9r0rk",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-05T16:50:11.078Z",
+      "resolved_at": "2026-11-05T17:42:35.425Z",
+      "duration_minutes": 52,
+      "ongoing": false,
+      "components": [
+        "Actions"
+      ],
+      "score": {
+        "value": 78,
+        "duration_minutes": 52,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },
@@ -750,20 +905,22 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/oy8gxjb38yse",
+      "key": "cloudflare/yaa0witbl2me",
       "vendor": "cloudflare",
-      "title": "Increased Errors for Durable Objects in Western Europe",
-      "url": "https://www.cloudflarestatus.com/incidents/oy8gxjb38yse",
+      "title": "Workers Builds Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/yaa0witbl2me",
       "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-11-05T13:23:55.345Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-11-05T19:51:39.174Z",
+      "resolved_at": "2026-11-05T20:20:10.166Z",
+      "duration_minutes": 28,
+      "ongoing": false,
       "components": [
-        "Durable Objects"
+        "Workers Builds"
       ],
       "score": {
-        "value": 21.6,
-        "duration_minutes": 12,
+        "value": 50.4,
+        "duration_minutes": 28,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -823,6 +980,28 @@
       "duration_minutes": 0,
       "ongoing": false,
       "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/g167fqm7tf73",
+      "vendor": "grafana",
+      "title": "Synthetic Monitoring — Jakarta Public Probe Degradation",
+      "url": "https://stspg.io/nhj64nnckg57",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-06T10:12:03.721Z",
+      "resolved_at": "2026-11-06T10:12:03.803Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [
+        "AWS Indonesia - prod-ap-southeast-2: Public Probes"
+      ],
       "score": {
         "value": 0,
         "duration_minutes": 0,

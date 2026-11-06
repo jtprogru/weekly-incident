@@ -938,7 +938,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-05T00:00:07.870Z"
+          "updated_at": "2026-11-06T00:00:09.418Z"
         },
         {
           "created_at": "2026-09-30T20:36:48.905Z",
@@ -3312,7 +3312,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-05T00:00:07.870Z"
+          "updated_at": "2026-11-06T00:00:09.418Z"
         },
         {
           "created_at": "2026-09-30T20:36:48.905Z",
@@ -4421,6 +4421,83 @@
       "started_at": "2026-11-04T03:02:14.651Z",
       "status": "resolved",
       "updated_at": "2026-11-04T04:59:52.324Z"
+    }
+  },
+  {
+    "key": "grafana/g167fqm7tf73",
+    "vendor": "grafana",
+    "native_id": "g167fqm7tf73",
+    "title": "Synthetic Monitoring — Jakarta Public Probe Degradation",
+    "url": "https://stspg.io/nhj64nnckg57",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-06T10:12:03.721Z",
+    "resolved_at": "2026-11-06T10:12:03.803Z",
+    "duration_minutes": 0,
+    "components": [
+      "AWS Indonesia - prod-ap-southeast-2: Public Probes"
+    ],
+    "updates": [
+      {
+        "native_id": "4sz63s97w47q",
+        "status": "resolved",
+        "body": "Between 08:31 and 09:17 UTC on 6 November 2026, a network issue at the Jakarta public probe caused elevated check failures for monitors running from that location.\n\n- DNS checks: failure rate increased from ~0.3% to ~15%\n- HTTP, ping, traceroute, and browser checks: \u003c1% failure rate\n- Browser checks: some delays and retries observed\n- TCP checks: not affected\n- All other probe locations: not affected",
+        "created_at": "2026-11-06T10:12:03.803Z"
+      }
+    ],
+    "first_seen_at": "2026-11-06T13:19:40.97949741Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-04-15T20:29:22.120Z",
+          "description": null,
+          "group": false,
+          "group_id": "1xrw1n278h8y",
+          "id": "mjrzgsddgcb6",
+          "name": "AWS Indonesia - prod-ap-southeast-2: Public Probes",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 51,
+          "showcase": false,
+          "start_date": "2025-04-15",
+          "status": "operational",
+          "updated_at": "2026-10-20T16:37:15.136Z"
+        }
+      ],
+      "created_at": "2026-11-06T10:12:03.729Z",
+      "id": "g167fqm7tf73",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mjrzgsddgcb6",
+              "name": "Synthetic Monitoring - AWS Indonesia - prod-ap-southeast-2: Public Probes",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between 08:31 and 09:17 UTC on 6 November 2026, a network issue at the Jakarta public probe caused elevated check failures for monitors running from that location.\n\n- DNS checks: failure rate increased from ~0.3% to ~15%\n- HTTP, ping, traceroute, and browser checks: \u003c1% failure rate\n- Browser checks: some delays and retries observed\n- TCP checks: not affected\n- All other probe locations: not affected",
+          "created_at": "2026-11-06T10:12:03.803Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T10:12:03.803Z",
+          "id": "4sz63s97w47q",
+          "incident_id": "g167fqm7tf73",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T10:12:03.803Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Synthetic Monitoring — Jakarta Public Probe Degradation",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-06T10:12:03.803Z",
+      "shortlink": "https://stspg.io/nhj64nnckg57",
+      "started_at": "2026-11-06T10:12:03.721Z",
+      "status": "resolved",
+      "updated_at": "2026-11-06T10:12:03.813Z"
     }
   }
 ]
