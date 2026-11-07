@@ -266,7 +266,7 @@
           "showcase": false,
           "start_date": "2023-01-13",
           "status": "operational",
-          "updated_at": "2026-11-04T15:33:09.877Z"
+          "updated_at": "2026-11-07T05:34:24.281Z"
         }
       ],
       "created_at": "2026-11-03T04:44:12.062Z",
@@ -518,7 +518,7 @@
           "showcase": false,
           "start_date": "2023-01-13",
           "status": "operational",
-          "updated_at": "2026-11-04T15:33:09.877Z"
+          "updated_at": "2026-11-07T05:34:24.281Z"
         },
         {
           "created_at": "2025-02-21T21:32:45.000Z",
@@ -547,8 +547,8 @@
           "position": 25,
           "showcase": false,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-11-04T19:00:32.517Z"
+          "status": "operational",
+          "updated_at": "2026-11-06T19:53:30.567Z"
         }
       ],
       "created_at": "2026-11-03T07:24:51.706Z",
@@ -1026,7 +1026,7 @@
           "showcase": false,
           "start_date": "2023-01-13",
           "status": "operational",
-          "updated_at": "2026-11-04T15:33:09.877Z"
+          "updated_at": "2026-11-07T05:34:24.281Z"
         },
         {
           "created_at": "2014-10-27T21:42:49.000Z",
@@ -1553,7 +1553,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-06T11:22:40.141Z"
+          "updated_at": "2026-11-06T22:13:14.501Z"
         }
       ],
       "created_at": "2026-11-06T08:54:00.339Z",
@@ -1776,6 +1776,293 @@
       "started_at": "2026-11-06T09:47:17.426Z",
       "status": "resolved",
       "updated_at": "2026-11-06T10:08:30.899Z"
+    }
+  },
+  {
+    "key": "cloudflare/wp49bp8bqo6c",
+    "vendor": "cloudflare",
+    "native_id": "wp49bp8bqo6c",
+    "title": "Fedramp Customers have Delayed Purges",
+    "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-11-06T17:47:15.545Z",
+    "components": [
+      "CDN Cache Purge"
+    ],
+    "updates": [
+      {
+        "native_id": "qf805x9pw5g8",
+        "status": "investigating",
+        "body": "Cloudflare has identified a bug with our purge pipeline impacting fedramp customers. Stale content may be served until expired. Non-fedramp customers are not impacted.",
+        "created_at": "2026-11-06T17:47:15.545Z"
+      },
+      {
+        "native_id": "0az66kvrg6zr",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-11-06T17:59:13.68Z"
+      }
+    ],
+    "first_seen_at": "2026-11-07T11:59:07.819529549Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-31T16:54:52.000Z",
+          "description": "CDN single file cache purging service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fbvx0hxhhdj0",
+          "name": "CDN Cache Purge",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-06T17:47:15.545Z"
+        }
+      ],
+      "created_at": "2026-11-06T17:47:15.545Z",
+      "id": "wp49bp8bqo6c",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-11-06T17:59:13.680Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T17:59:13.680Z",
+          "id": "0az66kvrg6zr",
+          "incident_id": "wp49bp8bqo6c",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T17:59:13.680Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "CDN \u0026 Performance - CDN Cache Purge",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has identified a bug with our purge pipeline impacting fedramp customers. Stale content may be served until expired. Non-fedramp customers are not impacted. ",
+          "created_at": "2026-11-06T17:47:15.545Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T17:47:15.545Z",
+          "id": "qf805x9pw5g8",
+          "incident_id": "wp49bp8bqo6c",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T17:47:15.545Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Fedramp Customers have Delayed Purges",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+      "started_at": "2026-11-06T17:47:15.545Z",
+      "status": "identified",
+      "updated_at": "2026-11-06T17:59:13.680Z"
+    }
+  },
+  {
+    "key": "cloudflare/c60k3g4vsoc1",
+    "vendor": "cloudflare",
+    "native_id": "c60k3g4vsoc1",
+    "title": "Spectrum Availability Issue in Phoenix",
+    "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-11-07T00:59:31.547Z",
+    "components": [
+      "Spectrum"
+    ],
+    "updates": [
+      {
+        "native_id": "dpj14psinymc",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Spectrum in Phoenix. This may be impacting the availability of existing Spectrum applications. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-07T00:59:31.548Z"
+      },
+      {
+        "native_id": "2dii5q9ajds3",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-11-07T02:51:59.805Z"
+      }
+    ],
+    "first_seen_at": "2026-11-07T11:59:07.819529549Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:55.000Z",
+          "description": "Spectrum allows you to route MQTT, email, file transfer, version control, games, and more over TCP or UDP through Cloudflare to mask the origin and protect it from DDoS attacks",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "6dd6ssg7plt0",
+          "name": "Spectrum",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 11,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-07T00:59:31.548Z"
+        }
+      ],
+      "created_at": "2026-11-07T00:59:31.548Z",
+      "id": "c60k3g4vsoc1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-11-07T02:51:59.805Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-07T02:51:59.805Z",
+          "id": "2dii5q9ajds3",
+          "incident_id": "c60k3g4vsoc1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-07T02:51:59.805Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6dd6ssg7plt0",
+              "name": "Network Services - Spectrum",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Spectrum in Phoenix. This may be impacting the availability of existing Spectrum applications. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-07T00:59:31.548Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-07T00:59:31.548Z",
+          "id": "dpj14psinymc",
+          "incident_id": "c60k3g4vsoc1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-07T00:59:31.548Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Spectrum Availability Issue in Phoenix",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+      "started_at": "2026-11-07T00:59:31.547Z",
+      "status": "monitoring",
+      "updated_at": "2026-11-07T02:51:59.805Z"
+    }
+  },
+  {
+    "key": "cloudflare/x9orajjmvvwa",
+    "vendor": "cloudflare",
+    "native_id": "x9orajjmvvwa",
+    "title": "Network Performance Issues in Chicago",
+    "url": "https://www.cloudflarestatus.com/incidents/x9orajjmvvwa",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-07T04:55:00Z",
+    "resolved_at": "2026-11-07T05:12:00Z",
+    "duration_minutes": 17,
+    "components": [
+      "Network",
+      "Chicago, United States - (ORD)"
+    ],
+    "updates": [
+      {
+        "native_id": "rv3pd2dcndqm",
+        "status": "resolved",
+        "body": "Between 04:55-05:12 UTC  7th Dec Cloudflare experienced issues with network performance in Chicago.",
+        "created_at": "2026-11-07T05:34:24.281Z"
+      }
+    ],
+    "first_seen_at": "2026-11-07T11:59:07.819529549Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-01-13T13:39:19.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4n0gb0kh02gf",
+          "name": "Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-01-13",
+          "status": "operational",
+          "updated_at": "2026-11-07T05:34:24.281Z"
+        },
+        {
+          "created_at": "2014-10-27T19:57:04.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "z9v8znl25w0f",
+          "name": "Chicago, United States - (ORD)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 11,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-07T05:34:24.281Z"
+        }
+      ],
+      "created_at": "2026-11-07T05:34:24.281Z",
+      "id": "x9orajjmvvwa",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "z9v8znl25w0f",
+              "name": "North America - Chicago, United States - (ORD)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4n0gb0kh02gf",
+              "name": "Network Services - Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between 04:55-05:12 UTC  7th Dec Cloudflare experienced issues with network performance in Chicago.",
+          "created_at": "2026-11-07T05:34:24.281Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-07T05:12:00.000Z",
+          "id": "rv3pd2dcndqm",
+          "incident_id": "x9orajjmvvwa",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-07T05:34:24.281Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues in Chicago",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-07T05:12:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/x9orajjmvvwa",
+      "started_at": "2026-11-07T04:55:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-07T05:35:16.013Z"
     }
   }
 ]

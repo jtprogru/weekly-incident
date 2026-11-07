@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-06T13:19:40.97949741Z",
+  "generated_at": "2026-11-07T11:59:07.819529549Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-06T13:19:40.97949741Z",
+      "fetched_at": "2026-11-07T11:59:07.819529549Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -178,15 +178,17 @@
       "title": "October usage report visualization issue",
       "url": "https://stspg.io/ksvgzjk4ctnl",
       "impact": "minor",
-      "status": "identified",
+      "status": "resolved",
       "started_at": "2026-11-03T22:00:09.66Z",
-      "ongoing": true,
+      "resolved_at": "2026-11-07T01:16:53.874Z",
+      "duration_minutes": 4516,
+      "ongoing": false,
       "components": [
         "Cost Management and Billing"
       ],
       "score": {
-        "value": 3799,
-        "duration_minutes": 3799,
+        "value": 4516,
+        "duration_minutes": 4516,
         "components": 1,
         "vendor_weight": 1
       },
@@ -326,6 +328,64 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/wp49bp8bqo6c",
+      "vendor": "cloudflare",
+      "title": "Fedramp Customers have Delayed Purges",
+      "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-06T17:47:15.545Z",
+      "ongoing": true,
+      "components": [
+        "CDN Cache Purge"
+      ],
+      "score": {
+        "value": 1963.8,
+        "duration_minutes": 1091,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "vendor": "openai",
+      "title": "Elevated error rates with some U.S. business Mastercards",
+      "url": "https://status.openai.com/incidents/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "impact": "none",
+      "status": "monitoring",
+      "started_at": "2026-11-06T18:38:43Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 1560,
+        "duration_minutes": 1040,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/c60k3g4vsoc1",
+      "vendor": "cloudflare",
+      "title": "Spectrum Availability Issue in Phoenix",
+      "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-07T00:59:31.547Z",
+      "ongoing": true,
+      "components": [
+        "Spectrum"
+      ],
+      "score": {
+        "value": 1186.2,
+        "duration_minutes": 659,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M6P50GPP1V98EF8MJ9SH393R",
       "vendor": "openai",
       "title": "ChatGPT Work and Dots Errors",
@@ -435,6 +495,28 @@
         "vendor_weight": 1.8
       },
       "above_threshold": false
+    },
+    {
+      "key": "aws/3480f26e19f4b0fc",
+      "vendor": "aws",
+      "title": "Elevated Launch Failures",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-11-06T22:51:05Z",
+      "resolved_at": "2026-11-07T01:12:16Z",
+      "duration_minutes": 141,
+      "ongoing": false,
+      "components": [
+        "ec2-us-west-2"
+      ],
+      "score": {
+        "value": 282,
+        "duration_minutes": 141,
+        "components": 1,
+        "vendor_weight": 2
+      },
+      "above_threshold": true
     },
     {
       "key": "cloudflare/j25w3rpv45gs",
@@ -834,6 +916,29 @@
         "value": 64.8,
         "duration_minutes": 12,
         "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/x9orajjmvvwa",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Chicago",
+      "url": "https://www.cloudflarestatus.com/incidents/x9orajjmvvwa",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-07T04:55:00Z",
+      "resolved_at": "2026-11-07T05:12:00Z",
+      "duration_minutes": 17,
+      "ongoing": false,
+      "components": [
+        "Network",
+        "Chicago, United States - (ORD)"
+      ],
+      "score": {
+        "value": 61.2,
+        "duration_minutes": 17,
+        "components": 2,
         "vendor_weight": 1.8
       },
       "above_threshold": false
