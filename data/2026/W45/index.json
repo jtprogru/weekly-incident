@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-07T11:59:07.819529549Z",
+  "generated_at": "2026-11-08T12:18:15.676005623Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
-      "incidents_seen": 7,
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-07T11:59:07.819529549Z",
+      "fetched_at": "2026-11-08T12:18:15.676005623Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -173,6 +173,26 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/wp49bp8bqo6c",
+      "vendor": "cloudflare",
+      "title": "Fedramp Customers have Delayed Purges",
+      "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-06T17:47:15.545Z",
+      "ongoing": true,
+      "components": [
+        "CDN Cache Purge"
+      ],
+      "score": {
+        "value": 4591.8,
+        "duration_minutes": 2551,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/sytnxyqfmbwg",
       "vendor": "grafana",
       "title": "October usage report visualization issue",
@@ -191,6 +211,44 @@
         "duration_minutes": 4516,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/c60k3g4vsoc1",
+      "vendor": "cloudflare",
+      "title": "Spectrum Availability Issue in Phoenix",
+      "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-07T00:59:31.547Z",
+      "ongoing": true,
+      "components": [
+        "Spectrum"
+      ],
+      "score": {
+        "value": 3812.4,
+        "duration_minutes": 2118,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "vendor": "openai",
+      "title": "Elevated error rates with some U.S. business Mastercards",
+      "url": "https://status.openai.com/incidents/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "impact": "none",
+      "status": "monitoring",
+      "started_at": "2026-11-06T18:38:43Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 3748.5,
+        "duration_minutes": 2499,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -322,64 +380,6 @@
       "score": {
         "value": 2125.8,
         "duration_minutes": 1181,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/wp49bp8bqo6c",
-      "vendor": "cloudflare",
-      "title": "Fedramp Customers have Delayed Purges",
-      "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-11-06T17:47:15.545Z",
-      "ongoing": true,
-      "components": [
-        "CDN Cache Purge"
-      ],
-      "score": {
-        "value": 1963.8,
-        "duration_minutes": 1091,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "openai/01M6S2FV5TZWQ753NHRB7BF5K7",
-      "vendor": "openai",
-      "title": "Elevated error rates with some U.S. business Mastercards",
-      "url": "https://status.openai.com/incidents/01M6S2FV5TZWQ753NHRB7BF5K7",
-      "impact": "none",
-      "status": "monitoring",
-      "started_at": "2026-11-06T18:38:43Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 1560,
-        "duration_minutes": 1040,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/c60k3g4vsoc1",
-      "vendor": "cloudflare",
-      "title": "Spectrum Availability Issue in Phoenix",
-      "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-11-07T00:59:31.547Z",
-      "ongoing": true,
-      "components": [
-        "Spectrum"
-      ],
-      "score": {
-        "value": 1186.2,
-        "duration_minutes": 659,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -677,6 +677,31 @@
       "above_threshold": false
     },
     {
+      "key": "anthropic/kw2lxj1th04c",
+      "vendor": "anthropic",
+      "title": "Degraded performance for Claude Fable 5.1",
+      "url": "https://stspg.io/3m3q1nwb142k",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-08T08:28:32.806Z",
+      "resolved_at": "2026-11-08T08:54:43.667Z",
+      "duration_minutes": 26,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 156,
+        "duration_minutes": 26,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "github/13b6lyl8d7bz",
       "vendor": "github",
       "title": "Incident with Git Operations",
@@ -693,6 +718,26 @@
       "score": {
         "value": 154.5,
         "duration_minutes": 103,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/pyynvrm1vskw",
+      "vendor": "github",
+      "title": "Increase in timeouts for some unauthenticated users",
+      "url": "https://stspg.io/5yt31mfmyc6p",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-11-08T10:36:05.474Z",
+      "ongoing": true,
+      "components": [
+        "API Requests"
+      ],
+      "score": {
+        "value": 153,
+        "duration_minutes": 102,
         "components": 1,
         "vendor_weight": 1.5
       },
