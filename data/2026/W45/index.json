@@ -2,40 +2,40 @@
   "week": "2026-W45",
   "from": "2026-11-02T00:00:00Z",
   "to": "2026-11-09T00:00:00Z",
-  "generated_at": "2026-11-08T12:18:15.676005623Z",
+  "generated_at": "2026-11-09T14:30:06.646686458Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,12 +100,70 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-08T12:18:15.676005623Z",
+      "fetched_at": "2026-11-09T14:30:06.646686458Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/wp49bp8bqo6c",
+      "vendor": "cloudflare",
+      "title": "Fedramp Customers have Delayed Purges",
+      "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-06T17:47:15.545Z",
+      "ongoing": true,
+      "components": [
+        "CDN Cache Purge"
+      ],
+      "score": {
+        "value": 7419.6,
+        "duration_minutes": 4122,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/c60k3g4vsoc1",
+      "vendor": "cloudflare",
+      "title": "Spectrum Availability Issue in Phoenix",
+      "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-07T00:59:31.547Z",
+      "ongoing": true,
+      "components": [
+        "Spectrum"
+      ],
+      "score": {
+        "value": 6642,
+        "duration_minutes": 3690,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "vendor": "openai",
+      "title": "Elevated error rates with some U.S. business Mastercards",
+      "url": "https://status.openai.com/incidents/01M6S2FV5TZWQ753NHRB7BF5K7",
+      "impact": "none",
+      "status": "monitoring",
+      "started_at": "2026-11-06T18:38:43Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 6106.5,
+        "duration_minutes": 4071,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
     {
       "key": "grafana/djhnhnnbh6tg",
       "vendor": "grafana",
@@ -173,26 +231,6 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/wp49bp8bqo6c",
-      "vendor": "cloudflare",
-      "title": "Fedramp Customers have Delayed Purges",
-      "url": "https://www.cloudflarestatus.com/incidents/wp49bp8bqo6c",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-11-06T17:47:15.545Z",
-      "ongoing": true,
-      "components": [
-        "CDN Cache Purge"
-      ],
-      "score": {
-        "value": 4591.8,
-        "duration_minutes": 2551,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
       "key": "grafana/sytnxyqfmbwg",
       "vendor": "grafana",
       "title": "October usage report visualization issue",
@@ -211,44 +249,6 @@
         "duration_minutes": 4516,
         "components": 1,
         "vendor_weight": 1
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "cloudflare/c60k3g4vsoc1",
-      "vendor": "cloudflare",
-      "title": "Spectrum Availability Issue in Phoenix",
-      "url": "https://www.cloudflarestatus.com/incidents/c60k3g4vsoc1",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-11-07T00:59:31.547Z",
-      "ongoing": true,
-      "components": [
-        "Spectrum"
-      ],
-      "score": {
-        "value": 3812.4,
-        "duration_minutes": 2118,
-        "components": 1,
-        "vendor_weight": 1.8
-      },
-      "above_threshold": true
-    },
-    {
-      "key": "openai/01M6S2FV5TZWQ753NHRB7BF5K7",
-      "vendor": "openai",
-      "title": "Elevated error rates with some U.S. business Mastercards",
-      "url": "https://status.openai.com/incidents/01M6S2FV5TZWQ753NHRB7BF5K7",
-      "impact": "none",
-      "status": "monitoring",
-      "started_at": "2026-11-06T18:38:43Z",
-      "ongoing": true,
-      "components": [],
-      "score": {
-        "value": 3748.5,
-        "duration_minutes": 2499,
-        "components": 1,
-        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -657,6 +657,28 @@
       "above_threshold": false
     },
     {
+      "key": "github/pyynvrm1vskw",
+      "vendor": "github",
+      "title": "Increase in timeouts for some unauthenticated users",
+      "url": "https://stspg.io/5yt31mfmyc6p",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-08T10:36:05.474Z",
+      "resolved_at": "2026-11-08T12:32:35.611Z",
+      "duration_minutes": 116,
+      "ongoing": false,
+      "components": [
+        "API Requests"
+      ],
+      "score": {
+        "value": 174,
+        "duration_minutes": 116,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M6MBCX427A7113A3T4FJ1N6Y",
       "vendor": "openai",
       "title": "Elevated error rates across paid ChatGPT plans",
@@ -671,6 +693,26 @@
       "score": {
         "value": 171,
         "duration_minutes": 114,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M6XVDCKRT3PSB0YP8J30GTD5",
+      "vendor": "openai",
+      "title": "Elevated errors with image generation",
+      "url": "https://status.openai.com/incidents/01M6XVDCKRT3PSB0YP8J30GTD5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-08T15:11:15Z",
+      "resolved_at": "2026-11-08T17:00:42Z",
+      "duration_minutes": 109,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 163.5,
+        "duration_minutes": 109,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -718,26 +760,6 @@
       "score": {
         "value": 154.5,
         "duration_minutes": 103,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": false
-    },
-    {
-      "key": "github/pyynvrm1vskw",
-      "vendor": "github",
-      "title": "Increase in timeouts for some unauthenticated users",
-      "url": "https://stspg.io/5yt31mfmyc6p",
-      "impact": "minor",
-      "status": "investigating",
-      "started_at": "2026-11-08T10:36:05.474Z",
-      "ongoing": true,
-      "components": [
-        "API Requests"
-      ],
-      "score": {
-        "value": 153,
-        "duration_minutes": 102,
         "components": 1,
         "vendor_weight": 1.5
       },

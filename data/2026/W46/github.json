@@ -1,0 +1,548 @@
+[
+  {
+    "key": "github/c9px7cw2ghrs",
+    "vendor": "github",
+    "native_id": "c9px7cw2ghrs",
+    "title": "Increased timeouts due to surge in anonymous users",
+    "url": "https://stspg.io/jztczfplj6yb",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-09T05:59:07.841Z",
+    "resolved_at": "2026-11-09T09:09:56.174Z",
+    "duration_minutes": 190,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "vw96pl4fqnzn",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-11-09T05:59:07.907Z"
+      },
+      {
+        "native_id": "w1mdwvb9yj98",
+        "status": "investigating",
+        "body": "We are debugging a spike in anonymous traffic. Some users who are not logged in may see errors on the site. CI jobs and release downloads may fail with a 504 Gateway Timeout status if they make anonymous calls.",
+        "created_at": "2026-11-09T06:30:44.187Z"
+      },
+      {
+        "native_id": "4f4dlr06hyyx",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T06:51:26.463Z"
+      },
+      {
+        "native_id": "fvc91d26t7kh",
+        "status": "monitoring",
+        "body": "The problem with anonymous traffic receiving 504 status codes has been mitigated. We are continuing to observe for an abundance of caution.",
+        "created_at": "2026-11-09T07:03:38.015Z"
+      },
+      {
+        "native_id": "24v6t4v43z0y",
+        "status": "investigating",
+        "body": "We have observed a repeated increase in 504 errors for anonymous and unauthenticated traffic, including users who are not logged in and release downloads. We are continuing to investigate and  apply mitigations.",
+        "created_at": "2026-11-09T07:43:15.424Z"
+      },
+      {
+        "native_id": "7jgw9xn6y543",
+        "status": "investigating",
+        "body": "We are continuing to observe high rates of 504 errors for anonymous requests. We are continuing to work on mitigation. Logged-in users and authenticated requests are unaffected.",
+        "created_at": "2026-11-09T08:16:25.172Z"
+      },
+      {
+        "native_id": "3j5gltjsljdq",
+        "status": "investigating",
+        "body": "Error rates have declined again, and we’re preparing targeted traffic controls while monitoring for a recurrence. Logged-in users and authenticated requests have not been affected.",
+        "created_at": "2026-11-09T08:47:55.788Z"
+      },
+      {
+        "native_id": "2rq2wy0hb2nr",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T09:05:46.666Z"
+      },
+      {
+        "native_id": "0k83qj2nj451",
+        "status": "monitoring",
+        "body": "We are resolving this incident as error rates have remained low and we have prepared additional protections.",
+        "created_at": "2026-11-09T09:09:47.536Z"
+      },
+      {
+        "native_id": "glmdcqw20zlt",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-11-09T09:09:56.174Z"
+      }
+    ],
+    "first_seen_at": "2026-11-09T14:30:06.646686458Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-09T05:59:07.851Z",
+      "id": "c9px7cw2ghrs",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-11-09T09:09:56.174Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T09:09:56.174Z",
+          "id": "glmdcqw20zlt",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T09:09:56.174Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are resolving this incident as error rates have remained low and we have prepared additional protections.",
+          "created_at": "2026-11-09T09:09:47.536Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T09:09:47.536Z",
+          "id": "0k83qj2nj451",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T09:09:47.536Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T09:05:46.666Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T09:05:46.666Z",
+          "id": "2rq2wy0hb2nr",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T09:05:46.666Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Error rates have declined again, and we’re preparing targeted traffic controls while monitoring for a recurrence. Logged-in users and authenticated requests have not been affected.",
+          "created_at": "2026-11-09T08:47:55.788Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T08:47:55.788Z",
+          "id": "3j5gltjsljdq",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T08:47:55.788Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to observe high rates of 504 errors for anonymous requests. We are continuing to work on mitigation. Logged-in users and authenticated requests are unaffected.",
+          "created_at": "2026-11-09T08:16:25.172Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T08:16:25.172Z",
+          "id": "7jgw9xn6y543",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T08:16:25.172Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have observed a repeated increase in 504 errors for anonymous and unauthenticated traffic, including users who are not logged in and release downloads. We are continuing to investigate and  apply mitigations.",
+          "created_at": "2026-11-09T07:43:15.424Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T07:43:15.424Z",
+          "id": "24v6t4v43z0y",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T07:43:15.424Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The problem with anonymous traffic receiving 504 status codes has been mitigated. We are continuing to observe for an abundance of caution.",
+          "created_at": "2026-11-09T07:03:38.015Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T07:03:38.015Z",
+          "id": "fvc91d26t7kh",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T07:03:38.015Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T06:51:26.463Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T06:51:26.463Z",
+          "id": "4f4dlr06hyyx",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T06:51:26.463Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are debugging a spike in anonymous traffic. Some users who are not logged in may see errors on the site. CI jobs and release downloads may fail with a 504 Gateway Timeout status if they make anonymous calls.",
+          "created_at": "2026-11-09T06:30:44.187Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T06:30:44.187Z",
+          "id": "w1mdwvb9yj98",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T06:30:44.187Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-11-09T05:59:07.907Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T05:59:07.907Z",
+          "id": "vw96pl4fqnzn",
+          "incident_id": "c9px7cw2ghrs",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T05:59:07.907Z"
+        }
+      ],
+      "monitoring_at": "2026-11-09T06:51:26.463Z",
+      "name": "Increased timeouts due to surge in anonymous users",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-09T09:09:56.174Z",
+      "shortlink": "https://stspg.io/jztczfplj6yb",
+      "started_at": "2026-11-09T05:59:07.841Z",
+      "status": "resolved",
+      "updated_at": "2026-11-09T09:09:56.206Z"
+    }
+  },
+  {
+    "key": "github/xxb3l2bm76dr",
+    "vendor": "github",
+    "native_id": "xxb3l2bm76dr",
+    "title": "Incident with Webhooks and Actions",
+    "url": "https://stspg.io/4vdghm7tycm4",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-09T10:00:35.209Z",
+    "resolved_at": "2026-11-09T11:50:35.774Z",
+    "duration_minutes": 110,
+    "components": [
+      "Webhooks",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "b6phqx66lpjj",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+        "created_at": "2026-11-09T10:00:35.648Z"
+      },
+      {
+        "native_id": "2rpsj0zkt5mg",
+        "status": "investigating",
+        "body": "We're investigating delays in Actions runs start times and webhook deliveries.",
+        "created_at": "2026-11-09T10:28:19.735Z"
+      },
+      {
+        "native_id": "vr194tzdpgw0",
+        "status": "investigating",
+        "body": "We've applied a mitigation and are monitoring for recovery.",
+        "created_at": "2026-11-09T10:47:25.35Z"
+      },
+      {
+        "native_id": "ghj248c9xm7v",
+        "status": "investigating",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T11:06:35.83Z"
+      },
+      {
+        "native_id": "mckrt9nsd4z9",
+        "status": "investigating",
+        "body": "Webhooks is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-11-09T11:17:28.545Z"
+      },
+      {
+        "native_id": "lnkmmfvgdp1k",
+        "status": "investigating",
+        "body": "Webhooks is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-09T11:42:04.835Z"
+      },
+      {
+        "native_id": "dl8635xq259g",
+        "status": "monitoring",
+        "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T11:45:07.476Z"
+      },
+      {
+        "native_id": "rfpl3twlkw5p",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-11-09T11:50:35.774Z"
+      }
+    ],
+    "first_seen_at": "2026-11-09T14:30:06.646686458Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-09T11:45:07.392Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-09T11:06:35.707Z"
+        }
+      ],
+      "created_at": "2026-11-09T10:00:35.232Z",
+      "id": "xxb3l2bm76dr",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-11-09T11:50:35.774Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:50:35.774Z",
+          "id": "rfpl3twlkw5p",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:50:35.774Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T11:45:07.476Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:45:07.476Z",
+          "id": "dl8635xq259g",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:45:07.476Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Webhooks is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-09T11:42:04.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:42:04.835Z",
+          "id": "lnkmmfvgdp1k",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:42:04.835Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Webhooks is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-11-09T11:17:28.545Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:17:28.545Z",
+          "id": "mckrt9nsd4z9",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:17:28.545Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T11:06:35.830Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:06:35.830Z",
+          "id": "ghj248c9xm7v",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:06:35.830Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've applied a mitigation and are monitoring for recovery.",
+          "created_at": "2026-11-09T10:47:25.350Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:47:25.350Z",
+          "id": "vr194tzdpgw0",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:47:25.350Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're investigating delays in Actions runs start times and webhook deliveries.",
+          "created_at": "2026-11-09T10:28:19.735Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:28:19.735Z",
+          "id": "2rpsj0zkt5mg",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:28:19.735Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+          "created_at": "2026-11-09T10:00:35.648Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:00:35.648Z",
+          "id": "b6phqx66lpjj",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:00:35.648Z"
+        }
+      ],
+      "monitoring_at": "2026-11-09T11:45:07.476Z",
+      "name": "Incident with Webhooks and Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-09T11:50:35.774Z",
+      "shortlink": "https://stspg.io/4vdghm7tycm4",
+      "started_at": "2026-11-09T10:00:35.209Z",
+      "status": "resolved",
+      "updated_at": "2026-11-09T11:50:35.805Z"
+    }
+  }
+]
