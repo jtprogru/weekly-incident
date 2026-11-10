@@ -2,40 +2,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-09T14:30:06.646686458Z",
+  "generated_at": "2026-11-10T13:51:54.635576043Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,12 +100,100 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-09T14:30:06.646686458Z",
+      "fetched_at": "2026-11-10T13:51:54.635576043Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
   "incidents": [
+    {
+      "key": "cloudflare/0ocqieaifg7h",
+      "vendor": "cloudflare",
+      "title": "Changes to Cloudflare Workers are not producing Event Subscription events",
+      "url": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-11-10T01:53:58.905Z",
+      "ongoing": true,
+      "components": [
+        "Workers",
+        "Queues"
+      ],
+      "score": {
+        "value": 2581.2000000000003,
+        "duration_minutes": 717,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/1x0tbxpmmttu",
+      "vendor": "cloudflare",
+      "title": "Changes made to Workers may be delayed or disrupted",
+      "url": "https://www.cloudflarestatus.com/incidents/1x0tbxpmmttu",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-09T16:15:26.798Z",
+      "resolved_at": "2026-11-10T01:46:28.887Z",
+      "duration_minutes": 571,
+      "ongoing": false,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 1027.8,
+        "duration_minutes": 571,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/f3cgznwspd0m",
+      "vendor": "grafana",
+      "title": "Mimir query unexpected response with status code 500",
+      "url": "https://stspg.io/fvnhy2nn4xq6",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-10T03:38:00.19Z",
+      "resolved_at": "2026-11-10T12:09:38.748Z",
+      "duration_minutes": 511,
+      "ongoing": false,
+      "components": [
+        "AWS US East - prod-us-east-0: Querying",
+        "GCP US Central - prod-us-central-0: Querying"
+      ],
+      "score": {
+        "value": 1022,
+        "duration_minutes": 511,
+        "components": 2,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/88hc76jnq2gn",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in Eastern North America",
+      "url": "https://www.cloudflarestatus.com/incidents/88hc76jnq2gn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-09T16:34:35.355Z",
+      "resolved_at": "2026-11-09T20:12:27.071Z",
+      "duration_minutes": 217,
+      "ongoing": false,
+      "components": [
+        "Network"
+      ],
+      "score": {
+        "value": 390.6,
+        "duration_minutes": 217,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
     {
       "key": "github/xxb3l2bm76dr",
       "vendor": "github",
@@ -148,6 +236,157 @@
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "openai/01M71W79MAGEXEX93QTVTBYJ4K",
+      "vendor": "openai",
+      "title": "Incorrect cost data in Costs API exports",
+      "url": "https://status.openai.com/incidents/01M71W79MAGEXEX93QTVTBYJ4K",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-10T04:42:21Z",
+      "resolved_at": "2026-11-10T07:02:33Z",
+      "duration_minutes": 140,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 210,
+        "duration_minutes": 140,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/tp8cghg7tlc4",
+      "vendor": "github",
+      "title": "Incident with Actions and Checks API",
+      "url": "https://stspg.io/7yw63xl9ztrv",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-11-09T18:12:37.232Z",
+      "resolved_at": "2026-11-09T18:59:32.565Z",
+      "duration_minutes": 46,
+      "ongoing": false,
+      "components": [
+        "Webhooks",
+        "Actions",
+        "Pages"
+      ],
+      "score": {
+        "value": 207,
+        "duration_minutes": 46,
+        "components": 3,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "github/6jm5k16vyhfg",
+      "vendor": "github",
+      "title": "Degraded availability for GPT-5.3 Codex and GPT-5.6 models in Copilot",
+      "url": "https://stspg.io/t5gqmprtrdf2",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-09T23:16:32.224Z",
+      "resolved_at": "2026-11-10T00:05:52.345Z",
+      "duration_minutes": 49,
+      "ongoing": false,
+      "components": [
+        "Copilot",
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 147,
+        "duration_minutes": 49,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M70RDA2GWD2WXE58ANY0WV5R",
+      "vendor": "openai",
+      "title": "Elevated ChatGPT Conversation Errors",
+      "url": "https://status.openai.com/incidents/01M70RDA2GWD2WXE58ANY0WV5R",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-09T18:16:30Z",
+      "resolved_at": "2026-11-09T19:08:31Z",
+      "duration_minutes": 52,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 78,
+        "duration_minutes": 52,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/m644az5hr9xo",
+      "vendor": "cloudflare",
+      "title": "Account Analytics Filter Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/m644az5hr9xo",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-10T08:02:37.766Z",
+      "resolved_at": "2026-11-10T08:45:13.933Z",
+      "duration_minutes": 42,
+      "ongoing": false,
+      "components": [
+        "Analytics"
+      ],
+      "score": {
+        "value": 75.60000000000001,
+        "duration_minutes": 42,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M7193DWYRFWQM5W6E3VZ7TM7",
+      "vendor": "openai",
+      "title": "Elevated Errors On API",
+      "url": "https://status.openai.com/incidents/01M7193DWYRFWQM5W6E3VZ7TM7",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-09T23:08:12Z",
+      "resolved_at": "2026-11-09T23:50:46Z",
+      "duration_minutes": 42,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 63,
+        "duration_minutes": 42,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "grafana/d8rx6y4sf9k4",
+      "vendor": "grafana",
+      "title": "Cloud Logs writes - Elevated latency and error rates in prod-eu-central-0",
+      "url": "https://stspg.io/m2ykdxy6012r",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-10T08:03:05.907Z",
+      "resolved_at": "2026-11-10T08:20:25.042Z",
+      "duration_minutes": 17,
+      "ongoing": false,
+      "components": [
+        "AWS Switzerland - prod-eu-central-0"
+      ],
+      "score": {
+        "value": 17,
+        "duration_minutes": 17,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
     }
   ]
 }

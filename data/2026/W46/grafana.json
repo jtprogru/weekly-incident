@@ -1,0 +1,364 @@
+[
+  {
+    "key": "grafana/f3cgznwspd0m",
+    "vendor": "grafana",
+    "native_id": "f3cgznwspd0m",
+    "title": "Mimir query unexpected response with status code 500",
+    "url": "https://stspg.io/fvnhy2nn4xq6",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-10T03:38:00.19Z",
+    "resolved_at": "2026-11-10T12:09:38.748Z",
+    "duration_minutes": 511,
+    "components": [
+      "AWS US East - prod-us-east-0: Querying",
+      "GCP US Central - prod-us-central-0: Querying"
+    ],
+    "updates": [
+      {
+        "native_id": "ygfnmxs6db62",
+        "status": "identified",
+        "body": "We’ve identified an issue querying older data, and are already seeing recovery",
+        "created_at": "2026-11-10T03:38:00.43Z"
+      },
+      {
+        "native_id": "d1tlrly7q72d",
+        "status": "identified",
+        "body": "We’ve identified an issue querying older data, and are already seeing recovery.",
+        "created_at": "2026-11-10T03:39:32.447Z"
+      },
+      {
+        "native_id": "d6xclym0gd7b",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-10T04:42:01.893Z"
+      },
+      {
+        "native_id": "tybmlvs2dg8g",
+        "status": "monitoring",
+        "body": "Our mitigation remains in place and query behavior in AWS US East (OH) and GCP US Central continues to improve. Some customers may still see occasional, brief query errors in the meantime.",
+        "created_at": "2026-11-10T09:53:55.44Z"
+      },
+      {
+        "native_id": "hxbjccdsv7bv",
+        "status": "monitoring",
+        "body": "Our mitigation remains in place and query behavior in AWS US East (OH) and GCP US Central continues to improve. Some customers may still see occasional, brief query errors in the meantime.",
+        "created_at": "2026-11-10T11:18:47.563Z"
+      },
+      {
+        "native_id": "xmzynmhsn39x",
+        "status": "resolved",
+        "body": "From approximately 03:20 UTC on 10 November, some Grafana Cloud Metrics customers in AWS US East (OH) and GCP US Central saw errors, or failed queries, when reading older data. Service has fully recovered and this incident is now resolved.",
+        "created_at": "2026-11-10T12:09:38.748Z"
+      }
+    ],
+    "first_seen_at": "2026-11-10T13:51:54.635576043Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-01-13T15:03:35.792Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "5270kl9kd6l2",
+          "name": "AWS US East - prod-us-east-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-11-10T04:42:01.817Z"
+        },
+        {
+          "created_at": "2019-04-10T08:43:51.752Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "jhc34sjt42wd",
+          "name": "GCP US Central - prod-us-central-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 42,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-10T04:42:01.843Z"
+        }
+      ],
+      "created_at": "2026-11-10T03:38:00.205Z",
+      "id": "f3cgznwspd0m",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From approximately 03:20 UTC on 10 November, some Grafana Cloud Metrics customers in AWS US East (OH) and GCP US Central saw errors, or failed queries, when reading older data. Service has fully recovered and this incident is now resolved.",
+          "created_at": "2026-11-10T12:09:38.748Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T12:09:38.748Z",
+          "id": "xmzynmhsn39x",
+          "incident_id": "f3cgznwspd0m",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T12:09:38.748Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our mitigation remains in place and query behavior in AWS US East (OH) and GCP US Central continues to improve. Some customers may still see occasional, brief query errors in the meantime.",
+          "created_at": "2026-11-10T11:18:47.563Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T11:18:47.563Z",
+          "id": "hxbjccdsv7bv",
+          "incident_id": "f3cgznwspd0m",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T11:18:47.563Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our mitigation remains in place and query behavior in AWS US East (OH) and GCP US Central continues to improve. Some customers may still see occasional, brief query errors in the meantime.",
+          "created_at": "2026-11-10T09:53:55.440Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T09:53:55.440Z",
+          "id": "tybmlvs2dg8g",
+          "incident_id": "f3cgznwspd0m",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T09:53:55.440Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-10T04:42:01.893Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T04:42:01.893Z",
+          "id": "d6xclym0gd7b",
+          "incident_id": "f3cgznwspd0m",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T04:42:01.893Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’ve identified an issue querying older data, and are already seeing recovery.",
+          "created_at": "2026-11-10T03:39:32.447Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T03:39:32.447Z",
+          "id": "d1tlrly7q72d",
+          "incident_id": "f3cgznwspd0m",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T03:39:32.447Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5270kl9kd6l2",
+              "name": "Metrics - AWS US East - prod-us-east-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’ve identified an issue querying older data, and are already seeing recovery",
+          "created_at": "2026-11-10T03:38:00.430Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T03:38:00.430Z",
+          "id": "ygfnmxs6db62",
+          "incident_id": "f3cgznwspd0m",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T03:38:00.430Z"
+        }
+      ],
+      "monitoring_at": "2026-11-10T04:42:01.893Z",
+      "name": "Mimir query unexpected response with status code 500",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-10T12:09:38.748Z",
+      "shortlink": "https://stspg.io/fvnhy2nn4xq6",
+      "started_at": "2026-11-10T03:38:00.190Z",
+      "status": "resolved",
+      "updated_at": "2026-11-10T12:09:38.772Z"
+    }
+  },
+  {
+    "key": "grafana/d8rx6y4sf9k4",
+    "vendor": "grafana",
+    "native_id": "d8rx6y4sf9k4",
+    "title": "Cloud Logs writes - Elevated latency and error rates in prod-eu-central-0",
+    "url": "https://stspg.io/m2ykdxy6012r",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-10T08:03:05.907Z",
+    "resolved_at": "2026-11-10T08:20:25.042Z",
+    "duration_minutes": 17,
+    "components": [
+      "AWS Switzerland - prod-eu-central-0"
+    ],
+    "updates": [
+      {
+        "native_id": "mh4y6t5gddc6",
+        "status": "monitoring",
+        "body": "Cloud Logs writes have experienced elevated latency and error rates in prod-eu-central-0 from 07:05 UTC to 07:08 UTC, and 07:25 UTC to 07:45 UTC. The latency has been mitigated and we are currently monitoring.",
+        "created_at": "2026-11-10T08:03:05.995Z"
+      },
+      {
+        "native_id": "9tsp146r0lg0",
+        "status": "resolved",
+        "body": "We're observing a continued period of recovery and will mark this as resolved.",
+        "created_at": "2026-11-10T08:20:25.042Z"
+      }
+    ],
+    "first_seen_at": "2026-11-10T13:51:54.635576043Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-03-11T09:48:25.864Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "c325hr67bhtb",
+          "name": "AWS Switzerland - prod-eu-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2026-03-11",
+          "status": "operational",
+          "updated_at": "2026-10-20T14:49:17.265Z"
+        }
+      ],
+      "created_at": "2026-11-10T08:03:05.919Z",
+      "id": "d8rx6y4sf9k4",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "c325hr67bhtb",
+              "name": "Logs - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're observing a continued period of recovery and will mark this as resolved.",
+          "created_at": "2026-11-10T08:20:25.042Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T08:20:25.042Z",
+          "id": "9tsp146r0lg0",
+          "incident_id": "d8rx6y4sf9k4",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T08:20:25.042Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "c325hr67bhtb",
+              "name": "Logs - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloud Logs writes have experienced elevated latency and error rates in prod-eu-central-0 from 07:05 UTC to 07:08 UTC, and 07:25 UTC to 07:45 UTC. The latency has been mitigated and we are currently monitoring.",
+          "created_at": "2026-11-10T08:03:05.995Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T08:03:05.995Z",
+          "id": "mh4y6t5gddc6",
+          "incident_id": "d8rx6y4sf9k4",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T08:03:05.995Z"
+        }
+      ],
+      "monitoring_at": "2026-11-10T08:03:05.995Z",
+      "name": "Cloud Logs writes - Elevated latency and error rates in prod-eu-central-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-10T08:20:25.042Z",
+      "shortlink": "https://stspg.io/m2ykdxy6012r",
+      "started_at": "2026-11-10T08:03:05.907Z",
+      "status": "resolved",
+      "updated_at": "2026-11-10T08:20:25.071Z"
+    }
+  }
+]
