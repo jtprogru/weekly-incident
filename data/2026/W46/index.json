@@ -2,40 +2,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-10T13:51:54.635576043Z",
+  "generated_at": "2026-11-11T13:03:15.544368878Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
-      "incidents_seen": 28,
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "incidents_seen": 27,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-10T13:51:54.635576043Z",
+      "fetched_at": "2026-11-11T13:03:15.544368878Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -112,7 +112,7 @@
       "title": "Changes to Cloudflare Workers are not producing Event Subscription events",
       "url": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
       "impact": "minor",
-      "status": "investigating",
+      "status": "identified",
       "started_at": "2026-11-10T01:53:58.905Z",
       "ongoing": true,
       "components": [
@@ -120,8 +120,8 @@
         "Queues"
       ],
       "score": {
-        "value": 2581.2000000000003,
-        "duration_minutes": 717,
+        "value": 7592.400000000001,
+        "duration_minutes": 2109,
         "components": 2,
         "vendor_weight": 1.8
       },
@@ -173,6 +173,26 @@
       "above_threshold": true
     },
     {
+      "key": "cloudflare/yu63fhh2peb7",
+      "vendor": "cloudflare",
+      "title": "Replicate Input Upload Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-11T04:33:19.016Z",
+      "ongoing": true,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 916.2,
+        "duration_minutes": 509,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
       "key": "cloudflare/88hc76jnq2gn",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Eastern North America",
@@ -218,6 +238,29 @@
       "above_threshold": true
     },
     {
+      "key": "github/hnf21m9jkl3c",
+      "vendor": "github",
+      "title": "Incident with Git Operations and Pull Requests",
+      "url": "https://stspg.io/16nsnk2th3rv",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-11-10T16:10:52.162Z",
+      "resolved_at": "2026-11-10T17:55:03.552Z",
+      "duration_minutes": 104,
+      "ongoing": false,
+      "components": [
+        "Pull Requests",
+        "Actions"
+      ],
+      "score": {
+        "value": 312,
+        "duration_minutes": 104,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/c9px7cw2ghrs",
       "vendor": "github",
       "title": "Increased timeouts due to surge in anonymous users",
@@ -234,6 +277,50 @@
         "duration_minutes": 190,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/21vwp89eiyjx",
+      "vendor": "cloudflare",
+      "title": "SSL Certificate Provisioning Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/21vwp89eiyjx",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T07:45:42.146Z",
+      "resolved_at": "2026-11-11T10:07:58.207Z",
+      "duration_minutes": 142,
+      "ongoing": false,
+      "components": [
+        "SSL Certificate Provisioning"
+      ],
+      "score": {
+        "value": 255.6,
+        "duration_minutes": 142,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/1h9c85fz6bm3",
+      "vendor": "cloudflare",
+      "title": "Network Performance Issues in St. Louis, USA",
+      "url": "https://www.cloudflarestatus.com/incidents/1h9c85fz6bm3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-10T22:50:23.422Z",
+      "resolved_at": "2026-11-11T01:10:26.486Z",
+      "duration_minutes": 140,
+      "ongoing": false,
+      "components": [
+        "St. Louis, United States - (STL)"
+      ],
+      "score": {
+        "value": 252,
+        "duration_minutes": 140,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -347,6 +434,30 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/byzl30zyfc47",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Worker Builds Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/byzl30zyfc47",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T06:29:09.044Z",
+      "resolved_at": "2026-11-11T06:41:33.983Z",
+      "duration_minutes": 12,
+      "ongoing": false,
+      "components": [
+        "Workers",
+        "Containers",
+        "Workers Builds"
+      ],
+      "score": {
+        "value": 64.8,
+        "duration_minutes": 12,
+        "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "openai/01M7193DWYRFWQM5W6E3VZ7TM7",
       "vendor": "openai",
       "title": "Elevated Errors On API",
@@ -363,6 +474,48 @@
         "duration_minutes": 42,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/3en9cdyjn2sq",
+      "vendor": "cloudflare",
+      "title": "Prediction issue on OpenAI models via Replicate",
+      "url": "https://www.cloudflarestatus.com/incidents/3en9cdyjn2sq",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-10T18:35:39.915Z",
+      "resolved_at": "2026-11-10T19:06:59.931Z",
+      "duration_minutes": 31,
+      "ongoing": false,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 55.800000000000004,
+        "duration_minutes": 31,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/4qxszy04pdjw",
+      "vendor": "cloudflare",
+      "title": "Elevated number of 5xx errors in Hong Kong",
+      "url": "https://www.cloudflarestatus.com/incidents/4qxszy04pdjw",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T07:30:00Z",
+      "resolved_at": "2026-11-11T07:45:00Z",
+      "duration_minutes": 15,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 27,
+        "duration_minutes": 15,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },
@@ -385,6 +538,26 @@
         "duration_minutes": 17,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "anthropic/pgz8r13pk4sm",
+      "vendor": "anthropic",
+      "title": "Elevated errors on Fable 52 and Mythos 52",
+      "url": "https://stspg.io/pytn9v8p2zc7",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-10T21:47:48.739Z",
+      "resolved_at": "2026-11-10T21:47:48.885Z",
+      "duration_minutes": 0,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 0,
+        "duration_minutes": 0,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     }

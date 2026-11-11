@@ -55,7 +55,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-10T01:53:58.905Z"
+          "updated_at": "2026-11-11T06:41:33.983Z"
         }
       ],
       "created_at": "2026-11-09T16:15:26.798Z",
@@ -274,7 +274,7 @@
     "title": "Changes to Cloudflare Workers are not producing Event Subscription events",
     "url": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
     "impact": "minor",
-    "status": "investigating",
+    "status": "identified",
     "started_at": "2026-11-10T01:53:58.905Z",
     "components": [
       "Workers",
@@ -286,6 +286,12 @@
         "status": "investigating",
         "body": "Changes to Cloudflare Workers are temporarily not producing Event Subscription events. We have intentionally disabled this feature due to an on-going issue. We are actively working to restore it, but this, regrettably, may take a while. Changes to Workers themselves are working normally. Already deployed Workers are entirely unaffected.",
         "created_at": "2026-11-10T01:53:58.905Z"
+      },
+      {
+        "native_id": "tsd2wb2nx1mq",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T05:05:06.331Z"
       }
     ],
     "first_seen_at": "2026-11-10T13:51:54.635576043Z",
@@ -304,7 +310,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-10T01:53:58.905Z"
+          "updated_at": "2026-11-11T06:41:33.983Z"
         },
         {
           "created_at": "2025-10-22T09:19:59.000Z",
@@ -326,6 +332,19 @@
       "id": "0ocqieaifg7h",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T05:05:06.331Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T05:05:06.331Z",
+          "id": "tsd2wb2nx1mq",
+          "incident_id": "0ocqieaifg7h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T05:05:06.331Z"
+        },
         {
           "affected_components": [
             {
@@ -360,8 +379,8 @@
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
       "started_at": "2026-11-10T01:53:58.905Z",
-      "status": "investigating",
-      "updated_at": "2026-11-10T01:55:01.530Z"
+      "status": "identified",
+      "updated_at": "2026-11-11T05:05:06.331Z"
     }
   },
   {
@@ -496,6 +515,694 @@
       "started_at": "2026-11-10T08:02:37.766Z",
       "status": "resolved",
       "updated_at": "2026-11-10T08:45:13.933Z"
+    }
+  },
+  {
+    "key": "cloudflare/3en9cdyjn2sq",
+    "vendor": "cloudflare",
+    "native_id": "3en9cdyjn2sq",
+    "title": "Prediction issue on OpenAI models via Replicate",
+    "url": "https://www.cloudflarestatus.com/incidents/3en9cdyjn2sq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-10T18:35:39.915Z",
+    "resolved_at": "2026-11-10T19:06:59.931Z",
+    "duration_minutes": 31,
+    "components": [
+      "Replicate"
+    ],
+    "updates": [
+      {
+        "native_id": "0v268on8n2da",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating, an issue affecting predictions on official OpenAI models via Replicate. Customers may see that some predictions are failing with a 401 token_invalidated error. We are working to mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-10T18:35:39.915Z"
+      },
+      {
+        "native_id": "phyu37osdoz9",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-10T18:43:50.907Z"
+      },
+      {
+        "native_id": "f6xgk1zj7hnp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-10T19:06:59.931Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-06-30T13:39:35.000Z",
+          "description": "Replicate runs and fine-tunes open-source models.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fvgfcmy66tdr",
+          "name": "Replicate",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2026-06-30",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-11T04:33:19.016Z"
+        }
+      ],
+      "created_at": "2026-11-10T18:35:39.915Z",
+      "id": "3en9cdyjn2sq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-10T19:06:59.931Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T19:06:59.931Z",
+          "id": "f6xgk1zj7hnp",
+          "incident_id": "3en9cdyjn2sq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T19:06:59.931Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-10T18:43:50.907Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T18:43:50.907Z",
+          "id": "phyu37osdoz9",
+          "incident_id": "3en9cdyjn2sq",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T18:43:50.907Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "AI - Replicate",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating, an issue affecting predictions on official OpenAI models via Replicate. Customers may see that some predictions are failing with a 401 token_invalidated error. We are working to mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-10T18:35:39.915Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T18:35:39.915Z",
+          "id": "0v268on8n2da",
+          "incident_id": "3en9cdyjn2sq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T18:35:39.915Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Prediction issue on OpenAI models via Replicate",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-10T19:06:59.931Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3en9cdyjn2sq",
+      "started_at": "2026-11-10T18:35:39.915Z",
+      "status": "resolved",
+      "updated_at": "2026-11-10T19:06:59.931Z"
+    }
+  },
+  {
+    "key": "cloudflare/1h9c85fz6bm3",
+    "vendor": "cloudflare",
+    "native_id": "1h9c85fz6bm3",
+    "title": "Network Performance Issues in St. Louis, USA",
+    "url": "https://www.cloudflarestatus.com/incidents/1h9c85fz6bm3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-10T22:50:23.422Z",
+    "resolved_at": "2026-11-11T01:10:26.486Z",
+    "duration_minutes": 140,
+    "components": [
+      "St. Louis, United States - (STL)"
+    ],
+    "updates": [
+      {
+        "native_id": "6h4q6d1ks4tf",
+        "status": "monitoring",
+        "body": "Cloudflare has identified issues with network performance in St. Louis (STL), USA. A fix has been implemented and we're monitoring the results.",
+        "created_at": "2026-11-10T22:50:23.422Z"
+      },
+      {
+        "native_id": "v2y7shzpoc39",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-11T01:10:26.486Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2016-09-14T18:53:59.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "f4kdktnb8sz2",
+          "name": "St. Louis, United States - (STL)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 54,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-11T01:10:26.486Z"
+        }
+      ],
+      "created_at": "2026-11-10T22:50:23.422Z",
+      "id": "1h9c85fz6bm3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-11T01:10:26.486Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T01:10:26.486Z",
+          "id": "v2y7shzpoc39",
+          "incident_id": "1h9c85fz6bm3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T01:10:26.486Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "f4kdktnb8sz2",
+              "name": "North America - St. Louis, United States - (STL)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has identified issues with network performance in St. Louis (STL), USA. A fix has been implemented and we're monitoring the results.",
+          "created_at": "2026-11-10T22:50:23.422Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T22:50:23.422Z",
+          "id": "6h4q6d1ks4tf",
+          "incident_id": "1h9c85fz6bm3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T22:50:23.422Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Issues in St. Louis, USA",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T01:10:26.486Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/1h9c85fz6bm3",
+      "started_at": "2026-11-10T22:50:23.422Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T01:10:26.486Z"
+    }
+  },
+  {
+    "key": "cloudflare/yu63fhh2peb7",
+    "vendor": "cloudflare",
+    "native_id": "yu63fhh2peb7",
+    "title": "Replicate Input Upload Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-11-11T04:33:19.016Z",
+    "components": [
+      "Replicate"
+    ],
+    "updates": [
+      {
+        "native_id": "9s3k1vjctxgo",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Replicate input uploads.\n\nWe are working to understand the full impact and mitigate this problem.  More updates to follow shortly",
+        "created_at": "2026-11-11T04:33:19.016Z"
+      },
+      {
+        "native_id": "ti0lwn6wg5ut",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T05:11:52.647Z"
+      },
+      {
+        "native_id": "hshjba2tuncl",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
+        "created_at": "2026-11-11T07:33:53.799Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-06-30T13:39:35.000Z",
+          "description": "Replicate runs and fine-tunes open-source models.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fvgfcmy66tdr",
+          "name": "Replicate",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2026-06-30",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-11T04:33:19.016Z"
+        }
+      ],
+      "created_at": "2026-11-11T04:33:19.016Z",
+      "id": "yu63fhh2peb7",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
+          "created_at": "2026-11-11T07:33:53.799Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T07:33:53.799Z",
+          "id": "hshjba2tuncl",
+          "incident_id": "yu63fhh2peb7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T07:33:53.799Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T05:11:52.647Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T05:11:52.647Z",
+          "id": "ti0lwn6wg5ut",
+          "incident_id": "yu63fhh2peb7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T05:11:52.647Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "AI - Replicate",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Replicate input uploads.\n\nWe are working to understand the full impact and mitigate this problem.  More updates to follow shortly",
+          "created_at": "2026-11-11T04:33:19.016Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T04:33:19.016Z",
+          "id": "9s3k1vjctxgo",
+          "incident_id": "yu63fhh2peb7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T04:33:19.016Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Replicate Input Upload Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
+      "started_at": "2026-11-11T04:33:19.016Z",
+      "status": "identified",
+      "updated_at": "2026-11-11T07:33:53.799Z"
+    }
+  },
+  {
+    "key": "cloudflare/byzl30zyfc47",
+    "vendor": "cloudflare",
+    "native_id": "byzl30zyfc47",
+    "title": "Cloudflare Worker Builds Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/byzl30zyfc47",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T06:29:09.044Z",
+    "resolved_at": "2026-11-11T06:41:33.983Z",
+    "duration_minutes": 12,
+    "components": [
+      "Workers",
+      "Containers",
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "reafrf1g4fie",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue with Cloudflare Worker Builds which potentially impacts multiple customers. Further detail will be provided as more information becomes available.\n\nExisting Workers and Containers are unaffected.",
+        "created_at": "2026-11-11T06:29:09.044Z"
+      },
+      {
+        "native_id": "51pchg565jg1",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T06:32:26.755Z"
+      },
+      {
+        "native_id": "dt0hj2bw7ao6",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-11T06:35:38.992Z"
+      },
+      {
+        "native_id": "4twqcyc0pzxh",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-11T06:41:33.983Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        }
+      ],
+      "created_at": "2026-11-11T06:29:09.044Z",
+      "id": "byzl30zyfc47",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-11T06:41:33.983Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:41:33.983Z",
+          "id": "4twqcyc0pzxh",
+          "incident_id": "byzl30zyfc47",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-11T06:35:38.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:35:38.992Z",
+          "id": "dt0hj2bw7ao6",
+          "incident_id": "byzl30zyfc47",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:35:38.992Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T06:32:26.755Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:32:26.755Z",
+          "id": "51pchg565jg1",
+          "incident_id": "byzl30zyfc47",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:32:26.755Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Developer Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Developer Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue with Cloudflare Worker Builds which potentially impacts multiple customers. Further detail will be provided as more information becomes available.\n\nExisting Workers and Containers are unaffected.",
+          "created_at": "2026-11-11T06:29:09.044Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:29:09.044Z",
+          "id": "reafrf1g4fie",
+          "incident_id": "byzl30zyfc47",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:29:09.044Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Worker Builds Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T06:41:33.983Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/byzl30zyfc47",
+      "started_at": "2026-11-11T06:29:09.044Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T06:41:33.983Z"
+    }
+  },
+  {
+    "key": "cloudflare/4qxszy04pdjw",
+    "vendor": "cloudflare",
+    "native_id": "4qxszy04pdjw",
+    "title": "Elevated number of 5xx errors in Hong Kong",
+    "url": "https://www.cloudflarestatus.com/incidents/4qxszy04pdjw",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T07:30:00Z",
+    "resolved_at": "2026-11-11T07:45:00Z",
+    "duration_minutes": 15,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "g3s5z4153q1w",
+        "status": "resolved",
+        "body": "Between 07:30-07:45 UTC customers reaching Hong Kong, may have experienced an elevated number of 5xx errors.",
+        "created_at": "2026-11-11T07:52:21.12Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-11T07:52:21.120Z",
+      "id": "4qxszy04pdjw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between 07:30-07:45 UTC customers reaching Hong Kong, may have experienced an elevated number of 5xx errors.",
+          "created_at": "2026-11-11T07:52:21.120Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T07:45:00.000Z",
+          "id": "g3s5z4153q1w",
+          "incident_id": "4qxszy04pdjw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T07:52:21.120Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated number of 5xx errors in Hong Kong",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T07:45:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/4qxszy04pdjw",
+      "started_at": "2026-11-11T07:30:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T07:52:45.919Z"
+    }
+  },
+  {
+    "key": "cloudflare/21vwp89eiyjx",
+    "vendor": "cloudflare",
+    "native_id": "21vwp89eiyjx",
+    "title": "SSL Certificate Provisioning Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/21vwp89eiyjx",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T07:45:42.146Z",
+    "resolved_at": "2026-11-11T10:07:58.207Z",
+    "duration_minutes": 142,
+    "components": [
+      "SSL Certificate Provisioning"
+    ],
+    "updates": [
+      {
+        "native_id": "7sw9v1frqwgg",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an issue deploying a subset of Custom certificates. Customers are advised to temporarily pause certificate redeployments until this incident is resolved\n\nSSL certificates already in production remain unaffected and are operating normally.",
+        "created_at": "2026-11-11T07:45:42.146Z"
+      },
+      {
+        "native_id": "0z8q71y7bwqw",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T08:17:36.507Z"
+      },
+      {
+        "native_id": "2rh6vvg5i356",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-11T09:01:59.51Z"
+      },
+      {
+        "native_id": "dpob5ifv73hk",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-11T10:07:58.207Z"
+      }
+    ],
+    "first_seen_at": "2026-11-11T13:03:15.544368878Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2016-03-17T15:27:39.000Z",
+          "description": "Provisioning service for edge certificates like Universal and Advanced SSL",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "cghykwlwsmn5",
+          "name": "SSL Certificate Provisioning",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-11T10:07:58.207Z"
+        }
+      ],
+      "created_at": "2026-11-11T07:45:42.146Z",
+      "id": "21vwp89eiyjx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-11T10:07:58.207Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T10:07:58.207Z",
+          "id": "dpob5ifv73hk",
+          "incident_id": "21vwp89eiyjx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T10:07:58.207Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-11T09:01:59.510Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T09:01:59.510Z",
+          "id": "2rh6vvg5i356",
+          "incident_id": "21vwp89eiyjx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T09:01:59.510Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T08:17:36.507Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T08:17:36.507Z",
+          "id": "0z8q71y7bwqw",
+          "incident_id": "21vwp89eiyjx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T08:17:36.507Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "SSL \u0026 TLS - SSL Certificate Provisioning",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue deploying a subset of Custom certificates. Customers are advised to temporarily pause certificate redeployments until this incident is resolved\n\nSSL certificates already in production remain unaffected and are operating normally.",
+          "created_at": "2026-11-11T07:45:42.146Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T07:45:42.146Z",
+          "id": "7sw9v1frqwgg",
+          "incident_id": "21vwp89eiyjx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T07:45:42.146Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "SSL Certificate Provisioning Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T10:07:58.207Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/21vwp89eiyjx",
+      "started_at": "2026-11-11T07:45:42.146Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T10:07:58.207Z"
     }
   }
 ]
