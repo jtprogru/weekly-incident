@@ -2,40 +2,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-11T13:03:15.544368878Z",
+  "generated_at": "2026-11-12T14:05:35.300555858Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
-      "incidents_seen": 6,
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "incidents_seen": 7,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
-      "incidents_seen": 27,
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-11T13:03:15.544368878Z",
+      "fetched_at": "2026-11-12T14:05:35.300555858Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -120,9 +120,29 @@
         "Queues"
       ],
       "score": {
-        "value": 7592.400000000001,
-        "duration_minutes": 2109,
+        "value": 12999.6,
+        "duration_minutes": 3611,
         "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/yu63fhh2peb7",
+      "vendor": "cloudflare",
+      "title": "Replicate Model Registry Unavailable",
+      "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
+      "impact": "minor",
+      "status": "identified",
+      "started_at": "2026-11-11T04:33:19.016Z",
+      "ongoing": true,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 3621.6,
+        "duration_minutes": 2012,
+        "components": 1,
         "vendor_weight": 1.8
       },
       "above_threshold": true
@@ -150,6 +170,31 @@
       "above_threshold": true
     },
     {
+      "key": "slack/1583",
+      "vendor": "slack",
+      "title": "Trouble loading Slack and saving changes.",
+      "url": "https://slack-status.com/2026-11/b8bb993128ac94f5",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-11-11T15:24:01Z",
+      "resolved_at": "2026-11-11T18:58:05Z",
+      "duration_minutes": 214,
+      "ongoing": false,
+      "components": [
+        "Connectivity",
+        "Messaging",
+        "Apps/Integrations/APIs",
+        "Workspace/Org Administration"
+      ],
+      "score": {
+        "value": 1027.2,
+        "duration_minutes": 214,
+        "components": 4,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
       "key": "grafana/f3cgznwspd0m",
       "vendor": "grafana",
       "title": "Mimir query unexpected response with status code 500",
@@ -173,22 +218,44 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/yu63fhh2peb7",
-      "vendor": "cloudflare",
-      "title": "Replicate Input Upload Issue",
-      "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
-      "impact": "minor",
-      "status": "identified",
-      "started_at": "2026-11-11T04:33:19.016Z",
-      "ongoing": true,
+      "key": "openai/01M76CW2D7FM7K7F8NJ4W0G08N",
+      "vendor": "openai",
+      "title": "Unable to start new Workspace Agent runs",
+      "url": "https://status.openai.com/incidents/01M76CW2D7FM7K7F8NJ4W0G08N",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-11-11T22:50:17Z",
+      "resolved_at": "2026-11-12T08:32:37Z",
+      "duration_minutes": 582,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 873,
+        "duration_minutes": 582,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "aws/26f1425c833448f5",
+      "vendor": "aws",
+      "title": "Elevated API issues and Launch Failures",
+      "url": "https://health.aws.amazon.com/health/status",
+      "impact": "unknown",
+      "status": "resolved",
+      "started_at": "2026-11-11T15:40:33Z",
+      "resolved_at": "2026-11-11T21:11:29Z",
+      "duration_minutes": 330,
+      "ongoing": false,
       "components": [
-        "Replicate"
+        "ec2-ap-northeast-1"
       ],
       "score": {
-        "value": 916.2,
-        "duration_minutes": 509,
+        "value": 660,
+        "duration_minutes": 330,
         "components": 1,
-        "vendor_weight": 1.8
+        "vendor_weight": 2
       },
       "above_threshold": true
     },
@@ -215,6 +282,31 @@
       "above_threshold": true
     },
     {
+      "key": "grafana/x84fc9x32w3b",
+      "vendor": "grafana",
+      "title": "Degraded performance for Grafana Cloud Metrics in prod-us-central-7",
+      "url": "https://stspg.io/b9w7n973q0st",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-11T20:37:45Z",
+      "resolved_at": "2026-11-11T22:13:35.106Z",
+      "duration_minutes": 95,
+      "ongoing": false,
+      "components": [
+        "Azure US Central - us-central7",
+        "Azure US Central - us-central7: Ingestion",
+        "Azure US Central - prod-us-central-7: Querying",
+        "Azure US Central - prod-us-central-7: Ingestion"
+      ],
+      "score": {
+        "value": 380,
+        "duration_minutes": 95,
+        "components": 4,
+        "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/xxb3l2bm76dr",
       "vendor": "github",
       "title": "Incident with Webhooks and Actions",
@@ -234,6 +326,28 @@
         "duration_minutes": 110,
         "components": 2,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/1na2mbfshgdh",
+      "vendor": "cloudflare",
+      "title": "Replicate Issue",
+      "url": "https://www.cloudflarestatus.com/incidents/1na2mbfshgdh",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T08:30:17.013Z",
+      "resolved_at": "2026-11-12T11:34:02.628Z",
+      "duration_minutes": 183,
+      "ongoing": false,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 329.40000000000003,
+        "duration_minutes": 183,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -299,6 +413,26 @@
         "duration_minutes": 142,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "grafana/6drrz4tkd35v",
+      "vendor": "grafana",
+      "title": "Elevated query errors for Grafana Cloud Metrics in prod-us-east-3",
+      "url": "https://stspg.io/k3cgsqwglmzn",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T20:21:33.115Z",
+      "resolved_at": "2026-11-12T00:35:17.49Z",
+      "duration_minutes": 253,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 253,
+        "duration_minutes": 253,
+        "components": 1,
+        "vendor_weight": 1
       },
       "above_threshold": true
     },
@@ -369,6 +503,31 @@
       "above_threshold": true
     },
     {
+      "key": "github/dvy0t3mvh1lg",
+      "vendor": "github",
+      "title": "Impact across multiple GitHub products including Actions, Pages, and Copilot products.",
+      "url": "https://stspg.io/jdjlq5zjyl48",
+      "impact": "critical",
+      "status": "resolved",
+      "started_at": "2026-11-11T20:48:12.26Z",
+      "resolved_at": "2026-11-11T21:21:39.473Z",
+      "duration_minutes": 33,
+      "ongoing": false,
+      "components": [
+        "Webhooks",
+        "Actions",
+        "Pages",
+        "Copilot"
+      ],
+      "score": {
+        "value": 198,
+        "duration_minutes": 33,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "github/6jm5k16vyhfg",
       "vendor": "github",
       "title": "Degraded availability for GPT-5.3 Codex and GPT-5.6 models in Copilot",
@@ -434,6 +593,29 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/3ptyvdaljq9b",
+      "vendor": "cloudflare",
+      "title": "Workers deployments errors with D1 bindings",
+      "url": "https://www.cloudflarestatus.com/incidents/3ptyvdaljq9b",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T12:42:00Z",
+      "resolved_at": "2026-11-11T13:03:00Z",
+      "duration_minutes": 21,
+      "ongoing": false,
+      "components": [
+        "Workers",
+        "D1"
+      ],
+      "score": {
+        "value": 75.60000000000001,
+        "duration_minutes": 21,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/byzl30zyfc47",
       "vendor": "cloudflare",
       "title": "Cloudflare Worker Builds Issue",
@@ -478,6 +660,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/8odt36zmvm36",
+      "vendor": "cloudflare",
+      "title": "DNSSEC Configuration Change Issues",
+      "url": "https://www.cloudflarestatus.com/incidents/8odt36zmvm36",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T04:53:29.795Z",
+      "resolved_at": "2026-11-12T05:26:45.72Z",
+      "duration_minutes": 33,
+      "ongoing": false,
+      "components": [
+        "DNSSEC Updates"
+      ],
+      "score": {
+        "value": 59.4,
+        "duration_minutes": 33,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/3en9cdyjn2sq",
       "vendor": "cloudflare",
       "title": "Prediction issue on OpenAI models via Replicate",
@@ -494,6 +698,46 @@
       "score": {
         "value": 55.800000000000004,
         "duration_minutes": 31,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M77FAXVFV338GY7G9VRENRS5",
+      "vendor": "openai",
+      "title": "GPT-image-2.5 and 2.6 Sunburst \u0026 Flare High error rate",
+      "url": "https://status.openai.com/incidents/01M77FAXVFV338GY7G9VRENRS5",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T08:52:35Z",
+      "resolved_at": "2026-11-12T09:25:12Z",
+      "duration_minutes": 32,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 48,
+        "duration_minutes": 32,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "cloudflare/804glbb3pq6t",
+      "vendor": "cloudflare",
+      "title": "Network Performance Degraded",
+      "url": "https://www.cloudflarestatus.com/incidents/804glbb3pq6t",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T15:53:19.709Z",
+      "resolved_at": "2026-11-11T16:18:51.073Z",
+      "duration_minutes": 25,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 45,
+        "duration_minutes": 25,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -538,6 +782,48 @@
         "duration_minutes": 17,
         "components": 1,
         "vendor_weight": 1
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M765MJQK7F85SC82RMTYN0V3",
+      "vendor": "openai",
+      "title": "Elevated errors affecting logins, sign-ups, and ChatGPT features",
+      "url": "https://status.openai.com/incidents/01M765MJQK7F85SC82RMTYN0V3",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T20:43:51Z",
+      "resolved_at": "2026-11-11T20:52:40Z",
+      "duration_minutes": 8,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 12,
+        "duration_minutes": 8,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/1h2wbly1y72t",
+      "vendor": "github",
+      "title": "Incident with Webhooks",
+      "url": "https://stspg.io/r0jrtx03yvll",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-11T20:22:20.718Z",
+      "resolved_at": "2026-11-11T20:26:23.897Z",
+      "duration_minutes": 4,
+      "ongoing": false,
+      "components": [
+        "Webhooks"
+      ],
+      "score": {
+        "value": 6,
+        "duration_minutes": 4,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },

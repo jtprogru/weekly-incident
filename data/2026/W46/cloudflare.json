@@ -55,7 +55,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-11T06:41:33.983Z"
+          "updated_at": "2026-11-11T13:09:04.520Z"
         }
       ],
       "created_at": "2026-11-09T16:15:26.798Z",
@@ -310,7 +310,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-11T06:41:33.983Z"
+          "updated_at": "2026-11-11T13:09:04.520Z"
         },
         {
           "created_at": "2025-10-22T09:19:59.000Z",
@@ -567,7 +567,7 @@
           "showcase": false,
           "start_date": "2026-06-30",
           "status": "degraded_performance",
-          "updated_at": "2026-11-11T04:33:19.016Z"
+          "updated_at": "2026-11-12T11:34:02.628Z"
         }
       ],
       "created_at": "2026-11-10T18:35:39.915Z",
@@ -732,7 +732,7 @@
     "key": "cloudflare/yu63fhh2peb7",
     "vendor": "cloudflare",
     "native_id": "yu63fhh2peb7",
-    "title": "Replicate Input Upload Issue",
+    "title": "Replicate Model Registry Unavailable",
     "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
     "impact": "minor",
     "status": "identified",
@@ -758,6 +758,12 @@
         "status": "identified",
         "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
         "created_at": "2026-11-11T07:33:53.799Z"
+      },
+      {
+        "native_id": "b2gerv8xa2ro",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
+        "created_at": "2026-11-11T23:50:01.742Z"
       }
     ],
     "first_seen_at": "2026-11-11T13:03:15.544368878Z",
@@ -776,13 +782,26 @@
           "showcase": false,
           "start_date": "2026-06-30",
           "status": "degraded_performance",
-          "updated_at": "2026-11-11T04:33:19.016Z"
+          "updated_at": "2026-11-12T11:34:02.628Z"
         }
       ],
       "created_at": "2026-11-11T04:33:19.016Z",
       "id": "yu63fhh2peb7",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
+          "created_at": "2026-11-11T23:50:01.742Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T23:50:01.742Z",
+          "id": "b2gerv8xa2ro",
+          "incident_id": "yu63fhh2peb7",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T23:50:49.056Z"
+        },
         {
           "affected_components": null,
           "body": "We are continuing to work on a fix for the issue.\n\nCurrent impact:\nInput uploads are degraded.\nModel builds and pushes via r8.im are unavailable.",
@@ -831,14 +850,14 @@
         }
       ],
       "monitoring_at": null,
-      "name": "Replicate Input Upload Issue",
+      "name": "Replicate Model Registry Unavailable",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
       "started_at": "2026-11-11T04:33:19.016Z",
       "status": "identified",
-      "updated_at": "2026-11-11T07:33:53.799Z"
+      "updated_at": "2026-11-11T23:51:40.658Z"
     }
   },
   {
@@ -899,7 +918,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-11T06:41:33.983Z"
+          "updated_at": "2026-11-11T13:09:04.520Z"
         },
         {
           "created_at": "2025-07-23T11:03:53.000Z",
@@ -1203,6 +1222,489 @@
       "started_at": "2026-11-11T07:45:42.146Z",
       "status": "resolved",
       "updated_at": "2026-11-11T10:07:58.207Z"
+    }
+  },
+  {
+    "key": "cloudflare/3ptyvdaljq9b",
+    "vendor": "cloudflare",
+    "native_id": "3ptyvdaljq9b",
+    "title": "Workers deployments errors with D1 bindings",
+    "url": "https://www.cloudflarestatus.com/incidents/3ptyvdaljq9b",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T12:42:00Z",
+    "resolved_at": "2026-11-11T13:03:00Z",
+    "duration_minutes": 21,
+    "components": [
+      "Workers",
+      "D1"
+    ],
+    "updates": [
+      {
+        "native_id": "2u511o63oa3s",
+        "status": "resolved",
+        "body": "Cloudflare has identified and resolved an issue impacting Workers deployments with D1 bindings. Customers may have seen issues deploying their Workers between 12:42 UTC - 13:03 UTC 11th November 2026",
+        "created_at": "2026-11-11T13:09:04.52Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-11T13:09:04.520Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-11-11T13:09:04.520Z"
+        }
+      ],
+      "created_at": "2026-11-11T13:09:04.520Z",
+      "id": "3ptyvdaljq9b",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Developer Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Cloudflare has identified and resolved an issue impacting Workers deployments with D1 bindings. Customers may have seen issues deploying their Workers between 12:42 UTC - 13:03 UTC 11th November 2026",
+          "created_at": "2026-11-11T13:09:04.520Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T13:03:00.000Z",
+          "id": "2u511o63oa3s",
+          "incident_id": "3ptyvdaljq9b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T13:09:04.520Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Workers deployments errors with D1 bindings",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T13:03:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3ptyvdaljq9b",
+      "started_at": "2026-11-11T12:42:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T13:09:58.123Z"
+    }
+  },
+  {
+    "key": "cloudflare/804glbb3pq6t",
+    "vendor": "cloudflare",
+    "native_id": "804glbb3pq6t",
+    "title": "Network Performance Degraded",
+    "url": "https://www.cloudflarestatus.com/incidents/804glbb3pq6t",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T15:53:19.709Z",
+    "resolved_at": "2026-11-11T16:18:51.073Z",
+    "duration_minutes": 25,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "3rw03oytvm4q",
+        "status": "investigating",
+        "body": "We are aware of Network performance degradation near LAX and Western North America, we are working to resolve.",
+        "created_at": "2026-11-11T15:53:19.709Z"
+      },
+      {
+        "native_id": "dzycmt9t1gmr",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T16:00:44.261Z"
+      },
+      {
+        "native_id": "qod7kzvbq776",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-11T16:10:02.489Z"
+      },
+      {
+        "native_id": "8ptfftb35jky",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-11T16:18:51.073Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-11T15:53:19.709Z",
+      "id": "804glbb3pq6t",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-11T16:18:51.073Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T16:18:51.073Z",
+          "id": "8ptfftb35jky",
+          "incident_id": "804glbb3pq6t",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T16:18:51.073Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-11T16:10:02.489Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T16:10:02.489Z",
+          "id": "qod7kzvbq776",
+          "incident_id": "804glbb3pq6t",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T16:10:02.489Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T16:00:44.261Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T16:00:44.261Z",
+          "id": "dzycmt9t1gmr",
+          "incident_id": "804glbb3pq6t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T16:00:44.261Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are aware of Network performance degradation near LAX and Western North America, we are working to resolve.",
+          "created_at": "2026-11-11T15:53:19.709Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T15:53:19.709Z",
+          "id": "3rw03oytvm4q",
+          "incident_id": "804glbb3pq6t",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T15:53:19.709Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Performance Degraded",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T16:18:51.073Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/804glbb3pq6t",
+      "started_at": "2026-11-11T15:53:19.709Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T16:18:51.073Z"
+    }
+  },
+  {
+    "key": "cloudflare/8odt36zmvm36",
+    "vendor": "cloudflare",
+    "native_id": "8odt36zmvm36",
+    "title": "DNSSEC Configuration Change Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/8odt36zmvm36",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-12T04:53:29.795Z",
+    "resolved_at": "2026-11-12T05:26:45.72Z",
+    "duration_minutes": 33,
+    "components": [
+      "DNSSEC Updates"
+    ],
+    "updates": [
+      {
+        "native_id": "uwclwgl43mi5",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with enabling or disabling DNSSEC (Domain Name System Security Extensions) signing.\n\nWe are working to understand the full impact and mitigate this\nproblem. More updates to follow shortly.",
+        "created_at": "2026-11-12T04:53:29.795Z"
+      },
+      {
+        "native_id": "ho0p7itjqhu6",
+        "status": "investigating",
+        "body": "We are continuing to investigate the issue.",
+        "created_at": "2026-11-12T05:00:42.715Z"
+      },
+      {
+        "native_id": "y5mm166eevo4",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-12T05:03:22.354Z"
+      },
+      {
+        "native_id": "qn3qcwfugicj",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-12T05:06:46.58Z"
+      },
+      {
+        "native_id": "eujik22vf34m",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-12T05:26:45.72Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-11-12T05:00:22.689Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "gnzfgswoh2bs",
+          "name": "DNSSEC Updates",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 7,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-12T05:26:45.720Z"
+        }
+      ],
+      "created_at": "2026-11-12T04:53:29.795Z",
+      "id": "8odt36zmvm36",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-12T05:26:45.720Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T05:26:45.720Z",
+          "id": "eujik22vf34m",
+          "incident_id": "8odt36zmvm36",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T05:26:45.720Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-12T05:06:46.580Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T05:06:46.580Z",
+          "id": "qn3qcwfugicj",
+          "incident_id": "8odt36zmvm36",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T05:06:46.580Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-12T05:03:22.354Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T05:03:22.354Z",
+          "id": "y5mm166eevo4",
+          "incident_id": "8odt36zmvm36",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T05:03:22.354Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gnzfgswoh2bs",
+              "name": "DNS - DNSSEC Updates",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate the issue.",
+          "created_at": "2026-11-12T05:00:42.715Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T05:00:42.715Z",
+          "id": "ho0p7itjqhu6",
+          "incident_id": "8odt36zmvm36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T05:00:42.715Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "dp8ppfycqxcs",
+              "name": "DNS - Authoritative DNS",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with enabling or disabling DNSSEC (Domain Name System Security Extensions) signing.\n\nWe are working to understand the full impact and mitigate this\nproblem. More updates to follow shortly.",
+          "created_at": "2026-11-12T04:53:29.795Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T04:53:29.795Z",
+          "id": "uwclwgl43mi5",
+          "incident_id": "8odt36zmvm36",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T04:53:29.795Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "DNSSEC Configuration Change Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T05:26:45.720Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/8odt36zmvm36",
+      "started_at": "2026-11-12T04:53:29.795Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T05:26:45.720Z"
+    }
+  },
+  {
+    "key": "cloudflare/1na2mbfshgdh",
+    "vendor": "cloudflare",
+    "native_id": "1na2mbfshgdh",
+    "title": "Replicate Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/1na2mbfshgdh",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-12T08:30:17.013Z",
+    "resolved_at": "2026-11-12T11:34:02.628Z",
+    "duration_minutes": 183,
+    "components": [
+      "Replicate"
+    ],
+    "updates": [
+      {
+        "native_id": "1fdidizflddg",
+        "status": "investigating",
+        "body": "Cloudflare Replicate customers may see an increase of 500 errors for predictions.\n\nMore updates to follow shortly.",
+        "created_at": "2026-11-12T08:30:17.012Z"
+      },
+      {
+        "native_id": "vcodmt2covvp",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-12T09:34:19.802Z"
+      },
+      {
+        "native_id": "y67f587lcu67",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-12T11:34:02.628Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-06-30T13:39:35.000Z",
+          "description": "Replicate runs and fine-tunes open-source models.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fvgfcmy66tdr",
+          "name": "Replicate",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2026-06-30",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-12T11:34:02.628Z"
+        }
+      ],
+      "created_at": "2026-11-12T08:30:17.012Z",
+      "id": "1na2mbfshgdh",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-12T11:34:02.628Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T11:34:02.628Z",
+          "id": "y67f587lcu67",
+          "incident_id": "1na2mbfshgdh",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T11:34:02.628Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-12T09:34:19.802Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T09:34:19.802Z",
+          "id": "vcodmt2covvp",
+          "incident_id": "1na2mbfshgdh",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T09:34:19.802Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "AI - Replicate",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Cloudflare Replicate customers may see an increase of 500 errors for predictions.\n\nMore updates to follow shortly.",
+          "created_at": "2026-11-12T08:30:17.012Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T08:30:17.012Z",
+          "id": "1fdidizflddg",
+          "incident_id": "1na2mbfshgdh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T08:30:17.012Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Replicate Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T11:34:02.628Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/1na2mbfshgdh",
+      "started_at": "2026-11-12T08:30:17.013Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T11:34:02.628Z"
     }
   }
 ]

@@ -360,5 +360,364 @@
       "status": "resolved",
       "updated_at": "2026-11-10T08:20:25.071Z"
     }
+  },
+  {
+    "key": "grafana/6drrz4tkd35v",
+    "vendor": "grafana",
+    "native_id": "6drrz4tkd35v",
+    "title": "Elevated query errors for Grafana Cloud Metrics in prod-us-east-3",
+    "url": "https://stspg.io/k3cgsqwglmzn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T20:21:33.115Z",
+    "resolved_at": "2026-11-12T00:35:17.49Z",
+    "duration_minutes": 253,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "r0r01xjpxkxl",
+        "status": "monitoring",
+        "body": "Between 17:21 and 17:41 UTC, a small percentage of metrics queries for some Grafana Cloud Metrics customers in the prod-us-east-3 region failed. Ingestion was not affected. Query errors have stopped, and we are monitoring the service to confirm it stays stable.",
+        "created_at": "2026-11-11T20:21:33.188Z"
+      },
+      {
+        "native_id": "5y67b0s4kjyb",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-12T00:35:17.49Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-11T20:21:33.121Z",
+      "id": "6drrz4tkd35v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-12T00:35:17.490Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-12T00:35:17.490Z",
+          "id": "5y67b0s4kjyb",
+          "incident_id": "6drrz4tkd35v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T00:35:17.490Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Between 17:21 and 17:41 UTC, a small percentage of metrics queries for some Grafana Cloud Metrics customers in the prod-us-east-3 region failed. Ingestion was not affected. Query errors have stopped, and we are monitoring the service to confirm it stays stable.",
+          "created_at": "2026-11-11T20:21:33.188Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-11T20:21:33.188Z",
+          "id": "r0r01xjpxkxl",
+          "incident_id": "6drrz4tkd35v",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T20:21:33.188Z"
+        }
+      ],
+      "monitoring_at": "2026-11-11T20:21:33.188Z",
+      "name": "Elevated query errors for Grafana Cloud Metrics in prod-us-east-3",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T00:35:17.490Z",
+      "shortlink": "https://stspg.io/k3cgsqwglmzn",
+      "started_at": "2026-11-11T20:21:33.115Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T00:35:17.515Z"
+    }
+  },
+  {
+    "key": "grafana/x84fc9x32w3b",
+    "vendor": "grafana",
+    "native_id": "x84fc9x32w3b",
+    "title": "Degraded performance for Grafana Cloud Metrics in prod-us-central-7",
+    "url": "https://stspg.io/b9w7n973q0st",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-11T20:37:45Z",
+    "resolved_at": "2026-11-11T22:13:35.106Z",
+    "duration_minutes": 95,
+    "components": [
+      "Azure US Central - us-central7",
+      "Azure US Central - us-central7: Ingestion",
+      "Azure US Central - prod-us-central-7: Querying",
+      "Azure US Central - prod-us-central-7: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "dks7yb7pv95w",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting Grafana Cloud Metrics, Logs, and Traces in the prod-us-central-7 region. Some customers may see failed or delayed writes, query errors, and failed alerting and recording rule evaluations.",
+        "created_at": "2026-11-11T20:37:45.193Z"
+      },
+      {
+        "native_id": "vlf1tb6gdbmn",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-11-11T21:24:45.665Z"
+      },
+      {
+        "native_id": "ql9w8klv5jz8",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-11-11T21:27:06.068Z"
+      },
+      {
+        "native_id": "ksfy7pcp2qyr",
+        "status": "monitoring",
+        "body": "Traffic has recovered and we are monitoring the results.",
+        "created_at": "2026-11-11T22:07:30.669Z"
+      },
+      {
+        "native_id": "vtt39sshq6zx",
+        "status": "resolved",
+        "body": "Increased latency on a cloud provider database resulted in a 50m write and rule evaluation outage, starting about 2020 UTC. Metrics rule evaluations were last to recover, around 2110 UTC.",
+        "created_at": "2026-11-11T22:13:35.106Z"
+      }
+    ],
+    "first_seen_at": "2026-11-12T14:05:35.300555858Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-11-03T12:28:11.807Z",
+          "description": "Loki - prod-us-central-7",
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "2gj2jt684k11",
+          "name": "Azure US Central - us-central7",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2025-11-03",
+          "status": "operational",
+          "updated_at": "2026-11-11T22:07:30.541Z"
+        },
+        {
+          "created_at": "2025-11-03T12:31:43.497Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "xjv0q11xqq2b",
+          "name": "Azure US Central - us-central7: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 40,
+          "showcase": false,
+          "start_date": "2025-11-03",
+          "status": "operational",
+          "updated_at": "2026-11-11T22:07:30.565Z"
+        },
+        {
+          "created_at": "2026-05-08T21:09:55.110Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "slqwr2vp7rrn",
+          "name": "Azure US Central - prod-us-central-7: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 49,
+          "showcase": false,
+          "start_date": "2026-05-08",
+          "status": "operational",
+          "updated_at": "2026-11-11T22:07:30.588Z"
+        },
+        {
+          "created_at": "2026-05-08T21:10:33.986Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "7xgglzcpb274",
+          "name": "Azure US Central - prod-us-central-7: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 50,
+          "showcase": false,
+          "start_date": "2026-05-08",
+          "status": "operational",
+          "updated_at": "2026-11-11T22:07:30.611Z"
+        }
+      ],
+      "created_at": "2026-11-11T20:37:45.000Z",
+      "id": "x84fc9x32w3b",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "xjv0q11xqq2b",
+              "name": "Traces - Azure US Central - us-central7: Ingestion",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Increased latency on a cloud provider database resulted in a 50m write and rule evaluation outage, starting about 2020 UTC. Metrics rule evaluations were last to recover, around 2110 UTC.",
+          "created_at": "2026-11-11T22:13:35.106Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T22:13:35.106Z",
+          "id": "vtt39sshq6zx",
+          "incident_id": "x84fc9x32w3b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T22:13:35.106Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xjv0q11xqq2b",
+              "name": "Traces - Azure US Central - us-central7: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Traffic has recovered and we are monitoring the results.",
+          "created_at": "2026-11-11T22:07:30.669Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T22:07:30.669Z",
+          "id": "ksfy7pcp2qyr",
+          "incident_id": "x84fc9x32w3b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T22:07:30.669Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "slqwr2vp7rrn",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "xjv0q11xqq2b",
+              "name": "Traces - Azure US Central - us-central7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-11-11T21:27:06.068Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-11T21:27:06.068Z",
+          "id": "ql9w8klv5jz8",
+          "incident_id": "x84fc9x32w3b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T21:27:06.068Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "7xgglzcpb274",
+              "name": "Metrics - Azure US Central - prod-us-central-7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "xjv0q11xqq2b",
+              "name": "Traces - Azure US Central - us-central7: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-11-11T21:24:45.665Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-11T21:24:45.665Z",
+          "id": "vlf1tb6gdbmn",
+          "incident_id": "x84fc9x32w3b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T21:24:45.665Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating an issue affecting Grafana Cloud Metrics, Logs, and Traces in the prod-us-central-7 region. Some customers may see failed or delayed writes, query errors, and failed alerting and recording rule evaluations.",
+          "created_at": "2026-11-11T20:37:45.193Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-11-11T20:37:45.000Z",
+          "id": "dks7yb7pv95w",
+          "incident_id": "x84fc9x32w3b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T20:43:44.808Z"
+        }
+      ],
+      "monitoring_at": "2026-11-11T22:07:30.669Z",
+      "name": "Degraded performance for Grafana Cloud Metrics in prod-us-central-7",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T22:13:35.106Z",
+      "shortlink": "https://stspg.io/b9w7n973q0st",
+      "started_at": "2026-11-11T20:37:45.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T22:13:35.131Z"
+    }
   }
 ]
