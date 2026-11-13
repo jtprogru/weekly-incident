@@ -1476,7 +1476,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.500Z"
+          "updated_at": "2026-11-12T19:20:14.124Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -1992,7 +1992,7 @@
       {
         "native_id": "wnj9mmx9ls2w",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "Between 16:39 and 16:57 UTC on November 5, 2026, some customers experienced failures starting workflow runs in GitHub Actions and Checks, and some in-progress runs failed. At peak, about 3% of workflow runs failed to queue, and roughly 0.21% of in-progress runs failed.\u003cbr /\u003e\u003cbr /\u003eThe cause was resource exhaustion in a database service that stores Actions Checks data. Bursts of highly concurrent, large read requests put the service under memory pressure, which caused it to stall and reject requests.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by failing over the affected database host. To prevent a recurrence, we have increased memory capacity across the affected database fleet. We will also be limiting concurrency of large queries to prevent heavy read traffic from causing a broad failure of critical workflows.",
         "created_at": "2026-11-05T17:42:35.425Z"
       }
     ],
@@ -2028,7 +2028,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "Between 16:39 and 16:57 UTC on November 5, 2026, some customers experienced failures starting workflow runs in GitHub Actions and Checks, and some in-progress runs failed. At peak, about 3% of workflow runs failed to queue, and roughly 0.21% of in-progress runs failed.\u003cbr /\u003e\u003cbr /\u003eThe cause was resource exhaustion in a database service that stores Actions Checks data. Bursts of highly concurrent, large read requests put the service under memory pressure, which caused it to stall and reject requests.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by failing over the affected database host. To prevent a recurrence, we have increased memory capacity across the affected database fleet. We will also be limiting concurrency of large queries to prevent heavy read traffic from causing a broad failure of critical workflows.",
           "created_at": "2026-11-05T17:42:35.425Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -2037,7 +2037,7 @@
           "incident_id": "t89g2q1800fr",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-05T17:42:35.425Z"
+          "updated_at": "2026-11-13T04:23:59.348Z"
         },
         {
           "affected_components": [
@@ -2108,7 +2108,7 @@
       "shortlink": "https://stspg.io/lv4q3xm9r0rk",
       "started_at": "2026-11-05T16:50:11.078Z",
       "status": "resolved",
-      "updated_at": "2026-11-05T17:42:35.455Z"
+      "updated_at": "2026-11-13T04:23:59.352Z"
     }
   },
   {

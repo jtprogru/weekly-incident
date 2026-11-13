@@ -2,40 +2,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-12T14:05:35.300555858Z",
+  "generated_at": "2026-11-13T13:30:39.419992281Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
-      "incidents_seen": 7,
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-12T14:05:35.300555858Z",
+      "fetched_at": "2026-11-13T13:30:39.419992281Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -120,8 +120,8 @@
         "Queues"
       ],
       "score": {
-        "value": 12999.6,
-        "duration_minutes": 3611,
+        "value": 18057.600000000002,
+        "duration_minutes": 5016,
         "components": 2,
         "vendor_weight": 1.8
       },
@@ -133,17 +133,58 @@
       "title": "Replicate Model Registry Unavailable",
       "url": "https://www.cloudflarestatus.com/incidents/yu63fhh2peb7",
       "impact": "minor",
-      "status": "identified",
+      "status": "resolved",
       "started_at": "2026-11-11T04:33:19.016Z",
-      "ongoing": true,
+      "resolved_at": "2026-11-13T01:44:17.916Z",
+      "duration_minutes": 2710,
+      "ongoing": false,
       "components": [
         "Replicate"
       ],
       "score": {
-        "value": 3621.6,
-        "duration_minutes": 2012,
+        "value": 4878,
+        "duration_minutes": 2710,
         "components": 1,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/sqn3fg1l96dl",
+      "vendor": "anthropic",
+      "title": "Elevated errors affecting the Microsoft 365 connector",
+      "url": "https://stspg.io/m0rbx38nmy1c",
+      "impact": "major",
+      "status": "identified",
+      "started_at": "2026-11-12T17:52:44.926Z",
+      "ongoing": true,
+      "components": [
+        "claude.ai",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 3531,
+        "duration_minutes": 1177,
+        "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M78GAT3AK9P9W8Z230KHFVE8",
+      "vendor": "openai",
+      "title": "Elevated errors affecting the Microsoft 365 connector",
+      "url": "https://status.openai.com/incidents/01M78GAT3AK9P9W8Z230KHFVE8",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-11-12T18:29:14Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 1711.5,
+        "duration_minutes": 1141,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -238,6 +279,31 @@
       "above_threshold": true
     },
     {
+      "key": "anthropic/nn11wk485zfn",
+      "vendor": "anthropic",
+      "title": "Elevated errors on claude.ai, Claude Code, and platform.claude.com",
+      "url": "https://stspg.io/6kqyd0c5b1gr",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-13T09:58:58.049Z",
+      "resolved_at": "2026-11-13T11:58:45.647Z",
+      "duration_minutes": 119,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Console (platform.claude.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 714,
+        "duration_minutes": 119,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "aws/26f1425c833448f5",
       "vendor": "aws",
       "title": "Elevated API issues and Launch Failures",
@@ -256,6 +322,28 @@
         "duration_minutes": 330,
         "components": 1,
         "vendor_weight": 2
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/9zxr2bkqoct7",
+      "vendor": "cloudflare",
+      "title": "Durable Objects increased error rates in North America",
+      "url": "https://www.cloudflarestatus.com/incidents/9zxr2bkqoct7",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T22:39:40.553Z",
+      "resolved_at": "2026-11-13T03:44:49.8Z",
+      "duration_minutes": 305,
+      "ongoing": false,
+      "components": [
+        "Durable Objects"
+      ],
+      "score": {
+        "value": 549,
+        "duration_minutes": 305,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -528,6 +616,46 @@
       "above_threshold": true
     },
     {
+      "key": "github/nwbjzl7nfrc2",
+      "vendor": "github",
+      "title": "Disruption with Email Delivery",
+      "url": "https://stspg.io/lr8v4v8t7gs2",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T19:36:45.556Z",
+      "resolved_at": "2026-11-12T21:43:56.551Z",
+      "duration_minutes": 127,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 190.5,
+        "duration_minutes": 127,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M79GYA0GA772Y6D089AH5478",
+      "vendor": "openai",
+      "title": "Sites: Publishing failing",
+      "url": "https://status.openai.com/incidents/01M79GYA0GA772Y6D089AH5478",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-13T03:59:08Z",
+      "resolved_at": "2026-11-13T05:55:44Z",
+      "duration_minutes": 116,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 174,
+        "duration_minutes": 116,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
       "key": "github/6jm5k16vyhfg",
       "vendor": "github",
       "title": "Degraded availability for GPT-5.3 Codex and GPT-5.6 models in Copilot",
@@ -546,6 +674,29 @@
         "value": 147,
         "duration_minutes": 49,
         "components": 2,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/34wq7gxnxvvm",
+      "vendor": "anthropic",
+      "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
+      "url": "https://stspg.io/264r547qtkky",
+      "impact": "major",
+      "status": "investigating",
+      "started_at": "2026-11-13T13:09:50.189Z",
+      "ongoing": true,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 120,
+        "duration_minutes": 20,
+        "components": 4,
         "vendor_weight": 1.5
       },
       "above_threshold": true
@@ -612,6 +763,28 @@
         "duration_minutes": 21,
         "components": 2,
         "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/gl7yhd7jx00v",
+      "vendor": "github",
+      "title": "Incident with Webhooks API",
+      "url": "https://stspg.io/ns57pv7lmynl",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-12T18:43:13.81Z",
+      "resolved_at": "2026-11-12T19:33:54.248Z",
+      "duration_minutes": 50,
+      "ongoing": false,
+      "components": [
+        "Webhooks"
+      ],
+      "score": {
+        "value": 75,
+        "duration_minutes": 50,
+        "components": 1,
+        "vendor_weight": 1.5
       },
       "above_threshold": false
     },

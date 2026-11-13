@@ -283,7 +283,7 @@
       {
         "native_id": "rfpl3twlkw5p",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 9, 2026, from 09:23 to 11:40 UTC, one of our job queue clusters was degraded, delaying webhook deliveries, Actions workflow runs, and Dependabot and dependency graph updates. Until mitigation at 10:37 UTC, an average of 26% of webhook deliveries were delayed, peaking at 30%, and the backlog cleared by 11:40 UTC. Some deliveries were delayed by up to 3.5 hours, and delays for a small share began as early as 01:00 UTC. Actions skips events older than 30 minutes, so some workflow runs did not start. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a degraded host that had slowed one of the cluster's Kafka brokers since November 7. The broker stopped reporting the metrics our alerts rely on, so we did not identify it until it stalled the cluster on November 9. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the broker from service. We have since added an alert that pages us within 30 minutes when a host slows a broker this way, so we can remove the broker before it affects customers.",
         "created_at": "2026-11-09T11:50:35.774Z"
       }
     ],
@@ -303,7 +303,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.500Z"
+          "updated_at": "2026-11-12T19:20:14.124Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -340,7 +340,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 9, 2026, from 09:23 to 11:40 UTC, one of our job queue clusters was degraded, delaying webhook deliveries, Actions workflow runs, and Dependabot and dependency graph updates. Until mitigation at 10:37 UTC, an average of 26% of webhook deliveries were delayed, peaking at 30%, and the backlog cleared by 11:40 UTC. Some deliveries were delayed by up to 3.5 hours, and delays for a small share began as early as 01:00 UTC. Actions skips events older than 30 minutes, so some workflow runs did not start. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a degraded host that had slowed one of the cluster's Kafka brokers since November 7. The broker stopped reporting the metrics our alerts rely on, so we did not identify it until it stalled the cluster on November 9. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the broker from service. We have since added an alert that pages us within 30 minutes when a host slows a broker this way, so we can remove the broker before it affects customers.",
           "created_at": "2026-11-09T11:50:35.774Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -349,7 +349,7 @@
           "incident_id": "xxb3l2bm76dr",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-09T11:50:35.774Z"
+          "updated_at": "2026-11-12T19:12:06.036Z"
         },
         {
           "affected_components": [
@@ -542,7 +542,7 @@
       "shortlink": "https://stspg.io/4vdghm7tycm4",
       "started_at": "2026-11-09T10:00:35.209Z",
       "status": "resolved",
-      "updated_at": "2026-11-09T11:50:35.805Z"
+      "updated_at": "2026-11-12T19:12:06.040Z"
     }
   },
   {
@@ -601,7 +601,7 @@
       {
         "native_id": "4vp3xlxspqrd",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 9, 2026, between 18:07 and 18:59 UTC, GitHub Actions experienced degraded performance. During this time, some customers saw workflow runs fail to start, update or report status correctly. An average of 28% of workflow runs were affected, peaking at 65% during the worst period of the incident. Once Actions services recovered, some jobs were left in a state that limited available concurrency until the runs were released. \u003cbr /\u003e\u003cbr /\u003eThe incident occurred during a planned migration of a core Actions database from GitHub’s datacenter to a new cloud region. After the migration completed, we shifted Actions service traffic to the new region. The volume of requests exceeded the capacity and rate limits configured there, so a portion of requests were rejected and workflow updates failed. Dependent services, including Webhooks, Pages and Copilot code review, saw secondary impact. \u003cbr /\u003e\u003cbr /\u003eWe mitigated impact by shifting some of the traffic back to the original region, allowing service traffic to remain within the configured limits. We then increased capacity and rate limits in the new region before gradually shifting traffic back. While this was a one-time migration event for this cluster that is now complete, we are improving how we validate capacity and limits before shifting traffic during remaining migrations, including shifting traffic in smaller steps. To address the stuck runs left after the incident, we are improving our ability to detect and mitigate these runs for future cases as well as readying an API to enable customers to address this themselves.",
         "created_at": "2026-11-09T18:59:32.565Z"
       }
     ],
@@ -621,7 +621,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.500Z"
+          "updated_at": "2026-11-12T19:20:14.124Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -679,7 +679,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 9, 2026, between 18:07 and 18:59 UTC, GitHub Actions experienced degraded performance. During this time, some customers saw workflow runs fail to start, update or report status correctly. An average of 28% of workflow runs were affected, peaking at 65% during the worst period of the incident. Once Actions services recovered, some jobs were left in a state that limited available concurrency until the runs were released. \u003cbr /\u003e\u003cbr /\u003eThe incident occurred during a planned migration of a core Actions database from GitHub’s datacenter to a new cloud region. After the migration completed, we shifted Actions service traffic to the new region. The volume of requests exceeded the capacity and rate limits configured there, so a portion of requests were rejected and workflow updates failed. Dependent services, including Webhooks, Pages and Copilot code review, saw secondary impact. \u003cbr /\u003e\u003cbr /\u003eWe mitigated impact by shifting some of the traffic back to the original region, allowing service traffic to remain within the configured limits. We then increased capacity and rate limits in the new region before gradually shifting traffic back. While this was a one-time migration event for this cluster that is now complete, we are improving how we validate capacity and limits before shifting traffic during remaining migrations, including shifting traffic in smaller steps. To address the stuck runs left after the incident, we are improving our ability to detect and mitigate these runs for future cases as well as readying an API to enable customers to address this themselves.",
           "created_at": "2026-11-09T18:59:32.565Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -688,7 +688,7 @@
           "incident_id": "tp8cghg7tlc4",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-09T18:59:32.565Z"
+          "updated_at": "2026-11-13T04:16:38.800Z"
         },
         {
           "affected_components": [
@@ -855,7 +855,7 @@
       "shortlink": "https://stspg.io/7yw63xl9ztrv",
       "started_at": "2026-11-09T18:12:37.232Z",
       "status": "resolved",
-      "updated_at": "2026-11-09T18:59:32.604Z"
+      "updated_at": "2026-11-13T04:16:38.803Z"
     }
   },
   {
@@ -1542,7 +1542,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.500Z"
+          "updated_at": "2026-11-12T19:20:14.124Z"
         }
       ],
       "created_at": "2026-11-11T20:22:20.729Z",
@@ -1716,7 +1716,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.500Z"
+          "updated_at": "2026-11-12T19:20:14.124Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -2110,6 +2110,372 @@
       "started_at": "2026-11-11T20:48:12.260Z",
       "status": "resolved",
       "updated_at": "2026-11-11T21:21:39.499Z"
+    }
+  },
+  {
+    "key": "github/gl7yhd7jx00v",
+    "vendor": "github",
+    "native_id": "gl7yhd7jx00v",
+    "title": "Incident with Webhooks API",
+    "url": "https://stspg.io/ns57pv7lmynl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-12T18:43:13.81Z",
+    "resolved_at": "2026-11-12T19:33:54.248Z",
+    "duration_minutes": 50,
+    "components": [
+      "Webhooks"
+    ],
+    "updates": [
+      {
+        "native_id": "92vkxs8cc059",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Webhooks",
+        "created_at": "2026-11-12T18:43:13.908Z"
+      },
+      {
+        "native_id": "v1709htz0h5b",
+        "status": "investigating",
+        "body": "Webhooks API is experiencing timeouts and errors impacting about 1% of customer traffic. We are working through possible mitigation strategies.",
+        "created_at": "2026-11-12T18:52:18.168Z"
+      },
+      {
+        "native_id": "sn0y38yrndr3",
+        "status": "investigating",
+        "body": "Webhooks API has traffic has recovered. We will continue to monitor for stability.",
+        "created_at": "2026-11-12T19:20:08.126Z"
+      },
+      {
+        "native_id": "c7crm1d8bfgy",
+        "status": "monitoring",
+        "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-12T19:20:14.173Z"
+      },
+      {
+        "native_id": "343ntf2067mp",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-11-12T19:33:54.248Z"
+      }
+    ],
+    "first_seen_at": "2026-11-13T13:30:39.419992281Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-12T19:20:14.124Z"
+        }
+      ],
+      "created_at": "2026-11-12T18:43:13.817Z",
+      "id": "gl7yhd7jx00v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-11-12T19:33:54.248Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:33:54.248Z",
+          "id": "343ntf2067mp",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:33:54.248Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-12T19:20:14.173Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:20:14.173Z",
+          "id": "c7crm1d8bfgy",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:20:14.173Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Webhooks API has traffic has recovered. We will continue to monitor for stability.",
+          "created_at": "2026-11-12T19:20:08.126Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:20:08.126Z",
+          "id": "sn0y38yrndr3",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:20:08.126Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Webhooks API is experiencing timeouts and errors impacting about 1% of customer traffic. We are working through possible mitigation strategies.",
+          "created_at": "2026-11-12T18:52:18.168Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T18:52:18.168Z",
+          "id": "v1709htz0h5b",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T18:52:18.168Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Webhooks",
+          "created_at": "2026-11-12T18:43:13.908Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T18:43:13.908Z",
+          "id": "92vkxs8cc059",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T18:43:13.908Z"
+        }
+      ],
+      "monitoring_at": "2026-11-12T19:20:14.173Z",
+      "name": "Incident with Webhooks API",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T19:33:54.248Z",
+      "shortlink": "https://stspg.io/ns57pv7lmynl",
+      "started_at": "2026-11-12T18:43:13.810Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T19:33:54.277Z"
+    }
+  },
+  {
+    "key": "github/nwbjzl7nfrc2",
+    "vendor": "github",
+    "native_id": "nwbjzl7nfrc2",
+    "title": "Disruption with Email Delivery",
+    "url": "https://stspg.io/lr8v4v8t7gs2",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-12T19:36:45.556Z",
+    "resolved_at": "2026-11-12T21:43:56.551Z",
+    "duration_minutes": 127,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "l7n7y5ccvv66",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-11-12T19:36:45.625Z"
+      },
+      {
+        "native_id": "flr0bqqml48v",
+        "status": "investigating",
+        "body": "We are seeing disruptions with email delivery for account sign-in and new account sign up. We are investigating.",
+        "created_at": "2026-11-12T19:43:01.972Z"
+      },
+      {
+        "native_id": "33sbvl059zkd",
+        "status": "investigating",
+        "body": "Users may be unable to sign-in, verify e-mail addresses, reset passwords, or receive e-mail notifications due to degradation with an upstream e-mail provider. We will continue to monitor and provide updates.",
+        "created_at": "2026-11-12T20:12:05.435Z"
+      },
+      {
+        "native_id": "kxwkmd34l174",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-12T20:19:37.213Z"
+      },
+      {
+        "native_id": "nf3nw8tld0vv",
+        "status": "monitoring",
+        "body": "We are seeing recovery for sign-in, email address verification, and other forms of e-mail communication previously impacted. We will continue to monitor.",
+        "created_at": "2026-11-12T20:21:44.136Z"
+      },
+      {
+        "native_id": "kr7lmrgsv1b8",
+        "status": "monitoring",
+        "body": "We’re monitoring an email disruption related to an upstream provider degradation. Users whose email is hosted by the affected provider may experience delays in message delivery. Email service for users on other providers is currently operating normally. We’ll share updates as we learn more.",
+        "created_at": "2026-11-12T21:02:56.993Z"
+      },
+      {
+        "native_id": "fhqlk13cb7hw",
+        "status": "monitoring",
+        "body": "We’ve resolved the email-processing impact on our systems and are continuing to monitor. The upstream provider disruption may still cause delays for customers using that provider. Email delivery through other providers is operating normally.",
+        "created_at": "2026-11-12T21:43:37.889Z"
+      },
+      {
+        "native_id": "fc3bmd41qjp2",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-11-12T21:43:56.551Z"
+      }
+    ],
+    "first_seen_at": "2026-11-13T13:30:39.419992281Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-12T19:36:45.563Z",
+      "id": "nwbjzl7nfrc2",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-11-12T21:43:56.551Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T21:43:56.551Z",
+          "id": "fc3bmd41qjp2",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T21:43:56.551Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’ve resolved the email-processing impact on our systems and are continuing to monitor. The upstream provider disruption may still cause delays for customers using that provider. Email delivery through other providers is operating normally.",
+          "created_at": "2026-11-12T21:43:37.889Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T21:43:37.889Z",
+          "id": "fhqlk13cb7hw",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T21:43:37.889Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re monitoring an email disruption related to an upstream provider degradation. Users whose email is hosted by the affected provider may experience delays in message delivery. Email service for users on other providers is currently operating normally. We’ll share updates as we learn more.",
+          "created_at": "2026-11-12T21:02:56.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T21:02:56.993Z",
+          "id": "kr7lmrgsv1b8",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T21:02:56.993Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are seeing recovery for sign-in, email address verification, and other forms of e-mail communication previously impacted. We will continue to monitor.",
+          "created_at": "2026-11-12T20:21:44.136Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T20:21:44.136Z",
+          "id": "nf3nw8tld0vv",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T20:21:44.136Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-12T20:19:37.213Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T20:19:37.213Z",
+          "id": "kxwkmd34l174",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T20:19:37.213Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Users may be unable to sign-in, verify e-mail addresses, reset passwords, or receive e-mail notifications due to degradation with an upstream e-mail provider. We will continue to monitor and provide updates.",
+          "created_at": "2026-11-12T20:12:05.435Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T20:12:05.435Z",
+          "id": "33sbvl059zkd",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T20:12:05.435Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are seeing disruptions with email delivery for account sign-in and new account sign up. We are investigating.",
+          "created_at": "2026-11-12T19:43:01.972Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:43:01.972Z",
+          "id": "flr0bqqml48v",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:43:01.972Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-11-12T19:36:45.625Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:36:45.625Z",
+          "id": "l7n7y5ccvv66",
+          "incident_id": "nwbjzl7nfrc2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:36:45.625Z"
+        }
+      ],
+      "monitoring_at": "2026-11-12T20:19:37.213Z",
+      "name": "Disruption with Email Delivery",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T21:43:56.551Z",
+      "shortlink": "https://stspg.io/lr8v4v8t7gs2",
+      "started_at": "2026-11-12T19:36:45.556Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T21:43:56.578Z"
     }
   }
 ]
