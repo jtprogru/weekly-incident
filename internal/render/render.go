@@ -80,7 +80,7 @@ func Digest(idx model.WeekIndex, incidents []model.Incident) string {
 
 	writeCanonicalCatalogue(&b, idx.Incidents)
 	writeSources(&b, idx.Sources)
-	return b.String()
+	return strings.TrimRight(b.String(), "\n") + "\n"
 }
 
 // Brief renders the top incidents with their update bodies truncated, so the
@@ -120,7 +120,7 @@ func Brief(idx model.WeekIndex, incidents []model.Incident, topN, bodyLimit int)
 		}
 		b.WriteString("\n")
 	}
-	return b.String()
+	return strings.TrimRight(b.String(), "\n") + "\n"
 }
 
 func writeTimeline(b *strings.Builder, n int, e model.IndexEntry, in model.Incident) {
