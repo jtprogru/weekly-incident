@@ -18,11 +18,13 @@ import (
 	"time"
 
 	"github.com/jtprogru/weekly-incident/internal/archive"
+	"github.com/jtprogru/weekly-incident/internal/canonical"
 	"github.com/jtprogru/weekly-incident/internal/clock"
 	"github.com/jtprogru/weekly-incident/internal/config"
 	"github.com/jtprogru/weekly-incident/internal/model"
 	"github.com/jtprogru/weekly-incident/internal/render"
 	"github.com/jtprogru/weekly-incident/internal/score"
+	"github.com/jtprogru/weekly-incident/internal/storage"
 )
 
 // notifyTopN is how many incidents the Telegram message quotes. It is not
@@ -61,6 +63,30 @@ func run(configPath, dataDir, outDir, weekFlag, nowFlag string) (string, error) 
 	week, err := resolveWeek(weekFlag, now)
 	if err != nil {
 		return "", err
+	}
+	release, err := storage.Lock(dataDir)
+	if err != nil {
+		return "", err
+	}
+	defer release()
+	if cfg.Dedup.Mode == "enforce" {
+		p, err := canonical.Load(dataDir, cfg, cfg.DecisionsPath(configPath))
+		if err != nil {
+			return "", err
+		}
+		if err := canonical.RenderWeek(dataDir, outDir, p, cfg, week, now); err != nil {
+			return "", err
+		}
+		return week.String(), nil
+	}
+	if cfg.Dedup.Mode == "shadow" {
+		p, err := canonical.Prepare(dataDir, cfg, cfg.DecisionsPath(configPath), now, true, true)
+		if err != nil {
+			return "", err
+		}
+		if err := storage.WriteJSON(filepath.Join(outDir, "shadow-dedup.json"), p.Plan); err != nil {
+			return "", err
+		}
 	}
 
 	arc := archive.New(dataDir)
