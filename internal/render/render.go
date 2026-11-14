@@ -33,8 +33,13 @@ func Digest(idx model.WeekIndex, incidents []model.Incident) string {
 		idx.To.AddDate(0, 0, -1).Format(dateFormat),
 		idx.GeneratedAt.Format(timeFormat))
 
-	fmt.Fprintf(&b, "%d incidents collected, %d above threshold. %s\n\n",
-		len(idx.Incidents), len(above), sourceSummary(idx.Sources))
+	label := "incidents collected"
+	if idx.Dedup != nil {
+		label = "canonical incidents"
+	}
+	fmt.Fprintf(&b, "%d %s, %d above threshold. %s\n\n",
+		len(idx.Incidents), label, len(above), sourceSummary(idx.Sources))
+	writeDedupCounts(&b, idx.Dedup)
 
 	if w := parseErrorWarning(idx.Sources); w != "" {
 		fmt.Fprintf(&b, "%s\n\n", w)
@@ -73,6 +78,7 @@ func Digest(idx model.WeekIndex, incidents []model.Incident) string {
 		b.WriteString("\n")
 	}
 
+	writeCanonicalCatalogue(&b, idx.Incidents)
 	writeSources(&b, idx.Sources)
 	return b.String()
 }
@@ -91,6 +97,7 @@ func Brief(idx model.WeekIndex, incidents []model.Incident, topN, bodyLimit int)
 	var b strings.Builder
 	fmt.Fprintf(&b, "# Week %s — top %d of %d above threshold\n\n", idx.Week, len(top), len(above))
 	fmt.Fprintf(&b, "%s to %s (UTC).\n\n", idx.From.Format(dateFormat), idx.To.AddDate(0, 0, -1).Format(dateFormat))
+	writeDedupCounts(&b, idx.Dedup)
 
 	for i, e := range top {
 		in := incidentByKey[e.Key]
@@ -99,6 +106,7 @@ func Brief(idx model.WeekIndex, incidents []model.Incident, topN, bodyLimit int)
 		fmt.Fprintf(&b, "- Window: %s to %s (%s)\n", e.StartedAt.Format(timeFormat), resolvedCell(e), duration(e))
 		fmt.Fprintf(&b, "- Impact: %s, status: %s\n", e.Impact, e.Status)
 		fmt.Fprintf(&b, "- Components: %s\n\n", components(e.Components))
+		writeCanonicalInfo(&b, e.Canonical)
 		for _, u := range in.Updates {
 			fmt.Fprintf(&b, "  - `%s` %s — %s\n", u.CreatedAt.Format(timeFormat), u.Status, oneLine(truncate(u.Body, bodyLimit)))
 		}
@@ -123,6 +131,9 @@ func writeTimeline(b *strings.Builder, n int, e model.IndexEntry, in model.Incid
 	fmt.Fprintf(b, "- Duration: %s\n", duration(e))
 	fmt.Fprintf(b, "- Impact: %s, status: %s\n", e.Impact, e.Status)
 	fmt.Fprintf(b, "- Components: %s\n", components(e.Components))
+	if e.Canonical != nil {
+		fmt.Fprintf(b, "- Canonical incident: [%s](#%s)\n", e.Canonical.ID, e.Canonical.ID)
+	}
 	if len(in.Updates) > 0 {
 		b.WriteString("\n")
 		for _, u := range in.Updates {
@@ -137,7 +148,7 @@ func writeSources(b *strings.Builder, sources []model.SourceStatus) {
 		return
 	}
 	b.WriteString("## Sources\n\n")
-	b.WriteString("| Vendor | Status | Incidents seen | Parse errors |\n")
+	b.WriteString("| Vendor | Status | Source records seen | Parse errors |\n")
 	b.WriteString("|--------|--------|----------------|--------------|\n")
 	for _, s := range sources {
 		status := "ok"
@@ -302,6 +313,9 @@ func Notification(idx model.WeekIndex, topN int) string {
 		idx.From.Format(dateFormat), idx.To.AddDate(0, 0, -1).Format(dateFormat))
 	fmt.Fprintf(&b, "%d collected · <b>%d above threshold</b> · %s\n",
 		len(idx.Incidents), len(above), sourceHealth(idx.Sources))
+	if idx.Dedup != nil {
+		fmt.Fprintf(&b, "%d source records → %d canonical incidents · %d candidate pairs pending review\n", idx.Dedup.SourceRecords, idx.Dedup.Incidents, idx.Dedup.PendingPairs)
+	}
 
 	if w := parseErrorSummary(idx.Sources); w != "" {
 		fmt.Fprintf(&b, "%s\n", w)

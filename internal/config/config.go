@@ -7,6 +7,7 @@ package config
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"time"
 
 	"gopkg.in/yaml.v3"
@@ -85,12 +86,19 @@ type Digest struct {
 	BriefBodyLimit     int          `yaml:"brief_body_limit"`
 }
 
+type Dedup struct {
+	Mode      string `yaml:"mode"`
+	Decisions string `yaml:"decisions"`
+	AutoAWS   bool   `yaml:"auto_aws"`
+}
+
 // Config is the whole file.
 type Config struct {
 	UserAgent string   `yaml:"user_agent"`
 	HTTP      HTTP     `yaml:"http"`
 	Collect   Collect  `yaml:"collect"`
 	Digest    Digest   `yaml:"digest"`
+	Dedup     Dedup    `yaml:"dedup"`
 	Sources   []Source `yaml:"sources"`
 }
 
@@ -100,6 +108,11 @@ func Load(path string) (*Config, error) {
 	if err != nil {
 		return nil, fmt.Errorf("read config: %w", err)
 	}
+	return Parse(b)
+}
+
+// Parse validates the same bytes a caller may fingerprint for reproducibility.
+func Parse(b []byte) (*Config, error) {
 	var c Config
 	if err := yaml.Unmarshal(b, &c); err != nil {
 		return nil, fmt.Errorf("parse config: %w", err)
@@ -112,6 +125,12 @@ func Load(path string) (*Config, error) {
 }
 
 func (c *Config) applyDefaults() {
+	if c.Dedup.Mode == "" {
+		c.Dedup.Mode = "off"
+	}
+	if c.Dedup.Decisions == "" {
+		c.Dedup.Decisions = "dedup/decisions.yaml"
+	}
 	if c.UserAgent == "" {
 		c.UserAgent = "weekly-incident/0.1 (+https://github.com/jtprogru/weekly-incident)"
 	}
@@ -148,6 +167,9 @@ func (c *Config) applyDefaults() {
 
 // Validate rejects a config that would fail confusingly at fetch time.
 func (c *Config) Validate() error {
+	if c.Dedup.Mode != "off" && c.Dedup.Mode != "shadow" && c.Dedup.Mode != "enforce" {
+		return fmt.Errorf("dedup.mode must be off, shadow or enforce")
+	}
 	if len(c.Sources) == 0 {
 		return fmt.Errorf("no sources configured")
 	}
@@ -177,6 +199,13 @@ func (c *Config) Validate() error {
 		return fmt.Errorf("digest.min_impact %q is not a real impact level", c.Digest.MinImpact)
 	}
 	return nil
+}
+
+func (c *Config) DecisionsPath(configPath string) string {
+	if filepath.IsAbs(c.Dedup.Decisions) {
+		return c.Dedup.Decisions
+	}
+	return filepath.Join(filepath.Dir(configPath), c.Dedup.Decisions)
 }
 
 // Weights maps vendor to editorial weight, for the scorer.

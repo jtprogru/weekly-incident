@@ -165,6 +165,7 @@ func (a *awsRSS) normalize(chain []awsEntry) (model.Incident, error) {
 			resolved = true
 		}
 		updates = append(updates, model.Update{
+			NativeID:  e.item.GUID,
 			Status:    awsUpdateStatus(e.item.Title),
 			Body:      strings.TrimSpace(e.item.Description),
 			CreatedAt: e.at,
