@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/dfpfsngcwywf",
+    "vendor": "github",
+    "native_id": "dfpfsngcwywf",
+    "title": "Disruption with some GitHub services",
+    "url": "https://stspg.io/qd0t2882ckl9",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-14T08:21:17.615Z",
+    "resolved_at": "2026-07-14T09:56:43.021Z",
+    "duration_minutes": 95,
+    "components": [
+      "Codespaces"
+    ],
+    "updates": [
+      {
+        "native_id": "v849fg8zx82s",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-07-14T08:21:17.715Z"
+      },
+      {
+        "native_id": "qgd0v61fdv92",
+        "status": "investigating",
+        "body": "Codespaces is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-14T08:22:37.117Z"
+      },
+      {
+        "native_id": "x258sg5htnpt",
+        "status": "monitoring",
+        "body": "The degradation affecting Codespaces has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-14T09:51:08.939Z"
+      },
+      {
+        "native_id": "rw52pfkxcnms",
+        "status": "resolved",
+        "body": "On July 14, 2026, the GitHub Codespaces service was degraded during two periods — between 06:00 UTC and 09:56 UTC, and again between 10:54 UTC and 12:53 UTC — and some users experienced intermittent failures or delays when creating new codespaces. Impact was concentrated in a subset of geographic regions. During the first period, the error rate averaged 0.5% and peaked at 4.6% of codespace creation requests. The second period was more pronounced, peaking at approximately 30% of codespace creation requests in the most-affected region before recovery. Both periods were caused by an unexpected surge in codespace creation from an abusive actor that drained the available compute capacity in the affected regions faster than it could be replenished. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the impact by identifying and stopping the sources of the excess creation volume, reducing the resources that could be consumed in the affected regions, and rebalancing traffic across regions to restore capacity. Codespace creation success rates returned to normal after each period. \u003cbr /\u003e\u003cbr /\u003eWe are working to add automated, low-latency controls to throttle abnormal codespace creation and to strengthen our detection and safeguards, so we can reduce our time to detection and mitigation of issues like this in the future.",
+        "created_at": "2026-07-14T09:56:43.021Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-08-11T16:02:09.505Z",
+          "description": "Orchestration and Compute for GitHub Codespaces",
+          "group": false,
+          "group_id": null,
+          "id": "h2ftsgbw7kmk",
+          "name": "Codespaces",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 11,
+          "showcase": true,
+          "start_date": "2021-08-11",
+          "status": "operational",
+          "updated_at": "2026-07-14T09:51:08.862Z"
+        }
+      ],
+      "created_at": "2026-07-14T08:21:17.628Z",
+      "id": "dfpfsngcwywf",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 14, 2026, the GitHub Codespaces service was degraded during two periods — between 06:00 UTC and 09:56 UTC, and again between 10:54 UTC and 12:53 UTC — and some users experienced intermittent failures or delays when creating new codespaces. Impact was concentrated in a subset of geographic regions. During the first period, the error rate averaged 0.5% and peaked at 4.6% of codespace creation requests. The second period was more pronounced, peaking at approximately 30% of codespace creation requests in the most-affected region before recovery. Both periods were caused by an unexpected surge in codespace creation from an abusive actor that drained the available compute capacity in the affected regions faster than it could be replenished. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the impact by identifying and stopping the sources of the excess creation volume, reducing the resources that could be consumed in the affected regions, and rebalancing traffic across regions to restore capacity. Codespace creation success rates returned to normal after each period. \u003cbr /\u003e\u003cbr /\u003eWe are working to add automated, low-latency controls to throttle abnormal codespace creation and to strengthen our detection and safeguards, so we can reduce our time to detection and mitigation of issues like this in the future.",
+          "created_at": "2026-07-14T09:56:43.021Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T09:56:43.021Z",
+          "id": "rw52pfkxcnms",
+          "incident_id": "dfpfsngcwywf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T17:53:17.209Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Codespaces has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-14T09:51:08.939Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T09:51:08.939Z",
+          "id": "x258sg5htnpt",
+          "incident_id": "dfpfsngcwywf",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T09:51:08.939Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h2ftsgbw7kmk",
+              "name": "Codespaces",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Codespaces is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-14T08:22:37.117Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T08:22:37.117Z",
+          "id": "qgd0v61fdv92",
+          "incident_id": "dfpfsngcwywf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T08:22:37.117Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-07-14T08:21:17.715Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T08:21:17.715Z",
+          "id": "v849fg8zx82s",
+          "incident_id": "dfpfsngcwywf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T08:21:17.715Z"
+        }
+      ],
+      "monitoring_at": "2026-07-14T09:51:08.939Z",
+      "name": "Disruption with some GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T09:56:43.021Z",
+      "shortlink": "https://stspg.io/qd0t2882ckl9",
+      "started_at": "2026-07-14T08:21:17.615Z",
+      "status": "resolved",
+      "updated_at": "2026-07-17T17:53:17.216Z"
+    }
+  }
+}

@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2023-W39",
   "from": "2023-09-25T00:00:00Z",
   "to": "2023-10-02T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/lgl84rzhxd0d",
+      "canonical": {
+        "id": "ci-9715c5cb1816e6544c716b7a",
+        "sources": [
+          {
+            "key": "atlassian/lgl84rzhxd0d",
+            "path": "2023/W39/atlassian.json",
+            "url": "https://stspg.io/7nk14plf0xcd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9715c5cb1816e6544c716b7a",
       "vendor": "atlassian",
       "title": "We are experiencing intermittent issues on Atlassian.com and Bitbucket Marketing pages",
       "url": "https://stspg.io/7nk14plf0xcd",

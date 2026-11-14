@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1822",
+    "vendor": "yandexcloud",
+    "native_id": "1822",
+    "title": "Partial unavailability of services",
+    "url": "https://status.yandex.cloud/en/incidents/1822",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-06-04T08:30:00Z",
+    "resolved_at": "2026-06-04T11:30:00Z",
+    "duration_minutes": 180,
+    "components": [
+      "Yandex BareMetal"
+    ],
+    "updates": [
+      {
+        "native_id": "2475",
+        "status": "investigating",
+        "body": "We have noticed a degradation of the VM's public network connectivity in the Baremetal service. The developers are already aware of it and are fixing it.",
+        "created_at": "2026-06-04T10:42:06.836Z"
+      },
+      {
+        "native_id": "2476",
+        "status": "resolved",
+        "body": "At 15:30 Moscow time, network connectivity in the Baremetal service was restored. If you still have questions about cloud resources, please contact technical support.",
+        "created_at": "2026-06-04T13:33:52.45Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eAt 15:30 Moscow time, network connectivity in the Baremetal service was restored. If you still have questions about cloud resources, please contact technical support.\u003c/p\u003e\n",
+          "createdAt": "2026-06-04T13:33:52.450Z",
+          "id": 2476,
+          "incidentId": 1822,
+          "type": "resolved",
+          "updatedAt": "2026-06-04T13:33:53.107Z"
+        },
+        {
+          "content": "\u003cp\u003eWe have noticed a degradation of the VM's public network connectivity in the Baremetal service. The developers are already aware of it and are fixing it.\u003c/p\u003e\n",
+          "createdAt": "2026-06-04T10:42:06.836Z",
+          "id": 2475,
+          "incidentId": 1822,
+          "type": "investigation",
+          "updatedAt": "2026-06-04T12:28:11.884Z"
+        }
+      ],
+      "endDate": "2026-06-04T11:30:00.000Z",
+      "id": 1822,
+      "installations": [
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-a"
+            },
+            {
+              "id": "ru-central1-b"
+            },
+            {
+              "id": "ru-central1-d"
+            },
+            {
+              "id": "ru-central1-e"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Unavailable",
+        "level": 2,
+        "theme": "danger"
+      },
+      "levelId": 2,
+      "maxLevel": {
+        "label": "Unavailable",
+        "level": 2,
+        "theme": "danger"
+      },
+      "maxLevelId": 2,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/baremetal",
+          "fullName": "Yandex BareMetal",
+          "iconName": "baremetal",
+          "id": 350,
+          "name": "Yandex BareMetal",
+          "slug": "baremetal"
+        }
+      ],
+      "startDate": "2026-06-04T08:30:00.000Z",
+      "status": "resolved",
+      "title": "Partial unavailability of services"
+    }
+  }
+}

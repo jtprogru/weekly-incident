@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/3y9q97y8cl7r",
+    "vendor": "stripe",
+    "native_id": "3y9q97y8cl7r",
+    "title": "SMS delivery issues in the US",
+    "url": "https://stspg.io/hcll9q8xngg8",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-04-18T03:48:11.567Z",
+    "resolved_at": "2026-04-18T06:42:32.893Z",
+    "duration_minutes": 174,
+    "components": [
+      "Stripe core components"
+    ],
+    "updates": [
+      {
+        "native_id": "qxfgthgy3835",
+        "status": "investigating",
+        "body": "We're currently experiencing SMS delivery issues in the US, affecting 2-Factor authentication for dashboard users as well as the OTP code for Link and Express users. We'll post an update as soon as we have it.",
+        "created_at": "2026-04-18T03:48:11.646Z"
+      },
+      {
+        "native_id": "8z247sgvcvrj",
+        "status": "identified",
+        "body": "Since 01:35 UTC, we’ve been experiencing US SMS delivery issues affecting 2FA and OTP codes for Dashboard, Link, Issuing, and Express users. Non-SMS 2FA methods (security keys, authenticator apps) still work. We’re actively monitoring and will update when resolved.",
+        "created_at": "2026-04-18T04:40:08.05Z"
+      },
+      {
+        "native_id": "5r756gmtwd92",
+        "status": "resolved",
+        "body": "From 01:35 - 05:20 UTC, we saw elevated errors with SMS delivery in the US. This is now resolved.",
+        "created_at": "2026-04-18T06:42:32.893Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-09-27T01:21:40.216Z"
+        }
+      ],
+      "created_at": "2026-04-18T03:48:11.574Z",
+      "id": "3y9q97y8cl7r",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 01:35 - 05:20 UTC, we saw elevated errors with SMS delivery in the US. This is now resolved.",
+          "created_at": "2026-04-18T06:42:32.893Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-04-18T06:42:32.893Z",
+          "id": "5r756gmtwd92",
+          "incident_id": "3y9q97y8cl7r",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-18T06:42:32.893Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 01:35 UTC, we’ve been experiencing US SMS delivery issues affecting 2FA and OTP codes for Dashboard, Link, Issuing, and Express users. Non-SMS 2FA methods (security keys, authenticator apps) still work. We’re actively monitoring and will update when resolved.",
+          "created_at": "2026-04-18T04:40:08.050Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-04-18T04:40:08.050Z",
+          "id": "8z247sgvcvrj",
+          "incident_id": "3y9q97y8cl7r",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-04-18T04:40:08.050Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently experiencing SMS delivery issues in the US, affecting 2-Factor authentication for dashboard users as well as the OTP code for Link and Express users. We'll post an update as soon as we have it.",
+          "created_at": "2026-04-18T03:48:11.646Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-04-18T03:48:11.646Z",
+          "id": "qxfgthgy3835",
+          "incident_id": "3y9q97y8cl7r",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-18T03:48:11.646Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "SMS delivery issues in the US",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-18T06:42:32.893Z",
+      "shortlink": "https://stspg.io/hcll9q8xngg8",
+      "started_at": "2026-04-18T03:48:11.567Z",
+      "status": "resolved",
+      "updated_at": "2026-04-18T06:42:32.907Z"
+    }
+  }
+}

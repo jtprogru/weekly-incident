@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/lyyfm7j4pkgl",
+    "vendor": "github",
+    "native_id": "lyyfm7j4pkgl",
+    "title": "Incident with Dependabot",
+    "url": "https://stspg.io/5bh6qnzn76tk",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-30T20:59:14.215Z",
+    "resolved_at": "2026-10-30T23:29:06.291Z",
+    "duration_minutes": 149,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "2v508dtvymtq",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-30T20:59:14.291Z"
+      },
+      {
+        "native_id": "zbv97l7796bj",
+        "status": "investigating",
+        "body": "We are investigating elevated errors when viewing some Dependabot alerts.",
+        "created_at": "2026-10-30T21:00:18.322Z"
+      },
+      {
+        "native_id": "gq8bmzvzhqb6",
+        "status": "investigating",
+        "body": "We are continuing to investigate elevated errors when viewing some Dependabot alerts. We’ll provide more updates as we learn more.",
+        "created_at": "2026-10-30T21:44:52.903Z"
+      },
+      {
+        "native_id": "gqlnsclyrpcz",
+        "status": "investigating",
+        "body": "We have mitigated impact and are seeing recovery. We are monitoring for full recovery.",
+        "created_at": "2026-10-30T22:32:08.552Z"
+      },
+      {
+        "native_id": "hfj0x5bpl7zs",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-30T22:32:14.17Z"
+      },
+      {
+        "native_id": "bplqj6jzwdnq",
+        "status": "resolved",
+        "body": "On October 30, 2026, between 20:15 and 21:56 UTC, an advisory-publication-driven fan-out caused an unexpected saturation of network connections to the Dependabot alerts datastore. During this period we observed a high rate of write failures on this datastore; users saw elevated failure rates when dismissing or resolving Dependabot alerts, as well as failures when linking Dependabot update pull requests to Dependabot security alerts.  We also observed delays in creating and updating security alerts that extended through November 2, 2026.\u003cbr /\u003e\u003cbr /\u003eThe unexpected fan-out was caused by a missing job queue throttle after the queues for the fan-out work were migrated as part of system maintenance. We have restored the fan-out throttle and further isolated and throttled these processes to guard against further disruptions.",
+        "created_at": "2026-10-30T23:29:06.291Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-30T20:59:14.225Z",
+      "id": "lyyfm7j4pkgl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On October 30, 2026, between 20:15 and 21:56 UTC, an advisory-publication-driven fan-out caused an unexpected saturation of network connections to the Dependabot alerts datastore. During this period we observed a high rate of write failures on this datastore; users saw elevated failure rates when dismissing or resolving Dependabot alerts, as well as failures when linking Dependabot update pull requests to Dependabot security alerts.  We also observed delays in creating and updating security alerts that extended through November 2, 2026.\u003cbr /\u003e\u003cbr /\u003eThe unexpected fan-out was caused by a missing job queue throttle after the queues for the fan-out work were migrated as part of system maintenance. We have restored the fan-out throttle and further isolated and throttled these processes to guard against further disruptions.",
+          "created_at": "2026-10-30T23:29:06.291Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T23:29:06.291Z",
+          "id": "bplqj6jzwdnq",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T22:04:26.389Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-30T22:32:14.170Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T22:32:14.170Z",
+          "id": "hfj0x5bpl7zs",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T22:32:14.170Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have mitigated impact and are seeing recovery. We are monitoring for full recovery.",
+          "created_at": "2026-10-30T22:32:08.552Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T22:32:08.552Z",
+          "id": "gqlnsclyrpcz",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T22:32:08.552Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to investigate elevated errors when viewing some Dependabot alerts. We’ll provide more updates as we learn more.",
+          "created_at": "2026-10-30T21:44:52.903Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T21:44:52.903Z",
+          "id": "gq8bmzvzhqb6",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T21:44:52.903Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating elevated errors when viewing some Dependabot alerts.",
+          "created_at": "2026-10-30T21:00:18.322Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T21:00:18.322Z",
+          "id": "zbv97l7796bj",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T21:00:18.322Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-30T20:59:14.291Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T20:59:14.291Z",
+          "id": "2v508dtvymtq",
+          "incident_id": "lyyfm7j4pkgl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T20:59:14.291Z"
+        }
+      ],
+      "monitoring_at": "2026-10-30T22:32:14.170Z",
+      "name": "Incident with Dependabot",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-30T23:29:06.291Z",
+      "shortlink": "https://stspg.io/5bh6qnzn76tk",
+      "started_at": "2026-10-30T20:59:14.215Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T22:04:26.394Z"
+    }
+  }
+}

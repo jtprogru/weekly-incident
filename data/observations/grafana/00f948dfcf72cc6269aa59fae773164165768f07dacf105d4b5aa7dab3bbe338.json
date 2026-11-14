@@ -1,0 +1,218 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/tszxz2dzv1f3",
+    "vendor": "grafana",
+    "native_id": "tszxz2dzv1f3",
+    "title": "Cannot access dashboard set up as a home page",
+    "url": "https://stspg.io/c3qwt2n084hd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-08T10:28:26.981Z",
+    "resolved_at": "2026-07-08T11:00:43.11Z",
+    "duration_minutes": 32,
+    "components": [
+      "AWS India - prod-ap-south-1",
+      "AWS Singapore - prod-ap-southeast-1",
+      "AWS Switzerland - prod-eu-central-0",
+      "Azure Netherlands - prod-eu-west-3",
+      "GCP US Central - prod-us-central-0"
+    ],
+    "updates": [
+      {
+        "native_id": "f95z6ksj0vs6",
+        "status": "investigating",
+        "body": "We are currently investigating an issue affecting some customers who are unable to load or access their dashboards when configured as their home page. We will update once we have more information on this.",
+        "created_at": "2026-07-08T10:28:27.176Z"
+      },
+      {
+        "native_id": "z4rll0hnk46k",
+        "status": "resolved",
+        "body": "We have found that the issues are related to the grafana.unifiedHomepage feature rollout active 16:50 UTC yesterday, to 10:20 UTC today. We have rolled this back and systems are now working as expected.",
+        "created_at": "2026-07-08T11:00:43.11Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-10-03T13:21:19.043Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2vj35rbpdr7s",
+          "name": "AWS India - prod-ap-south-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "degraded_performance",
+          "updated_at": "2026-09-03T09:32:33.889Z"
+        },
+        {
+          "created_at": "2023-03-01T23:37:42.198Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "y8p2jm7hpwy0",
+          "name": "AWS Singapore - prod-ap-southeast-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-08-28T16:00:07.628Z"
+        },
+        {
+          "created_at": "2026-03-11T09:42:44.943Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "h1t1253xs6k9",
+          "name": "AWS Switzerland - prod-eu-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2026-03-11",
+          "status": "operational",
+          "updated_at": "2026-08-13T13:00:11.736Z"
+        },
+        {
+          "created_at": "2019-04-10T08:17:36.836Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "1mnpb5g27m21",
+          "name": "Azure Netherlands - prod-eu-west-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-20T13:00:14.192Z"
+        },
+        {
+          "created_at": "2017-08-28T09:09:28.157Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "qqj6ssvvsqmq",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-24T13:00:07.442Z"
+        }
+      ],
+      "created_at": "2026-07-08T10:28:26.999Z",
+      "id": "tszxz2dzv1f3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2vj35rbpdr7s",
+              "name": "Grafana - AWS India - prod-ap-south-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "y8p2jm7hpwy0",
+              "name": "Grafana - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h1t1253xs6k9",
+              "name": "Grafana - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "1mnpb5g27m21",
+              "name": "Grafana - Azure Netherlands - prod-eu-west-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have found that the issues are related to the grafana.unifiedHomepage feature rollout active 16:50 UTC yesterday, to 10:20 UTC today. We have rolled this back and systems are now working as expected.",
+          "created_at": "2026-07-08T11:00:43.110Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-08T11:00:43.110Z",
+          "id": "z4rll0hnk46k",
+          "incident_id": "tszxz2dzv1f3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-08T11:00:43.110Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2vj35rbpdr7s",
+              "name": "Grafana - AWS India - prod-ap-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "y8p2jm7hpwy0",
+              "name": "Grafana - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "h1t1253xs6k9",
+              "name": "Grafana - AWS Switzerland - prod-eu-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "1mnpb5g27m21",
+              "name": "Grafana - Azure Netherlands - prod-eu-west-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue affecting some customers who are unable to load or access their dashboards when configured as their home page. We will update once we have more information on this.",
+          "created_at": "2026-07-08T10:28:27.176Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-08T10:28:27.176Z",
+          "id": "f95z6ksj0vs6",
+          "incident_id": "tszxz2dzv1f3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-08T10:28:27.176Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cannot access dashboard set up as a home page",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-08T11:00:43.110Z",
+      "shortlink": "https://stspg.io/c3qwt2n084hd",
+      "started_at": "2026-07-08T10:28:26.981Z",
+      "status": "resolved",
+      "updated_at": "2026-07-08T11:00:43.126Z"
+    }
+  }
+}

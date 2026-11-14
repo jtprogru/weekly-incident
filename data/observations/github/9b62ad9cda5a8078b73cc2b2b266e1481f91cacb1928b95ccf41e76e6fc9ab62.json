@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/ph5nns5y4gxj",
+    "vendor": "github",
+    "native_id": "ph5nns5y4gxj",
+    "title": "Disruption with some GitHub services",
+    "url": "https://stspg.io/2n2g6kzg67mh",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-20T00:25:09.563Z",
+    "resolved_at": "2026-07-20T01:46:02.453Z",
+    "duration_minutes": 80,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "922zvb5nk8j2",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-07-20T00:25:09.597Z"
+      },
+      {
+        "native_id": "mv2fnsgwxcm6",
+        "status": "monitoring",
+        "body": "Some Git LFS operations, and loading files through the API are failing. We are investigating.",
+        "created_at": "2026-07-20T00:25:49.712Z"
+      },
+      {
+        "native_id": "bdcds652mdqj",
+        "status": "monitoring",
+        "body": "Some Git LFS operations, and loading files through the API  are failing. We are investigating.",
+        "created_at": "2026-07-20T00:26:10.695Z"
+      },
+      {
+        "native_id": "n8t3pcn65rsn",
+        "status": "investigating",
+        "body": "The Git LFS API issues have been identified as being related to a separate incident where Actions is experiencing degraded availability. We’re consolidating our investigation efforts under that incident.",
+        "created_at": "2026-07-20T01:15:30.992Z"
+      },
+      {
+        "native_id": "vfj75jqpbngm",
+        "status": "investigating",
+        "body": "Git LFS API success rates have returned to normal. We will continue to monitor the service closely.",
+        "created_at": "2026-07-20T01:45:49.212Z"
+      },
+      {
+        "native_id": "rvwm44wflpgn",
+        "status": "resolved",
+        "body": "Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal.\u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs.",
+        "created_at": "2026-07-20T01:46:02.453Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-20T00:25:09.568Z",
+      "id": "ph5nns5y4gxj",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Between July 19, 2026, at 23:05 UTC and July 20, 2026, at 03:55 UTC, Actions self-hosted and larger runners were unable to connect to GitHub. During this period, Actions jobs were delayed or failed when trying to acquire a runner. Jobs using standard and Mac hosted runners were not affected. Reconnection traffic from affected runners also increased load on GitHub APIs, resulting in 3-4 seconds of additional average request latency and elevated 5xx error rates.\u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a certificate lifecycle management failure in a subset of internal services, resulting in an SSL certificate expiration that disrupted runner connectivity. We restored service by rotating the affected certificate. Recovery began at 02:45 UTC. By 03:55 UTC, queued workflow backlog had been processed and workflow delay rates returned to normal.\u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are strengthening certificate renewal automation, adding fallback expiry monitoring and alerting, and improving circuit-breaker protections during runner API disruptions to reduce the risk of cascading impact to other APIs.",
+          "created_at": "2026-07-20T01:46:02.453Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:46:02.453Z",
+          "id": "rvwm44wflpgn",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T12:29:35.539Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Git LFS API success rates have returned to normal. We will continue to monitor the service closely.",
+          "created_at": "2026-07-20T01:45:49.212Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:45:49.212Z",
+          "id": "vfj75jqpbngm",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:45:49.212Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The Git LFS API issues have been identified as being related to a separate incident where Actions is experiencing degraded availability. We’re consolidating our investigation efforts under that incident.",
+          "created_at": "2026-07-20T01:15:30.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:15:30.992Z",
+          "id": "n8t3pcn65rsn",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:15:30.992Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some Git LFS operations, and loading files through the API  are failing. We are investigating.",
+          "created_at": "2026-07-20T00:26:10.695Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:26:10.695Z",
+          "id": "bdcds652mdqj",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:26:10.695Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some Git LFS operations, and loading files through the API are failing. We are investigating.",
+          "created_at": "2026-07-20T00:25:49.712Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:25:49.712Z",
+          "id": "mv2fnsgwxcm6",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:25:49.712Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-07-20T00:25:09.597Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:25:09.597Z",
+          "id": "922zvb5nk8j2",
+          "incident_id": "ph5nns5y4gxj",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:25:09.597Z"
+        }
+      ],
+      "monitoring_at": "2026-07-20T00:25:49.712Z",
+      "name": "Disruption with some GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-20T01:46:02.453Z",
+      "shortlink": "https://stspg.io/2n2g6kzg67mh",
+      "started_at": "2026-07-20T00:25:09.563Z",
+      "status": "resolved",
+      "updated_at": "2026-07-28T12:29:35.546Z"
+    }
+  }
+}

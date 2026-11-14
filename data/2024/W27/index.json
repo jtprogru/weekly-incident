@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2024-W27",
   "from": "2024-07-01T00:00:00Z",
   "to": "2024-07-08T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/2spys43jxslj",
+      "canonical": {
+        "id": "ci-4be32123f53b880b66778710",
+        "sources": [
+          {
+            "key": "atlassian/2spys43jxslj",
+            "path": "2024/W27/atlassian.json",
+            "url": "https://stspg.io/7h7xnnb9dcq5"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4be32123f53b880b66778710",
       "vendor": "atlassian",
       "title": "Some products are hard down",
       "url": "https://stspg.io/7h7xnnb9dcq5",

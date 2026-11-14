@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "circleci/tqh9zwszp05w",
+    "vendor": "circleci",
+    "native_id": "tqh9zwszp05w",
+    "title": "Increased 500 Errors on Pipeline and Workflow API Endpoints and UI",
+    "url": "https://stspg.io/frwqpjlwzb9r",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-09T17:45:04.124Z",
+    "resolved_at": "2026-06-09T18:43:23.042Z",
+    "duration_minutes": 58,
+    "components": [
+      "CircleCI API",
+      "CircleCI UI"
+    ],
+    "updates": [
+      {
+        "native_id": "hrrvqbhg43r5",
+        "status": "investigating",
+        "body": "Some customers are experiencing 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. \n\nEngineers are actively investigating.",
+        "created_at": "2026-06-09T17:45:04.27Z"
+      },
+      {
+        "native_id": "gm6jrygsvftq",
+        "status": "investigating",
+        "body": "Our engineers are continuing to investigate the 500 errors customers are experiencing on the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs currently running are not impacted.",
+        "created_at": "2026-06-09T18:20:31.343Z"
+      },
+      {
+        "native_id": "kp80jcx779dv",
+        "status": "monitoring",
+        "body": "A fix has been deployed for the 500 errors customers were experiencing on the pipeline values and workflow API endpoints and in the UI. Engineers are monitoring the change. Jobs running are not impacted",
+        "created_at": "2026-06-09T18:32:33.576Z"
+      },
+      {
+        "native_id": "f3khvmv1nfmj",
+        "status": "resolved",
+        "body": "Between 13:29 UTC and 18:20 UTC on June 9, 2026, some customers experienced 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs running were not impacted during this window. The issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+        "created_at": "2026-06-09T18:43:23.042Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-10-14T00:22:39.024Z"
+        },
+        {
+          "created_at": "2017-08-11T03:29:32.538Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "sw1j7xsbdlk4",
+          "name": "CircleCI UI",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-14T00:23:12.766Z"
+        }
+      ],
+      "created_at": "2026-06-09T17:45:04.136Z",
+      "id": "tqh9zwszp05w",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 13:29 UTC and 18:20 UTC on June 9, 2026, some customers experienced 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs running were not impacted during this window. The issue has been resolved and all affected functionality has returned to normal. We thank you for your patience while our team worked on implementing a fix.",
+          "created_at": "2026-06-09T18:43:23.042Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:43:23.042Z",
+          "id": "f3khvmv1nfmj",
+          "incident_id": "tqh9zwszp05w",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:43:23.042Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed for the 500 errors customers were experiencing on the pipeline values and workflow API endpoints and in the UI. Engineers are monitoring the change. Jobs running are not impacted",
+          "created_at": "2026-06-09T18:32:33.576Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:32:33.576Z",
+          "id": "kp80jcx779dv",
+          "incident_id": "tqh9zwszp05w",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:32:33.576Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our engineers are continuing to investigate the 500 errors customers are experiencing on the pipeline values and workflow API endpoints, as well as errors in the UI. Jobs currently running are not impacted.",
+          "created_at": "2026-06-09T18:20:31.343Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T18:20:31.343Z",
+          "id": "gm6jrygsvftq",
+          "incident_id": "tqh9zwszp05w",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T18:20:31.343Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some customers are experiencing 500 errors when making requests to the pipeline values and workflow API endpoints, as well as errors in the UI. \n\nEngineers are actively investigating.",
+          "created_at": "2026-06-09T17:45:04.270Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-09T17:45:04.270Z",
+          "id": "hrrvqbhg43r5",
+          "incident_id": "tqh9zwszp05w",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-09T17:45:04.270Z"
+        }
+      ],
+      "monitoring_at": "2026-06-09T18:32:33.576Z",
+      "name": "Increased 500 Errors on Pipeline and Workflow API Endpoints and UI",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-09T18:43:23.042Z",
+      "shortlink": "https://stspg.io/frwqpjlwzb9r",
+      "started_at": "2026-06-09T17:45:04.124Z",
+      "status": "resolved",
+      "updated_at": "2026-06-09T18:43:23.059Z"
+    }
+  }
+}

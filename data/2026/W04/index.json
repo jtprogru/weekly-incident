@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W04",
   "from": "2026-01-19T00:00:00Z",
   "to": "2026-01-26T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/0vy6kj9tgmt6",
+      "canonical": {
+        "id": "ci-874fd359f9be51b93c9954f1",
+        "sources": [
+          {
+            "key": "datadog/0vy6kj9tgmt6",
+            "path": "2026/W04/datadog.json",
+            "url": "https://stspg.io/qzwqj368qbvk"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-874fd359f9be51b93c9954f1",
       "vendor": "datadog",
       "title": "Web Application Not Loading",
       "url": "https://stspg.io/qzwqj368qbvk",
@@ -124,13 +146,13 @@
         "CI Visibility",
         "Cloud Cost Management",
         "Cloud Network Monitoring",
-        "Cloud Security Management",
         "Cloud SIEM",
+        "Cloud Security Management",
         "Code Security",
         "Continuous Profiler",
-        "Database Monitoring",
         "Data Jobs Monitoring",
         "Data Streams Monitoring",
+        "Database Monitoring",
         "Incident Response",
         "LLM Observability",
         "Log Management",

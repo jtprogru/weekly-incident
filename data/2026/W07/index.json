@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 3,
+    "source_versions_total": 3,
+    "canonical_incidents_total": 3,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W07",
   "from": "2026-02-09T00:00:00Z",
   "to": "2026-02-16T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/g5vw545yn7vt",
+      "canonical": {
+        "id": "ci-ed94679a568c57213addd81c",
+        "sources": [
+          {
+            "key": "datadog/g5vw545yn7vt",
+            "path": "2026/W07/datadog.json",
+            "url": "https://stspg.io/4znpw24vxbbg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ed94679a568c57213addd81c",
       "vendor": "datadog",
       "title": "Delayed Traces in APM Trace Search",
       "url": "https://stspg.io/4znpw24vxbbg",
@@ -128,7 +150,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/vkqm21bfss9c",
+      "canonical": {
+        "id": "ci-cc58b52f1ce45d0c6577ce8e",
+        "sources": [
+          {
+            "key": "datadog/vkqm21bfss9c",
+            "path": "2026/W07/datadog.json",
+            "url": "https://stspg.io/19l6tqc8m1b2"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-cc58b52f1ce45d0c6577ce8e",
       "vendor": "datadog",
       "title": "Delayed Traces in APM",
       "url": "https://stspg.io/19l6tqc8m1b2",
@@ -151,7 +186,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/dtd84fm0pj99",
+      "canonical": {
+        "id": "ci-ed399702064c1ec5324eb991",
+        "sources": [
+          {
+            "key": "stripe/dtd84fm0pj99",
+            "path": "2026/W07/stripe.json",
+            "url": "https://stspg.io/y5frtt77svhm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ed399702064c1ec5324eb991",
       "vendor": "stripe",
       "title": "Elevated latency for Visa EU transactions",
       "url": "https://stspg.io/y5frtt77svhm",

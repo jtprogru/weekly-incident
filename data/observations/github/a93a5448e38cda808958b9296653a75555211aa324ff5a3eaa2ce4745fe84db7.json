@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/pf25whpq58hh",
+    "vendor": "github",
+    "native_id": "pf25whpq58hh",
+    "title": "Disruption with GHEC Team Sync",
+    "url": "https://stspg.io/l6tmhqw07cmj",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-13T16:21:33.096Z",
+    "resolved_at": "2026-08-13T18:27:54.66Z",
+    "duration_minutes": 126,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "gsnrtly5n4dy",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-08-13T16:21:33.148Z"
+      },
+      {
+        "native_id": "n08n9543y09f",
+        "status": "investigating",
+        "body": "GHEC Team Sync is currently degraded for enterprises with personal accounts, causing delays when syncing teams to IdP groups. We have identified the cause of the delays and are working on a mitigation. We will provide an update on our progress at 20:00 UTC.",
+        "created_at": "2026-08-13T16:21:51.86Z"
+      },
+      {
+        "native_id": "1rbgqfk3tdk2",
+        "status": "investigating",
+        "body": "We have deployed a mitigation. At this time GHEC Team Sync has recovered for enterprises with personal accounts. Teams syncing to IdP groups have returned to their normal cadence.",
+        "created_at": "2026-08-13T18:27:38.561Z"
+      },
+      {
+        "native_id": "wm4b8gg2nk3q",
+        "status": "resolved",
+        "body": "On August 13, 2026, from 15:31:21 UTC to 18:27:55 UTC, GitHub Enterprise Cloud team synchronization was degraded for enterprises using personal accounts. Organization teams experienced delays of up to 3 to 13 hours (median 8 hours) when syncing with IdP groups, resulting in delayed access grants or removals for enterprise users across 2.8% of teams. \u003cbr /\u003e\u003cbr /\u003eA temporary change introduced to address a previous issue due to increased usage of this feature remained active after it was intended to be removed, causing synchronization delays during periods of high volume. We removed the temporary change and provisioned additional resources to handle the increased volume.",
+        "created_at": "2026-08-13T18:27:54.66Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-13T16:21:33.104Z",
+      "id": "pf25whpq58hh",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On August 13, 2026, from 15:31:21 UTC to 18:27:55 UTC, GitHub Enterprise Cloud team synchronization was degraded for enterprises using personal accounts. Organization teams experienced delays of up to 3 to 13 hours (median 8 hours) when syncing with IdP groups, resulting in delayed access grants or removals for enterprise users across 2.8% of teams. \u003cbr /\u003e\u003cbr /\u003eA temporary change introduced to address a previous issue due to increased usage of this feature remained active after it was intended to be removed, causing synchronization delays during periods of high volume. We removed the temporary change and provisioned additional resources to handle the increased volume.",
+          "created_at": "2026-08-13T18:27:54.660Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-13T18:27:54.660Z",
+          "id": "wm4b8gg2nk3q",
+          "incident_id": "pf25whpq58hh",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-24T17:29:11.781Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have deployed a mitigation. At this time GHEC Team Sync has recovered for enterprises with personal accounts. Teams syncing to IdP groups have returned to their normal cadence.",
+          "created_at": "2026-08-13T18:27:38.561Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-13T18:27:38.561Z",
+          "id": "1rbgqfk3tdk2",
+          "incident_id": "pf25whpq58hh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-13T18:27:38.561Z"
+        },
+        {
+          "affected_components": null,
+          "body": "GHEC Team Sync is currently degraded for enterprises with personal accounts, causing delays when syncing teams to IdP groups. We have identified the cause of the delays and are working on a mitigation. We will provide an update on our progress at 20:00 UTC.",
+          "created_at": "2026-08-13T16:21:51.860Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-13T16:21:51.860Z",
+          "id": "n08n9543y09f",
+          "incident_id": "pf25whpq58hh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-13T16:21:51.860Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-08-13T16:21:33.148Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-13T16:21:33.148Z",
+          "id": "gsnrtly5n4dy",
+          "incident_id": "pf25whpq58hh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-13T16:21:33.148Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Disruption with GHEC Team Sync",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-13T18:27:54.660Z",
+      "shortlink": "https://stspg.io/l6tmhqw07cmj",
+      "started_at": "2026-08-13T16:21:33.096Z",
+      "status": "resolved",
+      "updated_at": "2026-08-24T17:29:11.788Z"
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/w1c8md3mnthx",
+    "vendor": "grafana",
+    "native_id": "w1c8md3mnthx",
+    "title": "Degradation of Hosted Grafana in US Central Region",
+    "url": "https://stspg.io/7n6x5qw9x9d5",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-09-04T17:03:17.221Z",
+    "resolved_at": "2026-09-04T20:42:21.213Z",
+    "duration_minutes": 219,
+    "components": [
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-3",
+      "GCP US Central - prod-us-central-4"
+    ],
+    "updates": [
+      {
+        "native_id": "g9yf70s91nrv",
+        "status": "identified",
+        "body": "We are aware of an issue causing some Grafana Cloud stacks in the US region to be unavailable or fail to load. The cause is reduced compute capacity in one of our cloud provider's availability zones, which is preventing affected stacks from starting. Other regions are unaffected. We are working with our cloud provider to restore capacity.",
+        "created_at": "2026-09-04T17:03:17.399Z"
+      },
+      {
+        "native_id": "xh0s7pj9tnw4",
+        "status": "monitoring",
+        "body": "We are currently observing minimal impact and continuing to monitor the situation.",
+        "created_at": "2026-09-04T18:24:30.354Z"
+      },
+      {
+        "native_id": "96mz2zlpd7y3",
+        "status": "resolved",
+        "body": "The US Central region is now fully operational and this incident is now resolved.",
+        "created_at": "2026-09-04T20:42:21.213Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-08-28T09:09:28.157Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "qqj6ssvvsqmq",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 38,
+          "showcase": false,
+          "start_date": null,
+          "status": "partial_outage",
+          "updated_at": "2026-11-03T12:40:39.943Z"
+        },
+        {
+          "created_at": "2023-03-01T23:34:11.777Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "m7cr9xxllhpn",
+          "name": "GCP US Central - prod-us-central-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 39,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "partial_outage",
+          "updated_at": "2026-11-03T12:40:39.967Z"
+        },
+        {
+          "created_at": "2023-04-03T08:44:26.276Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "jky8f03q6zfj",
+          "name": "GCP US Central - prod-us-central-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 40,
+          "showcase": false,
+          "start_date": "2023-04-01",
+          "status": "partial_outage",
+          "updated_at": "2026-11-03T13:00:38.234Z"
+        }
+      ],
+      "created_at": "2026-09-04T17:03:17.236Z",
+      "id": "w1c8md3mnthx",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The US Central region is now fully operational and this incident is now resolved.",
+          "created_at": "2026-09-04T20:42:21.213Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T20:42:21.213Z",
+          "id": "96mz2zlpd7y3",
+          "incident_id": "w1c8md3mnthx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T20:42:21.213Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are currently observing minimal impact and continuing to monitor the situation.",
+          "created_at": "2026-09-04T18:24:30.354Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T18:24:30.354Z",
+          "id": "xh0s7pj9tnw4",
+          "incident_id": "w1c8md3mnthx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T18:24:30.354Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are aware of an issue causing some Grafana Cloud stacks in the US region to be unavailable or fail to load. The cause is reduced compute capacity in one of our cloud provider's availability zones, which is preventing affected stacks from starting. Other regions are unaffected. We are working with our cloud provider to restore capacity.",
+          "created_at": "2026-09-04T17:03:17.399Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T17:03:17.399Z",
+          "id": "g9yf70s91nrv",
+          "incident_id": "w1c8md3mnthx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T17:03:17.399Z"
+        }
+      ],
+      "monitoring_at": "2026-09-04T18:24:30.354Z",
+      "name": "Degradation of Hosted Grafana in US Central Region",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-04T20:42:21.213Z",
+      "shortlink": "https://stspg.io/7n6x5qw9x9d5",
+      "started_at": "2026-09-04T17:03:17.221Z",
+      "status": "resolved",
+      "updated_at": "2026-09-04T20:42:21.230Z"
+    }
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/0rn90wk115q9",
+    "vendor": "github",
+    "native_id": "0rn90wk115q9",
+    "title": "Incident with several GitHub Services",
+    "url": "https://stspg.io/8f3xch4y0v2k",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-09-13T09:16:11.468Z",
+    "resolved_at": "2026-09-13T10:44:55.016Z",
+    "duration_minutes": 88,
+    "components": [
+      "API Requests",
+      "Issues",
+      "Pull Requests",
+      "Actions",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "cl2v0bsf1s9g",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for API Requests, Issues, Pages and Pull Requests",
+        "created_at": "2026-09-13T09:16:11.624Z"
+      },
+      {
+        "native_id": "pt3dvpmcwq0j",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-09-13T09:25:56Z"
+      },
+      {
+        "native_id": "3srrykjpqb9x",
+        "status": "investigating",
+        "body": "We're seeing increased database replication delays on collab which is causing increased error rates in authorization endpoints and follow-on increased error rates across the system - we are investigating",
+        "created_at": "2026-09-13T09:36:23.221Z"
+      },
+      {
+        "native_id": "bdq509hsbpnt",
+        "status": "investigating",
+        "body": "We have reduced load on this cluster with internal load-shedding and are seeing signs of recovery but continue to monitor",
+        "created_at": "2026-09-13T10:26:55.219Z"
+      },
+      {
+        "native_id": "2qcgj8tr4j5r",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-09-13T10:28:45.961Z"
+      },
+      {
+        "native_id": "7tbp3bzd25t7",
+        "status": "resolved",
+        "body": "On September 13, 2026, between 08:43 and 10:44 UTC, GitHub experienced degraded availability across approximately 28 services, including Issues, Pull Requests, Actions, Codespaces, Pages, Notifications, Code Scanning, Git LFS, and new account signup.  At peak, 8.8% of requests to create GitHub App installation access tokens failed. Token issuance for Actions workflows was also affected, impacting approximately 4% of workflows during the incident time frame. Creating issues through the web interface failed for about 96% of attempts, and signup failures were above 90%.  \u003cbr /\u003e \u003cbr /\u003eThe cause was an internal data-cleanup job that began writing to a shared database cluster at 07:33 UTC. That cluster stores permission data read on nearly every authenticated request. The safeguard that was pacing the background job watched only one health signal — how far the database replicas were lagging — and that signal stayed low the whole time. It did not account for the load building on the primary itself, so the job kept writing while the primary quietly ran toward its limit. \u003cbr /\u003e\u003cbr /\u003eWhen the primary ran out of available connections, requests that needed it could not complete. First, there was no quick timeout on these database calls, so request handlers waited on the stalled database instead of failing fast, and the shared request-handling capacity degraded into site-wide errors. Second, a retry loop around token creation kept re-sending the writes that were already failing, which held the database saturated rather than letting it recover. \u003cbr /\u003e\u003cbr /\u003eMonitoring declared the incident at 08:50 UTC, but due to the broad impact and amplification from token creation, it took time to identify the source of the load. First responders mitigated by shedding internal load and pausing the job, and all services recovered by 10:44 UTC. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are rate-limiting background jobs against shared, customer-serving databases by default, and adding automatic pausing and paging on primary-server load rather than replication lag alone. We are also surfacing running background work directly alongside database health signals so responders can see and pause it without leaving those dashboards, bounding retries in the token-issuing path, and adding request-level timeouts so one unhealthy database cannot consume shared web server capacity. In addition, we are breaking apart this database cluster to remove the single point of failure. We will be moving various service-specific data, including the authorization data, out of this shared cluster in the next two weeks.",
+        "created_at": "2026-09-13T10:44:55.016Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-08T11:56:20.652Z"
+        },
+        {
+          "created_at": "2017-01-31T20:01:46.638Z",
+          "description": "Requests for Issues on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "kr09ddfgbfsf",
+          "name": "Issues",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-06T00:06:11.679Z"
+        },
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-10T17:55:03.466Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-10T17:28:17.860Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-09T18:43:24.510Z"
+        }
+      ],
+      "created_at": "2026-09-13T09:16:11.480Z",
+      "id": "0rn90wk115q9",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On September 13, 2026, between 08:43 and 10:44 UTC, GitHub experienced degraded availability across approximately 28 services, including Issues, Pull Requests, Actions, Codespaces, Pages, Notifications, Code Scanning, Git LFS, and new account signup.  At peak, 8.8% of requests to create GitHub App installation access tokens failed. Token issuance for Actions workflows was also affected, impacting approximately 4% of workflows during the incident time frame. Creating issues through the web interface failed for about 96% of attempts, and signup failures were above 90%.  \u003cbr /\u003e \u003cbr /\u003eThe cause was an internal data-cleanup job that began writing to a shared database cluster at 07:33 UTC. That cluster stores permission data read on nearly every authenticated request. The safeguard that was pacing the background job watched only one health signal — how far the database replicas were lagging — and that signal stayed low the whole time. It did not account for the load building on the primary itself, so the job kept writing while the primary quietly ran toward its limit. \u003cbr /\u003e\u003cbr /\u003eWhen the primary ran out of available connections, requests that needed it could not complete. First, there was no quick timeout on these database calls, so request handlers waited on the stalled database instead of failing fast, and the shared request-handling capacity degraded into site-wide errors. Second, a retry loop around token creation kept re-sending the writes that were already failing, which held the database saturated rather than letting it recover. \u003cbr /\u003e\u003cbr /\u003eMonitoring declared the incident at 08:50 UTC, but due to the broad impact and amplification from token creation, it took time to identify the source of the load. First responders mitigated by shedding internal load and pausing the job, and all services recovered by 10:44 UTC. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we are rate-limiting background jobs against shared, customer-serving databases by default, and adding automatic pausing and paging on primary-server load rather than replication lag alone. We are also surfacing running background work directly alongside database health signals so responders can see and pause it without leaving those dashboards, bounding retries in the token-issuing path, and adding request-level timeouts so one unhealthy database cannot consume shared web server capacity. In addition, we are breaking apart this database cluster to remove the single point of failure. We will be moving various service-specific data, including the authorization data, out of this shared cluster in the next two weeks.",
+          "created_at": "2026-09-13T10:44:55.016Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T10:44:55.016Z",
+          "id": "7tbp3bzd25t7",
+          "incident_id": "0rn90wk115q9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T21:47:16.737Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-09-13T10:28:45.961Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T10:28:45.961Z",
+          "id": "2qcgj8tr4j5r",
+          "incident_id": "0rn90wk115q9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T10:28:45.961Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have reduced load on this cluster with internal load-shedding and are seeing signs of recovery but continue to monitor",
+          "created_at": "2026-09-13T10:26:55.219Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T10:26:55.219Z",
+          "id": "bdq509hsbpnt",
+          "incident_id": "0rn90wk115q9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T10:26:55.219Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We're seeing increased database replication delays on collab which is causing increased error rates in authorization endpoints and follow-on increased error rates across the system - we are investigating",
+          "created_at": "2026-09-13T09:36:23.221Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T09:36:23.221Z",
+          "id": "3srrykjpqb9x",
+          "incident_id": "0rn90wk115q9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T09:36:23.221Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-09-13T09:25:56.000Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T09:25:56.000Z",
+          "id": "pt3dvpmcwq0j",
+          "incident_id": "0rn90wk115q9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T09:25:56.000Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for API Requests, Issues, Pages and Pull Requests",
+          "created_at": "2026-09-13T09:16:11.624Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-13T09:16:11.624Z",
+          "id": "cl2v0bsf1s9g",
+          "incident_id": "0rn90wk115q9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-13T09:16:11.624Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incident with several GitHub Services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-13T10:44:55.016Z",
+      "shortlink": "https://stspg.io/8f3xch4y0v2k",
+      "started_at": "2026-09-13T09:16:11.468Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T21:47:16.743Z"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/ydpk76bj34z8",
+    "vendor": "github",
+    "native_id": "ydpk76bj34z8",
+    "title": "Incident with Webhooks",
+    "url": "https://stspg.io/zgnhmrp08tdy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-14T17:38:28.539Z",
+    "resolved_at": "2026-07-14T18:01:57Z",
+    "duration_minutes": 23,
+    "components": [
+      "Webhooks"
+    ],
+    "updates": [
+      {
+        "native_id": "mtk2hsl34lp7",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Webhooks",
+        "created_at": "2026-07-14T17:38:28.636Z"
+      },
+      {
+        "native_id": "38zvj9t81p4l",
+        "status": "investigating",
+        "body": "Between 15:17 and 15:27 UTC, an ongoing deployment had an unintended side effect where webhook delivery states were not persisted in all cases, even when deliveries were accepted and processed. Customers may notice missing webhook deliveries in the UI, and these deliveries will not be retryable.\u003cbr /\u003e\u003cbr /\u003eImpact resolved automatically once the deployment completed.",
+        "created_at": "2026-07-14T17:55:45.519Z"
+      },
+      {
+        "native_id": "nmx95k426z9n",
+        "status": "monitoring",
+        "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-14T17:55:50.642Z"
+      },
+      {
+        "native_id": "t1sr8dlj6wh9",
+        "status": "resolved",
+        "body": "On July 14, 2026, between 15:17 and 15:37 UTC, a rollout to GitHub's internal webhook delivery pipeline caused a subset of webhook delivery records to not be written to our webhook deliveries store after being processed and delivered successfully. Affected deliveries would be missing from the webhook delivery UI and API and won’t be available for redelivery.\n\nThe root cause was an uncoordinated rollout: a change to how delivery records are handed off between pipeline components was deployed before the upstream components producing those records were updated to match. While the rollout was in progress, affected records were silently skipped rather than persisted, with no automatic retry. The impact ended as soon as the rollout was completed.\n\nAbout 2.4M delivery records were skipped (approximately 4% of the 20-minute impact window, 0.04% of a typical 24-hour period). Importantly, 95% of these skipped deliveries reached customer endpoints successfully, only the record of the delivery is missing. Of the ~5% that failed to reach customer endpoints, only ~1.4% (5,463) map to webhooks that retried their deliveries in the past 28 days.\n\nTo prevent recurrence, we are improving our automated detection of unsafe schema changes and tightening rollout coordination for changes that span multiple components in the pipeline.",
+        "created_at": "2026-07-14T18:01:57.859Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.017Z"
+        }
+      ],
+      "created_at": "2026-07-14T17:38:28.550Z",
+      "id": "ydpk76bj34z8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 14, 2026, between 15:17 and 15:37 UTC, a rollout to GitHub's internal webhook delivery pipeline caused a subset of webhook delivery records to not be written to our webhook deliveries store after being processed and delivered successfully. Affected deliveries would be missing from the webhook delivery UI and API and won’t be available for redelivery.\n\nThe root cause was an uncoordinated rollout: a change to how delivery records are handed off between pipeline components was deployed before the upstream components producing those records were updated to match. While the rollout was in progress, affected records were silently skipped rather than persisted, with no automatic retry. The impact ended as soon as the rollout was completed.\n\nAbout 2.4M delivery records were skipped (approximately 4% of the 20-minute impact window, 0.04% of a typical 24-hour period). Importantly, 95% of these skipped deliveries reached customer endpoints successfully, only the record of the delivery is missing. Of the ~5% that failed to reach customer endpoints, only ~1.4% (5,463) map to webhooks that retried their deliveries in the past 28 days.\n\nTo prevent recurrence, we are improving our automated detection of unsafe schema changes and tightening rollout coordination for changes that span multiple components in the pipeline.",
+          "created_at": "2026-07-14T18:01:57.859Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T18:01:57.000Z",
+          "id": "t1sr8dlj6wh9",
+          "incident_id": "ydpk76bj34z8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-24T20:21:30.711Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-14T17:55:50.642Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T17:55:50.642Z",
+          "id": "nmx95k426z9n",
+          "incident_id": "ydpk76bj34z8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T17:55:50.642Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 15:17 and 15:27 UTC, an ongoing deployment had an unintended side effect where webhook delivery states were not persisted in all cases, even when deliveries were accepted and processed. Customers may notice missing webhook deliveries in the UI, and these deliveries will not be retryable.\u003cbr /\u003e\u003cbr /\u003eImpact resolved automatically once the deployment completed.",
+          "created_at": "2026-07-14T17:55:45.519Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T17:55:45.519Z",
+          "id": "38zvj9t81p4l",
+          "incident_id": "ydpk76bj34z8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T17:55:45.519Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Webhooks",
+          "created_at": "2026-07-14T17:38:28.636Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T17:38:28.636Z",
+          "id": "mtk2hsl34lp7",
+          "incident_id": "ydpk76bj34z8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T17:38:28.636Z"
+        }
+      ],
+      "monitoring_at": "2026-07-14T17:55:50.642Z",
+      "name": "Incident with Webhooks",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T18:01:57.000Z",
+      "shortlink": "https://stspg.io/zgnhmrp08tdy",
+      "started_at": "2026-07-14T17:38:28.539Z",
+      "status": "resolved",
+      "updated_at": "2026-08-24T20:21:30.736Z"
+    }
+  }
+}

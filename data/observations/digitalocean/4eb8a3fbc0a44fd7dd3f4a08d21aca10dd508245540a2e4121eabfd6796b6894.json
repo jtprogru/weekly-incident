@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/5gsk0hfctqp5",
+    "vendor": "digitalocean",
+    "native_id": "5gsk0hfctqp5",
+    "title": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+    "url": "https://stspg.io/y8cgtdqrkct1",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-04-27T10:38:30Z",
+    "resolved_at": "2026-04-27T11:37:36.467Z",
+    "duration_minutes": 59,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "rhzvd3dcjsk5",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting some customers using DigitalOcean Serverless Inference with Anthropic models. Over the last two hours, impacted customers may have experienced intermittent request failures, including HTTP 429 responses, on some Anthropic model requests. Our engineering team is actively investigating the issue. We apologize for the inconvenience and will share another update as soon as more information is available.",
+        "created_at": "2026-04-27T10:38:30.679Z"
+      },
+      {
+        "native_id": "4rrwgtfd5bpd",
+        "status": "monitoring",
+        "body": "We identified the cause of intermittent HTTP 429 responses affecting some customers using Anthropic models on DigitalOcean Serverless Inference and applied a mitigation. Service has recovered, and we are monitoring stability.",
+        "created_at": "2026-04-27T11:07:50.461Z"
+      },
+      {
+        "native_id": "mcxtbgzxf1xv",
+        "status": "resolved",
+        "body": "The issue is resolved, and service is operating normally.",
+        "created_at": "2026-04-27T11:37:36.467Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-27T10:38:30.000Z",
+      "id": "5gsk0hfctqp5",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue is resolved, and service is operating normally.",
+          "created_at": "2026-04-27T11:37:36.467Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T11:37:36.467Z",
+          "id": "mcxtbgzxf1xv",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:37:36.467Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We identified the cause of intermittent HTTP 429 responses affecting some customers using Anthropic models on DigitalOcean Serverless Inference and applied a mitigation. Service has recovered, and we are monitoring stability.",
+          "created_at": "2026-04-27T11:07:50.461Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T11:07:50.000Z",
+          "id": "4rrwgtfd5bpd",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:09:33.533Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting some customers using DigitalOcean Serverless Inference with Anthropic models. Over the last two hours, impacted customers may have experienced intermittent request failures, including HTTP 429 responses, on some Anthropic model requests. Our engineering team is actively investigating the issue. We apologize for the inconvenience and will share another update as soon as more information is available.",
+          "created_at": "2026-04-27T10:38:30.679Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-27T10:38:30.000Z",
+          "id": "rhzvd3dcjsk5",
+          "incident_id": "5gsk0hfctqp5",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-27T11:04:29.436Z"
+        }
+      ],
+      "monitoring_at": "2026-04-27T11:07:50.000Z",
+      "name": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-27T11:37:36.467Z",
+      "shortlink": "https://stspg.io/y8cgtdqrkct1",
+      "started_at": "2026-04-27T10:38:30.000Z",
+      "status": "resolved",
+      "updated_at": "2026-04-27T11:37:36.483Z"
+    }
+  }
+}

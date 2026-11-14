@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/gxycch3076xk",
+    "vendor": "github",
+    "native_id": "gxycch3076xk",
+    "title": "Degraded REST API Availability",
+    "url": "https://stspg.io/pzvjh0wyg401",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-16T22:51:13.718Z",
+    "resolved_at": "2026-07-17T00:14:08.536Z",
+    "duration_minutes": 82,
+    "components": [
+      "API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "h84f7p6v6b38",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-07-16T22:51:13.776Z"
+      },
+      {
+        "native_id": "vp42pbllqzss",
+        "status": "investigating",
+        "body": "We are aware of degraded REST API availability and are investigating",
+        "created_at": "2026-07-16T22:58:03.58Z"
+      },
+      {
+        "native_id": "tqt6vb5rfg69",
+        "status": "investigating",
+        "body": "API Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-16T22:58:23.315Z"
+      },
+      {
+        "native_id": "cjl9jkhpl4z3",
+        "status": "investigating",
+        "body": "We are continuing to investigate an issue causing approximately 35% of REST API requests to fail.  Based on our current understanding, requests are not consistently reaching the application layer, resulting in failed requests returning HTML responses instead of the expected API response format. We are actively investigating the issue and will provide another update as soon as more information is available.",
+        "created_at": "2026-07-16T23:29:04.276Z"
+      },
+      {
+        "native_id": "yg9myzx1z7l4",
+        "status": "monitoring",
+        "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-17T00:00:47.214Z"
+      },
+      {
+        "native_id": "bfqcpqr3lj6k",
+        "status": "monitoring",
+        "body": "As of 23:46 UTC, the REST API service is reachable and responding to requests normally.",
+        "created_at": "2026-07-17T00:14:04.442Z"
+      },
+      {
+        "native_id": "9gvxp7k8lb24",
+        "status": "resolved",
+        "body": "From 22:21 UTC - 23:50 UTC on July 16, 2026, the REST API experienced significant degradation.  During this period, about 39% of REST API requests failed with HTTP 500 level responses, with the errors peaking at 44.3%. \u003cbr /\u003e\u003cbr /\u003eWe identified the issue as an infrastructure change that wrongly marked the majority of API backends in a single region as unhealthy.  As a result, requests routed to those backends failed before reaching the application layer.  \u003cbr /\u003e\u003cbr /\u003eTo prevent this from happening again, we're improving our systems to catch this kind of invalid configuration before it reaches production. We'll also audit the related systems to make them more resilient to future changes, and we're increasing our monitoring sensitivity so we're alerted to problems like this sooner.",
+        "created_at": "2026-07-17T00:14:08.536Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-13T10:44:54.920Z"
+        }
+      ],
+      "created_at": "2026-07-16T22:51:13.727Z",
+      "id": "gxycch3076xk",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 22:21 UTC - 23:50 UTC on July 16, 2026, the REST API experienced significant degradation.  During this period, about 39% of REST API requests failed with HTTP 500 level responses, with the errors peaking at 44.3%. \u003cbr /\u003e\u003cbr /\u003eWe identified the issue as an infrastructure change that wrongly marked the majority of API backends in a single region as unhealthy.  As a result, requests routed to those backends failed before reaching the application layer.  \u003cbr /\u003e\u003cbr /\u003eTo prevent this from happening again, we're improving our systems to catch this kind of invalid configuration before it reaches production. We'll also audit the related systems to make them more resilient to future changes, and we're increasing our monitoring sensitivity so we're alerted to problems like this sooner.",
+          "created_at": "2026-07-17T00:14:08.536Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-17T00:14:08.536Z",
+          "id": "9gvxp7k8lb24",
+          "incident_id": "gxycch3076xk",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T00:57:46.193Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of 23:46 UTC, the REST API service is reachable and responding to requests normally.",
+          "created_at": "2026-07-17T00:14:04.442Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-17T00:14:04.442Z",
+          "id": "bfqcpqr3lj6k",
+          "incident_id": "gxycch3076xk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T00:14:04.442Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-17T00:00:47.214Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-17T00:00:47.214Z",
+          "id": "yg9myzx1z7l4",
+          "incident_id": "gxycch3076xk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T00:00:47.214Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to investigate an issue causing approximately 35% of REST API requests to fail.  Based on our current understanding, requests are not consistently reaching the application layer, resulting in failed requests returning HTML responses instead of the expected API response format. We are actively investigating the issue and will provide another update as soon as more information is available.",
+          "created_at": "2026-07-16T23:29:04.276Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T23:29:04.276Z",
+          "id": "cjl9jkhpl4z3",
+          "incident_id": "gxycch3076xk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T23:29:04.276Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "API Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-16T22:58:23.315Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T22:58:23.315Z",
+          "id": "tqt6vb5rfg69",
+          "incident_id": "gxycch3076xk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T22:58:23.315Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are aware of degraded REST API availability and are investigating",
+          "created_at": "2026-07-16T22:58:03.580Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T22:58:03.580Z",
+          "id": "vp42pbllqzss",
+          "incident_id": "gxycch3076xk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T22:58:03.580Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-07-16T22:51:13.776Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T22:51:13.776Z",
+          "id": "h84f7p6v6b38",
+          "incident_id": "gxycch3076xk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T22:51:13.776Z"
+        }
+      ],
+      "monitoring_at": "2026-07-17T00:00:47.214Z",
+      "name": "Degraded REST API Availability",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-17T00:14:08.536Z",
+      "shortlink": "https://stspg.io/pzvjh0wyg401",
+      "started_at": "2026-07-16T22:51:13.718Z",
+      "status": "resolved",
+      "updated_at": "2026-07-17T00:57:46.197Z"
+    }
+  }
+}

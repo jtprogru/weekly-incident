@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/8s6pn9rvof3l",
+    "vendor": "cloudflare",
+    "native_id": "8s6pn9rvof3l",
+    "title": "Cache Purging Delays Affecting Requests Routed Through EEUR",
+    "url": "https://www.cloudflarestatus.com/incidents/8s6pn9rvof3l",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-27T15:10:35.555Z",
+    "resolved_at": "2026-10-27T16:14:34.056Z",
+    "duration_minutes": 63,
+    "components": [
+      "CDN Cache Purge",
+      "Stockholm, Sweden - (ARN)"
+    ],
+    "updates": [
+      {
+        "native_id": "lx362ocn3zcr",
+        "status": "investigating",
+        "body": "Some single-file cache purge requests (purge by URL) submitted through the Dashboard or API and routed through our EEUR purge queues are experiencing delays of up to 30 minutes. Cache invalidation for these requests may be delayed across our global network. This also affects Always Online.\nWe are working to resolve the issue. As a temporary workaround, you may use Purge Everything, but this may cause a surge in traffic to your origin server(s)\n\nMore updates to follow.",
+        "created_at": "2026-10-27T15:10:35.555Z"
+      },
+      {
+        "native_id": "uhq57c4cdsgn",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-27T16:02:33.46Z"
+      },
+      {
+        "native_id": "tmh08cn09taj",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-27T16:14:34.056Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-31T16:54:52.000Z",
+          "description": "CDN single file cache purging service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fbvx0hxhhdj0",
+          "name": "CDN Cache Purge",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-06T17:47:15.545Z"
+        },
+        {
+          "created_at": "2014-10-27T20:36:25.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "zqxhg7y54vy8",
+          "id": "755n430pjn1s",
+          "name": "Stockholm, Sweden - (ARN)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 46,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-11T05:00:14.397Z"
+        }
+      ],
+      "created_at": "2026-10-27T15:10:35.555Z",
+      "id": "8s6pn9rvof3l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-27T16:14:34.056Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-27T16:14:34.056Z",
+          "id": "tmh08cn09taj",
+          "incident_id": "8s6pn9rvof3l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-27T16:14:34.056Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-27T16:02:33.460Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-27T16:02:33.460Z",
+          "id": "uhq57c4cdsgn",
+          "incident_id": "8s6pn9rvof3l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-27T16:02:33.460Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "CDN \u0026 Performance - CDN Cache Purge",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "755n430pjn1s",
+              "name": "Europe - Stockholm, Sweden - (ARN)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some single-file cache purge requests (purge by URL) submitted through the Dashboard or API and routed through our EEUR purge queues are experiencing delays of up to 30 minutes. Cache invalidation for these requests may be delayed across our global network. This also affects Always Online.\nWe are working to resolve the issue. As a temporary workaround, you may use Purge Everything, but this may cause a surge in traffic to your origin server(s)\n\nMore updates to follow.",
+          "created_at": "2026-10-27T15:10:35.555Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-27T15:10:35.555Z",
+          "id": "lx362ocn3zcr",
+          "incident_id": "8s6pn9rvof3l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-27T15:19:06.772Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cache Purging Delays Affecting Requests Routed Through EEUR",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-27T16:14:34.056Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/8s6pn9rvof3l",
+      "started_at": "2026-10-27T15:10:35.555Z",
+      "status": "resolved",
+      "updated_at": "2026-10-27T16:14:34.056Z"
+    }
+  }
+}

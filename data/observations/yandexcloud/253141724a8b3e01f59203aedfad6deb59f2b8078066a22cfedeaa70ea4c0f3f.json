@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/2130",
+    "vendor": "yandexcloud",
+    "native_id": "2130",
+    "title": "Increasing timings in the Object Storage service",
+    "url": "https://status.yandex.cloud/en/incidents/2130",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-08T19:30:00Z",
+    "resolved_at": "2026-10-09T09:50:00Z",
+    "duration_minutes": 860,
+    "components": [
+      "Object Storage"
+    ],
+    "updates": [
+      {
+        "native_id": "2832",
+        "status": "investigating",
+        "body": "There is a partial unavailability of individual components of Object Storage. For some requests to the S3 API, an increase in response time was recorded, primarily for object recording operations. The read operations are running normally.\nThe developers are already aware of it and are fixing it.",
+        "created_at": "2026-10-08T21:35:20.887Z"
+      },
+      {
+        "native_id": "2834",
+        "status": "resolved",
+        "body": "At 12:50 Moscow time, the problem was fixed, the Object Storage service is working correctly.",
+        "created_at": "2026-10-09T10:15:00.575Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eAt 12:50 Moscow time, the problem was fixed, the Object Storage service is working correctly.\u003c/p\u003e\n",
+          "createdAt": "2026-10-09T10:15:00.575Z",
+          "id": 2834,
+          "incidentId": 2130,
+          "type": "resolved",
+          "updatedAt": "2026-10-09T10:15:01.361Z"
+        },
+        {
+          "content": "\u003cp\u003eThere is a partial unavailability of individual components of Object Storage. For some requests to the S3 API, an increase in response time was recorded, primarily for object recording operations. The read operations are running normally.\u003c/p\u003e\n\u003cp\u003eThe developers are already aware of it and are fixing it.\u003c/p\u003e\n",
+          "createdAt": "2026-10-08T21:35:20.887Z",
+          "id": 2832,
+          "incidentId": 2130,
+          "type": "investigation",
+          "updatedAt": "2026-10-09T06:27:15.287Z"
+        }
+      ],
+      "endDate": "2026-10-09T09:50:00.000Z",
+      "id": 2130,
+      "installations": [
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-a"
+            },
+            {
+              "id": "ru-central1-b"
+            },
+            {
+              "id": "ru-central1-d"
+            },
+            {
+              "id": "ru-central1-e"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "levelId": 1,
+      "maxLevel": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "maxLevelId": 1,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/storage",
+          "fullName": "Yandex Object Storage",
+          "iconName": "storage",
+          "id": 4,
+          "name": "Object Storage",
+          "slug": "storage"
+        }
+      ],
+      "startDate": "2026-10-08T19:30:00.000Z",
+      "status": "resolved",
+      "title": "Increasing timings in the Object Storage service"
+    }
+  }
+}

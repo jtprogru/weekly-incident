@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/dy7gggxhx3b1",
+    "vendor": "grafana",
+    "native_id": "dy7gggxhx3b1",
+    "title": "IRM Mobile App forcing some users to logout",
+    "url": "https://stspg.io/lk4y3c36tmj2",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-10T20:27:32.573Z",
+    "resolved_at": "2026-07-13T13:00:34.56Z",
+    "duration_minutes": 3873,
+    "components": [
+      "Incident Management and Response (IRM)"
+    ],
+    "updates": [
+      {
+        "native_id": "29dfbh7w8w6d",
+        "status": "investigating",
+        "body": "We are aware of an issue in the latest mobile app release that is causing some users to be signed out and asked to log in again.\n\nWe have reproduced the behavior and are investigating and working on a fix. We will share another update as soon as we have more information.",
+        "created_at": "2026-07-10T20:27:32.683Z"
+      },
+      {
+        "native_id": "qf8s05fslw61",
+        "status": "investigating",
+        "body": "Our investigation has narrowed the impact to version 2.39.4 of the Grafana mobile app on iOS. Users should avoid upgrading to this version until an updated release is available.\n\nAs a precaution, we also recommend ensuring you have alternative notification methods configured (such as SMS, email, or phone calls) if you rely on mobile push notifications for alerting.\n\nWe are actively working on a resolution and will provide another update as soon as more information is available.",
+        "created_at": "2026-07-10T20:37:32.841Z"
+      },
+      {
+        "native_id": "crg2ynpfbh22",
+        "status": "identified",
+        "body": "A fix has been submitted for review and will be released as Grafana Mobile v2.39.5 once it is approved.\n\nIf your app is currently on v2.39.3, we recommend not upgrading to v2.39.4 and instead waiting for v2.39.5 to become available.\n\nUsers who have already been signed out by this issue can log back into the app and continue using it.\n\nWe will provide another update once v2.39.5 is available.",
+        "created_at": "2026-07-10T22:17:05.482Z"
+      },
+      {
+        "native_id": "wlmsgcs2kspg",
+        "status": "monitoring",
+        "body": "A new iOS mobile app version (v2.39.5) has been released, which includes a fix for this issue. We are monitoring the rollout and its impact to ensure the issue has been fully resolved. If you continue to experience any problems after updating to the latest version, please let us know.",
+        "created_at": "2026-07-11T03:58:59.772Z"
+      },
+      {
+        "native_id": "5fj6x72nxnf5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-13T13:00:34.56Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-03-25T16:09:00.130Z",
+          "description": "Former Grafana Incident and Grafana OnCall",
+          "group": false,
+          "group_id": null,
+          "id": "1mxpk7q1bkb6",
+          "name": "Incident Management and Response (IRM)",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2024-03-25",
+          "status": "operational",
+          "updated_at": "2026-08-25T11:02:59.869Z"
+        }
+      ],
+      "created_at": "2026-07-10T20:27:32.581Z",
+      "id": "dy7gggxhx3b1",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-13T13:00:34.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T13:00:34.560Z",
+          "id": "5fj6x72nxnf5",
+          "incident_id": "dy7gggxhx3b1",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T13:00:34.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A new iOS mobile app version (v2.39.5) has been released, which includes a fix for this issue. We are monitoring the rollout and its impact to ensure the issue has been fully resolved. If you continue to experience any problems after updating to the latest version, please let us know.",
+          "created_at": "2026-07-11T03:58:59.772Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-11T03:58:59.772Z",
+          "id": "wlmsgcs2kspg",
+          "incident_id": "dy7gggxhx3b1",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-11T03:58:59.772Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been submitted for review and will be released as Grafana Mobile v2.39.5 once it is approved.\n\nIf your app is currently on v2.39.3, we recommend not upgrading to v2.39.4 and instead waiting for v2.39.5 to become available.\n\nUsers who have already been signed out by this issue can log back into the app and continue using it.\n\nWe will provide another update once v2.39.5 is available.",
+          "created_at": "2026-07-10T22:17:05.482Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T22:17:05.482Z",
+          "id": "crg2ynpfbh22",
+          "incident_id": "dy7gggxhx3b1",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T22:17:05.482Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our investigation has narrowed the impact to version 2.39.4 of the Grafana mobile app on iOS. Users should avoid upgrading to this version until an updated release is available.\n\nAs a precaution, we also recommend ensuring you have alternative notification methods configured (such as SMS, email, or phone calls) if you rely on mobile push notifications for alerting.\n\nWe are actively working on a resolution and will provide another update as soon as more information is available.",
+          "created_at": "2026-07-10T20:37:32.841Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T20:37:32.841Z",
+          "id": "qf8s05fslw61",
+          "incident_id": "dy7gggxhx3b1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T20:37:32.841Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are aware of an issue in the latest mobile app release that is causing some users to be signed out and asked to log in again.\n\nWe have reproduced the behavior and are investigating and working on a fix. We will share another update as soon as we have more information.",
+          "created_at": "2026-07-10T20:27:32.683Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-10T20:27:32.683Z",
+          "id": "29dfbh7w8w6d",
+          "incident_id": "dy7gggxhx3b1",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T20:27:32.683Z"
+        }
+      ],
+      "monitoring_at": "2026-07-11T03:58:59.772Z",
+      "name": "IRM Mobile App forcing some users to logout",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-13T13:00:34.560Z",
+      "shortlink": "https://stspg.io/lk4y3c36tmj2",
+      "started_at": "2026-07-10T20:27:32.573Z",
+      "status": "resolved",
+      "updated_at": "2026-07-13T13:00:34.579Z"
+    }
+  }
+}

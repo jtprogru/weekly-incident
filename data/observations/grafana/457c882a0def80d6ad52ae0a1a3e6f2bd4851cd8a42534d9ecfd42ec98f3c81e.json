@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/cwcjkcghg3g0",
+    "vendor": "grafana",
+    "native_id": "cwcjkcghg3g0",
+    "title": "IRM outage in the region prod-gb-south-0 and prod-eu-west-0",
+    "url": "https://stspg.io/nh9hp52f8qzh",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-20T07:28:23.647Z",
+    "resolved_at": "2026-10-20T10:33:25.941Z",
+    "duration_minutes": 185,
+    "components": [
+      "GCP Belgium - prod-eu-west-0: Rule Evaluation",
+      "GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+      "GCP Belgium - prod-eu-west-0: Alertmanager",
+      "GCP UK - prod-gb-south-0: Rule Evaluation",
+      "GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+      "GCP UK - prod-gb-south-0: Alertmanager"
+    ],
+    "updates": [
+      {
+        "native_id": "6tldqycxp9dh",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-10-20T07:28:23.911Z"
+      },
+      {
+        "native_id": "1cn0j3yxmbv3",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-10-20T07:29:03.852Z"
+      },
+      {
+        "native_id": "p8db1mg5zytn",
+        "status": "investigating",
+        "body": "Only the public API is affected for prod-eu-west-0",
+        "created_at": "2026-10-20T07:36:23.146Z"
+      },
+      {
+        "native_id": "bhfgzz423dhx",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-20T08:04:05.715Z"
+      },
+      {
+        "native_id": "5v248gr862k9",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-20T10:33:25.941Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-10-29T17:41:15.155Z",
+          "description": "Prometheus-based alerting engine responsible for evaluating alerting and recording rules. Alerting rules are then sent to the Alertmanager and recording rules are ingested to the metrics instance.",
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "lykc1jl88zz3",
+          "name": "GCP Belgium - prod-eu-west-0: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 43,
+          "showcase": false,
+          "start_date": "2020-10-29",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:06.032Z"
+        },
+        {
+          "created_at": "2020-10-29T17:41:53.522Z",
+          "description": "The API gateway that allows programmatic access to managing configuration of rules and Alertmanager configuration.",
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "jw3c386xwr40",
+          "name": "GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 44,
+          "showcase": false,
+          "start_date": "2020-10-29",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:06.051Z"
+        },
+        {
+          "created_at": "2020-10-29T17:42:23.389Z",
+          "description": "Prometheus-based Alertmanager responsible for reception of alerts and notification delivery.",
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "tgt3hljzszy8",
+          "name": "GCP Belgium - prod-eu-west-0: Alertmanager",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 45,
+          "showcase": false,
+          "start_date": "2020-10-29",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:06.103Z"
+        },
+        {
+          "created_at": "2022-01-13T14:34:15.247Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "7vr04qdqjtn6",
+          "name": "GCP UK - prod-gb-south-0: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 55,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-09-24T18:09:57.331Z"
+        },
+        {
+          "created_at": "2022-01-13T14:34:29.011Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "062dycqds9gm",
+          "name": "GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 56,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-09-24T18:09:57.355Z"
+        },
+        {
+          "created_at": "2022-01-13T14:34:44.427Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "ybvy0jrqz78d",
+          "name": "GCP UK - prod-gb-south-0: Alertmanager",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 57,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-09-24T18:09:57.402Z"
+        }
+      ],
+      "created_at": "2026-10-20T07:28:23.812Z",
+      "id": "cwcjkcghg3g0",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "lykc1jl88zz3",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jw3c386xwr40",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tgt3hljzszy8",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7vr04qdqjtn6",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "062dycqds9gm",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ybvy0jrqz78d",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-20T10:33:25.941Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T10:33:25.941Z",
+          "id": "5v248gr862k9",
+          "incident_id": "cwcjkcghg3g0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T10:33:25.941Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lykc1jl88zz3",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jw3c386xwr40",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tgt3hljzszy8",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7vr04qdqjtn6",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "062dycqds9gm",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ybvy0jrqz78d",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-20T08:04:05.715Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T08:04:05.715Z",
+          "id": "bhfgzz423dhx",
+          "incident_id": "cwcjkcghg3g0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T08:04:05.715Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lykc1jl88zz3",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jw3c386xwr40",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tgt3hljzszy8",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7vr04qdqjtn6",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "062dycqds9gm",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ybvy0jrqz78d",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Only the public API is affected for prod-eu-west-0",
+          "created_at": "2026-10-20T07:36:23.146Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-10-20T07:36:23.146Z",
+          "id": "p8db1mg5zytn",
+          "incident_id": "cwcjkcghg3g0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T07:36:23.146Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lykc1jl88zz3",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jw3c386xwr40",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tgt3hljzszy8",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7vr04qdqjtn6",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "062dycqds9gm",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ybvy0jrqz78d",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-10-20T07:29:03.852Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T07:29:03.852Z",
+          "id": "1cn0j3yxmbv3",
+          "incident_id": "cwcjkcghg3g0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T07:29:03.852Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lykc1jl88zz3",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "jw3c386xwr40",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tgt3hljzszy8",
+              "name": "Alerting and SLO - GCP Belgium - prod-eu-west-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "7vr04qdqjtn6",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "062dycqds9gm",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ybvy0jrqz78d",
+              "name": "Alerting and SLO - GCP UK - prod-gb-south-0: Alertmanager",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-10-20T07:28:23.911Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T07:28:23.911Z",
+          "id": "6tldqycxp9dh",
+          "incident_id": "cwcjkcghg3g0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T07:28:23.911Z"
+        }
+      ],
+      "monitoring_at": "2026-10-20T08:04:05.715Z",
+      "name": "IRM outage in the region prod-gb-south-0 and prod-eu-west-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-20T10:33:25.941Z",
+      "shortlink": "https://stspg.io/nh9hp52f8qzh",
+      "started_at": "2026-10-20T07:28:23.647Z",
+      "status": "resolved",
+      "updated_at": "2026-10-20T10:33:25.965Z"
+    }
+  }
+}

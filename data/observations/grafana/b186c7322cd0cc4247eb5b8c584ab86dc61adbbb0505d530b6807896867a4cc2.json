@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/gxb577ll1b7x",
+    "vendor": "grafana",
+    "native_id": "gxb577ll1b7x",
+    "title": "Degraded Performance: Stack Provisioning Failures within certain reigons (PDC Setup)",
+    "url": "https://stspg.io/gkrhww23994q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-31T10:51:28.894Z",
+    "resolved_at": "2026-07-31T12:13:31.007Z",
+    "duration_minutes": 82,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS US East - prod-us-east-0",
+      "GCP US Central - prod-us-central-0",
+      "GCP US East - prod-us-east-1"
+    ],
+    "updates": [
+      {
+        "native_id": "jg8bqrcpd5l4",
+        "status": "investigating",
+        "body": "We are currently investigating an issue impacting stack provisioning. Attempting to set up PDC on newly created stacks will currently fail across several regions. We are currently looking into the cause of this.",
+        "created_at": "2026-07-31T10:51:29.035Z"
+      },
+      {
+        "native_id": "5cyk6lryr8hm",
+        "status": "resolved",
+        "body": "He have identified the cause and applied a fix for this issue and all effected stacks within the affected regions are not working as expected.",
+        "created_at": "2026-07-31T12:13:31.007Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-01T23:37:22.739Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "6wgslg1s3bzr",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-10-08T16:00:07.892Z"
+        },
+        {
+          "created_at": "2023-03-21T21:16:23.932Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "hbqgpzmf8h9k",
+          "name": "AWS US East - prod-us-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-03-21",
+          "status": "operational",
+          "updated_at": "2026-10-08T16:00:08.158Z"
+        },
+        {
+          "created_at": "2017-08-28T09:09:28.157Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "qqj6ssvvsqmq",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-14T15:30:10.530Z"
+        },
+        {
+          "created_at": "2023-03-01T23:34:20.391Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2yn7w8rnphcp",
+          "name": "GCP US East - prod-us-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-10-14T15:30:10.741Z"
+        }
+      ],
+      "created_at": "2026-07-31T10:51:28.906Z",
+      "id": "gxb577ll1b7x",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East - prod-us-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "He have identified the cause and applied a fix for this issue and all effected stacks within the affected regions are not working as expected.",
+          "created_at": "2026-07-31T12:13:31.007Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:13:31.007Z",
+          "id": "5cyk6lryr8hm",
+          "incident_id": "gxb577ll1b7x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:13:31.007Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East - prod-us-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue impacting stack provisioning. Attempting to set up PDC on newly created stacks will currently fail across several regions. We are currently looking into the cause of this.",
+          "created_at": "2026-07-31T10:51:29.035Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T10:51:29.035Z",
+          "id": "jg8bqrcpd5l4",
+          "incident_id": "gxb577ll1b7x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T10:51:29.035Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded Performance: Stack Provisioning Failures within certain reigons (PDC Setup)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-31T12:13:31.007Z",
+      "shortlink": "https://stspg.io/gkrhww23994q",
+      "started_at": "2026-07-31T10:51:28.894Z",
+      "status": "resolved",
+      "updated_at": "2026-07-31T12:13:31.027Z"
+    }
+  }
+}

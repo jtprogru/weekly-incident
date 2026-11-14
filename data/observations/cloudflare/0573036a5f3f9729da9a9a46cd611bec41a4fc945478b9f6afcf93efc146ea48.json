@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/cyxclg7nnhjy",
+    "vendor": "cloudflare",
+    "native_id": "cyxclg7nnhjy",
+    "title": "Elevated Errors in China Network Colos",
+    "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-10T04:13:17.714Z",
+    "resolved_at": "2026-10-15T09:28:39.015Z",
+    "duration_minutes": 7515,
+    "components": [
+      "China Network"
+    ],
+    "updates": [
+      {
+        "native_id": "r39gnqz2cfl9",
+        "status": "investigating",
+        "body": "We are investigating a spike in errors observed in our China colos.",
+        "created_at": "2026-10-10T04:13:17.834Z"
+      },
+      {
+        "native_id": "x8sfb788f16p",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-10-10T05:48:24.702Z"
+      },
+      {
+        "native_id": "p0k13x9wvtsg",
+        "status": "identified",
+        "body": "We are investigating reports of degraded performance for traffic traversing the public internet between certain cities and provinces in mainland China and origin servers located outside the region. The impact is being reported across multiple ISPs and manifests as slower speeds or intermittent timeouts. \n\nWhile this congestion occurs upstream of Cloudflare's network, our engineering team is actively working to mitigate the effects. Intermittent 524 timeout errors is expected to continue due to ongoing congestion. While there is no fixed timeline for full resolution, as there are dependencies outside our network, we are taking steps to reduce customer impact.",
+        "created_at": "2026-10-12T04:23:57.604Z"
+      },
+      {
+        "native_id": "v0h93l868z8k",
+        "status": "identified",
+        "body": "We have identified that increased latency and 5xx errors affecting certain China Network colos are caused by cross-border routing instability in the China network. \nWe are actively working to mitigate impact for affected customers by adjusting traffic routing, and are continuing to work with our network partners on a resolution. Customers experiencing issues may contact Cloudflare Support.",
+        "created_at": "2026-10-12T15:33:07.052Z"
+      },
+      {
+        "native_id": "b450bqcs63hy",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-14T17:50:10.585Z"
+      },
+      {
+        "native_id": "72bz4bp99gfy",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T09:28:39.015Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-10-10T04:08:41.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "zd5dlf64bwf8",
+          "name": "China Network",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 132,
+          "showcase": false,
+          "start_date": "2026-10-10",
+          "status": "operational",
+          "updated_at": "2026-10-26T21:01:21.203Z"
+        }
+      ],
+      "created_at": "2026-10-10T04:13:17.000Z",
+      "id": "cyxclg7nnhjy",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T09:28:39.015Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T09:28:39.015Z",
+          "id": "72bz4bp99gfy",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T09:28:39.015Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-14T17:50:10.585Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-14T17:50:10.585Z",
+          "id": "b450bqcs63hy",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-14T17:50:10.585Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified that increased latency and 5xx errors affecting certain China Network colos are caused by cross-border routing instability in the China network. \nWe are actively working to mitigate impact for affected customers by adjusting traffic routing, and are continuing to work with our network partners on a resolution. Customers experiencing issues may contact Cloudflare Support.",
+          "created_at": "2026-10-12T15:33:07.052Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T15:33:07.052Z",
+          "id": "v0h93l868z8k",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T15:33:07.052Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for traffic traversing the public internet between certain cities and provinces in mainland China and origin servers located outside the region. The impact is being reported across multiple ISPs and manifests as slower speeds or intermittent timeouts. \n\nWhile this congestion occurs upstream of Cloudflare's network, our engineering team is actively working to mitigate the effects. Intermittent 524 timeout errors is expected to continue due to ongoing congestion. While there is no fixed timeline for full resolution, as there are dependencies outside our network, we are taking steps to reduce customer impact.",
+          "created_at": "2026-10-12T04:23:57.604Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T04:23:57.604Z",
+          "id": "p0k13x9wvtsg",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T04:23:57.604Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-10-10T05:48:24.702Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T05:48:24.702Z",
+          "id": "x8sfb788f16p",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T05:48:24.702Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zd5dlf64bwf8",
+              "name": "Cloudflare Sites and Services - China Network",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating a spike in errors observed in our China colos.",
+          "created_at": "2026-10-10T04:13:17.834Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T04:13:17.834Z",
+          "id": "r39gnqz2cfl9",
+          "incident_id": "cyxclg7nnhjy",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T04:13:17.834Z"
+        }
+      ],
+      "monitoring_at": "2026-10-14T17:50:10.585Z",
+      "name": "Elevated Errors in China Network Colos",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T09:28:39.015Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
+      "started_at": "2026-10-10T04:13:17.714Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T09:28:39.043Z"
+    }
+  }
+}

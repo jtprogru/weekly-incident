@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 14,
+    "source_versions_total": 14,
+    "canonical_incidents_total": 14,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W28",
   "from": "2026-07-06T00:00:00Z",
   "to": "2026-07-13T00:00:00Z",
-  "generated_at": "2026-09-11T10:05:32.162101077Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "grafana/rhrk2ck6ly0y",
+      "canonical": {
+        "id": "ci-c4bd5cd42566082c25028c4d",
+        "sources": [
+          {
+            "key": "grafana/rhrk2ck6ly0y",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/y7gx5xr15rmm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c4bd5cd42566082c25028c4d",
       "vendor": "grafana",
       "title": "Issue with Dashboard Views Being Registered",
       "url": "https://stspg.io/y7gx5xr15rmm",
@@ -110,24 +132,25 @@
       "ongoing": false,
       "components": [
         "AWS Australia - prod-ap-southeast-2",
+        "AWS Australia - prod-au-southeast-1",
         "AWS Brazil - prod-sa-east-1",
         "AWS Canada - prod-ca-east-0",
         "AWS Germany - prod-eu-west-2",
         "AWS Germany - prod-eu-west-4",
         "AWS India - prod-ap-south-1",
+        "AWS Ireland - prod-eu-west-6",
         "AWS Japan - prod-ap-northeast-0",
-        "AWS UAE - prod-me-central-1",
         "AWS Singapore - prod-ap-southeast-1",
         "AWS Sweden - prod-eu-north-0",
+        "AWS Switzerland - prod-eu-central-0",
+        "AWS UAE - prod-me-central-1",
+        "AWS UK - prod-gb-south-1",
         "AWS US East - prod-us-east-0",
         "AWS US East - prod-us-east-2",
         "AWS US West - prod-us-west-0",
-        "AWS Australia - prod-au-southeast-1",
-        "AWS UK - prod-gb-south-1",
-        "AWS Ireland - prod-eu-west-6",
-        "Azure US Central - us-central2",
-        "AWS Switzerland - prod-eu-central-0",
         "Azure Netherlands - prod-eu-west-3",
+        "Azure US Central - us-central2",
+        "Federal Cloud - AWS US Gov West",
         "GCP Australia - prod-au-southeast-0",
         "GCP Belgium - prod-eu-west-0",
         "GCP Brazil - prod-sa-east-0",
@@ -138,8 +161,7 @@
         "GCP US Central - prod-us-central-3",
         "GCP US Central - prod-us-central-4",
         "GCP US East - prod-us-east-1",
-        "play.grafana.org",
-        "Federal Cloud - AWS US Gov West"
+        "play.grafana.org"
       ],
       "score": {
         "value": 114235,
@@ -150,7 +172,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/dy7gggxhx3b1",
+      "canonical": {
+        "id": "ci-d76e44fd370ab6c9c63313cc",
+        "sources": [
+          {
+            "key": "grafana/dy7gggxhx3b1",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/lk4y3c36tmj2"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d76e44fd370ab6c9c63313cc",
       "vendor": "grafana",
       "title": "IRM Mobile App forcing some users to logout",
       "url": "https://stspg.io/lk4y3c36tmj2",
@@ -172,7 +207,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/c8vz3g703h4k",
+      "canonical": {
+        "id": "ci-6a5e89ec064af4ba534704c6",
+        "sources": [
+          {
+            "key": "grafana/c8vz3g703h4k",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/ftjw34232ndk"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6a5e89ec064af4ba534704c6",
       "vendor": "grafana",
       "title": "PDC Degraded performance",
       "url": "https://stspg.io/ftjw34232ndk",
@@ -199,7 +247,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/cstx3v63mklm",
+      "canonical": {
+        "id": "ci-27f783aabe4a50d497e4cd6a",
+        "sources": [
+          {
+            "key": "github/cstx3v63mklm",
+            "path": "2026/W28/github.json",
+            "url": "https://stspg.io/r6sj21r75r24"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-27f783aabe4a50d497e4cd6a",
       "vendor": "github",
       "title": "Delays starting Actions runs",
       "url": "https://stspg.io/r6sj21r75r24",
@@ -222,7 +283,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/2kxtxyvzzzk0",
+      "canonical": {
+        "id": "ci-1a942ff25a96e5821fc90b28",
+        "sources": [
+          {
+            "key": "digitalocean/2kxtxyvzzzk0",
+            "path": "2026/W28/digitalocean.json",
+            "url": "https://stspg.io/p8xctv4k5yjv"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1a942ff25a96e5821fc90b28",
       "vendor": "digitalocean",
       "title": "Kubernetes Deployments in NYC1",
       "url": "https://stspg.io/p8xctv4k5yjv",
@@ -244,7 +318,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/ftbs8q2gvqnx",
+      "canonical": {
+        "id": "ci-05999ebeaa673ddac57f300d",
+        "sources": [
+          {
+            "key": "grafana/ftbs8q2gvqnx",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/p3xgglcjcppk"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-05999ebeaa673ddac57f300d",
       "vendor": "grafana",
       "title": "Grafana rulers crash-looping on prometheus",
       "url": "https://stspg.io/p3xgglcjcppk",
@@ -267,7 +354,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/fz9sdc2q008p",
+      "canonical": {
+        "id": "ci-6ff912a7b00c20dabe200b9f",
+        "sources": [
+          {
+            "key": "github/fz9sdc2q008p",
+            "path": "2026/W28/github.json",
+            "url": "https://stspg.io/rmlwm65yzzjj"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6ff912a7b00c20dabe200b9f",
       "vendor": "github",
       "title": "Actions and Codespaces APIs experiencing partial failures",
       "url": "https://stspg.io/rmlwm65yzzjj",
@@ -290,7 +390,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/tj6b68kpdblp",
+      "canonical": {
+        "id": "ci-251300d8cca0059a06835088",
+        "sources": [
+          {
+            "key": "grafana/tj6b68kpdblp",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/wf0b60558zyz"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-251300d8cca0059a06835088",
       "vendor": "grafana",
       "title": "Delayed ingestion and recording rule evaluation failures for Mimir in prod-ap-south-1",
       "url": "https://stspg.io/wf0b60558zyz",
@@ -301,8 +414,8 @@
       "duration_minutes": 159,
       "ongoing": false,
       "components": [
-        "AWS India - prod-ap-south-1: Rule Evaluation",
-        "AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API"
+        "AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API",
+        "AWS India - prod-ap-south-1: Rule Evaluation"
       ],
       "score": {
         "value": 318,
@@ -313,7 +426,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/tszxz2dzv1f3",
+      "canonical": {
+        "id": "ci-4ee178971c170bfe6f38b2c4",
+        "sources": [
+          {
+            "key": "grafana/tszxz2dzv1f3",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/c3qwt2n084hd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4ee178971c170bfe6f38b2c4",
       "vendor": "grafana",
       "title": "Cannot access dashboard set up as a home page",
       "url": "https://stspg.io/c3qwt2n084hd",
@@ -339,7 +465,20 @@
       "above_threshold": false
     },
     {
-      "key": "datadog/9qt73ty9p9ph",
+      "canonical": {
+        "id": "ci-04f70ed876fa502e03123828",
+        "sources": [
+          {
+            "key": "datadog/9qt73ty9p9ph",
+            "path": "2026/W28/datadog.json",
+            "url": "https://stspg.io/y5323mlt6x4g"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-04f70ed876fa502e03123828",
       "vendor": "datadog",
       "title": "Delayed data streams data",
       "url": "https://stspg.io/y5323mlt6x4g",
@@ -361,7 +500,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/js4h6gdnlm77",
+      "canonical": {
+        "id": "ci-8d3fc4832d23693822625293",
+        "sources": [
+          {
+            "key": "grafana/js4h6gdnlm77",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/x5s6smgnk95g"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8d3fc4832d23693822625293",
       "vendor": "grafana",
       "title": "Delayed usage and billing data",
       "url": "https://stspg.io/x5s6smgnk95g",
@@ -381,7 +533,20 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/c628b5qrfvd9",
+      "canonical": {
+        "id": "ci-801ab4fca5960e68a7127d1d",
+        "sources": [
+          {
+            "key": "grafana/c628b5qrfvd9",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/z0s7nh0tz4ss"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-801ab4fca5960e68a7127d1d",
       "vendor": "grafana",
       "title": "Loki Billing Data Lost",
       "url": "https://stspg.io/z0s7nh0tz4ss",
@@ -401,7 +566,20 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/vj17mtb8b5b0",
+      "canonical": {
+        "id": "ci-c77c0c6f7eed8bdc0855a84a",
+        "sources": [
+          {
+            "key": "grafana/vj17mtb8b5b0",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/5740zjht5dcl"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c77c0c6f7eed8bdc0855a84a",
       "vendor": "grafana",
       "title": "Loki read path in prod-eu-west-2 was down",
       "url": "https://stspg.io/5740zjht5dcl",
@@ -423,7 +601,20 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/tdzys437r2h5",
+      "canonical": {
+        "id": "ci-95692564778be6605aee742f",
+        "sources": [
+          {
+            "key": "grafana/tdzys437r2h5",
+            "path": "2026/W28/grafana.json",
+            "url": "https://stspg.io/b7q606nsf9sy"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-95692564778be6605aee742f",
       "vendor": "grafana",
       "title": "Network Degredation in prod-us-central-0",
       "url": "https://stspg.io/b7q606nsf9sy",

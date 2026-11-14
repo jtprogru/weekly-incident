@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2019-W25",
   "from": "2019-06-17T00:00:00Z",
   "to": "2019-06-24T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/sqq15l5bd34s",
+      "canonical": {
+        "id": "ci-bb9645b89c2bf851a0ba98c9",
+        "sources": [
+          {
+            "key": "atlassian/sqq15l5bd34s",
+            "path": "2019/W25/atlassian.json",
+            "url": "http://stspg.io/d5b25c71b"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-bb9645b89c2bf851a0ba98c9",
       "vendor": "atlassian",
       "title": "Atlassian Cloud email notifications issue",
       "url": "http://stspg.io/d5b25c71b",

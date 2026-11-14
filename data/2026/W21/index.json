@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 12,
+    "source_versions_total": 12,
+    "canonical_incidents_total": 12,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W21",
   "from": "2026-05-18T00:00:00Z",
   "to": "2026-05-25T00:00:00Z",
-  "generated_at": "2026-10-25T10:15:42.688978012Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "yandexcloud/1772",
+      "canonical": {
+        "id": "ci-e36d5ddf780b5c37400538ff",
+        "sources": [
+          {
+            "key": "yandexcloud/1772",
+            "path": "2026/W21/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1772"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e36d5ddf780b5c37400538ff",
       "vendor": "yandexcloud",
       "title": "The problem is with Virtual Private Cloud services",
       "url": "https://status.yandex.cloud/en/incidents/1772",
@@ -117,19 +139,19 @@
       "ongoing": false,
       "components": [
         "Compute Cloud",
-        "Managed Service for Kubernetes®",
-        "Managed Service for PostgreSQL",
-        "Managed Service for ClickHouse®",
-        "Yandex StoreDoc",
-        "Managed Service for MySQL®",
-        "Managed Service for Valkey™",
-        "Managed Service for Apache Kafka®",
-        "Managed Service for GitLab",
+        "Managed Service for Apache Spark™",
         "Managed Service for OpenSearch",
         "Managed Service for Prometheus®",
-        "Managed Service for Apache Spark™",
+        "Managed Service for Sharded PostgreSQL",
         "Managed Service for YTsaurus",
-        "Managed Service for Sharded PostgreSQL"
+        "Managed Service for Apache Kafka®",
+        "Managed Service for ClickHouse®",
+        "Managed Service for GitLab",
+        "Managed Service for Kubernetes®",
+        "Managed Service for MySQL®",
+        "Managed Service for PostgreSQL",
+        "Managed Service for Valkey™",
+        "Yandex StoreDoc"
       ],
       "score": {
         "value": 6384,
@@ -140,7 +162,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/0plg9bpr660h",
+      "canonical": {
+        "id": "ci-f2018f3bb14a96bcbf9e6a4d",
+        "sources": [
+          {
+            "key": "stripe/0plg9bpr660h",
+            "path": "2026/W21/stripe.json",
+            "url": "https://stspg.io/b8k77546cr1x"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f2018f3bb14a96bcbf9e6a4d",
       "vendor": "stripe",
       "title": "SEPA Instant Partial Outage",
       "url": "https://stspg.io/b8k77546cr1x",
@@ -162,7 +197,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/1763",
+      "canonical": {
+        "id": "ci-f89a6a62b00db8c42e565771",
+        "sources": [
+          {
+            "key": "yandexcloud/1763",
+            "path": "2026/W21/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1763"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f89a6a62b00db8c42e565771",
       "vendor": "yandexcloud",
       "title": "The problem of creating resources in ru-central1-A.",
       "url": "https://status.yandex.cloud/en/incidents/1763",
@@ -174,18 +222,18 @@
       "ongoing": false,
       "components": [
         "Compute Cloud",
-        "Managed Service for PostgreSQL",
-        "Managed Service for ClickHouse®",
-        "Yandex StoreDoc",
-        "Managed Service for MySQL®",
-        "Managed Service for Valkey™",
-        "Managed Service for Apache Kafka®",
-        "Managed Service for GitLab",
+        "Managed Service for Apache Spark™",
         "Managed Service for OpenSearch",
         "Managed Service for Prometheus®",
-        "Managed Service for Apache Spark™",
+        "Managed Service for Sharded PostgreSQL",
         "Managed Service for YTsaurus",
-        "Managed Service for Sharded PostgreSQL"
+        "Managed Service for Apache Kafka®",
+        "Managed Service for ClickHouse®",
+        "Managed Service for GitLab",
+        "Managed Service for MySQL®",
+        "Managed Service for PostgreSQL",
+        "Managed Service for Valkey™",
+        "Yandex StoreDoc"
       ],
       "score": {
         "value": 643.5,
@@ -196,7 +244,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/spgd2scvttth",
+      "canonical": {
+        "id": "ci-b7783513356ae1b1a5d398cd",
+        "sources": [
+          {
+            "key": "digitalocean/spgd2scvttth",
+            "path": "2026/W21/digitalocean.json",
+            "url": "https://stspg.io/1cr62wpw64kx"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-b7783513356ae1b1a5d398cd",
       "vendor": "digitalocean",
       "title": "Block Storage Volume Performance",
       "url": "https://stspg.io/1cr62wpw64kx",
@@ -218,7 +279,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/1775",
+      "canonical": {
+        "id": "ci-4d5e59853c2faedc083716c8",
+        "sources": [
+          {
+            "key": "yandexcloud/1775",
+            "path": "2026/W21/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1775"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4d5e59853c2faedc083716c8",
       "vendor": "yandexcloud",
       "title": "The problem is with the services",
       "url": "https://status.yandex.cloud/en/incidents/1775",
@@ -240,7 +314,20 @@
       "above_threshold": false
     },
     {
-      "key": "slack/1555",
+      "canonical": {
+        "id": "ci-0e4eb593a9dd8036d626137a",
+        "sources": [
+          {
+            "key": "slack/1555",
+            "path": "2026/W21/slack.json",
+            "url": "https://slack-status.com/2026-05/60ba1e616cf353be"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0e4eb593a9dd8036d626137a",
       "vendor": "slack",
       "title": "Trouble uploading files and emojis in Slack",
       "url": "https://slack-status.com/2026-05/60ba1e616cf353be",
@@ -262,7 +349,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/sv0tfb6jhqz8",
+      "canonical": {
+        "id": "ci-1cd9e93d912d021099281323",
+        "sources": [
+          {
+            "key": "digitalocean/sv0tfb6jhqz8",
+            "path": "2026/W21/digitalocean.json",
+            "url": "https://stspg.io/6y9xmwmgkyy4"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1cd9e93d912d021099281323",
       "vendor": "digitalocean",
       "title": "Cloud Firewall",
       "url": "https://stspg.io/6y9xmwmgkyy4",
@@ -284,7 +384,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/55wh1mbv7vbs",
+      "canonical": {
+        "id": "ci-490495e3d5f970ac7c592049",
+        "sources": [
+          {
+            "key": "digitalocean/55wh1mbv7vbs",
+            "path": "2026/W21/digitalocean.json",
+            "url": "https://stspg.io/5dzt41b39qvv"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-490495e3d5f970ac7c592049",
       "vendor": "digitalocean",
       "title": "Cloud Firewall",
       "url": "https://stspg.io/5dzt41b39qvv",
@@ -306,7 +419,20 @@
       "above_threshold": false
     },
     {
-      "key": "yandexcloud/1770",
+      "canonical": {
+        "id": "ci-4130191691ffbf9a23f307d7",
+        "sources": [
+          {
+            "key": "yandexcloud/1770",
+            "path": "2026/W21/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1770"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4130191691ffbf9a23f307d7",
       "vendor": "yandexcloud",
       "title": "The problem is with the Yandex Managed Service for Trino",
       "url": "https://status.yandex.cloud/en/incidents/1770",
@@ -328,7 +454,20 @@
       "above_threshold": false
     },
     {
-      "key": "yandexcloud/1756",
+      "canonical": {
+        "id": "ci-5488cef26581870f9e45b710",
+        "sources": [
+          {
+            "key": "yandexcloud/1756",
+            "path": "2026/W21/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1756"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-5488cef26581870f9e45b710",
       "vendor": "yandexcloud",
       "title": "The problem is with Compute Cloud services",
       "url": "https://status.yandex.cloud/en/incidents/1756",
@@ -350,7 +489,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/wjg95ch7scvp",
+      "canonical": {
+        "id": "ci-47ad279eb28aa27ed2c8f06c",
+        "sources": [
+          {
+            "key": "stripe/wjg95ch7scvp",
+            "path": "2026/W21/stripe.json",
+            "url": "https://stspg.io/4pv6q73763bm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-47ad279eb28aa27ed2c8f06c",
       "vendor": "stripe",
       "title": "Elevated Bancontact errors",
       "url": "https://stspg.io/4pv6q73763bm",
@@ -372,7 +524,20 @@
       "above_threshold": false
     },
     {
-      "key": "slack/1554",
+      "canonical": {
+        "id": "ci-6deca55495b33c5df6e374c5",
+        "sources": [
+          {
+            "key": "slack/1554",
+            "path": "2026/W21/slack.json",
+            "url": "https://slack-status.com/2026-05/8ebfa96c50e29550"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6deca55495b33c5df6e374c5",
       "vendor": "slack",
       "title": "Huddle AI summaries not being generated",
       "url": "https://slack-status.com/2026-05/8ebfa96c50e29550",

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/9fzfjzc5ms0h",
+    "vendor": "cloudflare",
+    "native_id": "9fzfjzc5ms0h",
+    "title": "R2 Availability Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/9fzfjzc5ms0h",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-07T18:42:26Z",
+    "resolved_at": "2026-08-09T02:35:44.434Z",
+    "duration_minutes": 1913,
+    "components": [
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "p5bbmxlmshz0",
+        "status": "investigating",
+        "body": "Cloudflare is aware, and investigating an issue affecting availability in ENAM for a small number of R2 buckets.",
+        "created_at": "2026-08-07T18:42:26.295Z"
+      },
+      {
+        "native_id": "7plcrlxh4d49",
+        "status": "identified",
+        "body": "We have identified the cause and mitigated further impact. Writes to a small set of buckets in ENAM were impacted between 14:52-17:02 UTC. We are continuing to work to restore normal availability for these buckets.",
+        "created_at": "2026-08-07T22:54:11.666Z"
+      },
+      {
+        "native_id": "61rdnrdt6k1b",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.",
+        "created_at": "2026-08-07T23:05:19.797Z"
+      },
+      {
+        "native_id": "pqkrrkkd1g7m",
+        "status": "identified",
+        "body": "We are continuing to restore availability for impacted R2 buckets in ENAM. Recovery is progressing well, and we will provide status updates as they becomes available",
+        "created_at": "2026-08-08T10:52:56.048Z"
+      },
+      {
+        "native_id": "fqjtwnj5gc7k",
+        "status": "identified",
+        "body": "Availability has been restored for nearly all impacted R2 buckets. A small number of objects uploaded through multipart uploads in ENAM between 14:52 and 17:02 UTC on August 7 remain unavailable. We are continuing to restore access and expect to be able to provide another update soon.",
+        "created_at": "2026-08-08T23:28:09.074Z"
+      },
+      {
+        "native_id": "n8kwl4kffmsy",
+        "status": "resolved",
+        "body": "Availability has now been fully restored for all impacted R2 buckets, including the remaining objects uploaded through multipart uploads in ENAM.",
+        "created_at": "2026-08-09T02:35:44.434Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 81,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-08-24T08:28:22.000Z"
+        }
+      ],
+      "created_at": "2026-08-07T18:42:26.000Z",
+      "id": "9fzfjzc5ms0h",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Availability has now been fully restored for all impacted R2 buckets, including the remaining objects uploaded through multipart uploads in ENAM.",
+          "created_at": "2026-08-09T02:35:44.434Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-09T02:35:44.434Z",
+          "id": "n8kwl4kffmsy",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-09T02:35:44.434Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Availability has been restored for nearly all impacted R2 buckets. A small number of objects uploaded through multipart uploads in ENAM between 14:52 and 17:02 UTC on August 7 remain unavailable. We are continuing to restore access and expect to be able to provide another update soon.",
+          "created_at": "2026-08-08T23:28:09.074Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-08T23:28:09.074Z",
+          "id": "fqjtwnj5gc7k",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-08T23:28:09.074Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to restore availability for impacted R2 buckets in ENAM. Recovery is progressing well, and we will provide status updates as they becomes available",
+          "created_at": "2026-08-08T10:52:56.048Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-08T10:52:56.048Z",
+          "id": "pqkrrkkd1g7m",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-08T10:52:56.048Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.",
+          "created_at": "2026-08-07T23:05:19.797Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T23:05:19.797Z",
+          "id": "61rdnrdt6k1b",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T23:05:19.797Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the cause and mitigated further impact. Writes to a small set of buckets in ENAM were impacted between 14:52-17:02 UTC. We are continuing to work to restore normal availability for these buckets.",
+          "created_at": "2026-08-07T22:54:11.666Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T22:54:11.000Z",
+          "id": "7plcrlxh4d49",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T23:04:53.857Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware, and investigating an issue affecting availability in ENAM for a small number of R2 buckets.",
+          "created_at": "2026-08-07T18:42:26.295Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T18:42:26.000Z",
+          "id": "p5bbmxlmshz0",
+          "incident_id": "9fzfjzc5ms0h",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T19:39:57.353Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "R2 Availability Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-09T02:35:44.434Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/9fzfjzc5ms0h",
+      "started_at": "2026-08-07T18:42:26.000Z",
+      "status": "resolved",
+      "updated_at": "2026-08-09T02:35:44.450Z"
+    }
+  }
+}

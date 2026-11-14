@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W46",
   "from": "2025-11-10T00:00:00Z",
   "to": "2025-11-17T00:00:00Z",
-  "generated_at": "2026-09-25T10:40:42.808900938Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/92sk80qxml0t",
+      "canonical": {
+        "id": "ci-221b9697155a16ebeee1c7c4",
+        "sources": [
+          {
+            "key": "datadog/92sk80qxml0t",
+            "path": "2025/W46/datadog.json",
+            "url": "https://stspg.io/4mf4y6y1ft31"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-221b9697155a16ebeee1c7c4",
       "vendor": "datadog",
       "title": "Web Application Not Loading",
       "url": "https://stspg.io/4mf4y6y1ft31",

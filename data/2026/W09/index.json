@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 8,
+    "source_versions_total": 8,
+    "canonical_incidents_total": 7,
+    "merged_source_records_total": 1,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W09",
   "from": "2026-02-23T00:00:00Z",
   "to": "2026-03-02T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T12:36:38.232091035Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,29 @@
   ],
   "incidents": [
     {
-      "key": "aws/9fb26c8e8bd2a9c4",
+      "canonical": {
+        "id": "ci-845c080d871358f626ba3e26",
+        "sources": [
+          {
+            "key": "aws/6a8fc17b2bdd3e4d",
+            "path": "2026/W09/aws.json",
+            "url": "https://health.aws.amazon.com/health/status"
+          },
+          {
+            "key": "aws/9fb26c8e8bd2a9c4",
+            "path": "2026/W09/aws.json",
+            "url": "https://health.aws.amazon.com/health/status"
+          }
+        ],
+        "reasons": [
+          "aws-containment-v1"
+        ],
+        "start_quality": "first_observed_update",
+        "warnings": [
+          "AWS onset is the first observed message, not a verified impact start"
+        ]
+      },
+      "key": "ci-845c080d871358f626ba3e26",
       "vendor": "aws",
       "title": "Increased Error Rates",
       "url": "https://health.aws.amazon.com/health/status",
@@ -117,35 +148,28 @@
         "multipleservices-me-central-1"
       ],
       "score": {
-        "value": 696842,
-        "duration_minutes": 348421,
+        "value": 743010,
+        "duration_minutes": 371505,
         "components": 1,
         "vendor_weight": 2
       },
       "above_threshold": true
     },
     {
-      "key": "aws/6a8fc17b2bdd3e4d",
-      "vendor": "aws",
-      "title": "Increased Error Rates",
-      "url": "https://health.aws.amazon.com/health/status",
-      "impact": "unknown",
-      "status": "investigating",
-      "started_at": "2026-03-01T20:14:03Z",
-      "ongoing": true,
-      "components": [
-        "multipleservices-me-central-1"
-      ],
-      "score": {
-        "value": 695956,
-        "duration_minutes": 347978,
-        "components": 1,
-        "vendor_weight": 2
+      "canonical": {
+        "id": "ci-80f0c3214459f0368c83eb05",
+        "sources": [
+          {
+            "key": "gcp/41E5S3mkTGDfkZuJZH5k",
+            "path": "2026/W09/gcp.json",
+            "url": "https://status.cloud.google.com/incidents/41E5S3mkTGDfkZuJZH5k"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
       },
-      "above_threshold": true
-    },
-    {
-      "key": "gcp/41E5S3mkTGDfkZuJZH5k",
+      "key": "ci-80f0c3214459f0368c83eb05",
       "vendor": "gcp",
       "title": "Vertex AI Gemini API customers experienced increased error rates when accessing the global endpoint.",
       "url": "https://status.cloud.google.com/incidents/41E5S3mkTGDfkZuJZH5k",
@@ -158,8 +182,8 @@
       "components": [
         "Agent Assist",
         "Dialogflow CX",
-        "Vertex Gemini API",
-        "Google Cloud Support"
+        "Google Cloud Support",
+        "Vertex Gemini API"
       ],
       "score": {
         "value": 944,
@@ -170,7 +194,20 @@
       "above_threshold": false
     },
     {
-      "key": "slack/1533",
+      "canonical": {
+        "id": "ci-3f0a4d116a0a1c64f9a4ae76",
+        "sources": [
+          {
+            "key": "slack/1533",
+            "path": "2026/W09/slack.json",
+            "url": "https://slack-status.com/2026-03/a498942c1b812963"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-3f0a4d116a0a1c64f9a4ae76",
       "vendor": "slack",
       "title": "Issue with Slack Search feature",
       "url": "https://slack-status.com/2026-03/a498942c1b812963",
@@ -192,7 +229,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1531",
+      "canonical": {
+        "id": "ci-faf27db63b2ef8a4cc0bf168",
+        "sources": [
+          {
+            "key": "slack/1531",
+            "path": "2026/W09/slack.json",
+            "url": "https://slack-status.com/2026-02/0736abde1ec2eea0"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-faf27db63b2ef8a4cc0bf168",
       "vendor": "slack",
       "title": "Issue with Slack Direct Messaging",
       "url": "https://slack-status.com/2026-02/0736abde1ec2eea0",
@@ -214,7 +264,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1532",
+      "canonical": {
+        "id": "ci-6d4c557bc1692b18686d9e23",
+        "sources": [
+          {
+            "key": "slack/1532",
+            "path": "2026/W09/slack.json",
+            "url": "https://slack-status.com/2026-02/fb905e8a457042ba"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6d4c557bc1692b18686d9e23",
       "vendor": "slack",
       "title": "Slack Email Delivery Feature Degradation",
       "url": "https://slack-status.com/2026-02/fb905e8a457042ba",
@@ -236,7 +299,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/qqb6y9g81rw6",
+      "canonical": {
+        "id": "ci-a11fd228529cbdf06ed26525",
+        "sources": [
+          {
+            "key": "datadog/qqb6y9g81rw6",
+            "path": "2026/W09/datadog.json",
+            "url": "https://stspg.io/f7nly8tc2198"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a11fd228529cbdf06ed26525",
       "vendor": "datadog",
       "title": "Delayed RUM data",
       "url": "https://stspg.io/f7nly8tc2198",
@@ -259,7 +335,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/r88g618tt765",
+      "canonical": {
+        "id": "ci-d04f338c8b4c2f29fce7ca08",
+        "sources": [
+          {
+            "key": "circleci/r88g618tt765",
+            "path": "2026/W09/circleci.json",
+            "url": "https://stspg.io/vmpflb7sk964"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d04f338c8b4c2f29fce7ca08",
       "vendor": "circleci",
       "title": "Degradation in some checkout steps",
       "url": "https://stspg.io/vmpflb7sk964",

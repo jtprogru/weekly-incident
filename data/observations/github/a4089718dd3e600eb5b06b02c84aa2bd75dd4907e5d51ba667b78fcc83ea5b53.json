@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/q27ttsnp0x4g",
+    "vendor": "github",
+    "native_id": "q27ttsnp0x4g",
+    "title": "Actions runs are experiencing failures to start",
+    "url": "https://stspg.io/t0tfsmbt70w7",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-13T13:32:22.177Z",
+    "resolved_at": "2026-07-13T13:53:57.036Z",
+    "duration_minutes": 21,
+    "components": [
+      "Actions",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "pytdhct3nl84",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions",
+        "created_at": "2026-07-13T13:32:22.327Z"
+      },
+      {
+        "native_id": "3zq7b86jm204",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-07-13T13:32:44.537Z"
+      },
+      {
+        "native_id": "h571kksql98t",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-13T13:39:27.25Z"
+      },
+      {
+        "native_id": "r7tq6xmbtq3c",
+        "status": "resolved",
+        "body": "On July 13, 2026, between 13:11 and 13:53 UTC, some customers experienced failures starting and running GitHub Actions workflows, which also affected Copilot cloud agent sessions and GitHub Pages builds since they depend on Actions. During the peak of the incident, 30% of Actions jobs failed to start and 2% were delayed more than 5 minutes. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a configuration change in an internal autoscaling component that contained outdated capacity threshold values. This caused a critical Actions service to scale below its required baseline, reducing capacity for workflow processing. We identified the regression, rolled back the change, and restored service capacity. New workflow executions recovered by 13:39 UTC. Full recovery was reached by 13:53 UTC after the queued backlog was drained. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we have added deployment guardrails to validate that autoscaling inputs are current and to detect drift between planned and live scaling state before autoscaling changes are applied.",
+        "created_at": "2026-07-13T13:53:57.036Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-27T00:26:05.957Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-26T16:49:07.311Z"
+        }
+      ],
+      "created_at": "2026-07-13T13:32:22.192Z",
+      "id": "q27ttsnp0x4g",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 13, 2026, between 13:11 and 13:53 UTC, some customers experienced failures starting and running GitHub Actions workflows, which also affected Copilot cloud agent sessions and GitHub Pages builds since they depend on Actions. During the peak of the incident, 30% of Actions jobs failed to start and 2% were delayed more than 5 minutes. \u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a configuration change in an internal autoscaling component that contained outdated capacity threshold values. This caused a critical Actions service to scale below its required baseline, reducing capacity for workflow processing. We identified the regression, rolled back the change, and restored service capacity. New workflow executions recovered by 13:39 UTC. Full recovery was reached by 13:53 UTC after the queued backlog was drained. \u003cbr /\u003e\u003cbr /\u003eTo prevent recurrence, we have added deployment guardrails to validate that autoscaling inputs are current and to detect drift between planned and live scaling state before autoscaling changes are applied.",
+          "created_at": "2026-07-13T13:53:57.036Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T13:53:57.036Z",
+          "id": "r7tq6xmbtq3c",
+          "incident_id": "q27ttsnp0x4g",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T18:24:55.260Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions and Pages has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-13T13:39:27.250Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T13:39:27.250Z",
+          "id": "h571kksql98t",
+          "incident_id": "q27ttsnp0x4g",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T13:39:27.250Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-07-13T13:32:44.537Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T13:32:44.537Z",
+          "id": "3zq7b86jm204",
+          "incident_id": "q27ttsnp0x4g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T13:32:44.537Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions",
+          "created_at": "2026-07-13T13:32:22.327Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T13:32:22.327Z",
+          "id": "pytdhct3nl84",
+          "incident_id": "q27ttsnp0x4g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T13:32:22.327Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T13:39:27.250Z",
+      "name": "Actions runs are experiencing failures to start",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-13T13:53:57.036Z",
+      "shortlink": "https://stspg.io/t0tfsmbt70w7",
+      "started_at": "2026-07-13T13:32:22.177Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T18:24:55.267Z"
+    }
+  }
+}

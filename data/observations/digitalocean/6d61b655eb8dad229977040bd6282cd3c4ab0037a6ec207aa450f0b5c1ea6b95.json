@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/76l7xym7jd5m",
+    "vendor": "digitalocean",
+    "native_id": "76l7xym7jd5m",
+    "title": "Agent Timeouts While Retrieving Data from Knowledge Bases",
+    "url": "https://stspg.io/sp8b09xxqvjt",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-01T06:25:23.492Z",
+    "resolved_at": "2026-07-02T03:38:53.338Z",
+    "duration_minutes": 1273,
+    "components": [
+      "Agent Runtime",
+      "Knowledge Bases"
+    ],
+    "updates": [
+      {
+        "native_id": "nqgvtsqtnf9d",
+        "status": "investigating",
+        "body": "Our Engineering team is currently investigating an issue where Agents are experiencing timeouts while retrieving data from Knowledge Bases. As a result, affected Agents may fail to retrieve data and return the following error:\n\n\"Failed to retrieve data from Knowledge base(s) - timeout\"\n\nPlease be assured that we are treating this as a high-priority issue and are actively working to mitigate it.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+        "created_at": "2026-07-01T06:25:23.581Z"
+      },
+      {
+        "native_id": "kkkh87nrnjgg",
+        "status": "identified",
+        "body": "Our Engineering team has identified the issue causing Agents to experience timeouts while retrieving data from Knowledge Bases.\n\nPlease be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+        "created_at": "2026-07-01T08:39:50.476Z"
+      },
+      {
+        "native_id": "prfxybfxgk61",
+        "status": "resolved",
+        "body": "This incident has been resolved, and our teams continue to monitor the results. If you experience any further issues, please contact support.",
+        "created_at": "2026-07-02T03:38:53.338Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        },
+        {
+          "created_at": "2026-05-15T07:04:06.617Z",
+          "description": "RAG-powered document stores that give agents access to your data. Supports multiple data sources for accurate, context-aware responses.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "ks0p9z6mcksw",
+          "name": "Knowledge Bases",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2026-05-15",
+          "status": "operational",
+          "updated_at": "2026-07-02T03:38:53.300Z"
+        }
+      ],
+      "created_at": "2026-07-01T06:25:23.501Z",
+      "id": "76l7xym7jd5m",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Agentic Inference Cloud - Agent Runtime",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ks0p9z6mcksw",
+              "name": "Agentic Inference Cloud - Knowledge Bases",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved, and our teams continue to monitor the results. If you experience any further issues, please contact support.",
+          "created_at": "2026-07-02T03:38:53.338Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T03:38:53.338Z",
+          "id": "prfxybfxgk61",
+          "incident_id": "76l7xym7jd5m",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T03:38:53.338Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Agentic Inference Cloud - Agent Runtime",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ks0p9z6mcksw",
+              "name": "Agentic Inference Cloud - Knowledge Bases",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified the issue causing Agents to experience timeouts while retrieving data from Knowledge Bases.\n\nPlease be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+          "created_at": "2026-07-01T08:39:50.476Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-01T08:39:50.476Z",
+          "id": "kkkh87nrnjgg",
+          "incident_id": "76l7xym7jd5m",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-01T08:39:50.476Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Agentic Inference Cloud - Agent Runtime",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "ks0p9z6mcksw",
+              "name": "Agentic Inference Cloud - Knowledge Bases",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is currently investigating an issue where Agents are experiencing timeouts while retrieving data from Knowledge Bases. As a result, affected Agents may fail to retrieve data and return the following error:\n\n\"Failed to retrieve data from Knowledge base(s) - timeout\"\n\nPlease be assured that we are treating this as a high-priority issue and are actively working to mitigate it.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+          "created_at": "2026-07-01T06:25:23.581Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-01T06:25:23.581Z",
+          "id": "nqgvtsqtnf9d",
+          "incident_id": "76l7xym7jd5m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-01T06:25:23.581Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Agent Timeouts While Retrieving Data from Knowledge Bases",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-02T03:38:53.338Z",
+      "shortlink": "https://stspg.io/sp8b09xxqvjt",
+      "started_at": "2026-07-01T06:25:23.492Z",
+      "status": "resolved",
+      "updated_at": "2026-07-02T03:38:53.354Z"
+    }
+  }
+}

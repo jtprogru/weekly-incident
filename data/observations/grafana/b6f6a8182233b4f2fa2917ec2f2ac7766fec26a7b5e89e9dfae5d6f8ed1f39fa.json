@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/zvqy74jln4zq",
+    "vendor": "grafana",
+    "native_id": "zvqy74jln4zq",
+    "title": "Increased query latency for Logs in GCP US Central (prod-us-central-0)",
+    "url": "https://stspg.io/8w9r2df60c3j",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-03T13:54:03.933Z",
+    "resolved_at": "2026-11-03T15:25:01.581Z",
+    "duration_minutes": 90,
+    "components": [
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-0: Rule Evaluation"
+    ],
+    "updates": [
+      {
+        "native_id": "slt2xy7gmwhk",
+        "status": "monitoring",
+        "body": "Some Logs queries in GCP US Central (prod-us-central-0) were slower than usual between 12:08 and 12:34 UTC. The issue is believed to be mitigated, and the team is monitoring while the cause is investigated.",
+        "created_at": "2026-11-03T13:54:04.079Z"
+      },
+      {
+        "native_id": "057tsjzh1clp",
+        "status": "resolved",
+        "body": "This incident has been resolved. Some Logs queries in GCP US Central (prod-us-central-0) were slower than usual between 12:08 and 12:34 UTC. Some Metrics alert and recording rule evaluations in the same region were also delayed between 12:11 and 12:44 UTC. Both issues have been mitigated.",
+        "created_at": "2026-11-03T15:25:01.581Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-12-10T22:16:56.701Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "l72f5c7651n5",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-03T15:25:01.525Z"
+        },
+        {
+          "created_at": "2020-10-28T08:44:16.014Z",
+          "description": "Prometheus-based alerting engine responsible for evaluating alerting and recording rules. Alerting rules are then sent to the Alertmanager and recording rules are ingested to the metrics instance.",
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "xkjgscz19z6c",
+          "name": "GCP US Central - prod-us-central-0: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 58,
+          "showcase": false,
+          "start_date": "2020-10-01",
+          "status": "operational",
+          "updated_at": "2026-09-23T17:42:52.340Z"
+        }
+      ],
+      "created_at": "2026-11-03T13:54:03.945Z",
+      "id": "zvqy74jln4zq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "xkjgscz19z6c",
+              "name": "Alerting and SLO - GCP US Central - prod-us-central-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Some Logs queries in GCP US Central (prod-us-central-0) were slower than usual between 12:08 and 12:34 UTC. Some Metrics alert and recording rule evaluations in the same region were also delayed between 12:11 and 12:44 UTC. Both issues have been mitigated.",
+          "created_at": "2026-11-03T15:25:01.581Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T15:25:01.581Z",
+          "id": "057tsjzh1clp",
+          "incident_id": "zvqy74jln4zq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T15:25:01.581Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some Logs queries in GCP US Central (prod-us-central-0) were slower than usual between 12:08 and 12:34 UTC. The issue is believed to be mitigated, and the team is monitoring while the cause is investigated.",
+          "created_at": "2026-11-03T13:54:04.079Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T13:54:04.079Z",
+          "id": "slt2xy7gmwhk",
+          "incident_id": "zvqy74jln4zq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T13:54:04.079Z"
+        }
+      ],
+      "monitoring_at": "2026-11-03T13:54:04.079Z",
+      "name": "Increased query latency for Logs in GCP US Central (prod-us-central-0)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-03T15:25:01.581Z",
+      "shortlink": "https://stspg.io/8w9r2df60c3j",
+      "started_at": "2026-11-03T13:54:03.933Z",
+      "status": "resolved",
+      "updated_at": "2026-11-03T15:25:01.605Z"
+    }
+  }
+}

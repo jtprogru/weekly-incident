@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/9qty28mt423v",
+    "vendor": "cloudflare",
+    "native_id": "9qty28mt423v",
+    "title": "Increased network congestion in the Eastern US",
+    "url": "https://www.cloudflarestatus.com/incidents/9qty28mt423v",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-14T15:34:21.619Z",
+    "resolved_at": "2026-08-14T16:28:22.084Z",
+    "duration_minutes": 54,
+    "components": [
+      "Durable Objects",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "8qgds33pwrvr",
+        "status": "identified",
+        "body": "We are investigating network issues between Cloudflare colocations located in the eastern United States. This may cause increased errors and latency reaching Cloudflare storage products like R2 and Durable Objects.",
+        "created_at": "2026-08-14T15:34:21.72Z"
+      },
+      {
+        "native_id": "4kvg65f6pscp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-14T16:28:22.084Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 46,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-08-26T23:07:31.000Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 81,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "degraded_performance",
+          "updated_at": "2026-08-31T18:47:05.000Z"
+        }
+      ],
+      "created_at": "2026-08-14T15:34:21.000Z",
+      "id": "9qty28mt423v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-14T16:28:22.084Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-14T16:28:22.084Z",
+          "id": "4kvg65f6pscp",
+          "incident_id": "9qty28mt423v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-14T16:28:22.084Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating network issues between Cloudflare colocations located in the eastern United States. This may cause increased errors and latency reaching Cloudflare storage products like R2 and Durable Objects.",
+          "created_at": "2026-08-14T15:34:21.720Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-14T15:34:21.720Z",
+          "id": "8qgds33pwrvr",
+          "incident_id": "9qty28mt423v",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-14T15:34:21.720Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased network congestion in the Eastern US",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-14T16:28:22.084Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/9qty28mt423v",
+      "started_at": "2026-08-14T15:34:21.619Z",
+      "status": "resolved",
+      "updated_at": "2026-08-14T16:28:22.099Z"
+    }
+  }
+}

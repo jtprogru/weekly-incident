@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/lmmf23klsrxq",
+    "vendor": "cloudflare",
+    "native_id": "lmmf23klsrxq",
+    "title": "Increased Errors for Durable Objects in the Eastern North America region",
+    "url": "https://www.cloudflarestatus.com/incidents/lmmf23klsrxq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-28T09:45:10.615Z",
+    "resolved_at": "2026-10-28T11:10:59.205Z",
+    "duration_minutes": 85,
+    "components": [
+      "Durable Objects",
+      "D1",
+      "Queues",
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "ri1edoqxu60o",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating an issue with Durable Objects and downstream services which potentially impacts multiple customers in the Eastern North America region. Durable Objects in the region may experience increased error rates, and elevated errors for storage operations. \nThis may also affect downstream services such as D1, Queues and Workflows etc. \n\nWe are currently investigating this issue.",
+        "created_at": "2026-10-28T09:45:10.615Z"
+      },
+      {
+        "native_id": "f02u5sm4wxix",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-28T10:26:27.776Z"
+      },
+      {
+        "native_id": "ulu0wsebrb8k",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-28T11:10:59.205Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-11-13T03:44:49.800Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-11-11T13:09:04.520Z"
+        },
+        {
+          "created_at": "2025-10-22T09:19:59.000Z",
+          "description": "Send and receive messages with guaranteed delivery and no charges for egress bandwidth.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3z7cmdfch5kb",
+          "name": "Queues",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2025-10-22",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-10T01:53:58.905Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-10-29T16:33:43.687Z"
+        }
+      ],
+      "created_at": "2026-10-28T09:45:10.615Z",
+      "id": "lmmf23klsrxq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-28T11:10:59.205Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T11:10:59.205Z",
+          "id": "ulu0wsebrb8k",
+          "incident_id": "lmmf23klsrxq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T11:10:59.205Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-28T10:26:27.776Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T10:26:27.776Z",
+          "id": "f02u5sm4wxix",
+          "incident_id": "lmmf23klsrxq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T10:26:27.776Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Developer Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Developer Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Developer Services - Queues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Developer Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating an issue with Durable Objects and downstream services which potentially impacts multiple customers in the Eastern North America region. Durable Objects in the region may experience increased error rates, and elevated errors for storage operations. \nThis may also affect downstream services such as D1, Queues and Workflows etc. \n\nWe are currently investigating this issue.",
+          "created_at": "2026-10-28T09:45:10.615Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T09:45:10.615Z",
+          "id": "ri1edoqxu60o",
+          "incident_id": "lmmf23klsrxq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T09:45:10.615Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Errors for Durable Objects in the Eastern North America region",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-28T11:10:59.205Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/lmmf23klsrxq",
+      "started_at": "2026-10-28T09:45:10.615Z",
+      "status": "resolved",
+      "updated_at": "2026-10-28T11:10:59.205Z"
+    }
+  }
+}

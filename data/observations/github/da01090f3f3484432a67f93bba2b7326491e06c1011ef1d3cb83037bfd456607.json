@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/wms44hv62t3p",
+    "vendor": "github",
+    "native_id": "wms44hv62t3p",
+    "title": "Degraded Git Operations over SSH",
+    "url": "https://stspg.io/9nls6g9ln8p4",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-08-24T07:19:22.991Z",
+    "resolved_at": "2026-08-21T14:00:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "jhq44wgl2nff",
+        "status": "resolved",
+        "body": "On August 21, 2026, between 14:00 and 14:07 UTC, dotcom Git operations over SSH were degraded. Successful Git operations over SSH fell by more than 95% for during the peak impact window, making clone, fetch, or push over SSH effectively unavailable to most users for approximately four minutes. Git operations over HTTPS were not affected.  \n\nThe incident was caused by a software defect in our load-balancing infrastructure that was triggered by a configuration change. The defect only occurred when connections passed through multiple layers of load balancers running the new configuration, which meant it was not detected during canary testing. \n\nWe mitigated the incident by rolling back the configuration change.  \n\nWe are adding regression coverage for multi-layer load-balancer configurations and improving monitoring and alerting for Git operations over SSH to reduce our time to detection and mitigation of similar issues in the future.",
+        "created_at": "2026-08-24T07:19:23.042Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-08-21T14:00:00.000Z",
+      "id": "wms44hv62t3p",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On August 21, 2026, between 14:00 and 14:07 UTC, dotcom Git operations over SSH were degraded. Successful Git operations over SSH fell by more than 95% for during the peak impact window, making clone, fetch, or push over SSH effectively unavailable to most users for approximately four minutes. Git operations over HTTPS were not affected.  \n\nThe incident was caused by a software defect in our load-balancing infrastructure that was triggered by a configuration change. The defect only occurred when connections passed through multiple layers of load balancers running the new configuration, which meant it was not detected during canary testing. \n\nWe mitigated the incident by rolling back the configuration change.  \n\nWe are adding regression coverage for multi-layer load-balancer configurations and improving monitoring and alerting for Git operations over SSH to reduce our time to detection and mitigation of similar issues in the future.",
+          "created_at": "2026-08-24T07:19:23.042Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-08-21T14:00:00.000Z",
+          "id": "jhq44wgl2nff",
+          "incident_id": "wms44hv62t3p",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-24T07:19:23.042Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded Git Operations over SSH",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-21T14:00:00.000Z",
+      "shortlink": "https://stspg.io/9nls6g9ln8p4",
+      "started_at": "2026-08-24T07:19:22.991Z",
+      "status": "resolved",
+      "updated_at": "2026-08-24T07:19:23.053Z"
+    }
+  }
+}

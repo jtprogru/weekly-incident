@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/ftbs8q2gvqnx",
+    "vendor": "grafana",
+    "native_id": "ftbs8q2gvqnx",
+    "title": "Grafana rulers crash-looping on prometheus",
+    "url": "https://stspg.io/p3xgglcjcppk",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-08T12:17:16.733Z",
+    "resolved_at": "2026-07-08T17:23:36.779Z",
+    "duration_minutes": 306,
+    "components": [
+      "AWS US East - prod-us-east-0: Rule Evaluation",
+      "AWS US West - prod-us-west-0: Rule Evaluation"
+    ],
+    "updates": [
+      {
+        "native_id": "t3m5mvyw4jt8",
+        "status": "investigating",
+        "body": "We are investigating issues with the grafana-ruler service on prod-us-east-2 and prod-us-west-0 which are causing periodic crash conditions. A code fix is currently being deployed to mitigate this",
+        "created_at": "2026-07-08T12:17:16.877Z"
+      },
+      {
+        "native_id": "mmvttlzwc2ml",
+        "status": "monitoring",
+        "body": "We are in the process of rolling out the fix. Our engineers are monitoring the progress.",
+        "created_at": "2026-07-08T14:23:23.838Z"
+      },
+      {
+        "native_id": "zct9zff2gxgq",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-08T17:23:36.779Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-01-13T15:05:21.704Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "33nzwl8kffd6",
+          "name": "AWS US East - prod-us-east-0: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-08T17:23:36.720Z"
+        },
+        {
+          "created_at": "2023-09-20T15:36:29.710Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "2cc4g3q2g0xn",
+          "name": "AWS US West - prod-us-west-0: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-08T17:23:36.738Z"
+        }
+      ],
+      "created_at": "2026-07-08T12:17:16.744Z",
+      "id": "ftbs8q2gvqnx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "33nzwl8kffd6",
+              "name": "Alerting and SLO - AWS US East - prod-us-east-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2cc4g3q2g0xn",
+              "name": "Alerting and SLO - AWS US West - prod-us-west-0: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-08T17:23:36.779Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-08T17:23:36.779Z",
+          "id": "zct9zff2gxgq",
+          "incident_id": "ftbs8q2gvqnx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-08T17:23:36.779Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "33nzwl8kffd6",
+              "name": "Alerting and SLO - AWS US East - prod-us-east-0: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2cc4g3q2g0xn",
+              "name": "Alerting and SLO - AWS US West - prod-us-west-0: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are in the process of rolling out the fix. Our engineers are monitoring the progress.",
+          "created_at": "2026-07-08T14:23:23.838Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-08T14:23:23.838Z",
+          "id": "mmvttlzwc2ml",
+          "incident_id": "ftbs8q2gvqnx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-08T14:23:23.838Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "33nzwl8kffd6",
+              "name": "Alerting and SLO - AWS US East - prod-us-east-0: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2cc4g3q2g0xn",
+              "name": "Alerting and SLO - AWS US West - prod-us-west-0: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating issues with the grafana-ruler service on prod-us-east-2 and prod-us-west-0 which are causing periodic crash conditions. A code fix is currently being deployed to mitigate this",
+          "created_at": "2026-07-08T12:17:16.877Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-08T12:17:16.877Z",
+          "id": "t3m5mvyw4jt8",
+          "incident_id": "ftbs8q2gvqnx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-08T12:17:16.877Z"
+        }
+      ],
+      "monitoring_at": "2026-07-08T14:23:23.838Z",
+      "name": "Grafana rulers crash-looping on prometheus",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-08T17:23:36.779Z",
+      "shortlink": "https://stspg.io/p3xgglcjcppk",
+      "started_at": "2026-07-08T12:17:16.733Z",
+      "status": "resolved",
+      "updated_at": "2026-07-08T17:23:36.795Z"
+    }
+  }
+}

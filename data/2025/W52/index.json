@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W52",
   "from": "2025-12-22T00:00:00Z",
   "to": "2025-12-29T00:00:00Z",
-  "generated_at": "2026-08-29T11:51:14.43343297Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "stripe/fs326pl1tcn9",
+      "canonical": {
+        "id": "ci-1c54b942dc8277134a9db974",
+        "sources": [
+          {
+            "key": "stripe/fs326pl1tcn9",
+            "path": "2025/W52/stripe.json",
+            "url": "https://stspg.io/w20wf142qn51"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1c54b942dc8277134a9db974",
       "vendor": "stripe",
       "title": "Elevated iDeal errors",
       "url": "https://stspg.io/w20wf142qn51",
@@ -120,7 +142,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/qtm1lh8g56l6",
+      "canonical": {
+        "id": "ci-fafc7400a5e0d17a40ae002b",
+        "sources": [
+          {
+            "key": "stripe/qtm1lh8g56l6",
+            "path": "2025/W52/stripe.json",
+            "url": "https://stspg.io/yc8n8zr8nvmn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-fafc7400a5e0d17a40ae002b",
       "vendor": "stripe",
       "title": "Elevated Swish errors",
       "url": "https://stspg.io/yc8n8zr8nvmn",

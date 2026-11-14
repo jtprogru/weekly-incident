@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 11,
+    "source_versions_total": 11,
+    "canonical_incidents_total": 11,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W20",
   "from": "2026-05-11T00:00:00Z",
   "to": "2026-05-18T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "digitalocean/gwgh41d5r0nz",
+      "canonical": {
+        "id": "ci-8dc9c4e7028b3dcfe8964dba",
+        "sources": [
+          {
+            "key": "digitalocean/gwgh41d5r0nz",
+            "path": "2026/W20/digitalocean.json",
+            "url": "https://stspg.io/r6dtr7gc9pch"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8dc9c4e7028b3dcfe8964dba",
       "vendor": "digitalocean",
       "title": "DNS service, Certificates and Managed MongoDB",
       "url": "https://stspg.io/r6dtr7gc9pch",
@@ -116,8 +138,8 @@
       "duration_minutes": 409,
       "ongoing": false,
       "components": [
-        "Global",
-        "DNS"
+        "DNS",
+        "Global"
       ],
       "score": {
         "value": 654.4000000000001,
@@ -128,7 +150,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/qhxl36d29vfl",
+      "canonical": {
+        "id": "ci-a76c2e4b19a99a21c55a6b6d",
+        "sources": [
+          {
+            "key": "circleci/qhxl36d29vfl",
+            "path": "2026/W20/circleci.json",
+            "url": "https://stspg.io/c8h5p945vnkw"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a76c2e4b19a99a21c55a6b6d",
       "vendor": "circleci",
       "title": "Elevated 429 errors pulling from maven central",
       "url": "https://stspg.io/c8h5p945vnkw",
@@ -152,7 +187,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1553",
+      "canonical": {
+        "id": "ci-114752388364a22478b40082",
+        "sources": [
+          {
+            "key": "slack/1553",
+            "path": "2026/W20/slack.json",
+            "url": "https://slack-status.com/2026-05/fe557ca05fdb64fa"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-114752388364a22478b40082",
       "vendor": "slack",
       "title": "Issues affecting file uploads, message edits, channel renames, and channel creations",
       "url": "https://slack-status.com/2026-05/fe557ca05fdb64fa",
@@ -163,9 +211,9 @@
       "duration_minutes": 57,
       "ongoing": false,
       "components": [
-        "Messaging",
-        "Files",
         "Apps/Integrations/APIs",
+        "Files",
+        "Messaging",
         "Workflows"
       ],
       "score": {
@@ -177,7 +225,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/ws0j885npfx1",
+      "canonical": {
+        "id": "ci-e811d98eb0a3c2f907d6623d",
+        "sources": [
+          {
+            "key": "stripe/ws0j885npfx1",
+            "path": "2026/W20/stripe.json",
+            "url": "https://stspg.io/06tvvhhcgy80"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e811d98eb0a3c2f907d6623d",
       "vendor": "stripe",
       "title": "Elevated MobilePay errors",
       "url": "https://stspg.io/06tvvhhcgy80",
@@ -199,7 +260,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/shjkvbwy06nl",
+      "canonical": {
+        "id": "ci-89746412d1f29bb81a71ba15",
+        "sources": [
+          {
+            "key": "datadog/shjkvbwy06nl",
+            "path": "2026/W20/datadog.json",
+            "url": "https://stspg.io/sskp2jtfd9sj"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-89746412d1f29bb81a71ba15",
       "vendor": "datadog",
       "title": "Delayed Metric Loading",
       "url": "https://stspg.io/sskp2jtfd9sj",
@@ -222,7 +296,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/f5l7tqzmc9mm",
+      "canonical": {
+        "id": "ci-26ddd961b436cb4073952d0a",
+        "sources": [
+          {
+            "key": "stripe/f5l7tqzmc9mm",
+            "path": "2026/W20/stripe.json",
+            "url": "https://stspg.io/m72fwk8k8qfg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-26ddd961b436cb4073952d0a",
       "vendor": "stripe",
       "title": "Elevated Apple Pay errors",
       "url": "https://stspg.io/m72fwk8k8qfg",
@@ -244,7 +331,20 @@
       "above_threshold": false
     },
     {
-      "key": "datadog/xqyrslhjs303",
+      "canonical": {
+        "id": "ci-115f93cb7e4c7ab94b7db4de",
+        "sources": [
+          {
+            "key": "datadog/xqyrslhjs303",
+            "path": "2026/W20/datadog.json",
+            "url": "https://stspg.io/l0b8n3g0ysky"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-115f93cb7e4c7ab94b7db4de",
       "vendor": "datadog",
       "title": "Azure Metrics Reporting",
       "url": "https://stspg.io/l0b8n3g0ysky",
@@ -266,7 +366,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/j4v5lc1lvgf1",
+      "canonical": {
+        "id": "ci-d110986be9f5076f273c3e9b",
+        "sources": [
+          {
+            "key": "datadog/j4v5lc1lvgf1",
+            "path": "2026/W20/datadog.json",
+            "url": "https://stspg.io/cwzjd95rnzhd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d110986be9f5076f273c3e9b",
       "vendor": "datadog",
       "title": "Degraded Web Application Performance",
       "url": "https://stspg.io/cwzjd95rnzhd",
@@ -289,7 +402,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/mkbj4zw0w85w",
+      "canonical": {
+        "id": "ci-dd7261e4b346ea17bf7452d6",
+        "sources": [
+          {
+            "key": "stripe/mkbj4zw0w85w",
+            "path": "2026/W20/stripe.json",
+            "url": "https://stspg.io/0zpfx7w4g20f"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-dd7261e4b346ea17bf7452d6",
       "vendor": "stripe",
       "title": "Elevated Swish errors",
       "url": "https://stspg.io/0zpfx7w4g20f",
@@ -311,7 +437,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/bnq93nhgvtm6",
+      "canonical": {
+        "id": "ci-e8665ca5d4f274e915898b73",
+        "sources": [
+          {
+            "key": "digitalocean/bnq93nhgvtm6",
+            "path": "2026/W20/digitalocean.json",
+            "url": "https://stspg.io/ll1m0fw2m4g9"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e8665ca5d4f274e915898b73",
       "vendor": "digitalocean",
       "title": "GradientAI: Agent Platform Playground Interaction Errors",
       "url": "https://stspg.io/ll1m0fw2m4g9",
@@ -333,7 +472,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/lrrw084g3whn",
+      "canonical": {
+        "id": "ci-e120edc6536dbd164c96001c",
+        "sources": [
+          {
+            "key": "digitalocean/lrrw084g3whn",
+            "path": "2026/W20/digitalocean.json",
+            "url": "https://stspg.io/d47rft5t1t68"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e120edc6536dbd164c96001c",
       "vendor": "digitalocean",
       "title": "Anthropic reported outage that's impacting access to their Serverless Inference models",
       "url": "https://stspg.io/d47rft5t1t68",

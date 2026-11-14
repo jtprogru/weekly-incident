@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "slack/1549",
+    "vendor": "slack",
+    "native_id": "1549",
+    "title": "Slow behaviour in Slack",
+    "url": "https://slack-status.com/2026-05/bedf971f90be70a6",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-05-04T10:00:38Z",
+    "resolved_at": "2026-05-04T17:37:54Z",
+    "duration_minutes": 457,
+    "components": [
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some users are experiencing issues with workflows. Triggered workflows may fail to complete, with the first step not executing. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T10:00:38Z"
+      },
+      {
+        "status": "unknown",
+        "body": "The investigation identified elevated latency in EU backend services as the cause of workflows not completing. A subset of workflow trigger attempts is impacted, primarily, EU users. Pod restarts have stopped, and error rates are improving. A fix is being prepared and will be deployed shortly. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T11:43:11Z"
+      },
+      {
+        "status": "unknown",
+        "body": "A fix has been deployed to address the elevated latency in EU backend services. The team is monitoring the environment to ensure service stability and full recovery. We'll provide another update as soon as possible.",
+        "created_at": "2026-05-04T13:08:54Z"
+      },
+      {
+        "status": "unknown",
+        "body": "This issue is now resolved for all users.\nCurrent status and recent actions taken: A fix has been deployed that resolved the underlying cause of this issue. Our health metrics have returned to normal levels and workflows are running as expected.\nScope: Users in the EU region — primarily teams based in Central Europe — experienced elevated workflow failure rates.\nPrevious impact to end users: Users may have experienced workflows failing to run, with the first step remaining stuck in an initialized state. Some users in the EU region may also have experienced general slowness when using Slack.\nRequired resolution steps: No steps are required. Workflows should be running normally. If you continue to experience any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux).\nWe apologize for any disruptions this may have caused to your day.",
+        "created_at": "2026-05-04T17:37:53Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "date_created": "2026-05-04T03:00:38-07:00",
+      "date_updated": "2026-05-04T10:37:54-07:00",
+      "id": 1549,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome users are experiencing issues with workflows. Triggered workflows may fail to complete, with the first step not executing. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T03:00:38-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThe investigation identified elevated latency in EU backend services as the cause of workflows not completing. A subset of workflow trigger attempts is impacted, primarily, EU users. Pod restarts have stopped, and error rates are improving. A fix is being prepared and will be deployed shortly. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T04:43:11-07:00"
+        },
+        {
+          "body": "\u003cp\u003eA fix has been deployed to address the elevated latency in EU backend services. The team is monitoring the environment to ensure service stability and full recovery. We'll provide another update as soon as possible.\u003c/p\u003e",
+          "date_created": "2026-05-04T06:08:54-07:00"
+        },
+        {
+          "body": "\u003cp\u003eThis issue is now resolved for all users.\u003c/p\u003e\u003cul\u003e\u003cli\u003e\u003cstrong\u003eCurrent status and recent actions taken:\u003c/strong\u003e A fix has been deployed that resolved the underlying cause of this issue. Our health metrics have returned to normal levels and workflows are running as expected.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eScope\u003c/strong\u003e: Users in the EU region — primarily teams based in Central Europe — experienced elevated workflow failure rates.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003ePrevious impact to end users: \u003c/strong\u003eUsers may have experienced workflows failing to run, with the first step remaining stuck in an initialized state. Some users in the EU region may also have experienced general slowness when using Slack.\u003c/li\u003e\u003cli\u003e\u003cstrong\u003eRequired resolution steps\u003c/strong\u003e: No steps are required. Workflows should be running normally. If you continue to experience any trouble, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux).\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe apologize for any disruptions this may have caused to your day.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-05-04T10:37:53-07:00"
+        }
+      ],
+      "services": [
+        "Workflows"
+      ],
+      "status": "resolved",
+      "title": "Slow behaviour in Slack",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-05/bedf971f90be70a6"
+    }
+  }
+}

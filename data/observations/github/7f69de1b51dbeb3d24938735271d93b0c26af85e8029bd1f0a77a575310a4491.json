@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/vm1w8zq95wkt",
+    "vendor": "github",
+    "native_id": "vm1w8zq95wkt",
+    "title": "Incident with GraphQL API Requests",
+    "url": "https://stspg.io/3xn46bst0bjh",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-11T14:50:40.219Z",
+    "resolved_at": "2026-08-11T20:06:56.575Z",
+    "duration_minutes": 316,
+    "components": [
+      "API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "d8czxf9vvzgy",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for API Requests",
+        "created_at": "2026-08-11T14:50:40.309Z"
+      },
+      {
+        "native_id": "1fp6txbb1vt8",
+        "status": "investigating",
+        "body": "We are investigating reports of a small increase in error rates affecting GraphQL API requests. We are working on increasing capacity and continue to investigate the increased errors. We will provide another update when we have more information",
+        "created_at": "2026-08-11T15:28:44.393Z"
+      },
+      {
+        "native_id": "134v8n0xlvtj",
+        "status": "investigating",
+        "body": "We have returned to a healthy baseline on GraphQL API requests. We will continue to work on investigations into the errors seen during this incident.",
+        "created_at": "2026-08-11T16:49:24.503Z"
+      },
+      {
+        "native_id": "j6wkk9nn3gn9",
+        "status": "monitoring",
+        "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-11T16:49:34.107Z"
+      },
+      {
+        "native_id": "sds5wpt3s1p5",
+        "status": "monitoring",
+        "body": "We have identified and mitigated increased error rates affecting GraphQL API requests. A fix to increase service capacity has been deployed and error rates have returned to normal levels. We are resolving this incident.",
+        "created_at": "2026-08-11T20:06:50.345Z"
+      },
+      {
+        "native_id": "sft10z4dn70g",
+        "status": "resolved",
+        "body": "On August 11, 2026, between 14:00 UTC and 16:00 UTC the GraphQL API service was degraded and customers in  saw higher than normal timeouts. On average, the timeout rate was 0.06% and peaked at 0.14% of requests routing to the service. \u003cbr /\u003e\u003cbr /\u003eThis was due to increased utilization at one of our sites which caused resource contention across our dependencies, leading to an increase in timeouts for GraphQL requests. We mitigated the incident by increasing capacity to alleviate the capacity bottleneck.  \u003cbr /\u003e\u003cbr /\u003eWe are working to improve our monitoring so that we can proactively reduce the impact of high consumption requests in addition to scaling up; Additionally, we will improve our time to detection and mitigation of issues like this one in the future.",
+        "created_at": "2026-08-11T20:06:56.575Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-22T16:35:07.537Z"
+        }
+      ],
+      "created_at": "2026-08-11T14:50:40.228Z",
+      "id": "vm1w8zq95wkt",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On August 11, 2026, between 14:00 UTC and 16:00 UTC the GraphQL API service was degraded and customers in  saw higher than normal timeouts. On average, the timeout rate was 0.06% and peaked at 0.14% of requests routing to the service. \u003cbr /\u003e\u003cbr /\u003eThis was due to increased utilization at one of our sites which caused resource contention across our dependencies, leading to an increase in timeouts for GraphQL requests. We mitigated the incident by increasing capacity to alleviate the capacity bottleneck.  \u003cbr /\u003e\u003cbr /\u003eWe are working to improve our monitoring so that we can proactively reduce the impact of high consumption requests in addition to scaling up; Additionally, we will improve our time to detection and mitigation of issues like this one in the future.",
+          "created_at": "2026-08-11T20:06:56.575Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T20:06:56.575Z",
+          "id": "sft10z4dn70g",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T19:30:45.952Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified and mitigated increased error rates affecting GraphQL API requests. A fix to increase service capacity has been deployed and error rates have returned to normal levels. We are resolving this incident.",
+          "created_at": "2026-08-11T20:06:50.345Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T20:06:50.345Z",
+          "id": "sds5wpt3s1p5",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T20:06:50.345Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting API Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-11T16:49:34.107Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T16:49:34.107Z",
+          "id": "j6wkk9nn3gn9",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T16:49:34.107Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have returned to a healthy baseline on GraphQL API requests. We will continue to work on investigations into the errors seen during this incident.",
+          "created_at": "2026-08-11T16:49:24.503Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T16:49:24.503Z",
+          "id": "134v8n0xlvtj",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T16:49:24.503Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating reports of a small increase in error rates affecting GraphQL API requests. We are working on increasing capacity and continue to investigate the increased errors. We will provide another update when we have more information",
+          "created_at": "2026-08-11T15:28:44.393Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T15:28:44.393Z",
+          "id": "1fp6txbb1vt8",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T15:28:44.393Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for API Requests",
+          "created_at": "2026-08-11T14:50:40.309Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-11T14:50:40.309Z",
+          "id": "d8czxf9vvzgy",
+          "incident_id": "vm1w8zq95wkt",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-11T14:50:40.309Z"
+        }
+      ],
+      "monitoring_at": "2026-08-11T16:49:34.107Z",
+      "name": "Incident with GraphQL API Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-11T20:06:56.575Z",
+      "shortlink": "https://stspg.io/3xn46bst0bjh",
+      "started_at": "2026-08-11T14:50:40.219Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T19:30:45.958Z"
+    }
+  }
+}

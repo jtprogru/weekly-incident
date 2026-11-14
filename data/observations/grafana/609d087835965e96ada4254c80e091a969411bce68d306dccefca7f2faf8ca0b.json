@@ -1,0 +1,864 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/hcdk41fbltl8",
+    "vendor": "grafana",
+    "native_id": "hcdk41fbltl8",
+    "title": "Partial Outage in prod-eu-west-2",
+    "url": "https://stspg.io/r9ysx33l8xbw",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-15T22:24:44.845Z",
+    "resolved_at": "2026-07-15T23:36:59.315Z",
+    "duration_minutes": 72,
+    "components": [
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-2: Querying",
+      "AWS Germany - prod-eu-west-2: API",
+      "AWS Germany - prod-eu-west-2: Ingestion",
+      "AWS Germany - prod-eu-west-2: Public Probes",
+      "AWS Germany - prod-eu-west-2: Rule Evaluation",
+      "AWS Germany - prod-eu-west-2: Querying",
+      "AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+      "AWS Germany - prod-eu-west-2: Ingestion",
+      "AWS Germany - prod-eu-west-2: Alertmanager",
+      "AWS Germany - prod-eu-west-2: Metrics Generator"
+    ],
+    "updates": [
+      {
+        "native_id": "bz9hzhz7s1y7",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting Loki queries in prod-eu-west-2.\n\nWe first observed this behavior at approximately 21:57 UTC. Affected users may see elevated query errors, timeouts, or intermittent failures when running Loki queries in this region.\n\nThe issue appears to be improving, but it is not fully resolved yet. We are continuing to investigate and will share another update as soon as we have more information.",
+        "created_at": "2026-07-15T22:24:44.963Z"
+      },
+      {
+        "native_id": "wdx8lw1ldbv1",
+        "status": "investigating",
+        "body": "We are investigating a broader issue affecting multiple Grafana Cloud products in prod-eu-west-2. This appears to be caused by a third-party provider issue rather than a Loki-specific problem.\n\nImpact is currently inconsistent: some components are affected while others continue to function normally. We have also seen some impact to Tempo write paths.\n\nWe are continuing to investigate and will share another update as soon as we have more information.",
+        "created_at": "2026-07-15T22:35:15.934Z"
+      },
+      {
+        "native_id": "4xrbbnp62j2t",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-15T22:38:56.425Z"
+      },
+      {
+        "native_id": "tdy98byl04qs",
+        "status": "monitoring",
+        "body": "We’ve implemented a fix and are monitoring the results to confirm the issue is fully resolved. Services may start to recover during this time.",
+        "created_at": "2026-07-15T22:53:45.22Z"
+      },
+      {
+        "native_id": "rm7h9r64zf1d",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience.",
+        "created_at": "2026-07-15T23:36:59.315Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-01T23:37:22.739Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "6wgslg1s3bzr",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-09-21T21:00:11.178Z"
+        },
+        {
+          "created_at": "2023-04-26T07:10:11.637Z",
+          "description": null,
+          "group": false,
+          "group_id": "mnrssd8vqsf2",
+          "id": "14rfvnlhlt5n",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-04-26",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.050Z"
+        },
+        {
+          "created_at": "2023-07-20T11:33:21.302Z",
+          "description": null,
+          "group": false,
+          "group_id": "xx0g558ptf5t",
+          "id": "0pr42n719w3x",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-07-20",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.065Z"
+        },
+        {
+          "created_at": "2023-09-20T15:42:56.105Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "gx6m1v8jy475",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.119Z"
+        },
+        {
+          "created_at": "2023-09-20T16:02:07.559Z",
+          "description": null,
+          "group": false,
+          "group_id": "pz0dnrfzd4b3",
+          "id": "550jn4w511kw",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-17T21:00:07.265Z"
+        },
+        {
+          "created_at": "2023-09-20T18:42:26.142Z",
+          "description": null,
+          "group": false,
+          "group_id": "mq3m31k94l26",
+          "id": "0z4j4nzmq7hs",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.107Z"
+        },
+        {
+          "created_at": "2023-09-25T14:23:26.772Z",
+          "description": null,
+          "group": false,
+          "group_id": "sntjvmcjzp1r",
+          "id": "hmyx8mtn3tjq",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-25",
+          "status": "operational",
+          "updated_at": "2026-07-30T17:40:15.603Z"
+        },
+        {
+          "created_at": "2026-01-22T16:23:26.751Z",
+          "description": null,
+          "group": false,
+          "group_id": "f8st3qzr5j3m",
+          "id": "9fpjqnx4cbpb",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2026-01-22",
+          "status": "operational",
+          "updated_at": "2026-09-17T21:00:07.302Z"
+        },
+        {
+          "created_at": "2023-09-20T14:49:07.616Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "mk0mjmlmp2ms",
+          "name": "AWS Germany - prod-eu-west-2: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-17T20:00:10.591Z"
+        },
+        {
+          "created_at": "2023-09-20T18:15:30.945Z",
+          "description": null,
+          "group": false,
+          "group_id": "1xrw1n278h8y",
+          "id": "3p25y2zfwhtc",
+          "name": "AWS Germany - prod-eu-west-2: API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.164Z"
+        },
+        {
+          "created_at": "2023-09-20T14:49:22.344Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "kywjchj50pzs",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-17T20:00:10.963Z"
+        },
+        {
+          "created_at": "2023-09-20T18:15:46.374Z",
+          "description": null,
+          "group": false,
+          "group_id": "1xrw1n278h8y",
+          "id": "72cbdqh1qfxk",
+          "name": "AWS Germany - prod-eu-west-2: Public Probes",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-15T11:17:10.246Z"
+        },
+        {
+          "created_at": "2023-09-20T15:33:40.251Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "hcj5p68bp2kc",
+          "name": "AWS Germany - prod-eu-west-2: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-08-05T11:44:35.561Z"
+        },
+        {
+          "created_at": "2023-09-20T15:54:29.380Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "hp6lb56782c9",
+          "name": "AWS Germany - prod-eu-west-2: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.221Z"
+        },
+        {
+          "created_at": "2023-09-20T15:34:03.339Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "95tmjrzs9h1f",
+          "name": "AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-08-05T11:44:35.575Z"
+        },
+        {
+          "created_at": "2023-09-20T15:54:44.557Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "bg7pryvvh19l",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.248Z"
+        },
+        {
+          "created_at": "2023-09-20T15:34:13.893Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "kckd7qfk2gql",
+          "name": "AWS Germany - prod-eu-west-2: Alertmanager",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-08-05T11:44:35.588Z"
+        },
+        {
+          "created_at": "2024-04-26T13:09:44.734Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "f9lywhj1rpkl",
+          "name": "AWS Germany - prod-eu-west-2: Metrics Generator",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2024-04-26",
+          "status": "operational",
+          "updated_at": "2026-07-15T23:36:59.274Z"
+        }
+      ],
+      "created_at": "2026-07-15T22:24:44.856Z",
+      "id": "hcdk41fbltl8",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hp6lb56782c9",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "f9lywhj1rpkl",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Metrics Generator",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "550jn4w511kw",
+              "name": "AI and Machine Learning - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3p25y2zfwhtc",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "72cbdqh1qfxk",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: Public Probes",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0pr42n719w3x",
+              "name": "Profiles - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0z4j4nzmq7hs",
+              "name": "Frontend Observability - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9fpjqnx4cbpb",
+              "name": "Grafana Assistant - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience.",
+          "created_at": "2026-07-15T23:36:59.315Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T23:36:59.315Z",
+          "id": "rm7h9r64zf1d",
+          "incident_id": "hcdk41fbltl8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T23:36:59.315Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hp6lb56782c9",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "f9lywhj1rpkl",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Metrics Generator",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "550jn4w511kw",
+              "name": "AI and Machine Learning - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3p25y2zfwhtc",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "72cbdqh1qfxk",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: Public Probes",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0pr42n719w3x",
+              "name": "Profiles - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0z4j4nzmq7hs",
+              "name": "Frontend Observability - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9fpjqnx4cbpb",
+              "name": "Grafana Assistant - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We’ve implemented a fix and are monitoring the results to confirm the issue is fully resolved. Services may start to recover during this time.",
+          "created_at": "2026-07-15T22:53:45.220Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T22:53:45.220Z",
+          "id": "tdy98byl04qs",
+          "incident_id": "hcdk41fbltl8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T22:53:45.220Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hp6lb56782c9",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "f9lywhj1rpkl",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Metrics Generator",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "550jn4w511kw",
+              "name": "AI and Machine Learning - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "3p25y2zfwhtc",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "72cbdqh1qfxk",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: Public Probes",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0pr42n719w3x",
+              "name": "Profiles - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "0z4j4nzmq7hs",
+              "name": "Frontend Observability - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "9fpjqnx4cbpb",
+              "name": "Grafana Assistant - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-15T22:38:56.425Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T22:38:56.425Z",
+          "id": "4xrbbnp62j2t",
+          "incident_id": "hcdk41fbltl8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T22:38:56.425Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "mk0mjmlmp2ms",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "kywjchj50pzs",
+              "name": "Metrics - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "hp6lb56782c9",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "f9lywhj1rpkl",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Metrics Generator",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "550jn4w511kw",
+              "name": "AI and Machine Learning - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "3p25y2zfwhtc",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "72cbdqh1qfxk",
+              "name": "Synthetic Monitoring - AWS Germany - prod-eu-west-2: Public Probes",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "14rfvnlhlt5n",
+              "name": "OpenTelemetry Ingest Endpoint - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "0pr42n719w3x",
+              "name": "Profiles - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "0z4j4nzmq7hs",
+              "name": "Frontend Observability - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "hmyx8mtn3tjq",
+              "name": "Private Datasource Connect (PDC) - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "9fpjqnx4cbpb",
+              "name": "Grafana Assistant - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating a broader issue affecting multiple Grafana Cloud products in prod-eu-west-2. This appears to be caused by a third-party provider issue rather than a Loki-specific problem.\n\nImpact is currently inconsistent: some components are affected while others continue to function normally. We have also seen some impact to Tempo write paths.\n\nWe are continuing to investigate and will share another update as soon as we have more information.",
+          "created_at": "2026-07-15T22:35:15.934Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T22:35:15.934Z",
+          "id": "wdx8lw1ldbv1",
+          "incident_id": "hcdk41fbltl8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T22:35:15.934Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting Loki queries in prod-eu-west-2.\n\nWe first observed this behavior at approximately 21:57 UTC. Affected users may see elevated query errors, timeouts, or intermittent failures when running Loki queries in this region.\n\nThe issue appears to be improving, but it is not fully resolved yet. We are continuing to investigate and will share another update as soon as we have more information.",
+          "created_at": "2026-07-15T22:24:44.963Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T22:24:44.963Z",
+          "id": "bz9hzhz7s1y7",
+          "incident_id": "hcdk41fbltl8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T22:24:44.963Z"
+        }
+      ],
+      "monitoring_at": "2026-07-15T22:53:45.220Z",
+      "name": "Partial Outage in prod-eu-west-2",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T23:36:59.315Z",
+      "shortlink": "https://stspg.io/r9ysx33l8xbw",
+      "started_at": "2026-07-15T22:24:44.845Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T23:36:59.332Z"
+    }
+  }
+}

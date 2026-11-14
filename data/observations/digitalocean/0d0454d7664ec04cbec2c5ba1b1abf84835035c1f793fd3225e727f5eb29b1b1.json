@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/vjm8qnbt45tb",
+    "vendor": "digitalocean",
+    "native_id": "vjm8qnbt45tb",
+    "title": "Multiple Services Availability",
+    "url": "https://stspg.io/zscj6w048lfx",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-08-06T16:33:14.751Z",
+    "resolved_at": "2026-08-06T16:33:14.86Z",
+    "duration_minutes": 0,
+    "components": [
+      "Global",
+      "Global",
+      "Global",
+      "Global",
+      "Global",
+      "Cloud Firewall",
+      "DNS"
+    ],
+    "updates": [
+      {
+        "native_id": "k9b36q8csjjm",
+        "status": "resolved",
+        "body": "Between Aug 6, 06:42 UTC and 09:08 UTC, customers experienced failures with write operations across multiple DigitalOcean services, including Managed Databases, DOKS, Cloud Firewalls, DNS, Spaces, Block Storage Volumes, and event processing.\n\nCustomers attempting to update Cloud Firewall rules, modify DNS records, manage object storage operations, provision or scale DOKS clusters and node pools, and make other infrastructure configuration changes experienced failures. These operations returned errors, preventing customers from managing their resources. Additionally, event processing was delayed or failed during this window, which may have impacted the timeliness of resource status updates and notifications.\n\nThe services have recovered and are now operating normally. Customers should no longer experience issues with write operations, configuration changes, or event processing.\n\nWe apologize for any inconvenience this may have caused. If you continue to experience issues with any of these services, please don't hesitate to open a support ticket. Our team will be happy to assist you.",
+        "created_at": "2026-08-06T16:33:14.86Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-28T21:01:23.977Z",
+          "description": null,
+          "group": false,
+          "group_id": "b3tklvcyzvh0",
+          "id": "558h1l1q0c2w",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-28",
+          "status": "operational",
+          "updated_at": "2026-07-03T06:08:11.985Z"
+        },
+        {
+          "created_at": "2024-08-16T11:21:56.097Z",
+          "description": null,
+          "group": false,
+          "group_id": "kl8qv98c9brp",
+          "id": "mzkgffp35tq4",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-08-24T06:16:07.720Z"
+        },
+        {
+          "created_at": "2024-08-16T11:33:35.622Z",
+          "description": null,
+          "group": false,
+          "group_id": "gb3gs5vj7js2",
+          "id": "ljktrzzffk6j",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-10-28T01:55:12.355Z"
+        },
+        {
+          "created_at": "2024-08-16T11:34:49.886Z",
+          "description": null,
+          "group": false,
+          "group_id": "hjz5ry9b7nl6",
+          "id": "g8rttgsgxr37",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-05-07T21:00:07.529Z"
+        },
+        {
+          "created_at": "2024-11-18T19:18:34.401Z",
+          "description": null,
+          "group": false,
+          "group_id": "fdg768pfw7v3",
+          "id": "nkx0nmdx9vrs",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-11-18",
+          "status": "operational",
+          "updated_at": "2026-08-21T13:06:06.789Z"
+        },
+        {
+          "created_at": "2023-03-06T18:42:45.109Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "pg9zc33244c7",
+          "name": "Cloud Firewall",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-05-20T12:43:17.306Z"
+        },
+        {
+          "created_at": "2023-03-06T18:42:44.851Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qdnryq0lymfk",
+          "name": "DNS",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-07-01T16:28:25.895Z"
+        }
+      ],
+      "created_at": "2026-08-06T16:33:14.787Z",
+      "id": "vjm8qnbt45tb",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "558h1l1q0c2w",
+              "name": "Event Processing - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ljktrzzffk6j",
+              "name": "Kubernetes - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "nkx0nmdx9vrs",
+              "name": "Spaces - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "mzkgffp35tq4",
+              "name": "Managed Databases - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "qdnryq0lymfk",
+              "name": "DNS",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "pg9zc33244c7",
+              "name": "Cloud Firewall",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "g8rttgsgxr37",
+              "name": "Volumes - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between Aug 6, 06:42 UTC and 09:08 UTC, customers experienced failures with write operations across multiple DigitalOcean services, including Managed Databases, DOKS, Cloud Firewalls, DNS, Spaces, Block Storage Volumes, and event processing.\n\nCustomers attempting to update Cloud Firewall rules, modify DNS records, manage object storage operations, provision or scale DOKS clusters and node pools, and make other infrastructure configuration changes experienced failures. These operations returned errors, preventing customers from managing their resources. Additionally, event processing was delayed or failed during this window, which may have impacted the timeliness of resource status updates and notifications.\n\nThe services have recovered and are now operating normally. Customers should no longer experience issues with write operations, configuration changes, or event processing.\n\nWe apologize for any inconvenience this may have caused. If you continue to experience issues with any of these services, please don't hesitate to open a support ticket. Our team will be happy to assist you.",
+          "created_at": "2026-08-06T16:33:14.860Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T16:33:14.860Z",
+          "id": "k9b36q8csjjm",
+          "incident_id": "vjm8qnbt45tb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T16:33:14.860Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Multiple Services Availability",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-06T16:33:14.860Z",
+      "shortlink": "https://stspg.io/zscj6w048lfx",
+      "started_at": "2026-08-06T16:33:14.751Z",
+      "status": "resolved",
+      "updated_at": "2026-08-06T16:33:14.872Z"
+    }
+  }
+}

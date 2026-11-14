@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "slack/1570",
+    "vendor": "slack",
+    "native_id": "1570",
+    "title": "Trouble loading SSO configuration settings for some workspace admins",
+    "url": "https://slack-status.com/2026-06/66c001cc76d073f8",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-06-17T22:33:29Z",
+    "resolved_at": "2026-06-18T04:14:39Z",
+    "duration_minutes": 341,
+    "components": [
+      "Login/SSO"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "Some workspace admins on standalone (non-Enterprise Grid) workspaces may be experiencing an issue where the SSO and authentication configuration page does not display current settings as expected. Admins may see a blank value for the \"Require SSO authentication for\" field on the admin SSO settings page, which does not accurately reflect the actual backend configuration — SSO settings remain intact and in effect.\nWe are actively investigating this issue and will provide an update as soon as we have more information to share. We apologize for the inconvenience.",
+        "created_at": "2026-06-17T22:33:29Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We have identified the trigger and developed a fix. We are currently deploying this fix and expect to resolve the issue shortly. We will provide another update once the deployment is complete.\nWe apologize for the inconvenience.",
+        "created_at": "2026-06-18T01:49:59Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We have successfully deployed the fix to production and the issue is resolved.\nThe Admin SSO and Authentication Configuration page for standalone workspaces should now display the correct settings. If you continue to see outdated information, refresh the SSO Admin page to load the latest changes.",
+        "created_at": "2026-06-18T04:14:39Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "date_created": "2026-06-17T15:33:29-07:00",
+      "date_updated": "2026-06-17T21:14:39-07:00",
+      "id": 1570,
+      "notes": [
+        {
+          "body": "\u003cp\u003eSome workspace admins on standalone (non-Enterprise Grid) workspaces may be experiencing an issue where the SSO and authentication configuration page does not display current settings as expected. Admins may see a blank value for the \"Require SSO authentication for\" field on the admin SSO settings page, which does not accurately reflect the actual backend configuration — SSO settings remain intact and in effect.\u003cbr\u003e\u003cbr\u003eWe are actively investigating this issue and will provide an update as soon as we have more information to share. We apologize for the inconvenience.\u003c/p\u003e",
+          "date_created": "2026-06-17T15:33:29-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe have identified the trigger and developed a fix. We are currently deploying this fix and expect to resolve the issue shortly. We will provide another update once the deployment is complete.\u0026nbsp;\u003cbr\u003eWe apologize for the inconvenience.\u003c/p\u003e",
+          "date_created": "2026-06-17T18:49:59-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe have successfully deployed the fix to production and the issue is resolved. \u003cbr\u003eThe Admin SSO and Authentication Configuration page for standalone workspaces should now display the correct settings. If you continue to see outdated information, refresh the SSO Admin page to load the latest changes.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-06-17T21:14:39-07:00"
+        }
+      ],
+      "services": [
+        "Login/SSO"
+      ],
+      "status": "resolved",
+      "title": "Trouble loading SSO configuration settings for some workspace admins",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-06/66c001cc76d073f8"
+    }
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/xxb3l2bm76dr",
+    "vendor": "github",
+    "native_id": "xxb3l2bm76dr",
+    "title": "Incident with Webhooks and Actions",
+    "url": "https://stspg.io/4vdghm7tycm4",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-09T10:00:35.209Z",
+    "resolved_at": "2026-11-09T11:50:35.774Z",
+    "duration_minutes": 110,
+    "components": [
+      "Webhooks",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "b6phqx66lpjj",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+        "created_at": "2026-11-09T10:00:35.648Z"
+      },
+      {
+        "native_id": "2rpsj0zkt5mg",
+        "status": "investigating",
+        "body": "We're investigating delays in Actions runs start times and webhook deliveries.",
+        "created_at": "2026-11-09T10:28:19.735Z"
+      },
+      {
+        "native_id": "vr194tzdpgw0",
+        "status": "investigating",
+        "body": "We've applied a mitigation and are monitoring for recovery.",
+        "created_at": "2026-11-09T10:47:25.35Z"
+      },
+      {
+        "native_id": "ghj248c9xm7v",
+        "status": "investigating",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T11:06:35.83Z"
+      },
+      {
+        "native_id": "mckrt9nsd4z9",
+        "status": "investigating",
+        "body": "Webhooks is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-11-09T11:17:28.545Z"
+      },
+      {
+        "native_id": "lnkmmfvgdp1k",
+        "status": "investigating",
+        "body": "Webhooks is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-09T11:42:04.835Z"
+      },
+      {
+        "native_id": "dl8635xq259g",
+        "status": "monitoring",
+        "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-09T11:45:07.476Z"
+      },
+      {
+        "native_id": "rfpl3twlkw5p",
+        "status": "resolved",
+        "body": "On November 9, 2026, from 09:23 to 11:40 UTC, one of our job queue clusters was degraded, delaying webhook deliveries, Actions workflow runs, and Dependabot and dependency graph updates. Until mitigation at 10:37 UTC, an average of 26% of webhook deliveries were delayed, peaking at 30%, and the backlog cleared by 11:40 UTC. Some deliveries were delayed by up to 3.5 hours, and delays for a small share began as early as 01:00 UTC. Actions skips events older than 30 minutes, so some workflow runs did not start. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a degraded host that had slowed one of the cluster's Kafka brokers since November 7. The broker stopped reporting the metrics our alerts rely on, so we did not identify it until it stalled the cluster on November 9. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the broker from service. We have since added an alert that pages us within 30 minutes when a host slows a broker this way, so we can remove the broker before it affects customers.",
+        "created_at": "2026-11-09T11:50:35.774Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-12T19:20:14.124Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-11T21:07:24.537Z"
+        }
+      ],
+      "created_at": "2026-11-09T10:00:35.232Z",
+      "id": "xxb3l2bm76dr",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On November 9, 2026, from 09:23 to 11:40 UTC, one of our job queue clusters was degraded, delaying webhook deliveries, Actions workflow runs, and Dependabot and dependency graph updates. Until mitigation at 10:37 UTC, an average of 26% of webhook deliveries were delayed, peaking at 30%, and the backlog cleared by 11:40 UTC. Some deliveries were delayed by up to 3.5 hours, and delays for a small share began as early as 01:00 UTC. Actions skips events older than 30 minutes, so some workflow runs did not start. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a degraded host that had slowed one of the cluster's Kafka brokers since November 7. The broker stopped reporting the metrics our alerts rely on, so we did not identify it until it stalled the cluster on November 9. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the broker from service. We have since added an alert that pages us within 30 minutes when a host slows a broker this way, so we can remove the broker before it affects customers.",
+          "created_at": "2026-11-09T11:50:35.774Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:50:35.774Z",
+          "id": "rfpl3twlkw5p",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:12:06.036Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T11:45:07.476Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:45:07.476Z",
+          "id": "dl8635xq259g",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:45:07.476Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Webhooks is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-09T11:42:04.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:42:04.835Z",
+          "id": "lnkmmfvgdp1k",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:42:04.835Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Webhooks is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-11-09T11:17:28.545Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:17:28.545Z",
+          "id": "mckrt9nsd4z9",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:17:28.545Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-09T11:06:35.830Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T11:06:35.830Z",
+          "id": "ghj248c9xm7v",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T11:06:35.830Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've applied a mitigation and are monitoring for recovery.",
+          "created_at": "2026-11-09T10:47:25.350Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:47:25.350Z",
+          "id": "vr194tzdpgw0",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:47:25.350Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're investigating delays in Actions runs start times and webhook deliveries.",
+          "created_at": "2026-11-09T10:28:19.735Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:28:19.735Z",
+          "id": "2rpsj0zkt5mg",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:28:19.735Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+          "created_at": "2026-11-09T10:00:35.648Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-09T10:00:35.648Z",
+          "id": "b6phqx66lpjj",
+          "incident_id": "xxb3l2bm76dr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-09T10:00:35.648Z"
+        }
+      ],
+      "monitoring_at": "2026-11-09T11:45:07.476Z",
+      "name": "Incident with Webhooks and Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-09T11:50:35.774Z",
+      "shortlink": "https://stspg.io/4vdghm7tycm4",
+      "started_at": "2026-11-09T10:00:35.209Z",
+      "status": "resolved",
+      "updated_at": "2026-11-12T19:12:06.040Z"
+    }
+  }
+}

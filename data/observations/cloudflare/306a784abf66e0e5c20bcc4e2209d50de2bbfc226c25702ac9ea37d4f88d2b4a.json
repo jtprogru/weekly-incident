@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/cczd80189gvc",
+    "vendor": "cloudflare",
+    "native_id": "cczd80189gvc",
+    "title": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+    "url": "https://www.cloudflarestatus.com/incidents/cczd80189gvc",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-01T20:06:47Z",
+    "resolved_at": "2026-09-02T07:16:16.89Z",
+    "duration_minutes": 669,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "8gt23ng17wnf",
+        "status": "investigating",
+        "body": "Some customers using email security gateway like Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.",
+        "created_at": "2026-09-01T20:06:47.38Z"
+      },
+      {
+        "native_id": "sc61rx8nhqwh",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-02T07:16:16.89Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-02T07:16:16.000Z"
+        }
+      ],
+      "created_at": "2026-09-01T20:06:47.000Z",
+      "id": "cczd80189gvc",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-02T07:16:16.890Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T07:16:16.890Z",
+          "id": "sc61rx8nhqwh",
+          "incident_id": "cczd80189gvc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T07:16:16.890Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some customers using email security gateway like Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.",
+          "created_at": "2026-09-01T20:06:47.380Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-01T20:06:47.000Z",
+          "id": "8gt23ng17wnf",
+          "incident_id": "cczd80189gvc",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T01:33:42.131Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-02T07:16:16.890Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/cczd80189gvc",
+      "started_at": "2026-09-01T20:06:47.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T07:16:16.907Z"
+    }
+  }
+}

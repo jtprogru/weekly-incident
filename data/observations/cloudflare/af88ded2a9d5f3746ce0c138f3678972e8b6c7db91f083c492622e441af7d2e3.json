@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/pgn7y7hgd25l",
+    "vendor": "cloudflare",
+    "native_id": "pgn7y7hgd25l",
+    "title": "Performance degradation affecting TURN service",
+    "url": "https://www.cloudflarestatus.com/incidents/pgn7y7hgd25l",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-07T13:02:52.809Z",
+    "resolved_at": "2026-09-07T13:52:48.345Z",
+    "duration_minutes": 49,
+    "components": [
+      "Realtime TURN Service"
+    ],
+    "updates": [
+      {
+        "native_id": "695bdqzf58w4",
+        "status": "investigating",
+        "body": "We are investigating reports of performance degradation affecting our TURN service since August 22nd. Currently, a significant portion of traffic is being relayed via TCP rather than the expected UDP. Customers using Chrome browsers or other services relying on WebRTC may experience increased latency and connection lag. Our engineering team has identified the cause and a mitigation is currently being deployed. We are monitoring the rollout to ensure performance returns to expected levels.",
+        "created_at": "2026-09-07T13:02:52.918Z"
+      },
+      {
+        "native_id": "vl376g38g7vg",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-07T13:04:29.654Z"
+      },
+      {
+        "native_id": "2c59yx6gc93z",
+        "status": "resolved",
+        "body": "A fix was deployed for this issue and the impact is over for any new connections on Realtime TURN service.\n\nExisting connection will continue to use TCP until the customers clients end and restart their connections.",
+        "created_at": "2026-09-07T13:52:48.345Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-16T17:07:34.000Z",
+          "description": "Separately from the SFU, Realtime offers a managed TURN service. TURN acts as a relay point for traffic between WebRTC clients like the browser and SFUs, particularly in scenarios where direct communication is obstructed by NATs or firewalls. TURN maintains an allocation of public IP addresses and ports for each session, ensuring connectivity even in restrictive network environments.\r\n\r\nUsing Cloudflare Realtime TURN service is available free of charge when used together with the Realtime SFU. Otherwise, it costs $0.05/real-time GB outbound from Cloudflare to the TURN client.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5s616lljfwdz",
+          "name": "Realtime TURN Service",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 88,
+          "showcase": false,
+          "start_date": "2025-05-16",
+          "status": "operational",
+          "updated_at": "2026-09-08T19:42:46.000Z"
+        }
+      ],
+      "created_at": "2026-09-07T13:02:52.000Z",
+      "id": "pgn7y7hgd25l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix was deployed for this issue and the impact is over for any new connections on Realtime TURN service.\n\nExisting connection will continue to use TCP until the customers clients end and restart their connections.",
+          "created_at": "2026-09-07T13:52:48.345Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:52:48.345Z",
+          "id": "2c59yx6gc93z",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:52:48.345Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-07T13:04:29.654Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:04:29.654Z",
+          "id": "vl376g38g7vg",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:04:29.654Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5s616lljfwdz",
+              "name": "Cloudflare Sites and Services - Realtime TURN Service",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of performance degradation affecting our TURN service since August 22nd. Currently, a significant portion of traffic is being relayed via TCP rather than the expected UDP. Customers using Chrome browsers or other services relying on WebRTC may experience increased latency and connection lag. Our engineering team has identified the cause and a mitigation is currently being deployed. We are monitoring the rollout to ensure performance returns to expected levels.",
+          "created_at": "2026-09-07T13:02:52.918Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-07T13:02:52.918Z",
+          "id": "695bdqzf58w4",
+          "incident_id": "pgn7y7hgd25l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-07T13:02:52.918Z"
+        }
+      ],
+      "monitoring_at": "2026-09-07T13:04:29.654Z",
+      "name": "Performance degradation affecting TURN service",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-07T13:52:48.345Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/pgn7y7hgd25l",
+      "started_at": "2026-09-07T13:02:52.809Z",
+      "status": "resolved",
+      "updated_at": "2026-09-07T13:52:48.361Z"
+    }
+  }
+}

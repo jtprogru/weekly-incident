@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 4,
+    "source_versions_total": 4,
+    "canonical_incidents_total": 4,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W11",
   "from": "2026-03-09T00:00:00Z",
   "to": "2026-03-16T00:00:00Z",
-  "generated_at": "2026-09-27T10:55:21.673626598Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "slack/1536",
+      "canonical": {
+        "id": "ci-ecc5a65c7cd10783b328c8dc",
+        "sources": [
+          {
+            "key": "slack/1536",
+            "path": "2026/W11/slack.json",
+            "url": "https://slack-status.com/2026-03/0c433efa2ea295fb"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ecc5a65c7cd10783b328c8dc",
       "vendor": "slack",
       "title": "Intermittent SSO login errors accessing Slack workspace.",
       "url": "https://slack-status.com/2026-03/0c433efa2ea295fb",
@@ -120,7 +142,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/9ksfbdb59mtn",
+      "canonical": {
+        "id": "ci-c81e3a8954c6b4ad425b7337",
+        "sources": [
+          {
+            "key": "datadog/9ksfbdb59mtn",
+            "path": "2026/W11/datadog.json",
+            "url": "https://stspg.io/mfp6qzq5bd51"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c81e3a8954c6b4ad425b7337",
       "vendor": "datadog",
       "title": "Web Application Not Loading",
       "url": "https://stspg.io/mfp6qzq5bd51",
@@ -142,7 +177,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/v86p9jb46jt1",
+      "canonical": {
+        "id": "ci-555c2882e7895c15505c960d",
+        "sources": [
+          {
+            "key": "circleci/v86p9jb46jt1",
+            "path": "2026/W11/circleci.json",
+            "url": "https://stspg.io/q09f0398btms"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-555c2882e7895c15505c960d",
       "vendor": "circleci",
       "title": "Unable to view orb list on Organization Settings page",
       "url": "https://stspg.io/q09f0398btms",
@@ -165,7 +213,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/57rkhg708hrf",
+      "canonical": {
+        "id": "ci-7691bf9a7c76e2615fc16765",
+        "sources": [
+          {
+            "key": "stripe/57rkhg708hrf",
+            "path": "2026/W11/stripe.json",
+            "url": "https://stspg.io/9swt2kr5kqlm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7691bf9a7c76e2615fc16765",
       "vendor": "stripe",
       "title": "Errors downloading files",
       "url": "https://stspg.io/9swt2kr5kqlm",

@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W45",
   "from": "2025-11-03T00:00:00Z",
   "to": "2025-11-10T00:00:00Z",
-  "generated_at": "2026-09-25T10:40:42.808900938Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/tw86ncfv8q78",
+      "canonical": {
+        "id": "ci-0dbd002ac57f9e8f98271d38",
+        "sources": [
+          {
+            "key": "datadog/tw86ncfv8q78",
+            "path": "2025/W45/datadog.json",
+            "url": "https://stspg.io/f3zkd8tmhdxm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0dbd002ac57f9e8f98271d38",
       "vendor": "datadog",
       "title": "Delayed Metrics for APM and distribution metrics",
       "url": "https://stspg.io/f3zkd8tmhdxm",

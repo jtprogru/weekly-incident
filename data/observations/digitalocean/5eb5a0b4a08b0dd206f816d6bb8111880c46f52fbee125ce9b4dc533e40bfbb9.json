@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/1y9gxbdcqb71",
+    "vendor": "digitalocean",
+    "native_id": "1y9gxbdcqb71",
+    "title": "Intermittent errors impacting some Serverless Inference models in ATL1",
+    "url": "https://stspg.io/z4pxt0jh8n97",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-23T22:26:34Z",
+    "resolved_at": "2026-04-23T23:51:58.178Z",
+    "duration_minutes": 85,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "jyf13yqty9c4",
+        "status": "investigating",
+        "body": "As of 21:53 UTC, our Engineering team is investigating reports of increased internal errors for models Llama 3.3 70B, GPT OSS 120B, GPT OSS 20B, Qwen3 32B and Deepseek R1 70B hosted in the ATL1 region, impacting Serverless Inference. At this point, users with models hosted in ATL1 may experience intermittent errors when using Serverless Inference. We apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-04-23T22:26:34.826Z"
+      },
+      {
+        "native_id": "h52c2fn4s48f",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-04-23T23:51:58.178Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-23T22:26:34.000Z",
+      "id": "1y9gxbdcqb71",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-04-23T23:51:58.178Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T23:51:58.178Z",
+          "id": "h52c2fn4s48f",
+          "incident_id": "1y9gxbdcqb71",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T23:51:58.178Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of 21:53 UTC, our Engineering team is investigating reports of increased internal errors for models Llama 3.3 70B, GPT OSS 120B, GPT OSS 20B, Qwen3 32B and Deepseek R1 70B hosted in the ATL1 region, impacting Serverless Inference. At this point, users with models hosted in ATL1 may experience intermittent errors when using Serverless Inference. We apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-04-23T22:26:34.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-23T22:26:34.000Z",
+          "id": "jyf13yqty9c4",
+          "incident_id": "1y9gxbdcqb71",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-23T23:06:23.350Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Intermittent errors impacting some Serverless Inference models in ATL1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-23T23:51:58.178Z",
+      "shortlink": "https://stspg.io/z4pxt0jh8n97",
+      "started_at": "2026-04-23T22:26:34.000Z",
+      "status": "resolved",
+      "updated_at": "2026-04-23T23:51:58.201Z"
+    }
+  }
+}

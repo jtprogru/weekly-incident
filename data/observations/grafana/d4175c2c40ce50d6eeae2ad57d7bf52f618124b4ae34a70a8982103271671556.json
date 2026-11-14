@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/3ft2hqqwnl2m",
+    "vendor": "grafana",
+    "native_id": "3ft2hqqwnl2m",
+    "title": "DB issues in prod-sa-east-1",
+    "url": "https://stspg.io/28py1pvhnpjf",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-10-20T21:36:28.038Z",
+    "resolved_at": "2026-10-21T00:09:35.152Z",
+    "duration_minutes": 153,
+    "components": [
+      "AWS Brazil - prod-sa-east-1",
+      "AWS Brazil - prod-sa-east-1: API",
+      "AWS Brazil - prod-sa-east-1: Public Probes"
+    ],
+    "updates": [
+      {
+        "native_id": "wr6jx9jsy6ds",
+        "status": "investigating",
+        "body": "We are currently investigating an issue in the prod-sa-east-1 region causing slow requests, or some stacks struggling to start. We will provide an update as soon as we have more information to share.",
+        "created_at": "2026-10-20T21:36:28.177Z"
+      },
+      {
+        "native_id": "xjph6ysshry9",
+        "status": "investigating",
+        "body": "Synthetic Monitoring alerting is also impacted. We are continuing to investigate this issue.",
+        "created_at": "2026-10-20T22:14:27.626Z"
+      },
+      {
+        "native_id": "82j365k3rn18",
+        "status": "investigating",
+        "body": "Synthetic Monitoring alerting has recovered. We are continuing to monitor.",
+        "created_at": "2026-10-20T23:39:28.054Z"
+      },
+      {
+        "native_id": "1glbcxhjw9sr",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-21T00:09:35.152Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T13:14:50.252Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "9zgd4n4s874v",
+          "name": "AWS Brazil - prod-sa-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-11-04T04:59:51.139Z"
+        },
+        {
+          "created_at": "2023-09-20T18:18:10.933Z",
+          "description": null,
+          "group": false,
+          "group_id": "1xrw1n278h8y",
+          "id": "33bf06n3q860",
+          "name": "AWS Brazil - prod-sa-east-1: API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-20T23:39:27.816Z"
+        },
+        {
+          "created_at": "2023-09-20T18:18:26.579Z",
+          "description": null,
+          "group": false,
+          "group_id": "1xrw1n278h8y",
+          "id": "w2sv65flwjyg",
+          "name": "AWS Brazil - prod-sa-east-1: Public Probes",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-20T23:39:27.846Z"
+        }
+      ],
+      "created_at": "2026-10-20T21:36:28.050Z",
+      "id": "3ft2hqqwnl2m",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "33bf06n3q860",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: API",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "w2sv65flwjyg",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: Public Probes",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-21T00:09:35.152Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T00:09:35.152Z",
+          "id": "1glbcxhjw9sr",
+          "incident_id": "3ft2hqqwnl2m",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T00:09:35.152Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "33bf06n3q860",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "w2sv65flwjyg",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: Public Probes",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Synthetic Monitoring alerting has recovered. We are continuing to monitor.",
+          "created_at": "2026-10-20T23:39:28.054Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T23:39:28.054Z",
+          "id": "82j365k3rn18",
+          "incident_id": "3ft2hqqwnl2m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T23:39:28.054Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "33bf06n3q860",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "w2sv65flwjyg",
+              "name": "Synthetic Monitoring - AWS Brazil - prod-sa-east-1: Public Probes",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Synthetic Monitoring alerting is also impacted. We are continuing to investigate this issue.",
+          "created_at": "2026-10-20T22:14:27.626Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T22:14:27.000Z",
+          "id": "xjph6ysshry9",
+          "incident_id": "3ft2hqqwnl2m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T22:14:53.537Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue in the prod-sa-east-1 region causing slow requests, or some stacks struggling to start. We will provide an update as soon as we have more information to share.",
+          "created_at": "2026-10-20T21:36:28.177Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-20T21:36:28.177Z",
+          "id": "wr6jx9jsy6ds",
+          "incident_id": "3ft2hqqwnl2m",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-20T21:36:28.177Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "DB issues in prod-sa-east-1",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-21T00:09:35.152Z",
+      "shortlink": "https://stspg.io/28py1pvhnpjf",
+      "started_at": "2026-10-20T21:36:28.038Z",
+      "status": "resolved",
+      "updated_at": "2026-10-21T00:09:35.178Z"
+    }
+  }
+}

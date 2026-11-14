@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/1n8sgkngf2kg",
+    "vendor": "grafana",
+    "native_id": "1n8sgkngf2kg",
+    "title": "Mimir Partial Write Outage",
+    "url": "https://stspg.io/j81jwzycv215",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-14T17:09:42.027Z",
+    "resolved_at": "2026-07-14T19:03:18.698Z",
+    "duration_minutes": 113,
+    "components": [
+      "GCP US Central - prod-us-central-0: Querying",
+      "GCP US Central - prod-us-central-0: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "crv5jqcgbg44",
+        "status": "identified",
+        "body": "We're investigating backend degradation which has resulted in a partial write outage beginning around 16:40 UTC.  This degradation has also impacted reads and rule evaluation.  Issue has been identified and we are working on mitigation.",
+        "created_at": "2026-07-14T17:09:42.128Z"
+      },
+      {
+        "native_id": "p5myz8bkp5n4",
+        "status": "monitoring",
+        "body": "The outage is recovered as of 16:56 UTC, and we're continuing to monitor.",
+        "created_at": "2026-07-14T17:23:12.467Z"
+      },
+      {
+        "native_id": "fknzj4g51qwt",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-14T19:03:18.698Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-04-10T08:43:51.752Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "jhc34sjt42wd",
+          "name": "GCP US Central - prod-us-central-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 42,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-04T18:58:26.868Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:09.523Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "1tt4gx4t4q87",
+          "name": "GCP US Central - prod-us-central-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 43,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-04T18:58:26.881Z"
+        }
+      ],
+      "created_at": "2026-07-14T17:09:42.036Z",
+      "id": "1n8sgkngf2kg",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-14T19:03:18.698Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T19:03:18.698Z",
+          "id": "fknzj4g51qwt",
+          "incident_id": "1n8sgkngf2kg",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T19:03:18.698Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The outage is recovered as of 16:56 UTC, and we're continuing to monitor.",
+          "created_at": "2026-07-14T17:23:12.467Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T17:23:12.467Z",
+          "id": "p5myz8bkp5n4",
+          "incident_id": "1n8sgkngf2kg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T17:23:12.467Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "1tt4gx4t4q87",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Ingestion",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're investigating backend degradation which has resulted in a partial write outage beginning around 16:40 UTC.  This degradation has also impacted reads and rule evaluation.  Issue has been identified and we are working on mitigation.",
+          "created_at": "2026-07-14T17:09:42.128Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T17:09:42.128Z",
+          "id": "crv5jqcgbg44",
+          "incident_id": "1n8sgkngf2kg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T17:09:42.128Z"
+        }
+      ],
+      "monitoring_at": "2026-07-14T17:23:12.467Z",
+      "name": "Mimir Partial Write Outage",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T19:03:18.698Z",
+      "shortlink": "https://stspg.io/j81jwzycv215",
+      "started_at": "2026-07-14T17:09:42.027Z",
+      "status": "resolved",
+      "updated_at": "2026-07-14T19:03:18.716Z"
+    }
+  }
+}

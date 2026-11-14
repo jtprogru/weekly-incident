@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1842",
+    "vendor": "yandexcloud",
+    "native_id": "1842",
+    "title": "Routine maintenance at the Cloud Backup provider",
+    "url": "https://status.yandex.cloud/en/incidents/1842",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-16T07:04:28.647Z",
+    "resolved_at": "2026-06-16T08:00:00Z",
+    "duration_minutes": 55,
+    "components": [
+      "Cloud Backup"
+    ],
+    "updates": [
+      {
+        "native_id": "2505",
+        "status": "investigating",
+        "body": "From 11:00 to 12:00 Moscow time, work is underway on the infrastructure of the Yandex Cloud Backup service. At this time, VM and server connection operations to the service may be unavailable for a short time, and backup and backup policies may be managed through the service's user interface, CLI, and API. There may also be problems in starting and executing backup jobs.",
+        "created_at": "2026-06-16T07:04:59.346Z"
+      },
+      {
+        "native_id": "2506",
+        "status": "resolved",
+        "body": "The routine work on the part of the provider was completed at 12:00 Moscow time.",
+        "created_at": "2026-06-16T09:37:31.625Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eThe routine work on the part of the provider was completed at 12:00 Moscow time.\u003c/p\u003e\n",
+          "createdAt": "2026-06-16T09:37:31.625Z",
+          "id": 2506,
+          "incidentId": 1842,
+          "type": "resolved",
+          "updatedAt": "2026-06-16T09:37:32.032Z"
+        },
+        {
+          "content": "\u003cp\u003eFrom 11:00 to 12:00 Moscow time, work is underway on the infrastructure of the Yandex Cloud Backup service. At this time, VM and server connection operations to the service may be unavailable for a short time, and backup and backup policies may be managed through the service's user interface, CLI, and API. There may also be problems in starting and executing backup jobs.\u003c/p\u003e\n",
+          "createdAt": "2026-06-16T07:04:59.346Z",
+          "id": 2505,
+          "incidentId": 1842,
+          "type": "investigation",
+          "updatedAt": "2026-06-16T07:20:04.202Z"
+        }
+      ],
+      "endDate": "2026-06-16T08:00:00.000Z",
+      "id": 1842,
+      "installations": [
+        {
+          "code": "kz",
+          "zones": [
+            {
+              "id": "kz1-a"
+            }
+          ]
+        },
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-a"
+            },
+            {
+              "id": "ru-central1-b"
+            },
+            {
+              "id": "ru-central1-d"
+            },
+            {
+              "id": "ru-central1-e"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "levelId": 1,
+      "maxLevel": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "maxLevelId": 1,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/backup/",
+          "fullName": "Yandex Cloud Backup",
+          "iconName": "backup",
+          "id": 300,
+          "name": "Cloud Backup",
+          "slug": "backup"
+        }
+      ],
+      "startDate": "2026-06-16T07:04:28.647Z",
+      "status": "resolved",
+      "title": "Routine maintenance at the Cloud Backup provider"
+    }
+  }
+}

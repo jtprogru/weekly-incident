@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1910",
+    "vendor": "yandexcloud",
+    "native_id": "1910",
+    "title": "Partial unavailability of services",
+    "url": "https://status.yandex.cloud/en/incidents/1910",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-08-05T09:30:00Z",
+    "resolved_at": "2026-08-05T10:50:00Z",
+    "duration_minutes": 80,
+    "components": [
+      "DataLens",
+      "Yandex Cloud Console"
+    ],
+    "updates": [
+      {
+        "native_id": "2589",
+        "status": "investigating",
+        "body": "We noticed a slowdown in the response of Yandex Cloud Console and DataLens services in the Cloud. The developers are already aware of it and are fixing it.",
+        "created_at": "2026-08-05T09:49:51.471Z"
+      },
+      {
+        "native_id": "2590",
+        "status": "resolved",
+        "body": "At 13:50 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.",
+        "created_at": "2026-08-05T11:07:09.412Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eAt 13:50 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.\u003c/p\u003e\n",
+          "createdAt": "2026-08-05T11:07:09.412Z",
+          "id": 2590,
+          "incidentId": 1910,
+          "type": "resolved",
+          "updatedAt": "2026-08-05T11:07:09.981Z"
+        },
+        {
+          "content": "\u003cp\u003eWe noticed a slowdown in the response of Yandex Cloud Console and DataLens services in the Cloud. The developers are already aware of it and are fixing it.\u003c/p\u003e\n",
+          "createdAt": "2026-08-05T09:49:51.471Z",
+          "id": 2589,
+          "incidentId": 1910,
+          "type": "investigation",
+          "updatedAt": "2026-08-05T10:21:45.835Z"
+        }
+      ],
+      "endDate": "2026-08-05T10:50:00.000Z",
+      "id": 1910,
+      "installations": [
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-a"
+            },
+            {
+              "id": "ru-central1-b"
+            },
+            {
+              "id": "ru-central1-d"
+            },
+            {
+              "id": "ru-central1-e"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Unavailable",
+        "level": 2,
+        "theme": "danger"
+      },
+      "levelId": 2,
+      "maxLevel": {
+        "label": "Unavailable",
+        "level": 2,
+        "theme": "danger"
+      },
+      "maxLevelId": 2,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "datalens.ru/home",
+          "fullName": "Yandex DataLens",
+          "iconName": "datalens",
+          "id": 23,
+          "name": "DataLens",
+          "slug": "datalens"
+        },
+        {
+          "consoleUrl": "https://console.yandex.cloud",
+          "fullName": "Yandex Cloud Console",
+          "iconName": "console",
+          "id": 303,
+          "name": "Yandex Cloud Console",
+          "slug": "console"
+        }
+      ],
+      "startDate": "2026-08-05T09:30:00.000Z",
+      "status": "resolved",
+      "title": "Partial unavailability of services"
+    }
+  }
+}

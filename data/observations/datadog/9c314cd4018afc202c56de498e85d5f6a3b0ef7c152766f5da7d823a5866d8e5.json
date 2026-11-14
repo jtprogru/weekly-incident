@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "datadog/shjkvbwy06nl",
+    "vendor": "datadog",
+    "native_id": "shjkvbwy06nl",
+    "title": "Delayed Metric Loading",
+    "url": "https://stspg.io/sskp2jtfd9sj",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-05-14T18:24:38.674Z",
+    "resolved_at": "2026-05-14T19:48:24.589Z",
+    "duration_minutes": 83,
+    "components": [
+      "Metrics and Infra Monitoring",
+      "Monitors"
+    ],
+    "updates": [
+      {
+        "native_id": "58gnsq9nnkcd",
+        "status": "investigating",
+        "body": "We are investigating increased latency querying Metrics. As a result of this issue, some users may experience delays loading graphs in dashboards and notebooks, and delayed monitor evaluations.",
+        "created_at": "2026-05-14T18:24:38.759Z"
+      },
+      {
+        "native_id": "ynm2x95tbhhd",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-05-14T18:48:48.641Z"
+      },
+      {
+        "native_id": "xpmvdbb2zgzv",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-05-14T19:48:24.589Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2013-07-01T19:11:47.268-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "qrnng5l7z80l",
+          "name": "Metrics and Infra Monitoring",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 24,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-28T14:18:11.684-04:00"
+        },
+        {
+          "created_at": "2013-07-01T19:10:23.098-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "s6jxgrkjjj6p",
+          "name": "Monitors",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 26,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-28T14:18:11.713-04:00"
+        }
+      ],
+      "created_at": "2026-05-14T14:24:38.680-04:00",
+      "id": "shjkvbwy06nl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-05-14T15:48:24.589-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T15:48:24.589-04:00",
+          "id": "xpmvdbb2zgzv",
+          "incident_id": "shjkvbwy06nl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T15:48:24.589-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-05-14T14:48:48.641-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T14:48:48.641-04:00",
+          "id": "ynm2x95tbhhd",
+          "incident_id": "shjkvbwy06nl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T14:48:48.641-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "s6jxgrkjjj6p",
+              "name": "Monitors",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qrnng5l7z80l",
+              "name": "Metrics and Infra Monitoring",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating increased latency querying Metrics. As a result of this issue, some users may experience delays loading graphs in dashboards and notebooks, and delayed monitor evaluations.",
+          "created_at": "2026-05-14T14:24:38.759-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-14T14:24:38.759-04:00",
+          "id": "58gnsq9nnkcd",
+          "incident_id": "shjkvbwy06nl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-05-14T14:24:38.759-04:00"
+        }
+      ],
+      "monitoring_at": "2026-05-14T14:48:48.641-04:00",
+      "name": "Delayed Metric Loading",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-14T15:48:24.589-04:00",
+      "shortlink": "https://stspg.io/sskp2jtfd9sj",
+      "started_at": "2026-05-14T14:24:38.674-04:00",
+      "status": "resolved",
+      "updated_at": "2026-05-14T15:48:24.606-04:00"
+    }
+  }
+}

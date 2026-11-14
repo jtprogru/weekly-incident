@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/8sjb7kmqnvk9",
+    "vendor": "digitalocean",
+    "native_id": "8sjb7kmqnvk9",
+    "title": "Serverless Inference - Gemma4 Latency Issues Causing Timeouts \u0026 Slow Responses",
+    "url": "https://stspg.io/rzs04wclgpfq",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-13T19:04:10.227Z",
+    "resolved_at": "2026-07-15T21:46:35.616Z",
+    "duration_minutes": 3042,
+    "components": [
+      "Inference"
+    ],
+    "updates": [
+      {
+        "native_id": "lm7m655m8ym1",
+        "status": "identified",
+        "body": "We are currently experiencing an issue where customers using the Gemma 4 model on our Serverless Inference and Dedicated Inference platforms may experience severe latency or request timeouts.\nOur engineering team has identified a backend configuration issue as the root cause, which is temporarily degrading performance. We are actively working on a fix to restore normal response times and will provide another update as soon as the mitigation is in place",
+        "created_at": "2026-07-13T19:04:10.33Z"
+      },
+      {
+        "native_id": "h5qb9cprv92c",
+        "status": "monitoring",
+        "body": "A fix has been deployed to resolve the backend configuration issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+        "created_at": "2026-07-13T22:24:14.997Z"
+      },
+      {
+        "native_id": "c83lld5wgmqn",
+        "status": "identified",
+        "body": "We are currently experiencing an issue affecting customers using the Gemma 4 model on our Serverless Inference platform. Customers may experience significantly increased latency or request timeouts.\n\nOur Engineering team has identified a backend configuration issue as the root cause, which is temporarily impacting model performance. Please be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+        "created_at": "2026-07-14T11:07:24.206Z"
+      },
+      {
+        "native_id": "4s9nxff2q7lf",
+        "status": "monitoring",
+        "body": "A fix has been deployed to resolve the issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+        "created_at": "2026-07-15T10:06:19.57Z"
+      },
+      {
+        "native_id": "vvrgvw5p9r3q",
+        "status": "resolved",
+        "body": "The deployed fix has successfully restored full functionality, and our monitoring shows that system performance has completely stabilized. Response times for all Gemma 4 inference workflows have returned to normal baseline levels.\nWe will continue to track platform stability moving forward to ensure long-term reliability. We apologize for any disruption this may have caused to your workflows and appreciate your patience throughout the recovery process.",
+        "created_at": "2026-07-15T21:46:35.616Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-15T07:02:10.429Z",
+          "description": "Serverless access to foundation models (e.g. Llama, Mistral, GPT) via OpenAI-compatible API.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "2z9ldz1t4dgp",
+          "name": "Inference",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2026-05-15",
+          "status": "operational",
+          "updated_at": "2026-07-23T12:36:59.981Z"
+        }
+      ],
+      "created_at": "2026-07-13T19:04:10.240Z",
+      "id": "8sjb7kmqnvk9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The deployed fix has successfully restored full functionality, and our monitoring shows that system performance has completely stabilized. Response times for all Gemma 4 inference workflows have returned to normal baseline levels.\nWe will continue to track platform stability moving forward to ensure long-term reliability. We apologize for any disruption this may have caused to your workflows and appreciate your patience throughout the recovery process.",
+          "created_at": "2026-07-15T21:46:35.616Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T21:46:35.616Z",
+          "id": "vvrgvw5p9r3q",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T21:46:35.616Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed to resolve the issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+          "created_at": "2026-07-15T10:06:19.570Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-15T10:06:19.570Z",
+          "id": "4s9nxff2q7lf",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T10:06:19.570Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are currently experiencing an issue affecting customers using the Gemma 4 model on our Serverless Inference platform. Customers may experience significantly increased latency or request timeouts.\n\nOur Engineering team has identified a backend configuration issue as the root cause, which is temporarily impacting model performance. Please be assured that our Engineering team is actively working on a fix and is treating this issue with high priority.\n\nWe sincerely apologise for any inconvenience this may have caused and appreciate your patience and understanding. If you have any further questions, please create a support ticket so that we can investigate your specific case further.",
+          "created_at": "2026-07-14T11:07:24.206Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T11:07:24.206Z",
+          "id": "c83lld5wgmqn",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T11:07:24.206Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been deployed to resolve the backend configuration issue. We are closely monitoring system performance to ensure full recovery and normal response times for all Gemma 4 inference workflows.",
+          "created_at": "2026-07-13T22:24:14.997Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T22:24:14.997Z",
+          "id": "h5qb9cprv92c",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T22:24:14.997Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently experiencing an issue where customers using the Gemma 4 model on our Serverless Inference and Dedicated Inference platforms may experience severe latency or request timeouts.\nOur engineering team has identified a backend configuration issue as the root cause, which is temporarily degrading performance. We are actively working on a fix to restore normal response times and will provide another update as soon as the mitigation is in place",
+          "created_at": "2026-07-13T19:04:10.330Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:04:10.330Z",
+          "id": "lm7m655m8ym1",
+          "incident_id": "8sjb7kmqnvk9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:04:10.330Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T22:24:14.997Z",
+      "name": "Serverless Inference - Gemma4 Latency Issues Causing Timeouts \u0026 Slow Responses",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T21:46:35.616Z",
+      "shortlink": "https://stspg.io/rzs04wclgpfq",
+      "started_at": "2026-07-13T19:04:10.227Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T21:46:35.631Z"
+    }
+  }
+}

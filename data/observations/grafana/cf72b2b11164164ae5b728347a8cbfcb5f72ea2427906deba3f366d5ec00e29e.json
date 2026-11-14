@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/tdzys437r2h5",
+    "vendor": "grafana",
+    "native_id": "tdzys437r2h5",
+    "title": "Network Degredation in prod-us-central-0",
+    "url": "https://stspg.io/b7q606nsf9sy",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-10T21:31:54.006Z",
+    "resolved_at": "2026-07-10T21:31:54.074Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "b4n8yz9dq7zr",
+        "status": "resolved",
+        "body": "From approximately 20:24 UTC - 20:47 UTC a network issue in prod-us-central-0 isolated part of our infrastructure in one availability zone, temporarily cutting off connectivity to a subset of backend services. This caused elevated query latency and some delayed metric evaluations, along with related write-path errors in a logging subsystem. All systems recovered automatically once network connectivity was restored.\n\nImpacted customers may have had queries or rule evaluations fail during the incident, but ingestion was not impacted.",
+        "created_at": "2026-07-10T21:31:54.074Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-10T21:31:54.012Z",
+      "id": "tdzys437r2h5",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "From approximately 20:24 UTC - 20:47 UTC a network issue in prod-us-central-0 isolated part of our infrastructure in one availability zone, temporarily cutting off connectivity to a subset of backend services. This caused elevated query latency and some delayed metric evaluations, along with related write-path errors in a logging subsystem. All systems recovered automatically once network connectivity was restored.\n\nImpacted customers may have had queries or rule evaluations fail during the incident, but ingestion was not impacted.",
+          "created_at": "2026-07-10T21:31:54.074Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-10T21:31:54.074Z",
+          "id": "b4n8yz9dq7zr",
+          "incident_id": "tdzys437r2h5",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-10T21:31:54.074Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Network Degredation in prod-us-central-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-10T21:31:54.074Z",
+      "shortlink": "https://stspg.io/b7q606nsf9sy",
+      "started_at": "2026-07-10T21:31:54.006Z",
+      "status": "resolved",
+      "updated_at": "2026-07-10T21:32:01.356Z"
+    }
+  }
+}

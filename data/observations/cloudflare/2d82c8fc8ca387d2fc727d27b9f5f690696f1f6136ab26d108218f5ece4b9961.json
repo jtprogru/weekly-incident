@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/dr9s0uvzwk6n",
+    "vendor": "cloudflare",
+    "native_id": "dr9s0uvzwk6n",
+    "title": "Increased Latency and Errors for R2 and Downstream Services in Western North America (WNAM)",
+    "url": "https://www.cloudflarestatus.com/incidents/dr9s0uvzwk6n",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-03T13:00:00Z",
+    "resolved_at": "2026-11-03T22:15:00Z",
+    "duration_minutes": 555,
+    "components": [
+      "Stream",
+      "Pipelines",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "kth4aiozl0ft",
+        "status": "resolved",
+        "body": "Cloudflare has resolved an issue affecting R2 and downstream services in the Western North America region. Some customers may have seen elevated latency and errors between approximately 13:00 and 22:15 UTC on November 3, 2026. This may also have affected downstream services such as Stream and Pipelines.",
+        "created_at": "2026-11-04T14:43:39.555Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:53:34.000Z",
+          "description": "Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "47xg28c02lnk",
+          "name": "Stream",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        },
+        {
+          "created_at": "2026-08-11T12:16:30.000Z",
+          "description": "Managed streaming data pipeline service that ingests events, applies SQL transformations, and delivers them to R2 as Apache Iceberg tables or Parquet/JSON files.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "xr712w0ly7nr",
+          "name": "Pipelines",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-08-11",
+          "status": "operational",
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-05T15:26:03.958Z"
+        }
+      ],
+      "created_at": "2026-11-04T14:43:39.555Z",
+      "id": "dr9s0uvzwk6n",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "47xg28c02lnk",
+              "name": "Media - Stream",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Developer Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has resolved an issue affecting R2 and downstream services in the Western North America region. Some customers may have seen elevated latency and errors between approximately 13:00 and 22:15 UTC on November 3, 2026. This may also have affected downstream services such as Stream and Pipelines.",
+          "created_at": "2026-11-04T14:43:39.555Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-03T22:15:00.000Z",
+          "id": "kth4aiozl0ft",
+          "incident_id": "dr9s0uvzwk6n",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T14:43:39.555Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Latency and Errors for R2 and Downstream Services in Western North America (WNAM)",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-03T22:15:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/dr9s0uvzwk6n",
+      "started_at": "2026-11-03T13:00:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T14:44:03.960Z"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/tj6b68kpdblp",
+    "vendor": "grafana",
+    "native_id": "tj6b68kpdblp",
+    "title": "Delayed ingestion and recording rule evaluation failures for Mimir in prod-ap-south-1",
+    "url": "https://stspg.io/wf0b60558zyz",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-09T10:28:11.862Z",
+    "resolved_at": "2026-07-09T13:07:42.743Z",
+    "duration_minutes": 159,
+    "components": [
+      "AWS India - prod-ap-south-1: Rule Evaluation",
+      "AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API"
+    ],
+    "updates": [
+      {
+        "native_id": "fn4jd4w778js",
+        "status": "investigating",
+        "body": "We are observing delayed ingestion and recording rule evaluation failures for Mimir in prod-ap-south-1. As of yet we have not noticed any customer impact however we are currently observing the cell.",
+        "created_at": "2026-07-09T10:28:11.968Z"
+      },
+      {
+        "native_id": "09czmjxzm2v8",
+        "status": "monitoring",
+        "body": "A fix has been implemented. We are currently monitoring the results.",
+        "created_at": "2026-07-09T11:18:37.636Z"
+      },
+      {
+        "native_id": "6mmpmbw3cx4y",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-09T13:07:42.743Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-10-03T13:22:43.263Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "f072zpmfqxhf",
+          "name": "AWS India - prod-ap-south-1: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-07-09T13:07:42.646Z"
+        },
+        {
+          "created_at": "2023-10-03T13:23:04.389Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "zljxmjgrpj4q",
+          "name": "AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-07-09T13:07:42.676Z"
+        }
+      ],
+      "created_at": "2026-07-09T10:28:11.872Z",
+      "id": "tj6b68kpdblp",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "f072zpmfqxhf",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zljxmjgrpj4q",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-09T13:07:42.743Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T13:07:42.743Z",
+          "id": "6mmpmbw3cx4y",
+          "incident_id": "tj6b68kpdblp",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T13:07:42.743Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "f072zpmfqxhf",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zljxmjgrpj4q",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented. We are currently monitoring the results.",
+          "created_at": "2026-07-09T11:18:37.636Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T11:18:37.636Z",
+          "id": "09czmjxzm2v8",
+          "incident_id": "tj6b68kpdblp",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T11:18:37.636Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "f072zpmfqxhf",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "zljxmjgrpj4q",
+              "name": "Alerting and SLO - AWS India - prod-ap-south-1: Alertmanager and Rules Configuration API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are observing delayed ingestion and recording rule evaluation failures for Mimir in prod-ap-south-1. As of yet we have not noticed any customer impact however we are currently observing the cell.",
+          "created_at": "2026-07-09T10:28:11.968Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-09T10:28:11.968Z",
+          "id": "fn4jd4w778js",
+          "incident_id": "tj6b68kpdblp",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-09T10:28:11.968Z"
+        }
+      ],
+      "monitoring_at": "2026-07-09T11:18:37.636Z",
+      "name": "Delayed ingestion and recording rule evaluation failures for Mimir in prod-ap-south-1",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-09T13:07:42.743Z",
+      "shortlink": "https://stspg.io/wf0b60558zyz",
+      "started_at": "2026-07-09T10:28:11.862Z",
+      "status": "resolved",
+      "updated_at": "2026-07-09T13:07:42.760Z"
+    }
+  }
+}

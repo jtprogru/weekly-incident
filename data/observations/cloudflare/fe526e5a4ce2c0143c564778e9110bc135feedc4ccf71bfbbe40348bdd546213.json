@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/z28czd65h29l",
+    "vendor": "cloudflare",
+    "native_id": "z28czd65h29l",
+    "title": "Durable Objects Availability Issue in Eastern North America",
+    "url": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-05T17:14:30.673Z",
+    "resolved_at": "2026-10-05T22:35:46.526Z",
+    "duration_minutes": 321,
+    "components": [
+      "Containers",
+      "Durable Objects",
+      "R2",
+      "Workers Assets",
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "cgd55k1vd18n",
+        "status": "investigating",
+        "body": "We are investigating an issue leading to decreased availability for Durable Objects and dependent services in the Eastern North America region. Our engineering team is actively working to mitigate the impact, and further updates will be provided as soon as more information becomes available.",
+        "created_at": "2026-10-05T17:14:30.85Z"
+      },
+      {
+        "native_id": "t7t3h8d2yq0g",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-05T17:53:19.966Z"
+      },
+      {
+        "native_id": "pq9t8w0tcn0m",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-05T22:35:46.526Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 35,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-10-15T21:30:10.000Z"
+        },
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 47,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-10-15T21:30:10.000Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 84,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:42.000Z"
+        },
+        {
+          "created_at": "2026-03-30T11:50:12.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "pg21w9xb991r",
+          "name": "Workers Assets",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 119,
+          "showcase": false,
+          "start_date": "2026-03-30",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:04:05.000Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 124,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-10-16T18:03:25.000Z"
+        }
+      ],
+      "created_at": "2026-10-05T17:14:30.000Z",
+      "id": "z28czd65h29l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-05T22:35:46.526Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T22:35:46.526Z",
+          "id": "pq9t8w0tcn0m",
+          "incident_id": "z28czd65h29l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T22:35:46.526Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Cloudflare Sites and Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Cloudflare Sites and Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "pg21w9xb991r",
+              "name": "Cloudflare Sites and Services - Workers Assets",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Cloudflare Sites and Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-05T17:53:19.966Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T17:53:19.966Z",
+          "id": "t7t3h8d2yq0g",
+          "incident_id": "z28czd65h29l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T17:53:19.966Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Cloudflare Sites and Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue leading to decreased availability for Durable Objects and dependent services in the Eastern North America region. Our engineering team is actively working to mitigate the impact, and further updates will be provided as soon as more information becomes available.",
+          "created_at": "2026-10-05T17:14:30.850Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-05T17:14:30.850Z",
+          "id": "cgd55k1vd18n",
+          "incident_id": "z28czd65h29l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-05T17:14:30.850Z"
+        }
+      ],
+      "monitoring_at": "2026-10-05T17:53:19.966Z",
+      "name": "Durable Objects Availability Issue in Eastern North America",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-05T22:35:46.526Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
+      "started_at": "2026-10-05T17:14:30.673Z",
+      "status": "resolved",
+      "updated_at": "2026-10-05T22:35:46.554Z"
+    }
+  }
+}

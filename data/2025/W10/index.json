@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W10",
   "from": "2025-03-03T00:00:00Z",
   "to": "2025-03-10T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/8xc8jr91pcjh",
+      "canonical": {
+        "id": "ci-8aadf6e4c5c3150bbc89d0cf",
+        "sources": [
+          {
+            "key": "atlassian/8xc8jr91pcjh",
+            "path": "2025/W10/atlassian.json",
+            "url": "https://stspg.io/d9vzr30gswqr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8aadf6e4c5c3150bbc89d0cf",
       "vendor": "atlassian",
       "title": "Issues with 403 user authentication errors across Atlassian products",
       "url": "https://stspg.io/d9vzr30gswqr",

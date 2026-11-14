@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/wtsd415cavkc",
+    "vendor": "cloudflare",
+    "native_id": "wtsd415cavkc",
+    "title": "Wrangler Deployments, Pages, and Workers Builds failures",
+    "url": "https://www.cloudflarestatus.com/incidents/wtsd415cavkc",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-06T09:47:17.426Z",
+    "resolved_at": "2026-11-06T10:08:30.899Z",
+    "duration_minutes": 21,
+    "components": [
+      "Pages",
+      "Workers Builds",
+      "Wrangler"
+    ],
+    "updates": [
+      {
+        "native_id": "hf1bhadmnsu8",
+        "status": "identified",
+        "body": "Cloudflare is investigating an issue with Wrangler deployments, Pages, and Workers Builds. Users may observe from failed uploads. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-06T09:47:17.426Z"
+      },
+      {
+        "native_id": "az9qeaj24ur8",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-06T09:53:44.095Z"
+      },
+      {
+        "native_id": "d7qyze5z7eal",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-06T10:08:30.899Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-04-16T21:04:08.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vgxj684rcw7t",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2021-04-16",
+          "status": "operational",
+          "updated_at": "2026-11-06T10:08:30.899Z"
+        },
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "created_at": "2024-12-03T03:41:35.000Z",
+          "description": "Wrangler is the Cloudflare Developer Platform command-line interface (CLI) that allows you to manage Worker projects.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "q1h7j6g2jcjw",
+          "name": "Wrangler",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 23,
+          "showcase": false,
+          "start_date": "2024-12-03",
+          "status": "operational",
+          "updated_at": "2026-11-06T10:08:30.899Z"
+        }
+      ],
+      "created_at": "2026-11-06T09:47:17.426Z",
+      "id": "wtsd415cavkc",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-06T10:08:30.899Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T10:08:30.899Z",
+          "id": "d7qyze5z7eal",
+          "incident_id": "wtsd415cavkc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T10:08:30.899Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgxj684rcw7t",
+              "name": "Developer Services - Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Developer Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-06T09:53:44.095Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T09:53:44.095Z",
+          "id": "az9qeaj24ur8",
+          "incident_id": "wtsd415cavkc",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T09:53:44.095Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "q1h7j6g2jcjw",
+              "name": "Developer Services - Wrangler",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue with Wrangler deployments, Pages, and Workers Builds. Users may observe from failed uploads. We are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-06T09:47:17.426Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-06T09:47:17.426Z",
+          "id": "hf1bhadmnsu8",
+          "incident_id": "wtsd415cavkc",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-06T09:53:40.214Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Wrangler Deployments, Pages, and Workers Builds failures",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-06T10:08:30.899Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/wtsd415cavkc",
+      "started_at": "2026-11-06T09:47:17.426Z",
+      "status": "resolved",
+      "updated_at": "2026-11-06T10:08:30.899Z"
+    }
+  }
+}

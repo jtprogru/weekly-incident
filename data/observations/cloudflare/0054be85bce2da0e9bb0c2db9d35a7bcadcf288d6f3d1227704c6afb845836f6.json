@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/gjw0tnhh4f3f",
+    "vendor": "cloudflare",
+    "native_id": "gjw0tnhh4f3f",
+    "title": "Cloudflare MCP Portal tool invocation logging instability",
+    "url": "https://www.cloudflarestatus.com/incidents/gjw0tnhh4f3f",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-26T14:59:16.492Z",
+    "resolved_at": "2026-08-26T15:38:03.408Z",
+    "duration_minutes": 38,
+    "components": [
+      "MCP Portal"
+    ],
+    "updates": [
+      {
+        "native_id": "jmxwybdr2q8m",
+        "status": "investigating",
+        "body": "Cloudflare engineering is investigating an issue causing some tool call invocation logs to be dropped. This affects logpush and the dashboard. Portal connectivity and initial authentication logs are not impacted.",
+        "created_at": "2026-08-26T14:59:16.594Z"
+      },
+      {
+        "native_id": "jz6pq1fc675s",
+        "status": "monitoring",
+        "body": "After further investigation it was determined that the issue was isolated to internal accounts. There was no customer facing impact.",
+        "created_at": "2026-08-26T15:28:39.821Z"
+      },
+      {
+        "native_id": "lqv495497cgd",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-26T15:38:03.408Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-19T22:05:47.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "gcnzpkhvnqs7",
+          "name": "MCP Portal",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 70,
+          "showcase": false,
+          "start_date": "2026-05-19",
+          "status": "operational",
+          "updated_at": "2026-08-26T15:38:03.000Z"
+        }
+      ],
+      "created_at": "2026-08-26T14:59:16.000Z",
+      "id": "gjw0tnhh4f3f",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-26T15:38:03.408Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T15:38:03.408Z",
+          "id": "lqv495497cgd",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T15:38:03.408Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "After further investigation it was determined that the issue was isolated to internal accounts. There was no customer facing impact.",
+          "created_at": "2026-08-26T15:28:39.821Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T15:28:39.821Z",
+          "id": "jz6pq1fc675s",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T15:28:39.821Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gcnzpkhvnqs7",
+              "name": "Cloudflare Sites and Services - MCP Portal",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare engineering is investigating an issue causing some tool call invocation logs to be dropped. This affects logpush and the dashboard. Portal connectivity and initial authentication logs are not impacted.",
+          "created_at": "2026-08-26T14:59:16.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T14:59:16.594Z",
+          "id": "jmxwybdr2q8m",
+          "incident_id": "gjw0tnhh4f3f",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T14:59:16.594Z"
+        }
+      ],
+      "monitoring_at": "2026-08-26T15:28:39.821Z",
+      "name": "Cloudflare MCP Portal tool invocation logging instability",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-26T15:38:03.408Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/gjw0tnhh4f3f",
+      "started_at": "2026-08-26T14:59:16.492Z",
+      "status": "resolved",
+      "updated_at": "2026-08-26T15:38:03.425Z"
+    }
+  }
+}

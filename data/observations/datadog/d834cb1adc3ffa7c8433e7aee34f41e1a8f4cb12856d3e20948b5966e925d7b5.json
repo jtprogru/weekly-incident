@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "datadog/ww8rhx2j8mfz",
+    "vendor": "datadog",
+    "native_id": "ww8rhx2j8mfz",
+    "title": "Multiple products impacted with data delays",
+    "url": "https://stspg.io/29j9dsc8llxg",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2025-10-20T10:14:51.02Z",
+    "resolved_at": "2025-10-20T11:31:39.466Z",
+    "duration_minutes": 76,
+    "components": [
+      "Cloud Security Management",
+      "Incident Response"
+    ],
+    "updates": [
+      {
+        "native_id": "v852zf50zq29",
+        "status": "identified",
+        "body": "Note: this is a delayed update because this incident impaired our ability to update the status page, we posted banners earlier in the product to let customers know about the ongoing impact.\nWe are still seeing some delays as we are fully recovering from the underlying incident: agentless vulnerability scanning for hosts in AWS us-east-1 is still delayed, On-Call notifications are not fully recovered. This incident started at 07:10 UTC on October 20.\nSo far we have recovered fully from the impact on Synthetics, collection of data from AWS, Bits AI, Codegen, Dashboards (edition features were impaired).",
+        "created_at": "2025-10-20T10:14:51.119Z"
+      },
+      {
+        "native_id": "nm4q9cwh30nj",
+        "status": "monitoring",
+        "body": "We are monitoring and seeing recovery for all products, some customers might still experience for a limited subset of data delays for logs or host vulnerability scanning specific to AWS us-east-1. We will post specific information on the affected product pages for those customers.\nOn-Call notifications are fully operational.",
+        "created_at": "2025-10-20T10:53:19.072Z"
+      },
+      {
+        "native_id": "72mh0mv0xbp5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2025-10-20T11:31:39.466Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-09-07T03:51:13.272-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cwp97nbkd47t",
+          "name": "Cloud Security Management",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2021-09-07",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:05.594-04:00"
+        },
+        {
+          "created_at": "2021-09-07T03:47:32.660-04:00",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "nypxbf5kxblr",
+          "name": "Incident Response",
+          "only_show_if_degraded": false,
+          "page_id": "1k6wzpspjf99",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2021-09-07",
+          "status": "operational",
+          "updated_at": "2026-06-15T13:12:10.423-04:00"
+        }
+      ],
+      "created_at": "2025-10-20T06:14:51.025-04:00",
+      "id": "ww8rhx2j8mfz",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2025-10-20T07:31:39.466-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T07:31:39.466-04:00",
+          "id": "72mh0mv0xbp5",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "resolved",
+          "tweet_id": 1980235461475053809,
+          "updated_at": "2025-10-20T07:31:39.798-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are monitoring and seeing recovery for all products, some customers might still experience for a limited subset of data delays for logs or host vulnerability scanning specific to AWS us-east-1. We will post specific information on the affected product pages for those customers.\nOn-Call notifications are fully operational.",
+          "created_at": "2025-10-20T06:53:19.072-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T06:53:19.072-04:00",
+          "id": "nm4q9cwh30nj",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "monitoring",
+          "tweet_id": 1980225827288785395,
+          "updated_at": "2025-10-20T06:53:22.855-04:00"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nypxbf5kxblr",
+              "name": "Incident Response",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "cwp97nbkd47t",
+              "name": "Cloud Security Management",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Note: this is a delayed update because this incident impaired our ability to update the status page, we posted banners earlier in the product to let customers know about the ongoing impact.\nWe are still seeing some delays as we are fully recovering from the underlying incident: agentless vulnerability scanning for hosts in AWS us-east-1 is still delayed, On-Call notifications are not fully recovered. This incident started at 07:10 UTC on October 20.\nSo far we have recovered fully from the impact on Synthetics, collection of data from AWS, Bits AI, Codegen, Dashboards (edition features were impaired).",
+          "created_at": "2025-10-20T06:14:51.119-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2025-10-20T06:14:51.119-04:00",
+          "id": "v852zf50zq29",
+          "incident_id": "ww8rhx2j8mfz",
+          "status": "identified",
+          "tweet_id": 1980216133186916361,
+          "updated_at": "2025-10-20T06:14:51.595-04:00"
+        }
+      ],
+      "monitoring_at": "2025-10-20T06:53:19.072-04:00",
+      "name": "Multiple products impacted with data delays",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2025-10-20T07:31:39.466-04:00",
+      "shortlink": "https://stspg.io/29j9dsc8llxg",
+      "started_at": "2025-10-20T06:14:51.020-04:00",
+      "status": "resolved",
+      "updated_at": "2025-10-20T07:31:39.803-04:00"
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/0rkjjs2ssp7z",
+    "vendor": "github",
+    "native_id": "0rkjjs2ssp7z",
+    "title": "Disruption with some GitHub services",
+    "url": "https://stspg.io/v6kqsytzxg2j",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-28T17:50:30.616Z",
+    "resolved_at": "2026-06-28T20:55:58.925Z",
+    "duration_minutes": 185,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "wy7z37n7kf4p",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-06-28T17:50:30.733Z"
+      },
+      {
+        "native_id": "br5km8hyhhnp",
+        "status": "investigating",
+        "body": "Copilot cloud agent is experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. We have identified the issue and are validating a fix.",
+        "created_at": "2026-06-28T17:59:07.666Z"
+      },
+      {
+        "native_id": "7h4p3gv1db7f",
+        "status": "investigating",
+        "body": "Copilot cloud agent is experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. We have validated a fix and are deploying that fix now.",
+        "created_at": "2026-06-28T18:31:04.642Z"
+      },
+      {
+        "native_id": "843ptx2cggbr",
+        "status": "investigating",
+        "body": "Copilot cloud agent had been experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. A fix has been deployed and we are validating that fix.",
+        "created_at": "2026-06-28T20:02:17.998Z"
+      },
+      {
+        "native_id": "j78spxwdt89k",
+        "status": "resolved",
+        "body": "From June 26, 2026 at 23:40 UTC through June 28, 2026 at 20:55 UTC, Copilot Cloud Agent was degraded. The agent could fail when reporting progress, replying to pull request comments, or opening pull requests. For affected built-in tool calls, the average error rate was approximately 8%, with hourly error rates peaking around 26%.\u003cbr /\u003e\u003cbr /\u003eThis was due to a regression introduced during a Copilot Cloud Agent runtime deployment that caused several built-in agent tools to become unavailable. In many cases, the affected tool calls failed silently so agent jobs appeared to succeed. This monitoring gap meant it took longer than expected to identify the failure. We mitigated the incident by reverting the runtime deployment to the previously stable version.\u003cbr /\u003e\u003cbr /\u003eWe've added monitoring and alerting for this class of tool-availability error to reduce time-to-detection. We're also adding regression tests for these built-in agent tools, and improving the shipping safety for future runtime rollouts to avoid similar issues.",
+        "created_at": "2026-06-28T20:55:58.925Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-28T17:50:30.639Z",
+      "id": "0rkjjs2ssp7z",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "From June 26, 2026 at 23:40 UTC through June 28, 2026 at 20:55 UTC, Copilot Cloud Agent was degraded. The agent could fail when reporting progress, replying to pull request comments, or opening pull requests. For affected built-in tool calls, the average error rate was approximately 8%, with hourly error rates peaking around 26%.\u003cbr /\u003e\u003cbr /\u003eThis was due to a regression introduced during a Copilot Cloud Agent runtime deployment that caused several built-in agent tools to become unavailable. In many cases, the affected tool calls failed silently so agent jobs appeared to succeed. This monitoring gap meant it took longer than expected to identify the failure. We mitigated the incident by reverting the runtime deployment to the previously stable version.\u003cbr /\u003e\u003cbr /\u003eWe've added monitoring and alerting for this class of tool-availability error to reduce time-to-detection. We're also adding regression tests for these built-in agent tools, and improving the shipping safety for future runtime rollouts to avoid similar issues.",
+          "created_at": "2026-06-28T20:55:58.925Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-28T20:55:58.925Z",
+          "id": "j78spxwdt89k",
+          "incident_id": "0rkjjs2ssp7z",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-01T16:53:51.775Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Copilot cloud agent had been experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. A fix has been deployed and we are validating that fix.",
+          "created_at": "2026-06-28T20:02:17.998Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-28T20:02:17.998Z",
+          "id": "843ptx2cggbr",
+          "incident_id": "0rkjjs2ssp7z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-28T20:02:17.998Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Copilot cloud agent is experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. We have validated a fix and are deploying that fix now.",
+          "created_at": "2026-06-28T18:31:04.642Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-28T18:31:04.642Z",
+          "id": "7h4p3gv1db7f",
+          "incident_id": "0rkjjs2ssp7z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-28T18:31:04.642Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Copilot cloud agent is experiencing intermittent problems with opening pull requests, pushing changes and replying to comments. We have identified the issue and are validating a fix.",
+          "created_at": "2026-06-28T17:59:07.666Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-28T17:59:07.666Z",
+          "id": "br5km8hyhhnp",
+          "incident_id": "0rkjjs2ssp7z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-28T17:59:07.666Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-06-28T17:50:30.733Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-28T17:50:30.733Z",
+          "id": "wy7z37n7kf4p",
+          "incident_id": "0rkjjs2ssp7z",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-28T17:50:30.733Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Disruption with some GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-28T20:55:58.925Z",
+      "shortlink": "https://stspg.io/v6kqsytzxg2j",
+      "started_at": "2026-06-28T17:50:30.616Z",
+      "status": "resolved",
+      "updated_at": "2026-07-01T16:53:51.781Z"
+    }
+  }
+}

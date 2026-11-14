@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2019-W43",
   "from": "2019-10-21T00:00:00Z",
   "to": "2019-10-28T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/kw28xr3wyxmq",
+      "canonical": {
+        "id": "ci-09947484c0995c6b58b2eed9",
+        "sources": [
+          {
+            "key": "atlassian/kw28xr3wyxmq",
+            "path": "2019/W43/atlassian.json",
+            "url": "http://stspg.io/e1be96263"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-09947484c0995c6b58b2eed9",
       "vendor": "atlassian",
       "title": "Intermittent DNS Resolution Errors",
       "url": "http://stspg.io/e1be96263",

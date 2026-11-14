@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/lv9wsn3ksb79",
+    "vendor": "grafana",
+    "native_id": "lv9wsn3ksb79",
+    "title": "Tempo and Mimir Read and Write Failures",
+    "url": "https://stspg.io/kw7xrpjrg134",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-03T22:13:28.286Z",
+    "resolved_at": "2026-09-04T00:55:47.579Z",
+    "duration_minutes": 162,
+    "components": [
+      "AWS US West - prod-us-west-0: Querying",
+      "AWS US West - prod-us-west-0: Ingestion",
+      "AWS US West - prod-us-west-0: Querying",
+      "AWS US West - prod-us-west-0: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "btt0d8vw4xcm",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-03T22:13:28.459Z"
+      },
+      {
+        "native_id": "2v7kkbd5rynz",
+        "status": "identified",
+        "body": "Cluster Metrics are healthy for the last 15 minutes",
+        "created_at": "2026-09-03T22:31:39.898Z"
+      },
+      {
+        "native_id": "fyln076w00gc",
+        "status": "monitoring",
+        "body": "Tempo recovered.",
+        "created_at": "2026-09-03T22:48:35.059Z"
+      },
+      {
+        "native_id": "lc6vhbjrs56w",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-04T00:55:47.579Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T14:51:44.826Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "tfr4g652mxn5",
+          "name": "AWS US West - prod-us-west-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 21,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:05.515Z"
+        },
+        {
+          "created_at": "2023-09-20T14:52:00.018Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "k8k4wprtwgz9",
+          "name": "AWS US West - prod-us-west-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:05.551Z"
+        },
+        {
+          "created_at": "2023-09-20T15:56:45.191Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "ctqprgdj7scn",
+          "name": "AWS US West - prod-us-west-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 28,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:05.671Z"
+        },
+        {
+          "created_at": "2023-09-20T15:56:58.745Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "l502n5x60s2m",
+          "name": "AWS US West - prod-us-west-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:46:05.792Z"
+        }
+      ],
+      "created_at": "2026-09-03T22:13:28.302Z",
+      "id": "lv9wsn3ksb79",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ctqprgdj7scn",
+              "name": "Traces - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "l502n5x60s2m",
+              "name": "Traces - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-04T00:55:47.579Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T00:55:47.579Z",
+          "id": "lc6vhbjrs56w",
+          "incident_id": "lv9wsn3ksb79",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T00:55:47.579Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ctqprgdj7scn",
+              "name": "Traces - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l502n5x60s2m",
+              "name": "Traces - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Tempo recovered.",
+          "created_at": "2026-09-03T22:48:35.059Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T22:48:35.059Z",
+          "id": "fyln076w00gc",
+          "incident_id": "lv9wsn3ksb79",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T22:48:35.059Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ctqprgdj7scn",
+              "name": "Traces - AWS US West - prod-us-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l502n5x60s2m",
+              "name": "Traces - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Cluster Metrics are healthy for the last 15 minutes",
+          "created_at": "2026-09-03T22:31:39.898Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T22:31:39.898Z",
+          "id": "2v7kkbd5rynz",
+          "incident_id": "lv9wsn3ksb79",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T22:31:39.898Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "tfr4g652mxn5",
+              "name": "Metrics - AWS US West - prod-us-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8k4wprtwgz9",
+              "name": "Metrics - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "ctqprgdj7scn",
+              "name": "Traces - AWS US West - prod-us-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "l502n5x60s2m",
+              "name": "Traces - AWS US West - prod-us-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-03T22:13:28.459Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-03T22:13:28.459Z",
+          "id": "btt0d8vw4xcm",
+          "incident_id": "lv9wsn3ksb79",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-03T22:13:28.459Z"
+        }
+      ],
+      "monitoring_at": "2026-09-03T22:48:35.059Z",
+      "name": "Tempo and Mimir Read and Write Failures",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-04T00:55:47.579Z",
+      "shortlink": "https://stspg.io/kw7xrpjrg134",
+      "started_at": "2026-09-03T22:13:28.286Z",
+      "status": "resolved",
+      "updated_at": "2026-09-04T00:55:47.594Z"
+    }
+  }
+}

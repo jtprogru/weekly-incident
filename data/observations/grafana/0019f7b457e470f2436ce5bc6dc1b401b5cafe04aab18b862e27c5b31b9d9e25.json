@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/4m5tfwljjfxk",
+    "vendor": "grafana",
+    "native_id": "4m5tfwljjfxk",
+    "title": "Grafana Cloud IRM alert groups failing to produce alerts in us-east-3 region.",
+    "url": "https://stspg.io/34p7wm05ydt0",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-05T11:37:40.914Z",
+    "resolved_at": "2026-07-06T07:37:05.16Z",
+    "duration_minutes": 1199,
+    "components": [
+      "Incident Management and Response (IRM)"
+    ],
+    "updates": [
+      {
+        "native_id": "2t7n0vp9wp7t",
+        "status": "identified",
+        "body": "Some IRM alert groups in us-east-3 region may not be able to produce alerts and could be sluggish/misbehaving in general. The issue started around 01:00 UTC on July 3rd. The issue has been identified and the cause of the issue has been fixed. Our team is actively working on getting the service back to healthy state.",
+        "created_at": "2026-07-05T11:37:41.01Z"
+      },
+      {
+        "native_id": "xbv87wjl36cf",
+        "status": "monitoring",
+        "body": "The work on bringing services back to healthy state is completed and alerts should be created correctly, without a delay now. We're keeping the incident open and monitoring for any potential hiccups that might occur.",
+        "created_at": "2026-07-05T13:38:34.314Z"
+      },
+      {
+        "native_id": "t9wxj1r3t0dg",
+        "status": "resolved",
+        "body": "We haven't noticed any further issues in this region for alert group processing since yesterday. This incident i fully resolved.",
+        "created_at": "2026-07-06T07:37:05.16Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-03-25T16:09:00.130Z",
+          "description": "Former Grafana Incident and Grafana OnCall",
+          "group": false,
+          "group_id": null,
+          "id": "1mxpk7q1bkb6",
+          "name": "Incident Management and Response (IRM)",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2024-03-25",
+          "status": "operational",
+          "updated_at": "2026-08-25T11:02:59.869Z"
+        }
+      ],
+      "created_at": "2026-07-05T11:37:40.921Z",
+      "id": "4m5tfwljjfxk",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We haven't noticed any further issues in this region for alert group processing since yesterday. This incident i fully resolved.",
+          "created_at": "2026-07-06T07:37:05.160Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-06T07:37:05.160Z",
+          "id": "t9wxj1r3t0dg",
+          "incident_id": "4m5tfwljjfxk",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-06T07:37:05.160Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The work on bringing services back to healthy state is completed and alerts should be created correctly, without a delay now. We're keeping the incident open and monitoring for any potential hiccups that might occur.",
+          "created_at": "2026-07-05T13:38:34.314Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-05T13:38:34.314Z",
+          "id": "xbv87wjl36cf",
+          "incident_id": "4m5tfwljjfxk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-05T13:38:34.314Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "1mxpk7q1bkb6",
+              "name": "Incident Management and Response (IRM)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some IRM alert groups in us-east-3 region may not be able to produce alerts and could be sluggish/misbehaving in general. The issue started around 01:00 UTC on July 3rd. The issue has been identified and the cause of the issue has been fixed. Our team is actively working on getting the service back to healthy state.",
+          "created_at": "2026-07-05T11:37:41.010Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-05T11:37:41.010Z",
+          "id": "2t7n0vp9wp7t",
+          "incident_id": "4m5tfwljjfxk",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-05T11:37:41.010Z"
+        }
+      ],
+      "monitoring_at": "2026-07-05T13:38:34.314Z",
+      "name": "Grafana Cloud IRM alert groups failing to produce alerts in us-east-3 region.",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-06T07:37:05.160Z",
+      "shortlink": "https://stspg.io/34p7wm05ydt0",
+      "started_at": "2026-07-05T11:37:40.914Z",
+      "status": "resolved",
+      "updated_at": "2026-07-06T07:37:05.181Z"
+    }
+  }
+}

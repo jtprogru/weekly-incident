@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2021-W16",
   "from": "2021-04-19T00:00:00Z",
   "to": "2021-04-26T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/yz4mkc6j501q",
+      "canonical": {
+        "id": "ci-097af74616e841c66ac3232c",
+        "sources": [
+          {
+            "key": "atlassian/yz4mkc6j501q",
+            "path": "2021/W16/atlassian.json",
+            "url": "https://stspg.io/ql9jsw73ndfh"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-097af74616e841c66ac3232c",
       "vendor": "atlassian",
       "title": "Atlassian account session invalidations",
       "url": "https://stspg.io/ql9jsw73ndfh",

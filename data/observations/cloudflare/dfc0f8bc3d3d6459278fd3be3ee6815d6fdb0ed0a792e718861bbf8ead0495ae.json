@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/pgcdxsjxkl0q",
+    "vendor": "cloudflare",
+    "native_id": "pgcdxsjxkl0q",
+    "title": "Cloudflare API Availability Reduced Availability",
+    "url": "https://www.cloudflarestatus.com/incidents/pgcdxsjxkl0q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-31T11:51:07Z",
+    "resolved_at": "2026-07-31T13:01:59.922Z",
+    "duration_minutes": 70,
+    "components": [
+      "Analytics",
+      "API",
+      "Dashboard",
+      "Pages",
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "1nq6h4lc9yst",
+        "status": "investigating",
+        "body": "Cloudflare is investigating reduced availability with Cloudflare Dashboard and related APIs. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Cloudflare Edge. Customers using the Dashboard / Cloudflare APIs are impacted as requests might fail and/or errors may be displayed.",
+        "created_at": "2026-07-31T11:51:07.264Z"
+      },
+      {
+        "native_id": "91lzbyq59pcz",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-07-31T12:25:44.546Z"
+      },
+      {
+        "native_id": "y9y623kxjwk3",
+        "status": "investigating",
+        "body": "Cloudflare is aware that this is also impacting on Pages and Worker builds. We are continuing to investigate.",
+        "created_at": "2026-07-31T12:37:35.202Z"
+      },
+      {
+        "native_id": "wytqfnfbsryf",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-07-31T12:43:57.813Z"
+      },
+      {
+        "native_id": "087tbjymqbjq",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-07-31T12:46:20.607Z"
+      },
+      {
+        "native_id": "kbfxmbksg3fp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-31T13:01:59.922Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-11-13T11:54:10.000Z",
+          "description": "Customer analytics aggregation service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "4c231tkdlpcl",
+          "name": "Analytics",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 7,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-11T16:26:26.000Z"
+        },
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Application programming interface (API) for customers to read and write their configurations at https://api.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "g4tb35rs9yw7",
+          "name": "API",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-11T13:00:10.000Z"
+        },
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 39,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T19:25:39.000Z"
+        },
+        {
+          "created_at": "2021-04-16T21:04:08.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vgxj684rcw7t",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 78,
+          "showcase": false,
+          "start_date": "2021-04-16",
+          "status": "operational",
+          "updated_at": "2026-08-05T08:42:16.000Z"
+        },
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 115,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-11T12:31:06.000Z"
+        }
+      ],
+      "created_at": "2026-07-31T11:51:07.000Z",
+      "id": "pgcdxsjxkl0q",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vgxj684rcw7t",
+              "name": "Cloudflare Sites and Services - Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-31T13:01:59.922Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T13:01:59.922Z",
+          "id": "kbfxmbksg3fp",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T13:01:59.922Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vgxj684rcw7t",
+              "name": "Cloudflare Sites and Services - Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-07-31T12:46:20.607Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:46:20.607Z",
+          "id": "087tbjymqbjq",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:46:20.607Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vgxj684rcw7t",
+              "name": "Cloudflare Sites and Services - Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-07-31T12:43:57.813Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:43:57.813Z",
+          "id": "wytqfnfbsryf",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:43:57.813Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vgxj684rcw7t",
+              "name": "Cloudflare Sites and Services - Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware that this is also impacting on Pages and Worker builds. We are continuing to investigate.",
+          "created_at": "2026-07-31T12:37:35.202Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:37:35.202Z",
+          "id": "y9y623kxjwk3",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:37:35.202Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Cloudflare Sites and Services - API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-07-31T12:25:44.546Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T12:25:44.546Z",
+          "id": "91lzbyq59pcz",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:25:44.546Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4c231tkdlpcl",
+              "name": "Cloudflare Sites and Services - Analytics",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating reduced availability with Cloudflare Dashboard and related APIs. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Cloudflare Edge. Customers using the Dashboard / Cloudflare APIs are impacted as requests might fail and/or errors may be displayed.",
+          "created_at": "2026-07-31T11:51:07.264Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-31T11:51:07.000Z",
+          "id": "1nq6h4lc9yst",
+          "incident_id": "pgcdxsjxkl0q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-31T12:25:04.301Z"
+        }
+      ],
+      "monitoring_at": "2026-07-31T12:43:57.813Z",
+      "name": "Cloudflare API Availability Reduced Availability",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-31T13:01:59.922Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/pgcdxsjxkl0q",
+      "started_at": "2026-07-31T11:51:07.000Z",
+      "status": "resolved",
+      "updated_at": "2026-07-31T13:01:59.942Z"
+    }
+  }
+}

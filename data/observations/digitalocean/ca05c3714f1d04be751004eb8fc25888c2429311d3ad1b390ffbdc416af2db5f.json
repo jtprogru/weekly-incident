@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/bfsh34myw3bc",
+    "vendor": "digitalocean",
+    "native_id": "bfsh34myw3bc",
+    "title": "Intermittent 500 Errors on Serverless/GenAI Inference API",
+    "url": "https://stspg.io/40ln0gl1x56j",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-06-16T22:00:52Z",
+    "resolved_at": "2026-06-17T00:29:42.28Z",
+    "duration_minutes": 148,
+    "components": [
+      "Inference"
+    ],
+    "updates": [
+      {
+        "native_id": "6wqq0c1s3kl4",
+        "status": "investigating",
+        "body": "We are actively investigating an issue causing elevated HTTP 500 error rates for customers utilizing our Serverless/GenAI Inference API.\nCustomer Impact: Customers making calls to the inference API—specifically targeting /v1/* endpoints—will experience intermittent HTTP 500 errors and failed requests.",
+        "created_at": "2026-06-16T22:52:52.338Z"
+      },
+      {
+        "native_id": "dxg6rkts9c07",
+        "status": "monitoring",
+        "body": "Our engineering teams have successfully begun implementing mitigation steps to resolve the connectivity issues affecting the inference API. We will provide another update once the API has fully recovered and error rates return to normal.",
+        "created_at": "2026-06-16T23:29:14.56Z"
+      },
+      {
+        "native_id": "khqhzzc3wyrx",
+        "status": "resolved",
+        "body": "The connectivity issues affecting our Serverless/GenAI Inference API have been fully resolved.\nOur engineering teams successfully completed the connectivity restoration. All systems should be functioning normally, and the endpoint should be fully operational.",
+        "created_at": "2026-06-17T00:29:42.28Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-05-15T07:02:10.429Z",
+          "description": "Serverless access to foundation models (e.g. Llama, Mistral, GPT) via OpenAI-compatible API.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "2z9ldz1t4dgp",
+          "name": "Inference",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2026-05-15",
+          "status": "operational",
+          "updated_at": "2026-07-23T12:36:59.981Z"
+        }
+      ],
+      "created_at": "2026-06-16T22:00:52.000Z",
+      "id": "bfsh34myw3bc",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The connectivity issues affecting our Serverless/GenAI Inference API have been fully resolved.\nOur engineering teams successfully completed the connectivity restoration. All systems should be functioning normally, and the endpoint should be fully operational.",
+          "created_at": "2026-06-17T00:29:42.280Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-17T00:29:42.280Z",
+          "id": "khqhzzc3wyrx",
+          "incident_id": "bfsh34myw3bc",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-17T00:29:42.280Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Our engineering teams have successfully begun implementing mitigation steps to resolve the connectivity issues affecting the inference API. We will provide another update once the API has fully recovered and error rates return to normal.",
+          "created_at": "2026-06-16T23:29:14.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-16T23:29:14.560Z",
+          "id": "dxg6rkts9c07",
+          "incident_id": "bfsh34myw3bc",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-16T23:29:14.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2z9ldz1t4dgp",
+              "name": "Agentic Inference Cloud - Inference",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are actively investigating an issue causing elevated HTTP 500 error rates for customers utilizing our Serverless/GenAI Inference API.\nCustomer Impact: Customers making calls to the inference API—specifically targeting /v1/* endpoints—will experience intermittent HTTP 500 errors and failed requests.",
+          "created_at": "2026-06-16T22:52:52.338Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-16T22:00:52.000Z",
+          "id": "6wqq0c1s3kl4",
+          "incident_id": "bfsh34myw3bc",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-16T22:53:10.064Z"
+        }
+      ],
+      "monitoring_at": "2026-06-16T23:29:14.560Z",
+      "name": "Intermittent 500 Errors on Serverless/GenAI Inference API",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-17T00:29:42.280Z",
+      "shortlink": "https://stspg.io/40ln0gl1x56j",
+      "started_at": "2026-06-16T22:00:52.000Z",
+      "status": "resolved",
+      "updated_at": "2026-06-17T00:29:46.450Z"
+    }
+  }
+}

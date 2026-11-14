@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/238b69fw6l55",
+    "vendor": "cloudflare",
+    "native_id": "238b69fw6l55",
+    "title": "Cloudflare Workers Runtime API issues",
+    "url": "https://www.cloudflarestatus.com/incidents/238b69fw6l55",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-03T15:13:33.256Z",
+    "resolved_at": "2026-08-04T07:12:40.794Z",
+    "duration_minutes": 959,
+    "components": [
+      "Workers"
+    ],
+    "updates": [
+      {
+        "native_id": "vqpn00kjklqy",
+        "status": "investigating",
+        "body": "Cloudflare is aware of an issue with the latest Workers Runtime API release that exposes native Temporal with clock stuck at epoch 0.  Updates to follow.",
+        "created_at": "2026-08-03T15:13:33.343Z"
+      },
+      {
+        "native_id": "f1gqphz940b2",
+        "status": "identified",
+        "body": "Workers runtime: Temporal global exposed with an incorrect clock\n\nSince 2026-07-30, the Workers runtime has exposed a global Temporal object that was not intended to be available. Its clock is wrong: Temporal.Now reports 1970-01-01 rather than the current time. Date and Date.now() are unaffected and report the correct time.\n\nThis can affect Workers that install a Temporal polyfill only when no native Temporal is detected. On those Workers, the polyfill stopped being installed and time-dependent logic began computing against 1970 — for example, tokens minted with an issue time of 0 and an expiry in 1970, incorrect TTLs, or incorrect date arithmetic. No error is raised when this happens.",
+        "created_at": "2026-08-03T15:21:54.175Z"
+      },
+      {
+        "native_id": "wb0g4x9hwb1f",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-08-04T07:00:12.123Z"
+      },
+      {
+        "native_id": "s0tzyvk9qq3w",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-04T07:12:40.794Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 115,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-11T12:31:06.000Z"
+        }
+      ],
+      "created_at": "2026-08-03T15:13:33.000Z",
+      "id": "238b69fw6l55",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-04T07:12:40.794Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-04T07:12:40.794Z",
+          "id": "s0tzyvk9qq3w",
+          "incident_id": "238b69fw6l55",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-04T07:12:40.794Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-08-04T07:00:12.123Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-04T07:00:12.123Z",
+          "id": "wb0g4x9hwb1f",
+          "incident_id": "238b69fw6l55",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-04T07:00:12.123Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Workers runtime: Temporal global exposed with an incorrect clock\n\nSince 2026-07-30, the Workers runtime has exposed a global Temporal object that was not intended to be available. Its clock is wrong: Temporal.Now reports 1970-01-01 rather than the current time. Date and Date.now() are unaffected and report the correct time.\n\nThis can affect Workers that install a Temporal polyfill only when no native Temporal is detected. On those Workers, the polyfill stopped being installed and time-dependent logic began computing against 1970 — for example, tokens minted with an issue time of 0 and an expiry in 1970, incorrect TTLs, or incorrect date arithmetic. No error is raised when this happens.",
+          "created_at": "2026-08-03T15:21:54.175Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T15:21:54.175Z",
+          "id": "f1gqphz940b2",
+          "incident_id": "238b69fw6l55",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T15:21:54.175Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Cloudflare Sites and Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of an issue with the latest Workers Runtime API release that exposes native Temporal with clock stuck at epoch 0.  Updates to follow.",
+          "created_at": "2026-08-03T15:13:33.343Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T15:13:33.343Z",
+          "id": "vqpn00kjklqy",
+          "incident_id": "238b69fw6l55",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T15:13:33.343Z"
+        }
+      ],
+      "monitoring_at": "2026-08-04T07:00:12.123Z",
+      "name": "Cloudflare Workers Runtime API issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-04T07:12:40.794Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/238b69fw6l55",
+      "started_at": "2026-08-03T15:13:33.256Z",
+      "status": "resolved",
+      "updated_at": "2026-08-04T07:12:40.817Z"
+    }
+  }
+}

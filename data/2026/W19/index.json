@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 13,
+    "source_versions_total": 13,
+    "canonical_incidents_total": 13,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W19",
   "from": "2026-05-04T00:00:00Z",
   "to": "2026-05-11T00:00:00Z",
-  "generated_at": "2026-11-02T13:58:07.593417993Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -107,7 +116,20 @@
   ],
   "incidents": [
     {
-      "key": "slack/1551",
+      "canonical": {
+        "id": "ci-0dc1b47ec8d11c330ab2fbab",
+        "sources": [
+          {
+            "key": "slack/1551",
+            "path": "2026/W19/slack.json",
+            "url": "https://slack-status.com/2026-05/d284d808ed66c511"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0dc1b47ec8d11c330ab2fbab",
       "vendor": "slack",
       "title": "EKM customers were previously experiencing issues with channel loading and message delivery",
       "url": "https://slack-status.com/2026-05/d284d808ed66c511",
@@ -118,10 +140,10 @@
       "duration_minutes": 4516,
       "ongoing": false,
       "components": [
-        "Messaging",
+        "Apps/Integrations/APIs",
         "Files",
-        "Notifications",
-        "Apps/Integrations/APIs"
+        "Messaging",
+        "Notifications"
       ],
       "score": {
         "value": 21676.8,
@@ -132,7 +154,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/wjrkhvg9ydc1",
+      "canonical": {
+        "id": "ci-5c354d99da28f970835e2b89",
+        "sources": [
+          {
+            "key": "datadog/wjrkhvg9ydc1",
+            "path": "2026/W19/datadog.json",
+            "url": "https://stspg.io/rbj54mc4nhgs"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-5c354d99da28f970835e2b89",
       "vendor": "datadog",
       "title": "Delayed Monitors Notifications",
       "url": "https://stspg.io/rbj54mc4nhgs",
@@ -160,7 +195,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/h9t3sfjx36l3",
+      "canonical": {
+        "id": "ci-487b87fdf7dd1f03fcc17179",
+        "sources": [
+          {
+            "key": "digitalocean/h9t3sfjx36l3",
+            "path": "2026/W19/digitalocean.json",
+            "url": "https://stspg.io/tb7f2ntnj8hm"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-487b87fdf7dd1f03fcc17179",
       "vendor": "digitalocean",
       "title": "Multiple Services in NYC2",
       "url": "https://stspg.io/tb7f2ntnj8hm",
@@ -172,11 +220,11 @@
       "ongoing": false,
       "components": [
         "API",
-        "New York",
         "NYC2",
         "NYC2",
         "NYC2",
-        "NYC2"
+        "NYC2",
+        "New York"
       ],
       "score": {
         "value": 566.4,
@@ -187,7 +235,20 @@
       "above_threshold": false
     },
     {
-      "key": "slack/1549",
+      "canonical": {
+        "id": "ci-fc970ac075e258fe81586828",
+        "sources": [
+          {
+            "key": "slack/1549",
+            "path": "2026/W19/slack.json",
+            "url": "https://slack-status.com/2026-05/bedf971f90be70a6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-fc970ac075e258fe81586828",
       "vendor": "slack",
       "title": "Slow behaviour in Slack",
       "url": "https://slack-status.com/2026-05/bedf971f90be70a6",
@@ -209,7 +270,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1550",
+      "canonical": {
+        "id": "ci-c8d23cd72fab87ac676bd3b4",
+        "sources": [
+          {
+            "key": "slack/1550",
+            "path": "2026/W19/slack.json",
+            "url": "https://slack-status.com/2026-05/02b2d5b45d656512"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c8d23cd72fab87ac676bd3b4",
       "vendor": "slack",
       "title": "Scheduled Grid Migrations are experiencing extended downtime",
       "url": "https://slack-status.com/2026-05/02b2d5b45d656512",
@@ -231,7 +305,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/p3zyn7c4jyx7",
+      "canonical": {
+        "id": "ci-daf96497e756797cce502625",
+        "sources": [
+          {
+            "key": "digitalocean/p3zyn7c4jyx7",
+            "path": "2026/W19/digitalocean.json",
+            "url": "https://stspg.io/rw9m9n69q6tg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-daf96497e756797cce502625",
       "vendor": "digitalocean",
       "title": "Let's Encrypt Outage Affecting Certificate Issuance and Managed Databases Operations",
       "url": "https://stspg.io/rw9m9n69q6tg",
@@ -257,7 +344,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/d4gch9k0tcsq",
+      "canonical": {
+        "id": "ci-7e13c723b5a09b2249a61506",
+        "sources": [
+          {
+            "key": "circleci/d4gch9k0tcsq",
+            "path": "2026/W19/circleci.json",
+            "url": "https://stspg.io/pttscyh3qsv1"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7e13c723b5a09b2249a61506",
       "vendor": "circleci",
       "title": "GitHub incident with Pull Requests",
       "url": "https://stspg.io/pttscyh3qsv1",
@@ -279,7 +379,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/7hb39w1wzmwf",
+      "canonical": {
+        "id": "ci-3403f15a18fedc3fe252dd01",
+        "sources": [
+          {
+            "key": "digitalocean/7hb39w1wzmwf",
+            "path": "2026/W19/digitalocean.json",
+            "url": "https://stspg.io/tyb995vv9ykq"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-3403f15a18fedc3fe252dd01",
       "vendor": "digitalocean",
       "title": "Control Panel Errors - Unable to Enable 2FA and Google/GitHub",
       "url": "https://stspg.io/tyb995vv9ykq",
@@ -301,7 +414,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/s1mcpzcxhr9x",
+      "canonical": {
+        "id": "ci-abfa5e4d1bc9f1136cfa1f47",
+        "sources": [
+          {
+            "key": "datadog/s1mcpzcxhr9x",
+            "path": "2026/W19/datadog.json",
+            "url": "https://stspg.io/rww57bn61jkp"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-abfa5e4d1bc9f1136cfa1f47",
       "vendor": "datadog",
       "title": "Delays in APM-based Monitor Notifications",
       "url": "https://stspg.io/rww57bn61jkp",
@@ -323,7 +449,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/jf3qmzzgq9k3",
+      "canonical": {
+        "id": "ci-93543a2674deec8e9ac64f5d",
+        "sources": [
+          {
+            "key": "stripe/jf3qmzzgq9k3",
+            "path": "2026/W19/stripe.json",
+            "url": "https://stspg.io/9559m3z4g1cq"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-93543a2674deec8e9ac64f5d",
       "vendor": "stripe",
       "title": "Dashboard authentication errors",
       "url": "https://stspg.io/9559m3z4g1cq",
@@ -345,7 +484,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/c1pk36f2kh25",
+      "canonical": {
+        "id": "ci-5d806369ab86015a7cd21935",
+        "sources": [
+          {
+            "key": "stripe/c1pk36f2kh25",
+            "path": "2026/W19/stripe.json",
+            "url": "https://stspg.io/yvt9gyxgydkb"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-5d806369ab86015a7cd21935",
       "vendor": "stripe",
       "title": "Elevated Authentication Requests",
       "url": "https://stspg.io/yvt9gyxgydkb",
@@ -367,7 +519,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/68kk6515ztfp",
+      "canonical": {
+        "id": "ci-753245b59eda340e89bceebe",
+        "sources": [
+          {
+            "key": "circleci/68kk6515ztfp",
+            "path": "2026/W19/circleci.json",
+            "url": "https://stspg.io/m852c4blmtsk"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-753245b59eda340e89bceebe",
       "vendor": "circleci",
       "title": "Some Pipelines are being lost",
       "url": "https://stspg.io/m852c4blmtsk",
@@ -389,7 +554,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/s4ps5f7zf4zh",
+      "canonical": {
+        "id": "ci-baae7520879466714f047e70",
+        "sources": [
+          {
+            "key": "stripe/s4ps5f7zf4zh",
+            "path": "2026/W19/stripe.json",
+            "url": "https://stspg.io/vwp5wh5qbqlv"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-baae7520879466714f047e70",
       "vendor": "stripe",
       "title": "Elevated API error rates from 18:15 - 18:34 UTC",
       "url": "https://stspg.io/vwp5wh5qbqlv",

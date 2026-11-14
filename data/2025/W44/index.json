@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W44",
   "from": "2025-10-27T00:00:00Z",
   "to": "2025-11-03T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/01x71sjh4ymw",
+      "canonical": {
+        "id": "ci-edb91f28c8e38b57a84a3872",
+        "sources": [
+          {
+            "key": "datadog/01x71sjh4ymw",
+            "path": "2025/W44/datadog.json",
+            "url": "https://stspg.io/ch4x738bv5qx"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-edb91f28c8e38b57a84a3872",
       "vendor": "datadog",
       "title": "Metrics data ingestion delayed and monitor evaluations degraded",
       "url": "https://stspg.io/ch4x738bv5qx",
