@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1942",
+    "vendor": "yandexcloud",
+    "native_id": "1942",
+    "title": "Partial network unavailability to the ru-central1-d zone",
+    "url": "https://status.yandex.cloud/en/incidents/1942",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-21T13:30:00Z",
+    "resolved_at": "2026-08-21T14:00:00Z",
+    "duration_minutes": 30,
+    "components": [
+      "Virtual Private Cloud",
+      "Object Storage",
+      "Container Registry",
+      "Cloud DNS",
+      "Yandex AI Studio"
+    ],
+    "updates": [
+      {
+        "native_id": "2627",
+        "status": "investigating",
+        "body": "Since 16:30 Moscow time zone, we have been registering partial unavailability of services, and the development team is solving the problem.",
+        "created_at": "2026-08-21T13:47:17.238Z"
+      },
+      {
+        "native_id": "2631",
+        "status": "unknown",
+        "body": "Partial unavailability of network connectivity in the ru-central1-d zone was also recorded.",
+        "created_at": "2026-08-21T14:18:33.087Z"
+      },
+      {
+        "native_id": "2632",
+        "status": "resolved",
+        "body": "At 17:00 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.",
+        "created_at": "2026-08-21T14:20:35.622Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eAt 17:00 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.\u003c/p\u003e\n",
+          "createdAt": "2026-08-21T14:20:35.622Z",
+          "id": 2632,
+          "incidentId": 1942,
+          "type": "resolved",
+          "updatedAt": "2026-08-21T14:20:36.289Z"
+        },
+        {
+          "content": "\u003cp\u003ePartial unavailability of network connectivity in the ru-central1-d zone was also recorded.\u003c/p\u003e\n",
+          "createdAt": "2026-08-21T14:18:33.087Z",
+          "id": 2631,
+          "incidentId": 1942,
+          "type": "update",
+          "updatedAt": "2026-08-21T14:18:33.389Z"
+        },
+        {
+          "content": "\u003cp\u003eSince 16:30 Moscow time zone, we have been registering partial unavailability of services, and the development team is solving the problem.\u003c/p\u003e\n",
+          "createdAt": "2026-08-21T13:47:17.238Z",
+          "id": 2627,
+          "incidentId": 1942,
+          "type": "investigation",
+          "updatedAt": "2026-08-21T14:29:41.326Z"
+        }
+      ],
+      "endDate": "2026-08-21T14:00:00.000Z",
+      "id": 1942,
+      "installations": [
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-d"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "levelId": 1,
+      "maxLevel": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "maxLevelId": 1,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/vpc",
+          "fullName": "Yandex Virtual Private Cloud",
+          "iconName": "vpc",
+          "id": 3,
+          "name": "Virtual Private Cloud",
+          "slug": "vpc"
+        },
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/storage",
+          "fullName": "Yandex Object Storage",
+          "iconName": "storage",
+          "id": 4,
+          "name": "Object Storage",
+          "slug": "storage"
+        },
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/container-registry",
+          "fullName": "Yandex Container Registry",
+          "iconName": "container-registry",
+          "id": 9,
+          "name": "Container Registry",
+          "slug": "container-registry"
+        },
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/dns",
+          "fullName": "Yandex Cloud DNS",
+          "iconName": "dns",
+          "id": 211,
+          "name": "Cloud DNS",
+          "slug": "dns"
+        },
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/ai-studio",
+          "fullName": "Yandex AI Studio",
+          "iconName": "ai-studio",
+          "id": 625,
+          "name": "Yandex AI Studio",
+          "slug": "ai-studio"
+        }
+      ],
+      "startDate": "2026-08-21T13:30:00.000Z",
+      "status": "resolved",
+      "title": "Partial network unavailability to the ru-central1-d zone"
+    }
+  }
+}

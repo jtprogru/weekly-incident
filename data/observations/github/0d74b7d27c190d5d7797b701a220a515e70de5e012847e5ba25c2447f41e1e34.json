@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/71y513kjvbzh",
+    "vendor": "github",
+    "native_id": "71y513kjvbzh",
+    "title": "Disruption with Dependabot Alerts",
+    "url": "https://stspg.io/zdk3zqt69fnz",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-23T14:58:48.741Z",
+    "resolved_at": "2026-10-23T18:51:24.49Z",
+    "duration_minutes": 232,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "nnq0dg65chqc",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-23T14:58:48.893Z"
+      },
+      {
+        "native_id": "1t7jn5c7wc4z",
+        "status": "investigating",
+        "body": "We’re investigating delays in some Dependabot alerts closing after affected repositories have been updated to address a vulnerability. Alert processing is backed up. We’ll share more information as it becomes available.",
+        "created_at": "2026-10-23T15:00:01.746Z"
+      },
+      {
+        "native_id": "s62xlnfhjkdr",
+        "status": "investigating",
+        "body": "We’re scaling alert processing capacity to reduce the backlog causing delays in some Dependabot alerts closing after affected repositories have been updated. We’re continuing to monitor and will share another update as more information becomes available.",
+        "created_at": "2026-10-23T15:39:57.071Z"
+      },
+      {
+        "native_id": "y4vzwqzgdzy5",
+        "status": "investigating",
+        "body": "We’re continuing to investigate delays in some Dependabot alerts closing after affected repositories are updated. Alert processing remains backed up, and additional processing capacity is rolling out to help reduce the backlog. We’re monitoring the rollout and will share another update as we learn more.",
+        "created_at": "2026-10-23T16:11:18.501Z"
+      },
+      {
+        "native_id": "v5nbhwb3dt1f",
+        "status": "investigating",
+        "body": "We’re continuing to investigate delays in some Dependabot alerts closing after affected repositories are updated. Alert processing remains backed up, and additional processing capacity is rolling out to help reduce the backlog. We’re monitoring progress and will share another update as we learn more.",
+        "created_at": "2026-10-23T16:43:03.822Z"
+      },
+      {
+        "native_id": "7vwlgg2dkcsn",
+        "status": "investigating",
+        "body": "Some Dependabot alerts continue to be delayed in closing after repository updates address a vulnerability. \u003cbr /\u003e\u003cbr /\u003eWe're continuing to investigate and work to restore normal processing.",
+        "created_at": "2026-10-23T17:27:48.21Z"
+      },
+      {
+        "native_id": "6bhhbwz3wmfg",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-23T18:36:15.053Z"
+      },
+      {
+        "native_id": "7cb4dv68nylk",
+        "status": "resolved",
+        "body": "We identified that an advisory-publication driven fan-out was overwhelming Dependabot alert processing on repositories by saturating the queue with its own events, delaying processing of events related to repository pushes.\u003cbr /\u003e\u003cbr /\u003eWe have now isolated this fan-out and applied a throttle so it runs at a fixed rate and cannot delay other events. This remediation has successfully prevented a new fan-out process impacting users.",
+        "created_at": "2026-10-23T18:51:24.49Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-23T14:58:48.748Z",
+      "id": "71y513kjvbzh",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We identified that an advisory-publication driven fan-out was overwhelming Dependabot alert processing on repositories by saturating the queue with its own events, delaying processing of events related to repository pushes.\u003cbr /\u003e\u003cbr /\u003eWe have now isolated this fan-out and applied a throttle so it runs at a fixed rate and cannot delay other events. This remediation has successfully prevented a new fan-out process impacting users.",
+          "created_at": "2026-10-23T18:51:24.490Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T18:51:24.490Z",
+          "id": "7cb4dv68nylk",
+          "incident_id": "71y513kjvbzh",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-26T16:37:48.598Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-23T18:36:15.053Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T18:36:15.053Z",
+          "id": "6bhhbwz3wmfg",
+          "incident_id": "71y513kjvbzh",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T18:36:15.053Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some Dependabot alerts continue to be delayed in closing after repository updates address a vulnerability. \u003cbr /\u003e\u003cbr /\u003eWe're continuing to investigate and work to restore normal processing.",
+          "created_at": "2026-10-23T17:27:48.210Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T17:27:48.210Z",
+          "id": "7vwlgg2dkcsn",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T17:27:48.210Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re continuing to investigate delays in some Dependabot alerts closing after affected repositories are updated. Alert processing remains backed up, and additional processing capacity is rolling out to help reduce the backlog. We’re monitoring progress and will share another update as we learn more.",
+          "created_at": "2026-10-23T16:43:03.822Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T16:43:03.822Z",
+          "id": "v5nbhwb3dt1f",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T16:43:03.822Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re continuing to investigate delays in some Dependabot alerts closing after affected repositories are updated. Alert processing remains backed up, and additional processing capacity is rolling out to help reduce the backlog. We’re monitoring the rollout and will share another update as we learn more.",
+          "created_at": "2026-10-23T16:11:18.501Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T16:11:18.501Z",
+          "id": "y4vzwqzgdzy5",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T16:11:18.501Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re scaling alert processing capacity to reduce the backlog causing delays in some Dependabot alerts closing after affected repositories have been updated. We’re continuing to monitor and will share another update as more information becomes available.",
+          "created_at": "2026-10-23T15:39:57.071Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T15:39:57.071Z",
+          "id": "s62xlnfhjkdr",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T15:39:57.071Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We’re investigating delays in some Dependabot alerts closing after affected repositories have been updated to address a vulnerability. Alert processing is backed up. We’ll share more information as it becomes available.",
+          "created_at": "2026-10-23T15:00:01.746Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T15:00:01.746Z",
+          "id": "1t7jn5c7wc4z",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T15:00:01.746Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-23T14:58:48.893Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T14:58:48.893Z",
+          "id": "nnq0dg65chqc",
+          "incident_id": "71y513kjvbzh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T14:58:48.893Z"
+        }
+      ],
+      "monitoring_at": "2026-10-23T18:36:15.053Z",
+      "name": "Disruption with Dependabot Alerts",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T18:51:24.490Z",
+      "shortlink": "https://stspg.io/zdk3zqt69fnz",
+      "started_at": "2026-10-23T14:58:48.741Z",
+      "status": "resolved",
+      "updated_at": "2026-10-26T16:37:48.605Z"
+    }
+  }
+}

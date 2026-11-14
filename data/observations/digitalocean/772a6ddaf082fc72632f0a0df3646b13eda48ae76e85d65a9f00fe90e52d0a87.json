@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/cg3q7h89dbnq",
+    "vendor": "digitalocean",
+    "native_id": "cg3q7h89dbnq",
+    "title": "Functions on App Platform",
+    "url": "https://stspg.io/7pm9l1jwpkr6",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-06T19:01:27.564Z",
+    "resolved_at": "2026-08-06T21:05:05.672Z",
+    "duration_minutes": 123,
+    "components": [
+      "Global",
+      "Global"
+    ],
+    "updates": [
+      {
+        "native_id": "shjyfbwmxf6w",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue impacting Functions on App Platform. During this time, users may experience build/deploy failures for Functions components, and requests to Functions endpoints may fail with a 504 error, caused by an SSL error when App Platform attempts to forward requests to Functions. This issue currently appears to be isolated to Functions deployed within App Platform.\n\nWe apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-08-06T19:01:27.668Z"
+      },
+      {
+        "native_id": "jp37qtybbsss",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the issue affecting Functions on App Platform. Functions builds/deploys and requests to Functions endpoints should now be completing successfully. We are currently monitoring the situation to ensure the service has returned to normal operation and remains stable.\n\nWe apologize for the inconvenience and will provide a further update once the incident is confirmed resolved.",
+        "created_at": "2026-08-06T20:02:03.2Z"
+      },
+      {
+        "native_id": "mxbzm9l01jjq",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the issue affecting Functions on App Platform has been fully resolved. Functions builds, deploys, and requests to Functions endpoints are all working as expected. The fix implemented earlier was successful, and we are no longer seeing any problems affecting Functions.\n\nHowever, if you continue to experience any issues, please don't hesitate to raise a support ticket for further investigation.",
+        "created_at": "2026-08-06T21:05:05.672Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-28T21:01:12.838Z",
+          "description": null,
+          "group": false,
+          "group_id": "jjs48vwjlqjr",
+          "id": "txysr8r0gn1n",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-03-28",
+          "status": "operational",
+          "updated_at": "2026-08-06T20:02:03.146Z"
+        },
+        {
+          "created_at": "2024-08-16T11:32:38.234Z",
+          "description": null,
+          "group": false,
+          "group_id": "q6r6dg0ss2js",
+          "id": "k96xfyczckzw",
+          "name": "Global",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-08-16",
+          "status": "operational",
+          "updated_at": "2026-08-06T20:02:03.164Z"
+        }
+      ],
+      "created_at": "2026-08-06T19:01:27.576Z",
+      "id": "cg3q7h89dbnq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "k96xfyczckzw",
+              "name": "Functions - Global",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the issue affecting Functions on App Platform has been fully resolved. Functions builds, deploys, and requests to Functions endpoints are all working as expected. The fix implemented earlier was successful, and we are no longer seeing any problems affecting Functions.\n\nHowever, if you continue to experience any issues, please don't hesitate to raise a support ticket for further investigation.",
+          "created_at": "2026-08-06T21:05:05.672Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T21:05:05.672Z",
+          "id": "mxbzm9l01jjq",
+          "incident_id": "cg3q7h89dbnq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T21:05:05.672Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "k96xfyczckzw",
+              "name": "Functions - Global",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the issue affecting Functions on App Platform. Functions builds/deploys and requests to Functions endpoints should now be completing successfully. We are currently monitoring the situation to ensure the service has returned to normal operation and remains stable.\n\nWe apologize for the inconvenience and will provide a further update once the incident is confirmed resolved.",
+          "created_at": "2026-08-06T20:02:03.200Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T20:02:03.200Z",
+          "id": "jp37qtybbsss",
+          "incident_id": "cg3q7h89dbnq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T20:02:03.200Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "txysr8r0gn1n",
+              "name": "App Platform - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "k96xfyczckzw",
+              "name": "Functions - Global",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue impacting Functions on App Platform. During this time, users may experience build/deploy failures for Functions components, and requests to Functions endpoints may fail with a 504 error, caused by an SSL error when App Platform attempts to forward requests to Functions. This issue currently appears to be isolated to Functions deployed within App Platform.\n\nWe apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-08-06T19:01:27.668Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-06T19:01:27.668Z",
+          "id": "shjyfbwmxf6w",
+          "incident_id": "cg3q7h89dbnq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-06T19:01:27.668Z"
+        }
+      ],
+      "monitoring_at": "2026-08-06T20:02:03.200Z",
+      "name": "Functions on App Platform",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-06T21:05:05.672Z",
+      "shortlink": "https://stspg.io/7pm9l1jwpkr6",
+      "started_at": "2026-08-06T19:01:27.564Z",
+      "status": "resolved",
+      "updated_at": "2026-08-06T21:05:05.690Z"
+    }
+  }
+}

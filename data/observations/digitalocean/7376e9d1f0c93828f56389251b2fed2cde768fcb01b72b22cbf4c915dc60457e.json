@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/nfhvp4yhyrfl",
+    "vendor": "digitalocean",
+    "native_id": "nfhvp4yhyrfl",
+    "title": "Reserved IP routing in TOR1",
+    "url": "https://stspg.io/x0s0pghvdcgv",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-16T13:39:47.12Z",
+    "resolved_at": "2026-07-16T17:24:35.996Z",
+    "duration_minutes": 224,
+    "components": [
+      "Reserved IP",
+      "TOR1"
+    ],
+    "updates": [
+      {
+        "native_id": "2ysnlytcf8fb",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue affecting Reserved IP routing in the TOR1 region. The issue is causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nIn the meantime, detaching and reassigning the Reserved IP to the Droplet may restore connectivity. We recommend trying this workaround if you are experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is actively investigating the root cause and working towards a resolution. We will provide updates as more information becomes available.",
+        "created_at": "2026-07-16T13:39:47.275Z"
+      },
+      {
+        "native_id": "mx2r629wp7mh",
+        "status": "identified",
+        "body": "Our Engineering team has identified the cause of the issue affecting Reserved IP routing in the TOR1 region, which was causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nDetaching and reassigning the Reserved IP to the Droplet may restore connectivity in the meantime. We recommend trying this workaround if you are still experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is now working on implementing a fix. We will provide updates as more information becomes available.",
+        "created_at": "2026-07-16T15:30:04.792Z"
+      },
+      {
+        "native_id": "y903yzdmw49d",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the issue affecting Reserved IP routing in the TOR1 region, and we are currently monitoring the results.\n\nInbound and outbound traffic to and from Reserved IPs in TOR1 should now be restored. If you reassigned your Reserved IP as a workaround and are still experiencing issues, please reach out to our support team.\n\nWe will continue to monitor the situation closely and provide a further update once we have confirmed the issue is fully resolved.",
+        "created_at": "2026-07-16T17:01:27.917Z"
+      },
+      {
+        "native_id": "fdg9nrm0b8lc",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the underlying issue affecting Reserved IP routing in the TOR1 region has been fully resolved, and services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+        "created_at": "2026-07-16T17:24:35.996Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-06T18:42:45.132Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yvh4g97h7mk7",
+          "name": "Reserved IP",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-08-09T00:31:29.223Z"
+        },
+        {
+          "created_at": "2023-02-22T17:38:11.448Z",
+          "description": null,
+          "group": false,
+          "group_id": "sjlhrm4vf4pr",
+          "id": "3hwkzd3pqd0p",
+          "name": "TOR1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-07-16T17:01:27.868Z"
+        }
+      ],
+      "created_at": "2026-07-16T13:39:47.134Z",
+      "id": "nfhvp4yhyrfl",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the underlying issue affecting Reserved IP routing in the TOR1 region has been fully resolved, and services are now operating normally.\n\nIf you continue to experience any issues, please contact our Support team by opening a ticket. We apologize for any inconvenience caused.",
+          "created_at": "2026-07-16T17:24:35.996Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T17:24:35.996Z",
+          "id": "fdg9nrm0b8lc",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T17:24:35.996Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the issue affecting Reserved IP routing in the TOR1 region, and we are currently monitoring the results.\n\nInbound and outbound traffic to and from Reserved IPs in TOR1 should now be restored. If you reassigned your Reserved IP as a workaround and are still experiencing issues, please reach out to our support team.\n\nWe will continue to monitor the situation closely and provide a further update once we have confirmed the issue is fully resolved.",
+          "created_at": "2026-07-16T17:01:27.917Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T17:01:27.917Z",
+          "id": "y903yzdmw49d",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T17:01:27.917Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified the cause of the issue affecting Reserved IP routing in the TOR1 region, which was causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nDetaching and reassigning the Reserved IP to the Droplet may restore connectivity in the meantime. We recommend trying this workaround if you are still experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is now working on implementing a fix. We will provide updates as more information becomes available.",
+          "created_at": "2026-07-16T15:30:04.792Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T15:30:04.792Z",
+          "id": "mx2r629wp7mh",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T15:30:04.792Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3hwkzd3pqd0p",
+              "name": "Networking - TOR1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "yvh4g97h7mk7",
+              "name": "Reserved IP",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue affecting Reserved IP routing in the TOR1 region. The issue is causing inbound and outbound traffic to and from Reserved IPs in TOR1 to fail.\n\nIn the meantime, detaching and reassigning the Reserved IP to the Droplet may restore connectivity. We recommend trying this workaround if you are experiencing issues with your Reserved IP in TOR1.\n\nOur engineering team is actively investigating the root cause and working towards a resolution. We will provide updates as more information becomes available.",
+          "created_at": "2026-07-16T13:39:47.275Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-16T13:39:47.275Z",
+          "id": "2ysnlytcf8fb",
+          "incident_id": "nfhvp4yhyrfl",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T13:39:47.275Z"
+        }
+      ],
+      "monitoring_at": "2026-07-16T17:01:27.917Z",
+      "name": "Reserved IP routing in TOR1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-16T17:24:35.996Z",
+      "shortlink": "https://stspg.io/x0s0pghvdcgv",
+      "started_at": "2026-07-16T13:39:47.120Z",
+      "status": "resolved",
+      "updated_at": "2026-07-16T17:24:36.013Z"
+    }
+  }
+}

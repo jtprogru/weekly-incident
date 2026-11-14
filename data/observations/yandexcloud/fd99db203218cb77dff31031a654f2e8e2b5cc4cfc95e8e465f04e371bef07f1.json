@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1912",
+    "vendor": "yandexcloud",
+    "native_id": "1912",
+    "title": "The problem is with the services",
+    "url": "https://status.yandex.cloud/en/incidents/1912",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-05T13:15:00Z",
+    "resolved_at": "2026-08-05T13:58:00Z",
+    "duration_minutes": 43,
+    "components": [
+      "Compute Cloud"
+    ],
+    "updates": [
+      {
+        "native_id": "2592",
+        "status": "investigating",
+        "body": "In the ru-central1-d zone, there are problems with creating, modifying, and stopping virtual machines. All existing VMs are running normally.",
+        "created_at": "2026-08-05T14:24:22.456Z"
+      },
+      {
+        "native_id": "2593",
+        "status": "resolved",
+        "body": "At 16:58 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.",
+        "created_at": "2026-08-05T15:09:51.166Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eAt 16:58 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.\u003c/p\u003e\n",
+          "createdAt": "2026-08-05T15:09:51.166Z",
+          "id": 2593,
+          "incidentId": 1912,
+          "type": "resolved",
+          "updatedAt": "2026-08-05T15:09:51.613Z"
+        },
+        {
+          "content": "\u003cp\u003eIn the ru-central1-d zone, there are problems with creating, modifying, and stopping virtual machines. All existing VMs are running normally.\u003c/p\u003e\n",
+          "createdAt": "2026-08-05T14:24:22.456Z",
+          "id": 2592,
+          "incidentId": 1912,
+          "type": "investigation",
+          "updatedAt": "2026-08-05T14:24:22.456Z"
+        }
+      ],
+      "endDate": "2026-08-05T13:58:00.000Z",
+      "id": 1912,
+      "installations": [
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-d"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "levelId": 1,
+      "maxLevel": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "maxLevelId": 1,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/compute",
+          "fullName": "Yandex Compute Cloud",
+          "iconName": "compute",
+          "id": 2,
+          "name": "Compute Cloud",
+          "slug": "compute"
+        }
+      ],
+      "startDate": "2026-08-05T13:15:00.000Z",
+      "status": "resolved",
+      "title": "The problem is with the services"
+    }
+  }
+}

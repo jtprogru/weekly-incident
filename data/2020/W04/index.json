@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2020-W04",
   "from": "2020-01-20T00:00:00Z",
   "to": "2020-01-27T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/85fh4cc7749r",
+      "canonical": {
+        "id": "ci-9abc8d823aec6a13e94ba050",
+        "sources": [
+          {
+            "key": "atlassian/85fh4cc7749r",
+            "path": "2020/W04/atlassian.json",
+            "url": "http://stspg.io/c641pfy1nrg6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9abc8d823aec6a13e94ba050",
       "vendor": "atlassian",
       "title": "Increased latency in user searches",
       "url": "http://stspg.io/c641pfy1nrg6",

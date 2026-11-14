@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/lrrw084g3whn",
+    "vendor": "digitalocean",
+    "native_id": "lrrw084g3whn",
+    "title": "Anthropic reported outage that's impacting access to their Serverless Inference models",
+    "url": "https://stspg.io/d47rft5t1t68",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-05-15T01:21:51.677Z",
+    "resolved_at": "2026-05-15T02:00:39.064Z",
+    "duration_minutes": 38,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "gdp4gqpxdyv8",
+        "status": "monitoring",
+        "body": "As of the current time, our Engineering team is aware of an ongoing incident with our provider, Anthropic, that is impacting Serverless Inference. The outage is affecting all users attempting to use Sonnet 4.6 and Opus 4.7 models. According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they are currently experiencing an outage that is causing this disruption. We apologize for the inconvenience and will provide updates as more information becomes available.",
+        "created_at": "2026-05-15T01:21:51.771Z"
+      },
+      {
+        "native_id": "m6m4q2x9llhs",
+        "status": "identified",
+        "body": "According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they have identified the root cause and are actively working on a fix. At this time, users may continue to experience errors when attempting to use Sonnet 4.6 and Opus 4.7 models. We will provide another update once Anthropic has implemented a fix and service is restored.",
+        "created_at": "2026-05-15T01:23:56.061Z"
+      },
+      {
+        "native_id": "7xnlckk3r455",
+        "status": "resolved",
+        "body": "As of the current time, our Engineering team has confirmed that the issue with Serverless Inference has been resolved. The root cause of the issue was an outage with our provider, Anthropic, which affected users of Sonnet 4.6 and Opus 4.7 models. According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they have resolved the outage. If you continue to experience problems, please open a ticket with our Support team. We apologize for any inconvenience this may have caused.",
+        "created_at": "2026-05-15T02:00:39.064Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-05-15T01:21:51.685Z",
+      "id": "lrrw084g3whn",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of the current time, our Engineering team has confirmed that the issue with Serverless Inference has been resolved. The root cause of the issue was an outage with our provider, Anthropic, which affected users of Sonnet 4.6 and Opus 4.7 models. According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they have resolved the outage. If you continue to experience problems, please open a ticket with our Support team. We apologize for any inconvenience this may have caused.",
+          "created_at": "2026-05-15T02:00:39.064Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T02:00:39.064Z",
+          "id": "7xnlckk3r455",
+          "incident_id": "lrrw084g3whn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T02:00:39.064Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they have identified the root cause and are actively working on a fix. At this time, users may continue to experience errors when attempting to use Sonnet 4.6 and Opus 4.7 models. We will provide another update once Anthropic has implemented a fix and service is restored.",
+          "created_at": "2026-05-15T01:23:56.061Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T01:23:56.061Z",
+          "id": "m6m4q2x9llhs",
+          "incident_id": "lrrw084g3whn",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T01:23:56.061Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of the current time, our Engineering team is aware of an ongoing incident with our provider, Anthropic, that is impacting Serverless Inference. The outage is affecting all users attempting to use Sonnet 4.6 and Opus 4.7 models. According to Anthropic's status page (https://status.claude.com/incidents/8z7l5zcy0v3b), they are currently experiencing an outage that is causing this disruption. We apologize for the inconvenience and will provide updates as more information becomes available.",
+          "created_at": "2026-05-15T01:21:51.771Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-05-15T01:21:51.771Z",
+          "id": "gdp4gqpxdyv8",
+          "incident_id": "lrrw084g3whn",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-05-15T01:21:51.771Z"
+        }
+      ],
+      "monitoring_at": "2026-05-15T01:21:51.771Z",
+      "name": "Anthropic reported outage that's impacting access to their Serverless Inference models",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-05-15T02:00:39.064Z",
+      "shortlink": "https://stspg.io/d47rft5t1t68",
+      "started_at": "2026-05-15T01:21:51.677Z",
+      "status": "resolved",
+      "updated_at": "2026-05-15T02:00:39.085Z"
+    }
+  }
+}

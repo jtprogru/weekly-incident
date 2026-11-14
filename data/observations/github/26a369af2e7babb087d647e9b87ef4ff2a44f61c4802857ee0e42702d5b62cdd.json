@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/kfspvrz14xr0",
+    "vendor": "github",
+    "native_id": "kfspvrz14xr0",
+    "title": "Incident with Actions and Pull Requests",
+    "url": "https://stspg.io/nrbwjftcz72d",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-26T22:56:31.793Z",
+    "resolved_at": "2026-08-27T00:26:44.772Z",
+    "duration_minutes": 90,
+    "components": [
+      "Pull Requests",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "hb14drnlgj26",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions and Pull Requests",
+        "created_at": "2026-08-26T22:56:31.878Z"
+      },
+      {
+        "native_id": "pgbdmtyw5p3b",
+        "status": "investigating",
+        "body": "We are investigating elevated delays and timeouts affecting Actions workflow runs triggered by pull request events. 20% of actions runs have delayed starts of more than 5 minutes and up to 4% of runs failed to trigger. We are actively working on mitigation and will provide updates as we learn more.",
+        "created_at": "2026-08-26T22:57:08.551Z"
+      },
+      {
+        "native_id": "q6yt44w2f09n",
+        "status": "investigating",
+        "body": "We've applied mitigations and are seeing recovery in Actions workflow runs and blocked pull request merges. We're continuing to monitor for sustained health of merge commit creates before resolving.",
+        "created_at": "2026-08-27T00:01:05.905Z"
+      },
+      {
+        "native_id": "lqxrjbkpnwb4",
+        "status": "investigating",
+        "body": "We confirmed full recovery beginning at 23:58 UTC. Actions workflow runs and pull request merges are operating normally. We will now resolve the incident while continuing to monitor service health.",
+        "created_at": "2026-08-27T00:25:58.933Z"
+      },
+      {
+        "native_id": "jtxtn3by7rdw",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-08-27T00:26:05.99Z"
+      },
+      {
+        "native_id": "zc9xw0lnnrm1",
+        "status": "resolved",
+        "body": "On August 26, 2026, from 21:55 UTC to 23:58 UTC, 2.6% of workflow runs triggered by pull request events were delayed, with the impact rising as high as 25% at its peak. Some users also experienced delays in pull request merge-commit generation, mergeability information, and merge-button availability. Actions and Pull Requests fully recovered by 23:58 UTC; the incident was resolved at 00:26 UTC after normal operation was confirmed. \u003cbr /\u003e\u003cbr /\u003eBackground jobs that process pull request updates and generate merge commits were impacted by timeouts reaching a single partition of git data. This resulted in a backlog in pull request merge-commit processing, delaying pull request-triggered GitHub Actions workflows and some mergeability information. \u003cbr /\u003e\u003cbr /\u003eWe reduced workload, shifted traffic away from affected infrastructure, and restored the affected service component to a healthy state. Together, these actions helped drain the backlog and restore normal operations. \u003cbr /\u003e\u003cbr /\u003eWe are working to improve resource saturation detection and to eliminate customer impact in this scenario by isolating impact, placing better bounds on retries, and strengthening backpressure to make our systems more resilient under load.",
+        "created_at": "2026-08-27T00:26:44.772Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T11:30:42.240Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T18:07:51.071Z"
+        }
+      ],
+      "created_at": "2026-08-26T22:56:31.800Z",
+      "id": "kfspvrz14xr0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On August 26, 2026, from 21:55 UTC to 23:58 UTC, 2.6% of workflow runs triggered by pull request events were delayed, with the impact rising as high as 25% at its peak. Some users also experienced delays in pull request merge-commit generation, mergeability information, and merge-button availability. Actions and Pull Requests fully recovered by 23:58 UTC; the incident was resolved at 00:26 UTC after normal operation was confirmed. \u003cbr /\u003e\u003cbr /\u003eBackground jobs that process pull request updates and generate merge commits were impacted by timeouts reaching a single partition of git data. This resulted in a backlog in pull request merge-commit processing, delaying pull request-triggered GitHub Actions workflows and some mergeability information. \u003cbr /\u003e\u003cbr /\u003eWe reduced workload, shifted traffic away from affected infrastructure, and restored the affected service component to a healthy state. Together, these actions helped drain the backlog and restore normal operations. \u003cbr /\u003e\u003cbr /\u003eWe are working to improve resource saturation detection and to eliminate customer impact in this scenario by isolating impact, placing better bounds on retries, and strengthening backpressure to make our systems more resilient under load.",
+          "created_at": "2026-08-27T00:26:44.772Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T00:26:44.772Z",
+          "id": "zc9xw0lnnrm1",
+          "incident_id": "kfspvrz14xr0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T22:10:28.401Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-08-27T00:26:05.990Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T00:26:05.990Z",
+          "id": "jtxtn3by7rdw",
+          "incident_id": "kfspvrz14xr0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T00:26:05.990Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We confirmed full recovery beginning at 23:58 UTC. Actions workflow runs and pull request merges are operating normally. We will now resolve the incident while continuing to monitor service health.",
+          "created_at": "2026-08-27T00:25:58.933Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T00:25:58.933Z",
+          "id": "lqxrjbkpnwb4",
+          "incident_id": "kfspvrz14xr0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T00:25:58.933Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've applied mitigations and are seeing recovery in Actions workflow runs and blocked pull request merges. We're continuing to monitor for sustained health of merge commit creates before resolving.",
+          "created_at": "2026-08-27T00:01:05.905Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-27T00:01:05.905Z",
+          "id": "q6yt44w2f09n",
+          "incident_id": "kfspvrz14xr0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-27T00:01:05.905Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating elevated delays and timeouts affecting Actions workflow runs triggered by pull request events. 20% of actions runs have delayed starts of more than 5 minutes and up to 4% of runs failed to trigger. We are actively working on mitigation and will provide updates as we learn more.",
+          "created_at": "2026-08-26T22:57:08.551Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T22:57:08.551Z",
+          "id": "pgbdmtyw5p3b",
+          "incident_id": "kfspvrz14xr0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T22:57:08.551Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions and Pull Requests",
+          "created_at": "2026-08-26T22:56:31.878Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-26T22:56:31.878Z",
+          "id": "hb14drnlgj26",
+          "incident_id": "kfspvrz14xr0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-26T22:56:31.878Z"
+        }
+      ],
+      "monitoring_at": "2026-08-27T00:26:05.990Z",
+      "name": "Incident with Actions and Pull Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-27T00:26:44.772Z",
+      "shortlink": "https://stspg.io/nrbwjftcz72d",
+      "started_at": "2026-08-26T22:56:31.793Z",
+      "status": "resolved",
+      "updated_at": "2026-08-28T22:10:28.404Z"
+    }
+  }
+}

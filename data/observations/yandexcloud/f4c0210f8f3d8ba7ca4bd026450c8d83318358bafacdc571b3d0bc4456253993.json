@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "yandexcloud/1993",
+    "vendor": "yandexcloud",
+    "native_id": "1993",
+    "title": "Partial unavailability of the Cloud Backup service",
+    "url": "https://status.yandex.cloud/en/incidents/1993",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-02T07:00:00Z",
+    "resolved_at": "2026-09-02T09:51:00Z",
+    "duration_minutes": 171,
+    "components": [
+      "Cloud Backup"
+    ],
+    "updates": [
+      {
+        "native_id": "2683",
+        "status": "unknown",
+        "body": "From 10:00 to 13:00 Moscow time, the service will be operated by the backup provider.\nAt this point, it can be observed:\n– Unavailability of operations for connecting virtual machines to the service, management of backup and backup policies through the user interface, CLI and API for up to 60 minutes;\n– There may be problems in starting and executing backup tasks, as well as a drop in the speed of creating and restoring backups.",
+        "created_at": "2026-09-02T06:51:08.667Z"
+      },
+      {
+        "native_id": "2685",
+        "status": "resolved",
+        "body": "The provider's work has been completed, and the service is operating normally.",
+        "created_at": "2026-09-02T11:40:28.964Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "comments": [
+        {
+          "content": "\u003cp\u003eThe provider's work has been completed, and the service is operating normally.\u003c/p\u003e\n",
+          "createdAt": "2026-09-02T11:40:28.964Z",
+          "id": 2685,
+          "incidentId": 1993,
+          "type": "resolved",
+          "updatedAt": "2026-09-02T11:40:29.822Z"
+        },
+        {
+          "content": "\u003cp\u003eFrom 10:00 to 13:00 Moscow time, the service will be operated by the backup provider.\u003c/p\u003e\n\u003cp\u003eAt this point, it can be observed:\u003c/p\u003e\n\u003cp\u003e– Unavailability of operations for connecting virtual machines to the service, management of backup and backup policies through the user interface, CLI and API for up to 60 minutes;\u003c/p\u003e\n\u003cp\u003e– There may be problems in starting and executing backup tasks, as well as a drop in the speed of creating and restoring backups.\u003c/p\u003e\n",
+          "createdAt": "2026-09-02T06:51:08.667Z",
+          "id": 2683,
+          "incidentId": 1993,
+          "type": "update",
+          "updatedAt": "2026-09-02T06:51:08.667Z"
+        }
+      ],
+      "endDate": "2026-09-02T09:51:00.000Z",
+      "id": 1993,
+      "installations": [
+        {
+          "code": "kz",
+          "zones": [
+            {
+              "id": "kz1-a"
+            }
+          ]
+        },
+        {
+          "code": "ru",
+          "zones": [
+            {
+              "id": "ru-central1-a"
+            },
+            {
+              "id": "ru-central1-b"
+            },
+            {
+              "id": "ru-central1-d"
+            },
+            {
+              "id": "ru-central1-e"
+            }
+          ]
+        }
+      ],
+      "isReportPublished": false,
+      "level": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "levelId": 1,
+      "maxLevel": {
+        "label": "Minor",
+        "level": 1,
+        "theme": "normal"
+      },
+      "maxLevelId": 1,
+      "report": null,
+      "reportPublishedTime": null,
+      "services": [
+        {
+          "consoleUrl": "https://console.yandex.cloud/link/backup/",
+          "fullName": "Yandex Cloud Backup",
+          "iconName": "backup",
+          "id": 300,
+          "name": "Cloud Backup",
+          "slug": "backup"
+        }
+      ],
+      "startDate": "2026-09-02T07:00:00.000Z",
+      "status": "resolved",
+      "title": "Partial unavailability of the Cloud Backup service"
+    }
+  }
+}

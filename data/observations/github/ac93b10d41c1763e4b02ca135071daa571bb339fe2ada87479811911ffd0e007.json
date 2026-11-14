@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/75g5xmzptjqb",
+    "vendor": "github",
+    "native_id": "75g5xmzptjqb",
+    "title": "Incident with Actions",
+    "url": "https://stspg.io/8nsh6820sff9",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-29T15:26:24.385Z",
+    "resolved_at": "2026-07-29T16:00:54.006Z",
+    "duration_minutes": 34,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "7yv4fy0tyr51",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions",
+        "created_at": "2026-07-29T15:26:24.457Z"
+      },
+      {
+        "native_id": "hf2974ydyqmj",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting GitHub Actions. Some customers may experience timeouts or failures with runner registration and workflow runs may be delayed during startup. Our team is actively working to mitigate the impact by scaling capacity across additional infrastructure.",
+        "created_at": "2026-07-29T15:34:07.587Z"
+      },
+      {
+        "native_id": "htc067j9ntq0",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-29T15:40:35.731Z"
+      },
+      {
+        "native_id": "m2y88z0rsnrv",
+        "status": "resolved",
+        "body": "On July 29, 2026, from 14:51 UTC to 15:28 UTC, GitHub Actions experienced elevated REST API request timeouts and errors, failures registering runners, and delayed workflow run starts for customers whose traffic was served by a single infrastructure site. This was caused by an under-provisioned internal Actions service in that site: under increased load its instances ran out of memory and became unresponsive, and because Actions API requests wait synchronously on that service, requests routed through the affected site stalled and timed out. During the incident, approximately 2% of workflows were delayed. Requests served by other sites remained unaffected. Both standard and larger hosted runners routed through the affected site could see delayed job starts. \u003cbr /\u003e\u003cbr /\u003eThe issue was mitigated by scaling out the runner-administration service in the affected site and increasing the replica count, which restored API availability and returned workflow run starts to normal. We are working to add horizontal autoscaling, memory-saturation alerting, and scaling-forecast monitoring for this service, along with responder playbooks, to reduce the likelihood of similar issues in the future.",
+        "created_at": "2026-07-29T16:00:54.006Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-06T23:22:06.906Z"
+        }
+      ],
+      "created_at": "2026-07-29T15:26:24.392Z",
+      "id": "75g5xmzptjqb",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On July 29, 2026, from 14:51 UTC to 15:28 UTC, GitHub Actions experienced elevated REST API request timeouts and errors, failures registering runners, and delayed workflow run starts for customers whose traffic was served by a single infrastructure site. This was caused by an under-provisioned internal Actions service in that site: under increased load its instances ran out of memory and became unresponsive, and because Actions API requests wait synchronously on that service, requests routed through the affected site stalled and timed out. During the incident, approximately 2% of workflows were delayed. Requests served by other sites remained unaffected. Both standard and larger hosted runners routed through the affected site could see delayed job starts. \u003cbr /\u003e\u003cbr /\u003eThe issue was mitigated by scaling out the runner-administration service in the affected site and increasing the replica count, which restored API availability and returned workflow run starts to normal. We are working to add horizontal autoscaling, memory-saturation alerting, and scaling-forecast monitoring for this service, along with responder playbooks, to reduce the likelihood of similar issues in the future.",
+          "created_at": "2026-07-29T16:00:54.006Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T16:00:54.006Z",
+          "id": "m2y88z0rsnrv",
+          "incident_id": "75g5xmzptjqb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T01:28:07.558Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-29T15:40:35.731Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:40:35.731Z",
+          "id": "htc067j9ntq0",
+          "incident_id": "75g5xmzptjqb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:40:35.731Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are investigating an issue affecting GitHub Actions. Some customers may experience timeouts or failures with runner registration and workflow runs may be delayed during startup. Our team is actively working to mitigate the impact by scaling capacity across additional infrastructure.",
+          "created_at": "2026-07-29T15:34:07.587Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:34:07.587Z",
+          "id": "hf2974ydyqmj",
+          "incident_id": "75g5xmzptjqb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:34:07.587Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions",
+          "created_at": "2026-07-29T15:26:24.457Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T15:26:24.457Z",
+          "id": "7yv4fy0tyr51",
+          "incident_id": "75g5xmzptjqb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T15:26:24.457Z"
+        }
+      ],
+      "monitoring_at": "2026-07-29T15:40:35.731Z",
+      "name": "Incident with Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-29T16:00:54.006Z",
+      "shortlink": "https://stspg.io/8nsh6820sff9",
+      "started_at": "2026-07-29T15:26:24.385Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T01:28:07.562Z"
+    }
+  }
+}

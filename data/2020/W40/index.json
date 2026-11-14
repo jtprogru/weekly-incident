@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2020-W40",
   "from": "2020-09-28T00:00:00Z",
   "to": "2020-10-05T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/wkg98r6wc1b5",
+      "canonical": {
+        "id": "ci-18b291c935b96c9193e296fb",
+        "sources": [
+          {
+            "key": "atlassian/wkg98r6wc1b5",
+            "path": "2020/W40/atlassian.json",
+            "url": "http://stspg.io/n55q9mvx3w62"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-18b291c935b96c9193e296fb",
       "vendor": "atlassian",
       "title": "Login / Signup with Microsoft not working",
       "url": "http://stspg.io/n55q9mvx3w62",

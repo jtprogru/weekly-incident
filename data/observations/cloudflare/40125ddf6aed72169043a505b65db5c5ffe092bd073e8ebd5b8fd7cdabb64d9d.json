@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/mxlpy0nnr2j8",
+    "vendor": "cloudflare",
+    "native_id": "mxlpy0nnr2j8",
+    "title": "Worker's Observarbility Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/mxlpy0nnr2j8",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-07T16:04:27.278Z",
+    "resolved_at": "2026-08-07T17:42:14.668Z",
+    "duration_minutes": 97,
+    "components": [
+      "Workers Observability"
+    ],
+    "updates": [
+      {
+        "native_id": "lf5jywjqkpw5",
+        "status": "investigating",
+        "body": "Cloudflare is aware, and investigating reports where a subset of customers are not seeing logs in the Workers Observability dashboard after deploying a new version of a Worker. Affected Workers continue to run and serve traffic normally. Metrics remain available.",
+        "created_at": "2026-08-07T16:04:27.386Z"
+      },
+      {
+        "native_id": "x2v7xh4sngx7",
+        "status": "identified",
+        "body": "We have identified the root cause and reverted the impacted change. However, for the fix to apply to existing Workers utilizing Gradual Deployments, affected Workers must have their deployment traffic percentages adjusted or redeployed. \n\nAs a workaround, if you are currently impacted, you can immediately resolve the issue for your service by modifying the traffic weights of your Gradual Deployment (for example, shifting your active deployment weights from 50%/50% to 40%/60%, or redeploying your Worker).\n\nWe are actively working on an automated fix for all remaining affected customers and will provide another update once resolved.",
+        "created_at": "2026-08-07T17:10:28.883Z"
+      },
+      {
+        "native_id": "0tl2m54mn6jp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-07T17:42:14.668Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-12-12T22:27:27.000Z",
+          "description": "Workers Logs",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "pqt7t1dwt0dz",
+          "name": "Workers Observability",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 121,
+          "showcase": false,
+          "start_date": "2024-12-12",
+          "status": "operational",
+          "updated_at": "2026-08-11T12:31:06.000Z"
+        }
+      ],
+      "created_at": "2026-08-07T16:04:27.000Z",
+      "id": "mxlpy0nnr2j8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "pqt7t1dwt0dz",
+              "name": "Cloudflare Sites and Services - Workers Observability",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-07T17:42:14.668Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T17:42:14.668Z",
+          "id": "0tl2m54mn6jp",
+          "incident_id": "mxlpy0nnr2j8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T17:42:14.668Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pqt7t1dwt0dz",
+              "name": "Cloudflare Sites and Services - Workers Observability",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have identified the root cause and reverted the impacted change. However, for the fix to apply to existing Workers utilizing Gradual Deployments, affected Workers must have their deployment traffic percentages adjusted or redeployed. \n\nAs a workaround, if you are currently impacted, you can immediately resolve the issue for your service by modifying the traffic weights of your Gradual Deployment (for example, shifting your active deployment weights from 50%/50% to 40%/60%, or redeploying your Worker).\n\nWe are actively working on an automated fix for all remaining affected customers and will provide another update once resolved.",
+          "created_at": "2026-08-07T17:10:28.883Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T17:10:28.883Z",
+          "id": "x2v7xh4sngx7",
+          "incident_id": "mxlpy0nnr2j8",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T17:10:28.883Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pqt7t1dwt0dz",
+              "name": "Cloudflare Sites and Services - Workers Observability",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware, and investigating reports where a subset of customers are not seeing logs in the Workers Observability dashboard after deploying a new version of a Worker. Affected Workers continue to run and serve traffic normally. Metrics remain available.",
+          "created_at": "2026-08-07T16:04:27.386Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-07T16:04:27.386Z",
+          "id": "lf5jywjqkpw5",
+          "incident_id": "mxlpy0nnr2j8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-07T16:04:27.386Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Worker's Observarbility Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-07T17:42:14.668Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/mxlpy0nnr2j8",
+      "started_at": "2026-08-07T16:04:27.278Z",
+      "status": "resolved",
+      "updated_at": "2026-08-07T17:42:14.687Z"
+    }
+  }
+}

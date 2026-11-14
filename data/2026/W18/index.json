@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 10,
+    "source_versions_total": 10,
+    "canonical_incidents_total": 10,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W18",
   "from": "2026-04-27T00:00:00Z",
   "to": "2026-05-04T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T12:36:38.232091035Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,22 @@
   ],
   "incidents": [
     {
-      "key": "aws/dd4f7c1f4ca3fe41",
+      "canonical": {
+        "id": "ci-4f155127c97b96a474760521",
+        "sources": [
+          {
+            "key": "aws/dd4f7c1f4ca3fe41",
+            "path": "2026/W18/aws.json",
+            "url": "https://health.aws.amazon.com/health/status"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "first_observed_update",
+        "warnings": [
+          "AWS onset is the first observed message, not a verified impact start"
+        ]
+      },
+      "key": "ci-4f155127c97b96a474760521",
       "vendor": "aws",
       "title": "Increased Connectivity Issues and API Error Rates",
       "url": "https://health.aws.amazon.com/health/status",
@@ -117,15 +141,30 @@
         "multipleservices-me-south-1"
       ],
       "score": {
-        "value": 524730,
-        "duration_minutes": 262365,
+        "value": 570898,
+        "duration_minutes": 285449,
         "components": 1,
         "vendor_weight": 2
       },
       "above_threshold": true
     },
     {
-      "key": "aws/ca5f1cc2b6034dd6",
+      "canonical": {
+        "id": "ci-0e9fcfad9f58dcd7e204aafb",
+        "sources": [
+          {
+            "key": "aws/ca5f1cc2b6034dd6",
+            "path": "2026/W18/aws.json",
+            "url": "https://health.aws.amazon.com/health/status"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "first_observed_update",
+        "warnings": [
+          "AWS onset is the first observed message, not a verified impact start"
+        ]
+      },
+      "key": "ci-0e9fcfad9f58dcd7e204aafb",
       "vendor": "aws",
       "title": "Increased Error Rates",
       "url": "https://health.aws.amazon.com/health/status",
@@ -137,15 +176,28 @@
         "multipleservices-me-central-1"
       ],
       "score": {
-        "value": 524692,
-        "duration_minutes": 262346,
+        "value": 570860,
+        "duration_minutes": 285430,
         "components": 1,
         "vendor_weight": 2
       },
       "above_threshold": true
     },
     {
-      "key": "digitalocean/z5fjzx3kp16z",
+      "canonical": {
+        "id": "ci-35367f529f55a4569db74813",
+        "sources": [
+          {
+            "key": "digitalocean/z5fjzx3kp16z",
+            "path": "2026/W18/digitalocean.json",
+            "url": "https://stspg.io/qf13crcjzkmn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-35367f529f55a4569db74813",
       "vendor": "digitalocean",
       "title": "Elevated 5xx “context canceled” errors impacting serverless inference",
       "url": "https://stspg.io/qf13crcjzkmn",
@@ -167,7 +219,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1547",
+      "canonical": {
+        "id": "ci-21a7f32d8d03f521c103d75b",
+        "sources": [
+          {
+            "key": "slack/1547",
+            "path": "2026/W18/slack.json",
+            "url": "https://slack-status.com/2026-04/22195f9f2ca47237"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-21a7f32d8d03f521c103d75b",
       "vendor": "slack",
       "title": "Users May Not Receive Notifications on Slack Thread Replies",
       "url": "https://slack-status.com/2026-04/22195f9f2ca47237",
@@ -189,7 +254,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/mspf5pqp7d42",
+      "canonical": {
+        "id": "ci-df5d09dc1620e3242436ac57",
+        "sources": [
+          {
+            "key": "circleci/mspf5pqp7d42",
+            "path": "2026/W18/circleci.json",
+            "url": "https://stspg.io/ld03v9l2cm5c"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-df5d09dc1620e3242436ac57",
       "vendor": "circleci",
       "title": "Usage API data is delayed for data from yesterday, 4/30. All prior data is available. We are investigating.",
       "url": "https://stspg.io/ld03v9l2cm5c",
@@ -211,7 +289,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/5gsk0hfctqp5",
+      "canonical": {
+        "id": "ci-5ed8106e69c1175914306ca2",
+        "sources": [
+          {
+            "key": "digitalocean/5gsk0hfctqp5",
+            "path": "2026/W18/digitalocean.json",
+            "url": "https://stspg.io/y8cgtdqrkct1"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-5ed8106e69c1175914306ca2",
       "vendor": "digitalocean",
       "title": "Serverless Inference - Intermittent Rate Limiting Affecting Some Customers Using Anthropic Models",
       "url": "https://stspg.io/y8cgtdqrkct1",
@@ -233,7 +324,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/dw41jpjjghhs",
+      "canonical": {
+        "id": "ci-0807986938bb64d909571aa3",
+        "sources": [
+          {
+            "key": "datadog/dw41jpjjghhs",
+            "path": "2026/W18/datadog.json",
+            "url": "https://stspg.io/17n4grhvbmjt"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0807986938bb64d909571aa3",
       "vendor": "datadog",
       "title": "Elevated Error Rates for Metrics Queries",
       "url": "https://stspg.io/17n4grhvbmjt",
@@ -255,7 +359,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/t30mkznmqskh",
+      "canonical": {
+        "id": "ci-a9cf852b04a73ed291ca58e6",
+        "sources": [
+          {
+            "key": "circleci/t30mkznmqskh",
+            "path": "2026/W18/circleci.json",
+            "url": "https://stspg.io/f6kcq9nb85wt"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a9cf852b04a73ed291ca58e6",
       "vendor": "circleci",
       "title": "Jobs using Xcode 14.3.1 on m4pro.large are delayed.",
       "url": "https://stspg.io/f6kcq9nb85wt",
@@ -277,7 +394,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/jnvb0qp0c7pd",
+      "canonical": {
+        "id": "ci-8cd491fa5c718c100f3c9dd7",
+        "sources": [
+          {
+            "key": "stripe/jnvb0qp0c7pd",
+            "path": "2026/W18/stripe.json",
+            "url": "https://stspg.io/3x0dw69bql3k"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8cd491fa5c718c100f3c9dd7",
       "vendor": "stripe",
       "title": "Certificate warnings on stripe.com and dashboard logins",
       "url": "https://stspg.io/3x0dw69bql3k",
@@ -299,7 +429,20 @@
       "above_threshold": false
     },
     {
-      "key": "slack/1548",
+      "canonical": {
+        "id": "ci-6839b46b334262e9c00550d8",
+        "sources": [
+          {
+            "key": "slack/1548",
+            "path": "2026/W18/slack.json",
+            "url": "https://slack-status.com/2026-04/4bd5196b0c972734"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6839b46b334262e9c00550d8",
       "vendor": "slack",
       "title": "Slack Search Feature Disruption - Japan region",
       "url": "https://slack-status.com/2026-04/4bd5196b0c972734",

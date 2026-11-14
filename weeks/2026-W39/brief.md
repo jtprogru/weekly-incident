@@ -2,12 +2,21 @@
 
 2026-09-21 to 2026-09-27 (UTC).
 
+49 source records (53 saved revisions) → 49 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. aws — Increased Error Rates
 
 - URL: https://health.aws.amazon.com/health/status
-- Window: 2026-09-21 23:26 to not yet (6d 15h 14m (ongoing))
+- Window: 2026-09-21 23:26 to not yet (53d 13h 9m (ongoing))
 - Impact: unknown, status: investigating
 - Components: ec2-us-east-1
+
+<a id="ci-1f6486ca51776216be85a1cf"></a>
+
+- Canonical ID: `ci-1f6486ca51776216be85a1cf` (1 source records).
+  - [aws/f5f654e733c72f13](../../data/2026/W39/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
 
   - `2026-09-21 23:26` investigating — We are investigating increased API error rates in the US-EAST-1 Region.
   - `2026-09-21 23:44` investigating — We can confirm increased error rates affecting new instance launches, including elevated API error rates for RunInstances, CreateFleet, and related EC2 launch workflows in the US-EAST-1 Region. Customers attempting to launch new EC2 instances may experience launch failures or elevated API response latency. Our engineers are actively engaged and working towards recovering the issue. We are seeing initial signs of recovery. Existing instances remain unaffected. We recommend retrying failed RunInstances and CreateFleet API calls. We will provide an update by 5:30 PM PDT or sooner.
@@ -16,23 +25,38 @@
 ## 2. cloudflare — Cloudflare One Clients are incorrectly challenged on some sites
 
 - URL: https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0
-- Window: 2026-09-22 19:23 to not yet (5d 19h 18m (ongoing))
-- Impact: minor, status: identified
+- Window: 2026-09-22 19:23 to 2026-10-14 16:54 UTC (21d 21h 31m)
+- Impact: minor, status: resolved
 - Components: Cloudflare One Client
+
+<a id="ci-39234b54d251a8c74d44a8ac"></a>
+
+- Canonical ID: `ci-39234b54d251a8c74d44a8ac` (1 source records).
+  - [cloudflare/tl0vrgjy99r0](../../data/2026/W39/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/tl0vrgjy99r0
+- Start time basis: `vendor_reported`.
 
   - `2026-09-22 19:23` investigating — Cloudflare is investigating an issue where Cloudflare One Client customers are incorrectly challenged while visiting some websites.
   - `2026-09-23 11:02` identified — The issue has been identified and a fix is being implemented.
+  - `2026-10-14 16:43` monitoring — Cloudflare has implemented a fix and is currently monitoring for exceptions. We will update the status once the issue is resolved.
+  - `2026-10-14 16:54` resolved — This incident has been resolved.
 
 ## 3. cloudflare — Network Performance Degradation — Asia-Pacific
 
 - URL: https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15
-- Window: 2026-09-23 18:42 to not yet (4d 19h 58m (ongoing))
-- Impact: minor, status: identified
+- Window: 2026-09-23 18:42 to 2026-09-29 23:01 UTC (6d 4h 18m)
+- Impact: minor, status: resolved
 - Components: Network
+
+<a id="ci-cea3259e86f3208c2a946dae"></a>
+
+- Canonical ID: `ci-cea3259e86f3208c2a946dae` (1 source records).
+  - [cloudflare/8wmvkv5jkf15](../../data/2026/W39/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/8wmvkv5jkf15
+- Start time basis: `vendor_reported`.
 
   - `2026-09-23 18:42` investigating — Since September 21, 2026 at 02:20 UTC, multiple subsea cable outages have caused congestion between Tokyo and Singapore datacenters. We have rerouted traffic to reduce impact and are working with third-party vendors to restore capacity.
   - `2026-09-23 18:44` identified — The issue has been identified and a fix is being implemented.
   - `2026-09-25 08:50` identified — Cloudflare continues to mitigate intermittent connectivity degradation for a small subset of customers caused by significant degradation of capacity in the region.
+  - `2026-09-29 23:01` resolved — This incident has been resolved.
 
 ## 4. github — Incident across several services
 
@@ -40,6 +64,12 @@
 - Window: 2026-09-23 10:11 to 2026-09-24 04:55 UTC (18h 44m)
 - Impact: minor, status: resolved
 - Components: API Requests
+
+<a id="ci-04770eb84a28e9bd42bc0367"></a>
+
+- Canonical ID: `ci-04770eb84a28e9bd42bc0367` (1 source records).
+  - [github/8zc63m64hy36](../../data/2026/W39/github.json); vendor URL: https://stspg.io/m1ps7yrhp4n8
+- Start time basis: `vendor_reported`.
 
   - `2026-09-23 10:11` investigating — We are investigating reports of degraded performance for API Requests
   - `2026-09-23 10:20` investigating — Database replicas have detached. We're working to restore the database replicas. Users may experience issues beyond creating organizations and a degraded experience with the GitHub API and Projects.
@@ -56,7 +86,7 @@
   - `2026-09-24 02:00` investigating — We are continuing to process the backlog of issue label updates for Projects. Users may still see delays before label changes are reflected in Projects. All other services are operating normally.
   - `2026-09-24 03:14` investigating — We are continuing to process the backlog of issue label updates for Projects. Label changes may still be delayed. All other services are operating normally.
   - `2026-09-24 04:55` monitoring — The degradation has been mitigated. We are monitoring to ensure stability.
-  - `2026-09-24 04:55` resolved — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+  - `2026-09-24 04:55` resolved — Starting at 07:57 UTC on September 23, GitHub experienced elevated 500 and 404 responses across several application pages. This caused failures when installing GitHub Apps, creating organizations, and making some organization membership changes. Customers also experienced delayed label updates and stale search results in Projects. <br /><br />The infrastructure failure was isolated to our Azure Central US region. The API errors were mitigated by 10:58 UTC on September 23. Projects' processing continued to recover while an accumulated backlog was drained, and full service was restored at 04:55 UTC on September 24. <br /><br />The incident was caused by a failed planned maintenance operation on a primary database. Automated recovery initiated an emergency database failover, after which sever…
 
 ## 5. cloudflare — Issues with Durable Objects
 
@@ -64,6 +94,12 @@
 - Window: 2026-09-25 00:03 to 2026-09-25 14:49 UTC (14h 45m)
 - Impact: minor, status: resolved
 - Components: Durable Objects
+
+<a id="ci-68070bea63cd77f508eda034"></a>
+
+- Canonical ID: `ci-68070bea63cd77f508eda034` (1 source records).
+  - [cloudflare/gv29fd076q2t](../../data/2026/W39/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/gv29fd076q2t
+- Start time basis: `vendor_reported`.
 
   - `2026-09-25 00:03` investigating — Cloudflare is aware of and investigating an issue impacting some customers where new Workflows instances may be stuck in a Queued state. More updates to follow shortly.
   - `2026-09-25 01:31` monitoring — A fix has been implemented and we are monitoring the results.
@@ -86,4 +122,3 @@
 - `cloudflare` Elevated Errors with any / all in http_response_cache_settings (2h 13m) — https://www.cloudflarestatus.com/incidents/f8wg5htd3zz4
 - `openai` Issues with Codex (55m) — https://status.openai.com/incidents/01M3DCNWMW57HYK8FJ5FBFPA39
 - `stripe` Elevated API Errors (18m) — https://stspg.io/4ntbqnhzg7bb
-

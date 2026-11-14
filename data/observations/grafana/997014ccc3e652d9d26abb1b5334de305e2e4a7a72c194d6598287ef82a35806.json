@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/c5zm69crkl0t",
+    "vendor": "grafana",
+    "native_id": "c5zm69crkl0t",
+    "title": "Elevated Errors Ingesting Metrics in AWS US East (VA)",
+    "url": "https://stspg.io/q5r4k8bnw6l6",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-12T09:45:54.197Z",
+    "resolved_at": "2026-10-12T16:42:47.858Z",
+    "duration_minutes": 416,
+    "components": [
+      "AWS US East (VA) - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "f8hwwpp9n3f3",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 10:15 UTC.",
+        "created_at": "2026-10-12T09:45:54.331Z"
+      },
+      {
+        "native_id": "3w7pbtj9ksdz",
+        "status": "investigating",
+        "body": "We are continuing to investigate an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 11:00 UTC.",
+        "created_at": "2026-10-12T10:08:55.716Z"
+      },
+      {
+        "native_id": "llh2z0vg2sdj",
+        "status": "investigating",
+        "body": "We are continuing to investigate an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. Next update by 12:00 UTC.",
+        "created_at": "2026-10-12T10:55:26.724Z"
+      },
+      {
+        "native_id": "7l5zbk9wj8ft",
+        "status": "identified",
+        "body": "We have identified the cause of an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA) - prod-us-east-3. Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. We are continuing to work on mitigations and are monitoring the impact to Grafana Cloud Metrics. Next update by 13:00 UTC.",
+        "created_at": "2026-10-12T11:56:17.075Z"
+      },
+      {
+        "native_id": "h7lh8gbwcq4c",
+        "status": "identified",
+        "body": "We have identified the cause of an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA) - prod-us-east-3. Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. We are continuing to work on mitigations and are monitoring the impact to Grafana Cloud Metrics. Next update by 14:00 UTC.",
+        "created_at": "2026-10-12T12:53:20.877Z"
+      },
+      {
+        "native_id": "vblkbsslpfd6",
+        "status": "identified",
+        "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+        "created_at": "2026-10-12T14:01:30.671Z"
+      },
+      {
+        "native_id": "cz5dq11qv4nf",
+        "status": "identified",
+        "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+        "created_at": "2026-10-12T15:01:30.993Z"
+      },
+      {
+        "native_id": "vw9xnkqhkm63",
+        "status": "resolved",
+        "body": "From 09:45 UTC on 2026-10-12, customers in AWS US East (VA) experienced failed or delayed metric writes to Grafana Cloud Metrics, which may have also affected Frontend Observability and Synthetic Monitoring data in that region. This has been fully resolved and all services are operating normally again.",
+        "created_at": "2026-10-12T16:42:47.858Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-10-12T09:45:00.793Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "h9pkmw6sc47g",
+          "name": "AWS US East (VA) - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 52,
+          "showcase": false,
+          "start_date": "2026-10-12",
+          "status": "operational",
+          "updated_at": "2026-10-26T03:13:45.965Z"
+        }
+      ],
+      "created_at": "2026-10-12T09:45:54.207Z",
+      "id": "c5zm69crkl0t",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 09:45 UTC on 2026-10-12, customers in AWS US East (VA) experienced failed or delayed metric writes to Grafana Cloud Metrics, which may have also affected Frontend Observability and Synthetic Monitoring data in that region. This has been fully resolved and all services are operating normally again.",
+          "created_at": "2026-10-12T16:42:47.858Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T16:42:47.858Z",
+          "id": "vw9xnkqhkm63",
+          "incident_id": "c5zm69crkl0t",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T16:42:47.858Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+          "created_at": "2026-10-12T15:01:30.993Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T15:01:30.993Z",
+          "id": "cz5dq11qv4nf",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T15:01:30.993Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have isolated infrastructure suspected of contributing to the metrics ingestion issue in AWS US East (VA) - prod-us-east-3. We are validating recovery and completing mitigation steps. Customers may continue to experience failed or delayed metric writes while this work continues.",
+          "created_at": "2026-10-12T14:01:30.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T14:01:30.671Z",
+          "id": "vblkbsslpfd6",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T14:01:30.671Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the cause of an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA) - prod-us-east-3. Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. We are continuing to work on mitigations and are monitoring the impact to Grafana Cloud Metrics. Next update by 14:00 UTC.",
+          "created_at": "2026-10-12T12:53:20.877Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T12:53:20.877Z",
+          "id": "h7lh8gbwcq4c",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T12:53:20.877Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the cause of an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA) - prod-us-east-3. Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. We are continuing to work on mitigations and are monitoring the impact to Grafana Cloud Metrics. Next update by 13:00 UTC.",
+          "created_at": "2026-10-12T11:56:17.075Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T11:56:17.000Z",
+          "id": "7l5zbk9wj8ft",
+          "incident_id": "c5zm69crkl0t",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T11:56:40.224Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes to Grafana Cloud Metrics, this may also impact Metrics written by Frontend Observability and/or Synthetic Monitoring. Next update by 12:00 UTC.",
+          "created_at": "2026-10-12T10:55:26.724Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T10:55:26.724Z",
+          "id": "llh2z0vg2sdj",
+          "incident_id": "c5zm69crkl0t",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T10:55:26.724Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 11:00 UTC.",
+          "created_at": "2026-10-12T10:08:55.716Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T10:08:55.716Z",
+          "id": "3w7pbtj9ksdz",
+          "incident_id": "c5zm69crkl0t",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T10:08:55.716Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9pkmw6sc47g",
+              "name": "Metrics - AWS US East (VA) - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 10:15 UTC.",
+          "created_at": "2026-10-12T09:45:54.331Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-12T09:45:54.331Z",
+          "id": "f8hwwpp9n3f3",
+          "incident_id": "c5zm69crkl0t",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T09:45:54.331Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Errors Ingesting Metrics in AWS US East (VA)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-12T16:42:47.858Z",
+      "shortlink": "https://stspg.io/q5r4k8bnw6l6",
+      "started_at": "2026-10-12T09:45:54.197Z",
+      "status": "resolved",
+      "updated_at": "2026-10-12T16:42:47.883Z"
+    }
+  }
+}

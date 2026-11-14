@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2023-W51",
   "from": "2023-12-18T00:00:00Z",
   "to": "2023-12-25T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/lvq7pq0zbgvr",
+      "canonical": {
+        "id": "ci-62c7ef5a72a10bb1128da827",
+        "sources": [
+          {
+            "key": "atlassian/lvq7pq0zbgvr",
+            "path": "2023/W51/atlassian.json",
+            "url": "https://stspg.io/3yxq4k25m6sr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-62c7ef5a72a10bb1128da827",
       "vendor": "atlassian",
       "title": "Atlassian's cross product user search service is currently degraded.",
       "url": "https://stspg.io/3yxq4k25m6sr",

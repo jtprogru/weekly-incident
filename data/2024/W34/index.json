@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2024-W34",
   "from": "2024-08-19T00:00:00Z",
   "to": "2024-08-26T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/2rsqj1hmdg82",
+      "canonical": {
+        "id": "ci-332dd047fcb01d885f9aca36",
+        "sources": [
+          {
+            "key": "atlassian/2rsqj1hmdg82",
+            "path": "2024/W34/atlassian.json",
+            "url": "https://stspg.io/pd9n7p9p3vb4"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-332dd047fcb01d885f9aca36",
       "vendor": "atlassian",
       "title": "Data residency migrations halted.",
       "url": "https://stspg.io/pd9n7p9p3vb4",

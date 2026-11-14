@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/byzl30zyfc47",
+    "vendor": "cloudflare",
+    "native_id": "byzl30zyfc47",
+    "title": "Cloudflare Worker Builds Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/byzl30zyfc47",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-11T06:29:09.044Z",
+    "resolved_at": "2026-11-11T06:41:33.983Z",
+    "duration_minutes": 12,
+    "components": [
+      "Workers",
+      "Containers",
+      "Workers Builds"
+    ],
+    "updates": [
+      {
+        "native_id": "reafrf1g4fie",
+        "status": "investigating",
+        "body": "Cloudflare is aware of and investigating an issue with Cloudflare Worker Builds which potentially impacts multiple customers. Further detail will be provided as more information becomes available.\n\nExisting Workers and Containers are unaffected.",
+        "created_at": "2026-11-11T06:29:09.044Z"
+      },
+      {
+        "native_id": "51pchg565jg1",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T06:32:26.755Z"
+      },
+      {
+        "native_id": "dt0hj2bw7ao6",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-11T06:35:38.992Z"
+      },
+      {
+        "native_id": "4twqcyc0pzxh",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-11T06:41:33.983Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-13T15:31:13.773Z"
+        },
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "created_at": "2025-05-27T17:04:31.000Z",
+          "description": "Workers Builds is Cloudflare's native CI/CD system that allows you to integrate with GitHub or GitLab to automatically deploy changes with each new push to a selected branch (e.g. main).",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "vcpsk0w6g86k",
+          "name": "Workers Builds",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2025-05-27",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        }
+      ],
+      "created_at": "2026-11-11T06:29:09.044Z",
+      "id": "byzl30zyfc47",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-11T06:41:33.983Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:41:33.983Z",
+          "id": "4twqcyc0pzxh",
+          "incident_id": "byzl30zyfc47",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-11T06:35:38.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:35:38.992Z",
+          "id": "dt0hj2bw7ao6",
+          "incident_id": "byzl30zyfc47",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:35:38.992Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T06:32:26.755Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:32:26.755Z",
+          "id": "51pchg565jg1",
+          "incident_id": "byzl30zyfc47",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:32:26.755Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "nd77krz8224v",
+              "name": "Developer Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vcpsk0w6g86k",
+              "name": "Developer Services - Workers Builds",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of and investigating an issue with Cloudflare Worker Builds which potentially impacts multiple customers. Further detail will be provided as more information becomes available.\n\nExisting Workers and Containers are unaffected.",
+          "created_at": "2026-11-11T06:29:09.044Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T06:29:09.044Z",
+          "id": "reafrf1g4fie",
+          "incident_id": "byzl30zyfc47",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T06:29:09.044Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Worker Builds Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-11T06:41:33.983Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/byzl30zyfc47",
+      "started_at": "2026-11-11T06:29:09.044Z",
+      "status": "resolved",
+      "updated_at": "2026-11-11T06:41:33.983Z"
+    }
+  }
+}

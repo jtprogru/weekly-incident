@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "slack/1540",
+    "vendor": "slack",
+    "native_id": "1540",
+    "title": "Issue with Sending and Receiving Messages",
+    "url": "https://slack-status.com/2026-03/6da2f3fe8e16319d",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-03-29T22:38:57Z",
+    "resolved_at": "2026-03-30T01:17:35Z",
+    "duration_minutes": 158,
+    "components": [
+      "Messaging"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "We're investigating a new incident.\nCurrent impact to end users: Some users may experience elevated error rates and message-related degradations when sending and receiving messages across the Slack platform\nTeams are actively engaged to identify the root cause and remediate the service impact and will provide updates as information is available.\nWe apologize for the inconvenience and will continue sharing updates as they become available.",
+        "created_at": "2026-03-29T22:38:57Z"
+      },
+      {
+        "status": "unknown",
+        "body": "We’re continuing to investigate the issue. We have identified two affected shards that are becoming overloaded, causing elevated query failures and message-related degradations. We are in the process of testing a potential fix. We’ll provide the next update once new information becomes available.",
+        "created_at": "2026-03-29T23:30:00Z"
+      },
+      {
+        "status": "unknown",
+        "body": "A fix has been deployed to the affected shards. ProcessMessage jobs had been paused, and these have now been unpaused on the affected shards. We are monitoring performance to assess whether the shards have returned to expected performance levels.",
+        "created_at": "2026-03-30T00:29:49Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Following a period of monitoring, our engineering team called this incident resolved as of 01:10 UTC, March 30. We apologize for any inconvenience this issue has caused to users.",
+        "created_at": "2026-03-30T01:17:35Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "date_created": "2026-03-29T15:38:57-07:00",
+      "date_updated": "2026-03-29T18:17:35-07:00",
+      "id": 1540,
+      "notes": [
+        {
+          "body": "\u003cp\u003eWe're investigating a new incident.\u003c/p\u003e\u003cul\u003e\u003cli\u003eCurrent impact to end users: Some users may experience elevated error rates and message-related degradations when sending and receiving messages across the Slack platform\u003c/li\u003e\u003cli\u003eTeams are actively engaged to identify the root cause and remediate the service impact and will provide updates as information is available. \u0026nbsp;\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe apologize for the inconvenience and will continue sharing updates as they become available.\u003c/p\u003e",
+          "date_created": "2026-03-29T15:38:57-07:00"
+        },
+        {
+          "body": "\u003cp\u003eWe’re continuing to investigate the issue. We have identified two affected shards that are becoming overloaded, causing elevated query failures and message-related degradations. We are in the process of testing a potential fix. We’ll provide the next update once new information becomes available.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-03-29T16:30:00-07:00"
+        },
+        {
+          "body": "\u003cp\u003eA fix has been deployed to the affected shards. ProcessMessage jobs had been paused, and these have now been unpaused on the affected shards. We are monitoring performance to assess whether the shards have returned to expected performance levels.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-03-29T17:29:49-07:00"
+        },
+        {
+          "body": "\u003cp\u003eFollowing a period of monitoring, our engineering team called this incident resolved as of 01:10 UTC, March 30. We apologize for any inconvenience this issue has caused to users.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-03-29T18:17:35-07:00"
+        }
+      ],
+      "services": [
+        "Messaging"
+      ],
+      "status": "resolved",
+      "title": "Issue with Sending and Receiving Messages",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-03/6da2f3fe8e16319d"
+    }
+  }
+}

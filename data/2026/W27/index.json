@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 28,
+    "source_versions_total": 28,
+    "canonical_incidents_total": 28,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W27",
   "from": "2026-06-29T00:00:00Z",
   "to": "2026-07-06T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "grafana/x0h2rsqpqk3w",
+      "canonical": {
+        "id": "ci-b2091b3ec81242da991f3243",
+        "sources": [
+          {
+            "key": "grafana/x0h2rsqpqk3w",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/hmkbllwz66w2"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-b2091b3ec81242da991f3243",
       "vendor": "grafana",
       "title": "Some Queries Failing",
       "url": "https://stspg.io/hmkbllwz66w2",
@@ -120,18 +142,19 @@
         "AWS Brazil - prod-sa-east-1",
         "AWS Canada - prod-ca-east-0",
         "AWS Germany - prod-eu-west-2",
-        "AWS UAE - prod-me-central-1",
         "AWS India - prod-ap-south-1",
+        "AWS Ireland - prod-eu-west-6",
         "AWS Japan - prod-ap-northeast-0",
         "AWS Singapore - prod-ap-southeast-1",
         "AWS Sweden - prod-eu-north-0",
-        "AWS US West - prod-us-west-0",
-        "AWS US East - prod-us-east-0",
-        "AWS Ireland - prod-eu-west-6",
         "AWS Switzerland - prod-eu-central-0",
+        "AWS UAE - prod-me-central-1",
+        "AWS US East - prod-us-east-0",
+        "AWS US West - prod-us-west-0",
         "Azure Netherlands - prod-eu-west-3",
         "Azure US Central - us-central2",
         "Azure US Central - us-central7",
+        "Federal Cloud - AWS US Gov West",
         "GCP Australia - prod-au-southeast-0",
         "GCP Belgium - prod-eu-west-0",
         "GCP Brazil - prod-sa-east-0",
@@ -139,8 +162,7 @@
         "GCP Singapore - prod-ap-southeast-0",
         "GCP UK - prod-gb-south-0",
         "GCP US Central - prod-us-central-0",
-        "GCP US Central - prod-us-central-5",
-        "Federal Cloud - AWS US Gov West"
+        "GCP US Central - prod-us-central-5"
       ],
       "score": {
         "value": 5125,
@@ -151,7 +173,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/j5vgks57cphf",
+      "canonical": {
+        "id": "ci-403c0d3369f9b580168e1f9e",
+        "sources": [
+          {
+            "key": "grafana/j5vgks57cphf",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/wqbptt5wfqtg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-403c0d3369f9b580168e1f9e",
       "vendor": "grafana",
       "title": "Elevated Loki Query Bytes Reporting",
       "url": "https://stspg.io/wqbptt5wfqtg",
@@ -166,18 +201,19 @@
         "AWS Brazil - prod-sa-east-1",
         "AWS Canada - prod-ca-east-0",
         "AWS Germany - prod-eu-west-2",
-        "AWS UAE - prod-me-central-1",
         "AWS India - prod-ap-south-1",
+        "AWS Ireland - prod-eu-west-6",
         "AWS Japan - prod-ap-northeast-0",
         "AWS Singapore - prod-ap-southeast-1",
         "AWS Sweden - prod-eu-north-0",
-        "AWS US West - prod-us-west-0",
-        "AWS US East - prod-us-east-0",
-        "AWS Ireland - prod-eu-west-6",
         "AWS Switzerland - prod-eu-central-0",
+        "AWS UAE - prod-me-central-1",
+        "AWS US East - prod-us-east-0",
+        "AWS US West - prod-us-west-0",
         "Azure Netherlands - prod-eu-west-3",
         "Azure US Central - us-central2",
         "Azure US Central - us-central7",
+        "Federal Cloud - AWS US Gov West",
         "GCP Australia - prod-au-southeast-0",
         "GCP Belgium - prod-eu-west-0",
         "GCP Brazil - prod-sa-east-0",
@@ -185,8 +221,7 @@
         "GCP Singapore - prod-ap-southeast-0",
         "GCP UK - prod-gb-south-0",
         "GCP US Central - prod-us-central-0",
-        "GCP US Central - prod-us-central-5",
-        "Federal Cloud - AWS US Gov West"
+        "GCP US Central - prod-us-central-5"
       ],
       "score": {
         "value": 3425,
@@ -197,7 +232,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/grtt5vk2dd3v",
+      "canonical": {
+        "id": "ci-2643670698537376487b6cc4",
+        "sources": [
+          {
+            "key": "grafana/grtt5vk2dd3v",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/h6ydsghh5vvs"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-2643670698537376487b6cc4",
       "vendor": "grafana",
       "title": "Mimir read errors and high latency in prod-eu-west-0",
       "url": "https://stspg.io/h6ydsghh5vvs",
@@ -208,8 +256,8 @@
       "duration_minutes": 1243,
       "ongoing": false,
       "components": [
-        "GCP Belgium - prod-eu-west-0: Querying",
-        "GCP Belgium - prod-eu-west-0: Ingestion"
+        "GCP Belgium - prod-eu-west-0: Ingestion",
+        "GCP Belgium - prod-eu-west-0: Querying"
       ],
       "score": {
         "value": 2486,
@@ -220,7 +268,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/76l7xym7jd5m",
+      "canonical": {
+        "id": "ci-c016a22dbd3c939ab94c7e55",
+        "sources": [
+          {
+            "key": "digitalocean/76l7xym7jd5m",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/sp8b09xxqvjt"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c016a22dbd3c939ab94c7e55",
       "vendor": "digitalocean",
       "title": "Agent Timeouts While Retrieving Data from Knowledge Bases",
       "url": "https://stspg.io/sp8b09xxqvjt",
@@ -243,7 +304,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/71vvxf0rxxnz",
+      "canonical": {
+        "id": "ci-caba25cbe35e7151a8c9f079",
+        "sources": [
+          {
+            "key": "datadog/71vvxf0rxxnz",
+            "path": "2026/W27/datadog.json",
+            "url": "https://stspg.io/5snql687z9c4"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-caba25cbe35e7151a8c9f079",
       "vendor": "datadog",
       "title": "Delayed data processing and errors in multiple products",
       "url": "https://stspg.io/5snql687z9c4",
@@ -273,7 +347,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/4m5tfwljjfxk",
+      "canonical": {
+        "id": "ci-ec8c7e9b66186864472ab8f8",
+        "sources": [
+          {
+            "key": "grafana/4m5tfwljjfxk",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/34p7wm05ydt0"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ec8c7e9b66186864472ab8f8",
       "vendor": "grafana",
       "title": "Grafana Cloud IRM alert groups failing to produce alerts in us-east-3 region.",
       "url": "https://stspg.io/34p7wm05ydt0",
@@ -295,7 +382,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/1869",
+      "canonical": {
+        "id": "ci-a3f1398bc03b034c29d89bb7",
+        "sources": [
+          {
+            "key": "yandexcloud/1869",
+            "path": "2026/W27/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1869"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a3f1398bc03b034c29d89bb7",
       "vendor": "yandexcloud",
       "title": "The problem is with SpeechKit speech recognition services.",
       "url": "https://status.yandex.cloud/en/incidents/1869",
@@ -317,7 +417,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/rjfr3rbzxlx1",
+      "canonical": {
+        "id": "ci-0895e0fe0250a38b16f680b8",
+        "sources": [
+          {
+            "key": "digitalocean/rjfr3rbzxlx1",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/rpkck6zr7ht5"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0895e0fe0250a38b16f680b8",
       "vendor": "digitalocean",
       "title": "Managed Database Clusters",
       "url": "https://stspg.io/rpkck6zr7ht5",
@@ -340,7 +453,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/j5szf7f3wjp5",
+      "canonical": {
+        "id": "ci-47c5671c7efbe982c022e118",
+        "sources": [
+          {
+            "key": "stripe/j5szf7f3wjp5",
+            "path": "2026/W27/stripe.json",
+            "url": "https://stspg.io/17c6mmm4lg2f"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-47c5671c7efbe982c022e118",
       "vendor": "stripe",
       "title": "Elevated WeChat Pay errors",
       "url": "https://stspg.io/17c6mmm4lg2f",
@@ -362,7 +488,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/phwpbgwcmkjn",
+      "canonical": {
+        "id": "ci-ae8f5db0d97b26dd5773bf9f",
+        "sources": [
+          {
+            "key": "digitalocean/phwpbgwcmkjn",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/r6yw4xc720r8"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ae8f5db0d97b26dd5773bf9f",
       "vendor": "digitalocean",
       "title": "DNS Lookup Failures for Managed Database",
       "url": "https://stspg.io/r6yw4xc720r8",
@@ -373,9 +512,9 @@
       "duration_minutes": 292,
       "ongoing": false,
       "components": [
+        "DNS",
         "FRA1",
-        "FRA1",
-        "DNS"
+        "FRA1"
       ],
       "score": {
         "value": 700.8000000000001,
@@ -386,7 +525,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/njbxb52z1g1y",
+      "canonical": {
+        "id": "ci-c4349ca381003b5329f4cb25",
+        "sources": [
+          {
+            "key": "circleci/njbxb52z1g1y",
+            "path": "2026/W27/circleci.json",
+            "url": "https://stspg.io/ty6ll6xj9c18"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c4349ca381003b5329f4cb25",
       "vendor": "circleci",
       "title": "Some customers are unable to access their organizations",
       "url": "https://stspg.io/ty6ll6xj9c18",
@@ -408,7 +560,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/wvj4t3y98gs7",
+      "canonical": {
+        "id": "ci-1cbdc127ad43bcc8a001d1f3",
+        "sources": [
+          {
+            "key": "digitalocean/wvj4t3y98gs7",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/wwsc9zft1lxd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1cbdc127ad43bcc8a001d1f3",
       "vendor": "digitalocean",
       "title": "Limited access to Deepseek V4 Pro model",
       "url": "https://stspg.io/wwsc9zft1lxd",
@@ -431,7 +596,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/rl7f90w0n0gq",
+      "canonical": {
+        "id": "ci-7578b4f517535f283ae91dc6",
+        "sources": [
+          {
+            "key": "github/rl7f90w0n0gq",
+            "path": "2026/W27/github.json",
+            "url": "https://stspg.io/jy3yhfvwxpjh"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7578b4f517535f283ae91dc6",
       "vendor": "github",
       "title": "Delays in copilot budget limits resets for some users",
       "url": "https://stspg.io/jy3yhfvwxpjh",
@@ -453,7 +631,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/gsdpkqp4kvlv",
+      "canonical": {
+        "id": "ci-bdd8200e6c7a6951257ff74b",
+        "sources": [
+          {
+            "key": "grafana/gsdpkqp4kvlv",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/3v5hcx1v7p32"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-bdd8200e6c7a6951257ff74b",
       "vendor": "grafana",
       "title": "Loki and Frontend Observability - Major Outage in prod-us-central-0 region",
       "url": "https://stspg.io/3v5hcx1v7p32",
@@ -476,7 +667,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/6fdsld9f0nsn",
+      "canonical": {
+        "id": "ci-74caae68f2302c19902f85fc",
+        "sources": [
+          {
+            "key": "grafana/6fdsld9f0nsn",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/qldkxzbdb7qp"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-74caae68f2302c19902f85fc",
       "vendor": "grafana",
       "title": "Rule evaluation error on cluster prod-gb-south-0",
       "url": "https://stspg.io/qldkxzbdb7qp",
@@ -498,7 +702,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/82j91239k876",
+      "canonical": {
+        "id": "ci-6b67d170d143c0f52790ec63",
+        "sources": [
+          {
+            "key": "circleci/82j91239k876",
+            "path": "2026/W27/circleci.json",
+            "url": "https://stspg.io/n86hwbb1whpc"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6b67d170d143c0f52790ec63",
       "vendor": "circleci",
       "title": "Outage impacting web experience and pipelines starting",
       "url": "https://stspg.io/n86hwbb1whpc",
@@ -509,8 +726,8 @@
       "duration_minutes": 78,
       "ongoing": false,
       "components": [
-        "Pipelines \u0026 Workflows",
-        "CircleCI UI"
+        "CircleCI UI",
+        "Pipelines \u0026 Workflows"
       ],
       "score": {
         "value": 156,
@@ -521,7 +738,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/5bnwwg9tzd4q",
+      "canonical": {
+        "id": "ci-8e64d12e5dc9d5705e22b763",
+        "sources": [
+          {
+            "key": "github/5bnwwg9tzd4q",
+            "path": "2026/W27/github.json",
+            "url": "https://stspg.io/wgv67m39tbml"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8e64d12e5dc9d5705e22b763",
       "vendor": "github",
       "title": "Incident with Pages",
       "url": "https://stspg.io/wgv67m39tbml",
@@ -543,7 +773,20 @@
       "above_threshold": false
     },
     {
-      "key": "datadog/smc2wgcmsx6r",
+      "canonical": {
+        "id": "ci-f8950744b2e269f1bc7bc6e6",
+        "sources": [
+          {
+            "key": "datadog/smc2wgcmsx6r",
+            "path": "2026/W27/datadog.json",
+            "url": "https://stspg.io/h1vdjddg90hd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f8950744b2e269f1bc7bc6e6",
       "vendor": "datadog",
       "title": "Elevated Error Rates",
       "url": "https://stspg.io/h1vdjddg90hd",
@@ -563,7 +806,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/bsfk9nm4l61f",
+      "canonical": {
+        "id": "ci-9ab1ff96e9085f39bb114c00",
+        "sources": [
+          {
+            "key": "grafana/bsfk9nm4l61f",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/b3bbl34zgmbw"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9ab1ff96e9085f39bb114c00",
       "vendor": "grafana",
       "title": "Confluent API Outage",
       "url": "https://stspg.io/b3bbl34zgmbw",
@@ -585,7 +841,20 @@
       "above_threshold": true
     },
     {
-      "key": "digitalocean/8mvnl6s4cmdt",
+      "canonical": {
+        "id": "ci-9a50f2d38a2490f820de3406",
+        "sources": [
+          {
+            "key": "digitalocean/8mvnl6s4cmdt",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/m6y2gmlz3jrv"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9a50f2d38a2490f820de3406",
       "vendor": "digitalocean",
       "title": "Droplet Resize",
       "url": "https://stspg.io/m6y2gmlz3jrv",
@@ -607,7 +876,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/1865",
+      "canonical": {
+        "id": "ci-03e6d1698f0d9223b38230ae",
+        "sources": [
+          {
+            "key": "yandexcloud/1865",
+            "path": "2026/W27/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1865"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-03e6d1698f0d9223b38230ae",
       "vendor": "yandexcloud",
       "title": "Partial unavailability of Virtual Private Cloud services",
       "url": "https://status.yandex.cloud/en/incidents/1865",
@@ -629,7 +911,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/rpj3lwgx1s3s",
+      "canonical": {
+        "id": "ci-4392f6b9104ac82ce862fe3d",
+        "sources": [
+          {
+            "key": "datadog/rpj3lwgx1s3s",
+            "path": "2026/W27/datadog.json",
+            "url": "https://stspg.io/gs85vq0xmxcx"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4392f6b9104ac82ce862fe3d",
       "vendor": "datadog",
       "title": "Errors Pulling Container Images",
       "url": "https://stspg.io/gs85vq0xmxcx",
@@ -651,7 +946,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/wv134rlqz1ds",
+      "canonical": {
+        "id": "ci-d09b071c1b693c66719e7476",
+        "sources": [
+          {
+            "key": "stripe/wv134rlqz1ds",
+            "path": "2026/W27/stripe.json",
+            "url": "https://stspg.io/9rxrgvlbpn8g"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d09b071c1b693c66719e7476",
       "vendor": "stripe",
       "title": "Elevated P24 errors",
       "url": "https://stspg.io/9rxrgvlbpn8g",
@@ -673,7 +981,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/7vmz1hmlzzrc",
+      "canonical": {
+        "id": "ci-0caf877c633677e5007804f9",
+        "sources": [
+          {
+            "key": "digitalocean/7vmz1hmlzzrc",
+            "path": "2026/W27/digitalocean.json",
+            "url": "https://stspg.io/1ggj0xnb3n4v"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0caf877c633677e5007804f9",
       "vendor": "digitalocean",
       "title": "Droplet Actions in NYC3",
       "url": "https://stspg.io/1ggj0xnb3n4v",
@@ -696,7 +1017,20 @@
       "above_threshold": false
     },
     {
-      "key": "datadog/41jdllgcbk9s",
+      "canonical": {
+        "id": "ci-e87283eef705d3197ae7093a",
+        "sources": [
+          {
+            "key": "datadog/41jdllgcbk9s",
+            "path": "2026/W27/datadog.json",
+            "url": "https://stspg.io/hsz1r8ww26gn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e87283eef705d3197ae7093a",
       "vendor": "datadog",
       "title": "Delayed Monitors Notifications",
       "url": "https://stspg.io/hsz1r8ww26gn",
@@ -718,7 +1052,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/mc4yx9f8x1hk",
+      "canonical": {
+        "id": "ci-1cef651967c71ea82226d189",
+        "sources": [
+          {
+            "key": "github/mc4yx9f8x1hk",
+            "path": "2026/W27/github.json",
+            "url": "https://stspg.io/vbk1zdbpmv6m"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1cef651967c71ea82226d189",
       "vendor": "github",
       "title": "Disruption with some GitHub services - Signup Flow",
       "url": "https://stspg.io/vbk1zdbpmv6m",
@@ -738,7 +1085,20 @@
       "above_threshold": false
     },
     {
-      "key": "yandexcloud/1861",
+      "canonical": {
+        "id": "ci-9a693a2d5dccf1fc1239cdcb",
+        "sources": [
+          {
+            "key": "yandexcloud/1861",
+            "path": "2026/W27/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1861"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9a693a2d5dccf1fc1239cdcb",
       "vendor": "yandexcloud",
       "title": "Yandex Cloud Console Availability Issue",
       "url": "https://status.yandex.cloud/en/incidents/1861",
@@ -760,7 +1120,20 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/s8cx9hvdxd5v",
+      "canonical": {
+        "id": "ci-173ff1412f59f59df9f2d738",
+        "sources": [
+          {
+            "key": "grafana/s8cx9hvdxd5v",
+            "path": "2026/W27/grafana.json",
+            "url": "https://stspg.io/lwn65pz9737z"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-173ff1412f59f59df9f2d738",
       "vendor": "grafana",
       "title": "Partial Write Outage for Grafana Cloud Logs in prod-eu-north-0.",
       "url": "https://stspg.io/lwn65pz9737z",

@@ -1,4 +1,13 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 63,
+    "source_versions_total": 68,
+    "canonical_incidents_total": 63,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W41",
   "from": "2026-10-05T00:00:00Z",
   "to": "2026-10-12T00:00:00Z",
@@ -107,7 +116,20 @@
   ],
   "incidents": [
     {
-      "key": "yandexcloud/2136",
+      "canonical": {
+        "id": "ci-d5585cf81abf4edcfde48cfd",
+        "sources": [
+          {
+            "key": "yandexcloud/2136",
+            "path": "2026/W41/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/2136"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d5585cf81abf4edcfde48cfd",
       "vendor": "yandexcloud",
       "title": "Unavailability of Yandex Cloud zones",
       "url": "https://status.yandex.cloud/en/incidents/2136",
@@ -116,88 +138,88 @@
       "started_at": "2026-10-11T01:00:00Z",
       "ongoing": true,
       "components": [
-        "Compute Cloud",
-        "Virtual Private Cloud",
-        "Object Storage",
-        "Identity and Access Management",
-        "Resource Manager",
-        "Network Load Balancer",
-        "Container Registry",
-        "Managed Service for Kubernetes®",
-        "Monitoring",
-        "Managed Service for PostgreSQL",
-        "Managed Service for ClickHouse®",
-        "Yandex StoreDoc",
-        "Managed Service for MySQL®",
-        "Managed Service for Valkey™",
-        "Data Processing",
-        "Message Queue",
-        "SpeechKit",
-        "Translate",
-        "Vision OCR",
-        "Cloud Functions",
-        "Key Management Service",
-        "Managed Service for YDB",
-        "IoT Core",
-        "Cloud Interconnect",
-        "Certificate Manager",
-        "Data Transfer",
-        "DataSphere",
         "API Gateway",
-        "Managed Service for Apache Kafka®",
-        "Yandex Lockbox",
         "Application Load Balancer",
-        "Yandex Identity Hub",
-        "Tracker",
-        "Cloud DNS",
-        "Cloud Logging",
-        "Yandex MPP Analytics Engine for PostgreSQL",
-        "Data Streams",
-        "Serverless Containers",
-        "Forms",
-        "Wiki",
-        "Managed Service for GitLab",
-        "Cloud Desktop",
         "Audit Trails",
-        "Yandex Query",
-        "SmartCaptcha",
+        "Certificate Manager",
         "Cloud Apps",
         "Cloud Backup",
-        "Managed Service for OpenSearch",
-        "Yandex Search API",
-        "Yandex Cloud Console",
-        "YandexGPT API",
-        "Yandex Cloud Billing",
-        "Smart Web Security",
-        "Yandex Cloud Postbox",
-        "Yandex WebSQL",
-        "Yandex Managed Service for Apache Airflow®",
-        "Managed Service for Prometheus®",
-        "SpeechSense",
-        "Yandex Cloud Video",
-        "Yandex MetaData Hub",
-        "Support Center",
+        "Cloud DNS",
+        "Cloud Desktop",
+        "Cloud Functions",
+        "Cloud Interconnect",
+        "Cloud Logging",
         "Cloud Notification Service",
-        "SourceCraft Code Assistant",
-        "Yandex BareMetal",
-        "Security Deck",
         "Cloud Registry",
-        "Marketplace",
-        "Yandex Managed Service for Trino",
-        "Yandex Cloud Router",
-        "Yandex Cloud Quota Manager",
-        "SourceCraft",
-        "Managed Service for Apache Spark™",
-        "Yandex Neurosupport",
-        "Managed Service for YTsaurus",
-        "Yandex Cloud Detection and Response",
+        "Compute Cloud",
+        "Container Registry",
+        "Data Processing",
+        "Data Streams",
+        "Data Transfer",
+        "DataSphere",
+        "Forms",
         "GOST Gateway",
+        "Identity and Access Management",
+        "IoT Core",
+        "Key Management Service",
+        "Managed Service for Apache Spark™",
+        "Managed Service for OpenSearch",
+        "Managed Service for Prometheus®",
         "Managed Service for Sharded PostgreSQL",
-        "Yandex AI Studio",
-        "Stackland",
+        "Managed Service for YDB",
+        "Managed Service for YTsaurus",
+        "Managed Service for Apache Kafka®",
+        "Managed Service for ClickHouse®",
+        "Managed Service for GitLab",
+        "Managed Service for Kubernetes®",
+        "Managed Service for MySQL®",
+        "Managed Service for PostgreSQL",
+        "Managed Service for Valkey™",
+        "Marketplace",
+        "Message Queue",
+        "Monitoring",
         "Monium",
+        "Network Load Balancer",
+        "Object Storage",
+        "Resource Manager",
+        "Security Deck",
+        "Serverless Containers",
+        "Smart Web Security",
+        "SmartCaptcha",
+        "SourceCraft",
+        "SourceCraft Code Assistant",
+        "SpeechKit",
+        "SpeechSense",
+        "Stackland",
+        "Support Center",
+        "Tracker",
+        "Translate",
+        "VibeCraft",
+        "Virtual Private Cloud",
+        "Vision OCR",
+        "Wiki",
+        "Yandex AI Studio",
+        "Yandex BareMetal",
+        "Yandex Cloud Billing",
+        "Yandex Cloud Console",
+        "Yandex Cloud Detection and Response",
+        "Yandex Cloud Postbox",
+        "Yandex Cloud Quota Manager",
+        "Yandex Cloud Router",
+        "Yandex Cloud Video",
+        "Yandex Identity Hub",
+        "Yandex Lockbox",
+        "Yandex MPP Analytics Engine for PostgreSQL",
+        "Yandex Managed Service for Apache Airflow®",
+        "Yandex Managed Service for Trino",
+        "Yandex MetaData Hub",
+        "Yandex Neurosupport",
+        "Yandex Query",
         "Yandex SIEM",
-        "VibeCraft"
+        "Yandex Search API",
+        "Yandex StoreDoc",
+        "Yandex WebSQL",
+        "YandexGPT API"
       ],
       "score": {
         "value": 6107688,
@@ -208,7 +230,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/2092",
+      "canonical": {
+        "id": "ci-8e0bde59a25eb3bfe75e60a3",
+        "sources": [
+          {
+            "key": "yandexcloud/2092",
+            "path": "2026/W41/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/2092"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8e0bde59a25eb3bfe75e60a3",
       "vendor": "yandexcloud",
       "title": "Power failure in the ru-central-b availability zone",
       "url": "https://status.yandex.cloud/en/incidents/2092",
@@ -219,90 +254,90 @@
       "duration_minutes": 4002,
       "ongoing": false,
       "components": [
-        "Compute Cloud",
-        "Virtual Private Cloud",
-        "Object Storage",
-        "Identity and Access Management",
-        "Resource Manager",
-        "Network Load Balancer",
-        "Container Registry",
-        "Managed Service for Kubernetes®",
-        "Monitoring",
-        "Managed Service for PostgreSQL",
-        "Managed Service for ClickHouse®",
-        "Yandex StoreDoc",
-        "Managed Service for MySQL®",
-        "Managed Service for Valkey™",
-        "Data Processing",
-        "Message Queue",
-        "SpeechKit",
-        "Translate",
-        "Vision OCR",
-        "DataLens",
-        "Cloud Functions",
-        "Key Management Service",
-        "Managed Service for YDB",
-        "IoT Core",
-        "Cloud Interconnect",
-        "Certificate Manager",
-        "Data Transfer",
-        "DataSphere",
         "API Gateway",
-        "Managed Service for Apache Kafka®",
-        "Yandex Lockbox",
         "Application Load Balancer",
-        "Yandex Identity Hub",
-        "Tracker",
-        "Cloud DNS",
-        "Cloud CDN",
-        "Cloud Logging",
-        "Yandex MPP Analytics Engine for PostgreSQL",
-        "Data Streams",
-        "Serverless Containers",
-        "Forms",
-        "Wiki",
-        "Managed Service for GitLab",
-        "Cloud Desktop",
         "Audit Trails",
-        "Yandex Query",
-        "SmartCaptcha",
+        "Certificate Manager",
         "Cloud Apps",
         "Cloud Backup",
-        "Managed Service for OpenSearch",
-        "Yandex Search API",
-        "Yandex Cloud Console",
-        "YandexGPT API",
-        "Yandex Cloud Billing",
-        "Smart Web Security",
-        "Yandex Cloud Postbox",
-        "Yandex WebSQL",
-        "Yandex Managed Service for Apache Airflow®",
-        "Managed Service for Prometheus®",
-        "SpeechSense",
-        "Yandex Cloud Video",
-        "Yandex MetaData Hub",
-        "Support Center",
+        "Cloud CDN",
+        "Cloud DNS",
+        "Cloud Desktop",
+        "Cloud Functions",
+        "Cloud Interconnect",
+        "Cloud Logging",
         "Cloud Notification Service",
-        "SourceCraft Code Assistant",
-        "Yandex BareMetal",
-        "Security Deck",
         "Cloud Registry",
-        "Marketplace",
-        "Yandex Managed Service for Trino",
-        "Yandex Cloud Router",
-        "Yandex Cloud Quota Manager",
-        "SourceCraft",
-        "Managed Service for Apache Spark™",
-        "Yandex Neurosupport",
-        "Managed Service for YTsaurus",
-        "Yandex Cloud Detection and Response",
+        "Compute Cloud",
+        "Container Registry",
+        "Data Processing",
+        "Data Streams",
+        "Data Transfer",
+        "DataLens",
+        "DataSphere",
+        "Forms",
         "GOST Gateway",
+        "Identity and Access Management",
+        "IoT Core",
+        "Key Management Service",
+        "Managed Service for Apache Spark™",
+        "Managed Service for OpenSearch",
+        "Managed Service for Prometheus®",
         "Managed Service for Sharded PostgreSQL",
-        "Yandex AI Studio",
-        "Stackland",
+        "Managed Service for YDB",
+        "Managed Service for YTsaurus",
+        "Managed Service for Apache Kafka®",
+        "Managed Service for ClickHouse®",
+        "Managed Service for GitLab",
+        "Managed Service for Kubernetes®",
+        "Managed Service for MySQL®",
+        "Managed Service for PostgreSQL",
+        "Managed Service for Valkey™",
+        "Marketplace",
+        "Message Queue",
+        "Monitoring",
         "Monium",
+        "Network Load Balancer",
+        "Object Storage",
+        "Resource Manager",
+        "Security Deck",
+        "Serverless Containers",
+        "Smart Web Security",
+        "SmartCaptcha",
+        "SourceCraft",
+        "SourceCraft Code Assistant",
+        "SpeechKit",
+        "SpeechSense",
+        "Stackland",
+        "Support Center",
+        "Tracker",
+        "Translate",
+        "VibeCraft",
+        "Virtual Private Cloud",
+        "Vision OCR",
+        "Wiki",
+        "Yandex AI Studio",
+        "Yandex BareMetal",
+        "Yandex Cloud Billing",
+        "Yandex Cloud Console",
+        "Yandex Cloud Detection and Response",
+        "Yandex Cloud Postbox",
+        "Yandex Cloud Quota Manager",
+        "Yandex Cloud Router",
+        "Yandex Cloud Video",
+        "Yandex Identity Hub",
+        "Yandex Lockbox",
+        "Yandex MPP Analytics Engine for PostgreSQL",
+        "Yandex Managed Service for Apache Airflow®",
+        "Yandex Managed Service for Trino",
+        "Yandex MetaData Hub",
+        "Yandex Neurosupport",
+        "Yandex Query",
         "Yandex SIEM",
-        "VibeCraft"
+        "Yandex Search API",
+        "Yandex StoreDoc",
+        "Yandex WebSQL",
+        "YandexGPT API"
       ],
       "score": {
         "value": 504252,
@@ -313,7 +348,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/pfvfug94jq4q",
+      "canonical": {
+        "id": "ci-dcb212550be05a0c4eb3a32a",
+        "sources": [
+          {
+            "key": "cloudflare/pfvfug94jq4q",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/pfvfug94jq4q"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-dcb212550be05a0c4eb3a32a",
       "vendor": "cloudflare",
       "title": "Missing Logs and Traces in Cloudflare Observability Platform",
       "url": "https://www.cloudflarestatus.com/incidents/pfvfug94jq4q",
@@ -333,7 +381,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/6x77ccl9shpy",
+      "canonical": {
+        "id": "ci-aa6f59211a96cfbcca9feb49",
+        "sources": [
+          {
+            "key": "grafana/6x77ccl9shpy",
+            "path": "2026/W41/grafana.json",
+            "url": "https://stspg.io/9l8htmqt82s2"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-aa6f59211a96cfbcca9feb49",
       "vendor": "grafana",
       "title": "IRM Unable to Send SMS to Thailand Numbers",
       "url": "https://stspg.io/9l8htmqt82s2",
@@ -355,7 +416,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/cyxclg7nnhjy",
+      "canonical": {
+        "id": "ci-1d7fe76c931dba8c5cb73366",
+        "sources": [
+          {
+            "key": "cloudflare/cyxclg7nnhjy",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1d7fe76c931dba8c5cb73366",
       "vendor": "cloudflare",
       "title": "Elevated Errors in China Network Colos",
       "url": "https://www.cloudflarestatus.com/incidents/cyxclg7nnhjy",
@@ -377,7 +451,20 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/978mjkgw6mh7",
+      "canonical": {
+        "id": "ci-f64b047b06bad8235f9ab606",
+        "sources": [
+          {
+            "key": "anthropic/978mjkgw6mh7",
+            "path": "2026/W41/anthropic.json",
+            "url": "https://stspg.io/sjkw7njwf0mt"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f64b047b06bad8235f9ab606",
       "vendor": "anthropic",
       "title": "Elevated errors on platform.claude.com",
       "url": "https://stspg.io/sjkw7njwf0mt",
@@ -399,7 +486,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4GV1M2A3K38T73JCVCD9G0R",
+      "canonical": {
+        "id": "ci-25c27c306bfe03faf64a026b",
+        "sources": [
+          {
+            "key": "openai/01M4GV1M2A3K38T73JCVCD9G0R",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4GV1M2A3K38T73JCVCD9G0R"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-25c27c306bfe03faf64a026b",
       "vendor": "openai",
       "title": "Delayed Costs data in the Compliance API",
       "url": "https://status.openai.com/incidents/01M4GV1M2A3K38T73JCVCD9G0R",
@@ -419,7 +519,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1580",
+      "canonical": {
+        "id": "ci-057564c342d6384d89c544ba",
+        "sources": [
+          {
+            "key": "slack/1580",
+            "path": "2026/W41/slack.json",
+            "url": "https://slack-status.com/2026-10/a0cfb0208a1d2032"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-057564c342d6384d89c544ba",
       "vendor": "slack",
       "title": "Slack for iOS closing unexpectedly when opening channels",
       "url": "https://slack-status.com/2026-10/a0cfb0208a1d2032",
@@ -441,7 +554,20 @@
       "above_threshold": true
     },
     {
-      "key": "gcp/mSFVt6PiP557bjRyYsut",
+      "canonical": {
+        "id": "ci-74a2f2cec65976aed2992881",
+        "sources": [
+          {
+            "key": "gcp/mSFVt6PiP557bjRyYsut",
+            "path": "2026/W41/gcp.json",
+            "url": "https://status.cloud.google.com/incidents/mSFVt6PiP557bjRyYsut"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-74a2f2cec65976aed2992881",
       "vendor": "gcp",
       "title": "Google Cloud Storage (GCS) customers experienced elevated latencies and error rates when performing upload or write operations.",
       "url": "https://status.cloud.google.com/incidents/mSFVt6PiP557bjRyYsut",
@@ -463,7 +589,20 @@
       "above_threshold": true
     },
     {
-      "key": "grafana/91ct2lc9xfmn",
+      "canonical": {
+        "id": "ci-c309a05b6bfa84541633c192",
+        "sources": [
+          {
+            "key": "grafana/91ct2lc9xfmn",
+            "path": "2026/W41/grafana.json",
+            "url": "https://stspg.io/cjbf6knm4jq4"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c309a05b6bfa84541633c192",
       "vendor": "grafana",
       "title": "Degraded Performance with Increased Latency for Grafana Cloud Metrics and Traces in GCP US Central",
       "url": "https://stspg.io/cjbf6knm4jq4",
@@ -475,10 +614,10 @@
       "ongoing": false,
       "components": [
         "GCP US Central - prod-us-central-0",
-        "GCP US Central - prod-us-central-5",
         "GCP US Central - prod-us-central-0: Ingestion",
-        "GCP US Central - prod-us-central-5: Ingestion",
-        "GCP US Central - prod-us-central-0: Ingestion"
+        "GCP US Central - prod-us-central-0: Ingestion",
+        "GCP US Central - prod-us-central-5",
+        "GCP US Central - prod-us-central-5: Ingestion"
       ],
       "score": {
         "value": 3465,
@@ -489,7 +628,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/z28czd65h29l",
+      "canonical": {
+        "id": "ci-52f863d412c65a5c1bbf1f11",
+        "sources": [
+          {
+            "key": "cloudflare/z28czd65h29l",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/z28czd65h29l"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-52f863d412c65a5c1bbf1f11",
       "vendor": "cloudflare",
       "title": "Durable Objects Availability Issue in Eastern North America",
       "url": "https://www.cloudflarestatus.com/incidents/z28czd65h29l",
@@ -515,7 +667,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/tt8f4ttcuonf",
+      "canonical": {
+        "id": "ci-7e70d415c6e2be105272e1c1",
+        "sources": [
+          {
+            "key": "cloudflare/tt8f4ttcuonf",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/tt8f4ttcuonf"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7e70d415c6e2be105272e1c1",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Columbus",
       "url": "https://www.cloudflarestatus.com/incidents/tt8f4ttcuonf",
@@ -538,7 +703,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/6cfhhlr4rmm0",
+      "canonical": {
+        "id": "ci-fb8b1117166bd38c3550921f",
+        "sources": [
+          {
+            "key": "circleci/6cfhhlr4rmm0",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/hkfkwz292bz8"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-fb8b1117166bd38c3550921f",
       "vendor": "circleci",
       "title": "Delay in data appearing in UI and API",
       "url": "https://stspg.io/hkfkwz292bz8",
@@ -561,7 +739,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M45E0JFFJZ6EQ3BWYPW74R2Z",
+      "canonical": {
+        "id": "ci-16c02e0e6cbe0a1b216975a4",
+        "sources": [
+          {
+            "key": "openai/01M45E0JFFJZ6EQ3BWYPW74R2Z",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M45E0JFFJZ6EQ3BWYPW74R2Z"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-16c02e0e6cbe0a1b216975a4",
       "vendor": "openai",
       "title": "Elevated Work Mode errors",
       "url": "https://status.openai.com/incidents/01M45E0JFFJZ6EQ3BWYPW74R2Z",
@@ -581,7 +772,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/4knp3pzs3qvx",
+      "canonical": {
+        "id": "ci-2c1e26dd8f2e3ec55cffa8a8",
+        "sources": [
+          {
+            "key": "cloudflare/4knp3pzs3qvx",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/4knp3pzs3qvx"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-2c1e26dd8f2e3ec55cffa8a8",
       "vendor": "cloudflare",
       "title": "Cloudflare DNS Resolver 1.1.1.1 and Gateway DNS are having issues in SIN",
       "url": "https://www.cloudflarestatus.com/incidents/4knp3pzs3qvx",
@@ -593,8 +797,8 @@
       "ongoing": false,
       "components": [
         "Gateway",
-        "Singapore, Singapore - (SIN)",
-        "Recursive DNS"
+        "Recursive DNS",
+        "Singapore, Singapore - (SIN)"
       ],
       "score": {
         "value": 1560.6000000000001,
@@ -605,7 +809,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/2130",
+      "canonical": {
+        "id": "ci-b9d6e1019a1436b9ecb42027",
+        "sources": [
+          {
+            "key": "yandexcloud/2130",
+            "path": "2026/W41/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/2130"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-b9d6e1019a1436b9ecb42027",
       "vendor": "yandexcloud",
       "title": "Increasing timings in the Object Storage service",
       "url": "https://status.yandex.cloud/en/incidents/2130",
@@ -627,7 +844,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/ts295zqycqn7",
+      "canonical": {
+        "id": "ci-f49247b63ccb439cf646ba98",
+        "sources": [
+          {
+            "key": "cloudflare/ts295zqycqn7",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f49247b63ccb439cf646ba98",
       "vendor": "cloudflare",
       "title": "API Shield JWT Validation Errors",
       "url": "https://www.cloudflarestatus.com/incidents/ts295zqycqn7",
@@ -649,7 +879,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/x8n12150xwf6",
+      "canonical": {
+        "id": "ci-06d5bce0f029e3c9c82e3c57",
+        "sources": [
+          {
+            "key": "cloudflare/x8n12150xwf6",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/x8n12150xwf6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-06d5bce0f029e3c9c82e3c57",
       "vendor": "cloudflare",
       "title": "Cloudflare API service issues",
       "url": "https://www.cloudflarestatus.com/incidents/x8n12150xwf6",
@@ -671,7 +914,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/cjwszcf57bff",
+      "canonical": {
+        "id": "ci-81b00cc38adda810f181cd6d",
+        "sources": [
+          {
+            "key": "github/cjwszcf57bff",
+            "path": "2026/W41/github.json",
+            "url": "https://stspg.io/w3rcssslq22w"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-81b00cc38adda810f181cd6d",
       "vendor": "github",
       "title": "Several services are degraded",
       "url": "https://stspg.io/w3rcssslq22w",
@@ -682,8 +938,8 @@
       "duration_minutes": 223,
       "ongoing": false,
       "components": [
-        "Webhooks",
-        "Pull Requests"
+        "Pull Requests",
+        "Webhooks"
       ],
       "score": {
         "value": 669,
@@ -694,7 +950,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/3q1yb5m7ltvb",
+      "canonical": {
+        "id": "ci-b531d0fe442ab4c7a92d0e1d",
+        "sources": [
+          {
+            "key": "github/3q1yb5m7ltvb",
+            "path": "2026/W41/github.json",
+            "url": "https://stspg.io/c11dc9nb1zdq"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-b531d0fe442ab4c7a92d0e1d",
       "vendor": "github",
       "title": "Incident with Actions",
       "url": "https://stspg.io/c11dc9nb1zdq",
@@ -717,7 +986,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/z4hbq8h49j8c",
+      "canonical": {
+        "id": "ci-266fbf9dfabc9fed11b692e4",
+        "sources": [
+          {
+            "key": "circleci/z4hbq8h49j8c",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/s7tpg47srxdd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-266fbf9dfabc9fed11b692e4",
       "vendor": "circleci",
       "title": "Delays in pipelines, workflows, UI data, and notifications",
       "url": "https://stspg.io/s7tpg47srxdd",
@@ -728,8 +1010,8 @@
       "duration_minutes": 318,
       "ongoing": false,
       "components": [
-        "Pipelines \u0026 Workflows",
-        "Notifications \u0026 Status Updates"
+        "Notifications \u0026 Status Updates",
+        "Pipelines \u0026 Workflows"
       ],
       "score": {
         "value": 636,
@@ -740,7 +1022,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M46G248GGHV9RSAJE82BZY1X",
+      "canonical": {
+        "id": "ci-f6f4424427f4046d5e2cc46a",
+        "sources": [
+          {
+            "key": "openai/01M46G248GGHV9RSAJE82BZY1X",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M46G248GGHV9RSAJE82BZY1X"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f6f4424427f4046d5e2cc46a",
       "vendor": "openai",
       "title": "Elevated errors in ChatGPT conversations",
       "url": "https://status.openai.com/incidents/01M46G248GGHV9RSAJE82BZY1X",
@@ -760,7 +1055,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4ADHMMBK7K92NJFJ0DXRYJM",
+      "canonical": {
+        "id": "ci-58fe92f1c3a4fa125c4de798",
+        "sources": [
+          {
+            "key": "openai/01M4ADHMMBK7K92NJFJ0DXRYJM",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4ADHMMBK7K92NJFJ0DXRYJM"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-58fe92f1c3a4fa125c4de798",
       "vendor": "openai",
       "title": "Unable to create new ChatGPT Work threads in latest version of desktop app",
       "url": "https://status.openai.com/incidents/01M4ADHMMBK7K92NJFJ0DXRYJM",
@@ -780,7 +1088,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M46KED6KQ6PR195KZYYVNY8W",
+      "canonical": {
+        "id": "ci-9712f4ec943d180f692b6acb",
+        "sources": [
+          {
+            "key": "openai/01M46KED6KQ6PR195KZYYVNY8W",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M46KED6KQ6PR195KZYYVNY8W"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9712f4ec943d180f692b6acb",
       "vendor": "openai",
       "title": "Elevated error rates in Codex Cloud",
       "url": "https://status.openai.com/incidents/01M46KED6KQ6PR195KZYYVNY8W",
@@ -800,7 +1121,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M46C47WYYD9NMZVGH83X3ZR1",
+      "canonical": {
+        "id": "ci-a1a70a6819b7b9547baf2129",
+        "sources": [
+          {
+            "key": "openai/01M46C47WYYD9NMZVGH83X3ZR1",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M46C47WYYD9NMZVGH83X3ZR1"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a1a70a6819b7b9547baf2129",
       "vendor": "openai",
       "title": "Admin Console Intermittently Inaccessible",
       "url": "https://status.openai.com/incidents/01M46C47WYYD9NMZVGH83X3ZR1",
@@ -820,7 +1154,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/0zs9ncsr6t0l",
+      "canonical": {
+        "id": "ci-a3dd9b08db53546229d15e29",
+        "sources": [
+          {
+            "key": "stripe/0zs9ncsr6t0l",
+            "path": "2026/W41/stripe.json",
+            "url": "https://stspg.io/m7j171ppknbs"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a3dd9b08db53546229d15e29",
       "vendor": "stripe",
       "title": "Elevated Swish errors",
       "url": "https://stspg.io/m7j171ppknbs",
@@ -842,7 +1189,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/xczvsioz1un8",
+      "canonical": {
+        "id": "ci-3a323695409125036a7a6913",
+        "sources": [
+          {
+            "key": "cloudflare/xczvsioz1un8",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/xczvsioz1un8"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-3a323695409125036a7a6913",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Kochi",
       "url": "https://www.cloudflarestatus.com/incidents/xczvsioz1un8",
@@ -862,7 +1222,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4H7FKXDA425TDNP2CRGEYA3",
+      "canonical": {
+        "id": "ci-1504dfe18c7a0d6c7d36211f",
+        "sources": [
+          {
+            "key": "openai/01M4H7FKXDA425TDNP2CRGEYA3",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4H7FKXDA425TDNP2CRGEYA3"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1504dfe18c7a0d6c7d36211f",
       "vendor": "openai",
       "title": "Some ChatGPT content may be unavailable on Android",
       "url": "https://status.openai.com/incidents/01M4H7FKXDA425TDNP2CRGEYA3",
@@ -882,7 +1255,20 @@
       "above_threshold": true
     },
     {
-      "key": "github/qpfv5p86dmrl",
+      "canonical": {
+        "id": "ci-8a0991181da00ff1f8976d77",
+        "sources": [
+          {
+            "key": "github/qpfv5p86dmrl",
+            "path": "2026/W41/github.json",
+            "url": "https://stspg.io/4p8x0jnnsx7m"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8a0991181da00ff1f8976d77",
       "vendor": "github",
       "title": "Incident with Git Operations, Issues, Actions and Pull Requests",
       "url": "https://stspg.io/4p8x0jnnsx7m",
@@ -893,10 +1279,10 @@
       "duration_minutes": 47,
       "ongoing": false,
       "components": [
+        "Actions",
         "Git Operations",
         "Issues",
-        "Pull Requests",
-        "Actions"
+        "Pull Requests"
       ],
       "score": {
         "value": 282,
@@ -907,7 +1293,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/2124",
+      "canonical": {
+        "id": "ci-fd0e36afed5adea81c871030",
+        "sources": [
+          {
+            "key": "yandexcloud/2124",
+            "path": "2026/W41/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/2124"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-fd0e36afed5adea81c871030",
       "vendor": "yandexcloud",
       "title": "The problem is with the Cloud Functions and Serverless Containers services",
       "url": "https://status.yandex.cloud/en/incidents/2124",
@@ -930,7 +1329,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M493CZ0CB14KPC0EER83MNVB",
+      "canonical": {
+        "id": "ci-ef5d020ca1dcb8d3aca305e0",
+        "sources": [
+          {
+            "key": "openai/01M493CZ0CB14KPC0EER83MNVB",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M493CZ0CB14KPC0EER83MNVB"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ef5d020ca1dcb8d3aca305e0",
       "vendor": "openai",
       "title": "Computer Use Is Experiencing Issues",
       "url": "https://status.openai.com/incidents/01M493CZ0CB14KPC0EER83MNVB",
@@ -950,7 +1362,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/jn756xtsy4xg",
+      "canonical": {
+        "id": "ci-363019f9a151bb752e2ec0ea",
+        "sources": [
+          {
+            "key": "circleci/jn756xtsy4xg",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/vcsrgfwdsy4z"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-363019f9a151bb752e2ec0ea",
       "vendor": "circleci",
       "title": "Elevated wait times for machine jobs",
       "url": "https://stspg.io/vcsrgfwdsy4z",
@@ -972,7 +1397,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/ryvhi2suec0d",
+      "canonical": {
+        "id": "ci-02341b4e8a9e7f91bb4d84d1",
+        "sources": [
+          {
+            "key": "cloudflare/ryvhi2suec0d",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/ryvhi2suec0d"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-02341b4e8a9e7f91bb4d84d1",
       "vendor": "cloudflare",
       "title": "Network routing issue",
       "url": "https://www.cloudflarestatus.com/incidents/ryvhi2suec0d",
@@ -994,7 +1432,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M48Y8E81QAFF9XKVGE118E6X",
+      "canonical": {
+        "id": "ci-899fdc48100f185284250152",
+        "sources": [
+          {
+            "key": "openai/01M48Y8E81QAFF9XKVGE118E6X",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M48Y8E81QAFF9XKVGE118E6X"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-899fdc48100f185284250152",
       "vendor": "openai",
       "title": "Errors processing large PDFs in the Responses API",
       "url": "https://status.openai.com/incidents/01M48Y8E81QAFF9XKVGE118E6X",
@@ -1014,7 +1465,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M49YQE6WZT02WYF0KBXVMQ5G",
+      "canonical": {
+        "id": "ci-6ec39652fd41bab024b58cae",
+        "sources": [
+          {
+            "key": "openai/01M49YQE6WZT02WYF0KBXVMQ5G",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M49YQE6WZT02WYF0KBXVMQ5G"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6ec39652fd41bab024b58cae",
       "vendor": "openai",
       "title": "Workspace Agents Degraded and Responses Impacted",
       "url": "https://status.openai.com/incidents/01M49YQE6WZT02WYF0KBXVMQ5G",
@@ -1034,7 +1498,20 @@
       "above_threshold": false
     },
     {
-      "key": "github/2kxnqcxcrr7f",
+      "canonical": {
+        "id": "ci-14bbdb741d4488be842edc30",
+        "sources": [
+          {
+            "key": "github/2kxnqcxcrr7f",
+            "path": "2026/W41/github.json",
+            "url": "https://stspg.io/pjcfc4c3pm7g"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-14bbdb741d4488be842edc30",
       "vendor": "github",
       "title": "Disruption with some GitHub services",
       "url": "https://stspg.io/pjcfc4c3pm7g",
@@ -1054,7 +1531,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4HA7BCCXVHTR5DCYMSBQF2H",
+      "canonical": {
+        "id": "ci-34efd4facf7251208fbe1394",
+        "sources": [
+          {
+            "key": "openai/01M4HA7BCCXVHTR5DCYMSBQF2H",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4HA7BCCXVHTR5DCYMSBQF2H"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-34efd4facf7251208fbe1394",
       "vendor": "openai",
       "title": "Workspace admins may be unable to manage plugins",
       "url": "https://status.openai.com/incidents/01M4HA7BCCXVHTR5DCYMSBQF2H",
@@ -1074,7 +1564,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M4BK9J2M83R4SSC71D9FXW45",
+      "canonical": {
+        "id": "ci-4a3bf32092b0619fc46879ba",
+        "sources": [
+          {
+            "key": "openai/01M4BK9J2M83R4SSC71D9FXW45",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4BK9J2M83R4SSC71D9FXW45"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4a3bf32092b0619fc46879ba",
       "vendor": "openai",
       "title": "Dot in Codex may fail to create new threads",
       "url": "https://status.openai.com/incidents/01M4BK9J2M83R4SSC71D9FXW45",
@@ -1094,7 +1597,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M4CR8GCAFC1RYQXZDXAZP2VT",
+      "canonical": {
+        "id": "ci-f4f73ae0c6db3f2be69e4fdd",
+        "sources": [
+          {
+            "key": "openai/01M4CR8GCAFC1RYQXZDXAZP2VT",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4CR8GCAFC1RYQXZDXAZP2VT"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f4f73ae0c6db3f2be69e4fdd",
       "vendor": "openai",
       "title": "Some APAC users are seeing errors in ChatGPT Work, conversations, and GPTs.",
       "url": "https://status.openai.com/incidents/01M4CR8GCAFC1RYQXZDXAZP2VT",
@@ -1114,7 +1630,20 @@
       "above_threshold": false
     },
     {
-      "key": "anthropic/wf2v8ms031sx",
+      "canonical": {
+        "id": "ci-adbaab36de2e68a0ca1a88ff",
+        "sources": [
+          {
+            "key": "anthropic/wf2v8ms031sx",
+            "path": "2026/W41/anthropic.json",
+            "url": "https://stspg.io/scdhhnplc2jn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-adbaab36de2e68a0ca1a88ff",
       "vendor": "anthropic",
       "title": "Elevated errors loading usage data on platform.claude.com",
       "url": "https://stspg.io/scdhhnplc2jn",
@@ -1136,7 +1665,20 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/ch27pb90bn85",
+      "canonical": {
+        "id": "ci-2c0e3710114f15eb32a62531",
+        "sources": [
+          {
+            "key": "anthropic/ch27pb90bn85",
+            "path": "2026/W41/anthropic.json",
+            "url": "https://stspg.io/bzc81gbv1b99"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-2c0e3710114f15eb32a62531",
       "vendor": "anthropic",
       "title": "Elevated errors for Claude Opus 5.5",
       "url": "https://stspg.io/bzc81gbv1b99",
@@ -1147,10 +1689,10 @@
       "duration_minutes": 18,
       "ongoing": false,
       "components": [
-        "claude.ai",
         "Claude API (api.anthropic.com)",
         "Claude Code",
-        "Claude Cowork"
+        "Claude Cowork",
+        "claude.ai"
       ],
       "score": {
         "value": 108,
@@ -1161,7 +1703,20 @@
       "above_threshold": true
     },
     {
-      "key": "cloudflare/9o6q1l6wwtmr",
+      "canonical": {
+        "id": "ci-bd9b218ed67aa993339cb8d8",
+        "sources": [
+          {
+            "key": "cloudflare/9o6q1l6wwtmr",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/9o6q1l6wwtmr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-bd9b218ed67aa993339cb8d8",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Sofia",
       "url": "https://www.cloudflarestatus.com/incidents/9o6q1l6wwtmr",
@@ -1181,7 +1736,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M48PT6B8SDTW023NC9XZTBC0",
+      "canonical": {
+        "id": "ci-796ed797e406491fac8add80",
+        "sources": [
+          {
+            "key": "openai/01M48PT6B8SDTW023NC9XZTBC0",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M48PT6B8SDTW023NC9XZTBC0"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-796ed797e406491fac8add80",
       "vendor": "openai",
       "title": "Elevated error rates in ChatGPT Go conversations",
       "url": "https://status.openai.com/incidents/01M48PT6B8SDTW023NC9XZTBC0",
@@ -1201,7 +1769,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M4BP5JE7DKJSP3VG2S2DCWF2",
+      "canonical": {
+        "id": "ci-4daeb9178f091494d45f763a",
+        "sources": [
+          {
+            "key": "openai/01M4BP5JE7DKJSP3VG2S2DCWF2",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4BP5JE7DKJSP3VG2S2DCWF2"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4daeb9178f091494d45f763a",
       "vendor": "openai",
       "title": "Degraded performance in Codex and Work mode: Dot turn failures, delayed responses, and reduced proactivity",
       "url": "https://status.openai.com/incidents/01M4BP5JE7DKJSP3VG2S2DCWF2",
@@ -1221,7 +1802,20 @@
       "above_threshold": false
     },
     {
-      "key": "anthropic/bhphxz3vr58g",
+      "canonical": {
+        "id": "ci-b2a29683e064e606703b3672",
+        "sources": [
+          {
+            "key": "anthropic/bhphxz3vr58g",
+            "path": "2026/W41/anthropic.json",
+            "url": "https://stspg.io/wdqhxt8xt574"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-b2a29683e064e606703b3672",
       "vendor": "anthropic",
       "title": "Elevated errors for Claude Mythos 5.1 and Claude Fable 5.1",
       "url": "https://stspg.io/wdqhxt8xt574",
@@ -1232,10 +1826,10 @@
       "duration_minutes": 15,
       "ongoing": false,
       "components": [
-        "claude.ai",
         "Claude API (api.anthropic.com)",
         "Claude Code",
-        "Claude Cowork"
+        "Claude Cowork",
+        "claude.ai"
       ],
       "score": {
         "value": 90,
@@ -1246,7 +1840,20 @@
       "above_threshold": true
     },
     {
-      "key": "openai/01M47AFBNRNXKJWN549T3PMYV8",
+      "canonical": {
+        "id": "ci-c3101d05c5977ddc4955d693",
+        "sources": [
+          {
+            "key": "openai/01M47AFBNRNXKJWN549T3PMYV8",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M47AFBNRNXKJWN549T3PMYV8"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c3101d05c5977ddc4955d693",
       "vendor": "openai",
       "title": "Elevated errors in API Platform login and administration APIs.",
       "url": "https://status.openai.com/incidents/01M47AFBNRNXKJWN549T3PMYV8",
@@ -1266,7 +1873,20 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/6mlprt9v5si5",
+      "canonical": {
+        "id": "ci-18a1092c7e252f7b1e5cbb70",
+        "sources": [
+          {
+            "key": "cloudflare/6mlprt9v5si5",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/6mlprt9v5si5"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-18a1092c7e252f7b1e5cbb70",
       "vendor": "cloudflare",
       "title": "RSA Keyless SSL handshake issues",
       "url": "https://www.cloudflarestatus.com/incidents/6mlprt9v5si5",
@@ -1288,7 +1908,20 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/p86jkvmrc3pc",
+      "canonical": {
+        "id": "ci-10ddaa6b07418af4b2f23265",
+        "sources": [
+          {
+            "key": "cloudflare/p86jkvmrc3pc",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/p86jkvmrc3pc"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-10ddaa6b07418af4b2f23265",
       "vendor": "cloudflare",
       "title": "Cloudflare API service issues",
       "url": "https://www.cloudflarestatus.com/incidents/p86jkvmrc3pc",
@@ -1310,7 +1943,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/5fxykytg48dx",
+      "canonical": {
+        "id": "ci-1c33748f558f404f7e9229a4",
+        "sources": [
+          {
+            "key": "digitalocean/5fxykytg48dx",
+            "path": "2026/W41/digitalocean.json",
+            "url": "https://stspg.io/1n5v2k9sxq46"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-1c33748f558f404f7e9229a4",
       "vendor": "digitalocean",
       "title": "VPC Networking Availability",
       "url": "https://stspg.io/1n5v2k9sxq46",
@@ -1332,7 +1978,20 @@
       "above_threshold": false
     },
     {
-      "key": "yandexcloud/2134",
+      "canonical": {
+        "id": "ci-aa1f60a734a82fc0ce00fa85",
+        "sources": [
+          {
+            "key": "yandexcloud/2134",
+            "path": "2026/W41/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/2134"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-aa1f60a734a82fc0ce00fa85",
       "vendor": "yandexcloud",
       "title": "The problem is with the Yandex Cloud Console services",
       "url": "https://status.yandex.cloud/en/incidents/2134",
@@ -1354,7 +2013,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/39rfrjmk5pvd",
+      "canonical": {
+        "id": "ci-d96807d0b516c785be4572ad",
+        "sources": [
+          {
+            "key": "circleci/39rfrjmk5pvd",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/fpv4m66zyd77"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d96807d0b516c785be4572ad",
       "vendor": "circleci",
       "title": "Increased task wait times for Docker Gen2",
       "url": "https://stspg.io/fpv4m66zyd77",
@@ -1376,7 +2048,20 @@
       "above_threshold": false
     },
     {
-      "key": "digitalocean/qfg5hmfhxw5d",
+      "canonical": {
+        "id": "ci-63e835b12afc098814d7ccd5",
+        "sources": [
+          {
+            "key": "digitalocean/qfg5hmfhxw5d",
+            "path": "2026/W41/digitalocean.json",
+            "url": "https://stspg.io/61n77v08qp0j"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-63e835b12afc098814d7ccd5",
       "vendor": "digitalocean",
       "title": "DNS Resolution for Managed Kubernetes",
       "url": "https://stspg.io/61n77v08qp0j",
@@ -1398,7 +2083,20 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/60w284knplry",
+      "canonical": {
+        "id": "ci-adea61d0eff07c44cbd48e80",
+        "sources": [
+          {
+            "key": "cloudflare/60w284knplry",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/60w284knplry"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-adea61d0eff07c44cbd48e80",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Queretaro",
       "url": "https://www.cloudflarestatus.com/incidents/60w284knplry",
@@ -1409,8 +2107,8 @@
       "duration_minutes": 19,
       "ongoing": false,
       "components": [
-        "Queretaro, MX, Mexico - (QRO)",
-        "Network"
+        "Network",
+        "Queretaro, MX, Mexico - (QRO)"
       ],
       "score": {
         "value": 68.4,
@@ -1421,7 +2119,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/0z31ldjd8m5v",
+      "canonical": {
+        "id": "ci-069d54eb78d7605c97ec4b97",
+        "sources": [
+          {
+            "key": "circleci/0z31ldjd8m5v",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/n2l0044kmkdr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-069d54eb78d7605c97ec4b97",
       "vendor": "circleci",
       "title": "Elevated level of infra fails on customer jobs",
       "url": "https://stspg.io/n2l0044kmkdr",
@@ -1443,7 +2154,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M47HC9SGHGFPBN44KGC6SKAQ",
+      "canonical": {
+        "id": "ci-641698e61525ab845ba33b13",
+        "sources": [
+          {
+            "key": "openai/01M47HC9SGHGFPBN44KGC6SKAQ",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M47HC9SGHGFPBN44KGC6SKAQ"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-641698e61525ab845ba33b13",
       "vendor": "openai",
       "title": "Elevated errors affecting multiple products including ChatGPT (conversations), Image generations, Spaces and Pages, API rehydration, and Dots.",
       "url": "https://status.openai.com/incidents/01M47HC9SGHGFPBN44KGC6SKAQ",
@@ -1463,7 +2187,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M4CBXZ62A9SVH8D74KVYQC8M",
+      "canonical": {
+        "id": "ci-549fd707e25d355d14ccce79",
+        "sources": [
+          {
+            "key": "openai/01M4CBXZ62A9SVH8D74KVYQC8M",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M4CBXZ62A9SVH8D74KVYQC8M"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-549fd707e25d355d14ccce79",
       "vendor": "openai",
       "title": "Elevated errors with GPT-5.6 Instant in FedRAMP workspaces",
       "url": "https://status.openai.com/incidents/01M4CBXZ62A9SVH8D74KVYQC8M",
@@ -1483,7 +2220,20 @@
       "above_threshold": false
     },
     {
-      "key": "openai/01M461GYDMCVJJK8330PVCH42C",
+      "canonical": {
+        "id": "ci-c9b20e7d3a18b281a171aab9",
+        "sources": [
+          {
+            "key": "openai/01M461GYDMCVJJK8330PVCH42C",
+            "path": "2026/W41/openai.json",
+            "url": "https://status.openai.com/incidents/01M461GYDMCVJJK8330PVCH42C"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-c9b20e7d3a18b281a171aab9",
       "vendor": "openai",
       "title": "Issues saving and editing Pages",
       "url": "https://status.openai.com/incidents/01M461GYDMCVJJK8330PVCH42C",
@@ -1503,7 +2253,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/tj6wdnfjwr64",
+      "canonical": {
+        "id": "ci-936940e1fd341f29c694c0fb",
+        "sources": [
+          {
+            "key": "circleci/tj6wdnfjwr64",
+            "path": "2026/W41/circleci.json",
+            "url": "https://stspg.io/7q8hkm5sgt8h"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-936940e1fd341f29c694c0fb",
       "vendor": "circleci",
       "title": "Delay on starting Machine Job Tasks",
       "url": "https://stspg.io/7q8hkm5sgt8h",
@@ -1525,7 +2288,20 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/y3hstd1lvhc9",
+      "canonical": {
+        "id": "ci-da786a534281572ae546b136",
+        "sources": [
+          {
+            "key": "cloudflare/y3hstd1lvhc9",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-da786a534281572ae546b136",
       "vendor": "cloudflare",
       "title": "Increase in Latency Across Multiple Locations",
       "url": "https://www.cloudflarestatus.com/incidents/y3hstd1lvhc9",
@@ -1545,7 +2321,20 @@
       "above_threshold": false
     },
     {
-      "key": "grafana/1t50vxwq2q11",
+      "canonical": {
+        "id": "ci-5b8bf8a7409d5f4e80f3db41",
+        "sources": [
+          {
+            "key": "grafana/1t50vxwq2q11",
+            "path": "2026/W41/grafana.json",
+            "url": "https://stspg.io/lw22c35nvf3l"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-5b8bf8a7409d5f4e80f3db41",
       "vendor": "grafana",
       "title": "Grafana Cloud k6 – Brief metrics unavailability",
       "url": "https://stspg.io/lw22c35nvf3l",
@@ -1565,7 +2354,20 @@
       "above_threshold": false
     },
     {
-      "key": "github/djlmxz2zd0j7",
+      "canonical": {
+        "id": "ci-20cff0acc195e836836e1e49",
+        "sources": [
+          {
+            "key": "github/djlmxz2zd0j7",
+            "path": "2026/W41/github.json",
+            "url": "https://stspg.io/96smrcth8bpg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-20cff0acc195e836836e1e49",
       "vendor": "github",
       "title": "Incident with Git Operations, Pull Requests and Actions",
       "url": "https://stspg.io/96smrcth8bpg",
@@ -1576,11 +2378,11 @@
       "duration_minutes": 0,
       "ongoing": false,
       "components": [
+        "Actions",
         "Git Operations",
-        "Webhooks",
         "Issues",
         "Pull Requests",
-        "Actions"
+        "Webhooks"
       ],
       "score": {
         "value": 0,
@@ -1591,7 +2393,20 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/vmys9qn874h4",
+      "canonical": {
+        "id": "ci-710572d3eba4735846b6b393",
+        "sources": [
+          {
+            "key": "anthropic/vmys9qn874h4",
+            "path": "2026/W41/anthropic.json",
+            "url": "https://stspg.io/frlrjsqqn605"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-710572d3eba4735846b6b393",
       "vendor": "anthropic",
       "title": "Issue with spend limits",
       "url": "https://stspg.io/frlrjsqqn605",
@@ -1611,7 +2426,20 @@
       "above_threshold": false
     },
     {
-      "key": "cloudflare/76m2gfyfx1xc",
+      "canonical": {
+        "id": "ci-6a739d8a179dffec5a1944da",
+        "sources": [
+          {
+            "key": "cloudflare/76m2gfyfx1xc",
+            "path": "2026/W41/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/76m2gfyfx1xc"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6a739d8a179dffec5a1944da",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Kochi",
       "url": "https://www.cloudflarestatus.com/incidents/76m2gfyfx1xc",

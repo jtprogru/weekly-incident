@@ -1,5 +1,6 @@
-// Package archive stores canonical incidents on disk, one JSON file per vendor
-// per ISO week, and merges new observations into what is already there.
+// Package archive stores source records and immutable observations. Vendor
+// files retain their original ISO-week location; semantic week reads use the
+// current StartedAt across the whole archive.
 //
 // The merge is upsert-only. Statuspage has no pagination and every feed holds a
 // fixed number of incidents — 50, which is 62 days for GitHub but only 20 for
@@ -17,10 +18,10 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
-	"strings"
 	"time"
 
 	"github.com/jtprogru/weekly-incident/internal/model"
+	"github.com/jtprogru/weekly-incident/internal/storage"
 )
 
 // Archive is a directory of week folders, normally "data".
@@ -42,57 +43,100 @@ type Stats struct {
 // records the archive has not seen before; existing records keep the value they
 // were first stored with.
 //
-// Incidents are routed by StartedAt, so a run also writes into past weeks: a
-// vendor that appends a postmortem two weeks late updates the file of the week
-// the incident began in.
+// New records are routed by StartedAt. Existing keys retain their physical
+// location even when the source corrects the start into another week.
 func (a *Archive) Upsert(incidents []model.Incident, now time.Time) (Stats, error) {
 	now = now.UTC()
-
-	type bucket struct {
-		week   Week
-		vendor string
+	inv, err := a.ReadAll()
+	if err != nil && !errors.Is(err, fs.ErrNotExist) {
+		return Stats{}, err
 	}
-	grouped := make(map[bucket][]model.Incident)
-	for _, in := range incidents {
-		b := bucket{week: WeekOf(in.StartedAt), vendor: in.Vendor}
-		grouped[b] = append(grouped[b], in)
-	}
-
-	buckets := make([]bucket, 0, len(grouped))
-	for b := range grouped {
-		buckets = append(buckets, b)
-	}
-	sort.Slice(buckets, func(i, j int) bool {
-		if buckets[i].week != buckets[j].week {
-			return buckets[i].week.Start().Before(buckets[j].week.Start())
+	obs, err := a.ReadObservations()
+	if err == nil {
+		missing := []StoredIncident{}
+		for _, r := range inv.Records {
+			if _, ok := obs.Manifest.Records[r.Incident.Key]; !ok {
+				missing = append(missing, r)
+			}
 		}
-		return buckets[i].vendor < buckets[j].vendor
-	})
-
+		err = obs.Observe(missing, now, true)
+	}
+	if err != nil {
+		return Stats{}, err
+	}
+	locations := map[string]StoredIncident{}
+	occurrences := map[string][]StoredIncident{}
+	for _, r := range inv.Records {
+		occurrences[r.Incident.Key] = append(occurrences[r.Incident.Key], r)
+		if _, ok := locations[r.Incident.Key]; !ok {
+			locations[r.Incident.Key] = r
+		}
+	}
+	grouped := map[string][]model.Incident{}
+	changedWeeks := map[Week]bool{}
+	fresh := []StoredIncident{}
+	for _, in := range incidents {
+		if err := in.Validate(); err != nil {
+			return Stats{}, err
+		}
+		if !validVendor(in.Vendor) || in.Key != model.MakeKey(in.Vendor, in.NativeID) {
+			return Stats{}, fmt.Errorf("invalid source key %q", in.Key)
+		}
+		path := filepath.Join(WeekOf(in.StartedAt).Dir(), in.Vendor+".json")
+		if prev, ok := locations[in.Key]; ok {
+			path = prev.Path
+			in.FirstSeenAt = obs.Manifest.Records[in.Key].FirstSeenAt
+			// Old archives may contain the same key at multiple physical paths.
+			// Preserve those files, but refresh every projection from the known
+			// current fetch; all former values were imported above as evidence.
+			paths := map[string]bool{}
+			for _, old := range occurrences[in.Key] {
+				if !sameIncident(old.Incident, in) {
+					changedWeeks[WeekOf(old.Incident.StartedAt)] = true
+					changedWeeks[WeekOf(in.StartedAt)] = true
+				}
+				if old.Path != path && !paths[old.Path] {
+					grouped[old.Path] = append(grouped[old.Path], in)
+				}
+				paths[old.Path] = true
+			}
+		} else {
+			in.FirstSeenAt = now
+			changedWeeks[WeekOf(in.StartedAt)] = true
+		}
+		grouped[path] = append(grouped[path], in)
+		fresh = append(fresh, StoredIncident{Path: filepath.ToSlash(path), Position: 1, Incident: in})
+	}
+	if err := obs.Observe(fresh, now, false); err != nil {
+		return Stats{}, err
+	}
+	// Persist evidence before updating the compatibility projection.
+	if err := a.WriteObservations(obs); err != nil {
+		return Stats{}, err
+	}
 	var st Stats
-	weeks := make(map[Week]bool)
-	for _, b := range buckets {
-		existing, err := a.LoadVendorWeek(b.week, b.vendor)
-		if err != nil {
+	for _, path := range sortedKeys(grouped) {
+		var existing []model.Incident
+		data, err := os.ReadFile(filepath.Join(a.Root, path))
+		if err != nil && !errors.Is(err, fs.ErrNotExist) {
 			return st, err
 		}
-		merged, created, updated := merge(existing, grouped[b], now)
-		// Seeing an incident again is not a change. Writing the file anyway
-		// would rewrite every week the feeds still reach — 72 of them on the
-		// first run here — on every single daily run.
+		if err == nil {
+			if err := json.Unmarshal(data, &existing); err != nil {
+				return st, err
+			}
+		}
+		merged, created, updated := merge(existing, grouped[path], now)
 		if created == 0 && updated == 0 {
 			continue
 		}
-		if err := a.SaveVendorWeek(b.week, b.vendor, merged); err != nil {
+		if err := writeJSON(filepath.Join(a.Root, path), merged); err != nil {
 			return st, err
 		}
 		st.Created += created
 		st.Updated += updated
-		weeks[b.week] = true
 	}
-
-	st.Weeks = make([]Week, 0, len(weeks))
-	for w := range weeks {
+	for w := range changedWeeks {
 		st.Weeks = append(st.Weeks, w)
 	}
 	sort.Slice(st.Weeks, func(i, j int) bool { return st.Weeks[i].Start().Before(st.Weeks[j].Start()) })
@@ -185,34 +229,31 @@ func (a *Archive) SaveVendorWeek(w Week, vendor string, incidents []model.Incide
 	return writeJSON(a.vendorPath(w, vendor), incidents)
 }
 
-// LoadWeek reads every vendor file for a week, in vendor order.
+// LoadWeek selects semantic membership from the complete archive, independent
+// of physical paths. Legacy copies of an identical source key count once.
 func (a *Archive) LoadWeek(w Week) ([]model.Incident, error) {
-	dir := filepath.Join(a.Root, w.Dir())
-	entries, err := os.ReadDir(dir)
+	inv, err := a.ReadAll()
 	if errors.Is(err, fs.ErrNotExist) {
 		return nil, nil
 	}
 	if err != nil {
-		return nil, fmt.Errorf("read week %s: %w", w, err)
+		return nil, err
 	}
-
-	names := make([]string, 0, len(entries))
-	for _, e := range entries {
-		name := e.Name()
-		if e.IsDir() || !strings.HasSuffix(name, ".json") || name == indexFile {
+	var out []model.Incident
+	seen := map[string]model.Incident{}
+	for _, r := range inv.Records {
+		if old, ok := seen[r.Incident.Key]; ok {
+			_, oldHash, oldErr := snapshotOf(old)
+			_, newHash, newErr := snapshotOf(r.Incident)
+			if oldErr != nil || newErr != nil || oldHash != newHash {
+				return nil, fmt.Errorf("conflicting records for %s", r.Incident.Key)
+			}
 			continue
 		}
-		names = append(names, strings.TrimSuffix(name, ".json"))
-	}
-	sort.Strings(names)
-
-	var out []model.Incident
-	for _, vendor := range names {
-		in, err := a.LoadVendorWeek(w, vendor)
-		if err != nil {
-			return nil, err
+		seen[r.Incident.Key] = r.Incident
+		if w.Contains(r.Incident.StartedAt) {
+			out = append(out, r.Incident)
 		}
-		out = append(out, in...)
 	}
 	sortIncidents(out)
 	return out, nil
@@ -305,17 +346,4 @@ func (a *Archive) SaveState(s State) error {
 // writeJSON writes indented JSON with a trailing newline, creating parents as
 // needed. Indented and key-sorted so that a diff of the archive is readable and
 // so that identical facts produce identical bytes.
-func writeJSON(path string, v any) error {
-	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
-		return fmt.Errorf("mkdir %s: %w", filepath.Dir(path), err)
-	}
-	b, err := json.MarshalIndent(v, "", "  ")
-	if err != nil {
-		return fmt.Errorf("encode %s: %w", path, err)
-	}
-	b = append(b, '\n')
-	if err := os.WriteFile(path, b, 0o644); err != nil {
-		return fmt.Errorf("write %s: %w", path, err)
-	}
-	return nil
-}
+func writeJSON(path string, v any) error { return storage.WriteJSON(path, v) }

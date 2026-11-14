@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2024-W37",
   "from": "2024-09-09T00:00:00Z",
   "to": "2024-09-16T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/d8jljnw353f3",
+      "canonical": {
+        "id": "ci-fbd541b325a770d81652f278",
+        "sources": [
+          {
+            "key": "atlassian/d8jljnw353f3",
+            "path": "2024/W37/atlassian.json",
+            "url": "https://stspg.io/6w6ly5cgydvz"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-fbd541b325a770d81652f278",
       "vendor": "atlassian",
       "title": "High RDS CPU on multiple environments",
       "url": "https://stspg.io/6w6ly5cgydvz",
@@ -118,7 +140,20 @@
       "above_threshold": true
     },
     {
-      "key": "atlassian/m0nz4gbbjmz2",
+      "canonical": {
+        "id": "ci-8661a2eff693fd637888a479",
+        "sources": [
+          {
+            "key": "atlassian/m0nz4gbbjmz2",
+            "path": "2024/W37/atlassian.json",
+            "url": "https://stspg.io/7kv4zlyf4fmn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8661a2eff693fd637888a479",
       "vendor": "atlassian",
       "title": "Slow loading times and extended response times for Cloud products in the EU-West region.",
       "url": "https://stspg.io/7kv4zlyf4fmn",

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/cqvlkm3fcr7x",
+    "vendor": "stripe",
+    "native_id": "cqvlkm3fcr7x",
+    "title": "Elevated errors for multiple Payment Methods",
+    "url": "https://stspg.io/29xyj5xknp7p",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-03-03T11:22:56Z",
+    "resolved_at": "2026-03-03T12:41:50.255Z",
+    "duration_minutes": 78,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "pm1wvgflnppd",
+        "status": "investigating",
+        "body": "We're currently investigating a Partial Service disruption impacting multiple payment methods (Bancontact, Blik, iDEAL) that began at 10:59 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through these payment methods. We are actively monitoring the situation and will provide updates as more information becomes available.",
+        "created_at": "2026-03-03T11:22:56.99Z"
+      },
+      {
+        "native_id": "vjsb76fbgm5b",
+        "status": "resolved",
+        "body": "From 10:59 - 12:18 UTC, we saw elevated errors for multiple payment methods (Bancontact, Blik, iDEAL etc). The issue was external to Stripe and is now resolved.",
+        "created_at": "2026-03-03T12:41:50.255Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-09-17T01:17:29.437Z"
+        }
+      ],
+      "created_at": "2026-03-03T11:22:56.000Z",
+      "id": "cqvlkm3fcr7x",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 10:59 - 12:18 UTC, we saw elevated errors for multiple payment methods (Bancontact, Blik, iDEAL etc). The issue was external to Stripe and is now resolved.",
+          "created_at": "2026-03-03T12:41:50.255Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-03-03T12:41:50.255Z",
+          "id": "vjsb76fbgm5b",
+          "incident_id": "cqvlkm3fcr7x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-03-03T12:41:50.255Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're currently investigating a Partial Service disruption impacting multiple payment methods (Bancontact, Blik, iDEAL) that began at 10:59 UTC. This issue is external to Stripe and is causing increased error rates for transactions processed through these payment methods. We are actively monitoring the situation and will provide updates as more information becomes available.",
+          "created_at": "2026-03-03T11:22:56.990Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-03-03T11:22:56.000Z",
+          "id": "pm1wvgflnppd",
+          "incident_id": "cqvlkm3fcr7x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-03-03T11:31:27.438Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors for multiple Payment Methods",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-03-03T12:41:50.255Z",
+      "shortlink": "https://stspg.io/29xyj5xknp7p",
+      "started_at": "2026-03-03T11:22:56.000Z",
+      "status": "resolved",
+      "updated_at": "2026-03-03T12:41:50.272Z"
+    }
+  }
+}

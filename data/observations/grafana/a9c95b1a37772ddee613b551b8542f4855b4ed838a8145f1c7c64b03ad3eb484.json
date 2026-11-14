@@ -1,0 +1,778 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/j5vgks57cphf",
+    "vendor": "grafana",
+    "native_id": "j5vgks57cphf",
+    "title": "Elevated Loki Query Bytes Reporting",
+    "url": "https://stspg.io/wqbptt5wfqtg",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-01T19:43:18.329Z",
+    "resolved_at": "2026-07-01T22:00:44.338Z",
+    "duration_minutes": 137,
+    "components": [
+      "AWS Australia - prod-ap-southeast-2",
+      "AWS Brazil - prod-sa-east-1",
+      "AWS Canada - prod-ca-east-0",
+      "AWS Germany - prod-eu-west-2",
+      "AWS UAE - prod-me-central-1",
+      "AWS India - prod-ap-south-1",
+      "AWS Japan - prod-ap-northeast-0",
+      "AWS Singapore - prod-ap-southeast-1",
+      "AWS Sweden - prod-eu-north-0",
+      "AWS US West - prod-us-west-0",
+      "AWS US East - prod-us-east-0",
+      "AWS Ireland - prod-eu-west-6",
+      "AWS Switzerland - prod-eu-central-0",
+      "Azure Netherlands - prod-eu-west-3",
+      "Azure US Central - us-central2",
+      "Azure US Central - us-central7",
+      "GCP Australia - prod-au-southeast-0",
+      "GCP Belgium - prod-eu-west-0",
+      "GCP Brazil - prod-sa-east-0",
+      "GCP India - prod-ap-south-0",
+      "GCP Singapore - prod-ap-southeast-0",
+      "GCP UK - prod-gb-south-0",
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-5",
+      "Federal Cloud - AWS US Gov West"
+    ],
+    "updates": [
+      {
+        "native_id": "g1h06lgv8fdf",
+        "status": "investigating",
+        "body": "We are investigating an issue where some customers may see higher Loki query byte usage reported than was actually consumed. This affects usage reporting only; there is no impact to query execution or service availability.\n\nThe issue began at approximately 13:20 UTC and is ongoing. We expect the issue to be resolved soon and will provide another update as more information becomes available.",
+        "created_at": "2026-07-01T19:43:18.853Z"
+      },
+      {
+        "native_id": "52sw2bx1lchb",
+        "status": "resolved",
+        "body": "We’ve implemented a fix and can confirm the issue is fully resolved as of 20:25 UTC.\n\nThank you for your patience.",
+        "created_at": "2026-07-01T22:00:44.338Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:41:24.683Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "bg6nnf5n3pjx",
+          "name": "AWS Australia - prod-ap-southeast-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.670Z"
+        },
+        {
+          "created_at": "2023-09-20T15:43:32.645Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "1cj80yl7f6dy",
+          "name": "AWS Brazil - prod-sa-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.091Z"
+        },
+        {
+          "created_at": "2023-09-20T15:41:59.456Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "9z18xdj3j8c7",
+          "name": "AWS Canada - prod-ca-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.106Z"
+        },
+        {
+          "created_at": "2023-09-20T15:42:56.105Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "gx6m1v8jy475",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.119Z"
+        },
+        {
+          "created_at": "2025-04-16T19:55:22.195Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "ttlshz10ly19",
+          "name": "AWS UAE - prod-me-central-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2025-04-16",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.737Z"
+        },
+        {
+          "created_at": "2023-10-03T13:23:17.894Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "318npch70m7f",
+          "name": "AWS India - prod-ap-south-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.131Z"
+        },
+        {
+          "created_at": "2024-04-19T13:15:13.158Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "nfll10wmx61f",
+          "name": "AWS Japan - prod-ap-northeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2024-04-19",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.143Z"
+        },
+        {
+          "created_at": "2023-07-15T07:07:07.309Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "dy7xwydh5kv3",
+          "name": "AWS Singapore - prod-ap-southeast-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2023-07-15",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.155Z"
+        },
+        {
+          "created_at": "2023-09-20T15:42:20.016Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "k21kfy4lhmdw",
+          "name": "AWS Sweden - prod-eu-north-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.799Z"
+        },
+        {
+          "created_at": "2023-09-20T15:44:26.245Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "6rlxmdg0t6v3",
+          "name": "AWS US West - prod-us-west-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.167Z"
+        },
+        {
+          "created_at": "2022-01-14T19:58:49.643Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "2lyhl59mn4dl",
+          "name": "AWS US East - prod-us-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2022-01-14",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.827Z"
+        },
+        {
+          "created_at": "2026-02-18T15:27:03.928Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "6ytp9jy5lkbl",
+          "name": "AWS Ireland - prod-eu-west-6",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-02-18",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.842Z"
+        },
+        {
+          "created_at": "2026-03-11T09:48:25.864Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "c325hr67bhtb",
+          "name": "AWS Switzerland - prod-eu-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2026-03-11",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.179Z"
+        },
+        {
+          "created_at": "2023-09-11T14:44:54.893Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "hqf81r9207h6",
+          "name": "Azure Netherlands - prod-eu-west-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2023-09-11",
+          "status": "operational",
+          "updated_at": "2026-08-04T13:49:00.547Z"
+        },
+        {
+          "created_at": "2022-01-14T19:59:06.913Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "tpk4cdhtsm82",
+          "name": "Azure US Central - us-central2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2022-01-14",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.881Z"
+        },
+        {
+          "created_at": "2025-11-03T12:28:11.807Z",
+          "description": "Loki - prod-us-central-7",
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "2gj2jt684k11",
+          "name": "Azure US Central - us-central7",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2025-11-03",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.203Z"
+        },
+        {
+          "created_at": "2023-09-20T15:41:44.244Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "d6hp5brmvsbt",
+          "name": "GCP Australia - prod-au-southeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:47.906Z"
+        },
+        {
+          "created_at": "2022-01-13T20:32:16.949Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "rwvs9fvrnhp2",
+          "name": "GCP Belgium - prod-eu-west-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2022-01-13",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.215Z"
+        },
+        {
+          "created_at": "2023-09-20T15:43:14.285Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "x40g7bxm0q2d",
+          "name": "GCP Brazil - prod-sa-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.227Z"
+        },
+        {
+          "created_at": "2023-09-20T15:41:04.255Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "v3g3j6krw8rp",
+          "name": "GCP India - prod-ap-south-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.239Z"
+        },
+        {
+          "created_at": "2022-01-14T19:58:31.293Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "gp2m13gyj6x2",
+          "name": "GCP Singapore - prod-ap-southeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 21,
+          "showcase": false,
+          "start_date": "2022-01-14",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.250Z"
+        },
+        {
+          "created_at": "2022-01-14T19:58:16.600Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "662yyglvgqpm",
+          "name": "GCP UK - prod-gb-south-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2022-01-14",
+          "status": "operational",
+          "updated_at": "2026-07-21T21:06:15.263Z"
+        },
+        {
+          "created_at": "2019-12-10T22:16:56.701Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "l72f5c7651n5",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:48.007Z"
+        },
+        {
+          "created_at": "2024-07-16T13:33:08.758Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "98skfgrdgchf",
+          "name": "GCP US Central - prod-us-central-5",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 24,
+          "showcase": false,
+          "start_date": "2024-07-16",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:48.024Z"
+        },
+        {
+          "created_at": "2026-03-05T19:26:23.356Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "j05h37kmp5x3",
+          "name": "Federal Cloud - AWS US Gov West",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 25,
+          "showcase": false,
+          "start_date": "2026-03-05",
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:48.039Z"
+        }
+      ],
+      "created_at": "2026-07-01T19:43:18.370Z",
+      "id": "j5vgks57cphf",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bg6nnf5n3pjx",
+              "name": "Logs - AWS Australia - prod-ap-southeast-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "1cj80yl7f6dy",
+              "name": "Logs - AWS Brazil - prod-sa-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9z18xdj3j8c7",
+              "name": "Logs - AWS Canada - prod-ca-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ttlshz10ly19",
+              "name": "Logs - AWS UAE - prod-me-central-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "318npch70m7f",
+              "name": "Logs - AWS India - prod-ap-south-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nfll10wmx61f",
+              "name": "Logs - AWS Japan - prod-ap-northeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "dy7xwydh5kv3",
+              "name": "Logs - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "k21kfy4lhmdw",
+              "name": "Logs - AWS Sweden - prod-eu-north-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "6rlxmdg0t6v3",
+              "name": "Logs - AWS US West - prod-us-west-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2lyhl59mn4dl",
+              "name": "Logs - AWS US East - prod-us-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "6ytp9jy5lkbl",
+              "name": "Logs - AWS Ireland - prod-eu-west-6",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "c325hr67bhtb",
+              "name": "Logs - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hqf81r9207h6",
+              "name": "Logs - Azure Netherlands - prod-eu-west-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "tpk4cdhtsm82",
+              "name": "Logs - Azure US Central - us-central2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d6hp5brmvsbt",
+              "name": "Logs - GCP Australia - prod-au-southeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "rwvs9fvrnhp2",
+              "name": "Logs - GCP Belgium - prod-eu-west-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "x40g7bxm0q2d",
+              "name": "Logs - GCP Brazil - prod-sa-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "v3g3j6krw8rp",
+              "name": "Logs - GCP India - prod-ap-south-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "gp2m13gyj6x2",
+              "name": "Logs - GCP Singapore - prod-ap-southeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "662yyglvgqpm",
+              "name": "Logs - GCP UK - prod-gb-south-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "j05h37kmp5x3",
+              "name": "Logs - Federal Cloud - AWS US Gov West",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’ve implemented a fix and can confirm the issue is fully resolved as of 20:25 UTC.\n\nThank you for your patience.",
+          "created_at": "2026-07-01T22:00:44.338Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-01T22:00:44.338Z",
+          "id": "52sw2bx1lchb",
+          "incident_id": "j5vgks57cphf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-01T22:00:44.338Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg6nnf5n3pjx",
+              "name": "Logs - AWS Australia - prod-ap-southeast-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "1cj80yl7f6dy",
+              "name": "Logs - AWS Brazil - prod-sa-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "9z18xdj3j8c7",
+              "name": "Logs - AWS Canada - prod-ca-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "gx6m1v8jy475",
+              "name": "Logs - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "ttlshz10ly19",
+              "name": "Logs - AWS UAE - prod-me-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "318npch70m7f",
+              "name": "Logs - AWS India - prod-ap-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "nfll10wmx61f",
+              "name": "Logs - AWS Japan - prod-ap-northeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "dy7xwydh5kv3",
+              "name": "Logs - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "k21kfy4lhmdw",
+              "name": "Logs - AWS Sweden - prod-eu-north-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "6rlxmdg0t6v3",
+              "name": "Logs - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2lyhl59mn4dl",
+              "name": "Logs - AWS US East - prod-us-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "6ytp9jy5lkbl",
+              "name": "Logs - AWS Ireland - prod-eu-west-6",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "c325hr67bhtb",
+              "name": "Logs - AWS Switzerland - prod-eu-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hqf81r9207h6",
+              "name": "Logs - Azure Netherlands - prod-eu-west-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "tpk4cdhtsm82",
+              "name": "Logs - Azure US Central - us-central2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2gj2jt684k11",
+              "name": "Logs - Azure US Central - us-central7",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "d6hp5brmvsbt",
+              "name": "Logs - GCP Australia - prod-au-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "rwvs9fvrnhp2",
+              "name": "Logs - GCP Belgium - prod-eu-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "x40g7bxm0q2d",
+              "name": "Logs - GCP Brazil - prod-sa-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "v3g3j6krw8rp",
+              "name": "Logs - GCP India - prod-ap-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "gp2m13gyj6x2",
+              "name": "Logs - GCP Singapore - prod-ap-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "662yyglvgqpm",
+              "name": "Logs - GCP UK - prod-gb-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "98skfgrdgchf",
+              "name": "Logs - GCP US Central - prod-us-central-5",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "j05h37kmp5x3",
+              "name": "Logs - Federal Cloud - AWS US Gov West",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue where some customers may see higher Loki query byte usage reported than was actually consumed. This affects usage reporting only; there is no impact to query execution or service availability.\n\nThe issue began at approximately 13:20 UTC and is ongoing. We expect the issue to be resolved soon and will provide another update as more information becomes available.",
+          "created_at": "2026-07-01T19:43:18.853Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-01T19:43:18.853Z",
+          "id": "g1h06lgv8fdf",
+          "incident_id": "j5vgks57cphf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-01T19:43:18.853Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Loki Query Bytes Reporting",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-01T22:00:44.338Z",
+      "shortlink": "https://stspg.io/wqbptt5wfqtg",
+      "started_at": "2026-07-01T19:43:18.329Z",
+      "status": "resolved",
+      "updated_at": "2026-07-01T22:00:44.360Z"
+    }
+  }
+}

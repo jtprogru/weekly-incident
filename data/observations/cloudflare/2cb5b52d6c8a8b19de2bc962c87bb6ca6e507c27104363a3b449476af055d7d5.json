@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/rikplz89rpml",
+    "vendor": "cloudflare",
+    "native_id": "rikplz89rpml",
+    "title": "Issues with 1.1.1.1 public resolver in Canada",
+    "url": "https://www.cloudflarestatus.com/incidents/rikplz89rpml",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-13T23:53:18.686Z",
+    "resolved_at": "2026-11-14T01:01:17.641Z",
+    "duration_minutes": 67,
+    "components": [
+      "Recursive DNS"
+    ],
+    "updates": [
+      {
+        "native_id": "yopognid6qb2",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating, an issue which potentially impacts multiple users in Canada that use 1.1.1.1 public resolver. \n\nFurther detail will be provided as more information becomes available.",
+        "created_at": "2026-11-13T23:53:18.687Z"
+      },
+      {
+        "native_id": "mkk5k7fbm0tc",
+        "status": "identified",
+        "body": "We have reached out to the network where we see an active hijack of 1.1.1.0/24. \n\n1.0.0.1 and public resolver IPv6 prefixes are fully operational and reachable at this time.",
+        "created_at": "2026-11-14T00:06:42.595Z"
+      },
+      {
+        "native_id": "bqskz4u56czx",
+        "status": "monitoring",
+        "body": "The network with the offending route leak has fixed the issue on their end. We are currently monitoring the effect of this fix.",
+        "created_at": "2026-11-14T00:52:36.163Z"
+      },
+      {
+        "native_id": "2e345p4cbg76",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-14T01:01:17.641Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:51:39.000Z",
+          "description": "Free recursive DNS service at 1.1.1.1 and 1.0.0.1",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "8w536gxk7dvq",
+          "name": "Recursive DNS",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-14T01:01:17.641Z"
+        }
+      ],
+      "created_at": "2026-11-13T23:53:18.687Z",
+      "id": "rikplz89rpml",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-14T01:01:17.641Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T01:01:17.641Z",
+          "id": "2e345p4cbg76",
+          "incident_id": "rikplz89rpml",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T01:01:17.641Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The network with the offending route leak has fixed the issue on their end. We are currently monitoring the effect of this fix.",
+          "created_at": "2026-11-14T00:52:36.163Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T00:52:36.163Z",
+          "id": "bqskz4u56czx",
+          "incident_id": "rikplz89rpml",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T00:52:36.163Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have reached out to the network where we see an active hijack of 1.1.1.0/24. \n\n1.0.0.1 and public resolver IPv6 prefixes are fully operational and reachable at this time.",
+          "created_at": "2026-11-14T00:06:42.595Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T00:06:42.595Z",
+          "id": "mkk5k7fbm0tc",
+          "incident_id": "rikplz89rpml",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T00:06:42.595Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "8w536gxk7dvq",
+              "name": "DNS - Recursive DNS",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating, an issue which potentially impacts multiple users in Canada that use 1.1.1.1 public resolver. \n\nFurther detail will be provided as more information becomes available.",
+          "created_at": "2026-11-13T23:53:18.687Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T23:53:18.687Z",
+          "id": "yopognid6qb2",
+          "incident_id": "rikplz89rpml",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T23:53:18.687Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Issues with 1.1.1.1 public resolver in Canada",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-14T01:01:17.641Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/rikplz89rpml",
+      "started_at": "2026-11-13T23:53:18.686Z",
+      "status": "resolved",
+      "updated_at": "2026-11-14T01:01:17.641Z"
+    }
+  }
+}

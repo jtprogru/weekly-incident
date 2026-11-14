@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/cxh9f0hgw934",
+    "vendor": "digitalocean",
+    "native_id": "cxh9f0hgw934",
+    "title": "Serverless Inference",
+    "url": "https://stspg.io/yhy97jfdzszn",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-04-15T01:07:50.792Z",
+    "resolved_at": "2026-04-15T02:56:44.874Z",
+    "duration_minutes": 108,
+    "components": [
+      "Agent Runtime"
+    ],
+    "updates": [
+      {
+        "native_id": "yw9mnz238fc5",
+        "status": "investigating",
+        "body": "Our Engineering team is investigating an issue causing elevated error rates due to service instability and terminating open connections which causes some 500s. Some requests may fail while we work to resolve it.\n\nWe apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-04-15T01:07:50.862Z"
+      },
+      {
+        "native_id": "9jtj1lyltt2l",
+        "status": "monitoring",
+        "body": "Our Engineering team has implemented a fix for the issue causing elevated error rates due to service instability. We are currently monitoring the situation to ensure stability and confirm that error rates, including HTTP 500 responses, have returned to normal levels.\n\nWe will provide a further update once we confirm the issue is fully resolved.",
+        "created_at": "2026-04-15T02:24:37.438Z"
+      },
+      {
+        "native_id": "mhxshqt1l74k",
+        "status": "resolved",
+        "body": "From 23:20 UTC to 02:00 UTC, users may have experienced elevated error rates due to service instability, which resulted in intermittent HTTP 500 errors and terminated connections.\n\nOur Engineering team has confirmed full resolution of the issue, and all systems are now operating normally.\n\nIf you continue to experience any issues, please open a ticket with our support team. We apologize for any inconvenience caused.",
+        "created_at": "2026-04-15T02:56:44.874Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-01-22T14:37:25.334Z",
+          "description": "Managed execution environment for running AI agents on GPU-powered infrastructure. Handles orchestration, scaling, and lifecycle management for deployed agents.",
+          "group": false,
+          "group_id": "gg1fsz7m9gvs",
+          "id": "br95fz33h6td",
+          "name": "Agent Runtime",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2025-01-22",
+          "status": "operational",
+          "updated_at": "2026-07-28T15:24:28.758Z"
+        }
+      ],
+      "created_at": "2026-04-15T01:07:50.796Z",
+      "id": "cxh9f0hgw934",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "From 23:20 UTC to 02:00 UTC, users may have experienced elevated error rates due to service instability, which resulted in intermittent HTTP 500 errors and terminated connections.\n\nOur Engineering team has confirmed full resolution of the issue, and all systems are now operating normally.\n\nIf you continue to experience any issues, please open a ticket with our support team. We apologize for any inconvenience caused.",
+          "created_at": "2026-04-15T02:56:44.874Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T02:56:44.874Z",
+          "id": "mhxshqt1l74k",
+          "incident_id": "cxh9f0hgw934",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T02:56:44.874Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has implemented a fix for the issue causing elevated error rates due to service instability. We are currently monitoring the situation to ensure stability and confirm that error rates, including HTTP 500 responses, have returned to normal levels.\n\nWe will provide a further update once we confirm the issue is fully resolved.",
+          "created_at": "2026-04-15T02:24:37.438Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T02:24:37.438Z",
+          "id": "9jtj1lyltt2l",
+          "incident_id": "cxh9f0hgw934",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T02:24:37.438Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br95fz33h6td",
+              "name": "Gradient AI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team is investigating an issue causing elevated error rates due to service instability and terminating open connections which causes some 500s. Some requests may fail while we work to resolve it.\n\nWe apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-04-15T01:07:50.862Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-04-15T01:07:50.862Z",
+          "id": "yw9mnz238fc5",
+          "incident_id": "cxh9f0hgw934",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-04-15T01:07:50.862Z"
+        }
+      ],
+      "monitoring_at": "2026-04-15T02:24:37.438Z",
+      "name": "Serverless Inference",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-04-15T02:56:44.874Z",
+      "shortlink": "https://stspg.io/yhy97jfdzszn",
+      "started_at": "2026-04-15T01:07:50.792Z",
+      "status": "resolved",
+      "updated_at": "2026-04-15T02:56:44.891Z"
+    }
+  }
+}

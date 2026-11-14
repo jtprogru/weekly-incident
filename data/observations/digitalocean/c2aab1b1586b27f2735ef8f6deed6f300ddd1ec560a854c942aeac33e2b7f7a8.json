@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/qzbsmdsw9lq8",
+    "vendor": "digitalocean",
+    "native_id": "qzbsmdsw9lq8",
+    "title": "Networking in BLR1",
+    "url": "https://stspg.io/8yc90q76srsl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-19T06:57:41.449Z",
+    "resolved_at": "2026-07-19T09:52:00.733Z",
+    "duration_minutes": 174,
+    "components": [
+      "BLR1"
+    ],
+    "updates": [
+      {
+        "native_id": "nft7ydvj5hvk",
+        "status": "investigating",
+        "body": "We are currently investigating an issue affecting outbound network traffic for Droplets in the BLR1 region. Customers may experience timeout errors or connectivity issues when attempting to reach external services.\nOur Engineering team is actively investigating the issue and working to identify the root cause. We will provide additional updates as soon as more information becomes available.",
+        "created_at": "2026-07-19T06:57:41.549Z"
+      },
+      {
+        "native_id": "5ygs7x5n66h0",
+        "status": "identified",
+        "body": "Our Engineering team has identified an issue affecting upstream network connectivity for Droplet-based services in the BLR1 region and is actively working with the relevant upstream providers to implement a resolution.\n\nCustomers may continue to experience intermittent timeouts or connectivity issues when attempting to reach external endpoints from Droplets in BLR1.\n\nWe will provide another update once the issue has been fully resolved or when additional information becomes available.",
+        "created_at": "2026-07-19T08:27:36.675Z"
+      },
+      {
+        "native_id": "gyc2mnxy603j",
+        "status": "monitoring",
+        "body": "Our engineering team has implemented the necessary fixes affecting upstream network connectivity for Droplet-based services in the BLR1 region. Users should now be able to connect to the external endpoints from Droplets in BLR1.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+        "created_at": "2026-07-19T09:31:03.681Z"
+      },
+      {
+        "native_id": "pyq123bftf4j",
+        "status": "resolved",
+        "body": "Our engineering team has resolved the outbound network connectivity issue in the BLR1 region. If you continue to experience problems, please open a ticket with our support team. We apologize for any inconvenience.",
+        "created_at": "2026-07-19T09:52:00.733Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-22T19:29:08.629Z",
+          "description": null,
+          "group": false,
+          "group_id": "sjlhrm4vf4pr",
+          "id": "lmgn764lq04q",
+          "name": "BLR1",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-07-19T09:31:03.637Z"
+        }
+      ],
+      "created_at": "2026-07-19T06:57:41.458Z",
+      "id": "qzbsmdsw9lq8",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our engineering team has resolved the outbound network connectivity issue in the BLR1 region. If you continue to experience problems, please open a ticket with our support team. We apologize for any inconvenience.",
+          "created_at": "2026-07-19T09:52:00.733Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T09:52:00.733Z",
+          "id": "pyq123bftf4j",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T09:52:00.733Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our engineering team has implemented the necessary fixes affecting upstream network connectivity for Droplet-based services in the BLR1 region. Users should now be able to connect to the external endpoints from Droplets in BLR1.\n\nWe are currently monitoring the situation to ensure that the service has returned to normal operation and remain stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.",
+          "created_at": "2026-07-19T09:31:03.681Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T09:31:03.681Z",
+          "id": "gyc2mnxy603j",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T09:31:03.681Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has identified an issue affecting upstream network connectivity for Droplet-based services in the BLR1 region and is actively working with the relevant upstream providers to implement a resolution.\n\nCustomers may continue to experience intermittent timeouts or connectivity issues when attempting to reach external endpoints from Droplets in BLR1.\n\nWe will provide another update once the issue has been fully resolved or when additional information becomes available.",
+          "created_at": "2026-07-19T08:27:36.675Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-19T08:27:36.675Z",
+          "id": "5ygs7x5n66h0",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T08:27:36.675Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "lmgn764lq04q",
+              "name": "Networking - BLR1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue affecting outbound network traffic for Droplets in the BLR1 region. Customers may experience timeout errors or connectivity issues when attempting to reach external services.\nOur Engineering team is actively investigating the issue and working to identify the root cause. We will provide additional updates as soon as more information becomes available.",
+          "created_at": "2026-07-19T06:57:41.549Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-19T06:57:41.549Z",
+          "id": "nft7ydvj5hvk",
+          "incident_id": "qzbsmdsw9lq8",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-19T06:57:41.549Z"
+        }
+      ],
+      "monitoring_at": "2026-07-19T09:31:03.681Z",
+      "name": "Networking in BLR1",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-19T09:52:00.733Z",
+      "shortlink": "https://stspg.io/8yc90q76srsl",
+      "started_at": "2026-07-19T06:57:41.449Z",
+      "status": "resolved",
+      "updated_at": "2026-07-19T09:52:00.749Z"
+    }
+  }
+}

@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2019-W19",
   "from": "2019-05-06T00:00:00Z",
   "to": "2019-05-13T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/dgsyrnqfr2r0",
+      "canonical": {
+        "id": "ci-e659433cc9489712bacbf039",
+        "sources": [
+          {
+            "key": "atlassian/dgsyrnqfr2r0",
+            "path": "2019/W19/atlassian.json",
+            "url": "http://stspg.io/cb7cd57ba"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-e659433cc9489712bacbf039",
       "vendor": "atlassian",
       "title": "Jira Users Receiving HTTP 500 Errors",
       "url": "http://stspg.io/cb7cd57ba",
@@ -118,7 +140,20 @@
       "above_threshold": true
     },
     {
-      "key": "atlassian/mx1wvlvbw23y",
+      "canonical": {
+        "id": "ci-9a8de6eabdeb3ec639bfe106",
+        "sources": [
+          {
+            "key": "atlassian/mx1wvlvbw23y",
+            "path": "2019/W19/atlassian.json",
+            "url": "http://stspg.io/06e0ed12a"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-9a8de6eabdeb3ec639bfe106",
       "vendor": "atlassian",
       "title": "Jira Imports are Failing",
       "url": "http://stspg.io/06e0ed12a",

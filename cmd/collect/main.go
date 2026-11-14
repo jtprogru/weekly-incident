@@ -13,17 +13,20 @@ import (
 	"log"
 	"os"
 	"os/signal"
+	"path/filepath"
 	"sort"
 	"strings"
 	"syscall"
 	"time"
 
 	"github.com/jtprogru/weekly-incident/internal/archive"
+	"github.com/jtprogru/weekly-incident/internal/canonical"
 	"github.com/jtprogru/weekly-incident/internal/clock"
 	"github.com/jtprogru/weekly-incident/internal/config"
 	"github.com/jtprogru/weekly-incident/internal/model"
 	"github.com/jtprogru/weekly-incident/internal/score"
 	"github.com/jtprogru/weekly-incident/internal/source"
+	"github.com/jtprogru/weekly-incident/internal/storage"
 )
 
 func main() {
@@ -32,17 +35,37 @@ func main() {
 		dataDir     = flag.String("data", "data", "archive root directory")
 		summaryPath = flag.String("summary", "", "write a one-line run summary here (for the commit message)")
 		warningPath = flag.String("warning", "", "write an archive-gap warning here, if there is one (for the alert)")
+		resultPath  = flag.String("result", "", "machine-readable source/canonical save status")
 		nowFlag     = flag.String("now", "", "override the current time, RFC3339 (for reproducible runs)")
 	)
 	flag.Parse()
 
 	log.SetFlags(0)
-	if err := run(*configPath, *dataDir, *summaryPath, *warningPath, *nowFlag); err != nil {
+	if err := runWithResult(*configPath, *dataDir, *summaryPath, *warningPath, *nowFlag, *resultPath); err != nil {
 		log.Fatalf("collect: %v", err)
 	}
 }
 
 func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
+	return runWithResult(configPath, dataDir, summaryPath, warningPath, nowFlag, "")
+}
+
+type RunResult struct {
+	SourceSaved    bool `json:"source_saved"`
+	CanonicalSaved bool `json:"canonical_saved"`
+}
+
+func runWithResult(configPath, dataDir, summaryPath, warningPath, nowFlag, resultPath string) error {
+	result := RunResult{}
+	saveResult := func() error {
+		if resultPath == "" {
+			return nil
+		}
+		return storage.WriteJSON(resultPath, result)
+	}
+	if err := saveResult(); err != nil {
+		return err
+	}
 	cfg, err := config.Load(configPath)
 	if err != nil {
 		return err
@@ -51,6 +74,12 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 	if err != nil {
 		return err
 	}
+
+	release, err := storage.Lock(dataDir)
+	if err != nil {
+		return err
+	}
+	defer release()
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
@@ -123,10 +152,6 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 	if err != nil {
 		return err
 	}
-	if err := writeIndexes(arc, stats.Weeks, statuses, cfg, now); err != nil {
-		return err
-	}
-
 	state.LastCollectAt = now
 	if err := arc.SaveState(state); err != nil {
 		return err
@@ -139,6 +164,40 @@ func run(configPath, dataDir, summaryPath, warningPath, nowFlag string) error {
 		if err := os.WriteFile(summaryPath, []byte(summary+"\n"), 0o644); err != nil {
 			return fmt.Errorf("write summary: %w", err)
 		}
+	}
+
+	result.SourceSaved = true
+	if err := saveResult(); err != nil {
+		return err
+	}
+	switch cfg.Dedup.Mode {
+	case "enforce":
+		p, err := canonical.Prepare(dataDir, cfg, cfg.DecisionsPath(configPath), now, true, false)
+		if err != nil {
+			return fmt.Errorf("sources saved; canonical reconciliation failed: %w", err)
+		}
+		if err := canonical.Commit(dataDir, p, cfg, statuses, stats.Weeks); err != nil {
+			return fmt.Errorf("sources saved; canonical build failed: %w", err)
+		}
+	case "shadow":
+		p, err := canonical.Prepare(dataDir, cfg, cfg.DecisionsPath(configPath), now, true, true)
+		if err != nil {
+			return err
+		}
+		if err := storage.WriteJSON(filepath.Join(filepath.Dir(configPath), "reports/dedup/shadow.json"), p.Plan); err != nil {
+			return err
+		}
+		if err := writeIndexes(arc, stats.Weeks, statuses, cfg, now); err != nil {
+			return err
+		}
+	default:
+		if err := writeIndexes(arc, stats.Weeks, statuses, cfg, now); err != nil {
+			return err
+		}
+	}
+	result.CanonicalSaved = true
+	if err := saveResult(); err != nil {
+		return err
 	}
 
 	// Losing more than half the sources points at this side of the wire, not at

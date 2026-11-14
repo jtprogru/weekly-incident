@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 6,
+    "source_versions_total": 6,
+    "canonical_incidents_total": 6,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W14",
   "from": "2026-03-30T00:00:00Z",
   "to": "2026-04-06T00:00:00Z",
-  "generated_at": "2026-10-16T10:14:26.768377212Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "circleci/lxkrhs9rmrxv",
+      "canonical": {
+        "id": "ci-0ac7ce081ad14a1e659aa129",
+        "sources": [
+          {
+            "key": "circleci/lxkrhs9rmrxv",
+            "path": "2026/W14/circleci.json",
+            "url": "https://stspg.io/78v0qz8pybdn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0ac7ce081ad14a1e659aa129",
       "vendor": "circleci",
       "title": "Usage API data for 4/1 is incomplete with multiple columns showing null values. Data prior to 4/1 is unaffected. We are investigating.",
       "url": "https://stspg.io/78v0qz8pybdn",
@@ -127,7 +149,20 @@
       "above_threshold": true
     },
     {
-      "key": "yandexcloud/1661",
+      "canonical": {
+        "id": "ci-7047e3225e495fcf2d74fe71",
+        "sources": [
+          {
+            "key": "yandexcloud/1661",
+            "path": "2026/W14/yandexcloud.json",
+            "url": "https://status.yandex.cloud/en/incidents/1661"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7047e3225e495fcf2d74fe71",
       "vendor": "yandexcloud",
       "title": "Delays in making payments and opening a payment form",
       "url": "https://status.yandex.cloud/en/incidents/1661",
@@ -149,7 +184,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1541",
+      "canonical": {
+        "id": "ci-dfd9d23ef519c631f22b184f",
+        "sources": [
+          {
+            "key": "slack/1541",
+            "path": "2026/W14/slack.json",
+            "url": "https://slack-status.com/2026-04/3e4a3dd1224c4b7d"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-dfd9d23ef519c631f22b184f",
       "vendor": "slack",
       "title": "Slackbot button in the top navigation is disappearing",
       "url": "https://slack-status.com/2026-04/3e4a3dd1224c4b7d",
@@ -160,8 +208,8 @@
       "duration_minutes": 100,
       "ongoing": false,
       "components": [
-        "Messaging",
-        "Apps/Integrations/APIs"
+        "Apps/Integrations/APIs",
+        "Messaging"
       ],
       "score": {
         "value": 240,
@@ -172,7 +220,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/2tcpcfl8rp6j",
+      "canonical": {
+        "id": "ci-a54be0dbd8e1323f054f636c",
+        "sources": [
+          {
+            "key": "stripe/2tcpcfl8rp6j",
+            "path": "2026/W14/stripe.json",
+            "url": "https://stspg.io/p8x22czdkx15"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a54be0dbd8e1323f054f636c",
       "vendor": "stripe",
       "title": "Elevated Dashboard, Express Dashboard and Mobile surfaces errors",
       "url": "https://stspg.io/p8x22czdkx15",
@@ -194,7 +255,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/hth87g8tfm2y",
+      "canonical": {
+        "id": "ci-46866dcee81c338e2e2d60fd",
+        "sources": [
+          {
+            "key": "circleci/hth87g8tfm2y",
+            "path": "2026/W14/circleci.json",
+            "url": "https://stspg.io/3q4dxfr93jhd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-46866dcee81c338e2e2d60fd",
       "vendor": "circleci",
       "title": "Some pipelines not triggering due to GitHub API failures",
       "url": "https://stspg.io/3q4dxfr93jhd",
@@ -205,8 +279,8 @@
       "duration_minutes": 28,
       "ongoing": false,
       "components": [
-        "Pipelines \u0026 Workflows",
-        "GitHub API Requests"
+        "GitHub API Requests",
+        "Pipelines \u0026 Workflows"
       ],
       "score": {
         "value": 56,
@@ -217,7 +291,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/2jz281x5q65q",
+      "canonical": {
+        "id": "ci-406dd78ae55871de613686f9",
+        "sources": [
+          {
+            "key": "stripe/2jz281x5q65q",
+            "path": "2026/W14/stripe.json",
+            "url": "https://stspg.io/r0q1hjmhz3q6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-406dd78ae55871de613686f9",
       "vendor": "stripe",
       "title": "Elevated Bancontact errors",
       "url": "https://stspg.io/r0q1hjmhz3q6",

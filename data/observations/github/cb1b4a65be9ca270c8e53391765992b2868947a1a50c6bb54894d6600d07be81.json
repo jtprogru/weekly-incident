@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/5bnwwg9tzd4q",
+    "vendor": "github",
+    "native_id": "5bnwwg9tzd4q",
+    "title": "Incident with Pages",
+    "url": "https://stspg.io/wgv67m39tbml",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-02T16:54:10.115Z",
+    "resolved_at": "2026-07-02T18:25:24.658Z",
+    "duration_minutes": 91,
+    "components": [
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "wcspw4qmn9yd",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pages",
+        "created_at": "2026-07-02T16:54:10.255Z"
+      },
+      {
+        "native_id": "tbl0skq7gp2f",
+        "status": "investigating",
+        "body": "We are investigating reports of slow and failing Pages deployments. Access to Pages is unaffected.",
+        "created_at": "2026-07-02T16:56:46.958Z"
+      },
+      {
+        "native_id": "540qjqp3t350",
+        "status": "investigating",
+        "body": "Pages deployment latency is recovering. The team continues working toward full mitigation and a return to nominal state.",
+        "created_at": "2026-07-02T17:57:15.004Z"
+      },
+      {
+        "native_id": "pv62xk0yvpmx",
+        "status": "resolved",
+        "body": "On July 2nd, 2026, between approximately 15:00 and 18:30 UTC, the GitHub Pages service experienced degraded deployment performance due to a surge in demand that exceeded available processing capacity. During this period, users publishing to GitHub Pages may have seen their deployments queued or taking substantially longer than usual to go live. No other GitHub services were impacted.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by scaling up Pages deployment workers and provisioning additional storage capacity to clear the backlog.\u003cbr /\u003e\u003cbr /\u003eGitHub is reviewing capacity planning and autoscaling measures to reduce the likelihood of similar delays in the future.",
+        "created_at": "2026-07-02T18:25:24.658Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-08-17T16:59:38.098Z"
+        }
+      ],
+      "created_at": "2026-07-02T16:54:10.130Z",
+      "id": "5bnwwg9tzd4q",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "On July 2nd, 2026, between approximately 15:00 and 18:30 UTC, the GitHub Pages service experienced degraded deployment performance due to a surge in demand that exceeded available processing capacity. During this period, users publishing to GitHub Pages may have seen their deployments queued or taking substantially longer than usual to go live. No other GitHub services were impacted.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by scaling up Pages deployment workers and provisioning additional storage capacity to clear the backlog.\u003cbr /\u003e\u003cbr /\u003eGitHub is reviewing capacity planning and autoscaling measures to reduce the likelihood of similar delays in the future.",
+          "created_at": "2026-07-02T18:25:24.658Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T18:25:24.658Z",
+          "id": "pv62xk0yvpmx",
+          "incident_id": "5bnwwg9tzd4q",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-07T22:06:42.419Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pages deployment latency is recovering. The team continues working toward full mitigation and a return to nominal state.",
+          "created_at": "2026-07-02T17:57:15.004Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T17:57:15.004Z",
+          "id": "540qjqp3t350",
+          "incident_id": "5bnwwg9tzd4q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T17:57:15.004Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating reports of slow and failing Pages deployments. Access to Pages is unaffected.",
+          "created_at": "2026-07-02T16:56:46.958Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T16:56:46.958Z",
+          "id": "tbl0skq7gp2f",
+          "incident_id": "5bnwwg9tzd4q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T16:56:46.958Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pages",
+          "created_at": "2026-07-02T16:54:10.255Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T16:54:10.255Z",
+          "id": "wcspw4qmn9yd",
+          "incident_id": "5bnwwg9tzd4q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T16:54:10.255Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Incident with Pages",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-02T18:25:24.658Z",
+      "shortlink": "https://stspg.io/wgv67m39tbml",
+      "started_at": "2026-07-02T16:54:10.115Z",
+      "status": "resolved",
+      "updated_at": "2026-07-07T22:06:42.429Z"
+    }
+  }
+}

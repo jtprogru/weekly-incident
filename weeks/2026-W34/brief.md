@@ -1,6 +1,8 @@
-# Week 2026-W34 — top 5 of 19 above threshold
+# Week 2026-W34 — top 5 of 20 above threshold
 
 2026-08-17 to 2026-08-23 (UTC).
+
+49 source records (54 saved revisions) → 49 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## 1. gcp — We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region.
 
@@ -8,6 +10,12 @@
 - Window: 2026-08-20 15:40 to 2026-08-20 19:20 UTC (3h 40m)
 - Impact: critical, status: resolved
 - Components: AlloyDB for PostgreSQL, Apigee Edge Public Cloud, Apigee X, Artifact Registry, BigQuery Data Transfer Service, Cloud Build, Cloud Data Fusion, Cloud Filestore, Cloud Key Management Service, Cloud Monitoring, Cloud Run, Contact Center AI Platform, Dataproc Metastore, Google App Engine, Google BigQuery, Google Cloud Bigtable, Google Cloud Composer, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Managed Service for Apache Kafka, Persistent Disk
+
+<a id="ci-6f3986bb3fc4e07b8f225e17"></a>
+
+- Canonical ID: `ci-6f3986bb3fc4e07b8f225e17` (1 source records).
+  - [gcp/utF3FMFdQfwBzJcGG6vf](../../data/2026/W34/gcp.json); vendor URL: https://status.cloud.google.com/incidents/utF3FMFdQfwBzJcGG6vf
+- Start time basis: `vendor_reported`.
 
   - `2026-08-20 16:44` investigating — **Summary** We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region. **Description** We are experiencing an issue with multiple products, beginning on Thursday, 2026-08-20 08:40 PDT. Our engineering team continues to investigate the issue. We will provide an update by Thursday, 2026-08-20 10:30 PDT with details. We apologize to all who are affected by the disruption. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** None at this time.
   - `2026-08-20 17:13` investigating — **Summary** We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region. **Description** Mitigation actions are implemented by our engineering teams, recovery trends have been observed across infrastructure layers. Active efforts remain underway to bring impacted cloud services back to full operation. We will provide an update by Thursday, 2026-08-20 10:45 PDT with details. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** We recommend customers to failover to other regions where feasible.
@@ -17,13 +25,20 @@
   - `2026-08-20 19:21` investigating — **Summary** The issue causing timeouts, degradations, errors, and latencies across multiple us-west1 products has been mitigated and we are working to recover all products. **Description** Mitigation actions have been completed by our engineering teams and we are seeing recovery from multiple products. We are continuing to work to recover the remaining products. We will provide an update by Thursday, 2026-08-20 13:30 PDT with details. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** No workarounds needed at this time.
   - `2026-08-20 19:37` resolved — **Summary** The issue causing timeouts, degradations, errors, and latencies across multiple us-west1 products has been mitigated. **Description** We have mitigated the issue impacting multiple products in our us-west1 region as of Thursday, 2026-08-20 10:22 PDT. Our engineering teams have restored capacity on a planned optical maintenance that caused unexpected congestion in Dalles, Oregon metro /us-west1 region. Our systems stabilized and services have recovered once capacity was restored. Our teams are continuing to monitor for any residual impact. We will publish an analysis of this incident once we have completed our internal investigation. We thank you for your patience while we worked on resolving the issue. **Diagnosis / Customer Symptoms** Customers in us-west1 may have experienced…
   - `2026-08-25 06:20` resolved — # Preliminary Incident Report We sincerely apologize for the disruption this incident caused to your business operations. Recognizing your reliance on Google Cloud, we express our sincere regrets for any operational impact experienced. Our engineering teams are actively addressing the underlying root cause to prevent future recurrences. Please note that the information provided herein reflects our current understanding as of the time of publication and remains subject to revision as the investigation progresses. A comprehensive Incident Report detailing preventive measures will be issued upon conclusion of our inquiry. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using https://cloud.google.com/support. ## Date/Time of the Issue (A…
+  - `2026-08-27 21:45` resolved — # Incident Report ## Summary On Thursday, 20 August 2026, from 08:00 to 10:22 US/Pacific (15:00 to 17:22 UTC), multiple Google Cloud services in the us-west1 region experienced elevated latency, provisioning failures, increased error rates, and widespread service degradations for a total duration of 2 hours and 22 minutes. The incident impacted a wide range of core services — including Persistent Disk, Google Kubernetes Engine, Google Compute Engine, Cloud Run, Google Cloud Bigtable, Cloud Storage, and Identity and Access Management — across both control plane operations and data plane requests. We sincerely apologize for the disruption this incident caused to your business operations and critical workloads. We recognize the vital role Google Cloud plays in supporting your organization, an…
 
 ## 2. github — Incident with GitHub.com
 
 - URL: https://stspg.io/y1fl26l6wpzr
 - Window: 2026-08-17 13:40 to 2026-08-17 21:15 UTC (7h 35m)
 - Impact: critical, status: resolved
-- Components: Git Operations, Webhooks, API Requests, Issues, Pull Requests, Actions, Pages, Copilot
+- Components: API Requests, Actions, Copilot, Git Operations, Issues, Pages, Pull Requests, Webhooks
+
+<a id="ci-7d0481dbdf5ba26d80c73e62"></a>
+
+- Canonical ID: `ci-7d0481dbdf5ba26d80c73e62` (1 source records).
+  - [github/zkxwbgr0cnmx](../../data/2026/W34/github.json); vendor URL: https://stspg.io/y1fl26l6wpzr
+- Start time basis: `vendor_reported`.
 
   - `2026-08-17 13:40` investigating — We are investigating reports of impacted performance for some GitHub services.
   - `2026-08-17 13:41` investigating — API Requests is experiencing degraded performance. We are continuing to investigate.
@@ -67,7 +82,13 @@
 - URL: https://stspg.io/tcsfmtc03xgm
 - Window: 2026-08-18 16:20 to 2026-08-18 19:01 UTC (2h 41m)
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+
+<a id="ci-4e656717f39631a81136bb03"></a>
+
+- Canonical ID: `ci-4e656717f39631a81136bb03` (1 source records).
+  - [anthropic/q7txxvbsftgq](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/tcsfmtc03xgm
+- Start time basis: `vendor_reported`.
 
   - `2026-08-18 16:20` investigating — We are investigating reports of degraded performance affecting multiple models. We will provide an update as soon as possible.
   - `2026-08-18 16:20` investigating — We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5, and other Claude models. We will provide an update as soon as possible.
@@ -82,6 +103,12 @@
 - Impact: minor, status: resolved
 - Components: NYC1, NYC3
 
+<a id="ci-86d1537eaa36e2b2d1a88bc9"></a>
+
+- Canonical ID: `ci-86d1537eaa36e2b2d1a88bc9` (1 source records).
+  - [digitalocean/r96y45y5sx59](../../data/2026/W34/digitalocean.json); vendor URL: https://stspg.io/8ld5fpw01tg4
+- Start time basis: `vendor_reported`.
+
   - `2026-08-23 05:11` investigating — Our Engineering team is investigating an issue with our Managed Database product. At this time, users may experience errors while creating clusters, both via Cloud Control Panel and API requests. We apologize for the inconvenience and will share an update once we have more information.
   - `2026-08-23 07:06` investigating — We continue to investigate an issue affecting DigitalOcean Managed Databases cluster creation across multiple regions. During this time, users may experience errors when creating Managed Database clusters via the Cloud Control Panel or API. Our engineering team is implementing a mitigation and working to restore normal provisioning. We will provide another update as soon as more information is available.
   - `2026-08-23 11:30` monitoring — Our Engineering team has implemented the necessary fixes affecting Managed Database cluster creation in the NYC3 and NYC1 regions. Users should now be able to create new Managed Database clusters. We are currently monitoring the situation to ensure that the service has returned to normal operation and remains stable. We appreciate your patience and will provide an update once the issue is fully confirmed as resolved.
@@ -94,6 +121,12 @@
 - Impact: critical, status: resolved
 - Components: —
 
+<a id="ci-33f9406107412c11e32daea9"></a>
+
+- Canonical ID: `ci-33f9406107412c11e32daea9` (1 source records).
+  - [github/bhbcjn4n3jzp](../../data/2026/W34/github.json); vendor URL: https://stspg.io/py1yl5mnq89c
+- Start time basis: `vendor_reported`.
+
   - `2026-08-20 14:43` investigating — We are investigating reports of impacted performance for some GitHub services.
   - `2026-08-20 14:51` investigating — Users may experience delays when starting tasks using Copilot Cloud Agent. We are actively investigating the issue and will provide updates as we learn more.
   - `2026-08-20 15:01` investigating — We have identified the problematic component and are working to fail over to a healthy instance. Further updates will be provided as we perform mitigations.
@@ -105,9 +138,9 @@
   - `2026-08-20 18:45` investigating — We are continuing to observe gradual recovery for Copilot Cloud Agent task status visibility, with session output delayed by approximately 1 hour. We have taken additional steps to accelerate the recovery and expect this to take effect within the next hour.
   - `2026-08-20 19:35` investigating — We are continuing to observe gradual recovery for Copilot Cloud Agent task status visibility. Session output continues to be delayed by approximately 1 hour as our remediation steps take effect.
   - `2026-08-20 20:37` investigating — We are seeing gradual recovery in Copilot Cloud Agent task status visibility as we deploy a fix for the root cause. Session output remains delayed by approximately one hour while remediation continues.
-  - `2026-08-21 00:37` resolved — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+  - `2026-08-21 00:37` resolved — Between 13:57 UTC on August 20 and 00:37 UTC on August 21, 2026, some users of the Copilot Cloud Agent experienced delays of up to 60 to 90 minutes in seeing the status and results of their agent tasks. The agent tasks themselves continued to run and complete during this time; only the visibility of their status was delayed.<br /><br />The cause was a regional outage in a third-party cloud database service that Copilot uses to store agent task status. We failed over the affected database to a healthy region, added processing capacity to work through the backlog, and restored normal operation once the underlying service recovered. No task data was lost during the incident.<br /><br />To prevent repetition of similar incidents, we are removing the database configuration that made us vulnerab…
 
-## Also above threshold (14)
+## Also above threshold (15)
 
 - `digitalocean` Major Service Interruption in MKC1 (8h 24m) — https://stspg.io/gdzqj0v18x0r
 - `aws` Increased Error Rates (3h 32m) — https://health.aws.amazon.com/health/status
@@ -120,7 +153,7 @@
 - `openai` Elevated Errors for Thinking mode in ChatGPT (2h 55m) — https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC
 - `cloudflare` Elevated error rates in Chicago (ORD) region. (2h 3m) — https://www.cloudflarestatus.com/incidents/877bn0l3ptp8
 - `cloudflare` Network Performance Issues in Asia Pacific Region (2h 0m) — https://www.cloudflarestatus.com/incidents/xl112dfsfz6q
+- `yandexcloud` Problem with the SpeechKit service (2h 20m) — https://status.yandex.cloud/en/incidents/1937
 - `anthropic` Elevated errors on requests to multiple models (26m) — https://stspg.io/w7yghz6hfr72
 - `github` Incident with Actions (46m) — https://stspg.io/q3ck88mqw08z
-- `grafana` Cloud Logs read path outage on eu-west-2 (0m) — https://stspg.io/1g4dpsdmf2cf
-
+- `grafana` Cloud Logs read path outage on eu-west-2 (unknown) — https://stspg.io/1g4dpsdmf2cf

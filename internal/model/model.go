@@ -89,6 +89,7 @@ type Update struct {
 // rewrite every file daily, turning the archive's git history into noise and
 // making it impossible to tell a real update from a heartbeat.
 type Incident struct {
+	Canonical       *CanonicalInfo  `json:"canonical,omitempty"`
 	Key             string          `json:"key"`
 	Vendor          string          `json:"vendor"`
 	NativeID        string          `json:"native_id"`
@@ -183,6 +184,9 @@ func (in *Incident) Validate() error {
 // incident against now. The second result reports whether the incident is still
 // ongoing, which the renderers flag in the digest.
 func (in *Incident) DurationAt(now time.Time) (int, bool) {
+	if in.Canonical != nil && in.Canonical.DurationUnknown {
+		return 0, false
+	}
 	if in.DurationMinutes != nil {
 		return *in.DurationMinutes, false
 	}
@@ -216,28 +220,30 @@ type SourceStatus struct {
 // IndexEntry is the digest-facing projection of an incident: everything the
 // renderers need without loading Raw.
 type IndexEntry struct {
-	Key             string     `json:"key"`
-	Vendor          string     `json:"vendor"`
-	Title           string     `json:"title"`
-	URL             string     `json:"url"`
-	Impact          Impact     `json:"impact"`
-	Status          Status     `json:"status"`
-	StartedAt       time.Time  `json:"started_at"`
-	ResolvedAt      *time.Time `json:"resolved_at,omitempty"`
-	DurationMinutes *int       `json:"duration_minutes,omitempty"`
-	Ongoing         bool       `json:"ongoing"`
-	Components      []string   `json:"components"`
-	Score           Score      `json:"score"`
-	AboveThreshold  bool       `json:"above_threshold"`
+	Canonical       *CanonicalInfo `json:"canonical,omitempty"`
+	Key             string         `json:"key"`
+	Vendor          string         `json:"vendor"`
+	Title           string         `json:"title"`
+	URL             string         `json:"url"`
+	Impact          Impact         `json:"impact"`
+	Status          Status         `json:"status"`
+	StartedAt       time.Time      `json:"started_at"`
+	ResolvedAt      *time.Time     `json:"resolved_at,omitempty"`
+	DurationMinutes *int           `json:"duration_minutes,omitempty"`
+	Ongoing         bool           `json:"ongoing"`
+	Components      []string       `json:"components"`
+	Score           Score          `json:"score"`
+	AboveThreshold  bool           `json:"above_threshold"`
 }
 
 // WeekIndex is the per-week summary written to data/YYYY/Wnn/index.json. It is
 // fully derived from the vendor files and rebuilt from scratch on every run.
 type WeekIndex struct {
-	Week        string         `json:"week"`
-	From        time.Time      `json:"from"`
-	To          time.Time      `json:"to"`
-	GeneratedAt time.Time      `json:"generated_at"`
-	Sources     []SourceStatus `json:"sources"`
-	Incidents   []IndexEntry   `json:"incidents"`
+	Dedup       *DedupStatistics `json:"dedup,omitempty"`
+	Week        string           `json:"week"`
+	From        time.Time        `json:"from"`
+	To          time.Time        `json:"to"`
+	GeneratedAt time.Time        `json:"generated_at"`
+	Sources     []SourceStatus   `json:"sources"`
+	Incidents   []IndexEntry     `json:"incidents"`
 }

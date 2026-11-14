@@ -2,12 +2,20 @@
 
 2026-08-24 to 2026-08-30 (UTC).
 
+37 source records (41 saved revisions) → 37 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. cloudflare — Incorrect geo location for some Cloudflare WARP users
 
 - URL: https://www.cloudflarestatus.com/incidents/9g65dxfbcjln
-- Window: 2026-08-27 18:46 to not yet (3d 19h 47m (ongoing))
-- Impact: minor, status: identified
+- Window: 2026-08-27 18:46 to 2026-10-22 15:41 UTC (55d 20h 55m)
+- Impact: minor, status: resolved
 - Components: WARP
+
+<a id="ci-65f1c7a1dbe764f8f59cdbdf"></a>
+
+- Canonical ID: `ci-65f1c7a1dbe764f8f59cdbdf` (1 source records).
+  - [cloudflare/9g65dxfbcjln](../../data/2026/W35/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9g65dxfbcjln
+- Start time basis: `vendor_reported`.
 
   - `2026-08-27 18:46` investigating — Cloudflare is investigating issues with Cloudflare WARP and Cloudflare Zero Trust users being incorrectly geolocated by some third party services.
   - `2026-08-27 18:56` identified — The issue has been identified and we are working with third party providers to fix it.
@@ -15,13 +23,22 @@
   - `2026-08-28 11:30` identified — We are continuing to work on a fix for this issue.
   - `2026-08-29 15:31` identified — We are continuing to work on a fix for this issue.
   - `2026-08-30 15:51` identified — We are continuing to work on a fix for this issue.
+  - `2026-08-31 15:15` identified — We are continuing to work on a fix for this issue.
+  - `2026-09-01 08:29` identified — We are continuing to work on a fix for this issue.
+  - `2026-10-22 15:41` resolved — This incident has been resolved.
 
 ## 2. digitalocean — Cloud Control Panel and API
 
 - URL: https://stspg.io/8l5c24cxh3hr
 - Window: 2026-08-24 17:14 to 2026-08-25 19:04 UTC (1d 1h 49m)
-- Impact: critical, status: resolved
+- Impact: critical, status: postmortem
 - Components: API, Cloud Control Panel
+
+<a id="ci-f285c50a335aa7f112bb7012"></a>
+
+- Canonical ID: `ci-f285c50a335aa7f112bb7012` (1 source records).
+  - [digitalocean/4qwm6pzlx1z3](../../data/2026/W35/digitalocean.json); vendor URL: https://stspg.io/8l5c24cxh3hr
+- Start time basis: `vendor_reported`.
 
   - `2026-08-24 17:14` investigating — Our Engineering team is investigating an issue impacting the DigitalOcean public API and Cloud Control Panel. At this time, users will see elevated 5xx errors for all API requests, including things like creates for various products. Users may also be unable to access cloud.digitalocean.com. We are actively investigating the root cause and will provide updates as soon as more information becomes available. We apologize for the inconvenience and appreciate your patience.
   - `2026-08-24 18:33` investigating — We are continuing to investigate the issue impacting the DigitalOcean public API and Cloud Control Panel. At this time, we are seeing some improvement in latency/error rates and some users may now be able to access the Cloud Control Panel. Serverless Inference users may currently experience 403 and 503 errors when making API requests or accessing affected services. We will continue to provide updates as more information becomes available. We apologize for the inconvenience and appreciate your patience.
@@ -30,13 +47,20 @@
   - `2026-08-25 00:54` monitoring — Our Engineering team has implemented mitigation measures to address the issue impacting the DigitalOcean public API and Cloud Control Panel. We are seeing improvements, and users should now be able to access the Cloud Control Panel and use the public API normally. We are continuing to monitor the service to ensure it remains stable and will provide further updates as more information becomes available. We appreciate your patience and understanding.
   - `2026-08-25 16:30` monitoring — Our Engineering team has continued to monitor the health of all services and has observed no recurrence of impact over the past 12+ hours. We will continue to monitor services for a short period to confirm stability before we mark this incident resolved. We understand the impact this incident had for DigitalOcean users and we will publish a postmortem on the status page to provide further details on root cause and mitigation.
   - `2026-08-25 19:04` resolved — Our Engineering team has confirmed all services remain stable and we will now resolve this incident. Further details on root cause and mitigation will be provided in a postmortem via this status page for users interested in learning more. Thank you for your patience throughout this incident. If you continue to experience any issues, please reach out to Support from within your account
+  - `2026-09-15 18:44` postmortem — ## 1. What happened Between 16:56 UTC and 23:09 UTC on August 24, 2026, customers using DigitalOcean’s Cloud Control Panel, Public API, and dependent product management systems experienced elevated request error rates, peaking at 25%, in two distinct windows totaling 3.5 hours of active degradation within a 6-hour span. Running Droplets, network routing, and block storage \(Volumes\) remained fully functional and unaffected throughout the event. No customer data loss occurred. The event was initiated during a planned infrastructure migration of the database layer supporting identity, authentication, and authorization services. The migration introduced increased execution latency for a critical authorization query. In response to the elevated query latency, multiple upstream services init…
 
 ## 3. cloudflare — DO and D1 are degraded in Hong Kong and Singapore
 
 - URL: https://www.cloudflarestatus.com/incidents/ksy4vxmbkfdk
 - Window: 2026-08-24 03:53 to 2026-08-24 08:28 UTC (4h 34m)
 - Impact: minor, status: resolved
-- Components: Hong Kong - (HKG), D1, Durable Objects, Singapore, Singapore - (SIN), R2
+- Components: D1, Durable Objects, Hong Kong - (HKG), R2, Singapore, Singapore - (SIN)
+
+<a id="ci-92356f1857db3061c3cf7fbc"></a>
+
+- Canonical ID: `ci-92356f1857db3061c3cf7fbc` (1 source records).
+  - [cloudflare/ksy4vxmbkfdk](../../data/2026/W35/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/ksy4vxmbkfdk
+- Start time basis: `vendor_reported`.
 
   - `2026-08-24 03:53` investigating — Some DOs and D1 databases may be experiencing issues in Hong Kong and Singapore. We are working to analyse and mitigate this problem. More updates to follow shortly.
   - `2026-08-24 06:42` monitoring — A fix has been implemented and we are monitoring the results.
@@ -48,6 +72,12 @@
 - Window: 2026-08-24 20:38 to 2026-08-25 14:52 UTC (18h 14m)
 - Impact: minor, status: resolved
 - Components: CDN/Cache
+
+<a id="ci-dc69cfce62fd6feda63ae451"></a>
+
+- Canonical ID: `ci-dc69cfce62fd6feda63ae451` (1 source records).
+  - [cloudflare/d68x0kzjwhqf](../../data/2026/W35/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/d68x0kzjwhqf
+- Start time basis: `vendor_reported`.
 
   - `2026-08-24 20:38` investigating — Cloudflare is investigating an issue which may result in latency increases for a subset of requests.
   - `2026-08-24 22:24` identified — We have identified the cause of this issue and are implementing a fix.
@@ -62,6 +92,12 @@
 - Impact: minor, status: resolved
 - Components: —
 
+<a id="ci-6dc5178ea4fe5a134e543e8d"></a>
+
+- Canonical ID: `ci-6dc5178ea4fe5a134e543e8d` (1 source records).
+  - [github/5bn0vk444m1w](../../data/2026/W35/github.json); vendor URL: https://stspg.io/cpgst4hly3mh
+- Start time basis: `vendor_reported`.
+
   - `2026-08-26 23:37` investigating — We are investigating reports of impacted performance for some GitHub services.
   - `2026-08-26 23:42` investigating — We are currently investigating increased errors with billing services. Customers may observe failed billing budget page loads, and users of the Copilot CLI may observe failures starting or continuing sessions.
   - `2026-08-27 00:31` investigating — We've applied a mitigation to unblock Copilot usage and have observed recovery for this particular impact. We're continuing to investigate and apply mitigations for the billing page disruption while monitoring to ensure Copilot remains recovered.
@@ -69,7 +105,7 @@
   - `2026-08-27 14:49` investigating — Our mitigation is still holding as we continue to investigate to find the root cause.
   - `2026-08-27 16:20` investigating — Our mitigation continues to hold, and service conditions remain stable. We are continuing to investigate the concentrated workload responsible for the issue and are preparing additional preventative improvements. We have not identified a material change in customer impact since the previous update. We will provide another update as the investigation progresses.
   - `2026-08-27 17:58` investigating — No material change since the previous update. Service conditions remain stable following the mitigation, and we have not observed any further customer impact. We are actively monitoring the service while implementing targeted fixes to address the underlying root cause.
-  - `2026-08-27 19:44` resolved — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+  - `2026-08-27 19:44` resolved — On August 26, 2026, between 20:40 UTC and 00:51 UTC on August 27, GitHub Billing experienced degraded performance affecting billing budget pages and GitHub Copilot CLI sessions. Affected customers encountered failed budget page loads or failures when starting or continuing CLI sessions. We confirmed this impact for a small number of customers (<1%). <br /><br />This was caused by a concentrated workload that created processing delays in our data storage layer. Automated retries increased the load and prolonged the degradation. We mitigated the incident by rebalancing traffic within our infrastructure. <br /><br />We are improving workload isolation, retry behavior, and detection of concentrated load to reduce the likelihood of recurrence and shorten our time to detect and mitigate similar…
 
 ## Also above threshold (9)
 
@@ -82,4 +118,3 @@
 - `github` Incident with Copilot AI Model Providers (2h 8m) — https://stspg.io/573gc8p4328b
 - `grafana` Partial Logs Write Outage (1h 29m) — https://stspg.io/zc28d5qtcwdf
 - `github` Elevated errors on Fable 5 due to upstream provider (46m) — https://stspg.io/4dz9rv14dz14
-

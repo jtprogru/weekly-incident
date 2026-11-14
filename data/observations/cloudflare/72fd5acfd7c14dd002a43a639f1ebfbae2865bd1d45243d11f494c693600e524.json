@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/72lc3n642lkf",
+    "vendor": "cloudflare",
+    "native_id": "72lc3n642lkf",
+    "title": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+    "url": "https://www.cloudflarestatus.com/incidents/72lc3n642lkf",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-31T20:16:29Z",
+    "resolved_at": "2026-08-31T22:02:59Z",
+    "duration_minutes": 106,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "fc6yhl5q3r8k",
+        "status": "investigating",
+        "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+        "created_at": "2026-08-31T20:16:29.906Z"
+      },
+      {
+        "native_id": "h2lk2wq499w1",
+        "status": "identified",
+        "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+        "created_at": "2026-08-31T20:47:07.118Z"
+      },
+      {
+        "native_id": "2q375fj2zrh4",
+        "status": "monitoring",
+        "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+        "created_at": "2026-08-31T20:49:07.992Z"
+      },
+      {
+        "native_id": "s5lzdbwdcmm1",
+        "status": "resolved",
+        "body": "This incident has been resolved and the developer documentation has also been updated to reflect the same information: https://developers.cloudflare.com/cloudflare-one/integrations/identity-providers/one-time-pin/#allow-otp-emails-through-your-email-gateway",
+        "created_at": "2026-08-31T22:02:59.789Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-02T07:16:16.000Z"
+        }
+      ],
+      "created_at": "2026-08-31T20:16:29.000Z",
+      "id": "72lc3n642lkf",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved and the developer documentation has also been updated to reflect the same information: https://developers.cloudflare.com/cloudflare-one/integrations/identity-providers/one-time-pin/#allow-otp-emails-through-your-email-gateway",
+          "created_at": "2026-08-31T22:02:59.789Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-31T22:02:59.000Z",
+          "id": "s5lzdbwdcmm1",
+          "incident_id": "72lc3n642lkf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-31T23:06:55.979Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+          "created_at": "2026-08-31T20:49:07.992Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-31T20:49:07.000Z",
+          "id": "2q375fj2zrh4",
+          "incident_id": "72lc3n642lkf",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-31T21:38:56.367Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+          "created_at": "2026-08-31T20:47:07.118Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-31T20:47:07.000Z",
+          "id": "h2lk2wq499w1",
+          "incident_id": "72lc3n642lkf",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-31T21:38:48.117Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Some customers using Proofpoint may experience delayed Cloudflare notifications and login codes. Proofpoint is temporarily deferring messages with an SMTP 421 4.7.0 response. Cloudflare will continue retrying delivery.\n\nAffected customers should ask their Proofpoint administrator to allowlist notify.cloudflare.com and Cloudflare IPs 104.30.16.2,104.30.16.3,104.30.16.4,104.30.16.5,104.30.16.6, and 104.30.16.7. If this cannot be configured locally, contact Proofpoint for additional support.",
+          "created_at": "2026-08-31T20:16:29.906Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-31T20:16:29.000Z",
+          "id": "fc6yhl5q3r8k",
+          "incident_id": "72lc3n642lkf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-31T20:46:43.599Z"
+        }
+      ],
+      "monitoring_at": "2026-08-31T20:49:07.000Z",
+      "name": "Cloudflare Access one-time PIN emails blocked by certain email security gateways, including Proofpoint",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-31T22:02:59.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/72lc3n642lkf",
+      "started_at": "2026-08-31T20:16:29.000Z",
+      "status": "resolved",
+      "updated_at": "2026-08-31T23:06:55.996Z"
+    }
+  }
+}

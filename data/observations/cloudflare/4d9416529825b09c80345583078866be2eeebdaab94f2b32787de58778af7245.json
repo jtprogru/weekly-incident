@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/l0gsc0sccx2v",
+    "vendor": "cloudflare",
+    "native_id": "l0gsc0sccx2v",
+    "title": "Elevated errors for some requests in Ashburn, Virginia",
+    "url": "https://www.cloudflarestatus.com/incidents/l0gsc0sccx2v",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-22T17:01:31.311Z",
+    "resolved_at": "2026-10-22T17:31:27.138Z",
+    "duration_minutes": 29,
+    "components": [
+      "Workers",
+      "CDN/Cache",
+      "Ashburn, United States - (IAD)"
+    ],
+    "updates": [
+      {
+        "native_id": "pp6xbp9mrrkk",
+        "status": "investigating",
+        "body": "We are investigating elevated error rates (HTTP 502) for some requests handled by our Ashburn, Virginia data center. Some customers may see failed or intermittent responses for websites and applications, including Workers, served through this location. We are actively investigating and will provide updates as we learn more.",
+        "created_at": "2026-10-22T17:01:31.51Z"
+      },
+      {
+        "native_id": "n0ng90dfzlvw",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-22T17:31:27.138Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-02T17:30:10.987Z"
+        },
+        {
+          "created_at": "2020-03-25T19:03:33.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5wnz34mhfhrk",
+          "name": "CDN/Cache",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-28T14:30:39.261Z"
+        },
+        {
+          "created_at": "2014-10-27T20:30:01.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "3t0npclljyyg",
+          "name": "Ashburn, United States - (IAD)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-02T09:30:31.771Z"
+        }
+      ],
+      "created_at": "2026-10-22T17:01:31.000Z",
+      "id": "l0gsc0sccx2v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, United States - (IAD)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "CDN \u0026 Performance - CDN/Cache",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-22T17:31:27.138Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:31:27.138Z",
+          "id": "n0ng90dfzlvw",
+          "incident_id": "l0gsc0sccx2v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:31:27.138Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3t0npclljyyg",
+              "name": "North America - Ashburn, United States - (IAD)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5wnz34mhfhrk",
+              "name": "CDN \u0026 Performance - CDN/Cache",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated error rates (HTTP 502) for some requests handled by our Ashburn, Virginia data center. Some customers may see failed or intermittent responses for websites and applications, including Workers, served through this location. We are actively investigating and will provide updates as we learn more.",
+          "created_at": "2026-10-22T17:01:31.510Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:01:31.510Z",
+          "id": "pp6xbp9mrrkk",
+          "incident_id": "l0gsc0sccx2v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:01:31.510Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated errors for some requests in Ashburn, Virginia",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-22T17:31:27.138Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/l0gsc0sccx2v",
+      "started_at": "2026-10-22T17:01:31.311Z",
+      "status": "resolved",
+      "updated_at": "2026-10-22T17:31:27.163Z"
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/jds6b1j6dj8q",
+    "vendor": "cloudflare",
+    "native_id": "jds6b1j6dj8q",
+    "title": "Cloudflare Dashboard Workers KV Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/jds6b1j6dj8q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-18T06:42:21.807Z",
+    "resolved_at": "2026-09-18T08:15:41.658Z",
+    "duration_minutes": 93,
+    "components": [
+      "Dashboard",
+      "Workers KV"
+    ],
+    "updates": [
+      {
+        "native_id": "7kdj0626t4rr",
+        "status": "investigating",
+        "body": "When searching for a Workers KV in the dashboard, the page hangs, typically upon the second attempt, causing the entire dashboard to freeze. This issue only impacts searching in the dashboard. Workers and Workers KV themselves are not affected.\n\nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-09-18T06:42:21.863Z"
+      },
+      {
+        "native_id": "7bbcys0qs0nk",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-09-18T07:24:20.674Z"
+      },
+      {
+        "native_id": "2rwgqknwb904",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-18T08:04:48.027Z"
+      },
+      {
+        "native_id": "dtgr908qvlfw",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-18T08:15:41.658Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 40,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-22T19:26:57.000Z"
+        },
+        {
+          "created_at": "2019-01-24T16:49:32.000Z",
+          "description": "Workers KV is a data storage that allows you to store and retrieve data globally to build dynamic and performant APIs and websites that support high read volumes with low latency",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "tmh50tx2nprs",
+          "name": "Workers KV",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 121,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-08T19:42:46.000Z"
+        }
+      ],
+      "created_at": "2026-09-18T06:42:21.000Z",
+      "id": "jds6b1j6dj8q",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tmh50tx2nprs",
+              "name": "Cloudflare Sites and Services - Workers KV",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-18T08:15:41.658Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-18T08:15:41.658Z",
+          "id": "dtgr908qvlfw",
+          "incident_id": "jds6b1j6dj8q",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-18T08:15:41.658Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tmh50tx2nprs",
+              "name": "Cloudflare Sites and Services - Workers KV",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-18T08:04:48.027Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-18T08:04:48.027Z",
+          "id": "2rwgqknwb904",
+          "incident_id": "jds6b1j6dj8q",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-18T08:04:48.027Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tmh50tx2nprs",
+              "name": "Cloudflare Sites and Services - Workers KV",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-09-18T07:24:20.674Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-18T07:24:20.674Z",
+          "id": "7bbcys0qs0nk",
+          "incident_id": "jds6b1j6dj8q",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-18T07:24:20.674Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Cloudflare Sites and Services - Dashboard",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "tmh50tx2nprs",
+              "name": "Cloudflare Sites and Services - Workers KV",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "When searching for a Workers KV in the dashboard, the page hangs, typically upon the second attempt, causing the entire dashboard to freeze. This issue only impacts searching in the dashboard. Workers and Workers KV themselves are not affected.\n\nWe are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-09-18T06:42:21.863Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-18T06:42:21.863Z",
+          "id": "7kdj0626t4rr",
+          "incident_id": "jds6b1j6dj8q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-18T06:42:21.863Z"
+        }
+      ],
+      "monitoring_at": "2026-09-18T08:04:48.027Z",
+      "name": "Cloudflare Dashboard Workers KV Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-18T08:15:41.658Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/jds6b1j6dj8q",
+      "started_at": "2026-09-18T06:42:21.807Z",
+      "status": "resolved",
+      "updated_at": "2026-09-18T08:15:41.672Z"
+    }
+  }
+}

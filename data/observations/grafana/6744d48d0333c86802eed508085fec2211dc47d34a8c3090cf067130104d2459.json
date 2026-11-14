@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/x7ddtqs4j7ty",
+    "vendor": "grafana",
+    "native_id": "x7ddtqs4j7ty",
+    "title": "Metrics Alert Rule Evaluation Failures in AWS Australia (prod-au-southeast-1)",
+    "url": "https://stspg.io/yw5qq1khyhj1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-02T09:20:07Z",
+    "resolved_at": "2026-11-02T11:08:12.506Z",
+    "duration_minutes": 108,
+    "components": [
+      "AWS Australia - prod-au-southeast-1: Rule Evaluation"
+    ],
+    "updates": [
+      {
+        "native_id": "dfjg51frfmck",
+        "status": "investigating",
+        "body": "We are investigating an elevated rate of failures when evaluating Metrics alert and recording rules in AWS Australia (prod-au-southeast-1). Some customers may see rules missed or delayed rule evaluations, which can result in missed or delayed alert notifications and gaps in recorded series. Next update by 10:20 UTC.",
+        "created_at": "2026-11-02T09:20:07.351Z"
+      },
+      {
+        "native_id": "t6n5wn2xsbx6",
+        "status": "investigating",
+        "body": "We continue to investigate intermittent failures when evaluating alert and recording rules in AWS Australia (prod-au-southeast-1), first observed at approximately 08:00 UTC. Some customers may see rules fail to evaluate or be delayed, which can result in missed or delayed alert notifications and gaps in recorded series. We are continuing to investigate. Next update by 11:15 UTC.",
+        "created_at": "2026-11-02T10:17:07.49Z"
+      },
+      {
+        "native_id": "nt176j5f9nf9",
+        "status": "resolved",
+        "body": "Between approximately 08:00 and 09:40 UTC (about 1 hour 40 minutes), some customers in AWS Australia (prod-au-southeast-1) experienced intermittent failures when evaluating alert and recording rules, which may have caused missed or delayed alert notifications and gaps in recorded series. This has been fully resolved and rule evaluation is operating normally.",
+        "created_at": "2026-11-02T11:08:12.506Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:24:15.443Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "wjtq7dhjcyrm",
+          "name": "AWS Australia - prod-au-southeast-1: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-11-02T11:08:12.377Z"
+        }
+      ],
+      "created_at": "2026-11-02T09:20:07.000Z",
+      "id": "x7ddtqs4j7ty",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "wjtq7dhjcyrm",
+              "name": "Alerting and SLO - AWS Australia - prod-au-southeast-1: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between approximately 08:00 and 09:40 UTC (about 1 hour 40 minutes), some customers in AWS Australia (prod-au-southeast-1) experienced intermittent failures when evaluating alert and recording rules, which may have caused missed or delayed alert notifications and gaps in recorded series. This has been fully resolved and rule evaluation is operating normally.",
+          "created_at": "2026-11-02T11:08:12.506Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-02T11:08:12.506Z",
+          "id": "nt176j5f9nf9",
+          "incident_id": "x7ddtqs4j7ty",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-02T11:08:12.506Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wjtq7dhjcyrm",
+              "name": "Alerting and SLO - AWS Australia - prod-au-southeast-1: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to investigate intermittent failures when evaluating alert and recording rules in AWS Australia (prod-au-southeast-1), first observed at approximately 08:00 UTC. Some customers may see rules fail to evaluate or be delayed, which can result in missed or delayed alert notifications and gaps in recorded series. We are continuing to investigate. Next update by 11:15 UTC.",
+          "created_at": "2026-11-02T10:17:07.490Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-02T10:17:07.490Z",
+          "id": "t6n5wn2xsbx6",
+          "incident_id": "x7ddtqs4j7ty",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-02T10:17:07.490Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wjtq7dhjcyrm",
+              "name": "Alerting and SLO - AWS Australia - prod-au-southeast-1: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an elevated rate of failures when evaluating Metrics alert and recording rules in AWS Australia (prod-au-southeast-1). Some customers may see rules missed or delayed rule evaluations, which can result in missed or delayed alert notifications and gaps in recorded series. Next update by 10:20 UTC.",
+          "created_at": "2026-11-02T09:20:07.351Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-02T09:20:07.000Z",
+          "id": "dfjg51frfmck",
+          "incident_id": "x7ddtqs4j7ty",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-02T09:27:23.613Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Metrics Alert Rule Evaluation Failures in AWS Australia (prod-au-southeast-1)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-02T11:08:12.506Z",
+      "shortlink": "https://stspg.io/yw5qq1khyhj1",
+      "started_at": "2026-11-02T09:20:07.000Z",
+      "status": "resolved",
+      "updated_at": "2026-11-02T11:08:12.547Z"
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/vp96psrp0tvn",
+    "vendor": "grafana",
+    "native_id": "vp96psrp0tvn",
+    "title": "Partial OTLP Write Outage in prod-us-east-3",
+    "url": "https://stspg.io/05bt4v67qbyk",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-28T19:40:17.543Z",
+    "resolved_at": "2026-07-28T19:43:34.185Z",
+    "duration_minutes": 3,
+    "components": [
+      "AWS US East - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "w8kz6m6f6cbb",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting OTLP ingestion in the prod-us-east-3 region. Customers may experience intermittent failures when writing telemetry to the OTLP endpoint. Based on current information, logs are confirmed to be affected, and metrics and traces may also be impacted.\n\nOur investigation indicates intermittent failures began around 08:00 UTC, with the primary period of impact occurring between 15:30 UTC and 17:45 UTC. We are continuing to investigate the scope and root cause of this issue and will provide additional updates as more information becomes available.",
+        "created_at": "2026-07-28T19:40:17.649Z"
+      },
+      {
+        "native_id": "r8qxn9yzpf7b",
+        "status": "resolved",
+        "body": "The issue affecting OTLP ingestion in the prod-us-east-3 region has been resolved. Between 13:30 UTC and 17:45 UTC, some customers experienced intermittent failures when writing telemetry to the OTLP endpoint. Logs were confirmed to be affected, and metrics and traces may also have experienced intermittent ingestion failures.\n\nOur investigation has concluded, and the affected services have recovered.",
+        "created_at": "2026-07-28T19:43:34.185Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-28T19:38:04.353Z",
+          "description": null,
+          "group": false,
+          "group_id": "mnrssd8vqsf2",
+          "id": "wpkdzdqpdf7d",
+          "name": "AWS US East - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": "2026-07-28",
+          "status": "operational",
+          "updated_at": "2026-09-23T17:42:52.104Z"
+        }
+      ],
+      "created_at": "2026-07-28T19:40:17.554Z",
+      "id": "vp96psrp0tvn",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "wpkdzdqpdf7d",
+              "name": "OpenTelemetry Ingest Endpoint - AWS US East - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue affecting OTLP ingestion in the prod-us-east-3 region has been resolved. Between 13:30 UTC and 17:45 UTC, some customers experienced intermittent failures when writing telemetry to the OTLP endpoint. Logs were confirmed to be affected, and metrics and traces may also have experienced intermittent ingestion failures.\n\nOur investigation has concluded, and the affected services have recovered.",
+          "created_at": "2026-07-28T19:43:34.185Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-28T19:43:34.185Z",
+          "id": "r8qxn9yzpf7b",
+          "incident_id": "vp96psrp0tvn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T19:43:34.185Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "wpkdzdqpdf7d",
+              "name": "OpenTelemetry Ingest Endpoint - AWS US East - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting OTLP ingestion in the prod-us-east-3 region. Customers may experience intermittent failures when writing telemetry to the OTLP endpoint. Based on current information, logs are confirmed to be affected, and metrics and traces may also be impacted.\n\nOur investigation indicates intermittent failures began around 08:00 UTC, with the primary period of impact occurring between 15:30 UTC and 17:45 UTC. We are continuing to investigate the scope and root cause of this issue and will provide additional updates as more information becomes available.",
+          "created_at": "2026-07-28T19:40:17.649Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-28T19:40:17.649Z",
+          "id": "w8kz6m6f6cbb",
+          "incident_id": "vp96psrp0tvn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-28T19:40:17.649Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Partial OTLP Write Outage in prod-us-east-3",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-28T19:43:34.185Z",
+      "shortlink": "https://stspg.io/05bt4v67qbyk",
+      "started_at": "2026-07-28T19:40:17.543Z",
+      "status": "resolved",
+      "updated_at": "2026-07-28T19:43:34.199Z"
+    }
+  }
+}

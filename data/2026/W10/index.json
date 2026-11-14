@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 9,
+    "source_versions_total": 9,
+    "canonical_incidents_total": 9,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W10",
   "from": "2026-03-02T00:00:00Z",
   "to": "2026-03-09T00:00:00Z",
-  "generated_at": "2026-09-24T10:37:02.482449866Z",
+  "generated_at": "2026-11-14T12:36:38.232091035Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,22 @@
   ],
   "incidents": [
     {
-      "key": "aws/93d92e456f200868",
+      "canonical": {
+        "id": "ci-ca1adfedc3b0d11bb596da39",
+        "sources": [
+          {
+            "key": "aws/93d92e456f200868",
+            "path": "2026/W10/aws.json",
+            "url": "https://health.aws.amazon.com/health/status"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "first_observed_update",
+        "warnings": [
+          "AWS onset is the first observed message, not a verified impact start"
+        ]
+      },
+      "key": "ci-ca1adfedc3b0d11bb596da39",
       "vendor": "aws",
       "title": "Increased Connectivity Issues and API Error Rates",
       "url": "https://health.aws.amazon.com/health/status",
@@ -110,15 +134,28 @@
         "multipleservices-me-south-1"
       ],
       "score": {
-        "value": 593840,
-        "duration_minutes": 296920,
+        "value": 740960,
+        "duration_minutes": 370480,
         "components": 1,
         "vendor_weight": 2
       },
       "above_threshold": true
     },
     {
-      "key": "slack/1535",
+      "canonical": {
+        "id": "ci-28b809aa3e401e96c0708eba",
+        "sources": [
+          {
+            "key": "slack/1535",
+            "path": "2026/W10/slack.json",
+            "url": "https://slack-status.com/2026-03/e63ca9cc0d76539c"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-28b809aa3e401e96c0708eba",
       "vendor": "slack",
       "title": "Issues with App Mentions, Grid Migrations, and Notifications",
       "url": "https://slack-status.com/2026-03/e63ca9cc0d76539c",
@@ -129,8 +166,8 @@
       "duration_minutes": 1548,
       "ongoing": false,
       "components": [
-        "Notifications",
         "Apps/Integrations/APIs",
+        "Notifications",
         "Workspace/Org Administration"
       ],
       "score": {
@@ -142,7 +179,20 @@
       "above_threshold": true
     },
     {
-      "key": "slack/1534",
+      "canonical": {
+        "id": "ci-8c6e7b740e7c2c59d04e884f",
+        "sources": [
+          {
+            "key": "slack/1534",
+            "path": "2026/W10/slack.json",
+            "url": "https://slack-status.com/2026-03/5d92c691d977da03"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8c6e7b740e7c2c59d04e884f",
       "vendor": "slack",
       "title": "Degraded Search Performance for Dubai IDR Users – Middle East (Dubai) Region",
       "url": "https://slack-status.com/2026-03/5d92c691d977da03",
@@ -164,7 +214,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/vbrq9l2x48y6",
+      "canonical": {
+        "id": "ci-694efca0d56424e23e262173",
+        "sources": [
+          {
+            "key": "stripe/vbrq9l2x48y6",
+            "path": "2026/W10/stripe.json",
+            "url": "https://stspg.io/tc7z8ct6pyqd"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-694efca0d56424e23e262173",
       "vendor": "stripe",
       "title": "Federal Reserve ACH system disruption",
       "url": "https://stspg.io/tc7z8ct6pyqd",
@@ -186,7 +249,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/rv8m0mtn024h",
+      "canonical": {
+        "id": "ci-adc7ba4bc92103665e4cfa40",
+        "sources": [
+          {
+            "key": "stripe/rv8m0mtn024h",
+            "path": "2026/W10/stripe.json",
+            "url": "https://stspg.io/f411dzxr6x7b"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-adc7ba4bc92103665e4cfa40",
       "vendor": "stripe",
       "title": "Dashboard pages export errors",
       "url": "https://stspg.io/f411dzxr6x7b",
@@ -208,7 +284,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/cqvlkm3fcr7x",
+      "canonical": {
+        "id": "ci-38b483378a53b7b39e3139dd",
+        "sources": [
+          {
+            "key": "stripe/cqvlkm3fcr7x",
+            "path": "2026/W10/stripe.json",
+            "url": "https://stspg.io/29xyj5xknp7p"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-38b483378a53b7b39e3139dd",
       "vendor": "stripe",
       "title": "Elevated errors for multiple Payment Methods",
       "url": "https://stspg.io/29xyj5xknp7p",
@@ -230,7 +319,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/5jywybwt5qcz",
+      "canonical": {
+        "id": "ci-07122084487a66276aa043ad",
+        "sources": [
+          {
+            "key": "stripe/5jywybwt5qcz",
+            "path": "2026/W10/stripe.json",
+            "url": "https://stspg.io/5r6k5ht4vvg6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-07122084487a66276aa043ad",
       "vendor": "stripe",
       "title": "Elevated API errors",
       "url": "https://stspg.io/5r6k5ht4vvg6",
@@ -252,7 +354,20 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/lg8x09p2d2n3",
+      "canonical": {
+        "id": "ci-8da5b1de9672a87ce89fcf29",
+        "sources": [
+          {
+            "key": "circleci/lg8x09p2d2n3",
+            "path": "2026/W10/circleci.json",
+            "url": "https://stspg.io/wqmcz2chv2f6"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-8da5b1de9672a87ce89fcf29",
       "vendor": "circleci",
       "title": "docker not working in cimg:*",
       "url": "https://stspg.io/wqmcz2chv2f6",
@@ -274,7 +389,20 @@
       "above_threshold": false
     },
     {
-      "key": "stripe/xw65m0409rp0",
+      "canonical": {
+        "id": "ci-50aa9eb6d358e17cafc4524a",
+        "sources": [
+          {
+            "key": "stripe/xw65m0409rp0",
+            "path": "2026/W10/stripe.json",
+            "url": "https://stspg.io/sjvl135mk2yv"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-50aa9eb6d358e17cafc4524a",
       "vendor": "stripe",
       "title": "Elevated API errors",
       "url": "https://stspg.io/sjvl135mk2yv",

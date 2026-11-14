@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/r05vk75c594j",
+    "vendor": "github",
+    "native_id": "r05vk75c594j",
+    "title": "Degradation in repos contents API",
+    "url": "https://stspg.io/vhmsw2rhdcgv",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-04T22:02:15.783Z",
+    "resolved_at": "2026-09-04T22:23:34.887Z",
+    "duration_minutes": 21,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "qk55yks6crd4",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-09-04T22:02:15.829Z"
+      },
+      {
+        "native_id": "7pl0zx2bs24h",
+        "status": "resolved",
+        "body": "On September 4, 2026, between approximately 21:45 and 22:07 UTC, some users experienced errors and elevated latency for repository operations. The incident was fully resolved at 22:23 UTC.\u003cbr /\u003e\u003cbr /\u003eThe cause was a capacity change that spread one of our clusters across additional availability zones; our zone-aware traffic routing kept sending requests to the original zone for performance, overloading a small set of servers while the new capacity sat idle. We resolved the incident by reverting the change and letting traffic rebalance.\u003cbr /\u003e\u003cbr /\u003eWe are improving per-zone capacity guarantees, cross-zone load-shedding, and pre-production testing of multi-zone changes to prevent recurrence.",
+        "created_at": "2026-09-04T22:23:34.887Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-04T22:02:15.790Z",
+      "id": "r05vk75c594j",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On September 4, 2026, between approximately 21:45 and 22:07 UTC, some users experienced errors and elevated latency for repository operations. The incident was fully resolved at 22:23 UTC.\u003cbr /\u003e\u003cbr /\u003eThe cause was a capacity change that spread one of our clusters across additional availability zones; our zone-aware traffic routing kept sending requests to the original zone for performance, overloading a small set of servers while the new capacity sat idle. We resolved the incident by reverting the change and letting traffic rebalance.\u003cbr /\u003e\u003cbr /\u003eWe are improving per-zone capacity guarantees, cross-zone load-shedding, and pre-production testing of multi-zone changes to prevent recurrence.",
+          "created_at": "2026-09-04T22:23:34.887Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T22:23:34.887Z",
+          "id": "7pl0zx2bs24h",
+          "incident_id": "r05vk75c594j",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T23:34:38.039Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-09-04T22:02:15.829Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-04T22:02:15.829Z",
+          "id": "qk55yks6crd4",
+          "incident_id": "r05vk75c594j",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-04T22:02:15.829Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degradation in repos contents API",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-04T22:23:34.887Z",
+      "shortlink": "https://stspg.io/vhmsw2rhdcgv",
+      "started_at": "2026-09-04T22:02:15.783Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T23:34:38.045Z"
+    }
+  }
+}

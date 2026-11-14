@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/bpld6z1v27qx",
+    "vendor": "grafana",
+    "native_id": "bpld6z1v27qx",
+    "title": "Increased timeout errors in alert rule evaluations (AWS Germany, prod-eu-west-2)",
+    "url": "https://stspg.io/xk032xv99zbr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-21T11:48:27.997Z",
+    "resolved_at": "2026-10-21T13:26:30.885Z",
+    "duration_minutes": 98,
+    "components": [
+      "AWS Germany - prod-eu-west-2: Rule Evaluation"
+    ],
+    "updates": [
+      {
+        "native_id": "gffm5m31nt0q",
+        "status": "investigating",
+        "body": "Since approximately 20:30 UTC on October 20, we have observed an increase in alert rule evaluation errors affecting rules that query Grafana Cloud Prometheus (Mimir) data sources in Cluster AWS Germany.\nOur engineering team is actively investigating and working on remediation.",
+        "created_at": "2026-10-21T11:48:28.108Z"
+      },
+      {
+        "native_id": "zxmpqs5mx1k7",
+        "status": "identified",
+        "body": "The root cause of the issue has been indentified and we are working on the remediation steps.",
+        "created_at": "2026-10-21T12:12:54.904Z"
+      },
+      {
+        "native_id": "cmfcvykvxqgl",
+        "status": "monitoring",
+        "body": "Remediation measures have been applied, and we are monitoring the recovery.",
+        "created_at": "2026-10-21T13:12:32.418Z"
+      },
+      {
+        "native_id": "cn1fnvv9xbgf",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-21T13:26:30.885Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:33:40.251Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "hcj5p68bp2kc",
+          "name": "AWS Germany - prod-eu-west-2: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-21T13:12:32.364Z"
+        }
+      ],
+      "created_at": "2026-10-21T11:48:28.005Z",
+      "id": "bpld6z1v27qx",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-21T13:26:30.885Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T13:26:30.885Z",
+          "id": "cn1fnvv9xbgf",
+          "incident_id": "bpld6z1v27qx",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T13:26:30.885Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Remediation measures have been applied, and we are monitoring the recovery.",
+          "created_at": "2026-10-21T13:12:32.418Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T13:12:32.418Z",
+          "id": "cmfcvykvxqgl",
+          "incident_id": "bpld6z1v27qx",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T13:12:32.418Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The root cause of the issue has been indentified and we are working on the remediation steps.",
+          "created_at": "2026-10-21T12:12:54.904Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T12:12:54.904Z",
+          "id": "zxmpqs5mx1k7",
+          "incident_id": "bpld6z1v27qx",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T12:12:54.904Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since approximately 20:30 UTC on October 20, we have observed an increase in alert rule evaluation errors affecting rules that query Grafana Cloud Prometheus (Mimir) data sources in Cluster AWS Germany.\nOur engineering team is actively investigating and working on remediation.",
+          "created_at": "2026-10-21T11:48:28.108Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-21T11:48:28.108Z",
+          "id": "gffm5m31nt0q",
+          "incident_id": "bpld6z1v27qx",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-21T11:48:28.108Z"
+        }
+      ],
+      "monitoring_at": "2026-10-21T13:12:32.418Z",
+      "name": "Increased timeout errors in alert rule evaluations (AWS Germany, prod-eu-west-2)",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-21T13:26:30.885Z",
+      "shortlink": "https://stspg.io/xk032xv99zbr",
+      "started_at": "2026-10-21T11:48:27.997Z",
+      "status": "resolved",
+      "updated_at": "2026-10-21T13:26:30.916Z"
+    }
+  }
+}

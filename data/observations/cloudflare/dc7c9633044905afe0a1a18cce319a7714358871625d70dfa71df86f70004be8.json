@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/19g1m7tsvncw",
+    "vendor": "cloudflare",
+    "native_id": "19g1m7tsvncw",
+    "title": "Some Replicate models are failing to start",
+    "url": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-14T22:25:50.253Z",
+    "resolved_at": "2026-09-15T14:06:32.892Z",
+    "duration_minutes": 940,
+    "components": [
+      "Replicate"
+    ],
+    "updates": [
+      {
+        "native_id": "j9l5d3151msw",
+        "status": "investigating",
+        "body": "We are investigating an issue which is preventing Replicate models from failing to start new replicas.",
+        "created_at": "2026-09-14T22:25:50.35Z"
+      },
+      {
+        "native_id": "j02s37042n5w",
+        "status": "identified",
+        "body": "Some third party models as well as https://replicate.com/qwen/qwen-edit-multiangle are affected and are unable to scale out. Please use alternate models while we work with providers to publish fixed versions.",
+        "created_at": "2026-09-15T00:03:02.243Z"
+      },
+      {
+        "native_id": "r2t39cdmvnnf",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-15T14:06:32.892Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-06-30T13:39:35.000Z",
+          "description": "Replicate runs and fine-tunes open-source models.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fvgfcmy66tdr",
+          "name": "Replicate",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 94,
+          "showcase": false,
+          "start_date": "2026-06-30",
+          "status": "operational",
+          "updated_at": "2026-09-28T20:28:58.000Z"
+        }
+      ],
+      "created_at": "2026-09-14T22:25:50.000Z",
+      "id": "19g1m7tsvncw",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "Cloudflare Sites and Services - Replicate",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-15T14:06:32.892Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T14:06:32.892Z",
+          "id": "r2t39cdmvnnf",
+          "incident_id": "19g1m7tsvncw",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T14:06:32.892Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Some third party models as well as https://replicate.com/qwen/qwen-edit-multiangle are affected and are unable to scale out. Please use alternate models while we work with providers to publish fixed versions.",
+          "created_at": "2026-09-15T00:03:02.243Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T00:03:02.243Z",
+          "id": "j02s37042n5w",
+          "incident_id": "19g1m7tsvncw",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T00:03:02.243Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "Cloudflare Sites and Services - Replicate",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue which is preventing Replicate models from failing to start new replicas.",
+          "created_at": "2026-09-14T22:25:50.350Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-14T22:25:50.350Z",
+          "id": "j9l5d3151msw",
+          "incident_id": "19g1m7tsvncw",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-14T22:25:50.350Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Some Replicate models are failing to start",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-15T14:06:32.892Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/19g1m7tsvncw",
+      "started_at": "2026-09-14T22:25:50.253Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T14:06:32.911Z"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/9mcdtk1lphgl",
+    "vendor": "cloudflare",
+    "native_id": "9mcdtk1lphgl",
+    "title": "Issues with Workers VPC hostname route resolution on 2026-09-11",
+    "url": "https://www.cloudflarestatus.com/incidents/9mcdtk1lphgl",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-11T06:22:00Z",
+    "resolved_at": "2026-09-11T06:22:00Z",
+    "duration_minutes": 0,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "3k7v5bptdrsp",
+        "status": "resolved",
+        "body": "An issue prevented Workers VPC from correctly resolving hostname routes for a small subset of accounts between 06:22 and 09:38 UTC on Friday, September 11th, 2026. This problem has been fully resolved, and all services are operating normally.\n\nDuring this timeframe, affected accounts may have experienced connection failures, timeouts, or routing errors when Workers VPC attempted to fetch requests via hostname routes.\n\nThe issue was strictly limited to hostname route resolution within Workers VPC for the impacted accounts; direct IP-based and public routing, standard Workers executions, and all other services were not affected.\n\nOur engineering team identified and deployed a fix for the root cause, and we are continuing to monitor service metrics to ensure stability. We sincerely apologize for any disruption this may have caused.",
+        "created_at": "2026-09-11T10:24:35.973Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-09-11T06:22:00.000Z",
+      "id": "9mcdtk1lphgl",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "An issue prevented Workers VPC from correctly resolving hostname routes for a small subset of accounts between 06:22 and 09:38 UTC on Friday, September 11th, 2026. This problem has been fully resolved, and all services are operating normally.\n\nDuring this timeframe, affected accounts may have experienced connection failures, timeouts, or routing errors when Workers VPC attempted to fetch requests via hostname routes.\n\nThe issue was strictly limited to hostname route resolution within Workers VPC for the impacted accounts; direct IP-based and public routing, standard Workers executions, and all other services were not affected.\n\nOur engineering team identified and deployed a fix for the root cause, and we are continuing to monitor service metrics to ensure stability. We sincerely apologize for any disruption this may have caused.",
+          "created_at": "2026-09-11T10:24:35.973Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T06:22:00.000Z",
+          "id": "3k7v5bptdrsp",
+          "incident_id": "9mcdtk1lphgl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T10:24:35.973Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Issues with Workers VPC hostname route resolution on 2026-09-11",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-11T06:22:00.000Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/9mcdtk1lphgl",
+      "started_at": "2026-09-11T06:22:00.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-11T10:24:35.982Z"
+    }
+  }
+}

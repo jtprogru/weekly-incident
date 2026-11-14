@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "anthropic/q2kg8n613kr3",
+    "vendor": "anthropic",
+    "native_id": "q2kg8n613kr3",
+    "title": "Elevated errors across all models",
+    "url": "https://stspg.io/6xr5mmpjs1k3",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-29T19:49:45.378Z",
+    "resolved_at": "2026-07-29T22:36:20.701Z",
+    "duration_minutes": 166,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "grjn11m71x0n",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-07-29T19:49:45.537Z"
+      },
+      {
+        "native_id": "jcyx6n4lgps3",
+        "status": "identified",
+        "body": "We have identified an issue resulting in elevated errors across multiple models, and are working to resolve this. We will provide an update as soon as possible.",
+        "created_at": "2026-07-29T20:33:45.585Z"
+      },
+      {
+        "native_id": "4dlb9xhqjsps",
+        "status": "identified",
+        "body": "We are continuing to work to fully resolve issues resulting in elevated requests and latency to Claude models. At this time, we are seeing recovery across most models. We will provide an additional update as soon as possible.",
+        "created_at": "2026-07-29T21:38:34.218Z"
+      },
+      {
+        "native_id": "p19ryxz1zgl3",
+        "status": "monitoring",
+        "body": "From 12:45 PT / 19:45 UTC through to 1:26 PT / 21:26 UTC, we saw elevated rates of errors across Claude models. We have seen recovery in success rates across all models and are monitoring closely to ensure no further issues.",
+        "created_at": "2026-07-29T22:20:16.308Z"
+      },
+      {
+        "native_id": "m58b1s4f3qgy",
+        "status": "resolved",
+        "body": "This issue has been resolved.",
+        "created_at": "2026-07-29T22:36:20.701Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-07-29T19:49:45.388Z",
+      "id": "q2kg8n613kr3",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This issue has been resolved.",
+          "created_at": "2026-07-29T22:36:20.701Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T22:36:20.701Z",
+          "id": "m58b1s4f3qgy",
+          "incident_id": "q2kg8n613kr3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T22:36:20.701Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 12:45 PT / 19:45 UTC through to 1:26 PT / 21:26 UTC, we saw elevated rates of errors across Claude models. We have seen recovery in success rates across all models and are monitoring closely to ensure no further issues.",
+          "created_at": "2026-07-29T22:20:16.308Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T22:20:16.308Z",
+          "id": "p19ryxz1zgl3",
+          "incident_id": "q2kg8n613kr3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T22:20:16.308Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to work to fully resolve issues resulting in elevated requests and latency to Claude models. At this time, we are seeing recovery across most models. We will provide an additional update as soon as possible.",
+          "created_at": "2026-07-29T21:38:34.218Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T21:38:34.218Z",
+          "id": "4dlb9xhqjsps",
+          "incident_id": "q2kg8n613kr3",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T21:38:34.218Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have identified an issue resulting in elevated errors across multiple models, and are working to resolve this. We will provide an update as soon as possible.",
+          "created_at": "2026-07-29T20:33:45.585Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T20:33:45.585Z",
+          "id": "jcyx6n4lgps3",
+          "incident_id": "q2kg8n613kr3",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T20:33:45.585Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-07-29T19:49:45.537Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-29T19:49:45.537Z",
+          "id": "grjn11m71x0n",
+          "incident_id": "q2kg8n613kr3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-29T19:49:45.537Z"
+        }
+      ],
+      "monitoring_at": "2026-07-29T22:20:16.308Z",
+      "name": "Elevated errors across all models",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-29T22:36:20.701Z",
+      "shortlink": "https://stspg.io/6xr5mmpjs1k3",
+      "started_at": "2026-07-29T19:49:45.378Z",
+      "status": "resolved",
+      "updated_at": "2026-08-14T10:28:22.996Z"
+    }
+  }
+}

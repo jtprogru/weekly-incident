@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 5,
+    "source_versions_total": 5,
+    "canonical_incidents_total": 5,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W12",
   "from": "2026-03-16T00:00:00Z",
   "to": "2026-03-23T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "stripe/gc6z4c7t1hdq",
+      "canonical": {
+        "id": "ci-2a67f55dca2afd6cd9d25c1f",
+        "sources": [
+          {
+            "key": "stripe/gc6z4c7t1hdq",
+            "path": "2026/W12/stripe.json",
+            "url": "https://stspg.io/dzll5mrw1ryz"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-2a67f55dca2afd6cd9d25c1f",
       "vendor": "stripe",
       "title": "Elevated Pix errors",
       "url": "https://stspg.io/dzll5mrw1ryz",
@@ -127,7 +149,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/4y3y5flslh6p",
+      "canonical": {
+        "id": "ci-73545573a9a7172de10c7a09",
+        "sources": [
+          {
+            "key": "stripe/4y3y5flslh6p",
+            "path": "2026/W12/stripe.json",
+            "url": "https://stspg.io/0ggy0mssf939"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-73545573a9a7172de10c7a09",
       "vendor": "stripe",
       "title": "Elevated errors on Klarna payments",
       "url": "https://stspg.io/0ggy0mssf939",
@@ -149,7 +184,20 @@
       "above_threshold": false
     },
     {
-      "key": "datadog/j5zpb9phy9m6",
+      "canonical": {
+        "id": "ci-14dda82a474ebe0feb60f33d",
+        "sources": [
+          {
+            "key": "datadog/j5zpb9phy9m6",
+            "path": "2026/W12/datadog.json",
+            "url": "https://stspg.io/43kkcl1tqrrk"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-14dda82a474ebe0feb60f33d",
       "vendor": "datadog",
       "title": "Intermittent \"No Data\" Status for Monitors",
       "url": "https://stspg.io/43kkcl1tqrrk",
@@ -171,7 +219,20 @@
       "above_threshold": true
     },
     {
-      "key": "circleci/01zmcr93tysy",
+      "canonical": {
+        "id": "ci-3d462e59780bade8ffa4a173",
+        "sources": [
+          {
+            "key": "circleci/01zmcr93tysy",
+            "path": "2026/W12/circleci.json",
+            "url": "https://stspg.io/hk09l57sybkn"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-3d462e59780bade8ffa4a173",
       "vendor": "circleci",
       "title": "Insights API and Dashboard displaying stale data for reporting windows greater than 24 hours",
       "url": "https://stspg.io/hk09l57sybkn",
@@ -193,7 +254,23 @@
       "above_threshold": false
     },
     {
-      "key": "circleci/g0b66jlry2kf",
+      "canonical": {
+        "duration_unknown": true,
+        "id": "ci-d5531c2b79f49314f02b08ae",
+        "sources": [
+          {
+            "key": "circleci/g0b66jlry2kf",
+            "path": "2026/W12/circleci.json",
+            "url": "https://stspg.io/n8qyfjwryytr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": [
+          "Vendor resolved_at precedes started_at; duration is unknown, score uses zero duration; decision:legacy-time-circleci-g0b66jlry2kf"
+        ]
+      },
+      "key": "ci-d5531c2b79f49314f02b08ae",
       "vendor": "circleci",
       "title": "Pipelines — Workflow Creation Errors and Missing GitHub Status Updates",
       "url": "https://stspg.io/n8qyfjwryytr",
@@ -201,7 +278,6 @@
       "status": "resolved",
       "started_at": "2026-03-18T17:15:56.272Z",
       "resolved_at": "2026-03-18T16:00:00Z",
-      "duration_minutes": 0,
       "ongoing": false,
       "components": [],
       "score": {

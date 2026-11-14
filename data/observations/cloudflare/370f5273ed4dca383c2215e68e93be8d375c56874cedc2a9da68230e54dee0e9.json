@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/s4x7n3nfqnyy",
+    "vendor": "cloudflare",
+    "native_id": "s4x7n3nfqnyy",
+    "title": "Cloudflare Queues issues",
+    "url": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-14T20:22:30.07Z",
+    "resolved_at": "2026-09-15T22:31:10.07Z",
+    "duration_minutes": 1568,
+    "components": [
+      "Queues"
+    ],
+    "updates": [
+      {
+        "native_id": "lg5w78vj3xp0",
+        "status": "investigating",
+        "body": "Cloudflare is aware of investigating issues with our Cloudflare Queues product.",
+        "created_at": "2026-09-14T20:22:30.141Z"
+      },
+      {
+        "native_id": "tb0zcbfkn71c",
+        "status": "identified",
+        "body": "We are investigating an issue where messages published to some queues are not being delivered to their consumers, resulting in delivery delays. Publishing to queues is unaffected, and messages are being received and safely retained — no messages are being lost. We have identified the root cause and are actively working on a fix. Affected messages will be delivered automatically once the issue is resolved.",
+        "created_at": "2026-09-15T02:01:55.742Z"
+      },
+      {
+        "native_id": "cx280rgz0nqv",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-09-15T15:14:25.707Z"
+      },
+      {
+        "native_id": "3s7d75sxw7l6",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-15T22:31:10.07Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-10-22T09:19:59.000Z",
+          "description": "Send and receive messages with guaranteed delivery and no charges for egress bandwidth.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3z7cmdfch5kb",
+          "name": "Queues",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 82,
+          "showcase": false,
+          "start_date": "2025-10-22",
+          "status": "operational",
+          "updated_at": "2026-09-22T19:26:15.000Z"
+        }
+      ],
+      "created_at": "2026-09-14T20:22:30.000Z",
+      "id": "s4x7n3nfqnyy",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Cloudflare Sites and Services - Queues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-15T22:31:10.070Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T22:31:10.070Z",
+          "id": "3s7d75sxw7l6",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T22:31:10.070Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-09-15T15:14:25.707Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T15:14:25.707Z",
+          "id": "cx280rgz0nqv",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T15:14:25.707Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Cloudflare Sites and Services - Queues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are investigating an issue where messages published to some queues are not being delivered to their consumers, resulting in delivery delays. Publishing to queues is unaffected, and messages are being received and safely retained — no messages are being lost. We have identified the root cause and are actively working on a fix. Affected messages will be delivered automatically once the issue is resolved.",
+          "created_at": "2026-09-15T02:01:55.742Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-15T02:01:55.742Z",
+          "id": "tb0zcbfkn71c",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-15T02:01:55.742Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Cloudflare Sites and Services - Queues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of investigating issues with our Cloudflare Queues product.",
+          "created_at": "2026-09-14T20:22:30.141Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-14T20:22:30.141Z",
+          "id": "lg5w78vj3xp0",
+          "incident_id": "s4x7n3nfqnyy",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-14T20:22:30.141Z"
+        }
+      ],
+      "monitoring_at": "2026-09-15T15:14:25.707Z",
+      "name": "Cloudflare Queues issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-15T22:31:10.070Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy",
+      "started_at": "2026-09-14T20:22:30.070Z",
+      "status": "resolved",
+      "updated_at": "2026-09-15T22:31:10.087Z"
+    }
+  }
+}

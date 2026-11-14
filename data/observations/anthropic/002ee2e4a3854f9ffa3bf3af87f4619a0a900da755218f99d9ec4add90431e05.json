@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "anthropic/620swtqyn24k",
+    "vendor": "anthropic",
+    "native_id": "620swtqyn24k",
+    "title": "Delays in credit purchases",
+    "url": "https://stspg.io/jc510qy51bfh",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-01T23:26:48.984Z",
+    "resolved_at": "2026-09-02T01:24:22.251Z",
+    "duration_minutes": 117,
+    "components": [
+      "Claude Console (platform.claude.com)"
+    ],
+    "updates": [
+      {
+        "native_id": "rrq7fll085b2",
+        "status": "monitoring",
+        "body": "We have identified and resolved an issue where users who reached a balance of zero usage credits saw delays in the availability of newly purchased credits, resulting in some requests to the Claude API receiving 'credit balance is too low' errors erroneously. This affected credits purchased from 05:10am PT / 12:10 UTC to 2:35pm PT / 21:35 UTC. At this time, newly purchased credits should be available as expected and we are working to resolve any remaining impact.",
+        "created_at": "2026-09-01T23:26:49.062Z"
+      },
+      {
+        "native_id": "mfzv3qk9828w",
+        "status": "resolved",
+        "body": "This issue has been resolved.",
+        "created_at": "2026-09-02T01:24:22.251Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:49.982Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "0qbwn08sd68x",
+          "name": "Claude Console (platform.claude.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 2,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-11-13T11:05:23.576Z"
+        }
+      ],
+      "created_at": "2026-09-01T23:26:48.992Z",
+      "id": "620swtqyn24k",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This issue has been resolved.",
+          "created_at": "2026-09-02T01:24:22.251Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-02T01:24:22.251Z",
+          "id": "mfzv3qk9828w",
+          "incident_id": "620swtqyn24k",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-02T01:24:22.251Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0qbwn08sd68x",
+              "name": "Claude Console (platform.claude.com)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have identified and resolved an issue where users who reached a balance of zero usage credits saw delays in the availability of newly purchased credits, resulting in some requests to the Claude API receiving 'credit balance is too low' errors erroneously. This affected credits purchased from 05:10am PT / 12:10 UTC to 2:35pm PT / 21:35 UTC. At this time, newly purchased credits should be available as expected and we are working to resolve any remaining impact.",
+          "created_at": "2026-09-01T23:26:49.062Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-01T23:26:49.062Z",
+          "id": "rrq7fll085b2",
+          "incident_id": "620swtqyn24k",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-01T23:26:49.062Z"
+        }
+      ],
+      "monitoring_at": "2026-09-01T23:26:49.062Z",
+      "name": "Delays in credit purchases",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": "[]",
+      "resolved_at": "2026-09-02T01:24:22.251Z",
+      "shortlink": "https://stspg.io/jc510qy51bfh",
+      "started_at": "2026-09-01T23:26:48.984Z",
+      "status": "resolved",
+      "updated_at": "2026-09-02T01:24:22.264Z"
+    }
+  }
+}

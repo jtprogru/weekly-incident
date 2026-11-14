@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W42",
   "from": "2025-10-13T00:00:00Z",
   "to": "2025-10-20T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/twnwtk275knx",
+      "canonical": {
+        "id": "ci-73a428fa1e5d28803e4ea9f3",
+        "sources": [
+          {
+            "key": "datadog/twnwtk275knx",
+            "path": "2025/W42/datadog.json",
+            "url": "https://stspg.io/x812ktyhkf0q"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-73a428fa1e5d28803e4ea9f3",
       "vendor": "datadog",
       "title": "Delayed AWS, GCP, Azure, SaaS integrations Metrics and Logs",
       "url": "https://stspg.io/x812ktyhkf0q",

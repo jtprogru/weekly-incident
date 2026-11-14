@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/rn76zdy367m2",
+    "vendor": "github",
+    "native_id": "rn76zdy367m2",
+    "title": "Disruption with Copilot Cloud services",
+    "url": "https://stspg.io/22p3vp78z20q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-29T10:19:55.313Z",
+    "resolved_at": "2026-10-29T12:49:52.145Z",
+    "duration_minutes": 149,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "x2kzr3073dln",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-29T10:19:55.374Z"
+      },
+      {
+        "native_id": "3fhtq14nkf22",
+        "status": "investigating",
+        "body": "We are experiencing increased failures and latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app.",
+        "created_at": "2026-10-29T10:22:18.212Z"
+      },
+      {
+        "native_id": "s6p73mbnr23j",
+        "status": "investigating",
+        "body": "We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app.",
+        "created_at": "2026-10-29T11:01:07.99Z"
+      },
+      {
+        "native_id": "scqjyw9jwkl7",
+        "status": "investigating",
+        "body": "We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app. We are actively applying mitigations and monitoring for recovery.",
+        "created_at": "2026-10-29T11:37:53.43Z"
+      },
+      {
+        "native_id": "rq3bj6zldxk4",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-29T12:33:32.177Z"
+      },
+      {
+        "native_id": "z3gdmb1h9414",
+        "status": "resolved",
+        "body": "On October 29, 2026, between 05:50 UTC and 12:40 UTC, Copilot agent sessions on GitHub.com and in VS Code were degraded. Live session updates often failed to load, and on average 2.14% of requests to the agent sessions service failed, with a peak of 8.61%. For about 10 minutes around 09:20 UTC, up to 40% of requests to list or create agent sessions failed. Copilot Chat on GitHub.com showed degraded agent session features during this time. The issue occurred when a large increase in task-list requests from a client experiment overloaded the cache that supports the agent sessions service. We mitigated the impact by increasing cache capacity, reducing nonessential load on the cache, and disabling the client experiment. We are moving rate limiting to separate infrastructure, reducing client polling, and improving our alerting so we can detect and respond to this type of overload faster.",
+        "created_at": "2026-10-29T12:49:52.145Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-10-29T10:19:55.318Z",
+      "id": "rn76zdy367m2",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On October 29, 2026, between 05:50 UTC and 12:40 UTC, Copilot agent sessions on GitHub.com and in VS Code were degraded. Live session updates often failed to load, and on average 2.14% of requests to the agent sessions service failed, with a peak of 8.61%. For about 10 minutes around 09:20 UTC, up to 40% of requests to list or create agent sessions failed. Copilot Chat on GitHub.com showed degraded agent session features during this time. The issue occurred when a large increase in task-list requests from a client experiment overloaded the cache that supports the agent sessions service. We mitigated the impact by increasing cache capacity, reducing nonessential load on the cache, and disabling the client experiment. We are moving rate limiting to separate infrastructure, reducing client polling, and improving our alerting so we can detect and respond to this type of overload faster.",
+          "created_at": "2026-10-29T12:49:52.145Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T12:49:52.145Z",
+          "id": "z3gdmb1h9414",
+          "incident_id": "rn76zdy367m2",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T18:36:25.181Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-29T12:33:32.177Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T12:33:32.177Z",
+          "id": "rq3bj6zldxk4",
+          "incident_id": "rn76zdy367m2",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T12:33:32.177Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app. We are actively applying mitigations and monitoring for recovery.",
+          "created_at": "2026-10-29T11:37:53.430Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T11:37:53.430Z",
+          "id": "scqjyw9jwkl7",
+          "incident_id": "rn76zdy367m2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T11:37:53.430Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We continue to experience failure rates of 1-2% and increased latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app.",
+          "created_at": "2026-10-29T11:01:07.990Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T11:01:07.990Z",
+          "id": "s6p73mbnr23j",
+          "incident_id": "rn76zdy367m2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T11:01:07.990Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are experiencing increased failures and latency on our agent sessions service, including creating and listing sessions. This can impact cloud based agent sessions on web, mobile, VS Code, CLI and the GitHub Copilot app.",
+          "created_at": "2026-10-29T10:22:18.212Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T10:22:18.212Z",
+          "id": "3fhtq14nkf22",
+          "incident_id": "rn76zdy367m2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T10:22:18.212Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-29T10:19:55.374Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T10:19:55.374Z",
+          "id": "x2kzr3073dln",
+          "incident_id": "rn76zdy367m2",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T10:19:55.374Z"
+        }
+      ],
+      "monitoring_at": "2026-10-29T12:33:32.177Z",
+      "name": "Disruption with Copilot Cloud services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-29T12:49:52.145Z",
+      "shortlink": "https://stspg.io/22p3vp78z20q",
+      "started_at": "2026-10-29T10:19:55.313Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T18:36:25.185Z"
+    }
+  }
+}

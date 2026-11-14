@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "datadog/29t1p0vx8sjz",
+    "vendor": "datadog",
+    "native_id": "29t1p0vx8sjz",
+    "title": "Delayed APM Trace Metrics",
+    "url": "https://stspg.io/w6292y3bqkk1",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-06-26T13:38:59.126Z",
+    "resolved_at": "2026-06-26T13:45:37.493Z",
+    "duration_minutes": 6,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "fz4krvxsb07f",
+        "status": "identified",
+        "body": "We have identified increased latency processing APM Trace Metrics and are working on a fix.\nAs a result of this issue, some users may see delayed APM Trace Metrics since 13:07 UTC.\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally..",
+        "created_at": "2026-06-26T13:38:59.166Z"
+      },
+      {
+        "native_id": "qbkxb2sg9g6g",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-06-26T13:41:24.381Z"
+      },
+      {
+        "native_id": "cw28lpxxczd7",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-06-26T13:45:37.493Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-26T09:38:59.132-04:00",
+      "id": "29t1p0vx8sjz",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-06-26T09:45:37.493-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-26T09:45:37.493-04:00",
+          "id": "cw28lpxxczd7",
+          "incident_id": "29t1p0vx8sjz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-26T09:45:37.493-04:00"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-06-26T09:41:24.381-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-26T09:41:24.381-04:00",
+          "id": "qbkxb2sg9g6g",
+          "incident_id": "29t1p0vx8sjz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-26T09:41:24.381-04:00"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified increased latency processing APM Trace Metrics and are working on a fix.\nAs a result of this issue, some users may see delayed APM Trace Metrics since 13:07 UTC.\nTo prevent false monitor alerts due to delayed data, monitors affected by the delay will not notify and will automatically resume once current data is available. All other monitors will operate normally..",
+          "created_at": "2026-06-26T09:38:59.166-04:00",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-06-26T09:38:59.166-04:00",
+          "id": "fz4krvxsb07f",
+          "incident_id": "29t1p0vx8sjz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-26T09:38:59.166-04:00"
+        }
+      ],
+      "monitoring_at": "2026-06-26T09:41:24.381-04:00",
+      "name": "Delayed APM Trace Metrics",
+      "page_id": "1k6wzpspjf99",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-26T09:45:37.493-04:00",
+      "shortlink": "https://stspg.io/w6292y3bqkk1",
+      "started_at": "2026-06-26T09:38:59.126-04:00",
+      "status": "resolved",
+      "updated_at": "2026-06-26T09:45:37.509-04:00"
+    }
+  }
+}

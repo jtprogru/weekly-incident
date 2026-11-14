@@ -58,6 +58,7 @@ func BuildIndex(w archive.Week, incidents []model.Incident, sources []model.Sour
 	for _, in := range incidents {
 		_, ongoing := in.DurationAt(now)
 		entries = append(entries, model.IndexEntry{
+			Canonical:       in.Canonical,
 			Key:             in.Key,
 			Vendor:          in.Vendor,
 			Title:           in.Title,

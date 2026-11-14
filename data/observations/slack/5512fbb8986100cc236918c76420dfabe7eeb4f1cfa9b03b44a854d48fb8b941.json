@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "slack/1532",
+    "vendor": "slack",
+    "native_id": "1532",
+    "title": "Slack Email Delivery Feature Degradation",
+    "url": "https://slack-status.com/2026-02/fb905e8a457042ba",
+    "impact": "unknown",
+    "status": "resolved",
+    "started_at": "2026-02-25T00:26:58Z",
+    "resolved_at": "2026-02-25T04:52:24Z",
+    "duration_minutes": 265,
+    "components": [
+      "Messaging"
+    ],
+    "updates": [
+      {
+        "status": "unknown",
+        "body": "We're aware of an issue where some users are unable to receive email confirmation codes and invites from Slack. As a result, these users cannot complete email login processes or accept invitations. We are currently investigating the cause. We’re actively working on multiple resolution paths.\nWe'll provide an update in 60 minutes or sooner if additional information becomes available.",
+        "created_at": "2026-02-25T00:26:58Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue is still ongoing.\nWe have seen that some emails that are not designated as ‘blocked’ are automatically being blocked. This issue persists even when these email addresses are added to specific Allow Lists.\nOur priority is to fully understand the technical issue behind email delivery, to enable us to restore service to customers as quickly as possible.\nWe'll be back with another update once we have news to share.",
+        "created_at": "2026-02-25T01:17:17Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue continues.\nOur investigation has identified that emails are being blocked by a suppression list subtype where our internal suppression checks aren't aligning for certain accounts. Even when affected addresses are added to our Allow List, the issue persists.\nWe can confirm that this issue is not a global suppression issue, and the issue relates only to those emails affected by the suppression list subtype identified.\nWe’re actively working to identify which sending accounts are not being accurately covered by these suppression checks, and to implement a fix that will restore email delivery for our affected users.\nWe'll be back with another update once we have news to share.",
+        "created_at": "2026-02-25T02:33:16Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue continues.\nWe've ‌further identified that the cause relates to a missing data field in our email validation system, which has been causing messages to be incorrectly blocked.\nWe’ve developed and deployed a fix that is currently being rolled out across our infrastructure.\nWe expect the fix to be fully deployed within the hour, when testing and validation will begin.\nThe fix is expected to restore email services to all impacted users.\nWe'll provide an update once the deployment is complete and we've confirmed service restoration.",
+        "created_at": "2026-02-25T03:26:27Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue continues.\nThe fix deployment across all production infrastructure is expected to take a further 30 minutes.\nInitial testing shows that email delivery functionality working as expected following configuration changes on impacted accounts.\nWe’ll provide a final update once full deployment and validation has been completed.",
+        "created_at": "2026-02-25T04:38:13Z"
+      },
+      {
+        "status": "unknown",
+        "body": "Our work on this issue has concluded.\nWe’ve tested and validated the fix deployment, and can see previously impacted accounts now receiving emails, as intended.\nThe incident has been resolved as of 04:40 UTC, February 25\nThis is the final update for this incident. We apologize for any inconvenience to our users for this issue.",
+        "created_at": "2026-02-25T04:52:24Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "date_created": "2026-02-24T16:26:58-08:00",
+      "date_updated": "2026-02-24T20:52:24-08:00",
+      "id": 1532,
+      "notes": [
+        {
+          "body": "\u003cp\u003eWe're aware of an issue where some users are unable to receive email confirmation codes and invites from Slack. As a result, these users cannot complete email login processes or accept invitations. We are currently investigating the cause. We’re actively working on multiple resolution paths.\u0026nbsp;\u003c/p\u003e\u003cp\u003eWe'll provide an update in 60 minutes or sooner if additional information becomes available.\u003c/p\u003e\u003cp\u003e\u003cbr\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-02-24T16:26:58-08:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue is still ongoing.\u003c/p\u003e\u003cul\u003e\u003cli\u003eWe have seen that some emails that are not designated as ‘blocked’ are automatically being blocked. This issue persists even when these email addresses are added to specific Allow Lists.\u0026nbsp;\u003c/li\u003e\u003cli\u003eOur priority is to fully understand the technical issue behind email delivery, to enable us to restore service to customers as quickly as possible.\u0026nbsp;\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll be back with another update once we have news to share.\u003c/p\u003e",
+          "date_created": "2026-02-24T17:17:17-08:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue continues.\u003c/p\u003e\u003cul\u003e\u003cli\u003eOur investigation has identified that emails are being blocked by a suppression list subtype where our internal suppression checks aren't aligning for certain accounts. Even when affected addresses are added to our Allow List, the issue persists.\u003c/li\u003e\u003cli\u003eWe can confirm that this issue is not a global suppression issue, and the issue relates only to those emails affected by the suppression list subtype identified.\u003c/li\u003e\u003cli\u003eWe’re actively working to identify which sending accounts are not being accurately covered by these suppression checks, and to implement a fix that will restore email delivery for our affected users.\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll be back with another update once we have news to share.\u003c/p\u003e",
+          "date_created": "2026-02-24T18:33:16-08:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue continues.\u003c/p\u003e\u003cul\u003e\u003cli\u003eWe've ‌further identified that the cause relates to a missing data field in our email validation system, which has been causing messages to be incorrectly blocked.\u0026nbsp;\u003c/li\u003e\u003cli\u003eWe’ve developed and deployed a fix that is currently being rolled out across our infrastructure.\u0026nbsp;\u003c/li\u003e\u003cli\u003eWe expect the fix to be fully deployed within the hour, when testing and validation will begin.\u003c/li\u003e\u003cli\u003eThe fix is expected to restore email services to all impacted users. \u0026nbsp;\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe'll provide an update once the deployment is complete and we've confirmed service restoration.\u003cbr\u003e\u003cbr\u003e\u003c/p\u003e",
+          "date_created": "2026-02-24T19:26:27-08:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue continues.\u003c/p\u003e\u003cul\u003e\u003cli\u003eThe fix deployment across all production infrastructure is expected to take a further 30 minutes.\u0026nbsp;\u003c/li\u003e\u003cli\u003eInitial testing shows that email delivery functionality working as expected following configuration changes on impacted accounts.\u0026nbsp;\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eWe’ll provide a final update once full deployment and validation has been completed.\u003c/p\u003e",
+          "date_created": "2026-02-24T20:38:13-08:00"
+        },
+        {
+          "body": "\u003cp\u003eOur work on this issue has concluded.\u003c/p\u003e\u003cul\u003e\u003cli\u003eWe’ve tested and validated the fix deployment, and can see previously impacted accounts now receiving emails, as intended.\u003c/li\u003e\u003cli\u003eThe incident has been resolved as of 04:40 UTC, February 25\u003c/li\u003e\u003c/ul\u003e\u003cp\u003eThis is the final update for this incident. We apologize for any inconvenience to our users for this issue.\u0026nbsp;\u003c/p\u003e",
+          "date_created": "2026-02-24T20:52:24-08:00"
+        }
+      ],
+      "services": [
+        "Messaging"
+      ],
+      "status": "resolved",
+      "title": "Slack Email Delivery Feature Degradation",
+      "type": "incident",
+      "url": "https://slack-status.com/2026-02/fb905e8a457042ba"
+    }
+  }
+}

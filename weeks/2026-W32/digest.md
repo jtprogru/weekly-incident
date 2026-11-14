@@ -1,37 +1,42 @@
 # Week 2026-W32
 
-2026-08-03 to 2026-08-09 (UTC). Generated 2026-08-23 06:19.
+2026-08-03 to 2026-08-09 (UTC). Generated 2026-11-14 12:36.
 
-49 incidents collected, 24 above threshold. All 13 sources responded.
+53 canonical incidents, 27 above threshold. 2 of 14 sources unavailable: datadog, yandexcloud.
+
+53 source records (54 saved revisions) → 53 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## Above threshold
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
 | 1 | cloudflare | [R2 Availability Issues](https://www.cloudflarestatus.com/incidents/9fzfjzc5ms0h) | 2026-08-07 18:42 | 1d 7h 53m | minor | R2 | 3443 = 1913 × 1 × 1.8 |
-| 2 | anthropic | [Degraded performance of multiple models](https://stspg.io/v7xpxd5xg5pc) | 2026-08-05 07:05 | 7h 8m | minor | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 2568 = 428 × 4 × 1.5 |
+| 2 | anthropic | [Degraded performance of multiple models](https://stspg.io/v7xpxd5xg5pc) | 2026-08-05 07:05 | 7h 8m | minor | Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai | 2568 = 428 × 4 × 1.5 |
 | 3 | github | [Incident with Actions](https://stspg.io/rcz3fcm83sff) | 2026-08-06 15:22 | 10h 41m | critical | Actions, Pages | 1923 = 641 × 2 × 1.5 |
 | 4 | cloudflare | [Cloudflare Workers Runtime API issues](https://www.cloudflarestatus.com/incidents/238b69fw6l55) | 2026-08-03 15:13 | 15h 59m | minor | Workers | 1726 = 959 × 1 × 1.8 |
 | 5 | cloudflare | [Network Performance Issues in Istanbul](https://www.cloudflarestatus.com/incidents/x44ny80374v7) | 2026-08-08 08:25 | 11h 19m | minor | Network | 1222 = 679 × 1 × 1.8 |
 | 6 | digitalocean | [Account Registration, Droplets, and Related Services](https://stspg.io/grfh9nf5bp3f) | 2026-08-08 18:57 | 6h 3m | minor | Global, Global, Global, Reserved IP | 1162 = 363 × 4 × 0.8 |
 | 7 | grafana | [Some Grafana Instances Unavailable](https://stspg.io/4jyq27wvr4kk) | 2026-08-04 19:11 | 6h 20m | critical | GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4 | 1140 = 380 × 3 × 1.0 |
 | 8 | openai | [Elevated errors with image generation](https://status.openai.com/incidents/01KZ96S5HEWX0CX26W2WFYFKE6) | 2026-08-05 14:55 | 8h 26m | minor | — | 759 = 506 × 1 × 1.5 |
-| 9 | openai | [Issues with Custom GPT actions](https://status.openai.com/incidents/01KZ9DMQD2GJ8JJWDN7572RH78) | 2026-08-05 16:55 | 5h 53m | minor | — | 530 = 353 × 1 × 1.5 |
-| 10 | digitalocean | [Spaces Cold Storage Billing](https://stspg.io/qb6zv0kdjy50) | 2026-08-04 16:13 | 5h 29m | minor | Global, Billing | 526 = 329 × 2 × 0.8 |
-| 11 | circleci | [Increased Job Queue Times: Windows, Android, and GPU](https://stspg.io/525771jb0gj4) | 2026-08-04 19:27 | 4h 12m | minor | Machine Jobs, Windows Jobs | 504 = 252 × 2 × 1.0 |
-| 12 | circleci | [Usage API data delayed for 8/5](https://stspg.io/kntq9cf4jgpk) | 2026-08-06 13:06 | 6h 48m | none | CircleCI API | 408 = 408 × 1 × 1.0 |
-| 13 | cloudflare | [Connectivity issues affecting access to some website from certain networks in Egypt](https://www.cloudflarestatus.com/incidents/ydgyl9v3g02s) | 2026-08-08 14:26 | 2h 53m | minor | Network | 311 = 173 × 1 × 1.8 |
-| 14 | openai | [Elevated errors in ChatGPT conversations with files](https://status.openai.com/incidents/01KZ9E7QD8WFJD5DMF73QGVYH8) | 2026-08-05 17:06 | 3h 13m | minor | — | 290 = 193 × 1 × 1.5 |
-| 15 | cloudflare | [Cloudflare Dedicated Egress in London](https://www.cloudflarestatus.com/incidents/7dk3g4k188ky) | 2026-08-03 11:05 | 2h 17m | minor | Gateway | 247 = 137 × 1 × 1.8 |
-| 16 | circleci | [Insights service data is lagging](https://stspg.io/6qdzqdj5ww81) | 2026-08-05 16:58 | 4h 2m | minor | CircleCI Insights | 242 = 242 × 1 × 1.0 |
-| 17 | openai | [Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users](https://status.openai.com/incidents/01KZ6CT9K9Q52S3707W75MNBGB) | 2026-08-04 12:43 | 2h 41m | minor | — | 242 = 161 × 1 × 1.5 |
-| 18 | cloudflare | [Elevated R2 error rates and latency](https://www.cloudflarestatus.com/incidents/fkpqy4zrm28t) | 2026-08-04 20:51 | 2h 6m | minor | R2 | 227 = 126 × 1 × 1.8 |
-| 19 | cloudflare | [Web Analytics Configuration issues](https://www.cloudflarestatus.com/incidents/3wbkwvf5ypbk) | 2026-08-05 15:09 | 2h 2m | minor | Web Analytics | 220 = 122 × 1 × 1.8 |
-| 20 | slack | [Trouble Using Search Bar For Some Admins](https://slack-status.com/2026-08/1db1f200d420086a) | 2026-08-06 22:22 | 2h 45m | unknown | Search | 198 = 165 × 1 × 1.2 |
-| 21 | digitalocean | [Functions on App Platform](https://stspg.io/7pm9l1jwpkr6) | 2026-08-06 19:01 | 2h 3m | minor | Global, Global | 197 = 123 × 2 × 0.8 |
-| 22 | grafana | [Logs latency increase within prod-eu-west-3](https://stspg.io/tf9jp15y4f5k) | 2026-08-04 10:34 | 3h 14m | minor | Azure Netherlands - prod-eu-west-3 | 194 = 194 × 1 × 1.0 |
-| 23 | digitalocean | [Cloud Control Panel Access](https://stspg.io/045lx5xqfdns) | 2026-08-03 13:58 | 4h 1m | minor | Cloud Control Panel | 193 = 241 × 1 × 0.8 |
-| 24 | anthropic | [Elevated errors across many models](https://stspg.io/j5npxk25yrp3) | 2026-08-04 20:48 | 1h 11m | major | — | 106 = 71 × 1 × 1.5 |
+| 9 | yandexcloud | [Degradation of network connectivity](https://status.yandex.cloud/en/incidents/1904) | 2026-08-04 08:30 | 2h 20m | major | Container Registry, Object Storage, Virtual Private Cloud | 630 = 140 × 3 × 1.5 |
+| 10 | openai | [Issues with Custom GPT actions](https://status.openai.com/incidents/01KZ9DMQD2GJ8JJWDN7572RH78) | 2026-08-05 16:55 | 5h 53m | minor | — | 530 = 353 × 1 × 1.5 |
+| 11 | digitalocean | [Spaces Cold Storage Billing](https://stspg.io/qb6zv0kdjy50) | 2026-08-04 16:13 | 5h 29m | minor | Billing, Global | 526 = 329 × 2 × 0.8 |
+| 12 | circleci | [Increased Job Queue Times: Windows, Android, and GPU](https://stspg.io/525771jb0gj4) | 2026-08-04 19:27 | 4h 12m | minor | Machine Jobs, Windows Jobs | 504 = 252 × 2 × 1.0 |
+| 13 | circleci | [Usage API data delayed for 8/5](https://stspg.io/kntq9cf4jgpk) | 2026-08-06 13:06 | 6h 48m | none | CircleCI API | 408 = 408 × 1 × 1.0 |
+| 14 | yandexcloud | [The problem is with the services](https://status.yandex.cloud/en/incidents/1916) | 2026-08-07 07:15 | 3h 58m | minor | Compute Cloud | 357 = 238 × 1 × 1.5 |
+| 15 | cloudflare | [Connectivity issues affecting access to some website from certain networks in Egypt](https://www.cloudflarestatus.com/incidents/ydgyl9v3g02s) | 2026-08-08 14:26 | 2h 53m | minor | Network | 311 = 173 × 1 × 1.8 |
+| 16 | openai | [Elevated errors in ChatGPT conversations with files](https://status.openai.com/incidents/01KZ9E7QD8WFJD5DMF73QGVYH8) | 2026-08-05 17:06 | 3h 13m | minor | — | 290 = 193 × 1 × 1.5 |
+| 17 | cloudflare | [Cloudflare Dedicated Egress in London](https://www.cloudflarestatus.com/incidents/7dk3g4k188ky) | 2026-08-03 11:05 | 2h 17m | minor | Gateway | 247 = 137 × 1 × 1.8 |
+| 18 | circleci | [Insights service data is lagging](https://stspg.io/6qdzqdj5ww81) | 2026-08-05 16:58 | 4h 2m | minor | CircleCI Insights | 242 = 242 × 1 × 1.0 |
+| 19 | openai | [Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users](https://status.openai.com/incidents/01KZ6CT9K9Q52S3707W75MNBGB) | 2026-08-04 12:43 | 2h 41m | minor | — | 242 = 161 × 1 × 1.5 |
+| 20 | yandexcloud | [Partial unavailability of services](https://status.yandex.cloud/en/incidents/1910) | 2026-08-05 09:30 | 1h 20m | major | DataLens, Yandex Cloud Console | 240 = 80 × 2 × 1.5 |
+| 21 | cloudflare | [Elevated R2 error rates and latency](https://www.cloudflarestatus.com/incidents/fkpqy4zrm28t) | 2026-08-04 20:51 | 2h 6m | minor | R2 | 227 = 126 × 1 × 1.8 |
+| 22 | cloudflare | [Web Analytics Configuration issues](https://www.cloudflarestatus.com/incidents/3wbkwvf5ypbk) | 2026-08-05 15:09 | 2h 2m | minor | Web Analytics | 220 = 122 × 1 × 1.8 |
+| 23 | slack | [Trouble Using Search Bar For Some Admins](https://slack-status.com/2026-08/1db1f200d420086a) | 2026-08-06 22:22 | 2h 45m | unknown | Search | 198 = 165 × 1 × 1.2 |
+| 24 | digitalocean | [Functions on App Platform](https://stspg.io/7pm9l1jwpkr6) | 2026-08-06 19:01 | 2h 3m | minor | Global, Global | 197 = 123 × 2 × 0.8 |
+| 25 | grafana | [Logs latency increase within prod-eu-west-3](https://stspg.io/tf9jp15y4f5k) | 2026-08-04 10:34 | 3h 14m | minor | Azure Netherlands - prod-eu-west-3 | 194 = 194 × 1 × 1.0 |
+| 26 | digitalocean | [Cloud Control Panel Access](https://stspg.io/045lx5xqfdns) | 2026-08-03 13:58 | 4h 1m | minor | Cloud Control Panel | 193 = 241 × 1 × 0.8 |
+| 27 | anthropic | [Elevated errors across many models](https://stspg.io/j5npxk25yrp3) | 2026-08-04 20:48 | 1h 11m | major | — | 106 = 71 × 1 × 1.5 |
 
 Score is duration in minutes, times component count, times vendor weight.
 
@@ -45,6 +50,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1d 7h 53m
 - Impact: minor, status: resolved
 - Components: R2
+- Canonical incident: [ci-19980fd9ebe296f9fad565a1](#ci-19980fd9ebe296f9fad565a1)
 
 - `2026-08-07 18:42` **investigating** — Cloudflare is aware, and investigating an issue affecting availability in ENAM for a small number of R2 buckets.
 - `2026-08-07 22:54` **identified** — We have identified the cause and mitigated further impact. Writes to a small set of buckets in ENAM were impacted between 14:52-17:02 UTC. We are continuing to work to restore normal availability for these buckets.
@@ -60,7 +66,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-05 14:14 UTC
 - Duration: 7h 8m
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+- Canonical incident: [ci-4d692f6fe2886d99429985ff](#ci-4d692f6fe2886d99429985ff)
 
 - `2026-08-05 07:05` **identified** — We have identified the cause of elevated errors on requests to Claude Mythos 5, Claude Fable 5, and Claude Opus 5, Claude Sonnet 5 and are working on a fix. We will provide an update as soon as possible.
 - `2026-08-05 09:13` **identified** — We are continuing to work on a fix for this issue.
@@ -75,6 +82,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 10h 41m
 - Impact: critical, status: resolved
 - Components: Actions, Pages
+- Canonical incident: [ci-747da73c4247bfb2f2d5ff1c](#ci-747da73c4247bfb2f2d5ff1c)
 
 - `2026-08-06 15:22` **investigating** — We are investigating reports of degraded performance for Actions
 - `2026-08-06 15:41` **investigating** — Actions is experiencing degraded availability. We are continuing to investigate.
@@ -109,6 +117,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 15h 59m
 - Impact: minor, status: resolved
 - Components: Workers
+- Canonical incident: [ci-5ce81f1f7f812cd8096e3fb2](#ci-5ce81f1f7f812cd8096e3fb2)
 
 - `2026-08-03 15:13` **investigating** — Cloudflare is aware of an issue with the latest Workers Runtime API release that exposes native Temporal with clock stuck at epoch 0. Updates to follow.
 - `2026-08-03 15:21` **identified** — Workers runtime: Temporal global exposed with an incorrect clock Since 2026-07-30, the Workers runtime has exposed a global Temporal object that was not intended to be available. Its clock is wrong: Temporal.Now reports 1970-01-01 rather than the current time. Date and Date.now() are unaffected and report the correct time. This can affect Workers that install a Temporal polyfill only when no native Temporal is detected. On those Workers, the polyfill stopped being installed and time-dependent logic began computing against 1970 — for example, tokens minted with an issue time of 0 and an expiry in 1970, incorrect TTLs, or incorrect date arithmetic. No error is raised when this happens.
@@ -123,6 +132,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 11h 19m
 - Impact: minor, status: resolved
 - Components: Network
+- Canonical incident: [ci-13fae42ca5727516857ff3ef](#ci-13fae42ca5727516857ff3ef)
 
 - `2026-08-08 08:25` **investigating** — We have lost dark fiber in the Istanbul region, we are working to follow up with our vendors to restore connectivity. More updates to follow shortly.
 - `2026-08-08 19:45` **resolved** — This incident has been resolved.
@@ -135,6 +145,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 6h 3m
 - Impact: minor, status: resolved
 - Components: Global, Global, Global, Reserved IP
+- Canonical incident: [ci-81dc93ed2ac3c3798319031a](#ci-81dc93ed2ac3c3798319031a)
 
 - `2026-08-08 18:57` **investigating** — Our Engineering team is currently investigating reports of an issue affecting new account registration, Reserved IPs, Snapshots, Droplets and Droplet-based services across multiple regions. During this time, customers may be unable to create new accounts, create Droplets, allocate Reserved IPs, or perform Automated Backups and Snapshots operations. Droplet Autoscale scaling operations and DOKS cluster operations are also affected. Our Engineering team is actively investigating the issue and we will provide another update as soon as more information becomes available.
 - `2026-08-08 19:38` **investigating** — Our Engineering team is continuing to investigate reports of an issue affecting new account registration, Reserved IPs, Snapshots, Droplets and Droplet-based services across multiple regions. During this time, customers may be unable to create new accounts, create Droplets, allocate Reserved IPs, or perform Automated Backups and Snapshots operations. Droplet Autoscale scaling operations and DOKS cluster operations are also affected. Further investigation has found that GenAI services are also affected due to this issue, customers may also be unable to access the Droplet console, and Database clusters may be stuck in a "Creating" state. Our Engineering team is actively investigating the issue and we will provide another update as soon as more information becomes available.
@@ -151,6 +162,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 6h 20m
 - Impact: critical, status: resolved
 - Components: GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4
+- Canonical incident: [ci-60f58bcc18f4edd4078be2dc](#ci-60f58bcc18f4edd4078be2dc)
 
 - `2026-08-04 19:11` **investigating** — We are currently investigating an issue that causing some Grafana deployments in prod-us-central-0 and prod-us-central-3 to become unavailable.
 - `2026-08-04 20:12` **investigating** — We are continuing to investigate this issue.
@@ -166,12 +178,26 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 26m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-a21d71a0dc2066a8e2b0a709](#ci-a21d71a0dc2066a8e2b0a709)
 
 - `2026-08-05 14:55` **identified** — We are investigating elevated errors affecting image generation. Some users may experience failed image generation requests. We are working to reduce the errors and will provide another update as we learn more.
 - `2026-08-05 15:28` **monitoring** — We have applied the mitigation and are monitoring the recovery.
 - `2026-08-05 23:22` **resolved** — All impacted services have now fully recovered.
 
-### 9. openai — Issues with Custom GPT actions
+### 9. yandexcloud — Degradation of network connectivity
+
+- URL: https://status.yandex.cloud/en/incidents/1904
+- Started: 2026-08-04 08:30 UTC
+- Resolved: 2026-08-04 10:50 UTC
+- Duration: 2h 20m
+- Impact: major, status: resolved
+- Components: Container Registry, Object Storage, Virtual Private Cloud
+- Canonical incident: [ci-42a920d255e234db8d8b36ee](#ci-42a920d255e234db8d8b36ee)
+
+- `2026-08-04 10:17` **investigating** — We have noticed a degradation of network connectivity to the internal Yandex Cloud and Yandex services in the ru-central1-d zone. The developers are already aware of it and are fixing it.
+- `2026-08-04 11:02` **resolved** — At 13:50 Moscow time, the problem was fixed, and now the Cloud services are working correctly.
+
+### 10. openai — Issues with Custom GPT actions
 
 - URL: https://status.openai.com/incidents/01KZ9DMQD2GJ8JJWDN7572RH78
 - Started: 2026-08-05 16:55 UTC
@@ -179,6 +205,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 5h 53m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-9c2d1ef1bfd1278cf9496cc1](#ci-9c2d1ef1bfd1278cf9496cc1)
 
 - `2026-08-05 16:55` **investigating** — We are investigating the issue for the listed services.
 - `2026-08-05 18:28` **identified** — We are still implementing the mitigation.
@@ -186,21 +213,22 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-05 22:46` **monitoring** — We have applied the mitigation and are monitoring the recovery.
 - `2026-08-05 22:49` **resolved** — All impacted services have now fully recovered.
 
-### 10. digitalocean — Spaces Cold Storage Billing
+### 11. digitalocean — Spaces Cold Storage Billing
 
 - URL: https://stspg.io/qb6zv0kdjy50
 - Started: 2026-08-04 16:13 UTC
 - Resolved: 2026-08-04 21:42 UTC
 - Duration: 5h 29m
 - Impact: minor, status: resolved
-- Components: Global, Billing
+- Components: Billing, Global
+- Canonical incident: [ci-3bbefafb86f54234c81a1323](#ci-3bbefafb86f54234c81a1323)
 
 - `2026-08-04 16:13` **investigating** — Our Engineering team is investigating an issue affecting Spaces Cold Storage billing. During this time, customers with cold storage buckets may see incorrect values reflected in their daily usage and current invoices. We apologize for the inconvenience and are actively working to resolve the issue. We will provide an update as soon as more information becomes available.
 - `2026-08-04 18:52` **identified** — Our Engineering team has identified the issue affecting Spaces Cold Storage billing. The team is actively working on a fix to resolve the issue. We apologize for the inconvenience and will provide another update as soon as more information becomes available.
 - `2026-08-04 20:44` **monitoring** — Our Engineering team has implemented a fix for the issue affecting Spaces Cold Storage billing and is currently monitoring the situation. Customers with cold storage buckets should no longer see incorrect values reflected in their daily usage and current invoices. We will post an update as soon as the issue is fully resolved.
 - `2026-08-04 21:42` **resolved** — As of 21:06 UTC, our Engineering team has resolved the issue affecting Spaces Cold Storage billing. An error in our billing processing system caused incorrect values to be reflected in daily usage and current invoices for customers with cold storage buckets. Our team identified and corrected an issue with the billing data sync, ensuring accurate usage reporting. If you continue to experience any issues, please open a ticket with our Support team. We apologize for any inconvenience this may have caused.
 
-### 11. circleci — Increased Job Queue Times: Windows, Android, and GPU
+### 12. circleci — Increased Job Queue Times: Windows, Android, and GPU
 
 - URL: https://stspg.io/525771jb0gj4
 - Started: 2026-08-04 19:27 UTC
@@ -208,6 +236,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 12m
 - Impact: minor, status: resolved
 - Components: Machine Jobs, Windows Jobs
+- Canonical incident: [ci-95a3c6e3a00185f032e7b0ae](#ci-95a3c6e3a00185f032e7b0ae)
 
 - `2026-08-04 19:27` **investigating** — We are experiencing increased queue times for Windows, Android, and GPU jobs due to capacity constraints with a third-party infrastructure provider. Jobs will continue to be processed but may take longer than usual to start. Thank you for your patience while our engineers work to resolve this.
 - `2026-08-04 19:59` **monitoring** — We're starting to see queue times slowly recovering. We'll be monitoring this situation, we appreciate your patience.
@@ -217,7 +246,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-04 22:20` **monitoring** — Queue times for both Android and Windows jobs, affected by capacity constraints with our third-party infrastructure provider, have been recovering significantly for the last half hour. We're continuing to monitor for a bit longer to confirm they return to normal levels. We appreciate your patience.
 - `2026-08-04 23:40` **resolved** — Queue times for Android and Windows jobs have reduced significantly over the last hour. You may still notice brief, isolated queuing at times, but this is no longer at incident-level impact. This was related to capacity constraints with a third-party infrastructure provider. We thank you for your patience while we monitored the situation. If you have any issues, please reach out to our Support team.
 
-### 12. circleci — Usage API data delayed for 8/5
+### 13. circleci — Usage API data delayed for 8/5
 
 - URL: https://stspg.io/kntq9cf4jgpk
 - Started: 2026-08-06 13:06 UTC
@@ -225,13 +254,27 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 6h 48m
 - Impact: none, status: resolved
 - Components: CircleCI API
+- Canonical incident: [ci-b69b1f4ff7fc60c24db8f4b1](#ci-b69b1f4ff7fc60c24db8f4b1)
 
 - `2026-08-06 13:06` **investigating** — Usage API data is delayed for 8/5/2026. All prior data remains available. We are investigating. Thank you for your patience.
 - `2026-08-06 15:06` **identified** — The issue has been identified and a fix is in progress.
 - `2026-08-06 19:33` **monitoring** — A fix is in place and is being monitored. Thanks for your patience.
 - `2026-08-06 19:54` **resolved** — The Usage API issue has been resolved. Data has been loaded for yesterday, 8/5/2026. We appreciate your patience.
 
-### 13. cloudflare — Connectivity issues affecting access to some website from certain networks in Egypt
+### 14. yandexcloud — The problem is with the services
+
+- URL: https://status.yandex.cloud/en/incidents/1916
+- Started: 2026-08-07 07:15 UTC
+- Resolved: 2026-08-07 11:13 UTC
+- Duration: 3h 58m
+- Impact: minor, status: resolved
+- Components: Compute Cloud
+- Canonical incident: [ci-389e685c83f6a32b27899bf0](#ci-389e685c83f6a32b27899bf0)
+
+- `2026-08-07 09:39` **investigating** — We noticed delays when creating snapshots in Compute. The developers are already aware and are working on a solution.
+- `2026-08-07 11:31` **resolved** — At 14:13 Moscow time, the problem was fixed, and the Cloud services are now working correctly. We are investigating the causes of its occurrence.
+
+### 15. cloudflare — Connectivity issues affecting access to some website from certain networks in Egypt
 
 - URL: https://www.cloudflarestatus.com/incidents/ydgyl9v3g02s
 - Started: 2026-08-08 14:26 UTC
@@ -239,12 +282,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 53m
 - Impact: minor, status: resolved
 - Components: Network
+- Canonical incident: [ci-ad66c4195b5966511812cde2](#ci-ad66c4195b5966511812cde2)
 
 - `2026-08-08 14:26` **investigating** — Cloudflare is aware of, and investigating a connectivity issue which potentially impacts end-user connectivity in Egypt. More updates to follow shortly.
 - `2026-08-08 15:52` **identified** — Cloudflare has identified a connectivity issue affecting access to some websites from certain networks in Egypt. We are working with external parties to restore network availability. More updates will follow.
 - `2026-08-08 17:19` **resolved** — Cloudflare’s investigation has determined that Cloudflare services are operating normally. The observed connectivity issue is outside Cloudflare’s network, and we have contacted the relevant external network provider.
 
-### 14. openai — Elevated errors in ChatGPT conversations with files
+### 16. openai — Elevated errors in ChatGPT conversations with files
 
 - URL: https://status.openai.com/incidents/01KZ9E7QD8WFJD5DMF73QGVYH8
 - Started: 2026-08-05 17:06 UTC
@@ -252,11 +296,12 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 13m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-2217a4dcef7739cda61d5b45](#ci-2217a4dcef7739cda61d5b45)
 
 - `2026-08-05 17:06` **monitoring** — Error rates affecting ChatGPT conversations that use files and images have improved. We have applied the mitigation and are monitoring the recovery.
 - `2026-08-05 20:19` **resolved** — All impacted services have now fully recovered.
 
-### 15. cloudflare — Cloudflare Dedicated Egress in London
+### 17. cloudflare — Cloudflare Dedicated Egress in London
 
 - URL: https://www.cloudflarestatus.com/incidents/7dk3g4k188ky
 - Started: 2026-08-03 11:05 UTC
@@ -264,13 +309,14 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 17m
 - Impact: minor, status: resolved
 - Components: Gateway
+- Canonical incident: [ci-f94d3ea649e33db75c2c639e](#ci-f94d3ea649e33db75c2c639e)
 
 - `2026-08-03 11:05` **investigating** — Cloudflare is aware of, and investigating, reports that customers who have dedicated IPv4 egress IPs homed in London may be unable to reach out to the public Internet.
 - `2026-08-03 11:25` **identified** — The issue has been identified and a fix is being implemented.
 - `2026-08-03 13:10` **monitoring** — A fix has been implemented and we are monitoring the results.
 - `2026-08-03 13:23` **resolved** — This incident has been resolved.
 
-### 16. circleci — Insights service data is lagging
+### 18. circleci — Insights service data is lagging
 
 - URL: https://stspg.io/6qdzqdj5ww81
 - Started: 2026-08-05 16:58 UTC
@@ -278,13 +324,14 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 2m
 - Impact: minor, status: resolved
 - Components: CircleCI Insights
+- Canonical incident: [ci-ad9d32f9a5360ab241b303ff](#ci-ad9d32f9a5360ab241b303ff)
 
 - `2026-08-05 16:58` **investigating** — We are seeing an issue with Insights service where the data from the last 24 hours is lagging. We are investigating.
 - `2026-08-05 17:46` **investigating** — We are continuing to investigate and will update as we know more.
 - `2026-08-05 18:25` **identified** — We have identified the issue, and are working with our upstream provider to resolve it now.
 - `2026-08-05 21:01` **resolved** — The upstream issue has been resolved, and the insights data from the last 24 hours has caught up. Thank you for your patience.
 
-### 17. openai — Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users
+### 19. openai — Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users
 
 - URL: https://status.openai.com/incidents/01KZ6CT9K9Q52S3707W75MNBGB
 - Started: 2026-08-04 12:43 UTC
@@ -292,12 +339,26 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 41m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-d8a02cb78272fb00c41e9722](#ci-d8a02cb78272fb00c41e9722)
 
 - `2026-08-04 12:43` **investigating** — We are investigating elevated errors affecting ChatGPT conversations. Some users may experience failed or interrupted responses, and some conversation turns may not be saved. The issue is affecting users across Plus, Pro, Business and Edu ChatGPT plans.
 - `2026-08-04 12:57` **monitoring** — We have applied the mitigation and are monitoring the recovery.
 - `2026-08-04 15:25` **resolved** — All impacted services have now fully recovered.
 
-### 18. cloudflare — Elevated R2 error rates and latency
+### 20. yandexcloud — Partial unavailability of services
+
+- URL: https://status.yandex.cloud/en/incidents/1910
+- Started: 2026-08-05 09:30 UTC
+- Resolved: 2026-08-05 10:50 UTC
+- Duration: 1h 20m
+- Impact: major, status: resolved
+- Components: DataLens, Yandex Cloud Console
+- Canonical incident: [ci-41bd3154fc9d1ba569609868](#ci-41bd3154fc9d1ba569609868)
+
+- `2026-08-05 09:49` **investigating** — We noticed a slowdown in the response of Yandex Cloud Console and DataLens services in the Cloud. The developers are already aware of it and are fixing it.
+- `2026-08-05 11:07` **resolved** — At 13:50 Moscow time, the problem was fixed, and now the Cloud services are working correctly. We are investigating the causes of its occurrence.
+
+### 21. cloudflare — Elevated R2 error rates and latency
 
 - URL: https://www.cloudflarestatus.com/incidents/fkpqy4zrm28t
 - Started: 2026-08-04 20:51 UTC
@@ -305,12 +366,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 6m
 - Impact: minor, status: resolved
 - Components: R2
+- Canonical incident: [ci-f29fd539348e5e655bd57e8c](#ci-f29fd539348e5e655bd57e8c)
 
 - `2026-08-04 20:51` **investigating** — Cloudflare is aware of, and investigating an issue with elevated R2 error rates and latency for R2 buckets located in Oceania
 - `2026-08-04 22:14` **identified** — The issue has been identified and a fix is being implemented.
 - `2026-08-04 22:58` **resolved** — This incident has been resolved.
 
-### 19. cloudflare — Web Analytics Configuration issues
+### 22. cloudflare — Web Analytics Configuration issues
 
 - URL: https://www.cloudflarestatus.com/incidents/3wbkwvf5ypbk
 - Started: 2026-08-05 15:09 UTC
@@ -318,12 +380,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 2m
 - Impact: minor, status: resolved
 - Components: Web Analytics
+- Canonical incident: [ci-b682f6a79422db3599c2308e](#ci-b682f6a79422db3599c2308e)
 
 - `2026-08-05 15:09` **investigating** — Cloudflare is investigating issues with configuration changes for Cloudflare Web Analytics and rum beacon not taking effect or showing errors. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.
 - `2026-08-05 16:57` **monitoring** — A fix has been implemented and we are monitoring the results.
 - `2026-08-05 17:12` **resolved** — This incident has been resolved.
 
-### 20. slack — Trouble Using Search Bar For Some Admins
+### 23. slack — Trouble Using Search Bar For Some Admins
 
 - URL: https://slack-status.com/2026-08/1db1f200d420086a
 - Started: 2026-08-06 22:22 UTC
@@ -331,12 +394,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 45m
 - Impact: unknown, status: resolved
 - Components: Search
+- Canonical incident: [ci-b3498ec49158453018aea5b1](#ci-b3498ec49158453018aea5b1)
 
 - `2026-08-06 22:22` **unknown** — Since approximately 21:00 UTC on August 6, some admins have been unable to click or use the search bar on org dashboard pages. We are aware of this issue and are actively investigating the cause. We'll provide an update in 60 minutes or sooner if additional information becomes available.
 - `2026-08-06 23:11` **unknown** — We have identified the cause of this issue as a recent change and have started the process of rolling back the problematic change.
 - `2026-08-07 01:07` **unknown** — We've completed the rollback of the recent change that was the trigger of the issue. The Search bar and Admin dashboard is restored for all users. We apologize for the inconvenience caused to you and your business.
 
-### 21. digitalocean — Functions on App Platform
+### 24. digitalocean — Functions on App Platform
 
 - URL: https://stspg.io/7pm9l1jwpkr6
 - Started: 2026-08-06 19:01 UTC
@@ -344,12 +408,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 3m
 - Impact: minor, status: resolved
 - Components: Global, Global
+- Canonical incident: [ci-d4d9fb058e0a5cc1404deaf8](#ci-d4d9fb058e0a5cc1404deaf8)
 
 - `2026-08-06 19:01` **investigating** — Our Engineering team is investigating an issue impacting Functions on App Platform. During this time, users may experience build/deploy failures for Functions components, and requests to Functions endpoints may fail with a 504 error, caused by an SSL error when App Platform attempts to forward requests to Functions. This issue currently appears to be isolated to Functions deployed within App Platform. We apologize for the inconvenience and will share an update once we have more information.
 - `2026-08-06 20:02` **monitoring** — Our Engineering team has implemented a fix for the issue affecting Functions on App Platform. Functions builds/deploys and requests to Functions endpoints should now be completing successfully. We are currently monitoring the situation to ensure the service has returned to normal operation and remains stable. We apologize for the inconvenience and will provide a further update once the incident is confirmed resolved.
 - `2026-08-06 21:05` **resolved** — Our Engineering team has confirmed that the issue affecting Functions on App Platform has been fully resolved. Functions builds, deploys, and requests to Functions endpoints are all working as expected. The fix implemented earlier was successful, and we are no longer seeing any problems affecting Functions. However, if you continue to experience any issues, please don't hesitate to raise a support ticket for further investigation.
 
-### 22. grafana — Logs latency increase within prod-eu-west-3
+### 25. grafana — Logs latency increase within prod-eu-west-3
 
 - URL: https://stspg.io/tf9jp15y4f5k
 - Started: 2026-08-04 10:34 UTC
@@ -357,12 +422,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 14m
 - Impact: minor, status: resolved
 - Components: Azure Netherlands - prod-eu-west-3
+- Canonical incident: [ci-6429ba666644a80c4a593236](#ci-6429ba666644a80c4a593236)
 
 - `2026-08-04 10:34` **investigating** — We have identified minor latency increases in write endpoints within the prod-eu-west-3. Our team is currently monitoring and investigating this.
 - `2026-08-04 12:46` **investigating** — There's still a minor latency increase in this cell however we have identified that it is improving although not back to normal as of yet. We will continue to look into this.
 - `2026-08-04 13:49` **resolved** — This incident has been resolved.
 
-### 23. digitalocean — Cloud Control Panel Access
+### 26. digitalocean — Cloud Control Panel Access
 
 - URL: https://stspg.io/045lx5xqfdns
 - Started: 2026-08-03 13:58 UTC
@@ -370,12 +436,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 1m
 - Impact: minor, status: resolved
 - Components: Cloud Control Panel
+- Canonical incident: [ci-0ec1acb776fad82d64deac99](#ci-0ec1acb776fad82d64deac99)
 
 - `2026-08-03 13:58` **investigating** — Beginning at 09:36 UTC on August 3, some customers may experience intermittent errors when accessing the DigitalOcean Cloud Control Panel, including an "mTLS verification failed" message. Our engineering team is actively investigating. We apologise for the inconvenience this may have caused. We will provide another update as soon as more information is available. If you have any questions related to this issue, please send us a ticket from your cloud support page. https://cloudsupport.digitalocean.com/s/createticket
 - `2026-08-03 16:39` **monitoring** — We have implemented mitigation for the issue causing some customers to experience intermittent errors when accessing the DigitalOcean Cloud Control Panel. We are seeing recovery and are monitoring the service closely. We will provide another update once we have confirmed the issue is fully resolved
 - `2026-08-03 17:59` **resolved** — Between 09:36 and 13:30 UTC on August 3, some customers experienced intermittent errors while accessing the DigitalOcean Cloud Control Panel. We renewed the affected internal certificates and restored access. The issue is resolved, and the Cloud Control Panel is operating normally. We apologize for the disruption.
 
-### 24. anthropic — Elevated errors across many models
+### 27. anthropic — Elevated errors across many models
 
 - URL: https://stspg.io/j5npxk25yrp3
 - Started: 2026-08-04 20:48 UTC
@@ -383,12 +450,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1h 11m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-4dd8ab7938127ac8df4fad52](#ci-4dd8ab7938127ac8df4fad52)
 
 - `2026-08-04 20:48` **investigating** — We are currently investigating this issue.
 - `2026-08-04 21:04` **investigating** — We have identified an issue which resulted in some users experiencing issues when attempting to log into Anthropic services, including Claude.ai and Claude Code via oAuth. Additionally, some users saw errors when making requests to models. At this time, we have seen success rates recover and are monitoring closely to ensure there are no further issues.
 - `2026-08-04 21:59` **resolved** — This issue has been resolved.
 
-## Below threshold (25)
+## Below threshold (26)
 
 - `anthropic` [Error rates across multiple models](https://stspg.io/7kvfvmpb8phc) — 1h 24m
 - `cloudflare` [Managed Challenge Issues for China Network](https://www.cloudflarestatus.com/incidents/56mr50t39z2g) — 1h 48m
@@ -406,6 +474,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `github` [Incident with Pages - Deployment Lag](https://stspg.io/b0n00sx9z3ht) — 1h 19m
 - `anthropic` [Degraded performance on Claude Sonnet 5](https://stspg.io/gr4zh2flvcjk) — 15m
 - `cloudflare` [Network Performance Issues in Chicago (ORD)](https://www.cloudflarestatus.com/incidents/x6fmvws5z368) — 50m
+- `yandexcloud` [The problem is with the services](https://status.yandex.cloud/en/incidents/1912) — 43m
 - `datadog` [Delayed Processes data](https://stspg.io/g6k608nzbbtm) — 46m
 - `stripe` [Financial Connections authorization errors](https://stspg.io/kz7fdsrtjhhy) — 36m
 - `stripe` [Elevated Errors for retrieving balance transactions for automatic payouts](https://stspg.io/jtdbm8076r5z) — 32m
@@ -416,21 +485,343 @@ Score is duration in minutes, times component count, times vendor weight.
 - `digitalocean` [Multiple Services Availability](https://stspg.io/zscj6w048lfx) — 0m
 - `grafana` [Alerting expressions pipeline failing when recovery settings](https://stspg.io/7qq8srb9zyzw) — 0m
 
+## Identity and evidence
+
+Source record paths refer to the preserved vendor archive. Unconfirmed candidates remain separate.
+
+<a id="ci-19980fd9ebe296f9fad565a1"></a>
+
+- Canonical ID: `ci-19980fd9ebe296f9fad565a1` (1 source records).
+  - [cloudflare/9fzfjzc5ms0h](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9fzfjzc5ms0h
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4d692f6fe2886d99429985ff"></a>
+
+- Canonical ID: `ci-4d692f6fe2886d99429985ff` (1 source records).
+  - [anthropic/f6gkkq6txl7z](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/v7xpxd5xg5pc
+- Start time basis: `vendor_reported`.
+
+<a id="ci-747da73c4247bfb2f2d5ff1c"></a>
+
+- Canonical ID: `ci-747da73c4247bfb2f2d5ff1c` (1 source records).
+  - [github/qcvjkzcs7j74](../../data/2026/W32/github.json); vendor URL: https://stspg.io/rcz3fcm83sff
+- Start time basis: `vendor_reported`.
+
+<a id="ci-5ce81f1f7f812cd8096e3fb2"></a>
+
+- Canonical ID: `ci-5ce81f1f7f812cd8096e3fb2` (1 source records).
+  - [cloudflare/238b69fw6l55](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/238b69fw6l55
+- Start time basis: `vendor_reported`.
+
+<a id="ci-13fae42ca5727516857ff3ef"></a>
+
+- Canonical ID: `ci-13fae42ca5727516857ff3ef` (1 source records).
+  - [cloudflare/x44ny80374v7](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/x44ny80374v7
+- Start time basis: `vendor_reported`.
+
+<a id="ci-81dc93ed2ac3c3798319031a"></a>
+
+- Canonical ID: `ci-81dc93ed2ac3c3798319031a` (1 source records).
+  - [digitalocean/2wql4f4sb13r](../../data/2026/W32/digitalocean.json); vendor URL: https://stspg.io/grfh9nf5bp3f
+- Start time basis: `vendor_reported`.
+
+<a id="ci-60f58bcc18f4edd4078be2dc"></a>
+
+- Canonical ID: `ci-60f58bcc18f4edd4078be2dc` (1 source records).
+  - [grafana/1bswvkrhnmls](../../data/2026/W32/grafana.json); vendor URL: https://stspg.io/4jyq27wvr4kk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-a21d71a0dc2066a8e2b0a709"></a>
+
+- Canonical ID: `ci-a21d71a0dc2066a8e2b0a709` (1 source records).
+  - [openai/01KZ96S5HEWX0CX26W2WFYFKE6](../../data/2026/W32/openai.json); vendor URL: https://status.openai.com/incidents/01KZ96S5HEWX0CX26W2WFYFKE6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-509fb81261e2ff0088fd6b1a"></a>
+
+- Canonical ID: `ci-509fb81261e2ff0088fd6b1a` (1 source records).
+  - [anthropic/ch7k4vh9fr1y](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/7kvfvmpb8phc
+- Start time basis: `vendor_reported`.
+
+<a id="ci-42a920d255e234db8d8b36ee"></a>
+
+- Canonical ID: `ci-42a920d255e234db8d8b36ee` (1 source records).
+  - [yandexcloud/1904](../../data/2026/W32/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1904
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9c2d1ef1bfd1278cf9496cc1"></a>
+
+- Canonical ID: `ci-9c2d1ef1bfd1278cf9496cc1` (1 source records).
+  - [openai/01KZ9DMQD2GJ8JJWDN7572RH78](../../data/2026/W32/openai.json); vendor URL: https://status.openai.com/incidents/01KZ9DMQD2GJ8JJWDN7572RH78
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3bbefafb86f54234c81a1323"></a>
+
+- Canonical ID: `ci-3bbefafb86f54234c81a1323` (1 source records).
+  - [digitalocean/l20hw5cfhksw](../../data/2026/W32/digitalocean.json); vendor URL: https://stspg.io/qb6zv0kdjy50
+- Start time basis: `vendor_reported`.
+
+<a id="ci-95a3c6e3a00185f032e7b0ae"></a>
+
+- Canonical ID: `ci-95a3c6e3a00185f032e7b0ae` (1 source records).
+  - [circleci/n8p81wk9xjrz](../../data/2026/W32/circleci.json); vendor URL: https://stspg.io/525771jb0gj4
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b69b1f4ff7fc60c24db8f4b1"></a>
+
+- Canonical ID: `ci-b69b1f4ff7fc60c24db8f4b1` (1 source records).
+  - [circleci/7l9wg4375jr4](../../data/2026/W32/circleci.json); vendor URL: https://stspg.io/kntq9cf4jgpk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0a13c431a9498daf355c23a7"></a>
+
+- Canonical ID: `ci-0a13c431a9498daf355c23a7` (1 source records).
+  - [cloudflare/56mr50t39z2g](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/56mr50t39z2g
+- Start time basis: `vendor_reported`.
+
+<a id="ci-389e685c83f6a32b27899bf0"></a>
+
+- Canonical ID: `ci-389e685c83f6a32b27899bf0` (1 source records).
+  - [yandexcloud/1916](../../data/2026/W32/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1916
+- Start time basis: `vendor_reported`.
+
+<a id="ci-ad66c4195b5966511812cde2"></a>
+
+- Canonical ID: `ci-ad66c4195b5966511812cde2` (1 source records).
+  - [cloudflare/ydgyl9v3g02s](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/ydgyl9v3g02s
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2217a4dcef7739cda61d5b45"></a>
+
+- Canonical ID: `ci-2217a4dcef7739cda61d5b45` (1 source records).
+  - [openai/01KZ9E7QD8WFJD5DMF73QGVYH8](../../data/2026/W32/openai.json); vendor URL: https://status.openai.com/incidents/01KZ9E7QD8WFJD5DMF73QGVYH8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4116b029cd09c9059254588e"></a>
+
+- Canonical ID: `ci-4116b029cd09c9059254588e` (1 source records).
+  - [anthropic/mgp99sn4ynd4](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/398gbykd844r
+- Start time basis: `vendor_reported`.
+
+<a id="ci-f94d3ea649e33db75c2c639e"></a>
+
+- Canonical ID: `ci-f94d3ea649e33db75c2c639e` (1 source records).
+  - [cloudflare/7dk3g4k188ky](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/7dk3g4k188ky
+- Start time basis: `vendor_reported`.
+
+<a id="ci-ad9d32f9a5360ab241b303ff"></a>
+
+- Canonical ID: `ci-ad9d32f9a5360ab241b303ff` (1 source records).
+  - [circleci/xwrqk8hh14zf](../../data/2026/W32/circleci.json); vendor URL: https://stspg.io/6qdzqdj5ww81
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d8a02cb78272fb00c41e9722"></a>
+
+- Canonical ID: `ci-d8a02cb78272fb00c41e9722` (1 source records).
+  - [openai/01KZ6CT9K9Q52S3707W75MNBGB](../../data/2026/W32/openai.json); vendor URL: https://status.openai.com/incidents/01KZ6CT9K9Q52S3707W75MNBGB
+- Start time basis: `vendor_reported`.
+
+<a id="ci-41bd3154fc9d1ba569609868"></a>
+
+- Canonical ID: `ci-41bd3154fc9d1ba569609868` (1 source records).
+  - [yandexcloud/1910](../../data/2026/W32/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1910
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7dd10abdca76b30210f8f095"></a>
+
+- Canonical ID: `ci-7dd10abdca76b30210f8f095` (1 source records).
+  - [anthropic/8k9mjhq7wmv3](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/hm20mwq68yn1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-f29fd539348e5e655bd57e8c"></a>
+
+- Canonical ID: `ci-f29fd539348e5e655bd57e8c` (1 source records).
+  - [cloudflare/fkpqy4zrm28t](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fkpqy4zrm28t
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b682f6a79422db3599c2308e"></a>
+
+- Canonical ID: `ci-b682f6a79422db3599c2308e` (1 source records).
+  - [cloudflare/3wbkwvf5ypbk](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/3wbkwvf5ypbk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-1883c86331cd4d77c9db6629"></a>
+
+- Canonical ID: `ci-1883c86331cd4d77c9db6629` (1 source records).
+  - [cloudflare/kf6qktrf2gc1](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/kf6qktrf2gc1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8add4c6c700cbce7b9194a43"></a>
+
+- Canonical ID: `ci-8add4c6c700cbce7b9194a43` (1 source records).
+  - [cloudflare/x4lf6qsl3pb9](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/x4lf6qsl3pb9
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b3498ec49158453018aea5b1"></a>
+
+- Canonical ID: `ci-b3498ec49158453018aea5b1` (1 source records).
+  - [slack/1575](../../data/2026/W32/slack.json); vendor URL: https://slack-status.com/2026-08/1db1f200d420086a
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d4d9fb058e0a5cc1404deaf8"></a>
+
+- Canonical ID: `ci-d4d9fb058e0a5cc1404deaf8` (1 source records).
+  - [digitalocean/cg3q7h89dbnq](../../data/2026/W32/digitalocean.json); vendor URL: https://stspg.io/7pm9l1jwpkr6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6429ba666644a80c4a593236"></a>
+
+- Canonical ID: `ci-6429ba666644a80c4a593236` (1 source records).
+  - [grafana/lkr5n8k0v1d7](../../data/2026/W32/grafana.json); vendor URL: https://stspg.io/tf9jp15y4f5k
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0ec1acb776fad82d64deac99"></a>
+
+- Canonical ID: `ci-0ec1acb776fad82d64deac99` (1 source records).
+  - [digitalocean/3nt69xj3wkk9](../../data/2026/W32/digitalocean.json); vendor URL: https://stspg.io/045lx5xqfdns
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b55c72dd4b64d60619bb0f65"></a>
+
+- Canonical ID: `ci-b55c72dd4b64d60619bb0f65` (1 source records).
+  - [cloudflare/mxlpy0nnr2j8](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mxlpy0nnr2j8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-56bfcef05da505f69783d86b"></a>
+
+- Canonical ID: `ci-56bfcef05da505f69783d86b` (1 source records).
+  - [anthropic/nlg5hjdfphmb](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/ptvqccgrb82w
+- Start time basis: `vendor_reported`.
+
+<a id="ci-72a9537ce64336ec96eded75"></a>
+
+- Canonical ID: `ci-72a9537ce64336ec96eded75` (1 source records).
+  - [cloudflare/3n74c5yh817r](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/3n74c5yh817r
+- Start time basis: `vendor_reported`.
+
+<a id="ci-18f70300502c5b94ed858536"></a>
+
+- Canonical ID: `ci-18f70300502c5b94ed858536` (1 source records).
+  - [github/7s119p1yxttr](../../data/2026/W32/github.json); vendor URL: https://stspg.io/y3tm8v1gmn85
+- Start time basis: `vendor_reported`.
+
+<a id="ci-bfd67f07282eacc2c5f0091b"></a>
+
+- Canonical ID: `ci-bfd67f07282eacc2c5f0091b` (1 source records).
+  - [cloudflare/2fqjvjdq32dy](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/2fqjvjdq32dy
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4e40df8f3195badc8af73c69"></a>
+
+- Canonical ID: `ci-4e40df8f3195badc8af73c69` (1 source records).
+  - [github/9wzhl5jr80jt](../../data/2026/W32/github.json); vendor URL: https://stspg.io/kxdh3hfxm3zl
+- Start time basis: `vendor_reported`.
+
+<a id="ci-cc4d61c193eb0ee6bb4f0589"></a>
+
+- Canonical ID: `ci-cc4d61c193eb0ee6bb4f0589` (1 source records).
+  - [cloudflare/qtn3z0pny08n](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/qtn3z0pny08n
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0488a80cf20a09d812e286e2"></a>
+
+- Canonical ID: `ci-0488a80cf20a09d812e286e2` (1 source records).
+  - [github/1xqvzyv99skw](../../data/2026/W32/github.json); vendor URL: https://stspg.io/b0n00sx9z3ht
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4dd8ab7938127ac8df4fad52"></a>
+
+- Canonical ID: `ci-4dd8ab7938127ac8df4fad52` (1 source records).
+  - [anthropic/bdr3fq2rkchr](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/j5npxk25yrp3
+- Start time basis: `vendor_reported`.
+
+<a id="ci-97fb2b5a47074bd68b74e8a6"></a>
+
+- Canonical ID: `ci-97fb2b5a47074bd68b74e8a6` (1 source records).
+  - [anthropic/dnl3q35xkn3s](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/gr4zh2flvcjk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-18500a345d72a276b051cbaf"></a>
+
+- Canonical ID: `ci-18500a345d72a276b051cbaf` (1 source records).
+  - [cloudflare/x6fmvws5z368](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/x6fmvws5z368
+- Start time basis: `vendor_reported`.
+
+<a id="ci-02a8b340bd0268158f5b981a"></a>
+
+- Canonical ID: `ci-02a8b340bd0268158f5b981a` (1 source records).
+  - [yandexcloud/1912](../../data/2026/W32/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1912
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b53900dbf546dc0ec0b225a0"></a>
+
+- Canonical ID: `ci-b53900dbf546dc0ec0b225a0` (1 source records).
+  - [datadog/0yvjrwkfc2np](../../data/2026/W32/datadog.json); vendor URL: https://stspg.io/g6k608nzbbtm
+- Start time basis: `vendor_reported`.
+
+<a id="ci-693209852a315dfeb221a0cf"></a>
+
+- Canonical ID: `ci-693209852a315dfeb221a0cf` (1 source records).
+  - [stripe/kk80k9by4lms](../../data/2026/W32/stripe.json); vendor URL: https://stspg.io/kz7fdsrtjhhy
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b51a8cb46be551726366c8b0"></a>
+
+- Canonical ID: `ci-b51a8cb46be551726366c8b0` (1 source records).
+  - [stripe/j7vtqc6jmfqw](../../data/2026/W32/stripe.json); vendor URL: https://stspg.io/jtdbm8076r5z
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6f2f4b169743be871e09f4bd"></a>
+
+- Canonical ID: `ci-6f2f4b169743be871e09f4bd` (1 source records).
+  - [cloudflare/my9sl2rz23gn](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/my9sl2rz23gn
+- Start time basis: `vendor_reported`.
+
+<a id="ci-38cbca7a6099aea05cfbac4b"></a>
+
+- Canonical ID: `ci-38cbca7a6099aea05cfbac4b` (1 source records).
+  - [grafana/rdrpk724tpyn](../../data/2026/W32/grafana.json); vendor URL: https://stspg.io/c9rg758f2vsf
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9d37543f0dba15750a0b27ff"></a>
+
+- Canonical ID: `ci-9d37543f0dba15750a0b27ff` (1 source records).
+  - [cloudflare/6x39thxt9ds1](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/6x39thxt9ds1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b61f01e9d5607ffe3eb4b74d"></a>
+
+- Canonical ID: `ci-b61f01e9d5607ffe3eb4b74d` (1 source records).
+  - [grafana/vbx5qt5x72p2](../../data/2026/W32/grafana.json); vendor URL: https://stspg.io/76vt9b4z7f1q
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e8f201254387b621c824603d"></a>
+
+- Canonical ID: `ci-e8f201254387b621c824603d` (1 source records).
+  - [digitalocean/vjm8qnbt45tb](../../data/2026/W32/digitalocean.json); vendor URL: https://stspg.io/zscj6w048lfx
+- Start time basis: `vendor_reported`.
+
+<a id="ci-117608a7ae6392bba65d5872"></a>
+
+- Canonical ID: `ci-117608a7ae6392bba65d5872` (1 source records).
+  - [grafana/2tjkx7vn9nt0](../../data/2026/W32/grafana.json); vendor URL: https://stspg.io/7qq8srb9zyzw
+- Start time basis: `vendor_reported`.
+
 ## Sources
 
-| Vendor | Status | Incidents seen | Parse errors |
+| Vendor | Status | Source records seen | Parse errors |
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
-| aws | ok | 4 | 0 |
+| aws | ok | 6 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
-| datadog | ok | 50 | 0 |
+| datadog | FETCH FAILED: GET https://status.datadoghq.com/api/v2/incidents.json: status 403 | 0 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 5 | 0 |
+| gcp | ok | 8 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
-| slack | ok | 43 | 0 |
+| slack | ok | 28 | 0 |
 | stripe | ok | 50 | 0 |
-
+| yandexcloud | FETCH FAILED: GET https://status.cloud.yandex.ru/api/incidents?lang=en&page=4: status 403 | 0 | 0 |

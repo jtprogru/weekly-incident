@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/qwrtvb4jfvk7",
+    "vendor": "cloudflare",
+    "native_id": "qwrtvb4jfvk7",
+    "title": "Delayed audit log delivery for WARP and Zero Trust services",
+    "url": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-22T17:32:32.247Z",
+    "resolved_at": "2026-10-23T00:10:52.675Z",
+    "duration_minutes": 398,
+    "components": [
+      "Zero Trust",
+      "Audit Logs"
+    ],
+    "updates": [
+      {
+        "native_id": "9xgb018fnpl2",
+        "status": "investigating",
+        "body": "We are investigating an issue affecting audit log delivery for WARP API. Audit logs for some customers may be delayed or not delivered, and some dependent services may also be affected.\n\nWe have identified the cause as a capacity problem in a shared internal data pipeline in our PDX region. Mitigations are in place and the pipeline is partially recovered. We are continuing to monitor and work toward full recovery.",
+        "created_at": "2026-10-22T17:32:32.382Z"
+      },
+      {
+        "native_id": "kk28t07smdlz",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-10-22T17:50:19.008Z"
+      },
+      {
+        "native_id": "r06vff147vk5",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-23T00:10:52.675Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2021-04-08T15:53:09.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "kf0ktv29xrfy",
+          "name": "Zero Trust",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2021-04-08",
+          "status": "operational",
+          "updated_at": "2026-10-28T14:30:39.261Z"
+        },
+        {
+          "created_at": "2022-08-01T04:49:28.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "2469qcw8rvjp",
+          "name": "Audit Logs",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2022-08-01",
+          "status": "operational",
+          "updated_at": "2026-10-28T14:30:39.261Z"
+        }
+      ],
+      "created_at": "2026-10-22T17:32:32.000Z",
+      "id": "qwrtvb4jfvk7",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Dashboard \u0026 API - Audit Logs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Zero Trust - Zero Trust",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-23T00:10:52.675Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T00:10:52.675Z",
+          "id": "r06vff147vk5",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T00:10:52.675Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Dashboard \u0026 API - Audit Logs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Zero Trust - Zero Trust",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-10-22T17:50:19.008Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:50:19.008Z",
+          "id": "kk28t07smdlz",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:50:19.008Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2469qcw8rvjp",
+              "name": "Dashboard \u0026 API - Audit Logs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Zero Trust - Zero Trust",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue affecting audit log delivery for WARP API. Audit logs for some customers may be delayed or not delivered, and some dependent services may also be affected.\n\nWe have identified the cause as a capacity problem in a shared internal data pipeline in our PDX region. Mitigations are in place and the pipeline is partially recovered. We are continuing to monitor and work toward full recovery.",
+          "created_at": "2026-10-22T17:32:32.382Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T17:32:32.382Z",
+          "id": "9xgb018fnpl2",
+          "incident_id": "qwrtvb4jfvk7",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T17:32:32.382Z"
+        }
+      ],
+      "monitoring_at": "2026-10-22T17:50:19.008Z",
+      "name": "Delayed audit log delivery for WARP and Zero Trust services",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T00:10:52.675Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/qwrtvb4jfvk7",
+      "started_at": "2026-10-22T17:32:32.247Z",
+      "status": "resolved",
+      "updated_at": "2026-10-23T00:10:52.697Z"
+    }
+  }
+}

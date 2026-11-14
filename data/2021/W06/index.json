@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2021-W06",
   "from": "2021-02-08T00:00:00Z",
   "to": "2021-02-15T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/r021q1l6nr1r",
+      "canonical": {
+        "id": "ci-99007fcd48cd095874364b97",
+        "sources": [
+          {
+            "key": "atlassian/r021q1l6nr1r",
+            "path": "2021/W06/atlassian.json",
+            "url": "https://stspg.io/tlr74xv5fd4g"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-99007fcd48cd095874364b97",
       "vendor": "atlassian",
       "title": "User Management Syncs are affected across all products",
       "url": "https://stspg.io/tlr74xv5fd4g",

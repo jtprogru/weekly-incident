@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "anthropic/fsh2zzzl2c4l",
+    "vendor": "anthropic",
+    "native_id": "fsh2zzzl2c4l",
+    "title": "Elevated errors across many models",
+    "url": "https://stspg.io/cpzpstxn0z6k",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-07-30T05:57:43.516Z",
+    "resolved_at": "2026-07-30T10:48:56.631Z",
+    "duration_minutes": 291,
+    "components": [
+      "claude.ai",
+      "Claude API (api.anthropic.com)",
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "5dnyxw9qv6tw",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.",
+        "created_at": "2026-07-30T05:57:43.629Z"
+      },
+      {
+        "native_id": "cj2yg0cy6xwy",
+        "status": "identified",
+        "body": "All models except Opus 5 have recovered. We're working to recover Opus 5 as well.",
+        "created_at": "2026-07-30T06:26:26.771Z"
+      },
+      {
+        "native_id": "pxdxzf06lhkh",
+        "status": "identified",
+        "body": "As of 7:32 UTC / 0:32 PT, Opus 5 errors are back to baseline but we're seeing again Sonnet 5's errors up.",
+        "created_at": "2026-07-30T07:33:15.347Z"
+      },
+      {
+        "native_id": "8bv9ps833vs6",
+        "status": "identified",
+        "body": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5.",
+        "created_at": "2026-07-30T08:06:25.22Z"
+      },
+      {
+        "native_id": "s2b0s7dwxtfb",
+        "status": "identified",
+        "body": "As of 01:33 PT / 08:33 UTC we are back to errors across all models.",
+        "created_at": "2026-07-30T08:33:35.767Z"
+      },
+      {
+        "native_id": "cz7ycy6vw8y5",
+        "status": "monitoring",
+        "body": "As of 2:58 PT / 9:58 UTC the errors are back to baseline.",
+        "created_at": "2026-07-30T10:03:45.473Z"
+      },
+      {
+        "native_id": "qm9y9xwk0x56",
+        "status": "monitoring",
+        "body": "We are also investigating issues with Opus 4.7 and Opus 4.5.",
+        "created_at": "2026-07-30T10:23:09.989Z"
+      },
+      {
+        "native_id": "yljt8k4my1vl",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-07-30T10:48:56.631Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:24.275Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-22T08:07:03.810Z"
+        },
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-10-21T20:29:17.747Z"
+        },
+        {
+          "created_at": "2025-05-22T21:35:29.822Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 4,
+          "showcase": true,
+          "start_date": "2025-02-06",
+          "status": "operational",
+          "updated_at": "2026-10-21T20:29:17.774Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "operational",
+          "updated_at": "2026-10-22T08:07:03.836Z"
+        }
+      ],
+      "created_at": "2026-07-30T05:57:43.524Z",
+      "id": "fsh2zzzl2c4l",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-07-30T10:48:56.631Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T10:48:56.631Z",
+          "id": "yljt8k4my1vl",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T10:48:56.631Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are also investigating issues with Opus 4.7 and Opus 4.5.",
+          "created_at": "2026-07-30T10:23:09.989Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T10:23:09.989Z",
+          "id": "qm9y9xwk0x56",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T10:23:09.989Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 2:58 PT / 9:58 UTC the errors are back to baseline.",
+          "created_at": "2026-07-30T10:03:45.473Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T10:03:45.473Z",
+          "id": "cz7ycy6vw8y5",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T10:03:45.473Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 01:33 PT / 08:33 UTC we are back to errors across all models.",
+          "created_at": "2026-07-30T08:33:35.767Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T08:33:35.767Z",
+          "id": "s2b0s7dwxtfb",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T08:33:35.767Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 8:05 UTC / 1:05 PT, Sonnet 5 errors are back to baseline, but we're seeing an increased error rate on Fable 5.",
+          "created_at": "2026-07-30T08:06:25.220Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T08:06:25.220Z",
+          "id": "8bv9ps833vs6",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T08:06:25.220Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 7:32 UTC / 0:32 PT, Opus 5 errors are back to baseline but we're seeing again Sonnet 5's errors up.",
+          "created_at": "2026-07-30T07:33:15.347Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T07:33:15.347Z",
+          "id": "pxdxzf06lhkh",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T07:33:15.347Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "All models except Opus 5 have recovered. We're working to recover Opus 5 as well.",
+          "created_at": "2026-07-30T06:26:26.771Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T06:26:26.771Z",
+          "id": "cj2yg0cy6xwy",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T06:26:26.771Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.",
+          "created_at": "2026-07-30T05:57:43.629Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-30T05:57:43.629Z",
+          "id": "5dnyxw9qv6tw",
+          "incident_id": "fsh2zzzl2c4l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T05:57:43.629Z"
+        }
+      ],
+      "monitoring_at": "2026-07-30T10:03:45.473Z",
+      "name": "Elevated errors across many models",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-30T10:48:56.631Z",
+      "shortlink": "https://stspg.io/cpzpstxn0z6k",
+      "started_at": "2026-07-30T05:57:43.516Z",
+      "status": "resolved",
+      "updated_at": "2026-08-14T10:28:22.909Z"
+    }
+  }
+}

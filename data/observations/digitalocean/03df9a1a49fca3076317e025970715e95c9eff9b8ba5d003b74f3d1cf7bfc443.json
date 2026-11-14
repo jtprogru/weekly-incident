@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/3nt69xj3wkk9",
+    "vendor": "digitalocean",
+    "native_id": "3nt69xj3wkk9",
+    "title": "Cloud Control Panel Access",
+    "url": "https://stspg.io/045lx5xqfdns",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-03T13:58:04.862Z",
+    "resolved_at": "2026-08-03T17:59:42.943Z",
+    "duration_minutes": 241,
+    "components": [
+      "Cloud Control Panel"
+    ],
+    "updates": [
+      {
+        "native_id": "cs5xqdyvpkc0",
+        "status": "investigating",
+        "body": "Beginning at 09:36 UTC on August 3, some customers may experience intermittent errors when accessing the DigitalOcean Cloud Control Panel, including an \"mTLS verification failed\" message. Our engineering team is actively investigating. \n\nWe apologise for the inconvenience this may have caused. We will provide another update as soon as more information is available.\n\nIf you have any questions related to this issue, please send us a ticket from your cloud support page. https://cloudsupport.digitalocean.com/s/createticket",
+        "created_at": "2026-08-03T13:58:04.98Z"
+      },
+      {
+        "native_id": "f33y6vxv4dr8",
+        "status": "monitoring",
+        "body": "We have implemented mitigation for the issue causing some customers to experience intermittent errors when accessing the DigitalOcean Cloud Control Panel. We are seeing recovery and are monitoring the service closely. We will provide another update once we have confirmed the issue is fully resolved",
+        "created_at": "2026-08-03T16:39:40.399Z"
+      },
+      {
+        "native_id": "nbz6mj1lsk2k",
+        "status": "resolved",
+        "body": "Between 09:36 and 13:30 UTC on August 3, some customers experienced intermittent errors while accessing the DigitalOcean Cloud Control Panel. We renewed the affected internal certificates and restored access. The issue is resolved, and the Cloud Control Panel is operating normally. We apologize for the disruption.",
+        "created_at": "2026-08-03T17:59:42.943Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-03-06T18:42:46.098Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "czck17wcspr5",
+          "name": "Cloud Control Panel",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2023-03-06",
+          "status": "operational",
+          "updated_at": "2026-08-25T00:54:37.328Z"
+        }
+      ],
+      "created_at": "2026-08-03T13:58:04.872Z",
+      "id": "3nt69xj3wkk9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Between 09:36 and 13:30 UTC on August 3, some customers experienced intermittent errors while accessing the DigitalOcean Cloud Control Panel. We renewed the affected internal certificates and restored access. The issue is resolved, and the Cloud Control Panel is operating normally. We apologize for the disruption.",
+          "created_at": "2026-08-03T17:59:42.943Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T17:59:42.943Z",
+          "id": "nbz6mj1lsk2k",
+          "incident_id": "3nt69xj3wkk9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T17:59:42.943Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We have implemented mitigation for the issue causing some customers to experience intermittent errors when accessing the DigitalOcean Cloud Control Panel. We are seeing recovery and are monitoring the service closely. We will provide another update once we have confirmed the issue is fully resolved",
+          "created_at": "2026-08-03T16:39:40.399Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T16:39:40.399Z",
+          "id": "f33y6vxv4dr8",
+          "incident_id": "3nt69xj3wkk9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T16:39:40.399Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "czck17wcspr5",
+              "name": "Cloud Control Panel",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Beginning at 09:36 UTC on August 3, some customers may experience intermittent errors when accessing the DigitalOcean Cloud Control Panel, including an \"mTLS verification failed\" message. Our engineering team is actively investigating. \n\nWe apologise for the inconvenience this may have caused. We will provide another update as soon as more information is available.\n\nIf you have any questions related to this issue, please send us a ticket from your cloud support page. https://cloudsupport.digitalocean.com/s/createticket",
+          "created_at": "2026-08-03T13:58:04.980Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-03T13:58:04.980Z",
+          "id": "cs5xqdyvpkc0",
+          "incident_id": "3nt69xj3wkk9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-03T13:58:04.980Z"
+        }
+      ],
+      "monitoring_at": "2026-08-03T16:39:40.399Z",
+      "name": "Cloud Control Panel Access",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-03T17:59:42.943Z",
+      "shortlink": "https://stspg.io/045lx5xqfdns",
+      "started_at": "2026-08-03T13:58:04.862Z",
+      "status": "resolved",
+      "updated_at": "2026-08-03T17:59:42.957Z"
+    }
+  }
+}

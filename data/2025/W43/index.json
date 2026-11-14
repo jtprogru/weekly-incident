@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2025-W43",
   "from": "2025-10-20T00:00:00Z",
   "to": "2025-10-27T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/vjgmxjdf0ps5",
+      "canonical": {
+        "id": "ci-f140dc983588253f32d7e0a7",
+        "sources": [
+          {
+            "key": "datadog/vjgmxjdf0ps5",
+            "path": "2025/W43/datadog.json",
+            "url": "https://stspg.io/gzvrd592kg4t"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f140dc983588253f32d7e0a7",
       "vendor": "datadog",
       "title": "Multiple products impacted with data delays",
       "url": "https://stspg.io/gzvrd592kg4t",
@@ -126,7 +148,20 @@
       "above_threshold": true
     },
     {
-      "key": "datadog/ww8rhx2j8mfz",
+      "canonical": {
+        "id": "ci-cd239c5828c932cee2002596",
+        "sources": [
+          {
+            "key": "datadog/ww8rhx2j8mfz",
+            "path": "2025/W43/datadog.json",
+            "url": "https://stspg.io/29j9dsc8llxg"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-cd239c5828c932cee2002596",
       "vendor": "datadog",
       "title": "Multiple products impacted with data delays",
       "url": "https://stspg.io/29j9dsc8llxg",

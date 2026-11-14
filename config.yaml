@@ -1,4 +1,10 @@
 ---
+# Identity policy changes require dedup plan/apply before collect.
+dedup:
+  mode: enforce
+  auto_aws: true
+  decisions: dedup/decisions.yaml
+
 # Source list and policy for the collector and the weekly digest.
 # Endpoints verified 2026-08-18, Yandex Cloud on 2026-10-12; see PLAN.md
 # section 3 for measured feed depth.

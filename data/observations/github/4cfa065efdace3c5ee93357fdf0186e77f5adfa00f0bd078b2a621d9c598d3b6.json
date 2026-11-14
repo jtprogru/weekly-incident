@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/pz7g535gbs6p",
+    "vendor": "github",
+    "native_id": "pz7g535gbs6p",
+    "title": "Actions run failures and delays",
+    "url": "https://stspg.io/448g37mrq066",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-25T12:31:50.953Z",
+    "resolved_at": "2026-07-25T13:13:21.503Z",
+    "duration_minutes": 41,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "fx4blmxlhh4y",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Actions",
+        "created_at": "2026-07-25T12:31:51.013Z"
+      },
+      {
+        "native_id": "yblvsfvtyyrv",
+        "status": "investigating",
+        "body": "We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality.",
+        "created_at": "2026-07-25T12:34:26.839Z"
+      },
+      {
+        "native_id": "2s8j64rtkx4d",
+        "status": "investigating",
+        "body": "We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure.",
+        "created_at": "2026-07-25T12:58:32.832Z"
+      },
+      {
+        "native_id": "y86xqymm4d7m",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-07-25T12:59:58.367Z"
+      },
+      {
+        "native_id": "c4tfkcrpwjbg",
+        "status": "monitoring",
+        "body": "We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried.",
+        "created_at": "2026-07-25T13:12:41.317Z"
+      },
+      {
+        "native_id": "40fbrl0y9zcy",
+        "status": "resolved",
+        "body": "Please refer to the combined summary in this related incident: https://www.githubstatus.com/incidents/s65j9gslmfm8",
+        "created_at": "2026-07-25T13:13:21.503Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-01T17:56:54.207Z"
+        }
+      ],
+      "created_at": "2026-07-25T12:31:50.959Z",
+      "id": "pz7g535gbs6p",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Please refer to the combined summary in this related incident: https://www.githubstatus.com/incidents/s65j9gslmfm8",
+          "created_at": "2026-07-25T13:13:21.503Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T13:13:21.503Z",
+          "id": "40fbrl0y9zcy",
+          "incident_id": "pz7g535gbs6p",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-30T18:41:47.893Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We have seen recovery in GitHub Actions performance following our earlier mitigation. Workflow runs are processing normally, though jobs queued before 12:40 UTC may still experience failures and will need to be retried.",
+          "created_at": "2026-07-25T13:12:41.317Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T13:12:41.317Z",
+          "id": "c4tfkcrpwjbg",
+          "incident_id": "pz7g535gbs6p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T13:12:41.317Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-07-25T12:59:58.367Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:59:58.367Z",
+          "id": "y86xqymm4d7m",
+          "incident_id": "pz7g535gbs6p",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:59:58.367Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have applied a mitigation for the infrastructure issue affecting GitHub Actions. Workflow run failures and delays are improving but not yet fully resolved. Our engineering team continues to work on restoring full functionality across all affected infrastructure.",
+          "created_at": "2026-07-25T12:58:32.832Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:58:32.832Z",
+          "id": "2s8j64rtkx4d",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:58:32.832Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are experiencing issues with GitHub Actions that are causing workflow run failures and delays for some users. Our engineering team is actively investigating the infrastructure issue and working to restore full functionality.",
+          "created_at": "2026-07-25T12:34:26.839Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:34:26.839Z",
+          "id": "yblvsfvtyyrv",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:34:26.839Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Actions",
+          "created_at": "2026-07-25T12:31:51.013Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-25T12:31:51.013Z",
+          "id": "fx4blmxlhh4y",
+          "incident_id": "pz7g535gbs6p",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-25T12:31:51.013Z"
+        }
+      ],
+      "monitoring_at": "2026-07-25T12:59:58.367Z",
+      "name": "Actions run failures and delays",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-25T13:13:21.503Z",
+      "shortlink": "https://stspg.io/448g37mrq066",
+      "started_at": "2026-07-25T12:31:50.953Z",
+      "status": "resolved",
+      "updated_at": "2026-07-30T18:41:47.898Z"
+    }
+  }
+}

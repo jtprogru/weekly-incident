@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/9n670kvk0vw9",
+    "vendor": "github",
+    "native_id": "9n670kvk0vw9",
+    "title": "We are seeing elevated errors with Next Edit Suggestions and Completions",
+    "url": "https://stspg.io/87nklrsyfs65",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-23T23:04:50.356Z",
+    "resolved_at": "2026-06-23T23:29:34.64Z",
+    "duration_minutes": 24,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "2p65j2wrpmm7",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-06-23T23:04:50.5Z"
+      },
+      {
+        "native_id": "dx0nhcmk1zx9",
+        "status": "investigating",
+        "body": "We have applied a rollback and are seeing recovery.",
+        "created_at": "2026-06-23T23:26:55.58Z"
+      },
+      {
+        "native_id": "b12ppp9s9qn7",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-06-23T23:27:25.809Z"
+      },
+      {
+        "native_id": "pxwqgwvhwmvw",
+        "status": "resolved",
+        "body": "On June 23, 2026, between 22:45 and 23:29 UTC, GitHub Copilot Completions and Next Edit Suggestions were degraded for users in all regions. During this window, affected users may have seen failed or missing code completions and Next Edit Suggestions. On average about 25% of Completions and Next Edit Suggestions requests failed during the impact window, peaking at roughly 27%. The cause was a configuration change that prevented the Copilot service from obtaining the authentication tokens it needs to reach its model backends; this both failed requests directly and caused the service to temporarily remove backends from rotation. GitHub engineers detected the elevated error rate within minutes, declared an incident, and mitigated the issue at 23:22 UTC by redeploying the service with a known-good configuration, which restored normal operation. As a follow-up, the team disabled the affected authentication path to prevent a future deployment from re-introducing the problem, and is making the change rollout safer. We apologize for the disruption and are taking steps to reduce the likelihood of similar incidents.",
+        "created_at": "2026-06-23T23:29:34.64Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-06-23T23:04:50.369Z",
+      "id": "9n670kvk0vw9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On June 23, 2026, between 22:45 and 23:29 UTC, GitHub Copilot Completions and Next Edit Suggestions were degraded for users in all regions. During this window, affected users may have seen failed or missing code completions and Next Edit Suggestions. On average about 25% of Completions and Next Edit Suggestions requests failed during the impact window, peaking at roughly 27%. The cause was a configuration change that prevented the Copilot service from obtaining the authentication tokens it needs to reach its model backends; this both failed requests directly and caused the service to temporarily remove backends from rotation. GitHub engineers detected the elevated error rate within minutes, declared an incident, and mitigated the issue at 23:22 UTC by redeploying the service with a known-good configuration, which restored normal operation. As a follow-up, the team disabled the affected authentication path to prevent a future deployment from re-introducing the problem, and is making the change rollout safer. We apologize for the disruption and are taking steps to reduce the likelihood of similar incidents.",
+          "created_at": "2026-06-23T23:29:34.640Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T23:29:34.640Z",
+          "id": "pxwqgwvhwmvw",
+          "incident_id": "9n670kvk0vw9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-26T23:01:46.872Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-06-23T23:27:25.809Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T23:27:25.809Z",
+          "id": "b12ppp9s9qn7",
+          "incident_id": "9n670kvk0vw9",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T23:27:25.809Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have applied a rollback and are seeing recovery.",
+          "created_at": "2026-06-23T23:26:55.580Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T23:26:55.580Z",
+          "id": "dx0nhcmk1zx9",
+          "incident_id": "9n670kvk0vw9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T23:26:55.580Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-06-23T23:04:50.500Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-23T23:04:50.500Z",
+          "id": "2p65j2wrpmm7",
+          "incident_id": "9n670kvk0vw9",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-23T23:04:50.500Z"
+        }
+      ],
+      "monitoring_at": "2026-06-23T23:27:25.809Z",
+      "name": "We are seeing elevated errors with Next Edit Suggestions and Completions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-23T23:29:34.640Z",
+      "shortlink": "https://stspg.io/87nklrsyfs65",
+      "started_at": "2026-06-23T23:04:50.356Z",
+      "status": "resolved",
+      "updated_at": "2026-06-26T23:01:46.877Z"
+    }
+  }
+}

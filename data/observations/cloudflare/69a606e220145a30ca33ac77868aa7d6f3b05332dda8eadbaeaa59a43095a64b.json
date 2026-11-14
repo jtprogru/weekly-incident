@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/vcstgt8gqkyk",
+    "vendor": "cloudflare",
+    "native_id": "vcstgt8gqkyk",
+    "title": "OTP Deliverability Errors",
+    "url": "https://www.cloudflarestatus.com/incidents/vcstgt8gqkyk",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-29T20:11:20.057Z",
+    "resolved_at": "2026-09-29T20:50:35.186Z",
+    "duration_minutes": 39,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "zmq61x897yf3",
+        "status": "investigating",
+        "body": "We are investigating an issue causing a high percentage of Access One Time Pin emails to fail. All other authentication methods are operating as normal.",
+        "created_at": "2026-09-29T20:11:20.186Z"
+      },
+      {
+        "native_id": "jpp0b0f0l9v6",
+        "status": "resolved",
+        "body": "Cloudflare engineering determined that customers didn't actually experience elevated levels of OTP failures. The rise in failures was an isolated incident without widespread impact.",
+        "created_at": "2026-09-29T20:50:35.186Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-29T20:50:35.000Z"
+        }
+      ],
+      "created_at": "2026-09-29T20:11:20.000Z",
+      "id": "vcstgt8gqkyk",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Cloudflare engineering determined that customers didn't actually experience elevated levels of OTP failures. The rise in failures was an isolated incident without widespread impact.",
+          "created_at": "2026-09-29T20:50:35.186Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-29T20:50:35.186Z",
+          "id": "jpp0b0f0l9v6",
+          "incident_id": "vcstgt8gqkyk",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-29T20:50:35.186Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Cloudflare Sites and Services - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue causing a high percentage of Access One Time Pin emails to fail. All other authentication methods are operating as normal.",
+          "created_at": "2026-09-29T20:11:20.186Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-29T20:11:20.186Z",
+          "id": "zmq61x897yf3",
+          "incident_id": "vcstgt8gqkyk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-09-29T20:11:20.186Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "OTP Deliverability Errors",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-29T20:50:35.186Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/vcstgt8gqkyk",
+      "started_at": "2026-09-29T20:11:20.057Z",
+      "status": "resolved",
+      "updated_at": "2026-09-29T20:50:35.212Z"
+    }
+  }
+}

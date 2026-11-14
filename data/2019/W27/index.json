@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2019-W27",
   "from": "2019-07-01T00:00:00Z",
   "to": "2019-07-08T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/w81fyrpz5qcl",
+      "canonical": {
+        "id": "ci-ff81391fb676709acd02670b",
+        "sources": [
+          {
+            "key": "atlassian/w81fyrpz5qcl",
+            "path": "2019/W27/atlassian.json",
+            "url": "http://stspg.io/d2bfd779a"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-ff81391fb676709acd02670b",
       "vendor": "atlassian",
       "title": "App switcher not loading in Jira and Confluence for some customers",
       "url": "http://stspg.io/d2bfd779a",

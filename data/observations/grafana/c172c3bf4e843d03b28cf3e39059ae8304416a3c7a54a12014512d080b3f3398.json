@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/chcdlmf9mhsn",
+    "vendor": "grafana",
+    "native_id": "chcdlmf9mhsn",
+    "title": "Partial Logs Write Outage",
+    "url": "https://stspg.io/zc28d5qtcwdf",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-08-28T17:12:42.732Z",
+    "resolved_at": "2026-08-28T18:42:09.202Z",
+    "duration_minutes": 89,
+    "components": [
+      "AWS US East (VA) - prod-us-east-3"
+    ],
+    "updates": [
+      {
+        "native_id": "csy2zrc8dnn1",
+        "status": "identified",
+        "body": "We’ve identified the cause of an issue impacting Log writes. Our team is currently implementing a fix.",
+        "created_at": "2026-08-28T17:12:42.875Z"
+      },
+      {
+        "native_id": "m16n7y3823sq",
+        "status": "monitoring",
+        "body": "This incident also had impact on Frontend Observability for the same region.\n\nA fix has been deployed, and things have stablized. We will continue to monitor on our end.",
+        "created_at": "2026-08-28T17:55:04.906Z"
+      },
+      {
+        "native_id": "93m208fcs42z",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-28T18:42:09.202Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-07-24T17:00:57.332Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "vgv3t5h3q1qy",
+          "name": "AWS US East (VA) - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2026-07-24",
+          "status": "operational",
+          "updated_at": "2026-10-20T16:08:41.130Z"
+        }
+      ],
+      "created_at": "2026-08-28T17:12:42.743Z",
+      "id": "chcdlmf9mhsn",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-28T18:42:09.202Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T18:42:09.202Z",
+          "id": "93m208fcs42z",
+          "incident_id": "chcdlmf9mhsn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T18:42:09.202Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "This incident also had impact on Frontend Observability for the same region.\n\nA fix has been deployed, and things have stablized. We will continue to monitor on our end.",
+          "created_at": "2026-08-28T17:55:04.906Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:55:04.906Z",
+          "id": "m16n7y3823sq",
+          "incident_id": "chcdlmf9mhsn",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:55:04.906Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vgv3t5h3q1qy",
+              "name": "Logs - AWS US East - prod-us-east-3",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’ve identified the cause of an issue impacting Log writes. Our team is currently implementing a fix.",
+          "created_at": "2026-08-28T17:12:42.875Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-28T17:12:42.875Z",
+          "id": "csy2zrc8dnn1",
+          "incident_id": "chcdlmf9mhsn",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-08-28T17:12:42.875Z"
+        }
+      ],
+      "monitoring_at": "2026-08-28T17:55:04.906Z",
+      "name": "Partial Logs Write Outage",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-28T18:42:09.202Z",
+      "shortlink": "https://stspg.io/zc28d5qtcwdf",
+      "started_at": "2026-08-28T17:12:42.732Z",
+      "status": "resolved",
+      "updated_at": "2026-08-28T18:42:09.218Z"
+    }
+  }
+}

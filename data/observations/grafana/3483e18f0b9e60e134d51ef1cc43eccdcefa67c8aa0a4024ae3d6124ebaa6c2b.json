@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/rdrpk724tpyn",
+    "vendor": "grafana",
+    "native_id": "rdrpk724tpyn",
+    "title": "o11y requests too large for nods in the prod-eu-west-2 region.",
+    "url": "https://stspg.io/c9rg758f2vsf",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-08-05T11:41:35.396Z",
+    "resolved_at": "2026-08-05T11:44:35.623Z",
+    "duration_minutes": 3,
+    "components": [
+      "AWS Germany - prod-eu-west-2: Rule Evaluation",
+      "AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+      "AWS Germany - prod-eu-west-2: Alertmanager"
+    ],
+    "updates": [
+      {
+        "native_id": "jvbqttyv703h",
+        "status": "investigating",
+        "body": "We are currently investigating an issue with critical o11y requests being too large for nods in the prod-eu-west-2 region. This is leading to issues in scaling up services, and may may lead increased errors in requests.",
+        "created_at": "2026-08-05T11:41:35.582Z"
+      },
+      {
+        "native_id": "c16wskw6kjdl",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-08-05T11:44:35.623Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:33:40.251Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "hcj5p68bp2kc",
+          "name": "AWS Germany - prod-eu-west-2: Rule Evaluation",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-23T17:42:51.734Z"
+        },
+        {
+          "created_at": "2023-09-20T15:34:03.339Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "95tmjrzs9h1f",
+          "name": "AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-23T17:42:51.792Z"
+        },
+        {
+          "created_at": "2023-09-20T15:34:13.893Z",
+          "description": null,
+          "group": false,
+          "group_id": "hv8qrwsn7l7n",
+          "id": "kckd7qfk2gql",
+          "name": "AWS Germany - prod-eu-west-2: Alertmanager",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-09-23T17:42:51.835Z"
+        }
+      ],
+      "created_at": "2026-08-05T11:41:35.412Z",
+      "id": "rdrpk724tpyn",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-08-05T11:44:35.623Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-08-05T11:44:35.623Z",
+          "id": "c16wskw6kjdl",
+          "incident_id": "rdrpk724tpyn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-05T11:44:35.623Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hcj5p68bp2kc",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Rule Evaluation",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "95tmjrzs9h1f",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager and Rules Configuration API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kckd7qfk2gql",
+              "name": "Alerting and SLO - AWS Germany - prod-eu-west-2: Alertmanager",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue with critical o11y requests being too large for nods in the prod-eu-west-2 region. This is leading to issues in scaling up services, and may may lead increased errors in requests.",
+          "created_at": "2026-08-05T11:41:35.582Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-05T11:41:35.582Z",
+          "id": "jvbqttyv703h",
+          "incident_id": "rdrpk724tpyn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-05T11:41:35.582Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "o11y requests too large for nods in the prod-eu-west-2 region.",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-05T11:44:35.623Z",
+      "shortlink": "https://stspg.io/c9rg758f2vsf",
+      "started_at": "2026-08-05T11:41:35.396Z",
+      "status": "resolved",
+      "updated_at": "2026-08-05T11:44:35.635Z"
+    }
+  }
+}

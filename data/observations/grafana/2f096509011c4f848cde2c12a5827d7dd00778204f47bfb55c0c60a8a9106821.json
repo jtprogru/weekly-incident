@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/gsdpkqp4kvlv",
+    "vendor": "grafana",
+    "native_id": "gsdpkqp4kvlv",
+    "title": "Loki and Frontend Observability - Major Outage in prod-us-central-0 region",
+    "url": "https://stspg.io/3v5hcx1v7p32",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-07-02T04:55:52.588Z",
+    "resolved_at": "2026-07-02T06:49:44.76Z",
+    "duration_minutes": 113,
+    "components": [
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-0"
+    ],
+    "updates": [
+      {
+        "native_id": "3vfh8dbx0t9s",
+        "status": "investigating",
+        "body": "We are currently investigating a major outage in Loki writes and Frontend Observability in the prod-us-central-0 region. Our Engineering team is investigating this and we will provide further updates as our investigation progresses.",
+        "created_at": "2026-07-02T04:55:52.713Z"
+      },
+      {
+        "native_id": "zsxjy02jyyrt",
+        "status": "investigating",
+        "body": "The AWS Logs integration in the same region is affected as well. We will provide further updates as our investigation progresses.",
+        "created_at": "2026-07-02T04:57:44.841Z"
+      },
+      {
+        "native_id": "lnk81vy5wmk4",
+        "status": "resolved",
+        "body": "This incident has been resolved by restarting the affected services.",
+        "created_at": "2026-07-02T06:49:44.76Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T18:43:42.629Z",
+          "description": null,
+          "group": false,
+          "group_id": "mq3m31k94l26",
+          "id": "fn320fztp9hc",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-07-02T06:49:44.706Z"
+        },
+        {
+          "created_at": "2019-12-10T22:16:56.701Z",
+          "description": null,
+          "group": false,
+          "group_id": "r8qj089qzgy1",
+          "id": "l72f5c7651n5",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-02T21:35:48.007Z"
+        }
+      ],
+      "created_at": "2026-07-02T04:55:52.603Z",
+      "id": "gsdpkqp4kvlv",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "fn320fztp9hc",
+              "name": "Frontend Observability - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident has been resolved by restarting the affected services.",
+          "created_at": "2026-07-02T06:49:44.760Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T06:49:44.760Z",
+          "id": "lnk81vy5wmk4",
+          "incident_id": "gsdpkqp4kvlv",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T06:49:44.760Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "fn320fztp9hc",
+              "name": "Frontend Observability - GCP US Central - prod-us-central-0",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "The AWS Logs integration in the same region is affected as well. We will provide further updates as our investigation progresses.",
+          "created_at": "2026-07-02T04:57:44.841Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T04:57:44.841Z",
+          "id": "zsxjy02jyyrt",
+          "incident_id": "gsdpkqp4kvlv",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T04:57:44.841Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "l72f5c7651n5",
+              "name": "Logs - GCP US Central - prod-us-central-0",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "fn320fztp9hc",
+              "name": "Frontend Observability - GCP US Central - prod-us-central-0",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating a major outage in Loki writes and Frontend Observability in the prod-us-central-0 region. Our Engineering team is investigating this and we will provide further updates as our investigation progresses.",
+          "created_at": "2026-07-02T04:55:52.713Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-02T04:55:52.713Z",
+          "id": "3vfh8dbx0t9s",
+          "incident_id": "gsdpkqp4kvlv",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-02T04:55:52.713Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Loki and Frontend Observability - Major Outage in prod-us-central-0 region",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-02T06:49:44.760Z",
+      "shortlink": "https://stspg.io/3v5hcx1v7p32",
+      "started_at": "2026-07-02T04:55:52.588Z",
+      "status": "resolved",
+      "updated_at": "2026-07-02T06:49:44.774Z"
+    }
+  }
+}

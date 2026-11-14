@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/6yfpsos7ksp3",
+    "vendor": "cloudflare",
+    "native_id": "6yfpsos7ksp3",
+    "title": "Increased Worker services errors",
+    "url": "https://www.cloudflarestatus.com/incidents/6yfpsos7ksp3",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-29T09:22:53.373Z",
+    "resolved_at": "2026-10-29T11:49:16.376Z",
+    "duration_minutes": 146,
+    "components": [
+      "Containers",
+      "D1",
+      "Workers Assets",
+      "Workflows"
+    ],
+    "updates": [
+      {
+        "native_id": "yg4of4i5v67k",
+        "status": "investigating",
+        "body": "Cloudflare has identified an issue where customers are experiencing elevated 500 errors  impacting Durable Objects, D1, Workflows, Workers Assets uploads and Cloudchamber.",
+        "created_at": "2026-10-29T09:22:53.373Z"
+      },
+      {
+        "native_id": "r9ururoojfhb",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-10-29T10:51:03.667Z"
+      },
+      {
+        "native_id": "13fvs26i58r5",
+        "status": "monitoring",
+        "body": "We are continuing to monitor for any further issues.",
+        "created_at": "2026-10-29T11:37:58.196Z"
+      },
+      {
+        "native_id": "1e43o4uo2hct",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-29T11:49:16.376Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-07-23T11:03:53.000Z",
+          "description": "Cloudflare Containers",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "nd77krz8224v",
+          "name": "Containers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2025-07-23",
+          "status": "operational",
+          "updated_at": "2026-11-11T06:41:33.983Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-11-11T13:09:04.520Z"
+        },
+        {
+          "created_at": "2026-03-30T11:50:12.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "pg21w9xb991r",
+          "name": "Workers Assets",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2026-03-30",
+          "status": "operational",
+          "updated_at": "2026-10-29T16:33:43.687Z"
+        },
+        {
+          "created_at": "2025-04-04T09:39:26.000Z",
+          "description": "Workflows is Cloudflare Durable Execution engine, that give the ability to build and execute applications that are durable in the face of errors, network issues, upstream API outages, rate limits, and (most importantly) infrastructure failure.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5df6y9z3fsky",
+          "name": "Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2025-04-04",
+          "status": "operational",
+          "updated_at": "2026-10-29T16:33:43.687Z"
+        }
+      ],
+      "created_at": "2026-10-29T09:22:53.373Z",
+      "id": "6yfpsos7ksp3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-29T11:49:16.376Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T11:49:16.376Z",
+          "id": "1e43o4uo2hct",
+          "incident_id": "6yfpsos7ksp3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T11:49:16.376Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to monitor for any further issues.",
+          "created_at": "2026-10-29T11:37:58.196Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T11:37:58.196Z",
+          "id": "13fvs26i58r5",
+          "incident_id": "6yfpsos7ksp3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T11:37:58.196Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pg21w9xb991r",
+              "name": "Developer Services - Workers Assets",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "5df6y9z3fsky",
+              "name": "Developer Services - Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "nd77krz8224v",
+              "name": "Developer Services - Containers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-10-29T10:51:03.667Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T10:51:03.667Z",
+          "id": "r9ururoojfhb",
+          "incident_id": "6yfpsos7ksp3",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T10:51:03.667Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Developer Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare has identified an issue where customers are experiencing elevated 500 errors  impacting Durable Objects, D1, Workflows, Workers Assets uploads and Cloudchamber.",
+          "created_at": "2026-10-29T09:22:53.373Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-29T09:22:53.373Z",
+          "id": "yg4of4i5v67k",
+          "incident_id": "6yfpsos7ksp3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-29T11:35:51.092Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Worker services errors",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-29T11:49:16.376Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/6yfpsos7ksp3",
+      "started_at": "2026-10-29T09:22:53.373Z",
+      "status": "resolved",
+      "updated_at": "2026-10-29T11:49:16.376Z"
+    }
+  }
+}

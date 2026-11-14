@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/r2qy9bfwfqy9",
+    "vendor": "grafana",
+    "native_id": "r2qy9bfwfqy9",
+    "title": "Tempo: High Latency in prod-eu-west-2",
+    "url": "https://stspg.io/qth8ndlqhdj1",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-15T14:35:17.451Z",
+    "resolved_at": "2026-10-15T16:58:25.105Z",
+    "duration_minutes": 143,
+    "components": [
+      "AWS Germany - prod-eu-west-2: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "7hhvxdh64pn3",
+        "status": "identified",
+        "body": "We observed some spikes in latency starting at approximately 12:50 UTC. We are working on a resolution. \n\nNext update by 15:30 UTC",
+        "created_at": "2026-10-15T14:35:17.734Z"
+      },
+      {
+        "native_id": "jjl9hfvrnmf0",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for this issue.\n\nNext update by 16:30 UTC",
+        "created_at": "2026-10-15T15:20:22.103Z"
+      },
+      {
+        "native_id": "mhp2l0zm8h0g",
+        "status": "identified",
+        "body": "Things are starting to stabilize as we continue to work on a mitigation.",
+        "created_at": "2026-10-15T16:08:52.028Z"
+      },
+      {
+        "native_id": "0t1hkb71mqnd",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-10-15T16:58:25.105Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-09-20T15:54:44.557Z",
+          "description": null,
+          "group": false,
+          "group_id": "v4xsyh1gm4zd",
+          "id": "bg7pryvvh19l",
+          "name": "AWS Germany - prod-eu-west-2: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-10-23T10:16:30.171Z"
+        }
+      ],
+      "created_at": "2026-10-15T14:35:17.461Z",
+      "id": "r2qy9bfwfqy9",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-10-15T16:58:25.105Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T16:58:25.105Z",
+          "id": "0t1hkb71mqnd",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T16:58:25.105Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Things are starting to stabilize as we continue to work on a mitigation.",
+          "created_at": "2026-10-15T16:08:52.028Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T16:08:52.028Z",
+          "id": "mhp2l0zm8h0g",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T16:08:52.028Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are continuing to work on a fix for this issue.\n\nNext update by 16:30 UTC",
+          "created_at": "2026-10-15T15:20:22.103Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T15:20:22.103Z",
+          "id": "jjl9hfvrnmf0",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T15:20:22.103Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bg7pryvvh19l",
+              "name": "Traces - AWS Germany - prod-eu-west-2: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We observed some spikes in latency starting at approximately 12:50 UTC. We are working on a resolution. \n\nNext update by 15:30 UTC",
+          "created_at": "2026-10-15T14:35:17.734Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-15T14:35:17.734Z",
+          "id": "7hhvxdh64pn3",
+          "incident_id": "r2qy9bfwfqy9",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-15T14:35:17.734Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Tempo: High Latency in prod-eu-west-2",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-15T16:58:25.105Z",
+      "shortlink": "https://stspg.io/qth8ndlqhdj1",
+      "started_at": "2026-10-15T14:35:17.451Z",
+      "status": "resolved",
+      "updated_at": "2026-10-15T16:58:25.135Z"
+    }
+  }
+}

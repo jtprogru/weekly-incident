@@ -1,6 +1,8 @@
-# Week 2026-W40 — top 5 of 23 above threshold
+# Week 2026-W40 — top 5 of 24 above threshold
 
 2026-09-28 to 2026-10-04 (UTC).
+
+42 source records (45 saved revisions) → 42 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## 1. cloudflare — Issues with Workers Build failing to start
 
@@ -8,6 +10,12 @@
 - Window: 2026-10-03 05:54 to 2026-10-05 07:28 UTC (2d 1h 33m)
 - Impact: minor, status: resolved
 - Components: Workers Builds
+
+<a id="ci-528695273cb7c48118823556"></a>
+
+- Canonical ID: `ci-528695273cb7c48118823556` (1 source records).
+  - [cloudflare/q2bck6r39bzk](../../data/2026/W40/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/q2bck6r39bzk
+- Start time basis: `vendor_reported`.
 
   - `2026-10-03 05:54` investigating — Cloudflare is aware of and investigating an issue with Cloudflare Workers build failing to start. We are working to analyse and mitigate this problem. More updates to follow shortly.
   - `2026-10-03 08:54` monitoring — A fix has been implemented and we are monitoring the results.
@@ -20,6 +28,12 @@
 - Impact: minor, status: resolved
 - Components: —
 
+<a id="ci-27ad44d3f4581eff490632ab"></a>
+
+- Canonical ID: `ci-27ad44d3f4581eff490632ab` (1 source records).
+  - [cloudflare/fs7dz54l226c](../../data/2026/W40/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fs7dz54l226c
+- Start time basis: `vendor_reported`.
+
   - `2026-09-30 10:31` investigating — Cloudflare is investigating issues with network performance in Madrid (MAD). We are working to analyse and mitigate this problem. More updates to follow shortly.
   - `2026-09-30 11:31` identified — The issue has been identified and a fix is being implemented.
   - `2026-09-30 14:06` monitoring — A fix has been implemented and we are monitoring the results.
@@ -31,6 +45,12 @@
 - Window: 2026-09-30 02:20 to 2026-10-01 23:44 UTC (1d 21h 24m)
 - Impact: minor, status: resolved
 - Components: —
+
+<a id="ci-121d3799dc075ecfb7547960"></a>
+
+- Canonical ID: `ci-121d3799dc075ecfb7547960` (1 source records).
+  - [openai/01M3R1T4FCR1337FBBYY9K2RPB](../../data/2026/W40/openai.json); vendor URL: https://status.openai.com/incidents/01M3R1T4FCR1337FBBYY9K2RPB
+- Start time basis: `vendor_reported`.
 
   - `2026-09-30 02:20` identified — We have identified that users may experience errors creating or interacting with Pages, including failures when using Page tools or connecting to live Page sessions. We are working on implementing a mitigation.
   - `2026-09-30 06:03` monitoring — We have applied the mitigation and are monitoring the recovery.
@@ -46,6 +66,12 @@
 - Impact: minor, status: resolved
 - Components: Containers, Durable Objects, Hyperdrive, R2, Stream, Vectorize
 
+<a id="ci-35a7c79177802e86306763e8"></a>
+
+- Canonical ID: `ci-35a7c79177802e86306763e8` (1 source records).
+  - [cloudflare/mq69fw5ykdwb](../../data/2026/W40/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mq69fw5ykdwb
+- Start time basis: `vendor_reported`.
+
   - `2026-09-30 13:49` investigating — Cloudflare is investigating possible network congestion in Los Angeles (LAX) affecting Vectorize, Durable Objects, R2, Hyperdrive, Stream, and Cloudchamber. We are working to mitigate the impact to Internet users in the region.
   - `2026-09-30 14:39` investigating — We are continuing to investigate this issue.
   - `2026-09-30 19:18` resolved — This incident has been resolved.
@@ -57,12 +83,19 @@
 - Impact: minor, status: resolved
 - Components: Workers Builds
 
+<a id="ci-07a9384d13c66f040ca883f0"></a>
+
+- Canonical ID: `ci-07a9384d13c66f040ca883f0` (1 source records).
+  - [cloudflare/4m03612lprhr](../../data/2026/W40/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/4m03612lprhr
+- Start time basis: `vendor_reported`.
+
   - `2026-09-30 15:33` investigating — Cloudflare is aware of and investigating an issue with Cloudflare Workers build delays which potentially impacts multiple customers. Further detail will be provided as more information becomes available.
   - `2026-09-30 17:42` monitoring — A fix has been implemented and we are monitoring the results.
   - `2026-10-01 21:27` resolved — This incident has been resolved.
 
-## Also above threshold (18)
+## Also above threshold (19)
 
+- `yandexcloud` The problem is with the services (23h 25m) — https://status.yandex.cloud/en/incidents/2049
 - `anthropic` Delayed credits on the Claude Platform (6h 15m) — https://stspg.io/jg26d0skzh27
 - `anthropic` Elevated errors on claude.ai, Claude Code, Claude Cowork and the Claude API (2h 5m) — https://stspg.io/br61xzj05pp5
 - `openai` Elevated error rates for ChatGPT Pro and Plus users (7h 35m) — https://status.openai.com/incidents/01M3RDNY37CAPQGRKPBVMNRT4K
@@ -81,4 +114,3 @@
 - `openai` Issues with login, signup, and ads (53m) — https://status.openai.com/incidents/01M3WCKTAN41RZ01SBRRTY4AYM
 - `github` Copilot Code Review is unable to complete reviews (51m) — https://stspg.io/phqvtmdm3y2m
 - `cloudflare` Cloudflare CDN experiencing increase in errors. (11m) — https://www.cloudflarestatus.com/incidents/2xnmsnv8yv5x
-

@@ -1,19 +1,21 @@
 # Week 2026-W42
 
-2026-10-12 to 2026-10-18 (UTC). Generated 2026-10-19 14:09.
+2026-10-12 to 2026-10-18 (UTC). Generated 2026-11-14 12:36.
 
-57 incidents collected, 31 above threshold. All 14 sources responded.
+57 canonical incidents, 31 above threshold. 2 of 14 sources unavailable: datadog, yandexcloud.
+
+57 source records (58 saved revisions) → 57 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## Above threshold
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
-| 1 | grafana | [Phone call notifications to numbers in Russia and Kazakhstan are blocked](https://stspg.io/3kqkpqlqm6f5) | 2026-10-13 09:23 | 6d 4h 45m (ongoing) | minor | Incident Management and Response (IRM) | 8925 = 8925 × 1 × 1.0 |
+| 1 | grafana | [Phone call notifications to numbers in Russia and Kazakhstan are blocked](https://stspg.io/3kqkpqlqm6f5) | 2026-10-13 09:23 | 6d 2h 15m | minor | Incident Management and Response (IRM) | 8775 = 8775 × 1 × 1.0 |
 | 2 | cloudflare | [Audit Logs v2 ingestion is missing multiple Cloudflare products](https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6) | 2026-10-13 10:14 | 2d 14h 21m | minor | Audit Logs | 6734 = 3741 × 1 × 1.8 |
 | 3 | openai | [Delayed Costs data in the Compliance API](https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG) | 2026-10-14 17:00 | 1d 17h 44m | minor | — | 3756 = 2504 × 1 × 1.5 |
 | 4 | cloudflare | [Elevated errors in Los Angeles (LAX)](https://www.cloudflarestatus.com/incidents/vyy1a1dspusg) | 2026-10-12 08:52 | 1d 8h 48m | minor | Los Angeles, CA, United States - (LAX) | 3542 = 1968 × 1 × 1.8 |
 | 5 | cloudflare | [Cloudflare Workers - Cron Trigger Activation Issues](https://www.cloudflarestatus.com/incidents/npjny9agana8) | 2026-10-14 05:36 | 19h 53m | minor | Workers | 2147 = 1193 × 1 × 1.8 |
-| 6 | github | [Incident with Actions, Pull Requests and Issues](https://stspg.io/flldq0dn2wdz) | 2026-10-12 12:21 | 7h 54m | minor | Issues, Pull Requests, Actions | 2133 = 474 × 3 × 1.5 |
+| 6 | github | [Incident with Actions, Pull Requests and Issues](https://stspg.io/flldq0dn2wdz) | 2026-10-12 12:21 | 7h 54m | minor | Actions, Issues, Pull Requests | 2133 = 474 × 3 × 1.5 |
 | 7 | cloudflare | [Increased HTTP 502 Errors](https://www.cloudflarestatus.com/incidents/mxthd6onaplz) | 2026-10-15 10:47 | 9h 51m | minor | CDN/Cache, Network | 2128 = 591 × 2 × 1.8 |
 | 8 | cloudflare | [Increased Errors for Durable Objects](https://www.cloudflarestatus.com/incidents/9yl8m5h16g1z) | 2026-10-15 15:37 | 2h 23m | minor | AI Search, Artifacts, Containers, D1, Durable Objects, Workers Assets, Workflows | 1802 = 143 × 7 × 1.8 |
 | 9 | cloudflare | [Network performance issues in Ashburn, US (IAD)](https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t) | 2026-10-13 04:00 | 10h 56m | minor | Ashburn, VA, United States - (IAD) | 1181 = 656 × 1 × 1.8 |
@@ -27,17 +29,17 @@
 | 17 | grafana | [Tempo Write Failures in prod-us-central-0](https://stspg.io/0w7m43wy213v) | 2026-10-15 16:10 | 5h 42m | major | GCP US Central - prod-us-central-0: Ingestion | 342 = 342 × 1 × 1.0 |
 | 18 | cloudflare | [DNS Update Delays](https://www.cloudflarestatus.com/incidents/wpq9v3pzhcwl) | 2026-10-15 15:33 | 2h 45m | minor | DNS Updates | 297 = 165 × 1 × 1.8 |
 | 19 | grafana | [Metric reads and rule evaluations are degraded in mimir-prod-66](https://stspg.io/489nw4cdzhsw) | 2026-10-16 21:05 | 4h 49m | minor | AWS US East (VA) - prod-us-east-3 | 289 = 289 × 1 × 1.0 |
-| 20 | cloudflare | [Network Performance Issues in Eastern North America](https://www.cloudflarestatus.com/incidents/fiv2bu3zf8kx) | 2026-10-15 20:48 | 49m | major | Ashburn, VA, United States - (IAD), Newark, NJ, United States - (EWR), Network | 265 = 49 × 3 × 1.8 |
+| 20 | cloudflare | [Network Performance Issues in Eastern North America](https://www.cloudflarestatus.com/incidents/fiv2bu3zf8kx) | 2026-10-15 20:48 | 49m | major | Ashburn, United States - (IAD), Network, Newark, United States - (EWR) | 265 = 49 × 3 × 1.8 |
 | 21 | cloudflare | [Cloudflare Workers AI Issues](https://www.cloudflarestatus.com/incidents/alzmexlqangd) | 2026-10-15 07:10 | 2h 26m | minor | Workers AI | 263 = 146 × 1 × 1.8 |
 | 22 | cloudflare | [Cloudflare Fedramp Dashboard and Access](https://www.cloudflarestatus.com/incidents/qwx5xtl8mv7d) | 2026-10-16 17:56 | 1h 12m | major | Access, FedRamp Dashboard | 259 = 72 × 2 × 1.8 |
 | 23 | openai | [Degraded performance in Codex and ChatGPT Work](https://status.openai.com/incidents/01M4WKPE1EY48ZB4RZJ80YH7ES) | 2026-10-14 07:05 | 2h 47m | minor | — | 250 = 167 × 1 × 1.5 |
 | 24 | cloudflare | [Network Performance Issues in LAX](https://www.cloudflarestatus.com/incidents/fdgz8zlmfhw6) | 2026-10-13 20:37 | 2h 6m | minor | Los Angeles, CA, United States - (LAX) | 227 = 126 × 1 × 1.8 |
-| 25 | cloudflare | [Elevated number of 5XX errors in PDX](https://www.cloudflarestatus.com/incidents/7hicc5bfkvx3) | 2026-10-14 04:40 | 2h 5m | none | Portland, OR, United States - (PDX) | 225 = 125 × 1 × 1.8 |
+| 25 | cloudflare | [Elevated number of 5XX errors in PDX](https://www.cloudflarestatus.com/incidents/7hicc5bfkvx3) | 2026-10-14 04:40 | 2h 5m | none | Portland, United States - (PDX) | 225 = 125 × 1 × 1.8 |
 | 26 | openai | [Widespread feature degradation](https://status.openai.com/incidents/01M506BA4XRSWH7THR53HQGN3Z) | 2026-10-15 16:29 | 2h 26m | major | — | 219 = 146 × 1 × 1.5 |
 | 27 | grafana | [Authentication errors in prod-us-west-0](https://stspg.io/wrxbbbsyx0f7) | 2026-10-14 12:57 | 2h 48m | minor | AWS US West - prod-us-west-0 | 168 = 168 × 1 × 1.0 |
 | 28 | stripe | [Elevated declines on Mastercard](https://stspg.io/csnmnfc5cgjv) | 2026-10-15 18:35 | 2h 18m | none | Acquirers and payment methods | 166 = 138 × 1 × 1.2 |
 | 29 | grafana | [Tempo: High Latency in prod-eu-west-2](https://stspg.io/qth8ndlqhdj1) | 2026-10-15 14:35 | 2h 23m | minor | AWS Germany - prod-eu-west-2: Ingestion | 143 = 143 × 1 × 1.0 |
-| 30 | cloudflare | [Network Performance Issues in London](https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef) | 2026-10-15 17:33 | 13m | major | London, United Kingdom - (LHR), Durable Objects, R2, RealtimeKit | 94 = 13 × 4 × 1.8 |
+| 30 | cloudflare | [Network Performance Issues in London](https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef) | 2026-10-15 17:33 | 13m | major | Durable Objects, London, United Kingdom - (LHR), R2, RealtimeKit | 94 = 13 × 4 × 1.8 |
 | 31 | cloudflare | [Cloudflare Service Issues](https://www.cloudflarestatus.com/incidents/z7vongh8rqc1) | 2026-10-13 16:39 | 28m | major | — | 50 = 28 × 1 × 1.8 |
 
 Score is duration in minutes, times component count, times vendor weight.
@@ -48,14 +50,16 @@ Score is duration in minutes, times component count, times vendor weight.
 
 - URL: https://stspg.io/3kqkpqlqm6f5
 - Started: 2026-10-13 09:23 UTC
-- Resolved: not yet
-- Duration: 6d 4h 45m (ongoing)
-- Impact: minor, status: investigating
+- Resolved: 2026-10-19 11:39 UTC
+- Duration: 6d 2h 15m
+- Impact: minor, status: resolved
 - Components: Incident Management and Response (IRM)
+- Canonical incident: [ci-caaa24671b482ffc04205c2e](#ci-caaa24671b482ffc04205c2e)
 
 - `2026-10-13 09:23` **investigating** — Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
 - `2026-10-13 21:35` **investigating** — Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
 - `2026-10-16 19:44` **investigating** — Phone call notifications to numbers in Russia and Kazakhstan are still blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
+- `2026-10-19 11:39` **resolved** — Following further investigation, we've confirmed that SMS delivery to certain destinations is not currently supported. We've updated our documentation to clarify the supported destinations and available notification options. We recommend using mobile push notifications or phone calls as alternatives where SMS delivery is unavailable.
 
 ### 2. cloudflare — Audit Logs v2 ingestion is missing multiple Cloudflare products
 
@@ -65,6 +69,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2d 14h 21m
 - Impact: minor, status: resolved
 - Components: Audit Logs
+- Canonical incident: [ci-e92f0b68c0d33f623c50edd4](#ci-e92f0b68c0d33f623c50edd4)
 
 - `2026-10-13 10:14` **identified** — Since 2026-10-12 at 16:57:24 UTC, audit logs from multiple Cloudflare products are not ingested into the audit logs v2 database anymore. V1 audit logs are not affected
 - `2026-10-13 11:45` **monitoring** — We are continuing to monitor for any further issues.
@@ -78,6 +83,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1d 17h 44m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-95f853d46fd4652c1d926f86](#ci-95f853d46fd4652c1d926f86)
 
 - `2026-10-14 17:00` **identified** — We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.
 - `2026-10-14 17:02` **identified** — We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.
@@ -93,6 +99,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1d 8h 48m
 - Impact: minor, status: resolved
 - Components: Los Angeles, CA, United States - (LAX)
+- Canonical incident: [ci-74bcdd8823be798e74a86239](#ci-74bcdd8823be798e74a86239)
 
 - `2026-10-12 08:52` **investigating** — Customers reaching Los Angeles (LAX) colo may see an elevate number of errors. Our team is investigating and working on mitigating the issue.
 - `2026-10-12 21:41` **identified** — We are continuing to work on a fix for the issue.
@@ -106,6 +113,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 19h 53m
 - Impact: minor, status: resolved
 - Components: Workers
+- Canonical incident: [ci-d3e5b57b3543afbdbd1b13b9](#ci-d3e5b57b3543afbdbd1b13b9)
 
 - `2026-10-14 05:36` **investigating** — Cloudflare is investigating issues with Workers Cron Triggers. Customers who have recently created or modified a Cron Trigger schedule may find that the schedule is not executing as expected. Pre-existing Cron Trigger schedules that have not been recently modified are not affected. We are working to identify the cause and mitigate this problem. More updates to follow shortly.
 - `2026-10-14 07:23` **identified** — A fix has been identified and is underway
@@ -119,7 +127,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-10-12 20:16 UTC
 - Duration: 7h 54m
 - Impact: minor, status: resolved
-- Components: Issues, Pull Requests, Actions
+- Components: Actions, Issues, Pull Requests
+- Canonical incident: [ci-27b9306b607dc687a95375ee](#ci-27b9306b607dc687a95375ee)
 
 - `2026-10-12 12:21` **investigating** — We are investigating reports of degraded performance for Actions, Issues and Pull Requests
 - `2026-10-12 12:33` **investigating** — Users may experience issues loading the Actions tab UI, interacting with the Checks API, queueing new Actions runs, creating and updating issues, and requesting PR reviews, including via REST and GraphQL APIs.
@@ -143,6 +152,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 9h 51m
 - Impact: minor, status: resolved
 - Components: CDN/Cache, Network
+- Canonical incident: [ci-3500741717782c2f9fa0b36e](#ci-3500741717782c2f9fa0b36e)
 
 - `2026-10-15 10:47` **investigating** — Cloudflare is investigating an increased level of HTTP 502 errors. We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-10-15 11:27` **identified** — We are continuing to work on a fix for the issue.
@@ -157,6 +167,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 23m
 - Impact: minor, status: resolved
 - Components: AI Search, Artifacts, Containers, D1, Durable Objects, Workers Assets, Workflows
+- Canonical incident: [ci-9b4672f90c41967680baa3bd](#ci-9b4672f90c41967680baa3bd)
 
 - `2026-10-15 15:37` **investigating** — Cloudflare is investigating issues causing an increase of errors for Durable Objects and downstream services in DEN. We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-10-15 16:12` **identified** — The issue has been identified and a fix is being implemented.
@@ -170,6 +181,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 10h 56m
 - Impact: minor, status: resolved
 - Components: Ashburn, VA, United States - (IAD)
+- Canonical incident: [ci-530ca777c28109bc34f38612](#ci-530ca777c28109bc34f38612)
 
 - `2026-10-13 04:00` **investigating** — Cloudflare is investigating issues with network performance in Ashburn, US (IAD). We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-10-13 04:52` **identified** — The issue has been identified and a fix is being implemented.
@@ -188,6 +200,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 51m
 - Impact: minor, status: resolved
 - Components: Workers
+- Canonical incident: [ci-3aac33694236c658da1d1a71](#ci-3aac33694236c658da1d1a71)
 
 - `2026-10-13 15:18` **investigating** — Cloudflare is investigating issues with Workers Cron Triggers. Customers who have recently created or modified a Cron Trigger schedule may find that the schedule is not executing as expected. Pre-existing Cron Trigger schedules that have not been recently modified are not affected. We are working to identify the cause and mitigate this problem. More updates to follow shortly.
 - `2026-10-13 15:19` **identified** — The issue has been identified and a fix is being implemented.
@@ -202,6 +215,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 12m
 - Impact: minor, status: resolved
 - Components: Seattle, WA, United States - (SEA)
+- Canonical incident: [ci-3ee8591245b88fbb3a602410](#ci-3ee8591245b88fbb3a602410)
 
 - `2026-10-12 22:18` **resolved** — Between 12:54 and 21:06 UTC on October 12, 2026, Cloudflare experienced an issue that affected network performance in Seattle. During this time, customers may have experienced degraded network performance. This incident has been resolved.
 
@@ -213,6 +227,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 7h 27m
 - Impact: minor, status: resolved
 - Components: CDN/Cache
+- Canonical incident: [ci-fb8e4573aa9baf215508b579](#ci-fb8e4573aa9baf215508b579)
 
 - `2026-10-12 16:22` **investigating** — Cloudflare is investigating intermittent performance issues affecting some data centers. Customers may experience errors or increased latency when accessing websites and services proxied through Cloudflare. We are working to mitigate this issue.
 - `2026-10-12 17:13` **identified** — We are continuing to work on a fix for the issue.
@@ -226,6 +241,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 26m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-339c96d7e9a205c1670b1319](#ci-339c96d7e9a205c1670b1319)
 
 - `2026-10-13 08:10` **investigating** — We are investigating the issue for the listed services.
 - `2026-10-13 08:18` **investigating** — Degraded performance on GPT 6.1 Sol Codex and Work mode
@@ -241,6 +257,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 43m
 - Impact: minor, status: resolved
 - Components: Pages
+- Canonical incident: [ci-667c3fe015e971671f24632c](#ci-667c3fe015e971671f24632c)
 
 - `2026-10-15 16:42` **investigating** — Cloudflare is aware of and is investigating reports that pages.dev subdomains are not available in Norway. Pages sites that use Custom Domains are not impacted. We will update this as more information become available.
 - `2026-10-15 20:52` **identified** — We are continuing to work on a fix for the issue.
@@ -255,6 +272,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 6h 56m
 - Impact: major, status: resolved
 - Components: AWS US East (VA) - prod-us-east-3
+- Canonical incident: [ci-23c479f1eb8a1da0d35c2160](#ci-23c479f1eb8a1da0d35c2160)
 
 - `2026-10-12 09:45` **investigating** — We are investigating an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 10:15 UTC.
 - `2026-10-12 10:08` **investigating** — We are continuing to investigate an issue affecting metrics ingestion for Grafana Cloud Metrics customers in AWS US East (VA). Customers may see failed or delayed writes. Next update by 11:00 UTC.
@@ -273,6 +291,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 10m
 - Impact: minor, status: resolved
 - Components: Workers
+- Canonical incident: [ci-755d2fca5080285593c9f497](#ci-755d2fca5080285593c9f497)
 
 - `2026-10-12 19:09` **investigating** — Cloudflare is investigating issues with Workers Cron Triggers. Customers who have recently created or modified a Cron Trigger schedule may find that the schedule is not executing as expected. Pre-existing Cron Trigger schedules that have not been recently modified are not affected. We are working to identify the cause and mitigate this problem. More updates to follow shortly.
 - `2026-10-12 19:39` **monitoring** — A fix has been implemented and we are monitoring the results.
@@ -286,6 +305,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 5h 42m
 - Impact: major, status: resolved
 - Components: GCP US Central - prod-us-central-0: Ingestion
+- Canonical incident: [ci-93d3fcc24419406b850d211d](#ci-93d3fcc24419406b850d211d)
 
 - `2026-10-15 16:10` **investigating** — We are investigating Intermittent write failures in tempo-prod (prod-us-central-0) due to Google Cloud Storage internal errors.
 - `2026-10-15 18:00` **monitoring** — Things are starting to recover, and we continue to monitor the issue.
@@ -299,6 +319,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 45m
 - Impact: minor, status: resolved
 - Components: DNS Updates
+- Canonical incident: [ci-dd50cd80d5dcb8cb5fd1227e](#ci-dd50cd80d5dcb8cb5fd1227e)
 
 - `2026-10-15 15:33` **investigating** — Cloudflare is investigating delays in propagation of updates to DNS records in multiple regions. More updates to follow shortly.
 - `2026-10-15 16:13` **identified** — The issue has been identified and a fix is being implemented.
@@ -313,6 +334,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 49m
 - Impact: minor, status: resolved
 - Components: AWS US East (VA) - prod-us-east-3
+- Canonical incident: [ci-338b4a955614be413bfba6a5](#ci-338b4a955614be413bfba6a5)
 
 - `2026-10-16 21:05` **investigating** — We’re currently investigating an issue affecting metrics reads and rule evaluations in mimir-prod-66. Our team is actively working to identify the cause. Thank you for your patience.
 - `2026-10-16 21:08` **investigating** — We are continuing to investigate this issue.
@@ -327,7 +349,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-10-15 21:38 UTC
 - Duration: 49m
 - Impact: major, status: resolved
-- Components: Ashburn, VA, United States - (IAD), Newark, NJ, United States - (EWR), Network
+- Components: Ashburn, United States - (IAD), Network, Newark, United States - (EWR)
+- Canonical incident: [ci-b6222f31f24965f52aa9f513](#ci-b6222f31f24965f52aa9f513)
 
 - `2026-10-15 20:48` **identified** — Cloudflare has identified an issue with network performance affecting our Ashburn (IAD) and Newark (EWR) facilities. Customers may observed elevated latency and/or errors for traffic handled by these facilities until the issue is resolved. We are working on a fix for this issue and will have more updates shortly.
 - `2026-10-15 21:24` **monitoring** — Our engineering teams are continuing to remediate the issue. No customer impact is being seen at this time.
@@ -341,6 +364,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 26m
 - Impact: minor, status: resolved
 - Components: Workers AI
+- Canonical incident: [ci-97a7bb047974c7997b2014ed](#ci-97a7bb047974c7997b2014ed)
 
 - `2026-10-15 07:10` **investigating** — Cloudflare has identified an issue whereby customers might experience errors from inference requests to certain models using Workers AI. These are the list of impacted model: @cf/deepseek-ai/deepseek-v4-flash-0731 @cf/deepseek-ai/deepseek-v4-pro-0813 @cf/zai-org/glm-5.2 @cf/zai-org/glm-5.3 @cf/zai-org/glm-5.3-flash We are working to mitigate this problem. More updates to follow shortly.
 - `2026-10-15 07:57` **monitoring** — We are continuing to monitor for any further issues.
@@ -354,6 +378,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1h 12m
 - Impact: major, status: resolved
 - Components: Access, FedRamp Dashboard
+- Canonical incident: [ci-4216288add8466d36ab431af](#ci-4216288add8466d36ab431af)
 
 - `2026-10-16 17:56` **investigating** — Cloudflare is investigating issues with accessing the Cloudflare Fedramp Dashboard and related Cloudflare Access services. Logging into dashboards and applications protected by Fedramp Access is impacted. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Edge. Cloudflare has identified the issue and is working on a fix.
 - `2026-10-16 18:15` **investigating** — Cloudflare is investigating issues with accessing the Cloudflare Fedramp Dashboard and related Cloudflare Access services. Logging into dashboards and applications protected by Fedramp Access is impacted. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Edge. Cloudflare has identified the issue and is working on a fix.
@@ -369,6 +394,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 47m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-538538b180fa4ee797546402](#ci-538538b180fa4ee797546402)
 
 - `2026-10-14 07:05` **identified** — We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation.
 - `2026-10-14 09:19` **identified** — We have identified that users are experiencing elevated errors for the impacted services. We are still implementing the mitigation.
@@ -382,6 +408,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 6m
 - Impact: minor, status: resolved
 - Components: Los Angeles, CA, United States - (LAX)
+- Canonical incident: [ci-689580f79d58d8db925990bd](#ci-689580f79d58d8db925990bd)
 
 - `2026-10-13 20:37` **identified** — Cloudflare is investigating issues with network performance in LAX. We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-10-13 22:44` **resolved** — This incident has been resolved.
@@ -393,7 +420,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-10-14 06:45 UTC
 - Duration: 2h 5m
 - Impact: none, status: resolved
-- Components: Portland, OR, United States - (PDX)
+- Components: Portland, United States - (PDX)
+- Canonical incident: [ci-42f6a7360df3f31ffb607672](#ci-42f6a7360df3f31ffb607672)
 
 - `2026-10-14 04:40` **investigating** — Cloudflare is investigating increased numbers of 5XX errors in PDX. We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-10-14 04:54` **monitoring** — A fix has been implemented and we are monitoring the results.
@@ -407,6 +435,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 26m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-ac03dfcfeca818fb1011d62d](#ci-ac03dfcfeca818fb1011d62d)
 
 - `2026-10-15 16:29` **investigating** — We are investigating an issue affecting logins and signups across all ChatGPT mobile applications. We will provide updates as we learn more.
 - `2026-10-15 16:35` **investigating** — We are investigating widespread feature degradation, including issues affecting logins and signups in the ChatGPT iOS/Android apps. We will provide updates as we learn more.
@@ -421,6 +450,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 48m
 - Impact: minor, status: resolved
 - Components: AWS US West - prod-us-west-0
+- Canonical incident: [ci-0ccfbd6ef7d3b9053935f917](#ci-0ccfbd6ef7d3b9053935f917)
 
 - `2026-10-14 12:57` **investigating** — We are investigating increased authentication errors affecting Grafana Cloud in the prod-us-west-0 region. Customers may experience intermittent failures for requests that require authentication. Our engineering team has identified database performance degradation affecting the authentication service and is investigating the underlying cause. We will provide another update as more information becomes available.
 - `2026-10-14 13:58` **identified** — The issue has been identified, and we have applied mitigations on our end. We are currently observing the progress.
@@ -436,6 +466,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 18m
 - Impact: none, status: resolved
 - Components: Acquirers and payment methods
+- Canonical incident: [ci-f92961dbe12c6c0320af37c6](#ci-f92961dbe12c6c0320af37c6)
 
 - `2026-10-15 18:35` **identified** — We're currently investigating elevated error rates and response times affecting MasterCard payment processing.
 - `2026-10-15 19:51` **monitoring** — As of 18:27 UTC, elevated Mastercard authorization errors have recovered. We're continuing to validate that this issue is fully resolved.
@@ -449,6 +480,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 23m
 - Impact: minor, status: resolved
 - Components: AWS Germany - prod-eu-west-2: Ingestion
+- Canonical incident: [ci-7ef2f6deb4fa4a76c27efbda](#ci-7ef2f6deb4fa4a76c27efbda)
 
 - `2026-10-15 14:35` **identified** — We observed some spikes in latency starting at approximately 12:50 UTC. We are working on a resolution. Next update by 15:30 UTC
 - `2026-10-15 15:20` **identified** — We are continuing to work on a fix for this issue. Next update by 16:30 UTC
@@ -462,7 +494,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-10-15 17:46 UTC
 - Duration: 13m
 - Impact: major, status: resolved
-- Components: London, United Kingdom - (LHR), Durable Objects, R2, RealtimeKit
+- Components: Durable Objects, London, United Kingdom - (LHR), R2, RealtimeKit
+- Canonical incident: [ci-8fef82f262d70371647df2e9](#ci-8fef82f262d70371647df2e9)
 
 - `2026-10-15 17:33` **identified** — We are working to mitigate impact to Internet users in this region. Cloudflare has identified the issue and is implementing a fix.
 - `2026-10-15 17:46` **resolved** — This incident has been resolved.
@@ -475,6 +508,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 28m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-bf159606d75751bdbf0007f0](#ci-bf159606d75751bdbf0007f0)
 
 - `2026-10-13 17:24` **resolved** — Cloudflare saw issues with network performance in IAD that resulted in an increase in errors across Cloudflare services. Users may have experienced increases errors or timeouts reaching Cloudflare’s network or services.
 
@@ -502,27 +536,375 @@ Score is duration in minutes, times component count, times vendor weight.
 - `cloudflare` [Network Performance Issues in Kuala Lumpur](https://www.cloudflarestatus.com/incidents/594dc44q2dcc) — 5m
 - `cloudflare` [Increased HTTP 5xx Errors Ashburn](https://www.cloudflarestatus.com/incidents/y6kg9sv5g8rv) — 5m
 - `slack` [Single Sign On errors](https://slack-status.com/2026-10/6aeafd6248f59a8a) — 5m
-- `grafana` [Issues with Private Data Source Connect (PDC) in AWS US East (OH)](https://stspg.io/0hgq6b9hp550) — 0m
-- `grafana` [Elevated Errors Ingesting Metrics in AWS US East (OH) - prod-us-east-0](https://stspg.io/d55l9zxy7f8v) — 0m
+- `grafana` [Issues with Private Data Source Connect (PDC) in AWS US East (OH)](https://stspg.io/0hgq6b9hp550) — unknown
+- `grafana` [Elevated Errors Ingesting Metrics in AWS US East (OH) - prod-us-east-0](https://stspg.io/d55l9zxy7f8v) — unknown
 - `digitalocean` [App Platform Deployments](https://stspg.io/txrkbrvfl4bz) — 0m
-- `github` [[Retroactive] Actions workflow run logs delayed](https://stspg.io/6ky9bv9gkkd1) — 0m
+- `github` [[Retroactive] Actions workflow run logs delayed](https://stspg.io/6ky9bv9gkkd1) — unknown
+
+## Identity and evidence
+
+Source record paths refer to the preserved vendor archive. Unconfirmed candidates remain separate.
+
+<a id="ci-caaa24671b482ffc04205c2e"></a>
+
+- Canonical ID: `ci-caaa24671b482ffc04205c2e` (1 source records).
+  - [grafana/fj19hw3kzfry](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/3kqkpqlqm6f5
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e92f0b68c0d33f623c50edd4"></a>
+
+- Canonical ID: `ci-e92f0b68c0d33f623c50edd4` (1 source records).
+  - [cloudflare/hpmrg8d5vwr6](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-95f853d46fd4652c1d926f86"></a>
+
+- Canonical ID: `ci-95f853d46fd4652c1d926f86` (1 source records).
+  - [openai/01M4XNQX7C6RCBNGX9H711WFSG](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG
+- Start time basis: `vendor_reported`.
+
+<a id="ci-74bcdd8823be798e74a86239"></a>
+
+- Canonical ID: `ci-74bcdd8823be798e74a86239` (1 source records).
+  - [cloudflare/vyy1a1dspusg](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/vyy1a1dspusg
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d3e5b57b3543afbdbd1b13b9"></a>
+
+- Canonical ID: `ci-d3e5b57b3543afbdbd1b13b9` (1 source records).
+  - [cloudflare/npjny9agana8](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/npjny9agana8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-27b9306b607dc687a95375ee"></a>
+
+- Canonical ID: `ci-27b9306b607dc687a95375ee` (1 source records).
+  - [github/93njd414rpbx](../../data/2026/W42/github.json); vendor URL: https://stspg.io/flldq0dn2wdz
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3500741717782c2f9fa0b36e"></a>
+
+- Canonical ID: `ci-3500741717782c2f9fa0b36e` (1 source records).
+  - [cloudflare/mxthd6onaplz](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mxthd6onaplz
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9b4672f90c41967680baa3bd"></a>
+
+- Canonical ID: `ci-9b4672f90c41967680baa3bd` (1 source records).
+  - [cloudflare/9yl8m5h16g1z](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9yl8m5h16g1z
+- Start time basis: `vendor_reported`.
+
+<a id="ci-530ca777c28109bc34f38612"></a>
+
+- Canonical ID: `ci-530ca777c28109bc34f38612` (1 source records).
+  - [cloudflare/gqm2xrm9wk8t](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/gqm2xrm9wk8t
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3aac33694236c658da1d1a71"></a>
+
+- Canonical ID: `ci-3aac33694236c658da1d1a71` (1 source records).
+  - [cloudflare/cbvocc87nsne](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/cbvocc87nsne
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3ee8591245b88fbb3a602410"></a>
+
+- Canonical ID: `ci-3ee8591245b88fbb3a602410` (1 source records).
+  - [cloudflare/4kaixilcb426](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/4kaixilcb426
+- Start time basis: `vendor_reported`.
+
+<a id="ci-fb8e4573aa9baf215508b579"></a>
+
+- Canonical ID: `ci-fb8e4573aa9baf215508b579` (1 source records).
+  - [cloudflare/ja8aolszxtrg](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/ja8aolszxtrg
+- Start time basis: `vendor_reported`.
+
+<a id="ci-339c96d7e9a205c1670b1319"></a>
+
+- Canonical ID: `ci-339c96d7e9a205c1670b1319` (1 source records).
+  - [openai/01M4T4ZCM54D3ZPTQXRSWFG0XS](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M4T4ZCM54D3ZPTQXRSWFG0XS
+- Start time basis: `vendor_reported`.
+
+<a id="ci-667c3fe015e971671f24632c"></a>
+
+- Canonical ID: `ci-667c3fe015e971671f24632c` (1 source records).
+  - [cloudflare/5py8l9ees6di](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/5py8l9ees6di
+- Start time basis: `vendor_reported`.
+
+<a id="ci-23c479f1eb8a1da0d35c2160"></a>
+
+- Canonical ID: `ci-23c479f1eb8a1da0d35c2160` (1 source records).
+  - [grafana/c5zm69crkl0t](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/q5r4k8bnw6l6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-755d2fca5080285593c9f497"></a>
+
+- Canonical ID: `ci-755d2fca5080285593c9f497` (1 source records).
+  - [cloudflare/mbv1dfp471bh](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mbv1dfp471bh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-93d3fcc24419406b850d211d"></a>
+
+- Canonical ID: `ci-93d3fcc24419406b850d211d` (1 source records).
+  - [grafana/ktd658zvsw36](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/0w7m43wy213v
+- Start time basis: `vendor_reported`.
+
+<a id="ci-dd50cd80d5dcb8cb5fd1227e"></a>
+
+- Canonical ID: `ci-dd50cd80d5dcb8cb5fd1227e` (1 source records).
+  - [cloudflare/wpq9v3pzhcwl](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/wpq9v3pzhcwl
+- Start time basis: `vendor_reported`.
+
+<a id="ci-338b4a955614be413bfba6a5"></a>
+
+- Canonical ID: `ci-338b4a955614be413bfba6a5` (1 source records).
+  - [grafana/pw8kpyjrznp3](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/489nw4cdzhsw
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b6222f31f24965f52aa9f513"></a>
+
+- Canonical ID: `ci-b6222f31f24965f52aa9f513` (1 source records).
+  - [cloudflare/fiv2bu3zf8kx](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fiv2bu3zf8kx
+- Start time basis: `vendor_reported`.
+
+<a id="ci-97a7bb047974c7997b2014ed"></a>
+
+- Canonical ID: `ci-97a7bb047974c7997b2014ed` (1 source records).
+  - [cloudflare/alzmexlqangd](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/alzmexlqangd
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4216288add8466d36ab431af"></a>
+
+- Canonical ID: `ci-4216288add8466d36ab431af` (1 source records).
+  - [cloudflare/qwx5xtl8mv7d](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/qwx5xtl8mv7d
+- Start time basis: `vendor_reported`.
+
+<a id="ci-538538b180fa4ee797546402"></a>
+
+- Canonical ID: `ci-538538b180fa4ee797546402` (1 source records).
+  - [openai/01M4WKPE1EY48ZB4RZJ80YH7ES](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M4WKPE1EY48ZB4RZJ80YH7ES
+- Start time basis: `vendor_reported`.
+
+<a id="ci-689580f79d58d8db925990bd"></a>
+
+- Canonical ID: `ci-689580f79d58d8db925990bd` (1 source records).
+  - [cloudflare/fdgz8zlmfhw6](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fdgz8zlmfhw6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-42f6a7360df3f31ffb607672"></a>
+
+- Canonical ID: `ci-42f6a7360df3f31ffb607672` (1 source records).
+  - [cloudflare/7hicc5bfkvx3](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/7hicc5bfkvx3
+- Start time basis: `vendor_reported`.
+
+<a id="ci-ac03dfcfeca818fb1011d62d"></a>
+
+- Canonical ID: `ci-ac03dfcfeca818fb1011d62d` (1 source records).
+  - [openai/01M506BA4XRSWH7THR53HQGN3Z](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M506BA4XRSWH7THR53HQGN3Z
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0ccfbd6ef7d3b9053935f917"></a>
+
+- Canonical ID: `ci-0ccfbd6ef7d3b9053935f917` (1 source records).
+  - [grafana/wxxw35jkm52b](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/wrxbbbsyx0f7
+- Start time basis: `vendor_reported`.
+
+<a id="ci-f92961dbe12c6c0320af37c6"></a>
+
+- Canonical ID: `ci-f92961dbe12c6c0320af37c6` (1 source records).
+  - [stripe/rwg302l45yc3](../../data/2026/W42/stripe.json); vendor URL: https://stspg.io/csnmnfc5cgjv
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7ef2f6deb4fa4a76c27efbda"></a>
+
+- Canonical ID: `ci-7ef2f6deb4fa4a76c27efbda` (1 source records).
+  - [grafana/r2qy9bfwfqy9](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/qth8ndlqhdj1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-91db2cb7bc6803269e5de547"></a>
+
+- Canonical ID: `ci-91db2cb7bc6803269e5de547` (1 source records).
+  - [cloudflare/mwmwvd4x60mh](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mwmwvd4x60mh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8107e7d410dbf5a12e020edb"></a>
+
+- Canonical ID: `ci-8107e7d410dbf5a12e020edb` (1 source records).
+  - [cloudflare/51udczr46uj2](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/51udczr46uj2
+- Start time basis: `vendor_reported`.
+
+<a id="ci-015e6ddff2d3f32422309165"></a>
+
+- Canonical ID: `ci-015e6ddff2d3f32422309165` (1 source records).
+  - [cloudflare/w43n5lblyvu8](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/w43n5lblyvu8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8fef82f262d70371647df2e9"></a>
+
+- Canonical ID: `ci-8fef82f262d70371647df2e9` (1 source records).
+  - [cloudflare/ybyy2whvd8ef](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8b1b365e01221f4cc19f0cfe"></a>
+
+- Canonical ID: `ci-8b1b365e01221f4cc19f0cfe` (1 source records).
+  - [cloudflare/wpvuoqdcmu2k](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/wpvuoqdcmu2k
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8d81d5a3c3b7b2dcf8d53322"></a>
+
+- Canonical ID: `ci-8d81d5a3c3b7b2dcf8d53322` (1 source records).
+  - [cloudflare/9tmkb5hagxvp](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9tmkb5hagxvp
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3983d939dbbbc6f2c68ebae7"></a>
+
+- Canonical ID: `ci-3983d939dbbbc6f2c68ebae7` (1 source records).
+  - [cloudflare/wvzqdm21spz0](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/wvzqdm21spz0
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d3f7bb507690d0371657d54c"></a>
+
+- Canonical ID: `ci-d3f7bb507690d0371657d54c` (1 source records).
+  - [cloudflare/vt8q2vjyx9vd](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/vt8q2vjyx9vd
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2e9c3ed678c370bfca7aec6c"></a>
+
+- Canonical ID: `ci-2e9c3ed678c370bfca7aec6c` (1 source records).
+  - [circleci/xc1s7vqky9rd](../../data/2026/W42/circleci.json); vendor URL: https://stspg.io/nhpcykblrb28
+- Start time basis: `vendor_reported`.
+
+<a id="ci-de0e67f76a6813a0387693f1"></a>
+
+- Canonical ID: `ci-de0e67f76a6813a0387693f1` (1 source records).
+  - [cloudflare/xh6wdjrte1ez](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/xh6wdjrte1ez
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c29b8e78910ef3adb2f459f1"></a>
+
+- Canonical ID: `ci-c29b8e78910ef3adb2f459f1` (1 source records).
+  - [stripe/lmd6ls9nt7l0](../../data/2026/W42/stripe.json); vendor URL: https://stspg.io/f68wb7j65qf6
+- Start time basis: `vendor_reported`.
+
+<a id="ci-de65bc171640eec58db705f4"></a>
+
+- Canonical ID: `ci-de65bc171640eec58db705f4` (1 source records).
+  - [openai/01M4WYPP5QA0CJ3JV76KH285K8](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M4WYPP5QA0CJ3JV76KH285K8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7b32f0e0066ef9a75d24cd93"></a>
+
+- Canonical ID: `ci-7b32f0e0066ef9a75d24cd93` (1 source records).
+  - [cloudflare/l9hx816r7e6h](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/l9hx816r7e6h
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7d9d10f3d465b4707e88ea96"></a>
+
+- Canonical ID: `ci-7d9d10f3d465b4707e88ea96` (1 source records).
+  - [grafana/npdd5p4wt0qh](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/tkdwbmz3gpx0
+- Start time basis: `vendor_reported`.
+
+<a id="ci-bf159606d75751bdbf0007f0"></a>
+
+- Canonical ID: `ci-bf159606d75751bdbf0007f0` (1 source records).
+  - [cloudflare/z7vongh8rqc1](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/z7vongh8rqc1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6d2ab2f9568266b3800e63cc"></a>
+
+- Canonical ID: `ci-6d2ab2f9568266b3800e63cc` (1 source records).
+  - [cloudflare/rip4d46xzsez](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/rip4d46xzsez
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e5b8746ae31f02ca9d88490f"></a>
+
+- Canonical ID: `ci-e5b8746ae31f02ca9d88490f` (1 source records).
+  - [cloudflare/l6if0sptyjvw](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/l6if0sptyjvw
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2922c15724ca52c28b47c2b0"></a>
+
+- Canonical ID: `ci-2922c15724ca52c28b47c2b0` (1 source records).
+  - [cloudflare/73pslms8eann](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/73pslms8eann
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d964a3d1b0ebdfc67c6e1585"></a>
+
+- Canonical ID: `ci-d964a3d1b0ebdfc67c6e1585` (1 source records).
+  - [github/vlxrztp88101](../../data/2026/W42/github.json); vendor URL: https://stspg.io/vk8t78vtswmg
+- Start time basis: `vendor_reported`.
+
+<a id="ci-fb2d577e6b79d768bf5bd0a1"></a>
+
+- Canonical ID: `ci-fb2d577e6b79d768bf5bd0a1` (1 source records).
+  - [stripe/scbk6p6p2btt](../../data/2026/W42/stripe.json); vendor URL: https://stspg.io/wv3mtgwc5r38
+- Start time basis: `vendor_reported`.
+
+<a id="ci-06aa3ad656abb671036a976c"></a>
+
+- Canonical ID: `ci-06aa3ad656abb671036a976c` (1 source records).
+  - [cloudflare/ak3kgdz2nyog](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/ak3kgdz2nyog
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0d2943431ff196f21bfe5dc2"></a>
+
+- Canonical ID: `ci-0d2943431ff196f21bfe5dc2` (1 source records).
+  - [cloudflare/594dc44q2dcc](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/594dc44q2dcc
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7913a6dc5f5163ce250cf7bd"></a>
+
+- Canonical ID: `ci-7913a6dc5f5163ce250cf7bd` (1 source records).
+  - [cloudflare/y6kg9sv5g8rv](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/y6kg9sv5g8rv
+- Start time basis: `vendor_reported`.
+
+<a id="ci-d6c0d6c32a01be0de884ffa8"></a>
+
+- Canonical ID: `ci-d6c0d6c32a01be0de884ffa8` (1 source records).
+  - [slack/1581](../../data/2026/W42/slack.json); vendor URL: https://slack-status.com/2026-10/6aeafd6248f59a8a
+- Start time basis: `vendor_reported`.
+
+<a id="ci-10fa7aad45a6c85f929c6413"></a>
+
+- Canonical ID: `ci-10fa7aad45a6c85f929c6413` (1 source records).
+  - [grafana/v4p2zm420trb](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/0hgq6b9hp550
+- Start time basis: `vendor_reported`.
+- Warning: Vendor resolved_at precedes started_at; duration is unknown, score uses zero duration; decision:legacy-time-grafana-v4p2zm420trb
+
+<a id="ci-001b530086fe02b941e226ec"></a>
+
+- Canonical ID: `ci-001b530086fe02b941e226ec` (1 source records).
+  - [grafana/wsv6lbbbcq09](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/d55l9zxy7f8v
+- Start time basis: `vendor_reported`.
+- Warning: Vendor resolved_at precedes started_at; duration is unknown, score uses zero duration; decision:legacy-time-grafana-wsv6lbbbcq09
+
+<a id="ci-22105e636d2413886c0243ff"></a>
+
+- Canonical ID: `ci-22105e636d2413886c0243ff` (1 source records).
+  - [digitalocean/rl0fl1jtxw7l](../../data/2026/W42/digitalocean.json); vendor URL: https://stspg.io/txrkbrvfl4bz
+- Start time basis: `vendor_reported`.
+
+<a id="ci-38526fa6fb2168952e214a76"></a>
+
+- Canonical ID: `ci-38526fa6fb2168952e214a76` (1 source records).
+  - [github/6yk962mhlr3h](../../data/2026/W42/github.json); vendor URL: https://stspg.io/6ky9bv9gkkd1
+- Start time basis: `vendor_reported`.
+- Warning: Vendor resolved_at precedes started_at; duration is unknown, score uses zero duration; decision:legacy-time-github-6yk962mhlr3h
 
 ## Sources
 
-| Vendor | Status | Incidents seen | Parse errors |
+| Vendor | Status | Source records seen | Parse errors |
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
 | aws | ok | 6 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
-| datadog | ok | 50 | 0 |
+| datadog | FETCH FAILED: GET https://status.datadoghq.com/api/v2/incidents.json: status 403 | 0 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 7 | 0 |
+| gcp | ok | 8 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
-| slack | ok | 34 | 0 |
+| slack | ok | 28 | 0 |
 | stripe | ok | 50 | 0 |
-| yandexcloud | ok | 50 | 0 |
-
+| yandexcloud | FETCH FAILED: GET https://status.cloud.yandex.ru/api/incidents?lang=en&page=4: status 403 | 0 | 0 |

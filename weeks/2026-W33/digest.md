@@ -1,35 +1,38 @@
 # Week 2026-W33
 
-2026-08-10 to 2026-08-16 (UTC). Generated 2026-08-23 13:59.
+2026-08-10 to 2026-08-16 (UTC). Generated 2026-11-14 12:36.
 
-48 incidents collected, 22 above threshold. All 13 sources responded.
+49 canonical incidents, 23 above threshold. 2 of 14 sources unavailable: datadog, yandexcloud.
+
+49 source records (51 saved revisions) → 49 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## Above threshold
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
-| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 9d 16h 37m (ongoing) | unknown | Messaging, Workspace/Org Administration | 33497 = 13957 × 2 × 1.2 |
+| 1 | slack | [Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled](https://slack-status.com/2026-08/e07b9271f0346c3b) | 2026-08-13 21:21 | 32d 1h 9m | unknown | Messaging, Workspace/Org Administration | 110758 = 46149 × 2 × 1.2 |
 | 2 | aws | [Increased Packet loss](https://health.aws.amazon.com/health/status) | 2026-08-15 03:42 | 3d 0h 18m | unknown | directconnect-eu-central-1 | 8676 = 4338 × 1 × 2.0 |
-| 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/twh93x4twdps) | 2026-08-12 13:50 | 4h 16m | minor | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 1536 = 256 × 4 × 1.5 |
+| 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/twh93x4twdps) | 2026-08-12 13:50 | 4h 16m | minor | Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai | 1536 = 256 × 4 × 1.5 |
 | 4 | openai | [Increased error rates](https://status.openai.com/incidents/01KZNZTPWMV06Z6TQNMY1R1QDR) | 2026-08-10 14:04 | 12h 43m | minor | — | 1144 = 763 × 1 × 1.5 |
 | 5 | openai | [Elevated errors in ChatGPT conversations for Free users](https://status.openai.com/incidents/01KZXVAJQ5XFH7PTM43XVPQWGJ) | 2026-08-13 15:19 | 8h 38m | minor | — | 777 = 518 × 1 × 1.5 |
 | 6 | openai | [Error while creating custom RBAC roles for Enterprise users](https://status.openai.com/incidents/01KZXPZD4KHMQQFF09PSNNEZT8) | 2026-08-13 14:03 | 8h 23m | none | — | 754 = 503 × 1 × 1.5 |
-| 7 | anthropic | [Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5](https://stspg.io/pbnrks0mrn4w) | 2026-08-13 14:33 | 1h 34m | major | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 564 = 94 × 4 × 1.5 |
+| 7 | anthropic | [Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5](https://stspg.io/pbnrks0mrn4w) | 2026-08-13 14:33 | 1h 34m | major | Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai | 564 = 94 × 4 × 1.5 |
 | 8 | stripe | [Elevated Bancontact errors](https://stspg.io/r1hcjpb5vyv5) | 2026-08-16 22:39 | 7h 49m | none | Acquirers and payment methods | 563 = 469 × 1 × 1.2 |
 | 9 | cloudflare | [Email Security delivery impacted by Spamhaus listing](https://www.cloudflarestatus.com/incidents/fdyjr0t87mrb) | 2026-08-12 15:04 | 2h 19m | major | Email Security (Area1), Email Security (Zero Trust) | 500 = 139 × 2 × 1.8 |
 | 10 | github | [Incident with GraphQL API Requests](https://stspg.io/3xn46bst0bjh) | 2026-08-11 14:50 | 5h 16m | minor | API Requests | 474 = 316 × 1 × 1.5 |
 | 11 | anthropic | [Service disruption on Claude services](https://stspg.io/wlcwm73lh5vb) | 2026-08-14 20:30 | 1h 27m | major | Claude API (api.anthropic.com), Claude Code, Claude Cowork | 392 = 87 × 3 × 1.5 |
 | 12 | anthropic | [Issues reaching status.claude.com](https://stspg.io/xvp8fkkjmtq0) | 2026-08-14 07:58 | 2h 55m | none | — | 262 = 175 × 1 × 1.5 |
-| 13 | anthropic | [Service disruption on Claude services](https://stspg.io/cc6kmwrqhzmh) | 2026-08-16 21:58 | 35m | critical | claude.ai, Claude Console (platform.claude.com), Claude API (api.anthropic.com), Claude Code, Claude Cowork | 262 = 35 × 5 × 1.5 |
-| 14 | cloudflare | [Cloudflare Analytics Delays](https://www.cloudflarestatus.com/incidents/pb0z7j24ppq1) | 2026-08-11 14:22 | 2h 4m | minor | Analytics | 223 = 124 × 1 × 1.8 |
-| 15 | cloudflare | [Issues with 1.1.1.1 public resolver in Tel Aviv (TLV)](https://www.cloudflarestatus.com/incidents/32jmvvgg7wj9) | 2026-08-10 10:15 | 2h 3m | minor | Recursive DNS | 221 = 123 × 1 × 1.8 |
-| 16 | cloudflare | [Cloudflare Realtimekit API had reduced availability](https://www.cloudflarestatus.com/incidents/d9l78m4jbtrv) | 2026-08-10 09:07 | 2h 0m | minor | — | 216 = 120 × 1 × 1.8 |
-| 17 | openai | [Increased error rates](https://status.openai.com/incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8) | 2026-08-11 12:54 | 2h 7m | minor | — | 190 = 127 × 1 × 1.5 |
-| 18 | github | [Disruption with GHEC Team Sync](https://stspg.io/l6tmhqw07cmj) | 2026-08-13 16:21 | 2h 6m | minor | — | 189 = 126 × 1 × 1.5 |
-| 19 | circleci | [Delays starting jobs following planned maintenance](https://stspg.io/v83b8dvfq3hq) | 2026-08-15 13:58 | 3h 1m | none | — | 181 = 181 × 1 × 1.0 |
-| 20 | grafana | [K6 Test Outage](https://stspg.io/tv8plq4gysv5) | 2026-08-13 15:25 | 1h 22m | critical | Cloud Test Runs, Cloud Output Test Runs | 164 = 82 × 2 × 1.0 |
-| 21 | github | [Disruption with Login and Release Asset downloads](https://stspg.io/xp36nwz4rrh1) | 2026-08-12 21:39 | 1h 17m | major | — | 116 = 77 × 1 × 1.5 |
-| 22 | anthropic | [Elevated errors for Claude Fable 5](https://stspg.io/vpnnwf2vhdv4) | 2026-08-14 23:57 | 30m | major | claude.ai | 45 = 30 × 1 × 1.5 |
+| 13 | anthropic | [Service disruption on Claude services](https://stspg.io/cc6kmwrqhzmh) | 2026-08-16 21:58 | 35m | critical | Claude API (api.anthropic.com), Claude Code, Claude Console (platform.claude.com), Claude Cowork, claude.ai | 262 = 35 × 5 × 1.5 |
+| 14 | yandexcloud | [Problem with Cloud CDN services](https://status.yandex.cloud/en/incidents/1919) | 2026-08-10 13:23 | 2h 36m | minor | Cloud CDN | 234 = 156 × 1 × 1.5 |
+| 15 | cloudflare | [Cloudflare Analytics Delays](https://www.cloudflarestatus.com/incidents/pb0z7j24ppq1) | 2026-08-11 14:22 | 2h 4m | minor | Analytics | 223 = 124 × 1 × 1.8 |
+| 16 | cloudflare | [Issues with 1.1.1.1 public resolver in Tel Aviv (TLV)](https://www.cloudflarestatus.com/incidents/32jmvvgg7wj9) | 2026-08-10 10:15 | 2h 3m | minor | Recursive DNS | 221 = 123 × 1 × 1.8 |
+| 17 | cloudflare | [Cloudflare Realtimekit API had reduced availability](https://www.cloudflarestatus.com/incidents/d9l78m4jbtrv) | 2026-08-10 09:07 | 2h 0m | minor | — | 216 = 120 × 1 × 1.8 |
+| 18 | openai | [Increased error rates](https://status.openai.com/incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8) | 2026-08-11 12:54 | 2h 7m | minor | — | 190 = 127 × 1 × 1.5 |
+| 19 | github | [Disruption with GHEC Team Sync](https://stspg.io/l6tmhqw07cmj) | 2026-08-13 16:21 | 2h 6m | minor | — | 189 = 126 × 1 × 1.5 |
+| 20 | circleci | [Delays starting jobs following planned maintenance](https://stspg.io/v83b8dvfq3hq) | 2026-08-15 13:58 | 3h 1m | none | — | 181 = 181 × 1 × 1.0 |
+| 21 | grafana | [K6 Test Outage](https://stspg.io/tv8plq4gysv5) | 2026-08-13 15:25 | 1h 22m | critical | Cloud Output Test Runs, Cloud Test Runs | 164 = 82 × 2 × 1.0 |
+| 22 | github | [Disruption with Login and Release Asset downloads](https://stspg.io/xp36nwz4rrh1) | 2026-08-12 21:39 | 1h 17m | major | — | 116 = 77 × 1 × 1.5 |
+| 23 | anthropic | [Elevated errors for Claude Fable 5](https://stspg.io/vpnnwf2vhdv4) | 2026-08-14 23:57 | 30m | major | claude.ai | 45 = 30 × 1 × 1.5 |
 
 Score is duration in minutes, times component count, times vendor weight.
 
@@ -39,10 +42,11 @@ Score is duration in minutes, times component count, times vendor weight.
 
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
 - Started: 2026-08-13 21:21 UTC
-- Resolved: not yet
-- Duration: 9d 16h 37m (ongoing)
-- Impact: unknown, status: investigating
+- Resolved: 2026-09-14 22:31 UTC
+- Duration: 32d 1h 9m
+- Impact: unknown, status: resolved
 - Components: Messaging, Workspace/Org Administration
+- Canonical incident: [ci-a6330b280a7b656c66e3293c](#ci-a6330b280a7b656c66e3293c)
 
 - `2026-08-13 21:21` **unknown** — Users with custom data retention policies enabled might be unable to see or load older messages. We apologize for the trouble and we'll share more news as it becomes available.
 - `2026-08-13 21:49` **unknown** — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Our teams are working to identify the technical trigger and an appropriate fix. We'll provide an update as more news becomes available.
@@ -51,6 +55,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-14 21:39` **unknown** — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Custom channel retention settings have been restored for affected customers. Custom retention jobs remain on hold for some customers as we work to fully resolve the underlying cause regarding the custom message retention issues.
 - `2026-08-17 21:57` **unknown** — We're continuing our restoration efforts regarding this issue affecting a subset of channels with custom message retention settings. While we work to resolve this issue, data retention processing remains paused for affected customers. We will provide another update as additional information becomes available.
 - `2026-08-20 22:54` **unknown** — We're continuing to work on restoring messages, message edits, and file shares for a limited number of workspaces that were affected by an issue with custom data retention settings. We've fixed what triggered the issue and are running data recovery using backup restoration methods. Custom retention settings have been restored for impacted channels, and we're gradually re-enabling retention jobs. We will provide another update as additional information becomes available.
+- `2026-08-25 20:55` **unknown** — We’re continuing our work to restore the remaining message data affected by this issue. Our teams have made progress developing and validating the recovery process for messages, message edits, and shared files. We’re addressing additional technical dependencies and completing validation before proceeding with the next stages of restoration. We’ll continue to provide updates as we make progress.
+- `2026-08-27 18:58` **unknown** — We’re continuing our work to restore the remaining message data affected by this issue. We’ve made further progress across the recovery processes for messages, message edits, and shared files. Validation of the message-edit recovery process has identified additional adjustments needed before restoration proceeds, while preparation and validation for message recovery continue. We’ve also completed additional development work supporting shared-file restoration, including handling for shared channels. Custom retention processing has been re-enabled for affected active workspaces. We’ll continue to provide updates as restoration and validation progress.
+- `2026-09-01 22:51` **unknown** — We continue to restore batches of messages, message edits, and shared files. Each batch requires careful planning, monitoring, and validation to ensure the affected messages are accurately restored. Custom retention processing remains re-enabled for affected active workspaces. Thank you for bearing with us while we continue to work through this complex and nuanced issue. More updates will come as restoration and validation progress.
+- `2026-09-04 17:00` **unknown** — We’ve made further progress restoring messages, message edits, and shared files affected by this issue. We identified and resolved a technical limit that was slowing recovery for some accounts, and recovery for Slack Connect workspaces is now underway. Message edit restoration is nearing completion for affected workspaces. We’re continuing to validate restored data as recovery progresses. We’ll provide another update as significant progress is made.
+- `2026-09-09 02:37` **unknown** — We've made further progress restoring message data across affected teams and channels, with most batches now complete. We've deployed a tool to correct thread reply links affected during the restore process and are running it now. Slack Connect message restoration is resuming production runs, with results being closely monitored. We'll provide an update as soon as new information becomes available.
+- `2026-09-11 15:53` **unknown** — We’ve completed message data restoration across affected teams and channels, and are now focused on restoring file shares which should be the last step towards resolution. We'll provide another update as soon as new information becomes available.
+- `2026-09-14 22:31` **unknown** — We've completed restoring shared files for all remaining affected workspaces and restored and verified all affected data. If you still can't see previous content, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). Thank you for your patience while we sorted out this issue.
 
 ### 2. aws — Increased Packet loss
 
@@ -60,6 +71,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3d 0h 18m
 - Impact: unknown, status: resolved
 - Components: directconnect-eu-central-1
+- Canonical incident: [ci-74168a6f7a4d9562cab32adc](#ci-74168a6f7a4d9562cab32adc)
 
 - `2026-08-15 03:42` **investigating** — We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region.
 - `2026-08-15 04:42` **investigating** — We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share.
@@ -89,7 +101,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-12 18:07 UTC
 - Duration: 4h 16m
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+- Canonical incident: [ci-e42b803697a607167ed3594c](#ci-e42b803697a607167ed3594c)
 
 - `2026-08-12 13:50` **investigating** — We are investigating elevated errors on requests to multiple models. We will provide an update as soon as possible.
 - `2026-08-12 16:10` **identified** — We have identified an issue which resulted in errors across multiple models. At this time, errors are primarily impacting Claude Fable 5 and we are working to fully resolve these issues.
@@ -104,6 +117,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 12h 43m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-badcb4dda839fe0697b86a2b](#ci-badcb4dda839fe0697b86a2b)
 
 - `2026-08-10 14:04` **investigating** — We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation.
 - `2026-08-10 15:07` **monitoring** — We have applied the mitigation and are monitoring the recovery.
@@ -117,6 +131,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 38m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-cf17e4f6d1e98879977e4377](#ci-cf17e4f6d1e98879977e4377)
 
 - `2026-08-13 15:19` **investigating** — We are investigating the issue for the listed services.
 - `2026-08-13 15:48` **identified** — We are still implementing the mitigation.
@@ -132,6 +147,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 23m
 - Impact: none, status: resolved
 - Components: —
+- Canonical incident: [ci-279f2444f8feb36b4d23c835](#ci-279f2444f8feb36b4d23c835)
 
 - `2026-08-13 14:03` **investigating** — We are investigating an issue while creating custom RBAC roles for Enterprise users.
 - `2026-08-13 14:29` **identified** — We are still implementing the mitigation.
@@ -148,7 +164,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-13 16:08 UTC
 - Duration: 1h 34m
 - Impact: major, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+- Canonical incident: [ci-85f55ae97123daabb7c2fbe8](#ci-85f55ae97123daabb7c2fbe8)
 
 - `2026-08-13 14:33` **investigating** — We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5. We will provide an update as soon as possible.
 - `2026-08-13 15:44` **investigating** — We are investigating elevated errors on requests to Claude Mythos 5 and Claude Fable 5. We will provide an update as soon as possible.
@@ -162,6 +179,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 7h 49m
 - Impact: none, status: resolved
 - Components: Acquirers and payment methods
+- Canonical incident: [ci-76f082de747b30d895a49afb](#ci-76f082de747b30d895a49afb)
 
 - `2026-08-16 22:39` **investigating** — We're currently investigating elevated errors on Bancontact payments. We'll post an update soon.
 - `2026-08-16 23:05` **investigating** — We continue seeing elevated errors on Bancontact payments. We've identified the cause as external to the Stripe infrastructure. We will continue to monitor and will post an update as soon as possible.
@@ -175,6 +193,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 19m
 - Impact: major, status: resolved
 - Components: Email Security (Area1), Email Security (Zero Trust)
+- Canonical incident: [ci-0115cfed90a76ccb46a37c03](#ci-0115cfed90a76ccb46a37c03)
 
 - `2026-08-12 15:04` **investigating** — We are currently investigating an issue where customers that use Spamhaus for additional filtering of email downstream from the Cloudflare Email Security service are rejecting emails from IPs in the 134.195.26.0/23 block. This IP block should be allowed for all customer downstream systems to avoid treating the Email Security service as an originator of mail. We recommend all Cloudflare Email Security customers disable Spamhaus filtering in downstream systems.
 - `2026-08-12 15:07` **investigating** — We are continuing to investigate this issue.
@@ -190,6 +209,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 5h 16m
 - Impact: minor, status: resolved
 - Components: API Requests
+- Canonical incident: [ci-6ef72ecab68ab80091da7993](#ci-6ef72ecab68ab80091da7993)
 
 - `2026-08-11 14:50` **investigating** — We are investigating reports of degraded performance for API Requests
 - `2026-08-11 15:28` **investigating** — We are investigating reports of a small increase in error rates affecting GraphQL API requests. We are working on increasing capacity and continue to investigate the increased errors. We will provide another update when we have more information
@@ -206,6 +226,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1h 27m
 - Impact: major, status: resolved
 - Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Canonical incident: [ci-4618c7bdd11eda16e94a3307](#ci-4618c7bdd11eda16e94a3307)
 
 - `2026-08-14 20:30` **investigating** — We are investigating reports of degraded performance affecting the Claude API, Claude Code, and Claude Cowork. We will provide an update as soon as possible.
 - `2026-08-14 20:44` **identified** — We have identified the cause of the issue affecting the Claude API, Claude Code, and Claude Cowork and are working on a fix. We will provide an update as soon as possible.
@@ -220,6 +241,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 55m
 - Impact: none, status: resolved
 - Components: —
+- Canonical incident: [ci-2172c07553d7cace7552622b](#ci-2172c07553d7cace7552622b)
 
 - `2026-08-14 07:58` **investigating** — We are aware of issues with reaching status.claude.com, specifically regarding an invalid certificate issues. We are working to resolve these issues as soon as possible.
 - `2026-08-14 10:53` **resolved** — The issue resulting in users being unable to reach status.claude.com has been resolved.
@@ -231,14 +253,28 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-16 22:34 UTC
 - Duration: 35m
 - Impact: critical, status: resolved
-- Components: claude.ai, Claude Console (platform.claude.com), Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Console (platform.claude.com), Claude Cowork, claude.ai
+- Canonical incident: [ci-03322d93a4db66fd023e23d9](#ci-03322d93a4db66fd023e23d9)
 
 - `2026-08-16 21:58` **investigating** — We are investigating an issue with users authenticating to claude.ai, Claude Code, and Claude Cowork. We will provide an update as soon as possible.
 - `2026-08-16 22:02` **investigating** — We are investigating reports of degraded performance affecting claude.ai, platform.claude.com, the Claude API, Claude Code, and Claude Cowork. We will provide an update as soon as possible.
 - `2026-08-16 22:22` **monitoring** — A fix has been deployed for the issue affecting claude.ai, platform.claude.com, the Claude API, Claude Code, and Claude Cowork and we are monitoring for recovery.
 - `2026-08-16 22:34` **resolved** — The issue affecting claude.ai, platform.claude.com, the Claude API, Claude Code, and Claude Cowork has been resolved.
 
-### 14. cloudflare — Cloudflare Analytics Delays
+### 14. yandexcloud — Problem with Cloud CDN services
+
+- URL: https://status.yandex.cloud/en/incidents/1919
+- Started: 2026-08-10 13:23 UTC
+- Resolved: 2026-08-10 16:00 UTC
+- Duration: 2h 36m
+- Impact: minor, status: resolved
+- Components: Cloud CDN
+- Canonical incident: [ci-464829d0d980238ca263fe26](#ci-464829d0d980238ca263fe26)
+
+- `2026-08-10 13:24` **investigating** — We noticed a partial unavailability of Cloud CDN services in the Cloud. The developers are already aware of it and are fixing it.
+- `2026-08-10 16:05` **resolved** — The problem was resolved at 19:00. If you still have questions about cloud resources, please contact technical support.
+
+### 15. cloudflare — Cloudflare Analytics Delays
 
 - URL: https://www.cloudflarestatus.com/incidents/pb0z7j24ppq1
 - Started: 2026-08-11 14:22 UTC
@@ -246,12 +282,13 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 4m
 - Impact: minor, status: resolved
 - Components: Analytics
+- Canonical incident: [ci-609a5e399f623554815bfc61](#ci-609a5e399f623554815bfc61)
 
 - `2026-08-11 14:22` **investigating** — Reporting and analytics for the HttpRequestsAdaptiveGroups node is delayed. This will result in failures on dashboard for analytics. We are working to mitigate this problem. More updates to follow shortly.
 - `2026-08-11 15:12` **monitoring** — A fix has been implemented and we are monitoring the results.
 - `2026-08-11 16:26` **resolved** — This incident has been resolved.
 
-### 15. cloudflare — Issues with 1.1.1.1 public resolver in Tel Aviv (TLV)
+### 16. cloudflare — Issues with 1.1.1.1 public resolver in Tel Aviv (TLV)
 
 - URL: https://www.cloudflarestatus.com/incidents/32jmvvgg7wj9
 - Started: 2026-08-10 10:15 UTC
@@ -259,13 +296,14 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 3m
 - Impact: minor, status: resolved
 - Components: Recursive DNS
+- Canonical incident: [ci-a2944111466f10b396a154f8](#ci-a2944111466f10b396a154f8)
 
 - `2026-08-10 10:15` **investigating** — Cloudflare is aware of, and investigating, an issue which potentially impacts multiple users in Tel Aviv that use 1.1.1.1 public resolver. Further detail will be provided as more information becomes available.
 - `2026-08-10 12:03` **identified** — The issue has been identified and a fix is being implemented.
 - `2026-08-10 12:03` **monitoring** — A fix has been implemented and we are monitoring the results.
 - `2026-08-10 12:19` **resolved** — This incident has been resolved.
 
-### 16. cloudflare — Cloudflare Realtimekit API had reduced availability
+### 17. cloudflare — Cloudflare Realtimekit API had reduced availability
 
 - URL: https://www.cloudflarestatus.com/incidents/d9l78m4jbtrv
 - Started: 2026-08-10 09:07 UTC
@@ -273,10 +311,11 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 0m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-c7f5e6890a70b888454ddcaf](#ci-c7f5e6890a70b888454ddcaf)
 
 - `2026-08-10 11:39` **resolved** — Cloudflare became aware of a brief period of reduced availability of the Realtimekit API, between the times 11:07 UTC and 11:13 UTC. This issue has recovered, and no further impact expected.
 
-### 17. openai — Increased error rates
+### 18. openai — Increased error rates
 
 - URL: https://status.openai.com/incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8
 - Started: 2026-08-11 12:54 UTC
@@ -284,6 +323,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 7m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-4a142d068aec0abf03ff2dd5](#ci-4a142d068aec0abf03ff2dd5)
 
 - `2026-08-11 12:54` **identified** — We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation.
 - `2026-08-11 13:20` **investigating** — We are investigating the issue for the listed services.
@@ -291,7 +331,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-11 14:57` **monitoring** — We have applied the mitigation and are monitoring the recovery.
 - `2026-08-11 15:01` **resolved** — All impacted services have now fully recovered.
 
-### 18. github — Disruption with GHEC Team Sync
+### 19. github — Disruption with GHEC Team Sync
 
 - URL: https://stspg.io/l6tmhqw07cmj
 - Started: 2026-08-13 16:21 UTC
@@ -299,13 +339,14 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 6m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-85aad0eb96d68653d0fce8f1](#ci-85aad0eb96d68653d0fce8f1)
 
 - `2026-08-13 16:21` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-13 16:21` **investigating** — GHEC Team Sync is currently degraded for enterprises with personal accounts, causing delays when syncing teams to IdP groups. We have identified the cause of the delays and are working on a mitigation. We will provide an update on our progress at 20:00 UTC.
 - `2026-08-13 18:27` **investigating** — We have deployed a mitigation. At this time GHEC Team Sync has recovered for enterprises with personal accounts. Teams syncing to IdP groups have returned to their normal cadence.
-- `2026-08-13 18:27` **resolved** — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+- `2026-08-13 18:27` **resolved** — On August 13, 2026, from 15:31:21 UTC to 18:27:55 UTC, GitHub Enterprise Cloud team synchronization was degraded for enterprises using personal accounts. Organization teams experienced delays of up to 3 to 13 hours (median 8 hours) when syncing with IdP groups, resulting in delayed access grants or removals for enterprise users across 2.8% of teams. <br /><br />A temporary change introduced to address a previous issue due to increased usage of this feature remained active after it was intended to be removed, causing synchronization delays during periods of high volume. We removed the temporary change and provisioned additional resources to handle the increased volume.
 
-### 19. circleci — Delays starting jobs following planned maintenance
+### 20. circleci — Delays starting jobs following planned maintenance
 
 - URL: https://stspg.io/v83b8dvfq3hq
 - Started: 2026-08-15 13:58 UTC
@@ -313,22 +354,24 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 1m
 - Impact: none, status: resolved
 - Components: —
+- Canonical incident: [ci-0e83a8746a629db6c64dce97](#ci-0e83a8746a629db6c64dce97)
 
 - `2026-08-15 13:58` **resolved** — Following planned maintenance that ended at 13:00 UTC on August 15, some impact to job processing continued for approximately 30 minutes beyond the window we announced. Some customers continued to see delays in jobs starting, along with a small number of jobs failing with infrastructure errors, until approximately 13:30 UTC. This has been resolved and job processing has returned to normal. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our team worked on implementing a fix and apologize for any inconvenience the extended impact may have caused.
 
-### 20. grafana — K6 Test Outage
+### 21. grafana — K6 Test Outage
 
 - URL: https://stspg.io/tv8plq4gysv5
 - Started: 2026-08-13 15:25 UTC
 - Resolved: 2026-08-13 16:47 UTC
 - Duration: 1h 22m
 - Impact: critical, status: resolved
-- Components: Cloud Test Runs, Cloud Output Test Runs
+- Components: Cloud Output Test Runs, Cloud Test Runs
+- Canonical incident: [ci-685e1bdfc7404cc7f8eced14](#ci-685e1bdfc7404cc7f8eced14)
 
 - `2026-08-13 15:25` **monitoring** — Telemetry push APIs went down at 15:06 UTC, causing tests to lose telemetry data, like metrics, logs, traces, and browser screenshots. This issue has now been mitigated, and we are monitoring to determine root cause as well as full resolution.
 - `2026-08-13 16:47` **resolved** — This incident has been resolved.
 
-### 21. github — Disruption with Login and Release Asset downloads
+### 22. github — Disruption with Login and Release Asset downloads
 
 - URL: https://stspg.io/xp36nwz4rrh1
 - Started: 2026-08-12 21:39 UTC
@@ -336,13 +379,14 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 1h 17m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-5f6c4632385dd271e2951cee](#ci-5f6c4632385dd271e2951cee)
 
 - `2026-08-12 21:39` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-12 21:43` **investigating** — We are investigating issues with Login and when downloading Release Assets. We will continue to keep users updated on progress towards mitigation.
 - `2026-08-12 22:22` **investigating** — We have identified the root cause and are working on mitigation. Errors on the login page and downloading release assets have decreased, but we are not fully mitigated. We will continue to provide updates.
-- `2026-08-12 22:56` **resolved** — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+- `2026-08-12 22:56` **resolved** — On August 12 and 13, 2026, some anonymous (logged-out) requests to github.com experienced HTTP 5xx errors when loading pages like the sign-in page, and when downloading release assets, due to an unusual traffic pattern that repeatedly overloaded a part of our infrastructure that serves these types of requests. There were three windows of impact: (1) August 12 from 16:34 to 18:34 UTC, with an average error rate of 16.16% that peaked at 28.6%; (2) August 12 from 19:00 to 22:56 UTC, with an average error rate of 16.55% that peaked at 24.18%; and (3) August 13 from 06:19 to 08:05 UTC, with an average error rate of 2.01% that peaked at 7.49%.<br />Requests from signed-in users were unaffected.<br /><br />We mitigated the incidents by applying traffic controls at our network edge that limited any requests matching the pattern identified previously, thereby preventing overload on our systems.<br /><br />Since these incidents occurred, we have tightened our monitoring systems to alert server-side errors that affect logged-out traffic. We are also working to further strengthen our edge protections and reduce the time to detect and mitigate similar incidents.
 
-### 22. anthropic — Elevated errors for Claude Fable 5
+### 23. anthropic — Elevated errors for Claude Fable 5
 
 - URL: https://stspg.io/vpnnwf2vhdv4
 - Started: 2026-08-14 23:57 UTC
@@ -350,6 +394,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 30m
 - Impact: major, status: resolved
 - Components: claude.ai
+- Canonical incident: [ci-e9d08f84ee0bdf57ad56f9bd](#ci-e9d08f84ee0bdf57ad56f9bd)
 
 - `2026-08-14 23:57` **identified** — We have identified the cause of elevated errors on requests to Claude Fable 5 and are working on a fix. We will provide an update as soon as possible.
 - `2026-08-15 00:20` **identified** — We have identified the cause of the issue affecting claude.ai and are working on a fix. We will provide an update as soon as possible.
@@ -385,21 +430,320 @@ Score is duration in minutes, times component count, times vendor weight.
 - `cloudflare` [Increase in Connectivity errors in London, UK](https://www.cloudflarestatus.com/incidents/rfrm4fr82w2x) — 0m
 - `digitalocean` [Volume Attach/Detach events in FRA1](https://stspg.io/yldnj7859gcp) — 0m
 
+## Identity and evidence
+
+Source record paths refer to the preserved vendor archive. Unconfirmed candidates remain separate.
+
+<a id="ci-a6330b280a7b656c66e3293c"></a>
+
+- Canonical ID: `ci-a6330b280a7b656c66e3293c` (1 source records).
+  - [slack/1576](../../data/2026/W33/slack.json); vendor URL: https://slack-status.com/2026-08/e07b9271f0346c3b
+- Start time basis: `vendor_reported`.
+
+<a id="ci-74168a6f7a4d9562cab32adc"></a>
+
+- Canonical ID: `ci-74168a6f7a4d9562cab32adc` (1 source records).
+  - [aws/8d9678d7476c58c2](../../data/2026/W33/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
+
+<a id="ci-e42b803697a607167ed3594c"></a>
+
+- Canonical ID: `ci-e42b803697a607167ed3594c` (1 source records).
+  - [anthropic/rk6gkg2gwfny](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/twh93x4twdps
+- Start time basis: `vendor_reported`.
+
+<a id="ci-badcb4dda839fe0697b86a2b"></a>
+
+- Canonical ID: `ci-badcb4dda839fe0697b86a2b` (1 source records).
+  - [openai/01KZNZTPWMV06Z6TQNMY1R1QDR](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZNZTPWMV06Z6TQNMY1R1QDR
+- Start time basis: `vendor_reported`.
+
+<a id="ci-cf17e4f6d1e98879977e4377"></a>
+
+- Canonical ID: `ci-cf17e4f6d1e98879977e4377` (1 source records).
+  - [openai/01KZXVAJQ5XFH7PTM43XVPQWGJ](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZXVAJQ5XFH7PTM43XVPQWGJ
+- Start time basis: `vendor_reported`.
+
+<a id="ci-279f2444f8feb36b4d23c835"></a>
+
+- Canonical ID: `ci-279f2444f8feb36b4d23c835` (1 source records).
+  - [openai/01KZXPZD4KHMQQFF09PSNNEZT8](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZXPZD4KHMQQFF09PSNNEZT8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-85f55ae97123daabb7c2fbe8"></a>
+
+- Canonical ID: `ci-85f55ae97123daabb7c2fbe8` (1 source records).
+  - [anthropic/j160kkjmm2n1](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/pbnrks0mrn4w
+- Start time basis: `vendor_reported`.
+
+<a id="ci-76f082de747b30d895a49afb"></a>
+
+- Canonical ID: `ci-76f082de747b30d895a49afb` (1 source records).
+  - [stripe/3lphh4hb8nqw](../../data/2026/W33/stripe.json); vendor URL: https://stspg.io/r1hcjpb5vyv5
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0115cfed90a76ccb46a37c03"></a>
+
+- Canonical ID: `ci-0115cfed90a76ccb46a37c03` (1 source records).
+  - [cloudflare/fdyjr0t87mrb](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fdyjr0t87mrb
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6ef72ecab68ab80091da7993"></a>
+
+- Canonical ID: `ci-6ef72ecab68ab80091da7993` (1 source records).
+  - [github/vm1w8zq95wkt](../../data/2026/W33/github.json); vendor URL: https://stspg.io/3xn46bst0bjh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-43dd77920a9e954e8ff9fc2a"></a>
+
+- Canonical ID: `ci-43dd77920a9e954e8ff9fc2a` (1 source records).
+  - [cloudflare/jxdzyqckdmqb](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/jxdzyqckdmqb
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4618c7bdd11eda16e94a3307"></a>
+
+- Canonical ID: `ci-4618c7bdd11eda16e94a3307` (1 source records).
+  - [anthropic/005ym4vzrq2w](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/wlcwm73lh5vb
+- Start time basis: `vendor_reported`.
+
+<a id="ci-fc5c0fc0ec25e08dddea6f48"></a>
+
+- Canonical ID: `ci-fc5c0fc0ec25e08dddea6f48` (1 source records).
+  - [github/k8vbzwqjkxzn](../../data/2026/W33/github.json); vendor URL: https://stspg.io/f0cgtdc0kqxg
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2172c07553d7cace7552622b"></a>
+
+- Canonical ID: `ci-2172c07553d7cace7552622b` (1 source records).
+  - [anthropic/kmbpgrsszf72](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/xvp8fkkjmtq0
+- Start time basis: `vendor_reported`.
+
+<a id="ci-03322d93a4db66fd023e23d9"></a>
+
+- Canonical ID: `ci-03322d93a4db66fd023e23d9` (1 source records).
+  - [anthropic/qt14v73myyy5](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/cc6kmwrqhzmh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-464829d0d980238ca263fe26"></a>
+
+- Canonical ID: `ci-464829d0d980238ca263fe26` (1 source records).
+  - [yandexcloud/1919](../../data/2026/W33/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1919
+- Start time basis: `vendor_reported`.
+
+<a id="ci-609a5e399f623554815bfc61"></a>
+
+- Canonical ID: `ci-609a5e399f623554815bfc61` (1 source records).
+  - [cloudflare/pb0z7j24ppq1](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/pb0z7j24ppq1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-a2944111466f10b396a154f8"></a>
+
+- Canonical ID: `ci-a2944111466f10b396a154f8` (1 source records).
+  - [cloudflare/32jmvvgg7wj9](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/32jmvvgg7wj9
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c7f5e6890a70b888454ddcaf"></a>
+
+- Canonical ID: `ci-c7f5e6890a70b888454ddcaf` (1 source records).
+  - [cloudflare/d9l78m4jbtrv](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/d9l78m4jbtrv
+- Start time basis: `vendor_reported`.
+
+<a id="ci-fd76e9de72e5b5c8f34f1380"></a>
+
+- Canonical ID: `ci-fd76e9de72e5b5c8f34f1380` (1 source records).
+  - [cloudflare/h79v9rn8h6ml](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/h79v9rn8h6ml
+- Start time basis: `vendor_reported`.
+
+<a id="ci-db8d7d1284c7f7a6fd4ef8ea"></a>
+
+- Canonical ID: `ci-db8d7d1284c7f7a6fd4ef8ea` (1 source records).
+  - [cloudflare/9qty28mt423v](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9qty28mt423v
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4a142d068aec0abf03ff2dd5"></a>
+
+- Canonical ID: `ci-4a142d068aec0abf03ff2dd5` (1 source records).
+  - [openai/01KZRE6ZA1RE1ZH4HQ111CX1S8](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZRE6ZA1RE1ZH4HQ111CX1S8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-85aad0eb96d68653d0fce8f1"></a>
+
+- Canonical ID: `ci-85aad0eb96d68653d0fce8f1` (1 source records).
+  - [github/pf25whpq58hh](../../data/2026/W33/github.json); vendor URL: https://stspg.io/l6tmhqw07cmj
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0e83a8746a629db6c64dce97"></a>
+
+- Canonical ID: `ci-0e83a8746a629db6c64dce97` (1 source records).
+  - [circleci/phn6832tvb84](../../data/2026/W33/circleci.json); vendor URL: https://stspg.io/v83b8dvfq3hq
+- Start time basis: `vendor_reported`.
+
+<a id="ci-685e1bdfc7404cc7f8eced14"></a>
+
+- Canonical ID: `ci-685e1bdfc7404cc7f8eced14` (1 source records).
+  - [grafana/p34f3c0hfmyw](../../data/2026/W33/grafana.json); vendor URL: https://stspg.io/tv8plq4gysv5
+- Start time basis: `vendor_reported`.
+
+<a id="ci-552611cb7c0c8ec22e326d4f"></a>
+
+- Canonical ID: `ci-552611cb7c0c8ec22e326d4f` (1 source records).
+  - [cloudflare/kc88n14c8kjg](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/kc88n14c8kjg
+- Start time basis: `vendor_reported`.
+
+<a id="ci-eeaf41d48164d7f53506b99c"></a>
+
+- Canonical ID: `ci-eeaf41d48164d7f53506b99c` (1 source records).
+  - [github/1t7x65n7kvt1](../../data/2026/W33/github.json); vendor URL: https://stspg.io/4x5bd0ghzy0x
+- Start time basis: `vendor_reported`.
+
+<a id="ci-5f6c4632385dd271e2951cee"></a>
+
+- Canonical ID: `ci-5f6c4632385dd271e2951cee` (1 source records).
+  - [github/lsvy8xsf0gxv](../../data/2026/W33/github.json); vendor URL: https://stspg.io/xp36nwz4rrh1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6dfa90b249fe643b20b23330"></a>
+
+- Canonical ID: `ci-6dfa90b249fe643b20b23330` (1 source records).
+  - [stripe/chlg0pv25fyy](../../data/2026/W33/stripe.json); vendor URL: https://stspg.io/w3mvhm1w3yck
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b2bebdc8a46e4efec2e1e9df"></a>
+
+- Canonical ID: `ci-b2bebdc8a46e4efec2e1e9df` (1 source records).
+  - [openai/01KZSC0T66YTVM57N5T79SV8ZV](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZSC0T66YTVM57N5T79SV8ZV
+- Start time basis: `vendor_reported`.
+
+<a id="ci-42e6a798b54b93602667bc3b"></a>
+
+- Canonical ID: `ci-42e6a798b54b93602667bc3b` (1 source records).
+  - [github/24t8gsgqx2qb](../../data/2026/W33/github.json); vendor URL: https://stspg.io/8htrnxk0q09v
+- Start time basis: `vendor_reported`.
+
+<a id="ci-ede298cea163d98c15c324f8"></a>
+
+- Canonical ID: `ci-ede298cea163d98c15c324f8` (1 source records).
+  - [cloudflare/br0y58121k86](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/br0y58121k86
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7117471c68a5d4e090e8573f"></a>
+
+- Canonical ID: `ci-7117471c68a5d4e090e8573f` (1 source records).
+  - [github/76t89hbfb09h](../../data/2026/W33/github.json); vendor URL: https://stspg.io/ssd9z8l2g46v
+- Start time basis: `vendor_reported`.
+
+<a id="ci-98ea1b0abca47b133fcd56c6"></a>
+
+- Canonical ID: `ci-98ea1b0abca47b133fcd56c6` (1 source records).
+  - [cloudflare/jb87g814jw6z](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/jb87g814jw6z
+- Start time basis: `vendor_reported`.
+
+<a id="ci-387c3e6dd7fa60f4fb972007"></a>
+
+- Canonical ID: `ci-387c3e6dd7fa60f4fb972007` (1 source records).
+  - [openai/01KZN8RYNZY8T4QQGB3JWMPYRW](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZN8RYNZY8T4QQGB3JWMPYRW
+- Start time basis: `vendor_reported`.
+
+<a id="ci-ce00c1375175f4ae82730460"></a>
+
+- Canonical ID: `ci-ce00c1375175f4ae82730460` (1 source records).
+  - [github/s19bth7wzkf7](../../data/2026/W33/github.json); vendor URL: https://stspg.io/tjf46x5zq25c
+- Start time basis: `vendor_reported`.
+
+<a id="ci-eccc9e3af77f281c44a87924"></a>
+
+- Canonical ID: `ci-eccc9e3af77f281c44a87924` (1 source records).
+  - [cloudflare/nx4k855cdhpv](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/nx4k855cdhpv
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e9d08f84ee0bdf57ad56f9bd"></a>
+
+- Canonical ID: `ci-e9d08f84ee0bdf57ad56f9bd` (1 source records).
+  - [anthropic/hdynq1pc0fn8](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/vpnnwf2vhdv4
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b506f9c3af244bbf26398015"></a>
+
+- Canonical ID: `ci-b506f9c3af244bbf26398015` (1 source records).
+  - [cloudflare/f3czlxddtrf1](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/f3czlxddtrf1
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8ab7f2bab965af2cf691a429"></a>
+
+- Canonical ID: `ci-8ab7f2bab965af2cf691a429` (1 source records).
+  - [cloudflare/3f0150102wdw](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/3f0150102wdw
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e6ebd78833bb117939c5093a"></a>
+
+- Canonical ID: `ci-e6ebd78833bb117939c5093a` (1 source records).
+  - [anthropic/whnd2z49x3xf](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/wftzxt096mrk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-5253b9771129f84c6ad98958"></a>
+
+- Canonical ID: `ci-5253b9771129f84c6ad98958` (1 source records).
+  - [circleci/lh8681zry6jd](../../data/2026/W33/circleci.json); vendor URL: https://stspg.io/b811tvs48x2k
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b16555882ed6e5f64497312e"></a>
+
+- Canonical ID: `ci-b16555882ed6e5f64497312e` (1 source records).
+  - [openai/01KZRJHTR75WDXCMC0ZERX6YJC](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZRJHTR75WDXCMC0ZERX6YJC
+- Start time basis: `vendor_reported`.
+
+<a id="ci-189ae6d3943f8e85ed8ff4f3"></a>
+
+- Canonical ID: `ci-189ae6d3943f8e85ed8ff4f3` (1 source records).
+  - [circleci/ljvrkzc9pdfr](../../data/2026/W33/circleci.json); vendor URL: https://stspg.io/5n5fpq53kkhh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-73c393ec44da6fbf06b1dd90"></a>
+
+- Canonical ID: `ci-73c393ec44da6fbf06b1dd90` (1 source records).
+  - [openai/01KZRXPE0NGXA12FJNP8WZF8D7](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZRXPE0NGXA12FJNP8WZF8D7
+- Start time basis: `vendor_reported`.
+
+<a id="ci-eca371ab9ab19fe95090cbd9"></a>
+
+- Canonical ID: `ci-eca371ab9ab19fe95090cbd9` (1 source records).
+  - [grafana/4d2yvpdh9v3n](../../data/2026/W33/grafana.json); vendor URL: https://stspg.io/0svqkyqmlzxl
+- Start time basis: `vendor_reported`.
+
+<a id="ci-788ae965a5cbd1ea67fb1134"></a>
+
+- Canonical ID: `ci-788ae965a5cbd1ea67fb1134` (1 source records).
+  - [cloudflare/49gpcftwfkwr](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/49gpcftwfkwr
+- Start time basis: `vendor_reported`.
+
+<a id="ci-fc7afb3154826aaa82e1897e"></a>
+
+- Canonical ID: `ci-fc7afb3154826aaa82e1897e` (1 source records).
+  - [cloudflare/rfrm4fr82w2x](../../data/2026/W33/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/rfrm4fr82w2x
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c484e1ab05f47aed964d0d14"></a>
+
+- Canonical ID: `ci-c484e1ab05f47aed964d0d14` (1 source records).
+  - [digitalocean/y3kn2w2qf5s4](../../data/2026/W33/digitalocean.json); vendor URL: https://stspg.io/yldnj7859gcp
+- Start time basis: `vendor_reported`.
+
 ## Sources
 
-| Vendor | Status | Incidents seen | Parse errors |
+| Vendor | Status | Source records seen | Parse errors |
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
-| aws | ok | 4 | 0 |
+| aws | ok | 6 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
-| datadog | ok | 50 | 0 |
+| datadog | FETCH FAILED: GET https://status.datadoghq.com/api/v2/incidents.json: status 403 | 0 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 5 | 0 |
+| gcp | ok | 8 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
-| slack | ok | 43 | 0 |
+| slack | ok | 28 | 0 |
 | stripe | ok | 50 | 0 |
-
+| yandexcloud | FETCH FAILED: GET https://status.cloud.yandex.ru/api/incidents?lang=en&page=4: status 403 | 0 | 0 |

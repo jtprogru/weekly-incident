@@ -1,22 +1,26 @@
 .DEFAULT_GOAL := help
-.PHONY: help build test cover lint vet fmt fmt-check collect digest testdata clean
+.PHONY: help build test cover lint vet fmt fmt-check collect digest dedup-audit dedup-plan dedup-apply dedup-validate dedup-rebuild testdata clean
 
 GO      ?= go
 BIN     ?= bin
 WEEK    ?=
 SUMMARY ?=
 WARNING ?=
+RESULT ?=
+REPORT_DIR ?= reports/dedup
+NOW ?=
 
 DIGEST_ARGS  := $(if $(WEEK),-week $(WEEK),)
-COLLECT_ARGS := $(if $(SUMMARY),-summary $(SUMMARY),) $(if $(WARNING),-warning $(WARNING),)
+COLLECT_ARGS := $(if $(SUMMARY),-summary $(SUMMARY),) $(if $(WARNING),-warning $(WARNING),) $(if $(RESULT),-result $(RESULT),)
 
 help: ## Show this help
 	@grep -hE '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-build: ## Build both commands into ./bin
+build: ## Build collect, digest and dedup into ./bin
 	$(GO) build -o $(BIN)/collect ./cmd/collect
 	$(GO) build -o $(BIN)/digest ./cmd/digest
+	$(GO) build -o $(BIN)/dedup ./cmd/dedup
 
 test: ## Run the test suite
 	$(GO) test -race ./...
@@ -53,6 +57,21 @@ collect: ## Fetch every source and merge into data/ (SUMMARY=, WARNING= capture 
 # part of it.
 digest: ## Render a week into weeks/ (WEEK=2026-W34 to pick one)
 	@$(GO) run ./cmd/digest $(DIGEST_ARGS)
+
+dedup-audit: ## Audit duplicate candidates offline (REPORT_DIR=reports/dedup, NOW=RFC3339)
+	$(GO) run ./cmd/dedup audit -out "$(REPORT_DIR)" $(if $(NOW),-now "$(NOW)",)
+
+dedup-plan: ## Preview identity changes and score differences (NOW=RFC3339)
+	$(GO) run ./cmd/dedup plan -out "$(REPORT_DIR)" $(if $(NOW),-now "$(NOW)",)
+
+dedup-apply: ## Apply the reviewed plan from REPORT_DIR/plan.json
+	$(GO) run ./cmd/dedup apply -plan "$(REPORT_DIR)/plan.json"
+
+dedup-validate: ## Validate observations, registry and all derived artifacts
+	$(GO) run ./cmd/dedup validate
+
+dedup-rebuild: ## Rebuild all historical weeks offline, without notifications (NOW=RFC3339)
+	$(GO) run ./cmd/dedup rebuild -weeks weeks $(if $(NOW),-now "$(NOW)",)
 
 testdata: ## Re-capture the golden feed responses used by the parser tests
 	./scripts/fetch-testdata.sh

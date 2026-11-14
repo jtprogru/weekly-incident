@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 1,
+    "source_versions_total": 1,
+    "canonical_incidents_total": 1,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2022-W25",
   "from": "2022-06-20T00:00:00Z",
   "to": "2022-06-27T00:00:00Z",
-  "generated_at": "2026-08-18T12:36:46.660317Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -98,7 +107,20 @@
   ],
   "incidents": [
     {
-      "key": "atlassian/wpphfps5ffpj",
+      "canonical": {
+        "id": "ci-7b44a2e165cf476e4d79281a",
+        "sources": [
+          {
+            "key": "atlassian/wpphfps5ffpj",
+            "path": "2022/W25/atlassian.json",
+            "url": "https://stspg.io/g9syxmx696d8"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-7b44a2e165cf476e4d79281a",
       "vendor": "atlassian",
       "title": "Partial app outage across multiple regions",
       "url": "https://stspg.io/g9syxmx696d8",

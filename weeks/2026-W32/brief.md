@@ -1,6 +1,8 @@
-# Week 2026-W32 — top 5 of 24 above threshold
+# Week 2026-W32 — top 5 of 27 above threshold
 
 2026-08-03 to 2026-08-09 (UTC).
+
+53 source records (54 saved revisions) → 53 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## 1. cloudflare — R2 Availability Issues
 
@@ -8,6 +10,12 @@
 - Window: 2026-08-07 18:42 to 2026-08-09 02:35 UTC (1d 7h 53m)
 - Impact: minor, status: resolved
 - Components: R2
+
+<a id="ci-19980fd9ebe296f9fad565a1"></a>
+
+- Canonical ID: `ci-19980fd9ebe296f9fad565a1` (1 source records).
+  - [cloudflare/9fzfjzc5ms0h](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/9fzfjzc5ms0h
+- Start time basis: `vendor_reported`.
 
   - `2026-08-07 18:42` investigating — Cloudflare is aware, and investigating an issue affecting availability in ENAM for a small number of R2 buckets.
   - `2026-08-07 22:54` identified — We have identified the cause and mitigated further impact. Writes to a small set of buckets in ENAM were impacted between 14:52-17:02 UTC. We are continuing to work to restore normal availability for these buckets.
@@ -21,7 +29,13 @@
 - URL: https://stspg.io/v7xpxd5xg5pc
 - Window: 2026-08-05 07:05 to 2026-08-05 14:14 UTC (7h 8m)
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+
+<a id="ci-4d692f6fe2886d99429985ff"></a>
+
+- Canonical ID: `ci-4d692f6fe2886d99429985ff` (1 source records).
+  - [anthropic/f6gkkq6txl7z](../../data/2026/W32/anthropic.json); vendor URL: https://stspg.io/v7xpxd5xg5pc
+- Start time basis: `vendor_reported`.
 
   - `2026-08-05 07:05` identified — We have identified the cause of elevated errors on requests to Claude Mythos 5, Claude Fable 5, and Claude Opus 5, Claude Sonnet 5 and are working on a fix. We will provide an update as soon as possible.
   - `2026-08-05 09:13` identified — We are continuing to work on a fix for this issue.
@@ -34,6 +48,12 @@
 - Window: 2026-08-06 15:22 to 2026-08-07 02:04 UTC (10h 41m)
 - Impact: critical, status: resolved
 - Components: Actions, Pages
+
+<a id="ci-747da73c4247bfb2f2d5ff1c"></a>
+
+- Canonical ID: `ci-747da73c4247bfb2f2d5ff1c` (1 source records).
+  - [github/qcvjkzcs7j74](../../data/2026/W32/github.json); vendor URL: https://stspg.io/rcz3fcm83sff
+- Start time basis: `vendor_reported`.
 
   - `2026-08-06 15:22` investigating — We are investigating reports of degraded performance for Actions
   - `2026-08-06 15:41` investigating — Actions is experiencing degraded availability. We are continuing to investigate.
@@ -67,6 +87,12 @@
 - Impact: minor, status: resolved
 - Components: Workers
 
+<a id="ci-5ce81f1f7f812cd8096e3fb2"></a>
+
+- Canonical ID: `ci-5ce81f1f7f812cd8096e3fb2` (1 source records).
+  - [cloudflare/238b69fw6l55](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/238b69fw6l55
+- Start time basis: `vendor_reported`.
+
   - `2026-08-03 15:13` investigating — Cloudflare is aware of an issue with the latest Workers Runtime API release that exposes native Temporal with clock stuck at epoch 0. Updates to follow.
   - `2026-08-03 15:21` identified — Workers runtime: Temporal global exposed with an incorrect clock Since 2026-07-30, the Workers runtime has exposed a global Temporal object that was not intended to be available. Its clock is wrong: Temporal.Now reports 1970-01-01 rather than the current time. Date and Date.now() are unaffected and report the correct time. This can affect Workers that install a Temporal polyfill only when no native Temporal is detected. On those Workers, the polyfill stopped being installed and time-dependent logic began computing against 1970 — for example, tokens minted with an issue time of 0 and an expiry in 1970, incorrect TTLs, or incorrect date arithmetic. No error is raised when this happens.
   - `2026-08-04 07:00` monitoring — A fix has been implemented and we are monitoring the results.
@@ -79,23 +105,32 @@
 - Impact: minor, status: resolved
 - Components: Network
 
+<a id="ci-13fae42ca5727516857ff3ef"></a>
+
+- Canonical ID: `ci-13fae42ca5727516857ff3ef` (1 source records).
+  - [cloudflare/x44ny80374v7](../../data/2026/W32/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/x44ny80374v7
+- Start time basis: `vendor_reported`.
+
   - `2026-08-08 08:25` investigating — We have lost dark fiber in the Istanbul region, we are working to follow up with our vendors to restore connectivity. More updates to follow shortly.
   - `2026-08-08 19:45` resolved — This incident has been resolved.
 
-## Also above threshold (19)
+## Also above threshold (22)
 
 - `digitalocean` Account Registration, Droplets, and Related Services (6h 3m) — https://stspg.io/grfh9nf5bp3f
 - `grafana` Some Grafana Instances Unavailable (6h 20m) — https://stspg.io/4jyq27wvr4kk
 - `openai` Elevated errors with image generation (8h 26m) — https://status.openai.com/incidents/01KZ96S5HEWX0CX26W2WFYFKE6
+- `yandexcloud` Degradation of network connectivity (2h 20m) — https://status.yandex.cloud/en/incidents/1904
 - `openai` Issues with Custom GPT actions (5h 53m) — https://status.openai.com/incidents/01KZ9DMQD2GJ8JJWDN7572RH78
 - `digitalocean` Spaces Cold Storage Billing (5h 29m) — https://stspg.io/qb6zv0kdjy50
 - `circleci` Increased Job Queue Times: Windows, Android, and GPU (4h 12m) — https://stspg.io/525771jb0gj4
 - `circleci` Usage API data delayed for 8/5 (6h 48m) — https://stspg.io/kntq9cf4jgpk
+- `yandexcloud` The problem is with the services (3h 58m) — https://status.yandex.cloud/en/incidents/1916
 - `cloudflare` Connectivity issues affecting access to some website from certain networks in Egypt (2h 53m) — https://www.cloudflarestatus.com/incidents/ydgyl9v3g02s
 - `openai` Elevated errors in ChatGPT conversations with files (3h 13m) — https://status.openai.com/incidents/01KZ9E7QD8WFJD5DMF73QGVYH8
 - `cloudflare` Cloudflare Dedicated Egress in London (2h 17m) — https://www.cloudflarestatus.com/incidents/7dk3g4k188ky
 - `circleci` Insights service data is lagging (4h 2m) — https://stspg.io/6qdzqdj5ww81
 - `openai` Elevated ChatGPT conversation errors affecting Plus, Pro, Business, and Edu users (2h 41m) — https://status.openai.com/incidents/01KZ6CT9K9Q52S3707W75MNBGB
+- `yandexcloud` Partial unavailability of services (1h 20m) — https://status.yandex.cloud/en/incidents/1910
 - `cloudflare` Elevated R2 error rates and latency (2h 6m) — https://www.cloudflarestatus.com/incidents/fkpqy4zrm28t
 - `cloudflare` Web Analytics Configuration issues (2h 2m) — https://www.cloudflarestatus.com/incidents/3wbkwvf5ypbk
 - `slack` Trouble Using Search Bar For Some Admins (2h 45m) — https://slack-status.com/2026-08/1db1f200d420086a
@@ -103,4 +138,3 @@
 - `grafana` Logs latency increase within prod-eu-west-3 (3h 14m) — https://stspg.io/tf9jp15y4f5k
 - `digitalocean` Cloud Control Panel Access (4h 1m) — https://stspg.io/045lx5xqfdns
 - `anthropic` Elevated errors across many models (1h 11m) — https://stspg.io/j5npxk25yrp3
-

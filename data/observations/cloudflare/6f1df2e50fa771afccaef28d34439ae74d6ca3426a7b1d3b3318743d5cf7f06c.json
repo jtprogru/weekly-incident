@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/fdyjr0t87mrb",
+    "vendor": "cloudflare",
+    "native_id": "fdyjr0t87mrb",
+    "title": "Email Security delivery impacted by Spamhaus listing",
+    "url": "https://www.cloudflarestatus.com/incidents/fdyjr0t87mrb",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-08-12T15:04:14.527Z",
+    "resolved_at": "2026-08-12T17:23:45.617Z",
+    "duration_minutes": 139,
+    "components": [
+      "Email Security (Area1)",
+      "Email Security (Zero Trust)"
+    ],
+    "updates": [
+      {
+        "native_id": "7glgxgy73hnx",
+        "status": "investigating",
+        "body": "We are currently investigating an issue where customers that use Spamhaus for additional filtering of email downstream from the Cloudflare Email Security service are rejecting emails from IPs in the 134.195.26.0/23 block. This IP block should be allowed for all customer downstream systems to avoid treating the Email Security service as an originator of mail. We recommend all Cloudflare Email Security customers disable Spamhaus filtering in downstream systems.",
+        "created_at": "2026-08-12T15:04:14.64Z"
+      },
+      {
+        "native_id": "jzz0dz45b0r5",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.",
+        "created_at": "2026-08-12T15:07:00.47Z"
+      },
+      {
+        "native_id": "lh0xvdmkjhcl",
+        "status": "investigating",
+        "body": "We are continuing to investigate this issue.\n\nCustomers using O365 will be impacted only if they have not completed the required setup. Please check your setup and ensure the connector includes all egress IPs:\n\nhttps://developers.cloudflare.com/cloudflare-one/email-security/setup/pre-delivery-deployment/prerequisites/m365-email-security-mx/#2-configure-enhanced-filtering",
+        "created_at": "2026-08-12T16:30:55.585Z"
+      },
+      {
+        "native_id": "lzxzq3jhfjrt",
+        "status": "monitoring",
+        "body": "All IPs previously listed by Spamhaus are now clean. Monitoring the propagation of that change to downstream systems.",
+        "created_at": "2026-08-12T16:48:03.271Z"
+      },
+      {
+        "native_id": "y82z8fsvjrgw",
+        "status": "resolved",
+        "body": "This incident is now resolved.",
+        "created_at": "2026-08-12T17:23:45.617Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-05-23T19:39:45.000Z",
+          "description": "Customers with Area1 only product.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "h9z388jfrjsm",
+          "name": "Email Security (Area1)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 48,
+          "showcase": false,
+          "start_date": "2024-05-23",
+          "status": "operational",
+          "updated_at": "2026-08-12T17:23:45.000Z"
+        },
+        {
+          "created_at": "2024-05-23T19:37:22.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "8jjy5n5bfl9v",
+          "name": "Email Security (Zero Trust)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 49,
+          "showcase": false,
+          "start_date": "2024-05-23",
+          "status": "operational",
+          "updated_at": "2026-08-12T17:23:45.000Z"
+        }
+      ],
+      "created_at": "2026-08-12T15:04:14.000Z",
+      "id": "fdyjr0t87mrb",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "h9z388jfrjsm",
+              "name": "Cloudflare Sites and Services - Email Security (Area1)",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "8jjy5n5bfl9v",
+              "name": "Cloudflare Sites and Services - Email Security (Zero Trust)",
+              "new_status": "operational",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "This incident is now resolved.",
+          "created_at": "2026-08-12T17:23:45.617Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T17:23:45.617Z",
+          "id": "y82z8fsvjrgw",
+          "incident_id": "fdyjr0t87mrb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T17:23:45.617Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9z388jfrjsm",
+              "name": "Cloudflare Sites and Services - Email Security (Area1)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "8jjy5n5bfl9v",
+              "name": "Cloudflare Sites and Services - Email Security (Zero Trust)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "All IPs previously listed by Spamhaus are now clean. Monitoring the propagation of that change to downstream systems.",
+          "created_at": "2026-08-12T16:48:03.271Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T16:48:03.271Z",
+          "id": "lzxzq3jhfjrt",
+          "incident_id": "fdyjr0t87mrb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T16:48:03.271Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9z388jfrjsm",
+              "name": "Cloudflare Sites and Services - Email Security (Area1)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "8jjy5n5bfl9v",
+              "name": "Cloudflare Sites and Services - Email Security (Zero Trust)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.\n\nCustomers using O365 will be impacted only if they have not completed the required setup. Please check your setup and ensure the connector includes all egress IPs:\n\nhttps://developers.cloudflare.com/cloudflare-one/email-security/setup/pre-delivery-deployment/prerequisites/m365-email-security-mx/#2-configure-enhanced-filtering",
+          "created_at": "2026-08-12T16:30:55.585Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T16:30:55.585Z",
+          "id": "lh0xvdmkjhcl",
+          "incident_id": "fdyjr0t87mrb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T16:30:55.585Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9z388jfrjsm",
+              "name": "Cloudflare Sites and Services - Email Security (Area1)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "8jjy5n5bfl9v",
+              "name": "Cloudflare Sites and Services - Email Security (Zero Trust)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are continuing to investigate this issue.",
+          "created_at": "2026-08-12T15:07:00.470Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T15:07:00.470Z",
+          "id": "jzz0dz45b0r5",
+          "incident_id": "fdyjr0t87mrb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T15:07:00.470Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "h9z388jfrjsm",
+              "name": "Cloudflare Sites and Services - Email Security (Area1)",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "8jjy5n5bfl9v",
+              "name": "Cloudflare Sites and Services - Email Security (Zero Trust)",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue where customers that use Spamhaus for additional filtering of email downstream from the Cloudflare Email Security service are rejecting emails from IPs in the 134.195.26.0/23 block. This IP block should be allowed for all customer downstream systems to avoid treating the Email Security service as an originator of mail. We recommend all Cloudflare Email Security customers disable Spamhaus filtering in downstream systems.",
+          "created_at": "2026-08-12T15:04:14.640Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-08-12T15:04:14.640Z",
+          "id": "7glgxgy73hnx",
+          "incident_id": "fdyjr0t87mrb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-08-12T15:04:14.640Z"
+        }
+      ],
+      "monitoring_at": "2026-08-12T16:48:03.271Z",
+      "name": "Email Security delivery impacted by Spamhaus listing",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-08-12T17:23:45.617Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/fdyjr0t87mrb",
+      "started_at": "2026-08-12T15:04:14.527Z",
+      "status": "resolved",
+      "updated_at": "2026-08-12T17:23:45.635Z"
+    }
+  }
+}

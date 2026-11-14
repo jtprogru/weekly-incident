@@ -1,8 +1,17 @@
 {
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
   "week": "2026-W06",
   "from": "2026-02-02T00:00:00Z",
   "to": "2026-02-09T00:00:00Z",
-  "generated_at": "2026-10-29T11:52:25.981929879Z",
+  "generated_at": "2026-11-14T00:00:00Z",
   "sources": [
     {
       "vendor": "anthropic",
@@ -105,7 +114,20 @@
   ],
   "incidents": [
     {
-      "key": "datadog/g545g04n9xkr",
+      "canonical": {
+        "id": "ci-57f904136b32c968081e263b",
+        "sources": [
+          {
+            "key": "datadog/g545g04n9xkr",
+            "path": "2026/W06/datadog.json",
+            "url": "https://stspg.io/kzxxld69ftmr"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-57f904136b32c968081e263b",
       "vendor": "datadog",
       "title": "Delays in Monitor Evaluations",
       "url": "https://stspg.io/kzxxld69ftmr",
@@ -135,7 +157,20 @@
       "above_threshold": true
     },
     {
-      "key": "stripe/flm1bpq06yxf",
+      "canonical": {
+        "id": "ci-0efb91243799e89715b664cd",
+        "sources": [
+          {
+            "key": "stripe/flm1bpq06yxf",
+            "path": "2026/W06/stripe.json",
+            "url": "https://stspg.io/m7f5tchrrryz"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-0efb91243799e89715b664cd",
       "vendor": "stripe",
       "title": "Elevated errors on 3DS transactions for Commonwealth Bank of Australia",
       "url": "https://stspg.io/m7f5tchrrryz",

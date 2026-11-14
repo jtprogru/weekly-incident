@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/3r3qcgbb0714",
+    "vendor": "cloudflare",
+    "native_id": "3r3qcgbb0714",
+    "title": "SSL Certificate Provisioning Delays for Let's Encrypt",
+    "url": "https://www.cloudflarestatus.com/incidents/3r3qcgbb0714",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-09-11T02:20:44.477Z",
+    "resolved_at": "2026-09-11T04:05:00.264Z",
+    "duration_minutes": 104,
+    "components": [
+      "SSL Certificate Provisioning"
+    ],
+    "updates": [
+      {
+        "native_id": "fhby0ltt8hsp",
+        "status": "identified",
+        "body": "Let's Encrypt are seeing SSL certificates provisioning delays. You can read their public status page here:\nhttps://letsencrypt.status.io/pages/incident/55957a99e800baa4470002da/6aa35c1d892d7304f2747e01\n\nSSL certificates already in production and other CAs certificate provisioning remains unaffected and are operating normally.",
+        "created_at": "2026-09-11T02:20:44.592Z"
+      },
+      {
+        "native_id": "cvkv8fs9prpb",
+        "status": "identified",
+        "body": "Let's Encrypt incident is now resolved. Cloudflare managed certificate backlog is still clearing.",
+        "created_at": "2026-09-11T02:58:59.162Z"
+      },
+      {
+        "native_id": "44mcxbxkrkg7",
+        "status": "monitoring",
+        "body": "Let's Encrypt has resolved the incident and we are monitoring the results.",
+        "created_at": "2026-09-11T03:54:39.42Z"
+      },
+      {
+        "native_id": "563vl3zbpgfp",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-09-11T04:05:00.264Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2016-03-17T15:27:39.000Z",
+          "description": "Provisioning service for edge certificates like Universal and Advanced SSL",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "cghykwlwsmn5",
+          "name": "SSL Certificate Provisioning",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 101,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-09-22T19:25:56.000Z"
+        }
+      ],
+      "created_at": "2026-09-11T02:20:44.000Z",
+      "id": "3r3qcgbb0714",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-09-11T04:05:00.264Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T04:05:00.264Z",
+          "id": "563vl3zbpgfp",
+          "incident_id": "3r3qcgbb0714",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T04:05:00.264Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Let's Encrypt has resolved the incident and we are monitoring the results.",
+          "created_at": "2026-09-11T03:54:39.420Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T03:54:39.420Z",
+          "id": "44mcxbxkrkg7",
+          "incident_id": "3r3qcgbb0714",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T03:54:39.420Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Let's Encrypt incident is now resolved. Cloudflare managed certificate backlog is still clearing.",
+          "created_at": "2026-09-11T02:58:59.162Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T02:58:59.162Z",
+          "id": "cvkv8fs9prpb",
+          "incident_id": "3r3qcgbb0714",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T02:58:59.162Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cghykwlwsmn5",
+              "name": "Cloudflare Sites and Services - SSL Certificate Provisioning",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Let's Encrypt are seeing SSL certificates provisioning delays. You can read their public status page here:\nhttps://letsencrypt.status.io/pages/incident/55957a99e800baa4470002da/6aa35c1d892d7304f2747e01\n\nSSL certificates already in production and other CAs certificate provisioning remains unaffected and are operating normally.",
+          "created_at": "2026-09-11T02:20:44.592Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-11T02:20:44.592Z",
+          "id": "fhby0ltt8hsp",
+          "incident_id": "3r3qcgbb0714",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-09-11T02:20:44.592Z"
+        }
+      ],
+      "monitoring_at": "2026-09-11T03:54:39.420Z",
+      "name": "SSL Certificate Provisioning Delays for Let's Encrypt",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-11T04:05:00.264Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/3r3qcgbb0714",
+      "started_at": "2026-09-11T02:20:44.477Z",
+      "status": "resolved",
+      "updated_at": "2026-09-11T04:05:00.278Z"
+    }
+  }
+}

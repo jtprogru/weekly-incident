@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/grtt5vk2dd3v",
+    "vendor": "grafana",
+    "native_id": "grtt5vk2dd3v",
+    "title": "Mimir read errors and high latency in prod-eu-west-0",
+    "url": "https://stspg.io/h6ydsghh5vvs",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-06-29T11:37:40.849Z",
+    "resolved_at": "2026-06-30T08:20:53.167Z",
+    "duration_minutes": 1243,
+    "components": [
+      "GCP Belgium - prod-eu-west-0: Querying",
+      "GCP Belgium - prod-eu-west-0: Ingestion"
+    ],
+    "updates": [
+      {
+        "native_id": "01k4hcwb8fv8",
+        "status": "investigating",
+        "body": "We are currently investigating an issue with Mimir in prod-eu-west-0 we are seeing read errors and high latency. This incident is currently ongoing. The errors are recovering but we are currently looking into the route cause of this.",
+        "created_at": "2026-06-29T11:37:40.996Z"
+      },
+      {
+        "native_id": "mft08l106s07",
+        "status": "investigating",
+        "body": "The errors are recovering, and we are still looking into the root cause of this.",
+        "created_at": "2026-06-29T13:52:03.444Z"
+      },
+      {
+        "native_id": "32lchxtp4v03",
+        "status": "investigating",
+        "body": "The errors and latency have now recovered, we continue investigating the root cause.",
+        "created_at": "2026-06-29T15:37:38.24Z"
+      },
+      {
+        "native_id": "7q0b84n08by6",
+        "status": "identified",
+        "body": "We've identified a possible cause, and a mitigation is in place to prevent further occurrences.",
+        "created_at": "2026-06-29T17:47:19.009Z"
+      },
+      {
+        "native_id": "p5wc560wfzdv",
+        "status": "resolved",
+        "body": "Since the mitigation has been applied, we have not seen the errors return. At this point, we are considering the incident resolved.",
+        "created_at": "2026-06-30T08:20:53.167Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-04-10T08:44:26.954Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "9rtx96d2z01z",
+          "name": "GCP Belgium - prod-eu-west-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 32,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:37.992Z"
+        },
+        {
+          "created_at": "2019-04-10T08:44:44.708Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "d2vdtkjjdzjy",
+          "name": "GCP Belgium - prod-eu-west-0: Ingestion",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 33,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-07-30T15:17:38.008Z"
+        }
+      ],
+      "created_at": "2026-06-29T11:37:40.862Z",
+      "id": "grtt5vk2dd3v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Since the mitigation has been applied, we have not seen the errors return. At this point, we are considering the incident resolved.",
+          "created_at": "2026-06-30T08:20:53.167Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-30T08:20:53.167Z",
+          "id": "p5wc560wfzdv",
+          "incident_id": "grtt5vk2dd3v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-06-30T08:20:53.167Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified a possible cause, and a mitigation is in place to prevent further occurrences.",
+          "created_at": "2026-06-29T17:47:19.009Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-29T17:47:19.009Z",
+          "id": "7q0b84n08by6",
+          "incident_id": "grtt5vk2dd3v",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-06-29T17:47:19.009Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The errors and latency have now recovered, we continue investigating the root cause.",
+          "created_at": "2026-06-29T15:37:38.240Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-29T15:37:38.240Z",
+          "id": "32lchxtp4v03",
+          "incident_id": "grtt5vk2dd3v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-29T15:37:38.240Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The errors are recovering, and we are still looking into the root cause of this.",
+          "created_at": "2026-06-29T13:52:03.444Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-29T13:52:03.444Z",
+          "id": "mft08l106s07",
+          "incident_id": "grtt5vk2dd3v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-29T13:52:03.444Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "9rtx96d2z01z",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "d2vdtkjjdzjy",
+              "name": "Metrics - GCP Belgium - prod-eu-west-0: Ingestion",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue with Mimir in prod-eu-west-0 we are seeing read errors and high latency. This incident is currently ongoing. The errors are recovering but we are currently looking into the route cause of this.",
+          "created_at": "2026-06-29T11:37:40.996Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-06-29T11:37:40.996Z",
+          "id": "01k4hcwb8fv8",
+          "incident_id": "grtt5vk2dd3v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-06-29T11:37:40.996Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Mimir read errors and high latency in prod-eu-west-0",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-06-30T08:20:53.167Z",
+      "shortlink": "https://stspg.io/h6ydsghh5vvs",
+      "started_at": "2026-06-29T11:37:40.849Z",
+      "status": "resolved",
+      "updated_at": "2026-06-30T08:20:53.186Z"
+    }
+  }
+}

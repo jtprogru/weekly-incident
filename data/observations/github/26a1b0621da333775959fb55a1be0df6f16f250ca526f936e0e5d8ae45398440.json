@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/l7ycmglmykgg",
+    "vendor": "github",
+    "native_id": "l7ycmglmykgg",
+    "title": "Disruption with some Copilot services",
+    "url": "https://stspg.io/bwcyq078jzms",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-10-28T14:12:53.814Z",
+    "resolved_at": "2026-10-28T15:28:19.237Z",
+    "duration_minutes": 75,
+    "components": [
+      "Copilot"
+    ],
+    "updates": [
+      {
+        "native_id": "0y1yf8q6pr8k",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-28T14:12:53.892Z"
+      },
+      {
+        "native_id": "lwxljgnlw669",
+        "status": "investigating",
+        "body": "We are experiencing issues with upstream model providers resulting in a degraded experience across Copilot services. The team is actively investigating the issue.",
+        "created_at": "2026-10-28T14:15:46.574Z"
+      },
+      {
+        "native_id": "pl0cc021gtvj",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue we recommend choosing another model to continue using Copilot.",
+        "created_at": "2026-10-28T14:33:55.402Z"
+      },
+      {
+        "native_id": "pgsl3mczkww8",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. We have identified the root cause and working to apply a mitigation. While we work to resolve the issue we recommend choosing another model to continue using Copilot.",
+        "created_at": "2026-10-28T14:55:32.445Z"
+      },
+      {
+        "native_id": "xm3jx0zs86q3",
+        "status": "investigating",
+        "body": "We have applied the mitigation and are seeing signs of recovery. We will continue to monitor and expect full resolution soon.",
+        "created_at": "2026-10-28T15:15:25.873Z"
+      },
+      {
+        "native_id": "00mgpmw475dn",
+        "status": "investigating",
+        "body": "Copilot is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-10-28T15:24:40.346Z"
+      },
+      {
+        "native_id": "q7qm7xkywr3g",
+        "status": "monitoring",
+        "body": "The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-28T15:26:14.736Z"
+      },
+      {
+        "native_id": "wd3yvwdcfbs8",
+        "status": "resolved",
+        "body": "On October 28, 2026, between 13:52 and 15:24 UTC, Copilot users saw errors when using several GPT-family models and the MAI Code 1.1 Flash model. Affected experiences included Copilot Chat in IDEs and on GitHub.com, the Copilot CLI, Copilot Code Review, the Copilot Coding Agent, Code Scanning Autofix, and Code Quality. About 9.73% of requests to the affected models failed, with a peak of about 36.97% at the start of the incident.\u003cbr /\u003e\u003cbr /\u003eThe errors happened because a credential that we use to authenticate with an upstream model provider became invalid. We mitigated the incident by replacing the credential and redeploying the service. We are strengthening how we manage credentials for upstream providers to prevent this type of failure, returning retryable errors when an upstream provider rejects a request, and improving our monitoring so that we detect and mitigate this type of problem faster in the future.",
+        "created_at": "2026-10-28T15:28:19.237Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-06-21T16:04:33.017Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "pjmpxvq2cmr2",
+          "name": "Copilot",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 10,
+          "showcase": true,
+          "start_date": "2022-06-21",
+          "status": "operational",
+          "updated_at": "2026-11-11T21:07:24.597Z"
+        }
+      ],
+      "created_at": "2026-10-28T14:12:53.821Z",
+      "id": "l7ycmglmykgg",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On October 28, 2026, between 13:52 and 15:24 UTC, Copilot users saw errors when using several GPT-family models and the MAI Code 1.1 Flash model. Affected experiences included Copilot Chat in IDEs and on GitHub.com, the Copilot CLI, Copilot Code Review, the Copilot Coding Agent, Code Scanning Autofix, and Code Quality. About 9.73% of requests to the affected models failed, with a peak of about 36.97% at the start of the incident.\u003cbr /\u003e\u003cbr /\u003eThe errors happened because a credential that we use to authenticate with an upstream model provider became invalid. We mitigated the incident by replacing the credential and redeploying the service. We are strengthening how we manage credentials for upstream providers to prevent this type of failure, returning retryable errors when an upstream provider rejects a request, and improving our monitoring so that we detect and mitigate this type of problem faster in the future.",
+          "created_at": "2026-10-28T15:28:19.237Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T15:28:19.237Z",
+          "id": "wd3yvwdcfbs8",
+          "incident_id": "l7ycmglmykgg",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T18:30:45.375Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Copilot has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-28T15:26:14.736Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T15:26:14.736Z",
+          "id": "q7qm7xkywr3g",
+          "incident_id": "l7ycmglmykgg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T15:26:14.736Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pjmpxvq2cmr2",
+              "name": "Copilot",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Copilot is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-10-28T15:24:40.346Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T15:24:40.346Z",
+          "id": "00mgpmw475dn",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T15:24:40.346Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have applied the mitigation and are seeing signs of recovery. We will continue to monitor and expect full resolution soon.",
+          "created_at": "2026-10-28T15:15:25.873Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T15:15:25.873Z",
+          "id": "xm3jx0zs86q3",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T15:15:25.873Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. We have identified the root cause and working to apply a mitigation. While we work to resolve the issue we recommend choosing another model to continue using Copilot.",
+          "created_at": "2026-10-28T14:55:32.445Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T14:55:32.445Z",
+          "id": "pgsl3mczkww8",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T14:55:32.445Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are experiencing degraded availability for the GPT-5.3-Codex, GPT-5.6 Luna, GPT-6.1 Sol, GPT-5.6 Terra, GPT-6 Luna, and MAI Code 1.1 Flash models in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue we recommend choosing another model to continue using Copilot.",
+          "created_at": "2026-10-28T14:33:55.402Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T14:33:55.402Z",
+          "id": "pl0cc021gtvj",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T14:33:55.402Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are experiencing issues with upstream model providers resulting in a degraded experience across Copilot services. The team is actively investigating the issue.",
+          "created_at": "2026-10-28T14:15:46.574Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T14:15:46.574Z",
+          "id": "lwxljgnlw669",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T14:15:46.574Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-28T14:12:53.892Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-28T14:12:53.892Z",
+          "id": "0y1yf8q6pr8k",
+          "incident_id": "l7ycmglmykgg",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T14:12:53.892Z"
+        }
+      ],
+      "monitoring_at": "2026-10-28T15:26:14.736Z",
+      "name": "Disruption with some Copilot services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-28T15:28:19.237Z",
+      "shortlink": "https://stspg.io/bwcyq078jzms",
+      "started_at": "2026-10-28T14:12:53.814Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T18:30:45.379Z"
+    }
+  }
+}
