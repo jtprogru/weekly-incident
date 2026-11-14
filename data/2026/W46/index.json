@@ -2,40 +2,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-13T13:30:39.419992281Z",
+  "generated_at": "2026-11-14T12:36:38.232091035Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -43,56 +43,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 28,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -100,7 +100,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-13T13:30:39.419992281Z",
+      "fetched_at": "2026-11-14T12:36:38.232091035Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -120,10 +120,33 @@
         "Queues"
       ],
       "score": {
-        "value": 18057.600000000002,
-        "duration_minutes": 5016,
+        "value": 23047.2,
+        "duration_minutes": 6402,
         "components": 2,
         "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/sqn3fg1l96dl",
+      "vendor": "anthropic",
+      "title": "Elevated errors affecting the Microsoft 365 connector",
+      "url": "https://stspg.io/m0rbx38nmy1c",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-12T17:52:44.926Z",
+      "resolved_at": "2026-11-13T21:49:44.029Z",
+      "duration_minutes": 1676,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 5028,
+        "duration_minutes": 1676,
+        "components": 2,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -150,41 +173,82 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/sqn3fg1l96dl",
-      "vendor": "anthropic",
-      "title": "Elevated errors affecting the Microsoft 365 connector",
-      "url": "https://stspg.io/m0rbx38nmy1c",
-      "impact": "major",
-      "status": "identified",
-      "started_at": "2026-11-12T17:52:44.926Z",
-      "ongoing": true,
-      "components": [
-        "claude.ai",
-        "Claude Cowork"
-      ],
-      "score": {
-        "value": 3531,
-        "duration_minutes": 1177,
-        "components": 2,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
       "key": "openai/01M78GAT3AK9P9W8Z230KHFVE8",
       "vendor": "openai",
       "title": "Elevated errors affecting the Microsoft 365 connector",
       "url": "https://status.openai.com/incidents/01M78GAT3AK9P9W8Z230KHFVE8",
       "impact": "minor",
-      "status": "investigating",
+      "status": "resolved",
       "started_at": "2026-11-12T18:29:14Z",
+      "resolved_at": "2026-11-14T00:18:13Z",
+      "duration_minutes": 1788,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 2682,
+        "duration_minutes": 1788,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/e7ktq32gphhe",
+      "vendor": "cloudflare",
+      "title": "Cloudflare is seeing an issue with Workers API availability",
+      "url": "https://www.cloudflarestatus.com/incidents/e7ktq32gphhe",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-13T15:31:13.772Z",
+      "ongoing": true,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 2277,
+        "duration_minutes": 1265,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "openai/01M7ATRS6BMZ61E4JDHJGM79Y0",
+      "vendor": "openai",
+      "title": "Delayed Costs Data in the Compliance API",
+      "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-13T16:10:07Z",
       "ongoing": true,
       "components": [],
       "score": {
-        "value": 1711.5,
-        "duration_minutes": 1141,
+        "value": 1839,
+        "duration_minutes": 1226,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/mc91s22odfvf",
+      "vendor": "cloudflare",
+      "title": "Cloudflare is currently having an issue with the r8.im registry used for Replicate model publishing and builds is currently restricted",
+      "url": "https://www.cloudflarestatus.com/incidents/mc91s22odfvf",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-13T14:55:26.18Z",
+      "resolved_at": "2026-11-14T00:51:29.308Z",
+      "duration_minutes": 596,
+      "ongoing": false,
+      "components": [
+        "Replicate"
+      ],
+      "score": {
+        "value": 1072.8,
+        "duration_minutes": 596,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": true
     },
@@ -255,6 +319,31 @@
         "duration_minutes": 511,
         "components": 2,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "anthropic/34wq7gxnxvvm",
+      "vendor": "anthropic",
+      "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
+      "url": "https://stspg.io/264r547qtkky",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-13T13:09:50.189Z",
+      "resolved_at": "2026-11-13T15:38:49.356Z",
+      "duration_minutes": 148,
+      "ongoing": false,
+      "components": [
+        "claude.ai",
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork"
+      ],
+      "score": {
+        "value": 888,
+        "duration_minutes": 148,
+        "components": 4,
+        "vendor_weight": 1.5
       },
       "above_threshold": true
     },
@@ -348,6 +437,50 @@
       "above_threshold": true
     },
     {
+      "key": "anthropic/ct4c2pwf2xpj",
+      "vendor": "anthropic",
+      "title": "Some users unable to sign up with Apple on the Claude iOS app",
+      "url": "https://stspg.io/4858wf40dx89",
+      "impact": "major",
+      "status": "investigating",
+      "started_at": "2026-11-14T07:11:36.111Z",
+      "ongoing": true,
+      "components": [
+        "claude.ai"
+      ],
+      "score": {
+        "value": 487.5,
+        "duration_minutes": 325,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "cloudflare/a643zcsfc71q",
+      "vendor": "cloudflare",
+      "title": "Increased errors for R2 and Tiered Cache",
+      "url": "https://www.cloudflarestatus.com/incidents/a643zcsfc71q",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-14T05:30:35.27Z",
+      "resolved_at": "2026-11-14T06:45:47.731Z",
+      "duration_minutes": 75,
+      "ongoing": false,
+      "components": [
+        "Chicago, United States - (ORD)",
+        "R2",
+        "Newark, United States - (EWR)"
+      ],
+      "score": {
+        "value": 405,
+        "duration_minutes": 75,
+        "components": 3,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "cloudflare/88hc76jnq2gn",
       "vendor": "cloudflare",
       "title": "Network Performance Issues in Eastern North America",
@@ -391,6 +524,28 @@
         "duration_minutes": 95,
         "components": 4,
         "vendor_weight": 1
+      },
+      "above_threshold": true
+    },
+    {
+      "key": "stripe/xls9d911cdv3",
+      "vendor": "stripe",
+      "title": "Elevated API Processing Errors",
+      "url": "https://stspg.io/t1vjtvqqncxf",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-14T02:50:24.191Z",
+      "resolved_at": "2026-11-14T07:35:31.811Z",
+      "duration_minutes": 285,
+      "ongoing": false,
+      "components": [
+        "Stripe API"
+      ],
+      "score": {
+        "value": 342,
+        "duration_minutes": 285,
+        "components": 1,
+        "vendor_weight": 1.2
       },
       "above_threshold": true
     },
@@ -547,6 +702,28 @@
       "above_threshold": true
     },
     {
+      "key": "github/1xzmt89vv61l",
+      "vendor": "github",
+      "title": "Incident with Pull Requests",
+      "url": "https://stspg.io/qzj7qjdcr8jc",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-13T15:47:12.282Z",
+      "resolved_at": "2026-11-13T18:29:31.624Z",
+      "duration_minutes": 162,
+      "ongoing": false,
+      "components": [
+        "Pull Requests"
+      ],
+      "score": {
+        "value": 243,
+        "duration_minutes": 162,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
       "key": "openai/01M71W79MAGEXEX93QTVTBYJ4K",
       "vendor": "openai",
       "title": "Incorrect cost data in Costs API exports",
@@ -656,6 +833,28 @@
       "above_threshold": false
     },
     {
+      "key": "cloudflare/y03on2svrrxt",
+      "vendor": "cloudflare",
+      "title": "Elevated error rate for workers startup",
+      "url": "https://www.cloudflarestatus.com/incidents/y03on2svrrxt",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-13T13:54:01.333Z",
+      "resolved_at": "2026-11-13T15:16:06.47Z",
+      "duration_minutes": 82,
+      "ongoing": false,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 147.6,
+        "duration_minutes": 82,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
       "key": "github/6jm5k16vyhfg",
       "vendor": "github",
       "title": "Degraded availability for GPT-5.3 Codex and GPT-5.6 models in Copilot",
@@ -679,27 +878,90 @@
       "above_threshold": true
     },
     {
-      "key": "anthropic/34wq7gxnxvvm",
+      "key": "anthropic/qrpz8k79qm7x",
       "vendor": "anthropic",
-      "title": "Elevated errors on claude.ai, the Claude API, and Claude Code",
-      "url": "https://stspg.io/264r547qtkky",
+      "title": "Elevated purchasing errors on claude.ai",
+      "url": "https://stspg.io/qqf00d9r7pm4",
       "impact": "major",
-      "status": "investigating",
-      "started_at": "2026-11-13T13:09:50.189Z",
-      "ongoing": true,
+      "status": "resolved",
+      "started_at": "2026-11-14T02:54:33.303Z",
+      "resolved_at": "2026-11-14T04:23:05.193Z",
+      "duration_minutes": 88,
+      "ongoing": false,
       "components": [
-        "claude.ai",
-        "Claude API (api.anthropic.com)",
-        "Claude Code",
-        "Claude Cowork"
+        "claude.ai"
       ],
       "score": {
-        "value": 120,
-        "duration_minutes": 20,
-        "components": 4,
+        "value": 132,
+        "duration_minutes": 88,
+        "components": 1,
         "vendor_weight": 1.5
       },
       "above_threshold": true
+    },
+    {
+      "key": "cloudflare/rikplz89rpml",
+      "vendor": "cloudflare",
+      "title": "Issues with 1.1.1.1 public resolver in Canada",
+      "url": "https://www.cloudflarestatus.com/incidents/rikplz89rpml",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-13T23:53:18.686Z",
+      "resolved_at": "2026-11-14T01:01:17.641Z",
+      "duration_minutes": 67,
+      "ongoing": false,
+      "components": [
+        "Recursive DNS"
+      ],
+      "score": {
+        "value": 120.60000000000001,
+        "duration_minutes": 67,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "openai/01M7C40W0N5MZHNW0YM09QV962",
+      "vendor": "openai",
+      "title": "Elevated errors with ChatGPT billing and Ads billing",
+      "url": "https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-14T04:11:04Z",
+      "resolved_at": "2026-11-14T05:27:53Z",
+      "duration_minutes": 76,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 114,
+        "duration_minutes": 76,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "key": "github/51drrqvsv66g",
+      "vendor": "github",
+      "title": "Copilot experiencing degraded model availability for some GPT models",
+      "url": "https://stspg.io/cppzsh0j19vy",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-13T20:13:51.316Z",
+      "resolved_at": "2026-11-13T21:27:59.028Z",
+      "duration_minutes": 74,
+      "ongoing": false,
+      "components": [
+        "Copilot AI Model Providers"
+      ],
+      "score": {
+        "value": 111,
+        "duration_minutes": 74,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
     },
     {
       "key": "openai/01M70RDA2GWD2WXE58ANY0WV5R",

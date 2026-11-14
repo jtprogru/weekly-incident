@@ -948,7 +948,7 @@
           "showcase": true,
           "start_date": "2026-04-17",
           "status": "operational",
-          "updated_at": "2026-11-09T23:46:35.882Z"
+          "updated_at": "2026-11-13T21:27:58.989Z"
         }
       ],
       "created_at": "2026-11-09T23:16:32.233Z",
@@ -1204,7 +1204,7 @@
       {
         "native_id": "hxfgnhh0s6sj",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 10, 2026, from approximately 15:00 UTC to 17:55 UTC, GitHub experienced degraded performance affecting repository pages, pull requests, and GitHub Actions. Customers may have seen slow or failed page loads and delays processing pull request updates and merges. Some pull requests continued to display an earlier source-branch commit after the broader service degradation ended. GitHub Actions workflows were delayed for approximately 1.8% of events, peaking at about 7% between 16:30 and 16:50 UTC. Delays were typically 1.5 to 3.5 minutes, up to 10 minutes. Approximately 0.09% of pull request events did not start their workflows and needed to be re-triggered. \u003cbr /\u003e\u003cbr /\u003eThe degradation resulted from overload in the shared infrastructure that supports Git operations. Recent changes increased background processing and the work required to compute pull request merges, adding pressure to the same systems used by customer-facing requests. We mitigated the incident by disabling a recent merge-processing optimization, pausing background analysis, and temporarily limiting lower-priority traffic. The temporary limits also restricted access to commit pages for users who were not signed in. Background processing continued to catch up after service health recovered. \u003cbr /\u003e\u003cbr /\u003eWe have reduced repeated repository-analysis work and are adding workload-level concurrency controls to better protect customer-facing requests. We are also improving our procedures for safely reducing background load and making pull request synchronization more resilient to temporary failures.",
         "created_at": "2026-11-10T17:55:03.552Z"
       }
     ],
@@ -1224,7 +1224,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-10T17:55:03.466Z"
+          "updated_at": "2026-11-13T17:28:01.391Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -1261,7 +1261,7 @@
               "old_status": "degraded_performance"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 10, 2026, from approximately 15:00 UTC to 17:55 UTC, GitHub experienced degraded performance affecting repository pages, pull requests, and GitHub Actions. Customers may have seen slow or failed page loads and delays processing pull request updates and merges. Some pull requests continued to display an earlier source-branch commit after the broader service degradation ended. GitHub Actions workflows were delayed for approximately 1.8% of events, peaking at about 7% between 16:30 and 16:50 UTC. Delays were typically 1.5 to 3.5 minutes, up to 10 minutes. Approximately 0.09% of pull request events did not start their workflows and needed to be re-triggered. \u003cbr /\u003e\u003cbr /\u003eThe degradation resulted from overload in the shared infrastructure that supports Git operations. Recent changes increased background processing and the work required to compute pull request merges, adding pressure to the same systems used by customer-facing requests. We mitigated the incident by disabling a recent merge-processing optimization, pausing background analysis, and temporarily limiting lower-priority traffic. The temporary limits also restricted access to commit pages for users who were not signed in. Background processing continued to catch up after service health recovered. \u003cbr /\u003e\u003cbr /\u003eWe have reduced repeated repository-analysis work and are adding workload-level concurrency controls to better protect customer-facing requests. We are also improving our procedures for safely reducing background load and making pull request synchronization more resilient to temporary failures.",
           "created_at": "2026-11-10T17:55:03.552Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1270,7 +1270,7 @@
           "incident_id": "hnf21m9jkl3c",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-10T17:55:03.552Z"
+          "updated_at": "2026-11-13T15:23:49.341Z"
         },
         {
           "affected_components": [
@@ -1489,7 +1489,7 @@
       "shortlink": "https://stspg.io/16nsnk2th3rv",
       "started_at": "2026-11-10T16:10:52.162Z",
       "status": "resolved",
-      "updated_at": "2026-11-10T17:55:03.579Z"
+      "updated_at": "2026-11-13T15:23:49.347Z"
     }
   },
   {
@@ -2476,6 +2476,446 @@
       "started_at": "2026-11-12T19:36:45.556Z",
       "status": "resolved",
       "updated_at": "2026-11-12T21:43:56.578Z"
+    }
+  },
+  {
+    "key": "github/1xzmt89vv61l",
+    "vendor": "github",
+    "native_id": "1xzmt89vv61l",
+    "title": "Incident with Pull Requests",
+    "url": "https://stspg.io/qzj7qjdcr8jc",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-13T15:47:12.282Z",
+    "resolved_at": "2026-11-13T18:29:31.624Z",
+    "duration_minutes": 162,
+    "components": [
+      "Pull Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "7949qms5ty40",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded availability for Pull Requests",
+        "created_at": "2026-11-13T15:47:12.391Z"
+      },
+      {
+        "native_id": "096yk2gqs6rr",
+        "status": "investigating",
+        "body": "We’re investigating an issue with Pull Requests where some attempts to merge are timing out.",
+        "created_at": "2026-11-13T15:49:36.444Z"
+      },
+      {
+        "native_id": "nt5f731t580k",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-13T16:09:16.825Z"
+      },
+      {
+        "native_id": "wxvm1bystjx6",
+        "status": "investigating",
+        "body": "We’ve taken mitigating action to resolve the problem of merge requests timing out. This issue initially impacted 3% of requests and is now down to less than 1%. We continue to monitor recovery.",
+        "created_at": "2026-11-13T16:12:26.065Z"
+      },
+      {
+        "native_id": "fd0q1lmxclb9",
+        "status": "investigating",
+        "body": "We’re continuing to investigate and monitor ~1% of merge requests timing out.",
+        "created_at": "2026-11-13T16:52:15.314Z"
+      },
+      {
+        "native_id": "ghlw4h60hl64",
+        "status": "monitoring",
+        "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-13T17:28:01.438Z"
+      },
+      {
+        "native_id": "s59vgq10csjd",
+        "status": "monitoring",
+        "body": "We continue to monitor the stability of merge requests.",
+        "created_at": "2026-11-13T17:46:11.831Z"
+      },
+      {
+        "native_id": "6pxhgntrk3y5",
+        "status": "resolved",
+        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "created_at": "2026-11-13T18:29:31.624Z"
+      }
+    ],
+    "first_seen_at": "2026-11-14T12:36:38.232091035Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-13T17:28:01.391Z"
+        }
+      ],
+      "created_at": "2026-11-13T15:47:12.290Z",
+      "id": "1xzmt89vv61l",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "created_at": "2026-11-13T18:29:31.624Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T18:29:31.624Z",
+          "id": "6pxhgntrk3y5",
+          "incident_id": "1xzmt89vv61l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T18:29:31.624Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We continue to monitor the stability of merge requests.",
+          "created_at": "2026-11-13T17:46:11.831Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T17:46:11.831Z",
+          "id": "s59vgq10csjd",
+          "incident_id": "1xzmt89vv61l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T17:46:11.831Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-13T17:28:01.438Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T17:28:01.438Z",
+          "id": "ghlw4h60hl64",
+          "incident_id": "1xzmt89vv61l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T17:28:01.438Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re continuing to investigate and monitor ~1% of merge requests timing out.",
+          "created_at": "2026-11-13T16:52:15.314Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T16:52:15.314Z",
+          "id": "fd0q1lmxclb9",
+          "incident_id": "1xzmt89vv61l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T16:52:15.314Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’ve taken mitigating action to resolve the problem of merge requests timing out. This issue initially impacted 3% of requests and is now down to less than 1%. We continue to monitor recovery.",
+          "created_at": "2026-11-13T16:12:26.065Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T16:12:26.065Z",
+          "id": "wxvm1bystjx6",
+          "incident_id": "1xzmt89vv61l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T16:12:26.065Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-13T16:09:16.825Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T16:09:16.825Z",
+          "id": "nt5f731t580k",
+          "incident_id": "1xzmt89vv61l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T16:09:16.825Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We’re investigating an issue with Pull Requests where some attempts to merge are timing out.",
+          "created_at": "2026-11-13T15:49:36.444Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T15:49:36.444Z",
+          "id": "096yk2gqs6rr",
+          "incident_id": "1xzmt89vv61l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T15:49:36.444Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded availability for Pull Requests",
+          "created_at": "2026-11-13T15:47:12.391Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T15:47:12.391Z",
+          "id": "7949qms5ty40",
+          "incident_id": "1xzmt89vv61l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T15:47:12.391Z"
+        }
+      ],
+      "monitoring_at": "2026-11-13T17:28:01.438Z",
+      "name": "Incident with Pull Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-13T18:29:31.624Z",
+      "shortlink": "https://stspg.io/qzj7qjdcr8jc",
+      "started_at": "2026-11-13T15:47:12.282Z",
+      "status": "resolved",
+      "updated_at": "2026-11-13T18:29:31.655Z"
+    }
+  },
+  {
+    "key": "github/51drrqvsv66g",
+    "vendor": "github",
+    "native_id": "51drrqvsv66g",
+    "title": "Copilot experiencing degraded model availability for some GPT models",
+    "url": "https://stspg.io/cppzsh0j19vy",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-13T20:13:51.316Z",
+    "resolved_at": "2026-11-13T21:27:59.028Z",
+    "duration_minutes": 74,
+    "components": [
+      "Copilot AI Model Providers"
+    ],
+    "updates": [
+      {
+        "native_id": "1gg8rbws464m",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+        "created_at": "2026-11-13T20:13:51.431Z"
+      },
+      {
+        "native_id": "cmqh1mz9td8z",
+        "status": "investigating",
+        "body": "We are experiencing degraded availability for gpt-5.6-sol-fast, gpt-5.6-sol, gpt-6.1-terra, and gpt-6-luna in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+        "created_at": "2026-11-13T20:14:07.4Z"
+      },
+      {
+        "native_id": "vt9lzjwmcj4n",
+        "status": "investigating",
+        "body": "We are in contact with the upstream provider and monitoring as they work towards resolution. For customers who are impacted we recommend choosing another model or selecting ‘Auto’ to continue using Copilot.",
+        "created_at": "2026-11-13T20:47:09.681Z"
+      },
+      {
+        "native_id": "nmvc0k42rp5f",
+        "status": "investigating",
+        "body": "The upstream provider has made mitigations and we are seeing the affected models begin to recover.",
+        "created_at": "2026-11-13T21:17:48.112Z"
+      },
+      {
+        "native_id": "w5sxtwsgrff2",
+        "status": "resolved",
+        "body": "Between 19:05 and 21:27 UTC on November 13, 2026, GitHub Copilot experienced degradation affecting GPT-6.1 Terra, GPT-5.6 Sol, and GPT-6 Luna models. Users encountered elevated error rates when using these models.\u003cbr /\u003e\u003cbr /\u003eThe degradation was caused by an issue with an upstream model provider. GitHub engineers detected the issue through automated monitoring and coordinated with the provider. Our automated model-warning system activated in-product warnings for affected models during the incident. Service returned to normal after the provider implemented a mitigation.",
+        "created_at": "2026-11-13T21:27:59.028Z"
+      }
+    ],
+    "first_seen_at": "2026-11-14T12:36:38.232091035Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-04-17T12:33:08.827Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "cnnb39dkkk82",
+          "name": "Copilot AI Model Providers",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 12,
+          "showcase": true,
+          "start_date": "2026-04-17",
+          "status": "operational",
+          "updated_at": "2026-11-13T21:27:58.989Z"
+        }
+      ],
+      "created_at": "2026-11-13T20:13:51.325Z",
+      "id": "51drrqvsv66g",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 19:05 and 21:27 UTC on November 13, 2026, GitHub Copilot experienced degradation affecting GPT-6.1 Terra, GPT-5.6 Sol, and GPT-6 Luna models. Users encountered elevated error rates when using these models.\u003cbr /\u003e\u003cbr /\u003eThe degradation was caused by an issue with an upstream model provider. GitHub engineers detected the issue through automated monitoring and coordinated with the provider. Our automated model-warning system activated in-product warnings for affected models during the incident. Service returned to normal after the provider implemented a mitigation.",
+          "created_at": "2026-11-13T21:27:59.028Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T21:27:59.028Z",
+          "id": "w5sxtwsgrff2",
+          "incident_id": "51drrqvsv66g",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T21:38:45.908Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The upstream provider has made mitigations and we are seeing the affected models begin to recover.",
+          "created_at": "2026-11-13T21:17:48.112Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T21:17:48.112Z",
+          "id": "nmvc0k42rp5f",
+          "incident_id": "51drrqvsv66g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T21:17:48.112Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are in contact with the upstream provider and monitoring as they work towards resolution. For customers who are impacted we recommend choosing another model or selecting ‘Auto’ to continue using Copilot.",
+          "created_at": "2026-11-13T20:47:09.681Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T20:47:09.681Z",
+          "id": "vt9lzjwmcj4n",
+          "incident_id": "51drrqvsv66g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T20:47:09.681Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are experiencing degraded availability for gpt-5.6-sol-fast, gpt-5.6-sol, gpt-6.1-terra, and gpt-6-luna in Copilot products and IDE surfaces. This is due to an issue with an upstream model provider. While we work with them to resolve the issue, we recommend choosing another model or selecting 'Auto' to continue using Copilot.",
+          "created_at": "2026-11-13T20:14:07.400Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T20:14:07.400Z",
+          "id": "cmqh1mz9td8z",
+          "incident_id": "51drrqvsv66g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T20:14:07.400Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "cnnb39dkkk82",
+              "name": "Copilot AI Model Providers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Copilot AI Model Providers",
+          "created_at": "2026-11-13T20:13:51.431Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-13T20:13:51.431Z",
+          "id": "1gg8rbws464m",
+          "incident_id": "51drrqvsv66g",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-13T20:13:51.431Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Copilot experiencing degraded model availability for some GPT models",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-13T21:27:59.028Z",
+      "shortlink": "https://stspg.io/cppzsh0j19vy",
+      "started_at": "2026-11-13T20:13:51.316Z",
+      "status": "resolved",
+      "updated_at": "2026-11-13T21:38:45.913Z"
     }
   }
 ]

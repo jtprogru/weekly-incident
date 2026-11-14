@@ -414,8 +414,10 @@
     "title": "Elevated errors affecting the Microsoft 365 connector",
     "url": "https://status.openai.com/incidents/01M78GAT3AK9P9W8Z230KHFVE8",
     "impact": "minor",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-11-12T18:29:14Z",
+    "resolved_at": "2026-11-14T00:18:13Z",
+    "duration_minutes": 1788,
     "components": [],
     "updates": [
       {
@@ -423,6 +425,18 @@
         "status": "investigating",
         "body": "We’re investigating an issue with Microsoft connectors where new connections may be broken and tools are not working as expected. We’ll share an update when we know more.",
         "created_at": "2026-11-12T18:29:15Z"
+      },
+      {
+        "native_id": "01M7AVC7WK1E6J9FYT8G4E17RE",
+        "status": "monitoring",
+        "body": "We’re seeing signs of recovery for the Microsoft 365 connector and are continuing to monitor the affected services to confirm recovery.",
+        "created_at": "2026-11-13T16:20:45Z"
+      },
+      {
+        "native_id": "01M7BPPH7DMYGFW8TCE71E5CDK",
+        "status": "resolved",
+        "body": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience.",
+        "created_at": "2026-11-14T00:18:13Z"
       }
     ],
     "first_seen_at": "2026-11-13T13:30:39.419992281Z",
@@ -431,6 +445,24 @@
       "id": "01M78GAT3AK9P9W8Z230KHFVE8",
       "impact": "minor",
       "incident_updates": [
+        {
+          "body": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience.",
+          "created_at": "2026-11-14T00:18:13Z",
+          "display_at": "2026-11-14T00:18:13Z",
+          "id": "01M7BPPH7DMYGFW8TCE71E5CDK",
+          "incident_id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "status": "resolved",
+          "updated_at": "2026-11-14T00:18:13Z"
+        },
+        {
+          "body": "We’re seeing signs of recovery for the Microsoft 365 connector and are continuing to monitor the affected services to confirm recovery.",
+          "created_at": "2026-11-13T16:20:45Z",
+          "display_at": "2026-11-13T16:20:45Z",
+          "id": "01M7AVC7WK1E6J9FYT8G4E17RE",
+          "incident_id": "01M78GAT3AK9P9W8Z230KHFVE8",
+          "status": "monitoring",
+          "updated_at": "2026-11-13T16:20:45Z"
+        },
         {
           "body": "We’re investigating an issue with Microsoft connectors where new connections may be broken and tools are not working as expected. We’ll share an update when we know more.",
           "created_at": "2026-11-12T18:29:15Z",
@@ -443,8 +475,9 @@
       ],
       "name": "Elevated errors affecting the Microsoft 365 connector",
       "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
-      "status": "investigating",
-      "updated_at": "2026-11-12T18:29:14Z"
+      "resolved_at": "2026-11-14T00:18:13Z",
+      "status": "resolved",
+      "updated_at": "2026-11-14T00:18:13Z"
     }
   },
   {
@@ -503,6 +536,135 @@
       "resolved_at": "2026-11-13T05:55:44Z",
       "status": "resolved",
       "updated_at": "2026-11-13T05:55:44Z"
+    }
+  },
+  {
+    "key": "openai/01M7ATRS6BMZ61E4JDHJGM79Y0",
+    "vendor": "openai",
+    "native_id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+    "title": "Delayed Costs Data in the Compliance API",
+    "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-11-13T16:10:07Z",
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M7ATRS6BXTP5ZVKAXG9DB243",
+        "status": "identified",
+        "body": "We have identified an issue causing delays in publishing Organization cost data through the Costs API. API and ChatGPT usage are not affected. We are working to restore normal data freshness.",
+        "created_at": "2026-11-13T16:10:07Z"
+      },
+      {
+        "native_id": "01M7B49WBWREW6JM1PAKAA1RZ0",
+        "status": "monitoring",
+        "body": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery. Delays in cost data are still expected.",
+        "created_at": "2026-11-13T18:56:44Z"
+      },
+      {
+        "native_id": "01M7C8KV75AD3DJ6B0CA5EACSH",
+        "status": "monitoring",
+        "body": "We are monitoring the affected services to confirm recovery. Delays in cost data are still expected.",
+        "created_at": "2026-11-14T05:31:20Z"
+      }
+    ],
+    "first_seen_at": "2026-11-14T12:36:38.232091035Z",
+    "raw": {
+      "created_at": "2026-11-13T16:10:07Z",
+      "id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "body": "We are monitoring the affected services to confirm recovery. Delays in cost data are still expected.",
+          "created_at": "2026-11-14T05:31:20Z",
+          "display_at": "2026-11-14T05:31:20Z",
+          "id": "01M7C8KV75AD3DJ6B0CA5EACSH",
+          "incident_id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "status": "monitoring",
+          "updated_at": "2026-11-14T05:31:20Z"
+        },
+        {
+          "body": "We’ve applied a mitigation and are monitoring the affected services to confirm recovery. Delays in cost data are still expected.",
+          "created_at": "2026-11-13T18:56:44Z",
+          "display_at": "2026-11-13T18:56:44Z",
+          "id": "01M7B49WBWREW6JM1PAKAA1RZ0",
+          "incident_id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "status": "monitoring",
+          "updated_at": "2026-11-13T18:56:44Z"
+        },
+        {
+          "body": "We have identified an issue causing delays in publishing Organization cost data through the Costs API. API and ChatGPT usage are not affected. We are working to restore normal data freshness.",
+          "created_at": "2026-11-13T16:10:07Z",
+          "display_at": "2026-11-13T16:10:07Z",
+          "id": "01M7ATRS6BXTP5ZVKAXG9DB243",
+          "incident_id": "01M7ATRS6BMZ61E4JDHJGM79Y0",
+          "status": "identified",
+          "updated_at": "2026-11-13T16:10:07Z"
+        }
+      ],
+      "monitoring_at": "2026-11-13T18:56:44Z",
+      "name": "Delayed Costs Data in the Compliance API",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "status": "monitoring",
+      "updated_at": "2026-11-14T05:31:20Z"
+    }
+  },
+  {
+    "key": "openai/01M7C40W0N5MZHNW0YM09QV962",
+    "vendor": "openai",
+    "native_id": "01M7C40W0N5MZHNW0YM09QV962",
+    "title": "Elevated errors with ChatGPT billing and Ads billing",
+    "url": "https://status.openai.com/incidents/01M7C40W0N5MZHNW0YM09QV962",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-14T04:11:04Z",
+    "resolved_at": "2026-11-14T05:27:53Z",
+    "duration_minutes": 76,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "01M7C40W0NEC2VFZ81MWERAGSS",
+        "status": "monitoring",
+        "body": "We are monitoring recovery from errors affecting ChatGPT billing, including checkout, and Ads invoice retrieval.",
+        "created_at": "2026-11-14T04:11:04Z"
+      },
+      {
+        "native_id": "01M7C8DH4CSM07ZM7Y4RH2X0GX",
+        "status": "resolved",
+        "body": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience.",
+        "created_at": "2026-11-14T05:27:53Z"
+      }
+    ],
+    "first_seen_at": "2026-11-14T12:36:38.232091035Z",
+    "raw": {
+      "created_at": "2026-11-14T04:11:04Z",
+      "id": "01M7C40W0N5MZHNW0YM09QV962",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "body": "All affected services are operating normally again. We’re sorry for the disruption, and we appreciate your patience.",
+          "created_at": "2026-11-14T05:27:53Z",
+          "display_at": "2026-11-14T05:27:53Z",
+          "id": "01M7C8DH4CSM07ZM7Y4RH2X0GX",
+          "incident_id": "01M7C40W0N5MZHNW0YM09QV962",
+          "status": "resolved",
+          "updated_at": "2026-11-14T05:27:53Z"
+        },
+        {
+          "body": "We are monitoring recovery from errors affecting ChatGPT billing, including checkout, and Ads invoice retrieval.",
+          "created_at": "2026-11-14T04:11:04Z",
+          "display_at": "2026-11-14T04:11:04Z",
+          "id": "01M7C40W0NEC2VFZ81MWERAGSS",
+          "incident_id": "01M7C40W0N5MZHNW0YM09QV962",
+          "status": "monitoring",
+          "updated_at": "2026-11-14T04:11:04Z"
+        }
+      ],
+      "name": "Elevated errors with ChatGPT billing and Ads billing",
+      "page_id": "01JMDK9XYNY6RXSED6SDWW50WY",
+      "resolved_at": "2026-11-14T05:27:53Z",
+      "status": "resolved",
+      "updated_at": "2026-11-14T05:27:53Z"
     }
   }
 ]
