@@ -2,12 +2,20 @@
 
 2026-10-19 to 2026-10-25 (UTC).
 
+63 source records (73 saved revisions) → 63 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. gcp — Multiple services were experiencing issues in the europe-west2 region.
 
 - URL: https://status.cloud.google.com/incidents/Xs2XTHzAVC9YnafnPyzj
-- Window: 2026-10-20 06:00 to 2026-10-20 12:10 UTC (6h 10m)
+- Window: 2026-10-20 06:00 to 2026-10-20 12:08 UTC (6h 8m)
 - Impact: major, status: resolved
-- Components: AlloyDB for PostgreSQL, Apigee, BigQuery Data Transfer Service, Cloud Data Fusion, Cloud Filestore, Cloud Firestore, Cloud Load Balancing, Cloud Memorystore, Cloud NAT, Cloud Run, Cloud Spanner, Cloud Workstations, Datastream, Google App Engine, Google BigQuery, Google Cloud Bigtable, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud NetApp Volumes, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Looker (Google Cloud core), Google Cloud Composer, Managed Service for Apache Kafka, Memorystore for Memcached, Memorystore for Redis, Memorystore for Redis Cluster, Memorystore for Valkey, Network Connectivity Center, Persistent Disk, Private Service Connect, Speech-to-Text, Storage Transfer Service, VMWare engine, Virtual Private Cloud (VPC)
+- Components: AlloyDB for PostgreSQL, Apigee, BigQuery Data Transfer Service, Cloud Data Fusion, Cloud Filestore, Cloud Firestore, Cloud Load Balancing, Cloud Memorystore, Cloud NAT, Cloud Run, Cloud Spanner, Cloud Workstations, Datastream, Google App Engine, Google BigQuery, Google Cloud Bigtable, Google Cloud Composer, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud NetApp Volumes, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Looker (Google Cloud core), Managed Service for Apache Kafka, Memorystore for Memcached, Memorystore for Redis, Memorystore for Redis Cluster, Memorystore for Valkey, Network Connectivity Center, Persistent Disk, Private Service Connect, Speech-to-Text, Storage Transfer Service, VMWare engine, Virtual Private Cloud (VPC)
+
+<a id="ci-b2dbd754a165046e8a4caebe"></a>
+
+- Canonical ID: `ci-b2dbd754a165046e8a4caebe` (1 source records).
+  - [gcp/Xs2XTHzAVC9YnafnPyzj](../../data/2026/W43/gcp.json); vendor URL: https://status.cloud.google.com/incidents/Xs2XTHzAVC9YnafnPyzj
+- Start time basis: `vendor_reported`.
 
   - `2026-10-20 08:35` investigating — **Summary** Multiple services are experiencing issues in the europe-west2 region. **Description** We are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT. Our engineering team continues to investigate the issue. We will provide an update by Tuesday, 2026-10-20 02:30 PDT with current details. We apologize to all who are affected by the disruption. **Symptoms** Multiple Google Cloud services are experiencing elevated errors and intermittent network failures in europe-west2 region. **Workaround** None for now
   - `2026-10-20 09:24` investigating — **Summary** Multiple services are experiencing issues in the europe-west2 region. **Description** We are experiencing an issue with multiple services in europe-west2 beginning on Monday, 2026-10-19 23:08 PDT. Our engineering team continues to investigate the issue. We will provide an update by Tuesday, 2026-10-20 04:00 PDT with current details. We apologize to all who are affected by the disruption. **Symptoms** Multiple Google Cloud services are experiencing elevated errors and intermittent network failures in europe-west2 region. Note: Looker Studio is not impacted by this outage. **Workaround** If feasible, the impacted customer may try to migrate their workload impacted to another available location (zone or region).
@@ -17,13 +25,21 @@
   - `2026-10-20 12:44` investigating — **Summary** Multiple services are experiencing issues in the europe-west2 region. **Description** We are seeing the recovery of services for most workloads in europe-west2 as of Tuesday, 2026-10-20 05:10 PDT. We will provide an update by Tuesday, 2026-10-20 07:00 PDT with current details. We apologize to all who are affected by the disruption. **Symptoms** Google Cloud services are unavailable in europe-west2-b zone; some services in europe-west2 region may experience elevated errors and intermittent network issues. **Workaround** If feasible, the impacted customer may try to migrate their workload impacted to another available location (zone or region).
   - `2026-10-20 14:03` investigating — **Summary** Multiple services were experiencing issues in the europe-west2 region. **Description** The issue with impacted GCP products has been mitigated for most of the customers and it is believed to be affecting currently a very small number of customers and our Engineering Team is working on it. If you have questions or are impacted, please open a case with the Support Team and we will work with you until this issue is resolved. No further updates will be provided here. We will publish an analysis of this incident once we have completed our internal investigation. We thank you for your patience while we're working on resolving the issue. **Symptoms** Google Cloud services were unavailable in europe-west2-b zone; some services in europe-west2 region might experienced elevated errors an…
   - `2026-10-22 08:42` resolved — ## Preliminary Incident Report We recognize that Google Cloud services are critical to your organization, and we sincerely apologize for the disruption this incident may have caused to your business. We are working to address the root cause and prevent this from occurring in the future. Please note, this information is based on our best knowledge at the time of posting and is subject to change as our investigation continues. A final Incident Report with preventative actions will be posted once our investigation is complete. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using [**https\://cloud.google.com/support**](https://cloud.google.com/support). ## Date/Time of the Issue Incident Start:19 Oct 2026 23:00 US/Pacific / 20 Oct 2026…
+  - `2026-10-27 15:13` resolved — ## Incident Report ### **Summary** On Monday, 19 Oct 2026 (Tuesday, 20 Oct BST), a data center facility that hosts europe-west2-b, experienced an external electrical power disruption. This resulted in service unavailability for workloads located in this zone. As traffic was redirected to alternative cloud regions or unaffected zones within europe-west2 cloud region, these workloads experienced transient latency and elevated errors affecting services across europe-west2. The primary impact was mitigated after 6 hours 8 minutes. ### **Root Cause** **Facility architecture and background:** The data center facility in the UK region hosts Cloud clusters serving the europe-west2-b zone, which form part of the multi-zonal europe-west2 Cloud region. The site relies on a 2N utility power architect…
+  - `2026-11-04 21:15` resolved — # Incident Report ## Summary On Monday, 19 Oct 2026 at 22:53 US/Pacific (Tuesday, 20 Oct 2026, 06:53 BST), a data center facility that hosts europe-west2-b, a zone within the europe-west2 cloud region, experienced an external electrical power disruption. This resulted in service unavailability for workloads located in this zone. The subsequent failover of these workloads to unaffected zones and alternate regions caused transient latency and elevated error rates across the broader europe-west2 region. The resolution of the main impact was completed within 6 hours and 8 minutes. ## Root Cause **Facility architecture and background:** The data center facility in the UK region hosts Cloud clusters serving the europe-west2-b zone, which form part of the multi-zonal europe-west2 Cloud region. Th…
 
 ## 2. grafana — Some Grafana Instances Experiencing Issues Coming Online after Restart
 
 - URL: https://stspg.io/v6j9g9gqpwsw
 - Window: 2026-10-23 13:33 to 2026-10-23 18:16 UTC (4h 42m)
 - Impact: minor, status: resolved
-- Components: AWS Australia - prod-au-southeast-1, AWS Australia - prod-au-southeast-2, AWS Brazil - prod-sa-east-1, AWS Canada prod-ca-central-1, AWS Canada - prod-ca-east-0, AWS Germany - prod-eu-west-2, AWS Germany - prod-eu-west-4, AWS Germany prod-eu-central-1, AWS India - prod-ap-south-1, AWS Indonesia - prod-ap-southeast-2, AWS Indonesia - prod-ap-southeast-3, AWS Ireland eu-west-1, AWS Ireland - prod-eu-west-6, AWS Japan - prod-ap-northeast-0, AWS Singapore - prod-ap-southeast-1, AWS Sweden eu-north-1, AWS Sweden - prod-eu-north-0, AWS Switzerland - prod-eu-central-0, AWS Switzerland eu-central-2, AWS UAE - prod-me-central-1, AWS UK - prod-gb-south-1, AWS US East (OH) - prod-us-east-0, AWS East (VA) prod-us-east-1, AWS US East (OH) - prod-us-east-2, AWS US West - prod-us-west-0, AWS US East (VA) - prod-us-east-3, AWS West prod-us-west-2, Azure US Central - us-central2, Azure Netherlands - prod-eu-west-3, Azure UAE - prod-me-central-2, GCP Australia - prod-au-southeast-0, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Saudi Arabia - prod-me-central-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0, GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4, GCP US Central - prod-us-central-7, GCP US East - prod-us-east-1, play.grafana.org, Federal Cloud - AWS US Gov West
+- Components: AWS Australia - prod-au-southeast-1, AWS Australia - prod-au-southeast-2, AWS Brazil - prod-sa-east-1, AWS Canada - prod-ca-east-0, AWS Canada prod-ca-central-1, AWS East (VA) prod-us-east-1, AWS Germany - prod-eu-west-2, AWS Germany - prod-eu-west-4, AWS Germany prod-eu-central-1, AWS India - prod-ap-south-1, AWS Indonesia - prod-ap-southeast-2, AWS Indonesia - prod-ap-southeast-3, AWS Ireland - prod-eu-west-6, AWS Ireland eu-west-1, AWS Japan - prod-ap-northeast-0, AWS Singapore - prod-ap-southeast-1, AWS Sweden - prod-eu-north-0, AWS Sweden eu-north-1, AWS Switzerland - prod-eu-central-0, AWS Switzerland eu-central-2, AWS UAE - prod-me-central-1, AWS UK - prod-gb-south-1, AWS US East (OH) - prod-us-east-0, AWS US East (OH) - prod-us-east-2, AWS US East (VA) - prod-us-east-3, AWS US West - prod-us-west-0, AWS West prod-us-west-2, Azure Netherlands - prod-eu-west-3, Azure UAE - prod-me-central-2, Azure US Central - us-central2, Federal Cloud - AWS US Gov West, GCP Australia - prod-au-southeast-0, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Saudi Arabia - prod-me-central-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0, GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4, GCP US Central - prod-us-central-7, GCP US East - prod-us-east-1, play.grafana.org
+
+<a id="ci-a154ea27c29c7b2ae08dc805"></a>
+
+- Canonical ID: `ci-a154ea27c29c7b2ae08dc805` (1 source records).
+  - [grafana/mthmxgzkn610](../../data/2026/W43/grafana.json); vendor URL: https://stspg.io/v6j9g9gqpwsw
+- Start time basis: `vendor_reported`.
 
   - `2026-10-23 13:33` identified — Starting at approximately 12:37 UTC, a some Hosted Grafana instances across multiple regions have been experiencing availability issues. Our team has identified the root cause and a fix is currently in progress. Affected instances will recover automatically once the fix has been applied. No action is required on your end. We will provide further updates as they become available and apologize for any disruption this may cause.
   - `2026-10-23 15:04` identified — We are continuing to work on a fix for this issue.
@@ -35,7 +51,13 @@
 - URL: https://stspg.io/blcsc38zxjxw
 - Window: 2026-10-20 12:43 to 2026-10-20 16:33 UTC (3h 49m)
 - Impact: minor, status: resolved
-- Components: Grafana.com, Support Tickets, Integrations, Cost Management and Billing, Fleet Management, Incident Management and Response (IRM), Public Snapshots, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0: Querying, GCP UK - prod-gb-south-0: API, GCP UK - prod-gb-south-0: Ingestion, GCP UK - prod-gb-south-0: Public Probes, GCP UK - prod-gb-south-0: Rule Evaluation, GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API, GCP UK - prod-gb-south-0: Querying, GCP UK - prod-gb-south-0: Alertmanager, GCP UK - prod-gb-south-0: Ingestion, GCP UK - prod-gb-south-0: Metrics Generator
+- Components: Cost Management and Billing, Fleet Management, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0, GCP UK - prod-gb-south-0: API, GCP UK - prod-gb-south-0: Alertmanager, GCP UK - prod-gb-south-0: Alertmanager and Rules Configuration API, GCP UK - prod-gb-south-0: Ingestion, GCP UK - prod-gb-south-0: Ingestion, GCP UK - prod-gb-south-0: Metrics Generator, GCP UK - prod-gb-south-0: Public Probes, GCP UK - prod-gb-south-0: Querying, GCP UK - prod-gb-south-0: Querying, GCP UK - prod-gb-south-0: Rule Evaluation, Grafana.com, Incident Management and Response (IRM), Integrations, Public Snapshots, Support Tickets
+
+<a id="ci-261da6711cd4b1fbba5acb7e"></a>
+
+- Canonical ID: `ci-261da6711cd4b1fbba5acb7e` (1 source records).
+  - [grafana/4z62z17qh88l](../../data/2026/W43/grafana.json); vendor URL: https://stspg.io/blcsc38zxjxw
+- Start time basis: `vendor_reported`.
 
   - `2026-10-20 06:49` investigating — As of 06:30 UTC, we became aware of to an issue with Grafana Cloud unavailibity in the prod-gb-south-0 region. Engineering is actively engaged and assessing the issue. We will provide updates accordingly.
   - `2026-10-20 06:54` investigating — We are continuing to investigate this issue.
@@ -51,6 +73,12 @@
 - Impact: minor, status: resolved
 - Components: Data Loss Prevention (DLP), Gateway
 
+<a id="ci-a17ba2cdc8c4ab17a0eee508"></a>
+
+- Canonical ID: `ci-a17ba2cdc8c4ab17a0eee508` (1 source records).
+  - [cloudflare/3z8y23zn7tr2](../../data/2026/W43/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/3z8y23zn7tr2
+- Start time basis: `vendor_reported`.
+
   - `2026-10-19 20:30` identified — Cloudflare has identified an issue affecting Gateway application controls and Data Loss Prevention (DLP) inspection for certain Google Gemini traffic. We are working on a fix and will provide further updates as more information becomes available.
   - `2026-10-19 23:46` identified — We are rolling out a fix to restore Secure Web Gateway application controls for Google Gemini. Work continues to restore DLP prompt logging and enforcement.
   - `2026-10-20 22:46` resolved — This incident has been resolved.
@@ -60,7 +88,13 @@
 - URL: https://stspg.io/sx51v1tlpqjc
 - Window: 2026-10-22 15:28 to 2026-10-23 02:30 UTC (11h 2m)
 - Impact: minor, status: resolved
-- Components: API Requests, Issues, Pull Requests, Actions, Packages
+- Components: API Requests, Actions, Issues, Packages, Pull Requests
+
+<a id="ci-01510bd2a4cd1e53c09f13f9"></a>
+
+- Canonical ID: `ci-01510bd2a4cd1e53c09f13f9` (1 source records).
+  - [github/wq8305lppdc2](../../data/2026/W43/github.json); vendor URL: https://stspg.io/sx51v1tlpqjc
+- Start time basis: `vendor_reported`.
 
   - `2026-10-22 15:28` investigating — We are investigating reports of degraded performance for Actions, Issues and Pull Requests
   - `2026-10-22 15:33` investigating — Some users may experience intermittent errors loading Issues, Pull Requests and search results on github.com. <br /><br />We're investigating and working to restore normal service.
@@ -118,5 +152,4 @@
 - `grafana` Some GCK6 App Project Pages are Failing to Load (1h 31m) — https://stspg.io/y9w2szsh123d
 - `grafana` Elevated Trace Ingestion Latency and Errors for Grafana Cloud Traces in AWS Germany (44m) — https://stspg.io/p5hhk4h6k6dm
 - `anthropic` Elevated errors for Claude Opus 5.5 (5m) — https://stspg.io/dmn3bc440bnb
-- `openai` Authentication errors for some users (0m) — https://status.openai.com/incidents/01M5G9QQ9V4CYDWFRYF9BWZ5GG
-
+- `openai` Authentication errors for some users (unknown) — https://status.openai.com/incidents/01M5G9QQ9V4CYDWFRYF9BWZ5GG

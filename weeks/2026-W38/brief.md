@@ -2,21 +2,37 @@
 
 2026-09-14 to 2026-09-20 (UTC).
 
+57 source records (59 saved revisions) → 57 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. aws — Increased Error Rates
 
 - URL: https://health.aws.amazon.com/health/status
-- Window: 2026-09-15 10:22 to not yet (6d 3h 5m (ongoing))
+- Window: 2026-09-15 10:22 to not yet (60d 2h 14m (ongoing))
 - Impact: unknown, status: investigating
 - Components: multipleservices-me-south-1
+
+<a id="ci-a614ea8d00b0233b6712f617"></a>
+
+- Canonical ID: `ci-a614ea8d00b0233b6712f617` (1 source records).
+  - [aws/33f3c8e8b99e2991](../../data/2026/W38/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
 
   - `2026-09-15 10:22` investigating — We are providing an update on the disruption affecting the Middle East (Bahrain) (me-south-1) Region. The damage to our infrastructure spanned multiple Availability Zones and exceeded what our regional and multi-AZ services are designed to withstand. After a thorough assessment, we have determined that we are unable to restore access to the resources and data hosted exclusively in this Region. When the first Availability Zone was damaged in March, we began recommending that customers migrate their workloads to other Regions, and most did so before the Region became unavailable following the disruption of a second Availability Zone in April. Since then, we have supported the remaining customers in re-establishing their operations in alternate Regions, using backups where available or imple…
 
 ## 2. aws — Increased Error Rates
 
 - URL: https://health.aws.amazon.com/health/status
-- Window: 2026-09-15 10:27 to not yet (6d 3h 0m (ongoing))
+- Window: 2026-09-15 10:27 to not yet (60d 2h 9m (ongoing))
 - Impact: unknown, status: investigating
 - Components: multipleservices-me-central-1
+
+<a id="ci-c45727debcd2b7b6318e58b4"></a>
+
+- Canonical ID: `ci-c45727debcd2b7b6318e58b4` (1 source records).
+  - [aws/430be6afc66bab86](../../data/2026/W38/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
 
   - `2026-09-15 10:27` investigating — We are providing an update on the disruption affecting the Middle East (UAE) (me-central-1) Region. After a thorough assessment, we have determined that we are unable to restore access to the resources and data hosted exclusively in the mec1-az2 Availability Zone. We continue to work on recovering regional resources, as well as zonal resources hosted in the other affected Availability Zones (mec1-az1 and mec1-az3). Since the disruption began in March, most customers have been able to re-establish their operations in other Regions by restoring backups or copying data that remained accessible. AWS Support remains available to help customers who need assistance moving their applications to alternate Regions. We remain committed to supporting our customers in the UAE. We are working on repla…
 
@@ -26,6 +42,12 @@
 - Window: 2026-09-14 20:22 to 2026-09-15 22:31 UTC (1d 2h 8m)
 - Impact: minor, status: resolved
 - Components: Queues
+
+<a id="ci-60e2b81e45fe81a886c6b491"></a>
+
+- Canonical ID: `ci-60e2b81e45fe81a886c6b491` (1 source records).
+  - [cloudflare/s4x7n3nfqnyy](../../data/2026/W38/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/s4x7n3nfqnyy
+- Start time basis: `vendor_reported`.
 
   - `2026-09-14 20:22` investigating — Cloudflare is aware of investigating issues with our Cloudflare Queues product.
   - `2026-09-15 02:01` identified — We are investigating an issue where messages published to some queues are not being delivered to their consumers, resulting in delivery delays. Publishing to queues is unaffected, and messages are being received and safely retained — no messages are being lost. We have identified the root cause and are actively working on a fix. Affected messages will be delivered automatically once the issue is resolved.
@@ -39,6 +61,12 @@
 - Impact: minor, status: resolved
 - Components: Replicate
 
+<a id="ci-243cd6c9a2a4398abcb56bab"></a>
+
+- Canonical ID: `ci-243cd6c9a2a4398abcb56bab` (1 source records).
+  - [cloudflare/823rbdm2k25x](../../data/2026/W38/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/823rbdm2k25x
+- Start time basis: `vendor_reported`.
+
   - `2026-09-17 01:09` identified — Some Pruna models may not be able to scale up and are therefore either experiencing long queue times or entirely unavailable. We are working with Pruna to resolve the issue.
   - `2026-09-17 21:51` resolved — This incident has been resolved.
 
@@ -48,6 +76,12 @@
 - Window: 2026-09-14 22:25 to 2026-09-15 14:06 UTC (15h 40m)
 - Impact: minor, status: resolved
 - Components: Replicate
+
+<a id="ci-e20f71e79ef76e681160d37c"></a>
+
+- Canonical ID: `ci-e20f71e79ef76e681160d37c` (1 source records).
+  - [cloudflare/19g1m7tsvncw](../../data/2026/W38/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/19g1m7tsvncw
+- Start time basis: `vendor_reported`.
 
   - `2026-09-14 22:25` investigating — We are investigating an issue which is preventing Replicate models from failing to start new replicas.
   - `2026-09-15 00:03` identified — Some third party models as well as https://replicate.com/qwen/qwen-edit-multiangle are affected and are unable to scale out. Please use alternate models while we work with providers to publish fixed versions.
@@ -71,4 +105,3 @@
 - `circleci` Customers may experience delays in UI updates (2h 20m) — https://stspg.io/0djh5p3ll96t
 - `openai` Elevated errors affecting ChatGPT Work mode (1h 21m) — https://status.openai.com/incidents/01M2RC0WHGTX8EHDH7D60JJ7FC
 - `openai` Elevated errors with gpt-image-2.5-flare (40m) — https://status.openai.com/incidents/01M2KQNE5C42NEZPX6V01NHH5W
-

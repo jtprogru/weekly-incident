@@ -1,16 +1,18 @@
 # Week 2026-W34
 
-2026-08-17 to 2026-08-23 (UTC). Generated 2026-08-25 06:22.
+2026-08-17 to 2026-08-23 (UTC). Generated 2026-11-14 12:36.
 
-46 incidents collected, 19 above threshold. All 13 sources responded.
+49 canonical incidents, 20 above threshold. 2 of 14 sources unavailable: datadog, yandexcloud.
+
+49 source records (54 saved revisions) → 49 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## Above threshold
 
 | # | Vendor | Incident | Started (UTC) | Duration | Impact | Components | Score |
 |---|--------|----------|---------------|----------|--------|------------|-------|
 | 1 | gcp | [We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region.](https://status.cloud.google.com/incidents/utF3FMFdQfwBzJcGG6vf) | 2026-08-20 15:40 | 3h 40m | critical | AlloyDB for PostgreSQL, Apigee Edge Public Cloud, Apigee X, Artifact Registry, BigQuery Data Transfer Service, Cloud Build, Cloud Data Fusion, Cloud Filestore, Cloud Key Management Service, Cloud Monitoring, Cloud Run, Contact Center AI Platform, Dataproc Metastore, Google App Engine, Google BigQuery, Google Cloud Bigtable, Google Cloud Composer, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Managed Service for Apache Kafka, Persistent Disk | 11880 = 220 × 27 × 2.0 |
-| 2 | github | [Incident with GitHub.com](https://stspg.io/y1fl26l6wpzr) | 2026-08-17 13:40 | 7h 35m | critical | Git Operations, Webhooks, API Requests, Issues, Pull Requests, Actions, Pages, Copilot | 5460 = 455 × 8 × 1.5 |
-| 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/tcsfmtc03xgm) | 2026-08-18 16:20 | 2h 41m | minor | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 966 = 161 × 4 × 1.5 |
+| 2 | github | [Incident with GitHub.com](https://stspg.io/y1fl26l6wpzr) | 2026-08-17 13:40 | 7h 35m | critical | API Requests, Actions, Copilot, Git Operations, Issues, Pages, Pull Requests, Webhooks | 5460 = 455 × 8 × 1.5 |
+| 3 | anthropic | [Degraded performance for multiple models](https://stspg.io/tcsfmtc03xgm) | 2026-08-18 16:20 | 2h 41m | minor | Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai | 966 = 161 × 4 × 1.5 |
 | 4 | digitalocean | [Managed Databases Creation](https://stspg.io/8ld5fpw01tg4) | 2026-08-23 05:11 | 9h 21m | minor | NYC1, NYC3 | 898 = 561 × 2 × 0.8 |
 | 5 | github | [Intermittent failures creating agent tasks](https://stspg.io/py1yl5mnq89c) | 2026-08-20 14:43 | 9h 54m | critical | — | 891 = 594 × 1 × 1.5 |
 | 6 | digitalocean | [Major Service Interruption in MKC1](https://stspg.io/gdzqj0v18x0r) | 2026-08-19 11:10 | 8h 24m | critical | MKC1, MKC1 | 806 = 504 × 2 × 0.8 |
@@ -24,9 +26,10 @@
 | 14 | openai | [Elevated Errors for Thinking mode in ChatGPT](https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC) | 2026-08-20 13:56 | 2h 55m | minor | — | 262 = 175 × 1 × 1.5 |
 | 15 | cloudflare | [Elevated error rates in Chicago (ORD) region.](https://www.cloudflarestatus.com/incidents/877bn0l3ptp8) | 2026-08-19 21:19 | 2h 3m | minor | Network | 221 = 123 × 1 × 1.8 |
 | 16 | cloudflare | [Network Performance Issues in Asia Pacific Region](https://www.cloudflarestatus.com/incidents/xl112dfsfz6q) | 2026-08-21 17:39 | 2h 0m | none | Network | 216 = 120 × 1 × 1.8 |
-| 17 | anthropic | [Elevated errors on requests to multiple models](https://stspg.io/w7yghz6hfr72) | 2026-08-20 19:16 | 26m | major | claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork | 156 = 26 × 4 × 1.5 |
-| 18 | github | [Incident with Actions](https://stspg.io/q3ck88mqw08z) | 2026-08-18 09:36 | 46m | major | — | 69 = 46 × 1 × 1.5 |
-| 19 | grafana | [Cloud Logs read path outage on eu-west-2](https://stspg.io/1g4dpsdmf2cf) | 2026-08-18 22:53 | 0m | critical | — | 0 = 0 × 1 × 1.0 |
+| 17 | yandexcloud | [Problem with the SpeechKit service](https://status.yandex.cloud/en/incidents/1937) | 2026-08-19 08:20 | 2h 20m | minor | SpeechKit | 210 = 140 × 1 × 1.5 |
+| 18 | anthropic | [Elevated errors on requests to multiple models](https://stspg.io/w7yghz6hfr72) | 2026-08-20 19:16 | 26m | major | Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai | 156 = 26 × 4 × 1.5 |
+| 19 | github | [Incident with Actions](https://stspg.io/q3ck88mqw08z) | 2026-08-18 09:36 | 46m | major | — | 69 = 46 × 1 × 1.5 |
+| 20 | grafana | [Cloud Logs read path outage on eu-west-2](https://stspg.io/1g4dpsdmf2cf) | 2026-08-18 22:53 | unknown | critical | — | 0 = 0 × 1 × 1.0 |
 
 Score is duration in minutes, times component count, times vendor weight.
 
@@ -40,6 +43,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 40m
 - Impact: critical, status: resolved
 - Components: AlloyDB for PostgreSQL, Apigee Edge Public Cloud, Apigee X, Artifact Registry, BigQuery Data Transfer Service, Cloud Build, Cloud Data Fusion, Cloud Filestore, Cloud Key Management Service, Cloud Monitoring, Cloud Run, Contact Center AI Platform, Dataproc Metastore, Google App Engine, Google BigQuery, Google Cloud Bigtable, Google Cloud Composer, Google Cloud Dataflow, Google Cloud Dataproc, Google Cloud Pub/Sub, Google Cloud SQL, Google Cloud Storage, Google Compute Engine, Google Kubernetes Engine, Identity and Access Management, Managed Service for Apache Kafka, Persistent Disk
+- Canonical incident: [ci-6f3986bb3fc4e07b8f225e17](#ci-6f3986bb3fc4e07b8f225e17)
 
 - `2026-08-20 16:44` **investigating** — **Summary** We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region. **Description** We are experiencing an issue with multiple products, beginning on Thursday, 2026-08-20 08:40 PDT. Our engineering team continues to investigate the issue. We will provide an update by Thursday, 2026-08-20 10:30 PDT with details. We apologize to all who are affected by the disruption. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** None at this time.
 - `2026-08-20 17:13` **investigating** — **Summary** We are investigating an issue where customers may experience timeouts, service degradations, errors, and elevated latencies across multiple products in the us-west1 region. **Description** Mitigation actions are implemented by our engineering teams, recovery trends have been observed across infrastructure layers. Active efforts remain underway to bring impacted cloud services back to full operation. We will provide an update by Thursday, 2026-08-20 10:45 PDT with details. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** We recommend customers to failover to other regions where feasible.
@@ -49,6 +53,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-20 19:21` **investigating** — **Summary** The issue causing timeouts, degradations, errors, and latencies across multiple us-west1 products has been mitigated and we are working to recover all products. **Description** Mitigation actions have been completed by our engineering teams and we are seeing recovery from multiple products. We are continuing to work to recover the remaining products. We will provide an update by Thursday, 2026-08-20 13:30 PDT with details. **Diagnosis / Customer Symptoms** Customers in us-west1 may experience timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** No workarounds needed at this time.
 - `2026-08-20 19:37` **resolved** — **Summary** The issue causing timeouts, degradations, errors, and latencies across multiple us-west1 products has been mitigated. **Description** We have mitigated the issue impacting multiple products in our us-west1 region as of Thursday, 2026-08-20 10:22 PDT. Our engineering teams have restored capacity on a planned optical maintenance that caused unexpected congestion in Dalles, Oregon metro /us-west1 region. Our systems stabilized and services have recovered once capacity was restored. Our teams are continuing to monitor for any residual impact. We will publish an analysis of this incident once we have completed our internal investigation. We thank you for your patience while we worked on resolving the issue. **Diagnosis / Customer Symptoms** Customers in us-west1 may have experienced timeouts, service degradations, errors, and elevated latencies across multiple products. **Workaround** This issue is now mitigated.
 - `2026-08-25 06:20` **resolved** — # Preliminary Incident Report We sincerely apologize for the disruption this incident caused to your business operations. Recognizing your reliance on Google Cloud, we express our sincere regrets for any operational impact experienced. Our engineering teams are actively addressing the underlying root cause to prevent future recurrences. Please note that the information provided herein reflects our current understanding as of the time of publication and remains subject to revision as the investigation progresses. A comprehensive Incident Report detailing preventive measures will be issued upon conclusion of our inquiry. If you have experienced impact outside of what is listed below, please reach out to Google Cloud Support using https://cloud.google.com/support. ## Date/Time of the Issue (All time US/Pacific) * Incident Start: 20 August 2026 08:00 * Incident End: 20 August 2026 10:22 * Duration: 2 hours, 22 minutes ## Summary On Thursday, 20 August 2026, multiple Google Cloud services encountered elevated latency, provisioning failures, increased error rates, and service degradations lasting for a duration of 2 hours and 22 minutes. ## Preliminary Root Cause The disruption originated during scheduled fiber optic maintenance, which unexpectedly compromised network capacity between data centers within the us-west1 region. Automated rerouting mechanisms failed to properly redistribute traffic to alternate capacity, resulting in network congestion as volumes exceeded available bandwidth in the affected area. This underlying network degradation subsequently impacted higher-level service components through request throttling, increased latency, and cascading retries. Consequently, both control plane operations and data plane requests failed to execute successfully across several dependent Google Cloud services, producing the observed latency and elevated error rates. ## Remediation Internal monitoring alerted Google engineers to the incident, confirming that multiple services across us-west1 were affected. To mitigate the immediate operational impact, engineers initiated traffic draining protocols, re-routing service workloads away from the degraded network infrastructure. Following the restoration of inter-campus network capacity and the resolution of the core issue, engineers systematically restored traffic to the us-west1 region and confirmed service normalization. Long-term engineering solutions are currently being finalized and assigned to address the root cause and strengthen system resilience regarding fiber maintenance procedures. ## Description of Impact On Thursday, August 20, between 08:00 and 10:22 US/Pacific, Google Cloud customers in the us-west1 region encountered elevated latency, provisioning failures, and increased error rates. * Proportionate Impact / Error Rates: The precise scope of impact—including the proportion of affected projects and applications—and detailed error metrics will be published in the comprehensive Root Cause Analysis, as the reduced capacity caused request throttling, latency spikes, and increased retry volume. * Scope Exclusion: Services and workloads operating in regions other than us-west1 remained fully operational and unaffected. **Affected Services and Features** The following services experienced elevated latencies and/or increased error rates, across their respective data planes and control planes: * AlloyDB * Apache Kafka * Apigee Edge Public Cloud * Apigee X * Artifact Registry * BigQuery & BigQuery Data Transfer Service * Cloud Build * Cloud Data Fusion * Cloud Dataflow * Cloud Filestore * Cloud Key Management Service (KMS) * Cloud Monitoring * Cloud Run * Cloud SQL * Contact Center AI Platform * Dataproc Metastore * Google App Engine * Google Cloud Bigtable * Google Cloud Pub/Sub * Google Cloud Storage (GCS) * Google Compute Engine (GCE) * Google Kubernetes Engine (GKE) * Identity and Access Management (IAM) * Managed Airflow (Cloud Composer) *Managed Service for Apache Spark (Dataproc) Persistent Disk
+- `2026-08-27 21:45` **resolved** — # Incident Report ## Summary On Thursday, 20 August 2026, from 08:00 to 10:22 US/Pacific (15:00 to 17:22 UTC), multiple Google Cloud services in the us-west1 region experienced elevated latency, provisioning failures, increased error rates, and widespread service degradations for a total duration of 2 hours and 22 minutes. The incident impacted a wide range of core services — including Persistent Disk, Google Kubernetes Engine, Google Compute Engine, Cloud Run, Google Cloud Bigtable, Cloud Storage, and Identity and Access Management — across both control plane operations and data plane requests. We sincerely apologize for the disruption this incident caused to your business operations and critical workloads. We recognize the vital role Google Cloud plays in supporting your organization, and we deeply regret the impact on your business operations and critical workloads. Engineering and infrastructure teams are actively implementing measures to address the root causes and strengthen network resiliency to prevent recurrences in the future. Specifically, teams are monitoring recovery progress, refining safety checks for planned optical maintenance, and optimizing regional traffic routing mechanisms to safeguard against unexpected capacity constraints. ## Root Cause The disruption originated during scheduled fiber optic maintenance, which unexpectedly compromised network capacity between data centers within the us-west1 region. Automated rerouting mechanisms failed to properly redistribute traffic to alternate capacity, resulting in network congestion as volumes exceeded available bandwidth in the affected area. This underlying network degradation subsequently impacted higher-level service components through severe packet loss, request throttling, and increased latency across inter-campus dependencies. Core infrastructure services, including Spanner Paxos consensus and the Unified Metadata Server (UMS), experienced significant latency spikes, which cascaded into timeouts and elevated error rates for downstream dependent products such as Cloud Storage, Cloud IAM, Persistent Disk, and Google Kubernetes Engine. Consequently, both control plane operations and data plane requests failed to execute successfully across multiple Google Cloud services in us-west1 throughout the duration of the incident. ## Remediation and Prevention Internal monitoring systems initially detected widespread service anomalies and alerted Google engineers, who promptly confirmed that multiple core services operating across the us-west1 region were severely impacted. In response to the immediate operational risks, engineering teams promptly executed emergency traffic draining protocols to reroute active service workloads away from the compromised inter-campus network infrastructure and minimize further customer disruption. Once teams restored inter-campus fiber network capacity, engineers systematically reintroduced production traffic back to us-west1 through controlled validation stages, ultimately confirming full service normalization across all impacted platforms. Longer term engineering remediations and architectural enhancements are actively being finalized and assigned to owning teams. Key focus areas include reforming scheduled maintenance protocols, establishing stricter safety checks and circuit redundancy requirements prior to routine maintenance, and refining automated regional traffic failover mechanisms to automatically handle sudden capacity degradation without incurring severe network congestion. ## Detailed Description of Impact On Thursday, August 20, between 08:00 and 10:22 US/Pacific, Google Cloud customers in the us-west1 region encountered elevated latency, provisioning failures, and increased error rates. * **Impact / Error Rates:** The reduced capacity caused request throttling, latency spikes, and increased retry volume. * **Scope Exclusion:** Services and workloads operating in regions other than us-west1 remained fully operational and unaffected. **Affected Services and Features** The following services experienced elevated latencies and/or increased error rates, across their respective data planes and control planes: * AlloyDB * Apache Kafka * Apigee Edge Public Cloud * Apigee X * Artifact Registry * BigQuery & BigQuery Data Transfer Service * Cloud Build * Cloud Data Fusion * Cloud Dataflow * Cloud Filestore * Cloud Key Management Service (KMS) * Cloud Monitoring * Cloud Run * Cloud SQL * Contact Center AI Platform * Dataproc Metastore * Google App Engine * Google Cloud Bigtable * Google Cloud Pub/Sub * Google Cloud Storage (GCS) * Google Compute Engine (GCE) * Google Kubernetes Engine (GKE) * Identity and Access Management (IAM) * Managed Airflow (Cloud Composer) * Managed Service for Apache Spark (Dataproc) * Persistent Disk The regional incident in us-west1 followed a structured three-phase recovery dictated by platform dependency layers: While core platform connectivity and live request serving were restored by 10:22 US/Pacific, certain services took additional time to fully recover due to asynchronous backlog processing and localized control-plane state reconciliation for a very small set of customers. For event-driven and pipeline services, inbound error rates dropped to 0 immediately, but some operations experienced elevated latency while workers processed through backlogs accumulated during the outage, clearing later for Cloud Pub/Sub, Cloud Build & Deploy, Cloud Dataflow, and Cloud Storage lifecycle deletions. Concurrently, while primary read/write traffic was healthy across the region, specific long-running lifecycle workflows required extra time to clear locks and reconcile distributed state machines. Compute Engine VM provisioning in zone us-west1-c and Cloud Filestore control plane instance allocation locks and resource validation checks took longer to normalize across regional storage backends.
 
 ### 2. github — Incident with GitHub.com
 
@@ -57,7 +62,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-17 21:15 UTC
 - Duration: 7h 35m
 - Impact: critical, status: resolved
-- Components: Git Operations, Webhooks, API Requests, Issues, Pull Requests, Actions, Pages, Copilot
+- Components: API Requests, Actions, Copilot, Git Operations, Issues, Pages, Pull Requests, Webhooks
+- Canonical incident: [ci-7d0481dbdf5ba26d80c73e62](#ci-7d0481dbdf5ba26d80c73e62)
 
 - `2026-08-17 13:40` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-17 13:41` **investigating** — API Requests is experiencing degraded performance. We are continuing to investigate.
@@ -103,7 +109,8 @@ Score is duration in minutes, times component count, times vendor weight.
 - Resolved: 2026-08-18 19:01 UTC
 - Duration: 2h 41m
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+- Canonical incident: [ci-4e656717f39631a81136bb03](#ci-4e656717f39631a81136bb03)
 
 - `2026-08-18 16:20` **investigating** — We are investigating reports of degraded performance affecting multiple models. We will provide an update as soon as possible.
 - `2026-08-18 16:20` **investigating** — We are investigating elevated errors on requests to Claude Mythos 5, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Haiku 4.5, and other Claude models. We will provide an update as soon as possible.
@@ -119,6 +126,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 9h 21m
 - Impact: minor, status: resolved
 - Components: NYC1, NYC3
+- Canonical incident: [ci-86d1537eaa36e2b2d1a88bc9](#ci-86d1537eaa36e2b2d1a88bc9)
 
 - `2026-08-23 05:11` **investigating** — Our Engineering team is investigating an issue with our Managed Database product. At this time, users may experience errors while creating clusters, both via Cloud Control Panel and API requests. We apologize for the inconvenience and will share an update once we have more information.
 - `2026-08-23 07:06` **investigating** — We continue to investigate an issue affecting DigitalOcean Managed Databases cluster creation across multiple regions. During this time, users may experience errors when creating Managed Database clusters via the Cloud Control Panel or API. Our engineering team is implementing a mitigation and working to restore normal provisioning. We will provide another update as soon as more information is available.
@@ -133,6 +141,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 9h 54m
 - Impact: critical, status: resolved
 - Components: —
+- Canonical incident: [ci-33f9406107412c11e32daea9](#ci-33f9406107412c11e32daea9)
 
 - `2026-08-20 14:43` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-20 14:51` **investigating** — Users may experience delays when starting tasks using Copilot Cloud Agent. We are actively investigating the issue and will provide updates as we learn more.
@@ -145,7 +154,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `2026-08-20 18:45` **investigating** — We are continuing to observe gradual recovery for Copilot Cloud Agent task status visibility, with session output delayed by approximately 1 hour. We have taken additional steps to accelerate the recovery and expect this to take effect within the next hour.
 - `2026-08-20 19:35` **investigating** — We are continuing to observe gradual recovery for Copilot Cloud Agent task status visibility. Session output continues to be delayed by approximately 1 hour as our remediation steps take effect.
 - `2026-08-20 20:37` **investigating** — We are seeing gradual recovery in Copilot Cloud Agent task status visibility as we deploy a fix for the root cause. Session output remains delayed by approximately one hour while remediation continues.
-- `2026-08-21 00:37` **resolved** — This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.
+- `2026-08-21 00:37` **resolved** — Between 13:57 UTC on August 20 and 00:37 UTC on August 21, 2026, some users of the Copilot Cloud Agent experienced delays of up to 60 to 90 minutes in seeing the status and results of their agent tasks. The agent tasks themselves continued to run and complete during this time; only the visibility of their status was delayed.<br /><br />The cause was a regional outage in a third-party cloud database service that Copilot uses to store agent task status. We failed over the affected database to a healthy region, added processing capacity to work through the backlog, and restored normal operation once the underlying service recovered. No task data was lost during the incident.<br /><br />To prevent repetition of similar incidents, we are removing the database configuration that made us vulnerable to this regional outage and improving our database failover procedures.
 
 ### 6. digitalocean — Major Service Interruption in MKC1
 
@@ -155,6 +164,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 8h 24m
 - Impact: critical, status: resolved
 - Components: MKC1, MKC1
+- Canonical incident: [ci-3d1afb7693c85600bccb0ad1](#ci-3d1afb7693c85600bccb0ad1)
 
 - `2026-08-19 11:10` **investigating** — Our Engineering team is currently investigating an issue in the MKC1 region affecting multiple racks and nodes. During this time, customers may experience disruptions to GPU workloads, and Kubernetes (DOKS) worker nodes may enter a NotReady state. Our team is actively working to restore connectivity and bring impacted nodes back online. If you continue to experience issues, please open a support ticket from within your account.
 - `2026-08-19 12:22` **identified** — We have identified the root cause of the issue in the MKC1 region affecting multiple racks and nodes. Our Engineering team is actively implementing remediation steps to restore connectivity and bring the impacted nodes back online. During this time, customers may continue to experience disruptions to GPU workloads and Serverless Inference. Kubernetes (DOKS) worker nodes may also remain in a NotReady state, and customers may be unable to reach Kubernetes API endpoints or perform cluster-management operations in affected clusters. We will provide another update as soon as we have more information.
@@ -170,6 +180,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 32m
 - Impact: unknown, status: resolved
 - Components: ec2-eu-west-2
+- Canonical incident: [ci-1c177d5ddbcb11d93d77c881](#ci-1c177d5ddbcb11d93d77c881)
 
 - `2026-08-19 15:15` **investigating** — We are investigating an issue that is impacting launching new EC2 instances and resources in a newly launched Availability Zone (euw2-az4) in the EU-WEST-2 Region. During this time, affected customers may experience issues when creating or modifying resources in the Region. Other AWS services may also be impacted. For immediate recovery, we recommend that customers use alternative Availability Zones (euw2-az1, euw2-az2, and euw2-az3) where applicable. Existing running instances and resources are not affected. We will provide another update by 10:00 AM PDT, or sooner if we have additional information to share.
 - `2026-08-19 17:03` **investigating** — On August 18 we launched a new Availability Zone (euw2-az4) in the EU-WEST-2 Region. After the launch, we began experiencing errors launching EC2 instances in the new Availability Zone when a default subnet is not present. We can confirm that existing running instances and resources are not affected. Workflows that automatically get a list of Availability Zones in the Region via the DescribeAvailabilityZones API and then attempt to launch new instances or create resources in the new Availability Zone may encounter errors. For EC2 instance launch failures, we are taking mitigating steps to automatically create default subnets, where one is not already present, when an EC2 instance launch is targeting the new Availability Zone. For customers and workflows that require immediate remediation <a href="https://docs.aws.amazon.com/vpc/latest/userguide/work-with-default-vpc.html#create-default-subnet">you may create a default subnet</a> in the new Availability Zone. This will enable EC2 instance launches to successfully complete. For other resources, such as Lambda functions, where the new Availability Zone is currently not supported, we recommend customers update their workflows to exclude the newly launched Availability Zone and continue resource creation using the other Availability Zones in the Region. While we don't have an exact estimate for how long our mitigation efforts will take, we will keep you up to date on our progress and provide you with another update by 1:00 PM PDT or sooner as new information becomes available.
@@ -183,6 +194,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 40m
 - Impact: none, status: resolved
 - Components: Audit Logs
+- Canonical incident: [ci-581ea5f315aa70c831343f66](#ci-581ea5f315aa70c831343f66)
 
 - `2026-08-20 19:19` **identified** — We have identified an issue where audit logs for R2 are missing in the dashboard, we are working to resolve the issue.
 - `2026-08-20 21:59` **monitoring** — A fix has been implemented and we are monitoring the results.
@@ -196,6 +208,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 36m
 - Impact: minor, status: resolved
 - Components: Network
+- Canonical incident: [ci-3427f181f356baf6a5787a2c](#ci-3427f181f356baf6a5787a2c)
 
 - `2026-08-20 11:38` **investigating** — Cloudflare is investigating issues with network performance in India. We are working to analyse and mitigate this problem. More updates to follow shortly.
 - `2026-08-20 12:01` **monitoring** — A fix has been implemented and we are monitoring the results.
@@ -209,6 +222,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 4h 2m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-7ea05954efd90918f48143c3](#ci-7ea05954efd90918f48143c3)
 
 - `2026-08-18 07:40` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-18 07:40` **monitoring** — We are investigating reports of failure to load runner groups and runner-related permissions for customers using larger runners.
@@ -224,6 +238,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 3h 26m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-40db200887080f5ed07efb56](#ci-40db200887080f5ed07efb56)
 
 - `2026-08-21 19:48` **investigating** — We’re investigating an issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page.
 - `2026-08-21 20:36` **monitoring** — We have applied a mitigation and are seeing recovery from the issue causing some ChatGPT web users to be unexpectedly logged out when refreshing the page. We’ll continue monitoring closely to confirm the recovery is sustained.
@@ -237,6 +252,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 5h 1m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-155e1c2726927c832fdf0cd6](#ci-155e1c2726927c832fdf0cd6)
 
 - `2026-08-17 14:04` **identified** — GitHub has reported an incident that is impacting CircleCI pipeline triggering and logging in: https://www.githubstatus.com/incidents/zkxwbgr0cnmx Jobs that are in flights are running, but status reporting to GitHub Pull Requests may fail.
 - `2026-08-17 14:25` **identified** — We are continuing to see high error rates on GitHub APIs and reduced webhook traffic. We will continue to provide updates as more information becomes available.
@@ -254,6 +270,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 44m
 - Impact: minor, status: resolved
 - Components: Lists
+- Canonical incident: [ci-2e0de8ff89fd5e4d63112c36](#ci-2e0de8ff89fd5e4d63112c36)
 
 - `2026-08-17 19:56` **identified** — Changes to URL Lists will experience delays before taking effect. Rulesets that contain lists may result in errors when editing them. Existing Lists continue to function normally.
 - `2026-08-17 21:41` **identified** — We are continuing to work toward a fix for this issue. Changes to URL Lists will experience delays before taking effect. Existing Lists continue to function normally.
@@ -268,6 +285,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 55m
 - Impact: minor, status: resolved
 - Components: —
+- Canonical incident: [ci-04c8ff2e4b2ef822a16b9606](#ci-04c8ff2e4b2ef822a16b9606)
 
 - `2026-08-20 13:56` **investigating** — We are investigating an issue causing some users to experience errors when using Thinking in ChatGPT.
 - `2026-08-20 14:12` **investigating** — We are investigating an issue causing some users to experience errors when using Thinking mode and Image Generation in ChatGPT.
@@ -282,6 +300,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 3m
 - Impact: minor, status: resolved
 - Components: Network
+- Canonical incident: [ci-e1af35a85b5b2635b6c4daae](#ci-e1af35a85b5b2635b6c4daae)
 
 - `2026-08-19 21:19` **investigating** — We are investigating reports of elevated error rates in the Chicago (ORD) region.
 - `2026-08-19 23:23` **resolved** — This incident has been resolved.
@@ -294,24 +313,39 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 2h 0m
 - Impact: none, status: resolved
 - Components: Network
+- Canonical incident: [ci-7717c28db9de88e48f9a045e](#ci-7717c28db9de88e48f9a045e)
 
 - `2026-08-21 17:39` **investigating** — Cloudflare is investigating issues with Network Performance in Asia Pacific region. We are working to analyze and mitigate this problem. More updates to follow shortly.
 - `2026-08-21 17:47` **monitoring** — A fix has been implemented and we are monitoring the results.
 - `2026-08-21 19:39` **resolved** — This incident has been resolved.
 
-### 17. anthropic — Elevated errors on requests to multiple models
+### 17. yandexcloud — Problem with the SpeechKit service
+
+- URL: https://status.yandex.cloud/en/incidents/1937
+- Started: 2026-08-19 08:20 UTC
+- Resolved: 2026-08-19 10:40 UTC
+- Duration: 2h 20m
+- Impact: minor, status: resolved
+- Components: SpeechKit
+- Canonical incident: [ci-e68ccef6c84f28898381aa55](#ci-e68ccef6c84f28898381aa55)
+
+- `2026-08-19 10:10` **investigating** — We noticed a partial unavailability of the SpeechKit service in the Cloud. The developers are already aware of it and are fixing it.
+- `2026-08-19 11:38` **resolved** — At 13:40 Moscow time, the problem was fixed, and the service is now working correctly. We are investigating the causes of its occurrence.
+
+### 18. anthropic — Elevated errors on requests to multiple models
 
 - URL: https://stspg.io/w7yghz6hfr72
 - Started: 2026-08-20 19:16 UTC
 - Resolved: 2026-08-20 19:42 UTC
 - Duration: 26m
 - Impact: major, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+- Canonical incident: [ci-648c65cf536462822cf61b35](#ci-648c65cf536462822cf61b35)
 
 - `2026-08-20 19:16` **investigating** — We are investigating elevated errors on requests to some Claude models. We will provide additional updates as soon as possible.
 - `2026-08-20 19:42` **resolved** — This issue has been resolved.
 
-### 18. github — Incident with Actions
+### 19. github — Incident with Actions
 
 - URL: https://stspg.io/q3ck88mqw08z
 - Started: 2026-08-18 09:36 UTC
@@ -319,28 +353,31 @@ Score is duration in minutes, times component count, times vendor weight.
 - Duration: 46m
 - Impact: major, status: resolved
 - Components: —
+- Canonical incident: [ci-bb251c04c7f46a6e22a32b10](#ci-bb251c04c7f46a6e22a32b10)
 
 - `2026-08-18 09:36` **investigating** — We are investigating reports of impacted performance for some GitHub services.
 - `2026-08-18 10:23` **resolved** — On August 18, 2026, between 05:02 UTC and 11:30 UTC, customers were unable to run jobs on Actions Larger Runners and were unable to view or manage Actions Runners and Runner Groups through the GitHub UI and API. <br /><br />These issues were caused by failures in backend requests resolving essential metadata for starting Larger Runner workflow runs and for reading runner and runner group data. The failures were caused by an expired authentication certificate unique to this service. The certificate had been rotated in KeyVault, but a step to enable use at runtime had been paused to prevent recurrence of previous incidents that had been triggered by this operation. <br /><br />We mitigated the issues by completing the enablement of the new certificate in the backend system. We have added additional monitoring to this and other certificates. The relevant service is also in the process of being replaced as part of our availability and scale work, bringing this authentication path and secret management in line with patterns across all GitHub services.
 
-### 19. grafana — Cloud Logs read path outage on eu-west-2
+### 20. grafana — Cloud Logs read path outage on eu-west-2
 
 - URL: https://stspg.io/1g4dpsdmf2cf
 - Started: 2026-08-18 22:53 UTC
 - Resolved: 2026-08-18 22:00 UTC
-- Duration: 0m
+- Duration: unknown
 - Impact: critical, status: resolved
 - Components: —
+- Canonical incident: [ci-18a9e85c50e05ae6021b74af](#ci-18a9e85c50e05ae6021b74af)
 
 - `2026-08-18 22:53` **resolved** — We observed an issue which impacted the following service: reads of Cloud Logs in the eu-west-2 region. Affected services would include Explore, dashboards, alert evaluation when querying Logs. The time of impact lasted from approximately 22h15 and 22h23 UTC, on loki-prod-012. This incident has since been resolved.
 
-## Below threshold (27)
+## Below threshold (29)
 
 - `cloudflare` [Durable Objects and Downstream Service Errors](https://www.cloudflarestatus.com/incidents/f35vbpr3dv4h) — 59m
 - `anthropic` [Degraded performance for Claude Opus 5, Claude Sonnet 5](https://stspg.io/dw9p8s0wg6hh) — 1h 32m
 - `anthropic` [Degraded performance for Claude Opus 5 and Claude Haiku 4.5](https://stspg.io/zg9tfmjj1th2) — 1h 19m
 - `cloudflare` [Increased Errors for Durable Objects](https://www.cloudflarestatus.com/incidents/w1d9976ls02m) — 1h 11m
 - `cloudflare` [Network Performance Issues in Phoenix, Los Angeles](https://www.cloudflarestatus.com/incidents/f8ms50xkfn4t) — 1h 10m
+- `yandexcloud` [Partial network unavailability to the ru-central1-d zone](https://status.yandex.cloud/en/incidents/1942) — 30m
 - `cloudflare` [Cloudflare Dashboard Issues](https://www.cloudflarestatus.com/incidents/p19kmglclwy4) — 1h 59m
 - `cloudflare` [Cloudflare Access Browser-based RDP Issue](https://www.cloudflarestatus.com/incidents/k6v45x988py7) — 1h 41m
 - `digitalocean` [Container Registry and Spaces Accessibility](https://stspg.io/2b4phnbmtm49) — 1h 52m
@@ -351,6 +388,7 @@ Score is duration in minutes, times component count, times vendor weight.
 - `cloudflare` [Workers AI GLM 5.2 is unavailable](https://www.cloudflarestatus.com/incidents/46j9vvprj159) — 1h 8m
 - `cloudflare` [Zero Trust Client Posture Failures](https://www.cloudflarestatus.com/incidents/mts6889b2wcx) — 50m
 - `cloudflare` [Increased Errors for Durable Objects and Downstream Services in Indonesia](https://www.cloudflarestatus.com/incidents/76jq00tfhd4c) — 49m
+- `yandexcloud` [We noticed a partial unavailability of Cloud Interconnect trunks on PoP M9 due to power issues on the site](https://status.yandex.cloud/en/incidents/1936) — 55m
 - `openai` [Elevated Codex API authentication errors](https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR) — 53m
 - `openai` [Chatgpt.com is down - all signups and logins are down as of right now](https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39) — 52m
 - `aws` [Increased Error Rates](https://health.aws.amazon.com/health/status) — 37m
@@ -364,21 +402,322 @@ Score is duration in minutes, times component count, times vendor weight.
 - `cloudflare` [MTLS Validation issues](https://www.cloudflarestatus.com/incidents/jzv93gkq85bj) — 8m
 - `cloudflare` [Elevated network errors for traffic routed between North America origins and SIN (Singapore) colo](https://www.cloudflarestatus.com/incidents/1wwc0f6m1c21) — 0m
 
+## Identity and evidence
+
+Source record paths refer to the preserved vendor archive. Unconfirmed candidates remain separate.
+
+<a id="ci-6f3986bb3fc4e07b8f225e17"></a>
+
+- Canonical ID: `ci-6f3986bb3fc4e07b8f225e17` (1 source records).
+  - [gcp/utF3FMFdQfwBzJcGG6vf](../../data/2026/W34/gcp.json); vendor URL: https://status.cloud.google.com/incidents/utF3FMFdQfwBzJcGG6vf
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7d0481dbdf5ba26d80c73e62"></a>
+
+- Canonical ID: `ci-7d0481dbdf5ba26d80c73e62` (1 source records).
+  - [github/zkxwbgr0cnmx](../../data/2026/W34/github.json); vendor URL: https://stspg.io/y1fl26l6wpzr
+- Start time basis: `vendor_reported`.
+
+<a id="ci-4e656717f39631a81136bb03"></a>
+
+- Canonical ID: `ci-4e656717f39631a81136bb03` (1 source records).
+  - [anthropic/q7txxvbsftgq](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/tcsfmtc03xgm
+- Start time basis: `vendor_reported`.
+
+<a id="ci-86d1537eaa36e2b2d1a88bc9"></a>
+
+- Canonical ID: `ci-86d1537eaa36e2b2d1a88bc9` (1 source records).
+  - [digitalocean/r96y45y5sx59](../../data/2026/W34/digitalocean.json); vendor URL: https://stspg.io/8ld5fpw01tg4
+- Start time basis: `vendor_reported`.
+
+<a id="ci-33f9406107412c11e32daea9"></a>
+
+- Canonical ID: `ci-33f9406107412c11e32daea9` (1 source records).
+  - [github/bhbcjn4n3jzp](../../data/2026/W34/github.json); vendor URL: https://stspg.io/py1yl5mnq89c
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3d1afb7693c85600bccb0ad1"></a>
+
+- Canonical ID: `ci-3d1afb7693c85600bccb0ad1` (1 source records).
+  - [digitalocean/qd8v4wddyqjr](../../data/2026/W34/digitalocean.json); vendor URL: https://stspg.io/gdzqj0v18x0r
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c1b560d7acbed5eb7281be50"></a>
+
+- Canonical ID: `ci-c1b560d7acbed5eb7281be50` (1 source records).
+  - [cloudflare/f35vbpr3dv4h](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/f35vbpr3dv4h
+- Start time basis: `vendor_reported`.
+
+<a id="ci-8636509b3527b9ef3f8b203c"></a>
+
+- Canonical ID: `ci-8636509b3527b9ef3f8b203c` (1 source records).
+  - [anthropic/zhk4v3yv1lsf](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/dw9p8s0wg6hh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-46fe82ef2367da1e2b56bfbb"></a>
+
+- Canonical ID: `ci-46fe82ef2367da1e2b56bfbb` (1 source records).
+  - [anthropic/hkcw95k7r0f4](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/zg9tfmjj1th2
+- Start time basis: `vendor_reported`.
+
+<a id="ci-1c177d5ddbcb11d93d77c881"></a>
+
+- Canonical ID: `ci-1c177d5ddbcb11d93d77c881` (1 source records).
+  - [aws/2ca9d724ab351471](../../data/2026/W34/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
+
+<a id="ci-581ea5f315aa70c831343f66"></a>
+
+- Canonical ID: `ci-581ea5f315aa70c831343f66` (1 source records).
+  - [cloudflare/jn37dmb9s37p](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/jn37dmb9s37p
+- Start time basis: `vendor_reported`.
+
+<a id="ci-3427f181f356baf6a5787a2c"></a>
+
+- Canonical ID: `ci-3427f181f356baf6a5787a2c` (1 source records).
+  - [cloudflare/xh5t9jy2cl6x](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/xh5t9jy2cl6x
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7ea05954efd90918f48143c3"></a>
+
+- Canonical ID: `ci-7ea05954efd90918f48143c3` (1 source records).
+  - [github/bmpybhnrky3x](../../data/2026/W34/github.json); vendor URL: https://stspg.io/98zqb1k9jh0x
+- Start time basis: `vendor_reported`.
+
+<a id="ci-40db200887080f5ed07efb56"></a>
+
+- Canonical ID: `ci-40db200887080f5ed07efb56` (1 source records).
+  - [openai/01M0JXWD740S0Y50DWJZS7SH75](../../data/2026/W34/openai.json); vendor URL: https://status.openai.com/incidents/01M0JXWD740S0Y50DWJZS7SH75
+- Start time basis: `vendor_reported`.
+
+<a id="ci-155e1c2726927c832fdf0cd6"></a>
+
+- Canonical ID: `ci-155e1c2726927c832fdf0cd6` (1 source records).
+  - [circleci/h3cw7x07ggf2](../../data/2026/W34/circleci.json); vendor URL: https://stspg.io/mk4lvmlx939f
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2e0de8ff89fd5e4d63112c36"></a>
+
+- Canonical ID: `ci-2e0de8ff89fd5e4d63112c36` (1 source records).
+  - [cloudflare/wdp9xb0250qk](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/wdp9xb0250qk
+- Start time basis: `vendor_reported`.
+
+<a id="ci-04c8ff2e4b2ef822a16b9606"></a>
+
+- Canonical ID: `ci-04c8ff2e4b2ef822a16b9606` (1 source records).
+  - [openai/01M0FQAR3NNH3ANVTQMBRD47DC](../../data/2026/W34/openai.json); vendor URL: https://status.openai.com/incidents/01M0FQAR3NNH3ANVTQMBRD47DC
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7e79aa3ed2bd7ac7ec1f4c8b"></a>
+
+- Canonical ID: `ci-7e79aa3ed2bd7ac7ec1f4c8b` (1 source records).
+  - [cloudflare/w1d9976ls02m](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/w1d9976ls02m
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0e3131e7d10911b0b48e0d09"></a>
+
+- Canonical ID: `ci-0e3131e7d10911b0b48e0d09` (1 source records).
+  - [cloudflare/f8ms50xkfn4t](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/f8ms50xkfn4t
+- Start time basis: `vendor_reported`.
+
+<a id="ci-af7659b78dd6059aab425611"></a>
+
+- Canonical ID: `ci-af7659b78dd6059aab425611` (1 source records).
+  - [yandexcloud/1942](../../data/2026/W34/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1942
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e1af35a85b5b2635b6c4daae"></a>
+
+- Canonical ID: `ci-e1af35a85b5b2635b6c4daae` (1 source records).
+  - [cloudflare/877bn0l3ptp8](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/877bn0l3ptp8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7717c28db9de88e48f9a045e"></a>
+
+- Canonical ID: `ci-7717c28db9de88e48f9a045e` (1 source records).
+  - [cloudflare/xl112dfsfz6q](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/xl112dfsfz6q
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0fe797f9263454b5c597423c"></a>
+
+- Canonical ID: `ci-0fe797f9263454b5c597423c` (1 source records).
+  - [cloudflare/p19kmglclwy4](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/p19kmglclwy4
+- Start time basis: `vendor_reported`.
+
+<a id="ci-e68ccef6c84f28898381aa55"></a>
+
+- Canonical ID: `ci-e68ccef6c84f28898381aa55` (1 source records).
+  - [yandexcloud/1937](../../data/2026/W34/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1937
+- Start time basis: `vendor_reported`.
+
+<a id="ci-55814d4b8b1f6ff2e3371110"></a>
+
+- Canonical ID: `ci-55814d4b8b1f6ff2e3371110` (1 source records).
+  - [cloudflare/k6v45x988py7](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/k6v45x988py7
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c06bfc7aeefc5518ab4986ac"></a>
+
+- Canonical ID: `ci-c06bfc7aeefc5518ab4986ac` (1 source records).
+  - [digitalocean/s0dyq97c5v72](../../data/2026/W34/digitalocean.json); vendor URL: https://stspg.io/2b4phnbmtm49
+- Start time basis: `vendor_reported`.
+
+<a id="ci-0ad3ccf8597442ae7e34bc8b"></a>
+
+- Canonical ID: `ci-0ad3ccf8597442ae7e34bc8b` (1 source records).
+  - [anthropic/6xskhw7rn4tf](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/lmcgl9dpjxk0
+- Start time basis: `vendor_reported`.
+
+<a id="ci-648c65cf536462822cf61b35"></a>
+
+- Canonical ID: `ci-648c65cf536462822cf61b35` (1 source records).
+  - [anthropic/c0ncxxm2wd9r](../../data/2026/W34/anthropic.json); vendor URL: https://stspg.io/w7yghz6hfr72
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c46f52bc1ecaaf8ead946ecd"></a>
+
+- Canonical ID: `ci-c46f52bc1ecaaf8ead946ecd` (1 source records).
+  - [cloudflare/mlr8smgngv5h](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mlr8smgngv5h
+- Start time basis: `vendor_reported`.
+
+<a id="ci-7588761d07e9ef991ddb2a67"></a>
+
+- Canonical ID: `ci-7588761d07e9ef991ddb2a67` (1 source records).
+  - [cloudflare/rq2nwg85qqn4](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/rq2nwg85qqn4
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9dedf497bc73d9aa8b1e7f0f"></a>
+
+- Canonical ID: `ci-9dedf497bc73d9aa8b1e7f0f` (1 source records).
+  - [cloudflare/14kntn62njng](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/14kntn62njng
+- Start time basis: `vendor_reported`.
+
+<a id="ci-c7a6a6900c94afa0931a4873"></a>
+
+- Canonical ID: `ci-c7a6a6900c94afa0931a4873` (1 source records).
+  - [cloudflare/46j9vvprj159](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/46j9vvprj159
+- Start time basis: `vendor_reported`.
+
+<a id="ci-85406551e5859d8239e85409"></a>
+
+- Canonical ID: `ci-85406551e5859d8239e85409` (1 source records).
+  - [cloudflare/mts6889b2wcx](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/mts6889b2wcx
+- Start time basis: `vendor_reported`.
+
+<a id="ci-bfa7c3109298d1d1fcd87e55"></a>
+
+- Canonical ID: `ci-bfa7c3109298d1d1fcd87e55` (1 source records).
+  - [cloudflare/76jq00tfhd4c](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/76jq00tfhd4c
+- Start time basis: `vendor_reported`.
+
+<a id="ci-f6fc011358ee80fd8b2a307f"></a>
+
+- Canonical ID: `ci-f6fc011358ee80fd8b2a307f` (1 source records).
+  - [yandexcloud/1936](../../data/2026/W34/yandexcloud.json); vendor URL: https://status.yandex.cloud/en/incidents/1936
+- Start time basis: `vendor_reported`.
+
+<a id="ci-6cbecfd5ffa1ae336288a8a2"></a>
+
+- Canonical ID: `ci-6cbecfd5ffa1ae336288a8a2` (1 source records).
+  - [openai/01M0G1RZER839AZXWMYKSZF3GR](../../data/2026/W34/openai.json); vendor URL: https://status.openai.com/incidents/01M0G1RZER839AZXWMYKSZF3GR
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9587b15992c2a1148786c310"></a>
+
+- Canonical ID: `ci-9587b15992c2a1148786c310` (1 source records).
+  - [openai/01M0E7K87VJNMGW0QTMHPEQQ39](../../data/2026/W34/openai.json); vendor URL: https://status.openai.com/incidents/01M0E7K87VJNMGW0QTMHPEQQ39
+- Start time basis: `vendor_reported`.
+
+<a id="ci-2e75b1290a7c1afd4ac9b53f"></a>
+
+- Canonical ID: `ci-2e75b1290a7c1afd4ac9b53f` (1 source records).
+  - [aws/fc1f58873aee247e](../../data/2026/W34/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
+
+<a id="ci-bb251c04c7f46a6e22a32b10"></a>
+
+- Canonical ID: `ci-bb251c04c7f46a6e22a32b10` (1 source records).
+  - [github/gx7js8bd0jpz](../../data/2026/W34/github.json); vendor URL: https://stspg.io/q3ck88mqw08z
+- Start time basis: `vendor_reported`.
+
+<a id="ci-92298a07da7f4e143645a283"></a>
+
+- Canonical ID: `ci-92298a07da7f4e143645a283` (1 source records).
+  - [cloudflare/2hxsrlmxlf5h](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/2hxsrlmxlf5h
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b6fab1e5cfb8b355138d4b76"></a>
+
+- Canonical ID: `ci-b6fab1e5cfb8b355138d4b76` (1 source records).
+  - [cloudflare/xdzz2t911t1w](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/xdzz2t911t1w
+- Start time basis: `vendor_reported`.
+
+<a id="ci-811b2bb1c7cc5553bfe4cf09"></a>
+
+- Canonical ID: `ci-811b2bb1c7cc5553bfe4cf09` (1 source records).
+  - [cloudflare/pqcnjfxrycb2](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/pqcnjfxrycb2
+- Start time basis: `vendor_reported`.
+
+<a id="ci-f573f086f5eab6684f87d963"></a>
+
+- Canonical ID: `ci-f573f086f5eab6684f87d963` (1 source records).
+  - [circleci/bd3dy5yl5cqm](../../data/2026/W34/circleci.json); vendor URL: https://stspg.io/gwc69d86r5sy
+- Start time basis: `vendor_reported`.
+
+<a id="ci-60e15e2c5f279414a5d30974"></a>
+
+- Canonical ID: `ci-60e15e2c5f279414a5d30974` (1 source records).
+  - [openai/01M0B4WSV41BCFZ9VDWKSMQVSP](../../data/2026/W34/openai.json); vendor URL: https://status.openai.com/incidents/01M0B4WSV41BCFZ9VDWKSMQVSP
+- Start time basis: `vendor_reported`.
+
+<a id="ci-b0c19fb830d1da35db9cce7e"></a>
+
+- Canonical ID: `ci-b0c19fb830d1da35db9cce7e` (1 source records).
+  - [cloudflare/5g1nlg4hc2lh](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/5g1nlg4hc2lh
+- Start time basis: `vendor_reported`.
+
+<a id="ci-69f362f0e7af738e5a7e8456"></a>
+
+- Canonical ID: `ci-69f362f0e7af738e5a7e8456` (1 source records).
+  - [cloudflare/fwvfd2zzbvg8](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/fwvfd2zzbvg8
+- Start time basis: `vendor_reported`.
+
+<a id="ci-9332cee4012bebf9cda47f52"></a>
+
+- Canonical ID: `ci-9332cee4012bebf9cda47f52` (1 source records).
+  - [cloudflare/jzv93gkq85bj](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/jzv93gkq85bj
+- Start time basis: `vendor_reported`.
+
+<a id="ci-18a9e85c50e05ae6021b74af"></a>
+
+- Canonical ID: `ci-18a9e85c50e05ae6021b74af` (1 source records).
+  - [grafana/j0h67pnrf9cj](../../data/2026/W34/grafana.json); vendor URL: https://stspg.io/1g4dpsdmf2cf
+- Start time basis: `vendor_reported`.
+- Warning: Vendor resolved_at precedes started_at; duration is unknown, score uses zero duration; decision:legacy-time-grafana-j0h67pnrf9cj
+
+<a id="ci-7264db2dcf9dc7e59f691f26"></a>
+
+- Canonical ID: `ci-7264db2dcf9dc7e59f691f26` (1 source records).
+  - [cloudflare/1wwc0f6m1c21](../../data/2026/W34/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/1wwc0f6m1c21
+- Start time basis: `vendor_reported`.
+
 ## Sources
 
-| Vendor | Status | Incidents seen | Parse errors |
+| Vendor | Status | Source records seen | Parse errors |
 |--------|--------|----------------|--------------|
 | anthropic | ok | 50 | 0 |
 | atlassian | ok | 34 | 0 |
-| aws | ok | 4 | 0 |
+| aws | ok | 6 | 0 |
 | circleci | ok | 50 | 0 |
 | cloudflare | ok | 50 | 0 |
-| datadog | ok | 50 | 0 |
+| datadog | FETCH FAILED: GET https://status.datadoghq.com/api/v2/incidents.json: status 403 | 0 | 0 |
 | digitalocean | ok | 50 | 0 |
-| gcp | ok | 5 | 0 |
+| gcp | ok | 8 | 0 |
 | github | ok | 50 | 0 |
 | grafana | ok | 50 | 0 |
 | openai | ok | 25 | 0 |
-| slack | ok | 41 | 0 |
+| slack | ok | 28 | 0 |
 | stripe | ok | 50 | 0 |
-
+| yandexcloud | FETCH FAILED: GET https://status.cloud.yandex.ru/api/incidents?lang=en&page=4: status 403 | 0 | 0 |

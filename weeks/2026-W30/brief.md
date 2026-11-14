@@ -2,12 +2,20 @@
 
 2026-07-20 to 2026-07-26 (UTC).
 
+60 source records (61 saved revisions) → 60 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. grafana — Stacks using SCIM user provisioning are currently unable to log into Grafana
 
 - URL: https://stspg.io/93c20d1dzpdp
 - Window: 2026-07-23 10:13 to 2026-07-23 15:37 UTC (5h 24m)
 - Impact: major, status: resolved
-- Components: AWS Australia - prod-ap-southeast-2, AWS Brazil - prod-sa-east-1, AWS Canada - prod-ca-east-0, AWS Germany - prod-eu-west-2, AWS Germany - prod-eu-west-4, AWS India - prod-ap-south-1, AWS Japan - prod-ap-northeast-0, AWS UAE - prod-me-central-1, AWS Singapore - prod-ap-southeast-1, AWS Sweden - prod-eu-north-0, AWS US East - prod-us-east-0, AWS US East - prod-us-east-2, AWS US West - prod-us-west-0, AWS Australia - prod-au-southeast-1, AWS UK - prod-gb-south-1, AWS Ireland - prod-eu-west-6, Azure US Central - us-central2, AWS Switzerland - prod-eu-central-0, Azure Netherlands - prod-eu-west-3, GCP Australia - prod-au-southeast-0, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0, GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4, GCP US East - prod-us-east-1, play.grafana.org, Federal Cloud - AWS US Gov West
+- Components: AWS Australia - prod-ap-southeast-2, AWS Australia - prod-au-southeast-1, AWS Brazil - prod-sa-east-1, AWS Canada - prod-ca-east-0, AWS Germany - prod-eu-west-2, AWS Germany - prod-eu-west-4, AWS India - prod-ap-south-1, AWS Ireland - prod-eu-west-6, AWS Japan - prod-ap-northeast-0, AWS Singapore - prod-ap-southeast-1, AWS Sweden - prod-eu-north-0, AWS Switzerland - prod-eu-central-0, AWS UAE - prod-me-central-1, AWS UK - prod-gb-south-1, AWS US East - prod-us-east-0, AWS US East - prod-us-east-2, AWS US West - prod-us-west-0, Azure Netherlands - prod-eu-west-3, Azure US Central - us-central2, Federal Cloud - AWS US Gov West, GCP Australia - prod-au-southeast-0, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0, GCP US Central - prod-us-central-0, GCP US Central - prod-us-central-3, GCP US Central - prod-us-central-4, GCP US East - prod-us-east-1, play.grafana.org
+
+<a id="ci-ecf9d6bdd2eba01d8cde5c68"></a>
+
+- Canonical ID: `ci-ecf9d6bdd2eba01d8cde5c68` (1 source records).
+  - [grafana/gckqs9bstld1](../../data/2026/W30/grafana.json); vendor URL: https://stspg.io/93c20d1dzpdp
+- Start time basis: `vendor_reported`.
 
   - `2026-07-23 10:13` investigating — We are currently facing an issue where Stacks using SCIM user provisioning are currently unable to log into Grafana. We are currently investigating this issue and working on a fix.
   - `2026-07-23 11:26` identified — The issue has been identified and we are currently working on the mitigations now. The scope is much more limited than initially thought only specific SCIM configurations are impacted.
@@ -21,6 +29,12 @@
 - Impact: none, status: resolved
 - Components: —
 
+<a id="ci-73994a4f2afecc8a2699b70b"></a>
+
+- Canonical ID: `ci-73994a4f2afecc8a2699b70b` (1 source records).
+  - [anthropic/yc7mr2gvl914](../../data/2026/W30/anthropic.json); vendor URL: https://stspg.io/y411l9qwm1r8
+- Start time basis: `vendor_reported`.
+
   - `2026-07-22 17:56` identified — Users who installed the following add-ins may experience issues accessing the add-in functionality: Claude by Anthropic for PowerPoint, Claude by Anthropic for Word, and Claude by Anthropic for Excel. To regain immediate access to Claude for Microsoft 365, install the add-in here: https://marketplace.microsoft.com/en-us/product/office/wa200010725
   - `2026-07-24 15:36` resolved — This issue has been resolved.
 
@@ -30,6 +44,12 @@
 - Window: 2026-07-25 22:09 to 2026-07-27 16:32 UTC (1d 18h 22m)
 - Impact: minor, status: resolved
 - Components: —
+
+<a id="ci-1aa02afa33e6459e6e254fa7"></a>
+
+- Canonical ID: `ci-1aa02afa33e6459e6e254fa7` (1 source records).
+  - [openai/01KYDN6YPS6ARY1EC9089N089G](../../data/2026/W30/openai.json); vendor URL: https://status.openai.com/incidents/01KYDN6YPS6ARY1EC9089N089G
+- Start time basis: `vendor_reported`.
 
   - `2026-07-25 22:09` investigating — We are investigating intermittent errors that may prevent some users from loading or continuing conversations in ChatGPT. The current period of impact began around 1:00 PM PT.
   - `2026-07-25 23:16` identified — We have identified the source of intermittent errors affecting some ChatGPT conversations and are working to mitigate the issue. Error rates have decreased, but some users may continue to experience failures.
@@ -42,6 +62,12 @@
 - Window: 2026-07-23 15:36 to 2026-07-24 19:33 UTC (1d 3h 57m)
 - Impact: minor, status: resolved
 - Components: —
+
+<a id="ci-0e74a35a4681977d515bc24d"></a>
+
+- Canonical ID: `ci-0e74a35a4681977d515bc24d` (1 source records).
+  - [openai/01KY7SX5MYJ2BP51X5MXAPYX71](../../data/2026/W30/openai.json); vendor URL: https://status.openai.com/incidents/01KY7SX5MYJ2BP51X5MXAPYX71
+- Start time basis: `vendor_reported`.
 
   - `2026-07-23 15:36` investigating — We are investigating the issue for the listed services.
   - `2026-07-23 15:56` identified — We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation.
@@ -62,7 +88,13 @@
 - URL: https://stspg.io/cjjmv6qvg1wl
 - Window: 2026-07-21 18:43 to 2026-07-21 21:06 UTC (2h 22m)
 - Impact: major, status: resolved
-- Components: AWS Brazil - prod-sa-east-1, AWS Canada - prod-ca-east-0, AWS Germany - prod-eu-west-2, AWS India - prod-ap-south-1, AWS Japan - prod-ap-northeast-0, AWS Singapore - prod-ap-southeast-1, AWS US West - prod-us-west-0, AWS Switzerland - prod-eu-central-0, Azure Netherlands - prod-eu-west-3, Azure US Central - us-central7, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0
+- Components: AWS Brazil - prod-sa-east-1, AWS Canada - prod-ca-east-0, AWS Germany - prod-eu-west-2, AWS India - prod-ap-south-1, AWS Japan - prod-ap-northeast-0, AWS Singapore - prod-ap-southeast-1, AWS Switzerland - prod-eu-central-0, AWS US West - prod-us-west-0, Azure Netherlands - prod-eu-west-3, Azure US Central - us-central7, GCP Belgium - prod-eu-west-0, GCP Brazil - prod-sa-east-0, GCP India - prod-ap-south-0, GCP Singapore - prod-ap-southeast-0, GCP UK - prod-gb-south-0
+
+<a id="ci-4e1351d93fe3dc96ed255554"></a>
+
+- Canonical ID: `ci-4e1351d93fe3dc96ed255554` (1 source records).
+  - [grafana/91n91dr0dg6x](../../data/2026/W30/grafana.json); vendor URL: https://stspg.io/cjjmv6qvg1wl
+- Start time basis: `vendor_reported`.
 
   - `2026-07-21 18:43` investigating — Cloud Log Exporter is temporarily not available in the marked regions. We are currently investigating this issue and will update as soon as we have more info to share.
   - `2026-07-21 20:04` monitoring — A fix has been implemented and we are monitoring the results.
@@ -97,4 +129,3 @@
 - `github` Incident with Pull Requests (45m) — https://stspg.io/sm1tp7kfm4vj
 - `github` Actions run failures and delays (41m) — https://stspg.io/448g37mrq066
 - `github` Several GPT models degraded (28m) — https://stspg.io/vh0xxw69dr6v
-

@@ -2,16 +2,25 @@
 
 2026-10-12 to 2026-10-18 (UTC).
 
+57 source records (58 saved revisions) → 57 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
+
 ## 1. grafana — Phone call notifications to numbers in Russia and Kazakhstan are blocked
 
 - URL: https://stspg.io/3kqkpqlqm6f5
-- Window: 2026-10-13 09:23 to not yet (6d 4h 45m (ongoing))
-- Impact: minor, status: investigating
+- Window: 2026-10-13 09:23 to 2026-10-19 11:39 UTC (6d 2h 15m)
+- Impact: minor, status: resolved
 - Components: Incident Management and Response (IRM)
+
+<a id="ci-caaa24671b482ffc04205c2e"></a>
+
+- Canonical ID: `ci-caaa24671b482ffc04205c2e` (1 source records).
+  - [grafana/fj19hw3kzfry](../../data/2026/W42/grafana.json); vendor URL: https://stspg.io/3kqkpqlqm6f5
+- Start time basis: `vendor_reported`.
 
   - `2026-10-13 09:23` investigating — Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
   - `2026-10-13 21:35` investigating — Phone call notifications to numbers in Russia and Kazakhstan are currently blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
   - `2026-10-16 19:44` investigating — Phone call notifications to numbers in Russia and Kazakhstan are still blocked. We are working to resolve the issue. As SMS support is limited in these countries, we recommend using mobile push notifications as an alternative. We do not currently have an estimated resolution time. We will provide further updates as more information becomes available.
+  - `2026-10-19 11:39` resolved — Following further investigation, we've confirmed that SMS delivery to certain destinations is not currently supported. We've updated our documentation to clarify the supported destinations and available notification options. We recommend using mobile push notifications or phone calls as alternatives where SMS delivery is unavailable.
 
 ## 2. cloudflare — Audit Logs v2 ingestion is missing multiple Cloudflare products
 
@@ -19,6 +28,12 @@
 - Window: 2026-10-13 10:14 to 2026-10-16 00:36 UTC (2d 14h 21m)
 - Impact: minor, status: resolved
 - Components: Audit Logs
+
+<a id="ci-e92f0b68c0d33f623c50edd4"></a>
+
+- Canonical ID: `ci-e92f0b68c0d33f623c50edd4` (1 source records).
+  - [cloudflare/hpmrg8d5vwr6](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/hpmrg8d5vwr6
+- Start time basis: `vendor_reported`.
 
   - `2026-10-13 10:14` identified — Since 2026-10-12 at 16:57:24 UTC, audit logs from multiple Cloudflare products are not ingested into the audit logs v2 database anymore. V1 audit logs are not affected
   - `2026-10-13 11:45` monitoring — We are continuing to monitor for any further issues.
@@ -30,6 +45,12 @@
 - Window: 2026-10-14 17:00 to 2026-10-16 10:44 UTC (1d 17h 44m)
 - Impact: minor, status: resolved
 - Components: —
+
+<a id="ci-95f853d46fd4652c1d926f86"></a>
+
+- Canonical ID: `ci-95f853d46fd4652c1d926f86` (1 source records).
+  - [openai/01M4XNQX7C6RCBNGX9H711WFSG](../../data/2026/W42/openai.json); vendor URL: https://status.openai.com/incidents/01M4XNQX7C6RCBNGX9H711WFSG
+- Start time basis: `vendor_reported`.
 
   - `2026-10-14 17:00` identified — We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.
   - `2026-10-14 17:02` identified — We have identified an issue causing delays in publishing organization cost data through the Costs API. API and ChatGPT usage are not affected, and other reporting channels remain available. We are working to restore normal data freshness.
@@ -44,6 +65,12 @@
 - Impact: minor, status: resolved
 - Components: Los Angeles, CA, United States - (LAX)
 
+<a id="ci-74bcdd8823be798e74a86239"></a>
+
+- Canonical ID: `ci-74bcdd8823be798e74a86239` (1 source records).
+  - [cloudflare/vyy1a1dspusg](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/vyy1a1dspusg
+- Start time basis: `vendor_reported`.
+
   - `2026-10-12 08:52` investigating — Customers reaching Los Angeles (LAX) colo may see an elevate number of errors. Our team is investigating and working on mitigating the issue.
   - `2026-10-12 21:41` identified — We are continuing to work on a fix for the issue.
   - `2026-10-13 17:40` resolved — This incident has been resolved.
@@ -54,6 +81,12 @@
 - Window: 2026-10-14 05:36 to 2026-10-15 01:29 UTC (19h 53m)
 - Impact: minor, status: resolved
 - Components: Workers
+
+<a id="ci-d3e5b57b3543afbdbd1b13b9"></a>
+
+- Canonical ID: `ci-d3e5b57b3543afbdbd1b13b9` (1 source records).
+  - [cloudflare/npjny9agana8](../../data/2026/W42/cloudflare.json); vendor URL: https://www.cloudflarestatus.com/incidents/npjny9agana8
+- Start time basis: `vendor_reported`.
 
   - `2026-10-14 05:36` investigating — Cloudflare is investigating issues with Workers Cron Triggers. Customers who have recently created or modified a Cron Trigger schedule may find that the schedule is not executing as expected. Pre-existing Cron Trigger schedules that have not been recently modified are not affected. We are working to identify the cause and mitigate this problem. More updates to follow shortly.
   - `2026-10-14 07:23` identified — A fix has been identified and is underway
@@ -88,4 +121,3 @@
 - `grafana` Tempo: High Latency in prod-eu-west-2 (2h 23m) — https://stspg.io/qth8ndlqhdj1
 - `cloudflare` Network Performance Issues in London (13m) — https://www.cloudflarestatus.com/incidents/ybyy2whvd8ef
 - `cloudflare` Cloudflare Service Issues (28m) — https://www.cloudflarestatus.com/incidents/z7vongh8rqc1
-

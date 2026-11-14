@@ -1,13 +1,21 @@
-# Week 2026-W33 — top 5 of 22 above threshold
+# Week 2026-W33 — top 5 of 23 above threshold
 
 2026-08-10 to 2026-08-16 (UTC).
+
+49 source records (51 saved revisions) → 49 canonical incidents; 0 repeated records grouped; 0 candidate pairs pending review. Rules: `identity-v1`. Counts refer to collected vendor reports, not all real-world outages.
 
 ## 1. slack — Trouble Accessing Historical Messages With Custom Data Retention Policies Enabled
 
 - URL: https://slack-status.com/2026-08/e07b9271f0346c3b
-- Window: 2026-08-13 21:21 to not yet (9d 16h 37m (ongoing))
-- Impact: unknown, status: investigating
+- Window: 2026-08-13 21:21 to 2026-09-14 22:31 UTC (32d 1h 9m)
+- Impact: unknown, status: resolved
 - Components: Messaging, Workspace/Org Administration
+
+<a id="ci-a6330b280a7b656c66e3293c"></a>
+
+- Canonical ID: `ci-a6330b280a7b656c66e3293c` (1 source records).
+  - [slack/1576](../../data/2026/W33/slack.json); vendor URL: https://slack-status.com/2026-08/e07b9271f0346c3b
+- Start time basis: `vendor_reported`.
 
   - `2026-08-13 21:21` unknown — Users with custom data retention policies enabled might be unable to see or load older messages. We apologize for the trouble and we'll share more news as it becomes available.
   - `2026-08-13 21:49` unknown — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Our teams are working to identify the technical trigger and an appropriate fix. We'll provide an update as more news becomes available.
@@ -16,6 +24,13 @@
   - `2026-08-14 21:39` unknown — We're continuing to investigate an issue affecting a subset of channels with custom message retention settings. Custom channel retention settings have been restored for affected customers. Custom retention jobs remain on hold for some customers as we work to fully resolve the underlying cause regarding the custom message retention issues.
   - `2026-08-17 21:57` unknown — We're continuing our restoration efforts regarding this issue affecting a subset of channels with custom message retention settings. While we work to resolve this issue, data retention processing remains paused for affected customers. We will provide another update as additional information becomes available.
   - `2026-08-20 22:54` unknown — We're continuing to work on restoring messages, message edits, and file shares for a limited number of workspaces that were affected by an issue with custom data retention settings. We've fixed what triggered the issue and are running data recovery using backup restoration methods. Custom retention settings have been restored for impacted channels, and we're gradually re-enabling retention jobs. We will provide another update as additional information becomes available.
+  - `2026-08-25 20:55` unknown — We’re continuing our work to restore the remaining message data affected by this issue. Our teams have made progress developing and validating the recovery process for messages, message edits, and shared files. We’re addressing additional technical dependencies and completing validation before proceeding with the next stages of restoration. We’ll continue to provide updates as we make progress.
+  - `2026-08-27 18:58` unknown — We’re continuing our work to restore the remaining message data affected by this issue. We’ve made further progress across the recovery processes for messages, message edits, and shared files. Validation of the message-edit recovery process has identified additional adjustments needed before restoration proceeds, while preparation and validation for message recovery continue. We’ve also completed additional development work supporting shared-file restoration, including handling for shared channels. Custom retention processing has been re-enabled for affected active workspaces. We’ll continue to provide updates as restoration and validation progress.
+  - `2026-09-01 22:51` unknown — We continue to restore batches of messages, message edits, and shared files. Each batch requires careful planning, monitoring, and validation to ensure the affected messages are accurately restored. Custom retention processing remains re-enabled for affected active workspaces. Thank you for bearing with us while we continue to work through this complex and nuanced issue. More updates will come as restoration and validation progress.
+  - `2026-09-04 17:00` unknown — We’ve made further progress restoring messages, message edits, and shared files affected by this issue. We identified and resolved a technical limit that was slowing recovery for some accounts, and recovery for Slack Connect workspaces is now underway. Message edit restoration is nearing completion for affected workspaces. We’re continuing to validate restored data as recovery progresses. We’ll provide another update as significant progress is made.
+  - `2026-09-09 02:37` unknown — We've made further progress restoring message data across affected teams and channels, with most batches now complete. We've deployed a tool to correct thread reply links affected during the restore process and are running it now. Slack Connect message restoration is resuming production runs, with results being closely monitored. We'll provide an update as soon as new information becomes available.
+  - `2026-09-11 15:53` unknown — We’ve completed message data restoration across affected teams and channels, and are now focused on restoring file shares which should be the last step towards resolution. We'll provide another update as soon as new information becomes available.
+  - `2026-09-14 22:31` unknown — We've completed restoring shared files for all remaining affected workspaces and restored and verified all affected data. If you still can't see previous content, please reload Slack using Command + Shift + R (Mac) or Ctrl + Shift + R (Windows/Linux). Thank you for your patience while we sorted out this issue.
 
 ## 2. aws — Increased Packet loss
 
@@ -23,6 +38,13 @@
 - Window: 2026-08-15 03:42 to 2026-08-18 04:01 UTC (3d 0h 18m)
 - Impact: unknown, status: resolved
 - Components: directconnect-eu-central-1
+
+<a id="ci-74168a6f7a4d9562cab32adc"></a>
+
+- Canonical ID: `ci-74168a6f7a4d9562cab32adc` (1 source records).
+  - [aws/8d9678d7476c58c2](../../data/2026/W33/aws.json); vendor URL: https://health.aws.amazon.com/health/status
+- Start time basis: `first_observed_update`.
+- Warning: AWS onset is the first observed message, not a verified impact start
 
   - `2026-08-15 03:42` investigating — We are investigating increased packet loss, impacting AWS Direct Connect connectivity for some customers in the EU-CENTRAL-1 Region.
   - `2026-08-15 04:42` investigating — We can confirm packet loss impacting Direct Connect connections in the EU-CENTRAL-1 Region. Engineers were automatically engaged and immediately began working to both identify the root cause, and identify multiple parallel paths to mitigate the issue. At this time, we are seeing early signs of recovery. We will provide another update in 60 minutes, or sooner if we have additional information to share.
@@ -50,7 +72,13 @@
 - URL: https://stspg.io/twh93x4twdps
 - Window: 2026-08-12 13:50 to 2026-08-12 18:07 UTC (4h 16m)
 - Impact: minor, status: resolved
-- Components: claude.ai, Claude API (api.anthropic.com), Claude Code, Claude Cowork
+- Components: Claude API (api.anthropic.com), Claude Code, Claude Cowork, claude.ai
+
+<a id="ci-e42b803697a607167ed3594c"></a>
+
+- Canonical ID: `ci-e42b803697a607167ed3594c` (1 source records).
+  - [anthropic/rk6gkg2gwfny](../../data/2026/W33/anthropic.json); vendor URL: https://stspg.io/twh93x4twdps
+- Start time basis: `vendor_reported`.
 
   - `2026-08-12 13:50` investigating — We are investigating elevated errors on requests to multiple models. We will provide an update as soon as possible.
   - `2026-08-12 16:10` identified — We have identified an issue which resulted in errors across multiple models. At this time, errors are primarily impacting Claude Fable 5 and we are working to fully resolve these issues.
@@ -64,6 +92,12 @@
 - Impact: minor, status: resolved
 - Components: —
 
+<a id="ci-badcb4dda839fe0697b86a2b"></a>
+
+- Canonical ID: `ci-badcb4dda839fe0697b86a2b` (1 source records).
+  - [openai/01KZNZTPWMV06Z6TQNMY1R1QDR](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZNZTPWMV06Z6TQNMY1R1QDR
+- Start time basis: `vendor_reported`.
+
   - `2026-08-10 14:04` investigating — We have identified that users are experiencing elevated errors for the impacted services. We are working on implementing a mitigation.
   - `2026-08-10 15:07` monitoring — We have applied the mitigation and are monitoring the recovery.
   - `2026-08-11 02:48` resolved — All impacted services have now fully recovered.
@@ -75,13 +109,19 @@
 - Impact: minor, status: resolved
 - Components: —
 
+<a id="ci-cf17e4f6d1e98879977e4377"></a>
+
+- Canonical ID: `ci-cf17e4f6d1e98879977e4377` (1 source records).
+  - [openai/01KZXVAJQ5XFH7PTM43XVPQWGJ](../../data/2026/W33/openai.json); vendor URL: https://status.openai.com/incidents/01KZXVAJQ5XFH7PTM43XVPQWGJ
+- Start time basis: `vendor_reported`.
+
   - `2026-08-13 15:19` investigating — We are investigating the issue for the listed services.
   - `2026-08-13 15:48` identified — We are still implementing the mitigation.
   - `2026-08-13 16:54` monitoring — We have applied the mitigation and are monitoring the recovery.
   - `2026-08-13 22:07` monitoring — We’ve applied a mitigation and are monitoring recovery following an issue with a downstream provider.
   - `2026-08-13 23:58` resolved — All impacted services have now fully recovered.
 
-## Also above threshold (17)
+## Also above threshold (18)
 
 - `openai` Error while creating custom RBAC roles for Enterprise users (8h 23m) — https://status.openai.com/incidents/01KZXPZD4KHMQQFF09PSNNEZT8
 - `anthropic` Elevated errors for Claude Mythos 5, Claude Fable 5, and Claude Sonnet 5 (1h 34m) — https://stspg.io/pbnrks0mrn4w
@@ -91,6 +131,7 @@
 - `anthropic` Service disruption on Claude services (1h 27m) — https://stspg.io/wlcwm73lh5vb
 - `anthropic` Issues reaching status.claude.com (2h 55m) — https://stspg.io/xvp8fkkjmtq0
 - `anthropic` Service disruption on Claude services (35m) — https://stspg.io/cc6kmwrqhzmh
+- `yandexcloud` Problem with Cloud CDN services (2h 36m) — https://status.yandex.cloud/en/incidents/1919
 - `cloudflare` Cloudflare Analytics Delays (2h 4m) — https://www.cloudflarestatus.com/incidents/pb0z7j24ppq1
 - `cloudflare` Issues with 1.1.1.1 public resolver in Tel Aviv (TLV) (2h 3m) — https://www.cloudflarestatus.com/incidents/32jmvvgg7wj9
 - `cloudflare` Cloudflare Realtimekit API had reduced availability (2h 0m) — https://www.cloudflarestatus.com/incidents/d9l78m4jbtrv
@@ -100,4 +141,3 @@
 - `grafana` K6 Test Outage (1h 22m) — https://stspg.io/tv8plq4gysv5
 - `github` Disruption with Login and Release Asset downloads (1h 17m) — https://stspg.io/xp36nwz4rrh1
 - `anthropic` Elevated errors for Claude Fable 5 (30m) — https://stspg.io/vpnnwf2vhdv4
-
