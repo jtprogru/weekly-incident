@@ -13,7 +13,11 @@ It exists to feed a weekly write-up. The code gathers and ranks; a human decides
 ## What it produces
 
 ```
-data/2026/W34/github.json      one file per vendor per ISO week, upsert-only
+data/2026/W34/github.json      source records; original location retained, upsert-only
+data/observations/            immutable snapshots and ordered source revisions
+data/identity/registry.json   persistent canonical IDs, aliases, merge/split journal
+data/canonical/               derived incidents and integrity manifest
+dedup/decisions.yaml           reviewed identity and field decisions
 data/2026/W34/index.json       scored summary of the week, fully derived
 data/state.json                last successful collect, per source
 weeks/2026-W34/digest.md       the fact sheet: scored table, timelines, source health
@@ -49,7 +53,7 @@ make cover build fmt      # the rest of the targets; make help lists them
 
 `collect` is the only thing that touches the network. `digest` reads the archive alone, so a week can be re-rendered with a different threshold or a different score without re-fetching anything.
 
-Both accept `-config`, `-data` and `-now` (RFC 3339); pinning the clock is what makes a run reproducible, and the tests rely on it. `digest` also takes `-week` and `-out`, and prints the rendered week to stdout with everything else on stderr, which is how the workflow learns which week it just built. `collect` takes `-summary` for the commit message and `-warning` for the archive-gap alert, both written only when there is something to say.
+Both accept `-config`, `-data` and `-now` (RFC 3339); pinning the clock is what makes a run reproducible, and the tests rely on it. `digest` also takes `-week` and `-out`, and prints the rendered week to stdout with everything else on stderr, which is how the workflow learns which week it just built. `collect` also takes `-result` for separate source/canonical persistence status. It takes `-summary` for the commit message and `-warning` for the archive-gap alert, both written only when there is something to say.
 
 Parser tests run offline against feed responses captured in `testdata/`. When a vendor changes its schema and a test fails, re-capture with `make testdata` instead of editing the golden by hand.
 
@@ -61,15 +65,61 @@ Parser tests run offline against feed responses captured in `testdata/`. When a 
 
 Both write to `main` and share a `concurrency: archive` group; if a push still loses a race, the job resyncs onto the new tip and re-runs itself. Collect merges upsert-only and digest reads only the archive, so the second pass lands exactly what the first one would have.
 
-`ci.yml` gates every push and pull request on `make lint` and `make test`, so the gate is `gofmt -l`, `go vet`, golangci-lint and `go test -race` — the same four checks a developer runs locally, from the same targets. The scheduled workflows call `make collect` and `make digest` for the same reason: the only thing CI adds is the git plumbing around them.
+`ci.yml` gates every push and pull request on `make lint`, `make test` and `make dedup-validate`, so the gate is `gofmt -l`, `go vet`, golangci-lint and `go test -race` — the same four checks a developer runs locally, from the same targets. The scheduled workflows call `make collect` and `make digest` for the same reason: the only thing CI adds is the git plumbing around them.
 
 All three need `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` as repository secrets for [notiflow](https://github.com/jtprogru/notiflow) notifications: the week's summary on Monday, a failure alert from either job, and a separate alert when `collect` finds the archive going stale. That last one matters more than it looks — a gap in the archive is silent damage, and the incidents that aged out of the feeds are gone for good.
+
+## Deduplication and historical rebuilds
+
+The checked-in configuration uses `dedup.mode: enforce`. Source records and
+snapshots remain intact; indexes and releases count canonical incidents.
+Identity resolution runs across all weeks before selecting the reporting week.
+The 2026-11-14 migration preserved 1,195 source records from 14 vendors and
+produced 1,194 canonical incidents across 84 weeks. After reconciling upstream
+`ae88b6b`, the archive contains 1,207 source records, 1,291 saved revisions and
+1,206 canonical incidents; all prior snapshots and IDs are retained. This is a count under the
+current rules, not proof that every semantic duplicate has been found.
+
+```bash
+make dedup-audit NOW=2026-11-14T00:00:00Z  # candidates and evidence only
+make dedup-plan NOW=2026-11-14T00:00:00Z   # preview decisions, fields, scores, tops
+# Inspect reports/dedup/plan.md and plan.json before applying.
+make dedup-apply                         # refuses stale or edited plans
+make dedup-rebuild NOW=2026-11-14T00:00:00Z # all weeks, no notifications
+make dedup-validate                      # hashes, membership, decisions, builder
+```
+
+Use a suitable fixed `NOW` for a new review. `apply` uses the time inside its
+plan; it does not silently substitute today's clock. The Make targets use
+`data`, `config.yaml`, `weeks` and `reports/dedup`; the binary accepts explicit
+paths for a copy of the archive. Full commands, decision examples, recovery and
+rollback are in [DEDUPLICATION.md](DEDUPLICATION.md). The completed checklist is
+in [DEDUPLICATION_PLAN.md](DEDUPLICATION_PLAN.md); migration evidence is in
+[DEDUPLICATION_VALIDATION.md](DEDUPLICATION_VALIDATION.md).
+
+`audit-v1` proposes candidates from repeated source keys, event URLs, update IDs
+and exact timestamp/body matches. AWS's common status URL is excluded. Audit
+never merges anything. `identity-v1` permits automatic AWS merges only for an
+unambiguous containment of at least two distinct non-template updates on the
+same service-region, without contradictory closure evidence. Other candidates
+require decisions in `dedup/decisions.yaml`. Similar titles alone and
+cross-vendor correlations do not create identity groups. Fuzzy rules are not
+enabled.
+
+`off` renders source records; `shadow` additionally writes a comparison without
+saving identity decisions; `enforce` renders the validated canonical view.
+Changing rules or decisions requires `plan`/`apply`. A damaged derived artifact
+blocks digest generation until rebuilt. Collect saves source observations first
+and reports source/canonical success separately so its workflow can preserve
+source data even when reconciliation fails.
 
 ## The score
 
 `duration_minutes × max(1, component_count) × vendor_weight`.
 
 Every multiplier is printed next to the row it produced, so the ordering can be explained without reading the code. An unresolved incident is measured against render time and marked `ongoing`.
+
+Closed records with contradictory vendor timestamps have unknown duration only after a pinned review decision. Their duration contribution to the score is zero, their original timestamps are preserved, and the digest shows a warning; zero contribution does not mean a zero-minute outage. Components with the same display name may have different vendor IDs, so their source multiplicity is retained.
 
 The score sorts and suggests; it does not decide. Picking the incident of the week is an editorial call.
 
@@ -91,7 +141,7 @@ An incident earns a full entry in the digest if it ran at least `min_duration_mi
 
 **Yandex Cloud names every affected service.** A zone-wide outage lists eighty-odd components and the score multiplies by that count, so such an incident outscores the rest of its week dozens of times over. The ordering is right; the margin says nothing.
 
-**AWS incidents have no stable identifier.** The key is derived from the first update visible in the feed, so a chain sitting on the boundary of the 50-item window can be re-keyed and land in the archive twice. Accepted knowingly: a duplicate is cheaper than complicating the merge for a feed that may vanish anyway.
+**AWS incidents have no stable identifier.** The key is derived from the first update visible in the feed, so a chain sitting on the boundary of the 50-item window can be re-keyed and land in the archive twice. Both source records are retained, while the canonical layer groups chains meeting the narrow AWS containment rule. Inconclusive chains remain separate.
 
 **AWS start times are approximate.** The archive records the first update that reached the feed. The true onset appears only in prose inside the final summary ("Starting August 14 7:33 PM PDT"), which is not worth parsing with a regex.
 
@@ -111,11 +161,15 @@ The crawler sends a `User-Agent` naming this repository, and makes fourteen requ
 
 ```
 cmd/collect      fetch and merge
-cmd/digest       render a week from the archive
-internal/model   canonical Incident, Update, Score, WeekIndex
+cmd/digest       render a week from the validated canonical view
+cmd/dedup        audit, plan/apply, validate, rebuild
+internal/model   source Incident, Update, Score, WeekIndex, canonical metadata
+internal/dedup   candidates, decisions, stable identities and aliases
+internal/canonical timelines, field provenance, manifests, score comparisons
+internal/storage atomic writes and local archive lock
 internal/config  config.yaml
 internal/source  statuspage.go, slack.go, gcp.go, awsrss.go, yandexcloud.go
-internal/archive ISO weeks, upsert, state
+internal/archive ISO weeks, global upsert, immutable observations, state
 internal/clock   -now, so a run can be pinned to a moment
 internal/score   ranking and the week index
 internal/render  digest.md, brief.md, the Telegram notification
