@@ -141,6 +141,14 @@ func runWithResult(configPath, dataDir, summaryPath, warningPath, nowFlag, resul
 					sc.Vendor, res.ParseErrors, len(res.Incidents)+res.ParseErrors)
 			}
 		}
+
+		// Carry the last good fetch forward so the digest can say how long a
+		// dead source has been dead. A source that just answered has already
+		// stamped state.Sources with this run's clock.
+		if last, ok := state.Sources[sc.Vendor]; ok && !last.IsZero() {
+			last := last
+			st.LastSuccessAt = &last
+		}
 		statuses = append(statuses, st)
 
 		if ctx.Err() != nil {

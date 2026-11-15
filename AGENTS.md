@@ -49,6 +49,8 @@ The same rule covers the derived files, which carry a timestamp and would otherw
 
 **Threshold is a disjunction:** `duration >= min_duration_minutes` OR `impact >= min_impact`. A four-minute critical outage beats a two-day minor degradation. Nothing is ever dropped from `data/` — sub-threshold incidents collapse into a one-line tail in the digest.
 
+**A dead source is a mark, not a failure.** A vendor that stops answering leaves no trace in the incident list, so the digest and the brief open with a note naming the unavailable vendors, how long each has been silent, and the fetch error. The age comes from `SourceStatus.LastSuccessAt`, copied out of `data/state.json` at collect time, and is always measured against `idx.GeneratedAt` — never the wall clock, or re-rendering a settled week would rewrite it. `collect` only fails when more than `fail_threshold` of the sources are unreachable; an archive gap (`gap_warn_days`) is logged, written to `-warning` and alerted, but it never changes the exit code, because the run that is still working can record everything after the hole.
+
 ## Adding a vendor
 
 On the Statuspage v2 schema: one entry in `config.yaml` (`vendor`, `kind: statuspage`, `url`, `weight`). Nothing else.
