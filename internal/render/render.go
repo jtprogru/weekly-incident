@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"html"
 	"strings"
+	"time"
 
 	"github.com/jtprogru/weekly-incident/internal/model"
 )
@@ -37,9 +38,16 @@ func Digest(idx model.WeekIndex, incidents []model.Incident) string {
 	if idx.Dedup != nil {
 		label = "canonical incidents"
 	}
-	fmt.Fprintf(&b, "%d %s, %d above threshold. %s\n\n",
-		len(idx.Incidents), label, len(above), sourceSummary(idx.Sources))
+	head := fmt.Sprintf("%d %s, %d above threshold.", len(idx.Incidents), label, len(above))
+	if healthy := allSourcesAnswered(idx.Sources); healthy != "" {
+		head += " " + healthy
+	}
+	fmt.Fprintf(&b, "%s\n\n", head)
 	writeDedupCounts(&b, idx.Dedup)
+
+	if w := unavailableWarning(idx.Sources, idx.GeneratedAt); w != "" {
+		fmt.Fprintf(&b, "%s\n\n", w)
+	}
 
 	if w := parseErrorWarning(idx.Sources); w != "" {
 		fmt.Fprintf(&b, "%s\n\n", w)
@@ -99,11 +107,15 @@ func Brief(idx model.WeekIndex, incidents []model.Incident, topN, bodyLimit int)
 	fmt.Fprintf(&b, "%s to %s (UTC).\n\n", idx.From.Format(dateFormat), idx.To.AddDate(0, 0, -1).Format(dateFormat))
 	writeDedupCounts(&b, idx.Dedup)
 
+	if w := unavailableWarning(idx.Sources, idx.GeneratedAt); w != "" {
+		fmt.Fprintf(&b, "%s\n\n", w)
+	}
+
 	for i, e := range top {
 		in := incidentByKey[e.Key]
 		fmt.Fprintf(&b, "## %d. %s — %s\n\n", i+1, e.Vendor, e.Title)
 		fmt.Fprintf(&b, "- URL: %s\n", e.URL)
-		fmt.Fprintf(&b, "- Window: %s to %s (%s)\n", e.StartedAt.Format(timeFormat), resolvedCell(e), duration(e))
+		fmt.Fprintf(&b, "- Window: %s\n", window(e))
 		fmt.Fprintf(&b, "- Impact: %s, status: %s\n", e.Impact, e.Status)
 		fmt.Fprintf(&b, "- Components: %s\n\n", components(e.Components))
 		writeCanonicalInfo(&b, e.Canonical)
@@ -128,7 +140,7 @@ func writeTimeline(b *strings.Builder, n int, e model.IndexEntry, in model.Incid
 	fmt.Fprintf(b, "- URL: %s\n", e.URL)
 	fmt.Fprintf(b, "- Started: %s UTC\n", e.StartedAt.Format(timeFormat))
 	fmt.Fprintf(b, "- Resolved: %s\n", resolvedCell(e))
-	fmt.Fprintf(b, "- Duration: %s\n", duration(e))
+	fmt.Fprintf(b, "- Duration: %s\n", plainDuration(e))
 	fmt.Fprintf(b, "- Impact: %s, status: %s\n", e.Impact, e.Status)
 	fmt.Fprintf(b, "- Components: %s\n", components(e.Components))
 	if e.Canonical != nil {
@@ -180,18 +192,69 @@ func parseErrorWarning(sources []model.SourceStatus) string {
 		total, strings.Join(broken, ", "))
 }
 
-func sourceSummary(sources []model.SourceStatus) string {
+// unavailableWarning shouts when a source did not answer, and says for how
+// long. It sits above the week's content rather than in the sources table at
+// the bottom, because a missing vendor is invisible by nature: nothing in the
+// week says "datadog would have had four incidents here".
+//
+// The age is measured against the snapshot the digest quotes, never against the
+// wall clock, so re-rendering a settled week leaves the note where it was.
+func unavailableWarning(sources []model.SourceStatus, snapshot time.Time) string {
 	var failed []string
+	var lines []string
 	for _, s := range sources {
-		if !s.OK {
-			failed = append(failed, s.Vendor)
+		if s.OK {
+			continue
 		}
+		failed = append(failed, s.Vendor)
+		lines = append(lines, fmt.Sprintf("- `%s` — %s. Error: %s",
+			s.Vendor, lastSuccessPhrase(s, snapshot), oneLine(s.Error)))
 	}
 	if len(failed) == 0 {
-		return fmt.Sprintf("All %d sources responded.", len(sources))
+		return ""
 	}
-	return fmt.Sprintf("%d of %d sources unavailable: %s.",
+
+	var b strings.Builder
+	fmt.Fprintf(&b, "> **%d of %d sources unavailable: %s.**\n>",
 		len(failed), len(sources), strings.Join(failed, ", "))
+	b.WriteString(" Their incidents are missing from this week, and the feeds are\n")
+	b.WriteString("> too shallow and unpaginated to backfill afterwards.\n")
+	for _, line := range lines {
+		b.WriteString("> " + line + "\n")
+	}
+	return strings.TrimRight(b.String(), "\n")
+}
+
+// lastSuccessPhrase renders when a source last answered, relative to the
+// snapshot. A source that has never answered during a recorded run says so
+// rather than inventing a date.
+func lastSuccessPhrase(s model.SourceStatus, snapshot time.Time) string {
+	if s.LastSuccessAt == nil || s.LastSuccessAt.IsZero() {
+		return "no successful fetch recorded in this snapshot"
+	}
+	at := s.LastSuccessAt.UTC()
+	switch days := int(snapshot.UTC().Sub(at).Hours() / 24); {
+	case days < 1:
+		return fmt.Sprintf("last successful fetch %s", at.Format(timeFormat))
+	case days == 1:
+		return fmt.Sprintf("last successful fetch %s, 1 day before this snapshot", at.Format(timeFormat))
+	default:
+		return fmt.Sprintf("last successful fetch %s, %d days before this snapshot", at.Format(timeFormat), days)
+	}
+}
+
+// allSourcesAnswered says the quiet thing when every feed responded, so a
+// healthy week still records that the check happened.
+func allSourcesAnswered(sources []model.SourceStatus) string {
+	if len(sources) == 0 {
+		return ""
+	}
+	for _, s := range sources {
+		if !s.OK {
+			return ""
+		}
+	}
+	return fmt.Sprintf("All %d sources responded.", len(sources))
 }
 
 func split(entries []model.IndexEntry) (above, below []model.IndexEntry) {
@@ -216,12 +279,34 @@ func byKey(incidents []model.Incident) map[string]model.Incident {
 // duration renders the entry's length, marking one that is still running.
 func duration(e model.IndexEntry) string {
 	if e.Ongoing {
-		return humanMinutes(e.Score.Duration) + " (ongoing)"
+		return plainDuration(e) + " (ongoing)"
+	}
+	return plainDuration(e)
+}
+
+// plainDuration renders the length alone: the ongoing marker belongs to the
+// field that reports whether the incident ended, and repeating it in both
+// places produced "to not yet (4d 10h 42m (ongoing))".
+func plainDuration(e model.IndexEntry) string {
+	if e.Ongoing {
+		return humanMinutes(e.Score.Duration)
 	}
 	if e.DurationMinutes == nil {
 		return "unknown"
 	}
 	return humanMinutes(*e.DurationMinutes)
+}
+
+// window renders one incident's span in one piece: a start, an end or "now",
+// and the length. It exists because splitting the span across separate
+// resolved/duration fields read as "to not yet" once the incident was ongoing.
+func window(e model.IndexEntry) string {
+	start := e.StartedAt.Format(timeFormat) + " UTC"
+	end, mark := "now", ", ongoing"
+	if e.ResolvedAt != nil {
+		end, mark = e.ResolvedAt.Format(timeFormat)+" UTC", ""
+	}
+	return fmt.Sprintf("%s to %s (%s%s)", start, end, plainDuration(e), mark)
 }
 
 // humanMinutes renders 4338 as "3d 0h 18m" and 42 as "42m".
@@ -243,7 +328,7 @@ func humanMinutes(m int) string {
 
 func resolvedCell(e model.IndexEntry) string {
 	if e.ResolvedAt == nil {
-		return "not yet"
+		return "ongoing"
 	}
 	return e.ResolvedAt.Format(timeFormat) + " UTC"
 }
@@ -312,7 +397,7 @@ func Notification(idx model.WeekIndex, topN int) string {
 	fmt.Fprintf(&b, "%s → %s UTC\n\n",
 		idx.From.Format(dateFormat), idx.To.AddDate(0, 0, -1).Format(dateFormat))
 	fmt.Fprintf(&b, "%d collected · <b>%d above threshold</b> · %s\n",
-		len(idx.Incidents), len(above), sourceHealth(idx.Sources))
+		len(idx.Incidents), len(above), sourceHealth(idx.Sources, idx.GeneratedAt))
 	if idx.Dedup != nil {
 		fmt.Fprintf(&b, "%d source records → %d canonical incidents · %d candidate pairs pending review\n", idx.Dedup.SourceRecords, idx.Dedup.Incidents, idx.Dedup.PendingPairs)
 	}
@@ -358,13 +443,20 @@ func impactSuffix(e model.IndexEntry) string {
 	return " · " + esc(string(e.Impact))
 }
 
-// sourceHealth says how the fetch went in a handful of characters.
-func sourceHealth(sources []model.SourceStatus) string {
+// sourceHealth says how the fetch went in a handful of characters. A dead
+// source carries its age, because "datadog" alone is easy to read past and
+// "datadog silent 16d" is not.
+func sourceHealth(sources []model.SourceStatus, snapshot time.Time) string {
 	var failed []string
 	for _, s := range sources {
-		if !s.OK {
-			failed = append(failed, s.Vendor)
+		if s.OK {
+			continue
 		}
+		note := s.Vendor
+		if s.LastSuccessAt != nil && !s.LastSuccessAt.IsZero() {
+			note += fmt.Sprintf(" silent %dd", int(snapshot.UTC().Sub(s.LastSuccessAt.UTC()).Hours()/24))
+		}
+		failed = append(failed, note)
 	}
 	if len(failed) == 0 {
 		return fmt.Sprintf("%d/%d sources ok", len(sources), len(sources))

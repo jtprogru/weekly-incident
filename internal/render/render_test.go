@@ -307,3 +307,97 @@ func TestNotificationFlagsDroppedRecords(t *testing.T) {
 		t.Error("notification hides dropped records")
 	}
 }
+
+func TestDigestNamesUnavailableSourcesWithAge(t *testing.T) {
+	idx, incidents := fixture()
+	last := gen.AddDate(0, 0, -16)
+	idx.Sources[1].LastSuccessAt = &last
+	out := Digest(idx, incidents)
+
+	for _, want := range []string{
+		"1 of 2 sources unavailable: datadog.",
+		"last successful fetch 2026-08-08 07:00, 16 days before this snapshot",
+		"status 503",
+	} {
+		if !strings.Contains(out, want) {
+			t.Errorf("digest is missing %q\n---\n%s", want, out)
+		}
+	}
+	// A missing vendor is invisible by nature, so the note belongs above the
+	// table rather than at the bottom with the sources.
+	if strings.Index(out, "sources unavailable") > strings.Index(out, "## Above threshold") {
+		t.Error("the unavailable note is buried below the week's content")
+	}
+}
+
+func TestUnavailableSourceWithoutARecordedSuccess(t *testing.T) {
+	idx, incidents := fixture()
+	out := Digest(idx, incidents)
+	if !strings.Contains(out, "no successful fetch recorded in this snapshot") {
+		t.Errorf("digest invents or omits the age of a never-seen source:\n%s", out)
+	}
+}
+
+func TestBriefCarriesTheUnavailableBanner(t *testing.T) {
+	idx, incidents := fixture()
+	last := gen.AddDate(0, 0, -3)
+	idx.Sources[1].LastSuccessAt = &last
+	out := Brief(idx, incidents, 5, 800)
+	if !strings.Contains(out, "1 of 2 sources unavailable: datadog.") {
+		t.Errorf("brief does not mention the dead source:\n%s", out)
+	}
+	if !strings.Contains(out, "3 days before this snapshot") {
+		t.Errorf("brief does not age the dead source:\n%s", out)
+	}
+}
+
+func TestBriefWindowOfAnOngoingIncident(t *testing.T) {
+	idx, incidents := fixture()
+	e := &idx.Incidents[0]
+	e.ResolvedAt = nil
+	e.DurationMinutes = nil
+	e.Ongoing = true
+	e.Score.Duration = 200
+
+	out := Brief(idx, incidents, 5, 800)
+	if strings.Contains(out, "not yet") {
+		t.Errorf("brief still says \"not yet\" next to an ongoing incident:\n%s", out)
+	}
+	if !strings.Contains(out, "to now (3h 20m, ongoing)") {
+		t.Errorf("brief does not render the open end of the window:\n%s", out)
+	}
+}
+
+func TestTimelineDoesNotRepeatTheOngoingMarker(t *testing.T) {
+	idx, incidents := fixture()
+	for i := range idx.Incidents {
+		if idx.Incidents[i].Key != "aws/abc" {
+			continue
+		}
+		idx.Incidents[i].ResolvedAt = nil
+		idx.Incidents[i].DurationMinutes = nil
+		idx.Incidents[i].Ongoing = true
+		idx.Incidents[i].Score.Duration = 200
+	}
+	out := Digest(idx, incidents)
+
+	if strings.Contains(out, "Resolved: not yet") {
+		t.Error("timeline still says \"not yet\"")
+	}
+	if !strings.Contains(out, "- Resolved: ongoing") {
+		t.Errorf("timeline does not mark the open end:\n%s", out)
+	}
+	if !strings.Contains(out, "- Duration: 3h 20m\n") {
+		t.Error("timeline repeats the ongoing marker in the duration line")
+	}
+}
+
+func TestNotificationAgesADeadSource(t *testing.T) {
+	idx, _ := fixture()
+	last := gen.AddDate(0, 0, -16)
+	idx.Sources[1].LastSuccessAt = &last
+	out := Notification(idx, 3)
+	if !strings.Contains(out, "failed: datadog silent 16d") {
+		t.Errorf("notification does not say how long the source has been silent:\n%s", out)
+	}
+}

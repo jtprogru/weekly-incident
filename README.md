@@ -39,6 +39,8 @@ Adding a vendor on the Statuspage schema is one entry in `config.yaml`. Adding o
 
 A few endpoints are not where you would guess. `status.stripe.com` answers 404; the live host is `www.stripestatus.com`. `status.anthropic.com` redirects to `status.claude.com`. AWS still serves `status.aws.amazon.com/rss/all.rss` despite the documentation pointing at a replacement that only reports current state. Yandex Cloud is fetched through its former address, `status.cloud.yandex.ru`: a cold request to `status.yandex.cloud` itself is answered 403 by Yandex's antirobot, while the old host redirects to the same endpoint and gets through.
 
+A source that stops answering is a mark in the week, not a failed job. The digest and the brief open with a note naming the unavailable vendors, how long each has been silent and the fetch error, because a vendor that is missing leaves no trace of itself in the incident list; the Telegram summary carries the same ages in one line. `collect` goes red only when more than `fail_threshold` of the sources are unreachable, and an archive gap is alerted without failing the run.
+
 ## Running it
 
 Go 1.26 and nothing else. No database, no credentials, no services to start.
@@ -76,8 +78,8 @@ snapshots remain intact; indexes and releases count canonical incidents.
 Identity resolution runs across all weeks before selecting the reporting week.
 The 2026-11-14 migration preserved 1,195 source records from 14 vendors and
 produced 1,194 canonical incidents across 84 weeks. After reconciling upstream
-`ae88b6b`, the archive contains 1,207 source records, 1,291 saved revisions and
-1,206 canonical incidents; all prior snapshots and IDs are retained. This is a count under the
+`ae88b6b`, the archive contains 1,210 source records, 1,353 saved revisions and
+1,209 canonical incidents; all prior snapshots and IDs are retained. This is a count under the
 current rules, not proof that every semantic duplicate has been found.
 
 ```bash

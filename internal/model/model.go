@@ -208,13 +208,19 @@ type Score struct {
 }
 
 // SourceStatus records how one vendor fetch went during a collect run.
+//
+// LastSuccessAt is copied from the archive state at collect time, so it turns a
+// bare "did not answer" into "silent for sixteen days". It is stored in the
+// week index rather than recomputed by the renderer: a note that ages by itself
+// would rewrite a settled week on every re-render.
 type SourceStatus struct {
-	Vendor        string    `json:"vendor"`
-	OK            bool      `json:"ok"`
-	Error         string    `json:"error,omitempty"`
-	FetchedAt     time.Time `json:"fetched_at"`
-	IncidentsSeen int       `json:"incidents_seen"`
-	ParseErrors   int       `json:"parse_errors"`
+	LastSuccessAt *time.Time `json:"last_success_at,omitempty"`
+	Vendor        string     `json:"vendor"`
+	OK            bool       `json:"ok"`
+	Error         string     `json:"error,omitempty"`
+	FetchedAt     time.Time  `json:"fetched_at"`
+	IncidentsSeen int        `json:"incidents_seen"`
+	ParseErrors   int        `json:"parse_errors"`
 }
 
 // IndexEntry is the digest-facing projection of an incident: everything the
