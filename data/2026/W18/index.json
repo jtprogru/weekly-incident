@@ -2,7 +2,7 @@
   "dedup": {
     "rules_version": "identity-v1",
     "source_records_total": 10,
-    "source_versions_total": 10,
+    "source_versions_total": 12,
     "canonical_incidents_total": 10,
     "merged_source_records_total": 0,
     "pending_candidate_pairs": 0,
@@ -11,104 +11,106 @@
   "week": "2026-W18",
   "from": "2026-04-27T00:00:00Z",
   "to": "2026-05-04T00:00:00Z",
-  "generated_at": "2026-11-14T12:36:38.232091035Z",
+  "generated_at": "2026-11-15T09:08:30.105508638Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "datadog",
-      "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 50,
+      "ok": false,
+      "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
+      "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 31,
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
+      "incidents_seen": 27,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "yandexcloud",
-      "ok": true,
-      "fetched_at": "2026-10-29T11:52:25.981929879Z",
-      "incidents_seen": 50,
+      "ok": false,
+      "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
+      "incidents_seen": 0,
       "parse_errors": 0
     }
   ],
@@ -141,8 +143,8 @@
         "multipleservices-me-south-1"
       ],
       "score": {
-        "value": 570898,
-        "duration_minutes": 285449,
+        "value": 573362,
+        "duration_minutes": 286681,
         "components": 1,
         "vendor_weight": 2
       },
@@ -176,8 +178,8 @@
         "multipleservices-me-central-1"
       ],
       "score": {
-        "value": 570860,
-        "duration_minutes": 285430,
+        "value": 573324,
+        "duration_minutes": 286662,
         "components": 1,
         "vendor_weight": 2
       },

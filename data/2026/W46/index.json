@@ -1,9 +1,9 @@
 {
   "dedup": {
     "rules_version": "identity-v1",
-    "source_records_total": 54,
-    "source_versions_total": 67,
-    "canonical_incidents_total": 54,
+    "source_records_total": 57,
+    "source_versions_total": 79,
+    "canonical_incidents_total": 57,
     "merged_source_records_total": 0,
     "pending_candidate_pairs": 0,
     "conflicted_groups_total": 0
@@ -11,40 +11,40 @@
   "week": "2026-W46",
   "from": "2026-11-09T00:00:00Z",
   "to": "2026-11-16T00:00:00Z",
-  "generated_at": "2026-11-14T12:36:38.232091035Z",
+  "generated_at": "2026-11-15T09:08:30.105508638Z",
   "sources": [
     {
       "vendor": "anthropic",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "atlassian",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 34,
       "parse_errors": 0
     },
     {
       "vendor": "aws",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 6,
       "parse_errors": 0
     },
     {
       "vendor": "circleci",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "cloudflare",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -52,56 +52,56 @@
       "vendor": "datadog",
       "ok": false,
       "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 0,
       "parse_errors": 0
     },
     {
       "vendor": "digitalocean",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "gcp",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 8,
       "parse_errors": 0
     },
     {
       "vendor": "github",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "grafana",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
     {
       "vendor": "openai",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 25,
       "parse_errors": 0
     },
     {
       "vendor": "slack",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
-      "incidents_seen": 28,
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
+      "incidents_seen": 27,
       "parse_errors": 0
     },
     {
       "vendor": "stripe",
       "ok": true,
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 50,
       "parse_errors": 0
     },
@@ -109,7 +109,7 @@
       "vendor": "yandexcloud",
       "ok": false,
       "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
-      "fetched_at": "2026-11-14T12:36:38.232091035Z",
+      "fetched_at": "2026-11-15T09:08:30.105508638Z",
       "incidents_seen": 0,
       "parse_errors": 0
     }
@@ -142,8 +142,8 @@
         "Workers"
       ],
       "score": {
-        "value": 23047.2,
-        "duration_minutes": 6402,
+        "value": 27482.4,
+        "duration_minutes": 7634,
         "components": 2,
         "vendor_weight": 1.8
       },
@@ -222,6 +222,37 @@
     },
     {
       "canonical": {
+        "id": "ci-f788538c36e9a228e97f389c",
+        "sources": [
+          {
+            "key": "openai/01M7ATRS6BMZ61E4JDHJGM79Y0",
+            "path": "2026/W46/openai.json",
+            "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f788538c36e9a228e97f389c",
+      "vendor": "openai",
+      "title": "Delayed Costs Data in the Compliance API",
+      "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0",
+      "impact": "minor",
+      "status": "monitoring",
+      "started_at": "2026-11-13T16:10:07Z",
+      "ongoing": true,
+      "components": [],
+      "score": {
+        "value": 3687,
+        "duration_minutes": 2458,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "canonical": {
         "id": "ci-44d9765457f6f0b90ddc1a0d",
         "sources": [
           {
@@ -272,15 +303,17 @@
       "title": "Cloudflare is seeing an issue with Workers API availability",
       "url": "https://www.cloudflarestatus.com/incidents/e7ktq32gphhe",
       "impact": "minor",
-      "status": "monitoring",
+      "status": "resolved",
       "started_at": "2026-11-13T15:31:13.772Z",
-      "ongoing": true,
+      "resolved_at": "2026-11-14T13:37:40.811Z",
+      "duration_minutes": 1326,
+      "ongoing": false,
       "components": [
         "Workers"
       ],
       "score": {
-        "value": 2277,
-        "duration_minutes": 1265,
+        "value": 2386.8,
+        "duration_minutes": 1326,
         "components": 1,
         "vendor_weight": 1.8
       },
@@ -288,30 +321,32 @@
     },
     {
       "canonical": {
-        "id": "ci-f788538c36e9a228e97f389c",
+        "id": "ci-7d0c45c4220e872464de13e2",
         "sources": [
           {
-            "key": "openai/01M7ATRS6BMZ61E4JDHJGM79Y0",
-            "path": "2026/W46/openai.json",
-            "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0"
+            "key": "anthropic/ct4c2pwf2xpj",
+            "path": "2026/W46/anthropic.json",
+            "url": "https://stspg.io/4858wf40dx89"
           }
         ],
         "reasons": [],
         "start_quality": "vendor_reported",
         "warnings": []
       },
-      "key": "ci-f788538c36e9a228e97f389c",
-      "vendor": "openai",
-      "title": "Delayed Costs Data in the Compliance API",
-      "url": "https://status.openai.com/incidents/01M7ATRS6BMZ61E4JDHJGM79Y0",
-      "impact": "minor",
-      "status": "monitoring",
-      "started_at": "2026-11-13T16:10:07Z",
+      "key": "ci-7d0c45c4220e872464de13e2",
+      "vendor": "anthropic",
+      "title": "Some users unable to sign up with Apple on the Claude iOS app",
+      "url": "https://stspg.io/4858wf40dx89",
+      "impact": "major",
+      "status": "investigating",
+      "started_at": "2026-11-14T07:11:36.111Z",
       "ongoing": true,
-      "components": [],
+      "components": [
+        "claude.ai"
+      ],
       "score": {
-        "value": 1839,
-        "duration_minutes": 1226,
+        "value": 2334,
+        "duration_minutes": 1556,
         "components": 1,
         "vendor_weight": 1.5
       },
@@ -644,39 +679,6 @@
     },
     {
       "canonical": {
-        "id": "ci-7d0c45c4220e872464de13e2",
-        "sources": [
-          {
-            "key": "anthropic/ct4c2pwf2xpj",
-            "path": "2026/W46/anthropic.json",
-            "url": "https://stspg.io/4858wf40dx89"
-          }
-        ],
-        "reasons": [],
-        "start_quality": "vendor_reported",
-        "warnings": []
-      },
-      "key": "ci-7d0c45c4220e872464de13e2",
-      "vendor": "anthropic",
-      "title": "Some users unable to sign up with Apple on the Claude iOS app",
-      "url": "https://stspg.io/4858wf40dx89",
-      "impact": "major",
-      "status": "investigating",
-      "started_at": "2026-11-14T07:11:36.111Z",
-      "ongoing": true,
-      "components": [
-        "claude.ai"
-      ],
-      "score": {
-        "value": 487.5,
-        "duration_minutes": 325,
-        "components": 1,
-        "vendor_weight": 1.5
-      },
-      "above_threshold": true
-    },
-    {
-      "canonical": {
         "id": "ci-1e0a441616183f3491a33a6a",
         "sources": [
           {
@@ -815,6 +817,41 @@
       "score": {
         "value": 342,
         "duration_minutes": 285,
+        "components": 1,
+        "vendor_weight": 1.2
+      },
+      "above_threshold": true
+    },
+    {
+      "canonical": {
+        "id": "ci-f2e12f4c1cfbbc05d541133a",
+        "sources": [
+          {
+            "key": "stripe/45253p0bm8dk",
+            "path": "2026/W46/stripe.json",
+            "url": "https://stspg.io/fgz0c6z26b43"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f2e12f4c1cfbbc05d541133a",
+      "vendor": "stripe",
+      "title": "Elevated PayNow errors",
+      "url": "https://stspg.io/fgz0c6z26b43",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-14T17:46:37.144Z",
+      "resolved_at": "2026-11-14T22:24:10.09Z",
+      "duration_minutes": 277,
+      "ongoing": false,
+      "components": [
+        "Acquirers and payment methods"
+      ],
+      "score": {
+        "value": 332.4,
+        "duration_minutes": 277,
         "components": 1,
         "vendor_weight": 1.2
       },
@@ -1274,6 +1311,41 @@
     },
     {
       "canonical": {
+        "id": "ci-231bb209f7ff855710b58aeb",
+        "sources": [
+          {
+            "key": "cloudflare/sozoycnmog2m",
+            "path": "2026/W46/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/sozoycnmog2m"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-231bb209f7ff855710b58aeb",
+      "vendor": "cloudflare",
+      "title": "Elevated number of errors in Bogotá",
+      "url": "https://www.cloudflarestatus.com/incidents/sozoycnmog2m",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-15T01:30:00Z",
+      "resolved_at": "2026-11-15T03:00:00Z",
+      "duration_minutes": 90,
+      "ongoing": false,
+      "components": [
+        "Bogotá, Colombia - (BOG)"
+      ],
+      "score": {
+        "value": 162,
+        "duration_minutes": 90,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "canonical": {
         "id": "ci-4b793ef9d218b05b34c71b13",
         "sources": [
           {
@@ -1617,6 +1689,41 @@
         "duration_minutes": 50,
         "components": 1,
         "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "canonical": {
+        "id": "ci-4bd3f33f1a56ff7f5bf2a791",
+        "sources": [
+          {
+            "key": "cloudflare/dpao7idy3zei",
+            "path": "2026/W46/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/dpao7idy3zei"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-4bd3f33f1a56ff7f5bf2a791",
+      "vendor": "cloudflare",
+      "title": "Elevated error rates on R2 buckets in West North America",
+      "url": "https://www.cloudflarestatus.com/incidents/dpao7idy3zei",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-14T19:41:00Z",
+      "resolved_at": "2026-11-14T20:20:37.898Z",
+      "duration_minutes": 39,
+      "ongoing": false,
+      "components": [
+        "R2"
+      ],
+      "score": {
+        "value": 70.2,
+        "duration_minutes": 39,
+        "components": 1,
+        "vendor_weight": 1.8
       },
       "above_threshold": false
     },

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/s6hpm263c04x",
+    "vendor": "stripe",
+    "native_id": "s6hpm263c04x",
+    "title": "Elevated 3DS errors on Mastercard transactions",
+    "url": "https://stspg.io/l0pf76xd55ny",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-15T08:06:18.401Z",
+    "resolved_at": "2026-07-15T09:42:49.146Z",
+    "duration_minutes": 96,
+    "components": [
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "51cpjt6hc56p",
+        "status": "identified",
+        "body": "We’re observing elevated 3DS errors for Mastercard transactions starting 07:00 UTC. We are engaging with the Mastercard team and we will provide an update as soon as we have more information.",
+        "created_at": "2026-07-15T08:06:18.548Z"
+      },
+      {
+        "native_id": "x3vwh59q00f2",
+        "status": "investigating",
+        "body": "We are starting to see improvement in the elevated 3D Secure errors affecting Mastercard transactions. The impact still continues however Stripe engagement with Mastercard teams continue. We will provide further updates once we have observed recovery.",
+        "created_at": "2026-07-15T09:01:12.645Z"
+      },
+      {
+        "native_id": "42b6v9frn99r",
+        "status": "monitoring",
+        "body": "As of 09:06 UTC, we can confirm that the elevated 3D Secure errors on Mastercard transactions have recovered following certificate rotation by Mastercard. We're continuing to validate that this issue is fully resolved and will provide further updates once we have observed sustained recovery.",
+        "created_at": "2026-07-15T09:17:51.957Z"
+      },
+      {
+        "native_id": "79gh969xs7df",
+        "status": "resolved",
+        "body": "From 2026-07-15 07:00:00 UTC to 09:06:00 UTC, we experienced elevated 3D Secure errors on Mastercard transactions due to an expired certificate on the upstream Mastercard service. Mastercard identified and resolved the issue on their end. We have verified that all certificates are now valid and transactions are processing normally.",
+        "created_at": "2026-07-15T09:42:49.146Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-11-14T22:24:10.048Z"
+        }
+      ],
+      "created_at": "2026-07-15T08:06:18.416Z",
+      "id": "s6hpm263c04x",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 2026-07-15 07:00:00 UTC to 09:06:00 UTC, we experienced elevated 3D Secure errors on Mastercard transactions due to an expired certificate on the upstream Mastercard service. Mastercard identified and resolved the issue on their end. We have verified that all certificates are now valid and transactions are processing normally.",
+          "created_at": "2026-07-15T09:42:49.146Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:42:49.146Z",
+          "id": "79gh969xs7df",
+          "incident_id": "s6hpm263c04x",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:42:49.146Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "As of 09:06 UTC, we can confirm that the elevated 3D Secure errors on Mastercard transactions have recovered following certificate rotation by Mastercard. We're continuing to validate that this issue is fully resolved and will provide further updates once we have observed sustained recovery.",
+          "created_at": "2026-07-15T09:17:51.957Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:17:51.957Z",
+          "id": "42b6v9frn99r",
+          "incident_id": "s6hpm263c04x",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:17:51.957Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are starting to see improvement in the elevated 3D Secure errors affecting Mastercard transactions. The impact still continues however Stripe engagement with Mastercard teams continue. We will provide further updates once we have observed recovery.",
+          "created_at": "2026-07-15T09:01:12.645Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T09:01:12.645Z",
+          "id": "x3vwh59q00f2",
+          "incident_id": "s6hpm263c04x",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T09:01:12.645Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re observing elevated 3DS errors for Mastercard transactions starting 07:00 UTC. We are engaging with the Mastercard team and we will provide an update as soon as we have more information.",
+          "created_at": "2026-07-15T08:06:18.548Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-15T08:06:18.548Z",
+          "id": "51cpjt6hc56p",
+          "incident_id": "s6hpm263c04x",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-15T08:06:18.548Z"
+        }
+      ],
+      "monitoring_at": "2026-07-15T09:17:51.957Z",
+      "name": "Elevated 3DS errors on Mastercard transactions",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-15T09:42:49.146Z",
+      "shortlink": "https://stspg.io/l0pf76xd55ny",
+      "started_at": "2026-07-15T08:06:18.401Z",
+      "status": "resolved",
+      "updated_at": "2026-07-15T09:42:49.224Z"
+    }
+  }
+}
