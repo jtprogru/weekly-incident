@@ -1,0 +1,204 @@
+{
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 2,
+    "source_versions_total": 2,
+    "canonical_incidents_total": 2,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
+  "week": "2026-W47",
+  "from": "2026-11-16T00:00:00Z",
+  "to": "2026-11-23T00:00:00Z",
+  "generated_at": "2026-11-16T14:06:40.342368726Z",
+  "sources": [
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 7,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-10-29T11:52:25.981929879Z",
+      "vendor": "datadog",
+      "ok": false,
+      "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 0,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 8,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 26,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-16T14:06:40.342368726Z",
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-10-29T11:52:25.981929879Z",
+      "vendor": "yandexcloud",
+      "ok": false,
+      "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
+      "fetched_at": "2026-11-16T14:06:40.342368726Z",
+      "incidents_seen": 0,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "canonical": {
+        "id": "ci-6f5074bea4248258a8a899af",
+        "sources": [
+          {
+            "key": "anthropic/r1b4f9bbnsx1",
+            "path": "2026/W47/anthropic.json",
+            "url": "https://stspg.io/n18qjkd7dt4q"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-6f5074bea4248258a8a899af",
+      "vendor": "anthropic",
+      "title": "Elevated errors for Claude Sonnet 5.5 and Claude Fable 5.2",
+      "url": "https://stspg.io/n18qjkd7dt4q",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-16T07:49:55.052Z",
+      "resolved_at": "2026-11-16T09:04:39.778Z",
+      "duration_minutes": 74,
+      "ongoing": false,
+      "components": [
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork",
+        "claude.ai"
+      ],
+      "score": {
+        "value": 444,
+        "duration_minutes": 74,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "canonical": {
+        "id": "ci-78b7d2af2e7959c04ad01870",
+        "sources": [
+          {
+            "key": "github/2zfqmghmg3s3",
+            "path": "2026/W47/github.json",
+            "url": "https://stspg.io/ljtn69jlt087"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-78b7d2af2e7959c04ad01870",
+      "vendor": "github",
+      "title": "Incident with Pull Requests",
+      "url": "https://stspg.io/ljtn69jlt087",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-11-16T11:59:40.892Z",
+      "ongoing": true,
+      "components": [
+        "Pull Requests"
+      ],
+      "score": {
+        "value": 189,
+        "duration_minutes": 126,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    }
+  ]
+}

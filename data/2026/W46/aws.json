@@ -110,8 +110,10 @@
     "title": "Increased Connectivity issues in US-EAST-1",
     "url": "https://health.aws.amazon.com/health/status",
     "impact": "unknown",
-    "status": "investigating",
+    "status": "resolved",
     "started_at": "2026-11-15T12:38:02Z",
+    "resolved_at": "2026-11-15T14:53:29Z",
+    "duration_minutes": 135,
     "components": [
       "multipleservices-us-east-1"
     ],
@@ -119,18 +121,83 @@
       {
         "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794746282",
         "status": "investigating",
-        "body": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUps are also impacted at this time.",
+        "body": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are also impacted at this time.",
         "created_at": "2026-11-15T12:38:02Z"
+      },
+      {
+        "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794748545",
+        "status": "investigating",
+        "body": "We continue to investigate Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are impacted at this time. \n\nWe can confirm errors when attempted to authenticate when using identity center or when using services that rely on IAM Identity center. For Kiro users, logins from social sign in methods are not impacted at this time. There are no workarounds for impacted customers.",
+        "created_at": "2026-11-15T13:15:45Z"
+      },
+      {
+        "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794748931",
+        "status": "investigating",
+        "body": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp.",
+        "created_at": "2026-11-15T13:22:11Z"
+      },
+      {
+        "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794752627",
+        "status": "investigating",
+        "body": "We can confirm recovery for most AWS Services. We have fully mitigated the issue authentication errors from IAM Identity Center that was impacting Kiro, Connect, and other services which rely on IAM Identity Center for authentication.\n\nWe continue to investigate an issue that is affecting a subset of Network Load Balancers in a single cell, in a single Availability Zone (use1-az1) in the US-EAST-1 Region. For customers who need immediate resolution, we recommend creating a new NLB with targets in multiple Availability Zones. We are actively working on multiple parallel paths to mitigate the issue. We will provide an update by 7:30 AM, or sooner if we have additional information to share.",
+        "created_at": "2026-11-15T14:23:47Z"
+      },
+      {
+        "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794753176",
+        "status": "investigating",
+        "body": "We are seeing significant signs of recovery and are continuing to monitor for full recovery.",
+        "created_at": "2026-11-15T14:32:56Z"
+      },
+      {
+        "native_id": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794754409",
+        "status": "resolved",
+        "body": "Between 3:05 AM and 6:10 AM PST we experienced signup errors, authentication issues, and connectivity issues in the US-EAST-1 Region. Customers using IAM Identity Center for authentication into the AWS Console, or for authentication into other AWS Services such as Kiro, Connect, etc would have been affected during this time. \n\nEngineers were automatically engaged at 3:10 AM PST and immediately began investigating the root cause, while in parallel working to mitigate both impacts. At 5:20, we fully mitigated the issue affecting authentication, and most AWS Services observed full recovery at this time. \n\nA subset of customers using NLB in a single cell in use1-az1 continued to experience connectivity issues until we fully mitigated the underlying issue at 6:21 AM PST. We recommend customers retry any failed requests. The issue has been resolved and all AWS Services are operating normally.",
+        "created_at": "2026-11-15T14:53:29Z"
       }
     ],
     "first_seen_at": "2026-11-15T13:01:48.754729257Z",
     "raw": [
       {
-        "description": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUps are also impacted at this time.",
+        "description": "We are investigating reports of Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are also impacted at this time.",
         "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794746282",
         "link": "https://status.aws.amazon.com/",
         "pub_date": "Sun, 15 Nov 2026 04:38:02 PST",
         "title": "Service impact: Increased Connectivity issues in US-EAST-1"
+      },
+      {
+        "description": "We continue to investigate Connectivity issues in the US-EAST-1 Region. IAM Identity center sign-in requests and AWS SignUp are impacted at this time. \n\nWe can confirm errors when attempted to authenticate when using identity center or when using services that rely on IAM Identity center. For Kiro users, logins from social sign in methods are not impacted at this time. There are no workarounds for impacted customers.",
+        "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794748545",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 15 Nov 2026 05:15:45 PST",
+        "title": "Service impact: Increased Connectivity issues in US-EAST-1"
+      },
+      {
+        "description": "We are seeing early signs of recovery for authentication via IAM Identity Center and SignUp.",
+        "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794748931",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 15 Nov 2026 05:22:11 PST",
+        "title": "Service impact: Increased Connectivity issues in US-EAST-1"
+      },
+      {
+        "description": "We can confirm recovery for most AWS Services. We have fully mitigated the issue authentication errors from IAM Identity Center that was impacting Kiro, Connect, and other services which rely on IAM Identity Center for authentication.\n\nWe continue to investigate an issue that is affecting a subset of Network Load Balancers in a single cell, in a single Availability Zone (use1-az1) in the US-EAST-1 Region. For customers who need immediate resolution, we recommend creating a new NLB with targets in multiple Availability Zones. We are actively working on multiple parallel paths to mitigate the issue. We will provide an update by 7:30 AM, or sooner if we have additional information to share.",
+        "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794752627",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 15 Nov 2026 06:23:47 PST",
+        "title": "Service impact: Increased Connectivity issues in US-EAST-1"
+      },
+      {
+        "description": "We are seeing significant signs of recovery and are continuing to monitor for full recovery.",
+        "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794753176",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 15 Nov 2026 06:32:56 PST",
+        "title": "Service impact: Increased Connectivity issues in US-EAST-1"
+      },
+      {
+        "description": "Between 3:05 AM and 6:10 AM PST we experienced signup errors, authentication issues, and connectivity issues in the US-EAST-1 Region. Customers using IAM Identity Center for authentication into the AWS Console, or for authentication into other AWS Services such as Kiro, Connect, etc would have been affected during this time. \n\nEngineers were automatically engaged at 3:10 AM PST and immediately began investigating the root cause, while in parallel working to mitigate both impacts. At 5:20, we fully mitigated the issue affecting authentication, and most AWS Services observed full recovery at this time. \n\nA subset of customers using NLB in a single cell in use1-az1 continued to experience connectivity issues until we fully mitigated the underlying issue at 6:21 AM PST. We recommend customers retry any failed requests. The issue has been resolved and all AWS Services are operating normally.",
+        "guid": "https://status.aws.amazon.com/#multipleservices-us-east-1_1794754409",
+        "link": "https://status.aws.amazon.com/",
+        "pub_date": "Sun, 15 Nov 2026 06:53:29 PST",
+        "title": "Service is operating normally: [RESOLVED] Increased Connectivity issues in US-EAST-1"
       }
     ]
   }
