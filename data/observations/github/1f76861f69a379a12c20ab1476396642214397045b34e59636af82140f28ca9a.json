@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/gl7yhd7jx00v",
+    "vendor": "github",
+    "native_id": "gl7yhd7jx00v",
+    "title": "Incident with Webhooks API",
+    "url": "https://stspg.io/ns57pv7lmynl",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-12T18:43:13.81Z",
+    "resolved_at": "2026-11-12T19:33:54.248Z",
+    "duration_minutes": 50,
+    "components": [
+      "Webhooks"
+    ],
+    "updates": [
+      {
+        "native_id": "92vkxs8cc059",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Webhooks",
+        "created_at": "2026-11-12T18:43:13.908Z"
+      },
+      {
+        "native_id": "v1709htz0h5b",
+        "status": "investigating",
+        "body": "Webhooks API is experiencing timeouts and errors impacting about 1% of customer traffic. We are working through possible mitigation strategies.",
+        "created_at": "2026-11-12T18:52:18.168Z"
+      },
+      {
+        "native_id": "sn0y38yrndr3",
+        "status": "investigating",
+        "body": "Webhooks API has traffic has recovered. We will continue to monitor for stability.",
+        "created_at": "2026-11-12T19:20:08.126Z"
+      },
+      {
+        "native_id": "c7crm1d8bfgy",
+        "status": "monitoring",
+        "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-12T19:20:14.173Z"
+      },
+      {
+        "native_id": "343ntf2067mp",
+        "status": "resolved",
+        "body": "On November 12, 2026, between 17:59 UTC and 19:05 UTC, the GitHub Webhooks API experienced elevated latency and timeouts. During this time, about 1.23% of Webhooks API requests were slower than normal or timed out, peaking at about 3.63% of requests for a short period. 0.14% of webhook API requests failed during the incident. Webhook deliveries were unaffected. We traced the slow responses to elevated latency in an upstream database service that the Webhooks API depends on. Latency returned to normal at 19:05 UTC, and we continued to monitor until we resolved the incident at 19:33 UTC. We are working with our database provider to understand the cause and are improving our playbooks to detect degradations more quickly.",
+        "created_at": "2026-11-12T19:33:54.248Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-12T19:20:14.124Z"
+        }
+      ],
+      "created_at": "2026-11-12T18:43:13.817Z",
+      "id": "gl7yhd7jx00v",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On November 12, 2026, between 17:59 UTC and 19:05 UTC, the GitHub Webhooks API experienced elevated latency and timeouts. During this time, about 1.23% of Webhooks API requests were slower than normal or timed out, peaking at about 3.63% of requests for a short period. 0.14% of webhook API requests failed during the incident. Webhook deliveries were unaffected. We traced the slow responses to elevated latency in an upstream database service that the Webhooks API depends on. Latency returned to normal at 19:05 UTC, and we continued to monitor until we resolved the incident at 19:33 UTC. We are working with our database provider to understand the cause and are improving our playbooks to detect degradations more quickly.",
+          "created_at": "2026-11-12T19:33:54.248Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:33:54.248Z",
+          "id": "343ntf2067mp",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T18:29:55.017Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-12T19:20:14.173Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:20:14.173Z",
+          "id": "c7crm1d8bfgy",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:20:14.173Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Webhooks API has traffic has recovered. We will continue to monitor for stability.",
+          "created_at": "2026-11-12T19:20:08.126Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T19:20:08.126Z",
+          "id": "sn0y38yrndr3",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T19:20:08.126Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Webhooks API is experiencing timeouts and errors impacting about 1% of customer traffic. We are working through possible mitigation strategies.",
+          "created_at": "2026-11-12T18:52:18.168Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T18:52:18.168Z",
+          "id": "v1709htz0h5b",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T18:52:18.168Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Webhooks",
+          "created_at": "2026-11-12T18:43:13.908Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-12T18:43:13.908Z",
+          "id": "92vkxs8cc059",
+          "incident_id": "gl7yhd7jx00v",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-12T18:43:13.908Z"
+        }
+      ],
+      "monitoring_at": "2026-11-12T19:20:14.173Z",
+      "name": "Incident with Webhooks API",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-12T19:33:54.248Z",
+      "shortlink": "https://stspg.io/ns57pv7lmynl",
+      "started_at": "2026-11-12T18:43:13.810Z",
+      "status": "resolved",
+      "updated_at": "2026-11-16T18:29:55.024Z"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "anthropic/b5cq662qf2wm",
+    "vendor": "anthropic",
+    "native_id": "b5cq662qf2wm",
+    "title": "Claude unable to join meetings",
+    "url": "https://stspg.io/01qq3kzyyqzl",
+    "impact": "major",
+    "status": "identified",
+    "started_at": "2026-11-16T15:10:15.16Z",
+    "components": [
+      "claude.ai"
+    ],
+    "updates": [
+      {
+        "native_id": "177nx45nsdvg",
+        "status": "investigating",
+        "body": "We are investigating an issue preventing Claude from joining new calls in Claude Meetings (beta). Calls already in progress are not affected, and core functionality is not impacted. We will provide an update as soon as possible.",
+        "created_at": "2026-11-16T15:10:15.235Z"
+      },
+      {
+        "native_id": "cknf7f0qymmq",
+        "status": "investigating",
+        "body": "We are continuing to investigate an issue preventing Claude from joining new calls in Claude Meetings (beta).",
+        "created_at": "2026-11-16T15:12:56.268Z"
+      },
+      {
+        "native_id": "xf4fg7rhhsbk",
+        "status": "investigating",
+        "body": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another update as soon as possible.",
+        "created_at": "2026-11-16T16:27:03.835Z"
+      },
+      {
+        "native_id": "rq8n1dwxvw7k",
+        "status": "investigating",
+        "body": "Claude may still be unable to join some calls in Claude Meetings (beta), and Auto-join remains paused. Calls already in progress and other Claude features are not affected. We expect this to take some time to fully resolve and will post an update when the status changes.",
+        "created_at": "2026-11-16T18:10:10.24Z"
+      },
+      {
+        "native_id": "7njxwk3s0rln",
+        "status": "identified",
+        "body": "Claude Meetings (beta) saw higher than expected demand today, and Claude was unable to join many calls. We have put mitigations in place and are continuing to monitor and improve join reliability.\n\nClaude Meetings is now re-enabled for all Enterprise customers, though Claude may take a little longer than usual to join. Adding Claude to new calls and Auto-join remain paused for Team customers. We will share more updates as we expand capacity and begin restoring the feature for Team customers.",
+        "created_at": "2026-11-17T02:02:57.704Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:24.275Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-16T16:42:19.765Z"
+        }
+      ],
+      "created_at": "2026-11-16T15:10:15.167Z",
+      "id": "b5cq662qf2wm",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Claude Meetings (beta) saw higher than expected demand today, and Claude was unable to join many calls. We have put mitigations in place and are continuing to monitor and improve join reliability.\n\nClaude Meetings is now re-enabled for all Enterprise customers, though Claude may take a little longer than usual to join. Adding Claude to new calls and Auto-join remain paused for Team customers. We will share more updates as we expand capacity and begin restoring the feature for Team customers.",
+          "created_at": "2026-11-17T02:02:57.704Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T02:02:57.704Z",
+          "id": "7njxwk3s0rln",
+          "incident_id": "b5cq662qf2wm",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T02:02:57.704Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Claude may still be unable to join some calls in Claude Meetings (beta), and Auto-join remains paused. Calls already in progress and other Claude features are not affected. We expect this to take some time to fully resolve and will post an update when the status changes.",
+          "created_at": "2026-11-16T18:10:10.240Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T18:10:10.240Z",
+          "id": "rq8n1dwxvw7k",
+          "incident_id": "b5cq662qf2wm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T18:10:10.240Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have temporarily paused Auto-join while we work on this. Adding Claude to a call by hand is also affected. Calls already in progress are not affected. We will provide another update as soon as possible.",
+          "created_at": "2026-11-16T16:27:03.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T16:27:03.835Z",
+          "id": "xf4fg7rhhsbk",
+          "incident_id": "b5cq662qf2wm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T16:27:03.835Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are continuing to investigate an issue preventing Claude from joining new calls in Claude Meetings (beta).",
+          "created_at": "2026-11-16T15:12:56.268Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:12:56.268Z",
+          "id": "cknf7f0qymmq",
+          "incident_id": "b5cq662qf2wm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T16:26:30.164Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are investigating an issue preventing Claude from joining new calls in Claude Meetings (beta). Calls already in progress are not affected, and core functionality is not impacted. We will provide an update as soon as possible.",
+          "created_at": "2026-11-16T15:10:15.235Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:10:15.235Z",
+          "id": "177nx45nsdvg",
+          "incident_id": "b5cq662qf2wm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T15:10:15.235Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Claude unable to join meetings",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/01qq3kzyyqzl",
+      "started_at": "2026-11-16T15:10:15.160Z",
+      "status": "identified",
+      "updated_at": "2026-11-17T02:02:57.707Z"
+    }
+  }
+}

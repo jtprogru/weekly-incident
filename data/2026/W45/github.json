@@ -236,7 +236,7 @@
       {
         "native_id": "1zmpx8lhv62z",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 3, 2026, between 12:34 and 13:51 UTC, some users experienced authentication failures and errors with the REST and GraphQL APIs, pull requests, Issues, and GitHub Copilot. On average, the error rate was 0.46% and peaked at 0.98% of API requests. Copilot API errors averaged 2.0% and peaked at 3.1%.\u003cbr /\u003e\u003cbr /\u003eThis was caused by a bug in our process for replacing control-plane servers in one of our compute clusters. When a replacement server did not receive a timely response from the existing cluster, it incorrectly created a separate cluster. This stopped traffic from reaching much of the cluster's capacity and overloaded the authentication servers that were still handling requests.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the incorrectly configured server.\u003cbr /\u003eWe are also fixing the replacement logic and adding safeguards to prevent servers in this state from serving traffic.",
         "created_at": "2026-11-03T13:56:18.729Z"
       }
     ],
@@ -314,7 +314,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 3, 2026, between 12:34 and 13:51 UTC, some users experienced authentication failures and errors with the REST and GraphQL APIs, pull requests, Issues, and GitHub Copilot. On average, the error rate was 0.46% and peaked at 0.98% of API requests. Copilot API errors averaged 2.0% and peaked at 3.1%.\u003cbr /\u003e\u003cbr /\u003eThis was caused by a bug in our process for replacing control-plane servers in one of our compute clusters. When a replacement server did not receive a timely response from the existing cluster, it incorrectly created a separate cluster. This stopped traffic from reaching much of the cluster's capacity and overloaded the authentication servers that were still handling requests.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the incorrectly configured server.\u003cbr /\u003eWe are also fixing the replacement logic and adding safeguards to prevent servers in this state from serving traffic.",
           "created_at": "2026-11-03T13:56:18.729Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -323,7 +323,7 @@
           "incident_id": "rxlj89wpk7px",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-03T13:56:18.729Z"
+          "updated_at": "2026-11-16T22:10:00.271Z"
         },
         {
           "affected_components": [
@@ -496,7 +496,7 @@
       "shortlink": "https://stspg.io/h1xqhrcn5gqn",
       "started_at": "2026-11-03T13:25:19.609Z",
       "status": "resolved",
-      "updated_at": "2026-11-03T13:56:18.764Z"
+      "updated_at": "2026-11-16T22:10:00.278Z"
     }
   },
   {
@@ -752,7 +752,7 @@
       {
         "native_id": "1t7pvfnn98dv",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 4, 2026, between approximately 03:40 UTC and 10:01 UTC, some Copilot agent users experienced errors listing and creating agent tasks. On average, 1.22% of requests were failed, with a peak of 2.68% over a ten-minute interval.\u003cbr /\u003e\u003cbr /\u003eThe issue occurred when increased task-list traffic and expensive queries exhausted shared database capacity. We mitigated the broader impact by disabling a client experiment and temporarily restricting task-list requests from the affected client. Task-list requests remained restricted after the wider service recovered; we removed the blanket restriction on November 6 and continued a gradual rollout.\u003cbr /\u003e\u003cbr /\u003eWe’ve since improved task-list queries, moved rate limiting to separate infrastructure and added capacity monitoring. We’re continuing to reduce unnecessary client requests and validate capacity before expanding the rollout to reduce the chance of recurrence.",
         "created_at": "2026-11-04T10:01:44.56Z"
       }
     ],
@@ -765,7 +765,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 4, 2026, between approximately 03:40 UTC and 10:01 UTC, some Copilot agent users experienced errors listing and creating agent tasks. On average, 1.22% of requests were failed, with a peak of 2.68% over a ten-minute interval.\u003cbr /\u003e\u003cbr /\u003eThe issue occurred when increased task-list traffic and expensive queries exhausted shared database capacity. We mitigated the broader impact by disabling a client experiment and temporarily restricting task-list requests from the affected client. Task-list requests remained restricted after the wider service recovered; we removed the blanket restriction on November 6 and continued a gradual rollout.\u003cbr /\u003e\u003cbr /\u003eWe’ve since improved task-list queries, moved rate limiting to separate infrastructure and added capacity monitoring. We’re continuing to reduce unnecessary client requests and validate capacity before expanding the rollout to reduce the chance of recurrence.",
           "created_at": "2026-11-04T10:01:44.560Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -774,7 +774,7 @@
           "incident_id": "tc28c0wzrnpz",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-04T10:01:44.560Z"
+          "updated_at": "2026-11-16T16:15:27.571Z"
         },
         {
           "affected_components": null,
@@ -850,7 +850,7 @@
       "shortlink": "https://stspg.io/hj74883wgn0t",
       "started_at": "2026-11-04T08:45:00.272Z",
       "status": "resolved",
-      "updated_at": "2026-11-04T10:01:44.589Z"
+      "updated_at": "2026-11-16T16:15:27.574Z"
     }
   },
   {
@@ -923,7 +923,7 @@
       {
         "native_id": "m0pmt9998b8h",
         "status": "resolved",
-        "body": "On November 4, 2026, beginning at approximately 09:35 UTC, customers experienced intermittent errors and delays across several GitHub services, including Pull Requests, Issues, APIs, Git operations, and Actions.\u003cbr /\u003eThe disruption was caused by a shared database reaching capacity. We restored service by switching to another database host. Recovery began around 11:24 UTC, and the remaining Actions impact was mitigated by 11:43 UTC. The incident was resolved at 11:50 UTC.\u003cbr /\u003eWe have since made changes to reduce database load, increased capacity, and added monitoring to help identify similar problems earlier. We are also improving our recovery procedures.",
+        "body": "n November 4, 2026, between 09:35 UTC and 11:43 UTC, customers experienced intermittent errors and timeouts across GitHub.com, primarily on actions that write data. At peak, about 20% of pull request write operations (such as merging, commenting, and reviewing) failed, along with about 10% of issue creates and edits and 10–15% of project item edits. Git pushes over SSH, REST and GraphQL API requests, code scanning uploads, releases, and package operations were also affected, and about 1% of Actions runs were delayed by more than five minutes or failed to start. Overall, nearly 4% of all requests to GitHub.com failed at the worst point. Reads were largely unaffected, and retrying a failed action a short time later usually succeeded.\u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a burst of concurrent updates to the same database record, which tied up all available connections to one of our primary databases. Although that contention cleared, the backlog of waiting requests kept our database connection layer overloaded, and it did not recover on its own. We mitigated the incident by failing over to a new primary database host. Most services recovered by 11:31 UTC, and Actions recovered by 11:43 UTC.\u003cbr /\u003e\u003cbr /\u003eSince the incident, we have disabled the code path that triggered the contention, increased the processing capacity of our database connection layer by 50%, and added alerting to detect this type of overload earlier. We are also improving our procedures so we can fail over sooner in similar situations.",
         "created_at": "2026-11-04T11:50:06.424Z"
       }
     ],
@@ -987,8 +987,8 @@
           "position": 6,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-11-16T11:59:40.986Z"
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.311Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -1003,7 +1003,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-11-04T09:49:55.685Z",
@@ -1043,7 +1043,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "On November 4, 2026, beginning at approximately 09:35 UTC, customers experienced intermittent errors and delays across several GitHub services, including Pull Requests, Issues, APIs, Git operations, and Actions.\u003cbr /\u003eThe disruption was caused by a shared database reaching capacity. We restored service by switching to another database host. Recovery began around 11:24 UTC, and the remaining Actions impact was mitigated by 11:43 UTC. The incident was resolved at 11:50 UTC.\u003cbr /\u003eWe have since made changes to reduce database load, increased capacity, and added monitoring to help identify similar problems earlier. We are also improving our recovery procedures.",
+          "body": "n November 4, 2026, between 09:35 UTC and 11:43 UTC, customers experienced intermittent errors and timeouts across GitHub.com, primarily on actions that write data. At peak, about 20% of pull request write operations (such as merging, commenting, and reviewing) failed, along with about 10% of issue creates and edits and 10–15% of project item edits. Git pushes over SSH, REST and GraphQL API requests, code scanning uploads, releases, and package operations were also affected, and about 1% of Actions runs were delayed by more than five minutes or failed to start. Overall, nearly 4% of all requests to GitHub.com failed at the worst point. Reads were largely unaffected, and retrying a failed action a short time later usually succeeded.\u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a burst of concurrent updates to the same database record, which tied up all available connections to one of our primary databases. Although that contention cleared, the backlog of waiting requests kept our database connection layer overloaded, and it did not recover on its own. We mitigated the incident by failing over to a new primary database host. Most services recovered by 11:31 UTC, and Actions recovered by 11:43 UTC.\u003cbr /\u003e\u003cbr /\u003eSince the incident, we have disabled the code path that triggered the contention, increased the processing capacity of our database connection layer by 50%, and added alerting to detect this type of overload earlier. We are also improving our procedures so we can fail over sooner in similar situations.",
           "created_at": "2026-11-04T11:50:06.424Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1052,7 +1052,7 @@
           "incident_id": "smtdswd1h2w4",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-13T16:48:58.273Z"
+          "updated_at": "2026-11-16T21:54:50.372Z"
         },
         {
           "affected_components": [
@@ -1385,7 +1385,7 @@
       "shortlink": "https://stspg.io/18blsgwnbyy6",
       "started_at": "2026-11-04T09:49:55.675Z",
       "status": "resolved",
-      "updated_at": "2026-11-13T16:48:58.278Z"
+      "updated_at": "2026-11-16T21:54:50.376Z"
     }
   },
   {
@@ -1491,7 +1491,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -1857,7 +1857,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-11-04T17:40:33.675Z",
@@ -2012,7 +2012,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-11-05T16:50:11.086Z",
@@ -2224,7 +2224,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -2574,7 +2574,7 @@
       {
         "native_id": "c95sykj24m9k",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 8, 2026, between 08:43 and 12:29 UTC, unauthenticated requests to github.com and the GitHub REST API experienced elevated error rates. During this period, 11.3% of unauthenticated requests and 46.1% of release asset download requests failed. Authenticated requests were largely unaffected.\u003cbr /\u003e\u003cbr /\u003eInitial errors occurred in a backend service handling unauthenticated web traffic. A subsequent traffic spike caused high CPU utilization on servers in our caching layer. Some servers remained unhealthy after the spike ended, prolonging the disruption. We restored service by restarting caching software and rebooting affected servers.\u003cbr /\u003e\u003cbr /\u003eWe are improving monitoring to detect these failures sooner, investigating why affected servers did not recover automatically, and reviewing caching behavior to better protect backend services during failures.",
         "created_at": "2026-11-08T12:32:35.611Z"
       }
     ],
@@ -2610,7 +2610,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 8, 2026, between 08:43 and 12:29 UTC, unauthenticated requests to github.com and the GitHub REST API experienced elevated error rates. During this period, 11.3% of unauthenticated requests and 46.1% of release asset download requests failed. Authenticated requests were largely unaffected.\u003cbr /\u003e\u003cbr /\u003eInitial errors occurred in a backend service handling unauthenticated web traffic. A subsequent traffic spike caused high CPU utilization on servers in our caching layer. Some servers remained unhealthy after the spike ended, prolonging the disruption. We restored service by restarting caching software and rebooting affected servers.\u003cbr /\u003e\u003cbr /\u003eWe are improving monitoring to detect these failures sooner, investigating why affected servers did not recover automatically, and reviewing caching behavior to better protect backend services during failures.",
           "created_at": "2026-11-08T12:32:35.611Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -2619,7 +2619,7 @@
           "incident_id": "pyynvrm1vskw",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-08T12:32:35.611Z"
+          "updated_at": "2026-11-16T18:29:59.270Z"
         },
         {
           "affected_components": [
@@ -2736,7 +2736,7 @@
       "shortlink": "https://stspg.io/5yt31mfmyc6p",
       "started_at": "2026-11-08T10:36:05.474Z",
       "status": "resolved",
-      "updated_at": "2026-11-08T12:32:35.646Z"
+      "updated_at": "2026-11-16T18:29:59.276Z"
     }
   }
 ]

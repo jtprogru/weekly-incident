@@ -1,0 +1,538 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/smtdswd1h2w4",
+    "vendor": "github",
+    "native_id": "smtdswd1h2w4",
+    "title": "Incident with Pull Requests, Git Operations and Issues",
+    "url": "https://stspg.io/18blsgwnbyy6",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-04T09:49:55.675Z",
+    "resolved_at": "2026-11-04T11:50:06.424Z",
+    "duration_minutes": 120,
+    "components": [
+      "Git Operations",
+      "API Requests",
+      "Issues",
+      "Pull Requests",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "qvvm3zf0c1zq",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Git Operations, Issues and Pull Requests",
+        "created_at": "2026-11-04T09:49:55.863Z"
+      },
+      {
+        "native_id": "75v1zxsrtnll",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-04T09:50:47.47Z"
+      },
+      {
+        "native_id": "v97h9vk090fs",
+        "status": "investigating",
+        "body": "Pull Requests is experiencing degraded availability. We are continuing to investigate.",
+        "created_at": "2026-11-04T09:53:38.851Z"
+      },
+      {
+        "native_id": "9gdt7zrv3yfd",
+        "status": "investigating",
+        "body": "We're investigating elevated errors and intermittent failures affecting GitHub including Pull Requests, Git Operations, and Issues. We'll continue to keep users updated as we work toward mitigation.",
+        "created_at": "2026-11-04T10:38:49.825Z"
+      },
+      {
+        "native_id": "1s2ks6gvqrwn",
+        "status": "investigating",
+        "body": "API Requests is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-04T11:11:30.7Z"
+      },
+      {
+        "native_id": "35cdbq1vw030",
+        "status": "investigating",
+        "body": "We're currently working on mitigating elevated errors and intermittent failures affecting GitHub, including Pull Requests, Git Operations, and Issues. Some requests may fail or be delayed while we work to restore service. We'll provide another update as more information becomes available.",
+        "created_at": "2026-11-04T11:17:52.023Z"
+      },
+      {
+        "native_id": "1rttgwl1stf1",
+        "status": "investigating",
+        "body": "The degradation affecting API Requests, Git Operations, Issues and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-04T11:30:42.288Z"
+      },
+      {
+        "native_id": "6wq7x2hvrhw5",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-04T11:43:52.025Z"
+      },
+      {
+        "native_id": "m0pmt9998b8h",
+        "status": "resolved",
+        "body": "n November 4, 2026, between 09:35 UTC and 11:43 UTC, customers experienced intermittent errors and timeouts across GitHub.com, primarily on actions that write data. At peak, about 20% of pull request write operations (such as merging, commenting, and reviewing) failed, along with about 10% of issue creates and edits and 10–15% of project item edits. Git pushes over SSH, REST and GraphQL API requests, code scanning uploads, releases, and package operations were also affected, and about 1% of Actions runs were delayed by more than five minutes or failed to start. Overall, nearly 4% of all requests to GitHub.com failed at the worst point. Reads were largely unaffected, and retrying a failed action a short time later usually succeeded.\u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a burst of concurrent updates to the same database record, which tied up all available connections to one of our primary databases. Although that contention cleared, the backlog of waiting requests kept our database connection layer overloaded, and it did not recover on its own. We mitigated the incident by failing over to a new primary database host. Most services recovered by 11:31 UTC, and Actions recovered by 11:43 UTC.\u003cbr /\u003e\u003cbr /\u003eSince the incident, we have disabled the code path that triggered the contention, increased the processing capacity of our database connection layer by 50%, and added alerting to detect this type of overload earlier. We are also improving our procedures so we can fail over sooner in similar situations.",
+        "created_at": "2026-11-04T11:50:06.424Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:05:05.370Z",
+          "description": "Performance of git clones, pulls, pushes, and associated operations",
+          "group": false,
+          "group_id": null,
+          "id": "8l4ygp009s5s",
+          "name": "Git Operations",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 1,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T11:30:42.148Z"
+        },
+        {
+          "created_at": "2017-01-31T20:01:46.621Z",
+          "description": "Requests for GitHub APIs",
+          "group": false,
+          "group_id": null,
+          "id": "brv1bkgrwx7q",
+          "name": "API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 4,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-08T11:56:20.652Z"
+        },
+        {
+          "created_at": "2017-01-31T20:01:46.638Z",
+          "description": "Requests for Issues on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "kr09ddfgbfsf",
+          "name": "Issues",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-06T00:06:11.679Z"
+        },
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.311Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.343Z"
+        }
+      ],
+      "created_at": "2026-11-04T09:49:55.685Z",
+      "id": "smtdswd1h2w4",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "n November 4, 2026, between 09:35 UTC and 11:43 UTC, customers experienced intermittent errors and timeouts across GitHub.com, primarily on actions that write data. At peak, about 20% of pull request write operations (such as merging, commenting, and reviewing) failed, along with about 10% of issue creates and edits and 10–15% of project item edits. Git pushes over SSH, REST and GraphQL API requests, code scanning uploads, releases, and package operations were also affected, and about 1% of Actions runs were delayed by more than five minutes or failed to start. Overall, nearly 4% of all requests to GitHub.com failed at the worst point. Reads were largely unaffected, and retrying a failed action a short time later usually succeeded.\u003cbr /\u003e\u003cbr /\u003eThe incident was triggered by a burst of concurrent updates to the same database record, which tied up all available connections to one of our primary databases. Although that contention cleared, the backlog of waiting requests kept our database connection layer overloaded, and it did not recover on its own. We mitigated the incident by failing over to a new primary database host. Most services recovered by 11:31 UTC, and Actions recovered by 11:43 UTC.\u003cbr /\u003e\u003cbr /\u003eSince the incident, we have disabled the code path that triggered the contention, increased the processing capacity of our database connection layer by 50%, and added alerting to detect this type of overload earlier. We are also improving our procedures so we can fail over sooner in similar situations.",
+          "created_at": "2026-11-04T11:50:06.424Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T11:50:06.424Z",
+          "id": "m0pmt9998b8h",
+          "incident_id": "smtdswd1h2w4",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T21:54:50.372Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-04T11:43:52.025Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T11:43:52.025Z",
+          "id": "6wq7x2hvrhw5",
+          "incident_id": "smtdswd1h2w4",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T11:43:52.025Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The degradation affecting API Requests, Git Operations, Issues and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-04T11:30:42.288Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T11:30:42.288Z",
+          "id": "1rttgwl1stf1",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T11:30:42.288Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We're currently working on mitigating elevated errors and intermittent failures affecting GitHub, including Pull Requests, Git Operations, and Issues. Some requests may fail or be delayed while we work to restore service. We'll provide another update as more information becomes available.",
+          "created_at": "2026-11-04T11:17:52.023Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T11:17:52.023Z",
+          "id": "35cdbq1vw030",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T11:17:52.023Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "brv1bkgrwx7q",
+              "name": "API Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "API Requests is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-04T11:11:30.700Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T11:11:30.700Z",
+          "id": "1s2ks6gvqrwn",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T11:11:30.700Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We're investigating elevated errors and intermittent failures affecting GitHub including Pull Requests, Git Operations, and Issues. We'll continue to keep users updated as we work toward mitigation.",
+          "created_at": "2026-11-04T10:38:49.825Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T10:38:49.825Z",
+          "id": "9gdt7zrv3yfd",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T10:38:49.825Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pull Requests is experiencing degraded availability. We are continuing to investigate.",
+          "created_at": "2026-11-04T09:53:38.851Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T09:53:38.851Z",
+          "id": "v97h9vk090fs",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T09:53:38.851Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-04T09:50:47.470Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T09:50:47.470Z",
+          "id": "75v1zxsrtnll",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T09:50:47.470Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "8l4ygp009s5s",
+              "name": "Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Git Operations, Issues and Pull Requests",
+          "created_at": "2026-11-04T09:49:55.863Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T09:49:55.863Z",
+          "id": "qvvm3zf0c1zq",
+          "incident_id": "smtdswd1h2w4",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T09:49:55.863Z"
+        }
+      ],
+      "monitoring_at": "2026-11-04T11:43:52.025Z",
+      "name": "Incident with Pull Requests, Git Operations and Issues",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-04T11:50:06.424Z",
+      "shortlink": "https://stspg.io/18blsgwnbyy6",
+      "started_at": "2026-11-04T09:49:55.675Z",
+      "status": "resolved",
+      "updated_at": "2026-11-16T21:54:50.376Z"
+    }
+  }
+}

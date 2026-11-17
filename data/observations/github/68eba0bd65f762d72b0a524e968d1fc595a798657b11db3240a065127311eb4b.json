@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/q29p76qtnkyk",
+    "vendor": "github",
+    "native_id": "q29p76qtnkyk",
+    "title": "Incident with Actions",
+    "url": "https://stspg.io/44w94j036yc8",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-22T14:18:15.716Z",
+    "resolved_at": "2026-10-22T15:18:46.284Z",
+    "duration_minutes": 60,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "nsjyz4k7vgs3",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-10-22T14:18:15.815Z"
+      },
+      {
+        "native_id": "xh4wrkjc7dc3",
+        "status": "investigating",
+        "body": "We’re investigating delays in processing GitHub Actions workflow and step results, along with some repository updates.",
+        "created_at": "2026-10-22T14:19:32.589Z"
+      },
+      {
+        "native_id": "4kd33w2d2f0w",
+        "status": "investigating",
+        "body": "Repository update processing has recovered. We’re continuing to work on delays affecting GitHub Actions workflow and step results. We’ll share another update as we make progress.",
+        "created_at": "2026-10-22T14:35:29.241Z"
+      },
+      {
+        "native_id": "fbzgx3z8qljp",
+        "status": "investigating",
+        "body": "We’re seeing recovery, and repository update processing has returned to normal. Delays affecting GitHub Actions workflow and step results are continuing to clear as we scale processing capacity; the remaining backlog is expected to take about 20 minutes to drain.",
+        "created_at": "2026-10-22T15:06:35.474Z"
+      },
+      {
+        "native_id": "8g9h6tnc0lfx",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-22T15:17:23.929Z"
+      },
+      {
+        "native_id": "zhym3r2qq98y",
+        "status": "monitoring",
+        "body": "GitHub Actions workflow and step result processing has recovered. Repository update processing has also returned to normal.",
+        "created_at": "2026-10-22T15:18:41.559Z"
+      },
+      {
+        "native_id": "7ny9n73s5sfc",
+        "status": "resolved",
+        "body": "On October 22, 2026, from 13:05 to 15:20 UTC, our event streaming platform was degraded resulting in elevated job processing latency spikes of 19-35 seconds and elevated job processing times of 4m – this resulted in delayed Actions workflow and step results (up to 13m), notifications (20m) and repository push events (12m).  Recovery for repositories began at 14:32, with Actions recovery beginning at 14:59. The issue reoccurred at 16:26 again impacting Actions runs, repo push events, and notifications. Recovery began at 17:16 and completed at 2:07.  \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a significant increase in load coupled with client connection storms during a deployment overloading our Kafka event streaming brokers. \u003cbr /\u003e\u003cbr /\u003eTo prevent future recurrence, we have expanded the affected cluster, shifted traffic to less loaded clusters, and implemented tunable client reconnect backoff.",
+        "created_at": "2026-10-22T15:18:46.284Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.343Z"
+        }
+      ],
+      "created_at": "2026-10-22T14:18:15.723Z",
+      "id": "q29p76qtnkyk",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On October 22, 2026, from 13:05 to 15:20 UTC, our event streaming platform was degraded resulting in elevated job processing latency spikes of 19-35 seconds and elevated job processing times of 4m – this resulted in delayed Actions workflow and step results (up to 13m), notifications (20m) and repository push events (12m).  Recovery for repositories began at 14:32, with Actions recovery beginning at 14:59. The issue reoccurred at 16:26 again impacting Actions runs, repo push events, and notifications. Recovery began at 17:16 and completed at 2:07.  \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by a significant increase in load coupled with client connection storms during a deployment overloading our Kafka event streaming brokers. \u003cbr /\u003e\u003cbr /\u003eTo prevent future recurrence, we have expanded the affected cluster, shifted traffic to less loaded clusters, and implemented tunable client reconnect backoff.",
+          "created_at": "2026-10-22T15:18:46.284Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T15:18:46.284Z",
+          "id": "7ny9n73s5sfc",
+          "incident_id": "q29p76qtnkyk",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-05T00:04:42.623Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "GitHub Actions workflow and step result processing has recovered. Repository update processing has also returned to normal.",
+          "created_at": "2026-10-22T15:18:41.559Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T15:18:41.559Z",
+          "id": "zhym3r2qq98y",
+          "incident_id": "q29p76qtnkyk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T15:18:41.559Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-22T15:17:23.929Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T15:17:23.929Z",
+          "id": "8g9h6tnc0lfx",
+          "incident_id": "q29p76qtnkyk",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T15:17:23.929Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re seeing recovery, and repository update processing has returned to normal. Delays affecting GitHub Actions workflow and step results are continuing to clear as we scale processing capacity; the remaining backlog is expected to take about 20 minutes to drain.",
+          "created_at": "2026-10-22T15:06:35.474Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T15:06:35.474Z",
+          "id": "fbzgx3z8qljp",
+          "incident_id": "q29p76qtnkyk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T15:06:35.474Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Repository update processing has recovered. We’re continuing to work on delays affecting GitHub Actions workflow and step results. We’ll share another update as we make progress.",
+          "created_at": "2026-10-22T14:35:29.241Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T14:35:29.241Z",
+          "id": "4kd33w2d2f0w",
+          "incident_id": "q29p76qtnkyk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T14:35:29.241Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re investigating delays in processing GitHub Actions workflow and step results, along with some repository updates.",
+          "created_at": "2026-10-22T14:19:32.589Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T14:19:32.589Z",
+          "id": "xh4wrkjc7dc3",
+          "incident_id": "q29p76qtnkyk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T14:19:32.589Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-10-22T14:18:15.815Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-22T14:18:15.815Z",
+          "id": "nsjyz4k7vgs3",
+          "incident_id": "q29p76qtnkyk",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-22T14:18:15.815Z"
+        }
+      ],
+      "monitoring_at": "2026-10-22T15:17:23.929Z",
+      "name": "Incident with Actions",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-22T15:18:46.284Z",
+      "shortlink": "https://stspg.io/44w94j036yc8",
+      "started_at": "2026-10-22T14:18:15.716Z",
+      "status": "resolved",
+      "updated_at": "2026-11-05T00:04:42.627Z"
+    }
+  }
+}

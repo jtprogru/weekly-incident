@@ -84,7 +84,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         },
         {
           "created_at": "2017-01-31T20:04:33.923Z",
@@ -408,7 +408,7 @@
       {
         "native_id": "7gbpcnhmw25l",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 21, 2026, between 13:22 UTC and 19:22 UTC, several GitHub services were delayed due to degradation of our internal event streaming platform. \u003cbr /\u003e\u003cbr /\u003ePull request updates, push webhooks, and push-triggered Actions workflows were delayed by up to 33 minutes until 15:36 UTC. Actions status updates were delayed by up to 33 minutes until 16:16 UTC, holding up some merges and deployments that wait on checks. Webhook deliveries and live updates were delayed by up to 25 minutes until 16:52 UTC. Audit log events were delayed by up to two hours. \u003cbr /\u003e\u003cbr /\u003eThis was due to servers in the platform running out of memory caused by client reconnections without sufficient retry backoff. We mitigated the incident by moving the busiest workloads to less-loaded servers and adding capacity. \u003cbr /\u003e\u003cbr /\u003eWe have since added reconnection backoff and added server capacity. We are building a solution for auto-rebalancing connections across servers, and splitting the platform into smaller, isolated clusters to reduce blast radius and time to mitigation of issues like this one in the future.",
         "created_at": "2026-10-21T19:22:52.633Z"
       }
     ],
@@ -442,8 +442,8 @@
           "position": 6,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-11-16T11:59:40.986Z"
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.311Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -458,7 +458,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-10-21T14:52:49.979Z",
@@ -486,7 +486,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 21, 2026, between 13:22 UTC and 19:22 UTC, several GitHub services were delayed due to degradation of our internal event streaming platform. \u003cbr /\u003e\u003cbr /\u003ePull request updates, push webhooks, and push-triggered Actions workflows were delayed by up to 33 minutes until 15:36 UTC. Actions status updates were delayed by up to 33 minutes until 16:16 UTC, holding up some merges and deployments that wait on checks. Webhook deliveries and live updates were delayed by up to 25 minutes until 16:52 UTC. Audit log events were delayed by up to two hours. \u003cbr /\u003e\u003cbr /\u003eThis was due to servers in the platform running out of memory caused by client reconnections without sufficient retry backoff. We mitigated the incident by moving the busiest workloads to less-loaded servers and adding capacity. \u003cbr /\u003e\u003cbr /\u003eWe have since added reconnection backoff and added server capacity. We are building a solution for auto-rebalancing connections across servers, and splitting the platform into smaller, isolated clusters to reduce blast radius and time to mitigation of issues like this one in the future.",
           "created_at": "2026-10-21T19:22:52.633Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -495,7 +495,7 @@
           "incident_id": "nms1dpzmh9d9",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-21T19:22:52.633Z"
+          "updated_at": "2026-11-16T18:41:45.052Z"
         },
         {
           "affected_components": [
@@ -954,7 +954,7 @@
       "shortlink": "https://stspg.io/gnnt0tx9nxmk",
       "started_at": "2026-10-21T14:52:49.969Z",
       "status": "resolved",
-      "updated_at": "2026-10-21T19:22:52.663Z"
+      "updated_at": "2026-11-16T18:41:45.056Z"
     }
   },
   {
@@ -1031,7 +1031,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-10-22T14:18:15.723Z",
@@ -1314,7 +1314,7 @@
       {
         "native_id": "wb1tkfqtr4j2",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On October 22, 2026, between 14:55 and 17:28 UTC, search on GitHub.com was degraded. Search-backed features in Issues, Pull Requests, Projects, Actions, Packages, and some REST API endpoints returned errors or incomplete results. On average, 21% of search requests failed, peaking at 52%. Running Actions workflows, uploading and downloading packages, and Git operations were not affected. \u003cbr /\u003e\u003cbr /\u003eThis was due to the proxies that route requests to our search clusters running out of CPU while setting up encrypted connections. Requests that timed out were retried, which added more load and kept the proxies overloaded. The search clusters themselves remained healthy. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by adding proxy capacity, after which search recovered at 17:28 UTC. \u003cbr /\u003e\u003cbr /\u003eWe have started reducing the CPU cost of these encrypted connections. We are also working to make search retries adjustable during an incident without a deployment, and to alert on search failures sooner. Together these will reduce our time to detection and mitigation of issues like this one in the future.",
         "created_at": "2026-10-23T02:30:25.221Z"
       }
     ],
@@ -1363,8 +1363,8 @@
           "position": 6,
           "showcase": true,
           "start_date": null,
-          "status": "degraded_performance",
-          "updated_at": "2026-11-16T11:59:40.986Z"
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.311Z"
         },
         {
           "created_at": "2019-11-13T18:02:19.432Z",
@@ -1379,7 +1379,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         },
         {
           "created_at": "2019-11-13T18:02:40.064Z",
@@ -1434,7 +1434,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On October 22, 2026, between 14:55 and 17:28 UTC, search on GitHub.com was degraded. Search-backed features in Issues, Pull Requests, Projects, Actions, Packages, and some REST API endpoints returned errors or incomplete results. On average, 21% of search requests failed, peaking at 52%. Running Actions workflows, uploading and downloading packages, and Git operations were not affected. \u003cbr /\u003e\u003cbr /\u003eThis was due to the proxies that route requests to our search clusters running out of CPU while setting up encrypted connections. Requests that timed out were retried, which added more load and kept the proxies overloaded. The search clusters themselves remained healthy. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by adding proxy capacity, after which search recovered at 17:28 UTC. \u003cbr /\u003e\u003cbr /\u003eWe have started reducing the CPU cost of these encrypted connections. We are also working to make search retries adjustable during an incident without a deployment, and to alert on search failures sooner. Together these will reduce our time to detection and mitigation of issues like this one in the future.",
           "created_at": "2026-10-23T02:30:25.221Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1443,7 +1443,7 @@
           "incident_id": "wq8305lppdc2",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-10-23T02:30:25.221Z"
+          "updated_at": "2026-11-16T16:28:44.228Z"
         },
         {
           "affected_components": [
@@ -2160,7 +2160,7 @@
       "shortlink": "https://stspg.io/sx51v1tlpqjc",
       "started_at": "2026-10-22T15:28:03.979Z",
       "status": "resolved",
-      "updated_at": "2026-10-23T02:30:25.279Z"
+      "updated_at": "2026-11-16T16:28:44.234Z"
     }
   },
   {
@@ -2225,7 +2225,7 @@
           "showcase": true,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-11T21:07:24.537Z"
+          "updated_at": "2026-11-16T16:07:32.343Z"
         }
       ],
       "created_at": "2026-10-23T07:29:03.081Z",

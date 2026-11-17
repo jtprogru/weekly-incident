@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/tc28c0wzrnpz",
+    "vendor": "github",
+    "native_id": "tc28c0wzrnpz",
+    "title": "Increased task-related errors for Copilot Mission Control",
+    "url": "https://stspg.io/hj74883wgn0t",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-04T08:45:00.272Z",
+    "resolved_at": "2026-11-04T10:01:44.56Z",
+    "duration_minutes": 76,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "7k30gvf022fr",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-11-04T08:45:00.346Z"
+      },
+      {
+        "native_id": "6n3kkzddb38h",
+        "status": "investigating",
+        "body": "Copilot Mission Control is experiencing increased error rates (approx 2.5%) in listing and creating tasks due to upstream database throttling. We are investigating two potential mitigations.",
+        "created_at": "2026-11-04T08:47:14.339Z"
+      },
+      {
+        "native_id": "cfgxyq4by7ht",
+        "status": "investigating",
+        "body": "We've identified the issue with a specific client version and are deploying a mitigation. We are already seeing partial recovery.",
+        "created_at": "2026-11-04T09:11:08.365Z"
+      },
+      {
+        "native_id": "8txj85zgnjh6",
+        "status": "investigating",
+        "body": "We're continuing to see recovery as rollout continues",
+        "created_at": "2026-11-04T09:50:33.74Z"
+      },
+      {
+        "native_id": "t1hnhyhrp9f7",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-04T10:01:39.506Z"
+      },
+      {
+        "native_id": "1t7pvfnn98dv",
+        "status": "resolved",
+        "body": "On November 4, 2026, between approximately 03:40 UTC and 10:01 UTC, some Copilot agent users experienced errors listing and creating agent tasks. On average, 1.22% of requests were failed, with a peak of 2.68% over a ten-minute interval.\u003cbr /\u003e\u003cbr /\u003eThe issue occurred when increased task-list traffic and expensive queries exhausted shared database capacity. We mitigated the broader impact by disabling a client experiment and temporarily restricting task-list requests from the affected client. Task-list requests remained restricted after the wider service recovered; we removed the blanket restriction on November 6 and continued a gradual rollout.\u003cbr /\u003e\u003cbr /\u003eWe’ve since improved task-list queries, moved rate limiting to separate infrastructure and added capacity monitoring. We’re continuing to reduce unnecessary client requests and validate capacity before expanding the rollout to reduce the chance of recurrence.",
+        "created_at": "2026-11-04T10:01:44.56Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-04T08:45:00.281Z",
+      "id": "tc28c0wzrnpz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On November 4, 2026, between approximately 03:40 UTC and 10:01 UTC, some Copilot agent users experienced errors listing and creating agent tasks. On average, 1.22% of requests were failed, with a peak of 2.68% over a ten-minute interval.\u003cbr /\u003e\u003cbr /\u003eThe issue occurred when increased task-list traffic and expensive queries exhausted shared database capacity. We mitigated the broader impact by disabling a client experiment and temporarily restricting task-list requests from the affected client. Task-list requests remained restricted after the wider service recovered; we removed the blanket restriction on November 6 and continued a gradual rollout.\u003cbr /\u003e\u003cbr /\u003eWe’ve since improved task-list queries, moved rate limiting to separate infrastructure and added capacity monitoring. We’re continuing to reduce unnecessary client requests and validate capacity before expanding the rollout to reduce the chance of recurrence.",
+          "created_at": "2026-11-04T10:01:44.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T10:01:44.560Z",
+          "id": "1t7pvfnn98dv",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T16:15:27.571Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-04T10:01:39.506Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T10:01:39.506Z",
+          "id": "t1hnhyhrp9f7",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T10:01:39.506Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We're continuing to see recovery as rollout continues",
+          "created_at": "2026-11-04T09:50:33.740Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T09:50:33.740Z",
+          "id": "8txj85zgnjh6",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T09:50:33.740Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We've identified the issue with a specific client version and are deploying a mitigation. We are already seeing partial recovery.",
+          "created_at": "2026-11-04T09:11:08.365Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T09:11:08.365Z",
+          "id": "cfgxyq4by7ht",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T09:11:08.365Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Copilot Mission Control is experiencing increased error rates (approx 2.5%) in listing and creating tasks due to upstream database throttling. We are investigating two potential mitigations.",
+          "created_at": "2026-11-04T08:47:14.339Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T08:47:14.339Z",
+          "id": "6n3kkzddb38h",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T08:47:14.339Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-11-04T08:45:00.346Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T08:45:00.346Z",
+          "id": "7k30gvf022fr",
+          "incident_id": "tc28c0wzrnpz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T08:45:00.346Z"
+        }
+      ],
+      "monitoring_at": "2026-11-04T10:01:39.506Z",
+      "name": "Increased task-related errors for Copilot Mission Control",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-04T10:01:44.560Z",
+      "shortlink": "https://stspg.io/hj74883wgn0t",
+      "started_at": "2026-11-04T08:45:00.272Z",
+      "status": "resolved",
+      "updated_at": "2026-11-16T16:15:27.574Z"
+    }
+  }
+}
