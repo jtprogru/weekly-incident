@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/sv9tnfpjiojf",
+    "vendor": "cloudflare",
+    "native_id": "sv9tnfpjiojf",
+    "title": "Errors and stalled predictions on some models",
+    "url": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-17T15:02:47.698Z",
+    "resolved_at": "2026-11-18T03:23:23.095Z",
+    "duration_minutes": 740,
+    "components": [
+      "Replicate"
+    ],
+    "updates": [
+      {
+        "native_id": "2ld6nzsj6vcz",
+        "status": "investigating",
+        "body": "We are currently investigating this issue.\n\nCloudflare is aware of, and investigating, an issue affecting predictions for some models on Replicate. Customers may see prediction requests return HTTP 500 errors, and some predictions may remain in a processing state without completing. Some API responses are also missing version information, which can cause validation errors in client libraries. We are working to understand the full impact and mitigate this problem.",
+        "created_at": "2026-11-17T15:02:47.698Z"
+      },
+      {
+        "native_id": "whughkl5oujw",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.\n\nCurrent impact: prediction requests for some models may return HTTP 500 errors, and some predictions may stay in a processing state. Customers using the API may also see validation errors on responses.",
+        "created_at": "2026-11-17T16:32:13.057Z"
+      },
+      {
+        "native_id": "j6r5t7lo7g3p",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.\n\nCurrent impact: predictions on OpenAI models are back to normal. Predictions on other models may still return HTTP 500 errors or stay in a processing state while we continue to work on a fix.",
+        "created_at": "2026-11-17T21:53:51.025Z"
+      },
+      {
+        "native_id": "d67uga863xxr",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-18T02:56:06.358Z"
+      },
+      {
+        "native_id": "1kvm6loth74e",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-18T03:23:23.095Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-06-30T13:39:35.000Z",
+          "description": "Replicate runs and fine-tunes open-source models.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fvgfcmy66tdr",
+          "name": "Replicate",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2026-06-30",
+          "status": "operational",
+          "updated_at": "2026-11-18T03:23:23.095Z"
+        }
+      ],
+      "created_at": "2026-11-17T15:02:47.698Z",
+      "id": "sv9tnfpjiojf",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-18T03:23:23.095Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-18T03:23:23.095Z",
+          "id": "1kvm6loth74e",
+          "incident_id": "sv9tnfpjiojf",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-18T03:23:23.095Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-18T02:56:06.358Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-18T02:56:06.358Z",
+          "id": "d67uga863xxr",
+          "incident_id": "sv9tnfpjiojf",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-18T02:56:06.358Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.\n\nCurrent impact: predictions on OpenAI models are back to normal. Predictions on other models may still return HTTP 500 errors or stay in a processing state while we continue to work on a fix.",
+          "created_at": "2026-11-17T21:53:51.025Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T21:53:51.025Z",
+          "id": "j6r5t7lo7g3p",
+          "incident_id": "sv9tnfpjiojf",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T21:53:51.025Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.\n\nCurrent impact: prediction requests for some models may return HTTP 500 errors, and some predictions may stay in a processing state. Customers using the API may also see validation errors on responses.",
+          "created_at": "2026-11-17T16:32:13.057Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T16:32:13.057Z",
+          "id": "whughkl5oujw",
+          "incident_id": "sv9tnfpjiojf",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T16:32:13.057Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fvgfcmy66tdr",
+              "name": "AI - Replicate",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating this issue.\n\nCloudflare is aware of, and investigating, an issue affecting predictions for some models on Replicate. Customers may see prediction requests return HTTP 500 errors, and some predictions may remain in a processing state without completing. Some API responses are also missing version information, which can cause validation errors in client libraries. We are working to understand the full impact and mitigate this problem. ",
+          "created_at": "2026-11-17T15:02:47.698Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T15:02:47.698Z",
+          "id": "2ld6nzsj6vcz",
+          "incident_id": "sv9tnfpjiojf",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T15:02:47.698Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Errors and stalled predictions on some models",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-18T03:23:23.095Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/sv9tnfpjiojf",
+      "started_at": "2026-11-17T15:02:47.698Z",
+      "status": "resolved",
+      "updated_at": "2026-11-18T03:23:23.095Z"
+    }
+  }
+}

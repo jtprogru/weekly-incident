@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/v6sllx288pwy",
+    "vendor": "stripe",
+    "native_id": "v6sllx288pwy",
+    "title": "Elevated Issuing API Errors",
+    "url": "https://stspg.io/16s7hszs8vj7",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-07-17T19:56:33.851Z",
+    "resolved_at": "2026-07-17T20:24:44.397Z",
+    "duration_minutes": 28,
+    "components": [
+      "Stripe API"
+    ],
+    "updates": [
+      {
+        "native_id": "80f57njv06f0",
+        "status": "identified",
+        "body": "Starting 19:00 UTC we started seeing elevated error rates affecting Issuing API requests, resulting in failing credit card transactions. We've identified the cause and are working to mitigate. We will provide an update when we start seeing recovery.",
+        "created_at": "2026-07-17T19:56:33.937Z"
+      },
+      {
+        "native_id": "wshvdq6dzm1p",
+        "status": "resolved",
+        "body": "From 19:00–19:55 UTC on July 17, 2026, Issuing users did not receive real-time authorization request webhooks and experienced declined transactions. All systems have recovered and are operating normally.",
+        "created_at": "2026-07-17T20:24:44.397Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-17T20:05:20.108Z"
+        }
+      ],
+      "created_at": "2026-07-17T19:56:33.859Z",
+      "id": "v6sllx288pwy",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "From 19:00–19:55 UTC on July 17, 2026, Issuing users did not receive real-time authorization request webhooks and experienced declined transactions. All systems have recovered and are operating normally.",
+          "created_at": "2026-07-17T20:24:44.397Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-17T20:24:44.397Z",
+          "id": "wshvdq6dzm1p",
+          "incident_id": "v6sllx288pwy",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T20:24:44.397Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Starting 19:00 UTC we started seeing elevated error rates affecting Issuing API requests, resulting in failing credit card transactions. We've identified the cause and are working to mitigate. We will provide an update when we start seeing recovery.",
+          "created_at": "2026-07-17T19:56:33.937Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-07-17T19:56:33.937Z",
+          "id": "80f57njv06f0",
+          "incident_id": "v6sllx288pwy",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-17T19:56:33.937Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Issuing API Errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-17T20:24:44.397Z",
+      "shortlink": "https://stspg.io/16s7hszs8vj7",
+      "started_at": "2026-07-17T19:56:33.851Z",
+      "status": "resolved",
+      "updated_at": "2026-07-17T20:24:44.412Z"
+    }
+  }
+}

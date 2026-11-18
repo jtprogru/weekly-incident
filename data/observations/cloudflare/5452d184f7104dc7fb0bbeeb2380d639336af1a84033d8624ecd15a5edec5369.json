@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/tawn3zx7wh0z",
+    "vendor": "cloudflare",
+    "native_id": "tawn3zx7wh0z",
+    "title": "Cloudflare One Gateway traffic unable to connect to Cloudflare domains that are regionalized",
+    "url": "https://www.cloudflarestatus.com/incidents/tawn3zx7wh0z",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-17T13:54:19.03Z",
+    "resolved_at": "2026-11-17T14:56:52.677Z",
+    "duration_minutes": 62,
+    "components": [
+      "Data Localization Suite",
+      "Zero Trust",
+      "Cloudflare One Client"
+    ],
+    "updates": [
+      {
+        "native_id": "jq44dao5r0tj",
+        "status": "identified",
+        "body": "We are investigating reports of connection drops and TCP resets affecting requests routed through Cloudflare WARP and Gateway that aims for Cloudflare Regional Services hostnames and domains. \nEngineering has identified the root cause and is preparing a fix for release",
+        "created_at": "2026-11-17T13:54:19.03Z"
+      },
+      {
+        "native_id": "mxwj4surraw6",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-17T14:43:52.271Z"
+      },
+      {
+        "native_id": "ilz1b04o0t6g",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-17T14:56:52.677Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-01-19T14:25:24.000Z",
+          "description": "The Data Localization Suite (DLS) is a collection of tools that enable customers to choose the location where Cloudflare inspects and stores data, while maintaining the security and performance benefits of our global network.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "2c93ckmbbpd7",
+          "name": "Data Localization Suite",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-01-19",
+          "status": "operational",
+          "updated_at": "2026-11-17T14:56:52.677Z"
+        },
+        {
+          "created_at": "2021-04-08T15:53:09.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "kf0ktv29xrfy",
+          "name": "Zero Trust",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2021-04-08",
+          "status": "operational",
+          "updated_at": "2026-11-17T14:56:52.677Z"
+        },
+        {
+          "created_at": "2019-09-30T09:25:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "k04jkcpzxn94",
+          "name": "Cloudflare One Client",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-17T14:56:52.677Z"
+        }
+      ],
+      "created_at": "2026-11-17T13:54:19.030Z",
+      "id": "tawn3zx7wh0z",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-17T14:56:52.677Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T14:56:52.677Z",
+          "id": "ilz1b04o0t6g",
+          "incident_id": "tawn3zx7wh0z",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T14:56:52.677Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-17T14:43:52.271Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T14:43:52.271Z",
+          "id": "mxwj4surraw6",
+          "incident_id": "tawn3zx7wh0z",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T14:43:52.271Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2c93ckmbbpd7",
+              "name": "Data Localization - Data Localization Suite",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "k04jkcpzxn94",
+              "name": "Zero Trust - Cloudflare One Client",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kf0ktv29xrfy",
+              "name": "Zero Trust - Zero Trust",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of connection drops and TCP resets affecting requests routed through Cloudflare WARP and Gateway that aims for Cloudflare Regional Services hostnames and domains. \nEngineering has identified the root cause and is preparing a fix for release",
+          "created_at": "2026-11-17T13:54:19.030Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T13:54:19.030Z",
+          "id": "jq44dao5r0tj",
+          "incident_id": "tawn3zx7wh0z",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T13:54:19.030Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare One Gateway traffic unable to connect to Cloudflare domains that are regionalized",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-17T14:56:52.677Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/tawn3zx7wh0z",
+      "started_at": "2026-11-17T13:54:19.030Z",
+      "status": "resolved",
+      "updated_at": "2026-11-17T14:56:52.677Z"
+    }
+  }
+}

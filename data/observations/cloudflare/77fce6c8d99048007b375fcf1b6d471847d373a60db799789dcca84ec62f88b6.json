@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/a643zcsfc71q",
+    "vendor": "cloudflare",
+    "native_id": "a643zcsfc71q",
+    "title": "Increased errors for R2 and Tiered Cache",
+    "url": "https://www.cloudflarestatus.com/incidents/a643zcsfc71q",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-14T05:30:35.27Z",
+    "resolved_at": "2026-11-14T06:45:47.731Z",
+    "duration_minutes": 75,
+    "components": [
+      "Chicago, United States - (ORD)",
+      "R2",
+      "Newark, United States - (EWR)"
+    ],
+    "updates": [
+      {
+        "native_id": "gysp1zqrlpwl",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating an issue with R2. Customers in Chicago, IL, may see 503 errors when using R2. We are currently investigating this issue.",
+        "created_at": "2026-11-14T05:30:35.27Z"
+      },
+      {
+        "native_id": "mmtehfypjcw2",
+        "status": "monitoring",
+        "body": "Starting at 05:00 UTC, a network connectivity issue between several Cloudflare data centers caused a small percentage of requests to fail. R2 customers may have seen HTTP 500 errors, and requests for content served through Tiered Cache may have returned 520, 522 or 524 errors. Customers in Chicago and Newark saw the highest error rates, and other locations were affected at lower rates. Error rates have dropped close to normal levels since 05:30 UTC. We are continuing to monitor while the underlying network issue is resolved.",
+        "created_at": "2026-11-14T05:43:38.62Z"
+      },
+      {
+        "native_id": "uq5jvofaih9a",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-14T06:45:47.731Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-27T19:57:04.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "z9v8znl25w0f",
+          "name": "Chicago, United States - (ORD)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 11,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T10:33:50.242Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-18T13:45:19.653Z"
+        },
+        {
+          "created_at": "2014-10-27T20:30:34.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "grpnztl4pd46",
+          "name": "Newark, United States - (EWR)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 34,
+          "showcase": false,
+          "start_date": null,
+          "status": "under_maintenance",
+          "updated_at": "2026-11-18T14:00:14.479Z"
+        }
+      ],
+      "created_at": "2026-11-14T05:30:35.270Z",
+      "id": "a643zcsfc71q",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-14T06:45:47.731Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T06:45:47.731Z",
+          "id": "uq5jvofaih9a",
+          "incident_id": "a643zcsfc71q",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T06:45:47.731Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "grpnztl4pd46",
+              "name": "North America - Newark, United States - (EWR)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Starting at 05:00 UTC, a network connectivity issue between several Cloudflare data centers caused a small percentage of requests to fail. R2 customers may have seen HTTP 500 errors, and requests for content served through Tiered Cache may have returned 520, 522 or 524 errors. Customers in Chicago and Newark saw the highest error rates, and other locations were affected at lower rates. Error rates have dropped close to normal levels since 05:30 UTC. We are continuing to monitor while the underlying network issue is resolved.",
+          "created_at": "2026-11-14T05:43:38.620Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T05:43:38.620Z",
+          "id": "mmtehfypjcw2",
+          "incident_id": "a643zcsfc71q",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T05:43:38.620Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "z9v8znl25w0f",
+              "name": "North America - Chicago, United States - (ORD)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating an issue with R2. Customers in Chicago, IL, may see 503 errors when using R2. We are currently investigating this issue.",
+          "created_at": "2026-11-14T05:30:35.270Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-14T05:30:35.270Z",
+          "id": "gysp1zqrlpwl",
+          "incident_id": "a643zcsfc71q",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-14T05:30:35.270Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased errors for R2 and Tiered Cache",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-14T06:45:47.731Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/a643zcsfc71q",
+      "started_at": "2026-11-14T05:30:35.270Z",
+      "status": "resolved",
+      "updated_at": "2026-11-14T06:45:47.731Z"
+    }
+  }
+}
