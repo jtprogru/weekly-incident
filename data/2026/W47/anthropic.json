@@ -51,8 +51,8 @@
           "position": 1,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-17T18:56:06.152Z"
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.758Z"
         },
         {
           "created_at": "2023-07-11T17:53:10.880Z",
@@ -67,7 +67,7 @@
           "showcase": true,
           "start_date": "2023-07-11",
           "status": "operational",
-          "updated_at": "2026-11-16T09:04:39.679Z"
+          "updated_at": "2026-11-19T09:33:18.788Z"
         },
         {
           "created_at": "2025-05-22T21:35:29.822Z",
@@ -82,7 +82,7 @@
           "showcase": true,
           "start_date": "2025-02-06",
           "status": "operational",
-          "updated_at": "2026-11-16T09:04:39.711Z"
+          "updated_at": "2026-11-19T09:33:18.813Z"
         },
         {
           "created_at": "2026-04-01T17:39:47.692Z",
@@ -97,7 +97,7 @@
           "showcase": true,
           "start_date": "2026-04-01",
           "status": "operational",
-          "updated_at": "2026-11-16T09:04:39.737Z"
+          "updated_at": "2026-11-19T09:33:18.842Z"
         }
       ],
       "created_at": "2026-11-16T07:49:55.066Z",
@@ -234,11 +234,13 @@
     "key": "anthropic/b5cq662qf2wm",
     "vendor": "anthropic",
     "native_id": "b5cq662qf2wm",
-    "title": "Claude unable to join meetings",
+    "title": "Claude Meetings auto-join limited on the Team plan",
     "url": "https://stspg.io/01qq3kzyyqzl",
     "impact": "minor",
-    "status": "identified",
+    "status": "resolved",
     "started_at": "2026-11-16T15:10:15.16Z",
+    "resolved_at": "2026-11-19T02:15:05.834Z",
+    "duration_minutes": 3544,
     "components": [
       "claude.ai"
     ],
@@ -278,6 +280,12 @@
         "status": "identified",
         "body": "Claude Meetings (beta) is joining calls more reliably, and we are monitoring it. It remains enabled for all Enterprise customers. Team customers can again add Claude to new calls manually, and Auto-join is being restored gradually for Team customers.",
         "created_at": "2026-11-17T23:39:43.919Z"
+      },
+      {
+        "native_id": "rw17j5rnvscn",
+        "status": "resolved",
+        "body": "Claude Meetings (beta) is joining calls normally. Enterprise and Team customers can add Claude to calls. Auto-join is available for all Enterprise customers and some Team customers. We'll continue rolling out auto-join to additional Team customers in the coming days.",
+        "created_at": "2026-11-19T02:15:05.834Z"
       }
     ],
     "first_seen_at": "2026-11-17T14:59:44.356895199Z",
@@ -295,14 +303,34 @@
           "position": 1,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-17T18:56:06.152Z"
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.758Z"
         }
       ],
       "created_at": "2026-11-16T15:10:15.167Z",
       "id": "b5cq662qf2wm",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Claude Meetings (beta) is joining calls normally. Enterprise and Team customers can add Claude to calls. Auto-join is available for all Enterprise customers and some Team customers. We'll continue rolling out auto-join to additional Team customers in the coming days.",
+          "created_at": "2026-11-19T02:15:05.834Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T02:15:05.834Z",
+          "id": "rw17j5rnvscn",
+          "incident_id": "b5cq662qf2wm",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T02:15:05.834Z"
+        },
         {
           "affected_components": [
             {
@@ -425,14 +453,14 @@
         }
       ],
       "monitoring_at": null,
-      "name": "Claude unable to join meetings",
+      "name": "Claude Meetings auto-join limited on the Team plan",
       "page_id": "tymt9n04zgry",
       "reminder_intervals": "[]",
-      "resolved_at": null,
+      "resolved_at": "2026-11-19T02:15:05.834Z",
       "shortlink": "https://stspg.io/01qq3kzyyqzl",
       "started_at": "2026-11-16T15:10:15.160Z",
-      "status": "identified",
-      "updated_at": "2026-11-18T01:29:51.981Z"
+      "status": "resolved",
+      "updated_at": "2026-11-19T02:15:05.860Z"
     }
   },
   {
@@ -484,8 +512,8 @@
           "position": 1,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-17T18:56:06.152Z"
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.758Z"
         }
       ],
       "created_at": "2026-11-17T18:55:53.499Z",
@@ -606,8 +634,8 @@
           "position": 1,
           "showcase": true,
           "start_date": "2023-07-11",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-17T18:56:06.152Z"
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.758Z"
         }
       ],
       "created_at": "2026-11-18T01:13:15.170Z",
@@ -677,6 +705,237 @@
       "started_at": "2026-11-18T01:13:15.164Z",
       "status": "resolved",
       "updated_at": "2026-11-18T01:44:40.807Z"
+    }
+  },
+  {
+    "key": "anthropic/c1kmrkmv5f3d",
+    "vendor": "anthropic",
+    "native_id": "c1kmrkmv5f3d",
+    "title": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+    "url": "https://stspg.io/nlb5fptv28h5",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-19T09:10:24.807Z",
+    "resolved_at": "2026-11-19T09:33:18.884Z",
+    "duration_minutes": 22,
+    "components": [
+      "claude.ai",
+      "Claude API (api.anthropic.com)",
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "3cd4qf2tw2q2",
+        "status": "investigating",
+        "body": "We are investigating elevated errors on requests to Claude Mythos 5.2 and Claude Fable 5.2. We will provide an update as soon as possible.",
+        "created_at": "2026-11-19T09:10:25.013Z"
+      },
+      {
+        "native_id": "4v0xz4khdtdq",
+        "status": "monitoring",
+        "body": "A fix has been deployed for other Claude models and we are monitoring for recovery.",
+        "created_at": "2026-11-19T09:22:50.015Z"
+      },
+      {
+        "native_id": "pp8809wbpxss",
+        "status": "resolved",
+        "body": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:56 PT / 08:56 UTC to 01:11 PT / 09:11 UTC.",
+        "created_at": "2026-11-19T09:33:18.884Z"
+      }
+    ],
+    "first_seen_at": "2026-11-19T14:47:33.825270789Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:24.275Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.758Z"
+        },
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.788Z"
+        },
+        {
+          "created_at": "2025-05-22T21:35:29.822Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 4,
+          "showcase": true,
+          "start_date": "2025-02-06",
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.813Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "operational",
+          "updated_at": "2026-11-19T09:33:18.842Z"
+        }
+      ],
+      "created_at": "2026-11-19T09:10:24.815Z",
+      "id": "c1kmrkmv5f3d",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue affecting claude.ai, the Claude API, Claude Code, and Claude Cowork has been resolved. Impact occurred from 00:56 PT / 08:56 UTC to 01:11 PT / 09:11 UTC.",
+          "created_at": "2026-11-19T09:33:18.884Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T09:33:18.884Z",
+          "id": "pp8809wbpxss",
+          "incident_id": "c1kmrkmv5f3d",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T09:33:18.884Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been deployed for other Claude models and we are monitoring for recovery.",
+          "created_at": "2026-11-19T09:22:50.015Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T09:22:50.015Z",
+          "id": "4v0xz4khdtdq",
+          "incident_id": "c1kmrkmv5f3d",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T09:22:50.015Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated errors on requests to Claude Mythos 5.2 and Claude Fable 5.2. We will provide an update as soon as possible.",
+          "created_at": "2026-11-19T09:10:25.013Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T09:10:25.013Z",
+          "id": "3cd4qf2tw2q2",
+          "incident_id": "c1kmrkmv5f3d",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T09:10:25.013Z"
+        }
+      ],
+      "monitoring_at": "2026-11-19T09:22:50.015Z",
+      "name": "Elevated errors for Claude Mythos 5.2 and Claude Fable 5.2",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-19T09:33:18.884Z",
+      "shortlink": "https://stspg.io/nlb5fptv28h5",
+      "started_at": "2026-11-19T09:10:24.807Z",
+      "status": "resolved",
+      "updated_at": "2026-11-19T09:33:18.914Z"
     }
   }
 ]

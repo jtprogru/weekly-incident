@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/sd2sya0mc6df",
+    "vendor": "cloudflare",
+    "native_id": "sd2sya0mc6df",
+    "title": "Cloudflare Access Issue",
+    "url": "https://www.cloudflarestatus.com/incidents/sd2sya0mc6df",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-19T06:48:06.017Z",
+    "resolved_at": "2026-11-19T08:56:14.612Z",
+    "duration_minutes": 128,
+    "components": [
+      "Access"
+    ],
+    "updates": [
+      {
+        "native_id": "3hs8r7hoq6hg",
+        "status": "identified",
+        "body": "Cloudflare is investigating an issue with Cloudflare Access. A recent Cloudflare Access release removed the sub claim from service token JWTs, which can cause authentication failures for applications that strictly validate token claims. The change has been reverted and the fix is rolling out globally.",
+        "created_at": "2026-11-19T06:48:06.017Z"
+      },
+      {
+        "native_id": "iz5oe2uf92yh",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-19T08:32:01.689Z"
+      },
+      {
+        "native_id": "gprh17kypkub",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-19T08:56:14.612Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2018-02-09T21:46:39.000Z",
+          "description": "Cloudflare Access determines who can reach your application by applying the Access policies you configure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "w4k8yvhfb3vp",
+          "name": "Access",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-19T08:56:14.612Z"
+        }
+      ],
+      "created_at": "2026-11-19T06:48:06.017Z",
+      "id": "sd2sya0mc6df",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-19T08:56:14.612Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T08:56:14.612Z",
+          "id": "gprh17kypkub",
+          "incident_id": "sd2sya0mc6df",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T08:56:14.612Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-19T08:32:01.689Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T08:32:01.689Z",
+          "id": "iz5oe2uf92yh",
+          "incident_id": "sd2sya0mc6df",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T08:32:01.689Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "w4k8yvhfb3vp",
+              "name": "Zero Trust - Access",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an issue with Cloudflare Access. A recent Cloudflare Access release removed the sub claim from service token JWTs, which can cause authentication failures for applications that strictly validate token claims. The change has been reverted and the fix is rolling out globally.",
+          "created_at": "2026-11-19T06:48:06.017Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T06:48:06.017Z",
+          "id": "3hs8r7hoq6hg",
+          "incident_id": "sd2sya0mc6df",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T06:48:06.017Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Access Issue",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-19T08:56:14.612Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/sd2sya0mc6df",
+      "started_at": "2026-11-19T06:48:06.017Z",
+      "status": "resolved",
+      "updated_at": "2026-11-19T08:56:14.612Z"
+    }
+  }
+}

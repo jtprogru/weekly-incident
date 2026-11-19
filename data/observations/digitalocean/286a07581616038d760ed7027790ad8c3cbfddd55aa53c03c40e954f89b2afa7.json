@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "digitalocean/bdr1xgf08wsr",
+    "vendor": "digitalocean",
+    "native_id": "bdr1xgf08wsr",
+    "title": "Increased Error Rates in SFO3",
+    "url": "https://stspg.io/bnb8ltd5ct7l",
+    "impact": "minor",
+    "status": "monitoring",
+    "started_at": "2026-11-19T04:37:54.314Z",
+    "components": [
+      "SFO3"
+    ],
+    "updates": [
+      {
+        "native_id": "fk02pngt7c1z",
+        "status": "investigating",
+        "body": "As of 02:53 UTC, our Engineering team is investigating increased error rates impacting multiple services in the SFO3 region. At this point, users with resources in SFO3 may experience errors, timeouts, or delays when creating or managing Droplets, Volumes, Load Balancers, Reserved IPs, Cloud Firewalls, Managed Databases, and Managed Kubernetes clusters through the API or Cloud Control Panel. Some users may also experience connectivity issues with Load Balancers and with newly created or restarted Droplets. \n\nWe apologize for the inconvenience and will share an update once we have more information.",
+        "created_at": "2026-11-19T04:37:54.462Z"
+      },
+      {
+        "native_id": "01khzg14p89r",
+        "status": "monitoring",
+        "body": "Our Engineering team has mitigated the increased error rates impacting multiple services in the SFO3 region and is monitoring the situation. The impact was caused by a network routing issue that disrupted connectivity to one of our core database systems after a load balancer node became unavailable.\n\nAs of 04:32 UTC, users should no longer experience errors or timeouts when creating or managing resources in SFO3. Operations that failed during the incident may need to be retried.\n\nWe will post an update as soon as the issue is fully resolved.",
+        "created_at": "2026-11-19T04:45:00.794Z"
+      },
+      {
+        "native_id": "0sff1p7b4c2d",
+        "status": "monitoring",
+        "body": "Our Engineering team has mitigated the issue, and services in the SFO3 region are currently operating normally. The team is continuing to monitor the situation to ensure stability given the scope of the impact.\n\nWe will continue monitoring and share another update once the situation is fully resolved. In the meantime, if you encounter any further errors or timeouts, please retry the affected operations. If the issue persists, please submit a ticket through your Cloud Support page so our team can assist you further: https://cloudsupport.digitalocean.com/s/createticket",
+        "created_at": "2026-11-19T05:46:29.183Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-02-22T19:28:05.998Z",
+          "description": null,
+          "group": false,
+          "group_id": "sjlhrm4vf4pr",
+          "id": "pkldx6th5q38",
+          "name": "SFO3",
+          "only_show_if_degraded": false,
+          "page_id": "w4cz49tckxhp",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2023-02-22",
+          "status": "operational",
+          "updated_at": "2026-11-19T05:46:29.128Z"
+        }
+      ],
+      "created_at": "2026-11-19T04:37:54.324Z",
+      "id": "bdr1xgf08wsr",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "pkldx6th5q38",
+              "name": "Networking - SFO3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has mitigated the issue, and services in the SFO3 region are currently operating normally. The team is continuing to monitor the situation to ensure stability given the scope of the impact.\n\nWe will continue monitoring and share another update once the situation is fully resolved. In the meantime, if you encounter any further errors or timeouts, please retry the affected operations. If the issue persists, please submit a ticket through your Cloud Support page so our team can assist you further: https://cloudsupport.digitalocean.com/s/createticket",
+          "created_at": "2026-11-19T05:46:29.183Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T05:46:29.183Z",
+          "id": "0sff1p7b4c2d",
+          "incident_id": "bdr1xgf08wsr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T05:46:29.183Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pkldx6th5q38",
+              "name": "Networking - SFO3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Engineering team has mitigated the increased error rates impacting multiple services in the SFO3 region and is monitoring the situation. The impact was caused by a network routing issue that disrupted connectivity to one of our core database systems after a load balancer node became unavailable.\n\nAs of 04:32 UTC, users should no longer experience errors or timeouts when creating or managing resources in SFO3. Operations that failed during the incident may need to be retried.\n\nWe will post an update as soon as the issue is fully resolved.",
+          "created_at": "2026-11-19T04:45:00.794Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T04:45:00.794Z",
+          "id": "01khzg14p89r",
+          "incident_id": "bdr1xgf08wsr",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T04:45:00.794Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "pkldx6th5q38",
+              "name": "Networking - SFO3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of 02:53 UTC, our Engineering team is investigating increased error rates impacting multiple services in the SFO3 region. At this point, users with resources in SFO3 may experience errors, timeouts, or delays when creating or managing Droplets, Volumes, Load Balancers, Reserved IPs, Cloud Firewalls, Managed Databases, and Managed Kubernetes clusters through the API or Cloud Control Panel. Some users may also experience connectivity issues with Load Balancers and with newly created or restarted Droplets. \n\nWe apologize for the inconvenience and will share an update once we have more information.",
+          "created_at": "2026-11-19T04:37:54.462Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T04:37:54.462Z",
+          "id": "fk02pngt7c1z",
+          "incident_id": "bdr1xgf08wsr",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T04:37:54.462Z"
+        }
+      ],
+      "monitoring_at": "2026-11-19T04:45:00.794Z",
+      "name": "Increased Error Rates in SFO3",
+      "page_id": "w4cz49tckxhp",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://stspg.io/bnb8ltd5ct7l",
+      "started_at": "2026-11-19T04:37:54.314Z",
+      "status": "monitoring",
+      "updated_at": "2026-11-19T05:46:29.185Z"
+    }
+  }
+}
