@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/5n4xwywr0dmn",
+    "vendor": "grafana",
+    "native_id": "5n4xwywr0dmn",
+    "title": "Increased Read Latency In prod-us-central-0 Region",
+    "url": "https://stspg.io/p6bxmc4m9p1v",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-19T16:53:38.686Z",
+    "resolved_at": "2026-11-19T18:12:37.356Z",
+    "duration_minutes": 78,
+    "components": [
+      "GCP US Central - prod-us-central-0: Querying"
+    ],
+    "updates": [
+      {
+        "native_id": "xv128g53q3cn",
+        "status": "investigating",
+        "body": "We are currently investigating an issue that is causing increased latency in the read path in the prod-us-central-0 region. Next update by 18:00 UTC.",
+        "created_at": "2026-11-19T16:53:38.835Z"
+      },
+      {
+        "native_id": "jgkk70wwpcc4",
+        "status": "monitoring",
+        "body": "A fix is currently being rolled out, and we are seeing improvement. Most customers should now see normal query performance, but some may still notice slower queries or delays in alert and recording rule evaluations until recovery is complete. We are continuing to monitor the situation. Next update by 18:30 UTC.",
+        "created_at": "2026-11-19T17:44:39.392Z"
+      },
+      {
+        "native_id": "09ck3xcr7qh9",
+        "status": "resolved",
+        "body": "Between 16:20 and 17:40 UTC, a subset of customers in prod-us-central-0 experienced increased query latency and delayed or missed rule evaluations. Service is fully restored. Thank you for your patience.",
+        "created_at": "2026-11-19T18:12:37.356Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-04-10T08:43:51.752Z",
+          "description": null,
+          "group": false,
+          "group_id": "lw2vgyyz3mxd",
+          "id": "jhc34sjt42wd",
+          "name": "GCP US Central - prod-us-central-0: Querying",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 42,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-19T18:12:37.301Z"
+        }
+      ],
+      "created_at": "2026-11-19T16:53:38.698Z",
+      "id": "5n4xwywr0dmn",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Between 16:20 and 17:40 UTC, a subset of customers in prod-us-central-0 experienced increased query latency and delayed or missed rule evaluations. Service is fully restored. Thank you for your patience.",
+          "created_at": "2026-11-19T18:12:37.356Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T18:12:37.356Z",
+          "id": "09ck3xcr7qh9",
+          "incident_id": "5n4xwywr0dmn",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T18:12:37.356Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A fix is currently being rolled out, and we are seeing improvement. Most customers should now see normal query performance, but some may still notice slower queries or delays in alert and recording rule evaluations until recovery is complete. We are continuing to monitor the situation. Next update by 18:30 UTC.",
+          "created_at": "2026-11-19T17:44:39.392Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T17:44:39.392Z",
+          "id": "jgkk70wwpcc4",
+          "incident_id": "5n4xwywr0dmn",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T17:44:39.392Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "jhc34sjt42wd",
+              "name": "Metrics - GCP US Central - prod-us-central-0: Querying",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating an issue that is causing increased latency in the read path in the prod-us-central-0 region. Next update by 18:00 UTC.",
+          "created_at": "2026-11-19T16:53:38.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T16:53:38.835Z",
+          "id": "xv128g53q3cn",
+          "incident_id": "5n4xwywr0dmn",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T16:53:38.835Z"
+        }
+      ],
+      "monitoring_at": "2026-11-19T17:44:39.392Z",
+      "name": "Increased Read Latency In prod-us-central-0 Region",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-19T18:12:37.356Z",
+      "shortlink": "https://stspg.io/p6bxmc4m9p1v",
+      "started_at": "2026-11-19T16:53:38.686Z",
+      "status": "resolved",
+      "updated_at": "2026-11-19T18:12:37.380Z"
+    }
+  }
+}

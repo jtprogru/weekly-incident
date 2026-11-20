@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/0ocqieaifg7h",
+    "vendor": "cloudflare",
+    "native_id": "0ocqieaifg7h",
+    "title": "Changes to Cloudflare Workers are not producing Event Subscription events",
+    "url": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-11-10T01:53:58.905Z",
+    "components": [
+      "Workers",
+      "Queues"
+    ],
+    "updates": [
+      {
+        "native_id": "rxfxlvk6bnk3",
+        "status": "investigating",
+        "body": "Changes to Cloudflare Workers are temporarily not producing Event Subscription events. We have intentionally disabled this feature due to an on-going issue. We are actively working to restore it, but this, regrettably, may take a while. Changes to Workers themselves are working normally. Already deployed Workers are entirely unaffected.",
+        "created_at": "2026-11-10T01:53:58.905Z"
+      },
+      {
+        "native_id": "tsd2wb2nx1mq",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-11T05:05:06.331Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-19T21:55:44.489Z"
+        },
+        {
+          "created_at": "2025-10-22T09:19:59.000Z",
+          "description": "Send and receive messages with guaranteed delivery and no charges for egress bandwidth.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3z7cmdfch5kb",
+          "name": "Queues",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2025-10-22",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-10T01:53:58.905Z"
+        }
+      ],
+      "created_at": "2026-11-10T01:53:58.905Z",
+      "id": "0ocqieaifg7h",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-11T05:05:06.331Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-11T05:05:06.331Z",
+          "id": "tsd2wb2nx1mq",
+          "incident_id": "0ocqieaifg7h",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-11T05:05:06.331Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3z7cmdfch5kb",
+              "name": "Developer Services - Queues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Changes to Cloudflare Workers are temporarily not producing Event Subscription events. We have intentionally disabled this feature due to an on-going issue. We are actively working to restore it, but this, regrettably, may take a while. Changes to Workers themselves are working normally. Already deployed Workers are entirely unaffected.",
+          "created_at": "2026-11-10T01:53:58.905Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-10T01:53:58.905Z",
+          "id": "rxfxlvk6bnk3",
+          "incident_id": "0ocqieaifg7h",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-10T01:53:58.905Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Changes to Cloudflare Workers are not producing Event Subscription events",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/0ocqieaifg7h",
+      "started_at": "2026-11-10T01:53:58.905Z",
+      "status": "identified",
+      "updated_at": "2026-11-11T05:05:06.331Z"
+    }
+  }
+}

@@ -58,8 +58,10 @@
     "title": "Increased Error Rates in SFO3",
     "url": "https://stspg.io/bnb8ltd5ct7l",
     "impact": "minor",
-    "status": "monitoring",
+    "status": "resolved",
     "started_at": "2026-11-19T04:37:54.314Z",
+    "resolved_at": "2026-11-19T18:04:36.598Z",
+    "duration_minutes": 806,
     "components": [
       "SFO3"
     ],
@@ -81,6 +83,12 @@
         "status": "monitoring",
         "body": "Our Engineering team has mitigated the issue, and services in the SFO3 region are currently operating normally. The team is continuing to monitor the situation to ensure stability given the scope of the impact.\n\nWe will continue monitoring and share another update once the situation is fully resolved. In the meantime, if you encounter any further errors or timeouts, please retry the affected operations. If the issue persists, please submit a ticket through your Cloud Support page so our team can assist you further: https://cloudsupport.digitalocean.com/s/createticket",
         "created_at": "2026-11-19T05:46:29.183Z"
+      },
+      {
+        "native_id": "25h2463m7by0",
+        "status": "resolved",
+        "body": "Our Engineering team has confirmed that the increased error rates in the SFO3 region are resolved.\n\nFrom 02:53 UTC to 04:32 UTC, users may have experienced errors, timeouts, or delays when creating or managing Droplets, Volumes, Load Balancers, Reserved IPs, Cloud Firewalls, Managed Databases, and Managed Kubernetes clusters through the API or Cloud Control Panel. Some users also experienced connectivity issues with Load Balancers and with newly created or restarted Droplets.\n\nThe impact was caused by a network routing issue that disrupted connectivity to one of our core database systems after a load balancer node became unavailable. Services have been stable since mitigation. Operations that failed during the incident may need to be retried.\n\nWe apologize for the inconvenience. If you continue to experience issues, please open a support ticket from your DigitalOcean account.",
+        "created_at": "2026-11-19T18:04:36.598Z"
       }
     ],
     "first_seen_at": "2026-11-19T14:47:33.825270789Z",
@@ -106,6 +114,26 @@
       "id": "bdr1xgf08wsr",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "pkldx6th5q38",
+              "name": "Networking - SFO3",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Our Engineering team has confirmed that the increased error rates in the SFO3 region are resolved.\n\nFrom 02:53 UTC to 04:32 UTC, users may have experienced errors, timeouts, or delays when creating or managing Droplets, Volumes, Load Balancers, Reserved IPs, Cloud Firewalls, Managed Databases, and Managed Kubernetes clusters through the API or Cloud Control Panel. Some users also experienced connectivity issues with Load Balancers and with newly created or restarted Droplets.\n\nThe impact was caused by a network routing issue that disrupted connectivity to one of our core database systems after a load balancer node became unavailable. Services have been stable since mitigation. Operations that failed during the incident may need to be retried.\n\nWe apologize for the inconvenience. If you continue to experience issues, please open a support ticket from your DigitalOcean account.",
+          "created_at": "2026-11-19T18:04:36.598Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T18:04:36.598Z",
+          "id": "25h2463m7by0",
+          "incident_id": "bdr1xgf08wsr",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T18:04:36.598Z"
+        },
         {
           "affected_components": [
             {
@@ -171,11 +199,11 @@
       "name": "Increased Error Rates in SFO3",
       "page_id": "w4cz49tckxhp",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-11-19T18:04:36.598Z",
       "shortlink": "https://stspg.io/bnb8ltd5ct7l",
       "started_at": "2026-11-19T04:37:54.314Z",
-      "status": "monitoring",
-      "updated_at": "2026-11-19T05:46:29.185Z"
+      "status": "resolved",
+      "updated_at": "2026-11-19T18:04:36.623Z"
     }
   }
 ]

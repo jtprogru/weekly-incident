@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "circleci/n1tc2lw9q7l0",
+    "vendor": "circleci",
+    "native_id": "n1tc2lw9q7l0",
+    "title": "Issues with network routing for Mac jobs",
+    "url": "https://stspg.io/vc3sdl5vsqyr",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-07-13T18:55:54.294Z",
+    "resolved_at": "2026-07-13T19:40:22.542Z",
+    "duration_minutes": 44,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "nw42z8jcpj5h",
+        "status": "investigating",
+        "body": "We've received reports of intermittent network issues between our mac infrastructure and a VCS provider. We are investigating and will provide updates.",
+        "created_at": "2026-07-13T18:55:54.379Z"
+      },
+      {
+        "native_id": "wwdxk6fbc2cz",
+        "status": "identified",
+        "body": "We're working with our Mac infrastructure provider to attempt a mitigation. Will update again shortly.",
+        "created_at": "2026-07-13T19:11:04.646Z"
+      },
+      {
+        "native_id": "4bk0zw5hw9fn",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has implemented a fix, we're starting to see recovery. We're monitoring and we'll update again shortly.",
+        "created_at": "2026-07-13T19:29:52.04Z"
+      },
+      {
+        "native_id": "d9m27khylqsq",
+        "status": "resolved",
+        "body": "We've confirmed the fix with our infrastructure provider and successful tests on our end.  If customers continue to see any failed runs, please run again for a successful connection and reach out to Support if any further issues.",
+        "created_at": "2026-07-13T19:40:22.542Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-19T19:22:09.876Z"
+        }
+      ],
+      "created_at": "2026-07-13T18:55:54.301Z",
+      "id": "n1tc2lw9q7l0",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've confirmed the fix with our infrastructure provider and successful tests on our end.  If customers continue to see any failed runs, please run again for a successful connection and reach out to Support if any further issues.",
+          "created_at": "2026-07-13T19:40:22.542Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:40:22.542Z",
+          "id": "d9m27khylqsq",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:40:22.542Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has implemented a fix, we're starting to see recovery. We're monitoring and we'll update again shortly.",
+          "created_at": "2026-07-13T19:29:52.040Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:29:52.040Z",
+          "id": "4bk0zw5hw9fn",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:29:52.040Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're working with our Mac infrastructure provider to attempt a mitigation. Will update again shortly.",
+          "created_at": "2026-07-13T19:11:04.646Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T19:11:04.646Z",
+          "id": "wwdxk6fbc2cz",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T19:11:04.646Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We've received reports of intermittent network issues between our mac infrastructure and a VCS provider. We are investigating and will provide updates.",
+          "created_at": "2026-07-13T18:55:54.379Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T18:55:54.379Z",
+          "id": "nw42z8jcpj5h",
+          "incident_id": "n1tc2lw9q7l0",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T18:55:54.379Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T19:29:52.040Z",
+      "name": "Issues with network routing for Mac jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-13T19:40:22.542Z",
+      "shortlink": "https://stspg.io/vc3sdl5vsqyr",
+      "started_at": "2026-07-13T18:55:54.294Z",
+      "status": "resolved",
+      "updated_at": "2026-07-13T19:40:22.558Z"
+    }
+  }
+}

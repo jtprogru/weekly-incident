@@ -1,0 +1,1628 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "grafana/djhnhnnbh6tg",
+    "vendor": "grafana",
+    "native_id": "djhnhnnbh6tg",
+    "title": "GitHub returning 403 for all Git Sync repositories",
+    "url": "https://stspg.io/c1s5cmykytmk",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-04T03:02:14.651Z",
+    "resolved_at": "2026-11-04T04:59:52.299Z",
+    "duration_minutes": 117,
+    "components": [
+      "AWS Australia - prod-au-southeast-1",
+      "AWS Australia - prod-au-southeast-2",
+      "AWS Brazil - prod-sa-east-1",
+      "AWS Canada prod-ca-central-1",
+      "AWS Canada - prod-ca-east-0",
+      "AWS Germany - prod-eu-west-2",
+      "AWS Germany - prod-eu-west-4",
+      "AWS Germany prod-eu-central-1",
+      "AWS India - prod-ap-south-1",
+      "AWS Indonesia - prod-ap-southeast-2",
+      "AWS Indonesia - prod-ap-southeast-3",
+      "AWS Ireland eu-west-1",
+      "AWS Ireland - prod-eu-west-6",
+      "AWS Japan - prod-ap-northeast-0",
+      "AWS Singapore - prod-ap-southeast-1",
+      "AWS Sweden eu-north-1",
+      "AWS Sweden - prod-eu-north-0",
+      "AWS Switzerland - prod-eu-central-0",
+      "AWS Switzerland eu-central-2",
+      "AWS UAE - prod-me-central-1",
+      "AWS UK - prod-gb-south-1",
+      "AWS US East (OH) - prod-us-east-0",
+      "AWS East (VA) prod-us-east-1",
+      "AWS US East (OH) - prod-us-east-2",
+      "AWS US West - prod-us-west-0",
+      "AWS US East (VA) - prod-us-east-3",
+      "AWS West prod-us-west-2",
+      "Azure US Central - us-central2",
+      "Azure Netherlands - prod-eu-west-3",
+      "Azure UAE - prod-me-central-2",
+      "GCP Australia - prod-au-southeast-0",
+      "GCP Belgium - prod-eu-west-0",
+      "GCP Brazil - prod-sa-east-0",
+      "GCP India - prod-ap-south-0",
+      "GCP Saudi Arabia - prod-me-central-0",
+      "GCP Singapore - prod-ap-southeast-0",
+      "GCP UK - prod-gb-south-0",
+      "GCP US Central - prod-us-central-0",
+      "GCP US Central - prod-us-central-3",
+      "GCP US Central - prod-us-central-4",
+      "GCP US Central - prod-us-central-7",
+      "GCP US East - prod-us-east-1",
+      "play.grafana.org",
+      "Federal Cloud - AWS US Gov West",
+      "Azure Malasia - azure-malaysiawest-0"
+    ],
+    "updates": [
+      {
+        "native_id": "yym9np5lrmtz",
+        "status": "identified",
+        "body": "Since ~21:40 UTC on Nov 3, GitHub started rejecting the default User-Agent our Git Sync client sends (nanogit/0), so nearly every GitHub-backed repo shows as unhealthy (\"not authorized\") and syncs are being skipped. Our Engineering team has rolled out a fix to development and validated that the fix works. We will roll out the fix to production shortly and will provide another update.",
+        "created_at": "2026-11-04T03:02:16.095Z"
+      },
+      {
+        "native_id": "3jzs5493fbln",
+        "status": "monitoring",
+        "body": "The fix has landed in 60% of production. We are currently monitoring as it lands in the remaining clusters.",
+        "created_at": "2026-11-04T04:07:46.614Z"
+      },
+      {
+        "native_id": "gfp15hyks380",
+        "status": "resolved",
+        "body": "The fix has been deployed to all production clusters and we are observing a continued period of stability. At this time, we are marking the incident as resolved.",
+        "created_at": "2026-11-04T04:59:52.299Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2026-01-07T09:50:52.600Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "v2sp8gjnhwk6",
+          "name": "AWS Australia - prod-au-southeast-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2026-01-07",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.405Z"
+        },
+        {
+          "created_at": "2023-09-20T13:06:07.864Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "wfc1hb7m917l",
+          "name": "AWS Australia - prod-au-southeast-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.434Z"
+        },
+        {
+          "created_at": "2023-09-20T13:14:50.252Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "9zgd4n4s874v",
+          "name": "AWS Brazil - prod-sa-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.549Z"
+        },
+        {
+          "created_at": "2026-09-17T14:53:07.127Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "3313q22s44c6",
+          "name": "AWS Canada prod-ca-central-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 4,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.574Z"
+        },
+        {
+          "created_at": "2023-03-01T23:37:06.091Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "zvfc1jlr92kg",
+          "name": "AWS Canada - prod-ca-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.596Z"
+        },
+        {
+          "created_at": "2023-03-01T23:37:22.739Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "6wgslg1s3bzr",
+          "name": "AWS Germany - prod-eu-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.618Z"
+        },
+        {
+          "created_at": "2023-03-01T23:38:04.573Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "wdcnfc3drb8s",
+          "name": "AWS Germany - prod-eu-west-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.644Z"
+        },
+        {
+          "created_at": "2026-09-17T13:51:35.072Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "7p6wcb29nx29",
+          "name": "AWS Germany prod-eu-central-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.196Z"
+        },
+        {
+          "created_at": "2023-10-03T13:21:19.043Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2vj35rbpdr7s",
+          "name": "AWS India - prod-ap-south-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2023-10-03",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.667Z"
+        },
+        {
+          "created_at": "2026-10-20T14:30:55.377Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "cqkrtg039qbs",
+          "name": "AWS Indonesia - prod-ap-southeast-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 10,
+          "showcase": false,
+          "start_date": "2026-10-20",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.243Z"
+        },
+        {
+          "created_at": "2026-09-17T13:37:05.849Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "txbgz1946dds",
+          "name": "AWS Indonesia - prod-ap-southeast-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 11,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.264Z"
+        },
+        {
+          "created_at": "2026-09-17T13:55:03.375Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "675g90qrmwcm",
+          "name": "AWS Ireland eu-west-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.690Z"
+        },
+        {
+          "created_at": "2026-02-18T15:24:57.523Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "b562z2mrff79",
+          "name": "AWS Ireland - prod-eu-west-6",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 13,
+          "showcase": false,
+          "start_date": "2026-02-18",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.713Z"
+        },
+        {
+          "created_at": "2024-04-19T13:08:30.023Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "nrv6vyr5l7m8",
+          "name": "AWS Japan - prod-ap-northeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2024-04-19",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.735Z"
+        },
+        {
+          "created_at": "2023-03-01T23:37:42.198Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "y8p2jm7hpwy0",
+          "name": "AWS Singapore - prod-ap-southeast-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 15,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.366Z"
+        },
+        {
+          "created_at": "2026-09-17T14:25:59.243Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2p5hs0y7lnsl",
+          "name": "AWS Sweden eu-north-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 16,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.756Z"
+        },
+        {
+          "created_at": "2023-09-20T13:11:05.377Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "tv6d4zqb6nz7",
+          "name": "AWS Sweden - prod-eu-north-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 17,
+          "showcase": false,
+          "start_date": "2023-09-20",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.778Z"
+        },
+        {
+          "created_at": "2026-03-11T09:42:44.943Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "h1t1253xs6k9",
+          "name": "AWS Switzerland - prod-eu-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 18,
+          "showcase": false,
+          "start_date": "2026-03-11",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.430Z"
+        },
+        {
+          "created_at": "2026-09-17T13:55:38.296Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "mdgpcmr3s1xx",
+          "name": "AWS Switzerland eu-central-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 19,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-20T11:52:25.536Z"
+        },
+        {
+          "created_at": "2025-04-16T19:02:10.515Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "hl40gbs2zkn4",
+          "name": "AWS UAE - prod-me-central-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 20,
+          "showcase": false,
+          "start_date": "2025-04-16",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.816Z"
+        },
+        {
+          "created_at": "2026-01-07T09:51:16.615Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "lxb7122px698",
+          "name": "AWS UK - prod-gb-south-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 21,
+          "showcase": false,
+          "start_date": "2026-01-07",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.841Z"
+        },
+        {
+          "created_at": "2023-03-21T21:16:23.932Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "hbqgpzmf8h9k",
+          "name": "AWS US East (OH) - prod-us-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 22,
+          "showcase": false,
+          "start_date": "2023-03-21",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.866Z"
+        },
+        {
+          "created_at": "2026-09-17T14:37:43.049Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "d5gnddsryq15",
+          "name": "AWS East (VA) prod-us-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 23,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.889Z"
+        },
+        {
+          "created_at": "2017-08-28T06:32:29.815Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "t0592d5sxhgh",
+          "name": "AWS US East (OH) - prod-us-east-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 24,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.912Z"
+        },
+        {
+          "created_at": "2023-09-18T21:05:40.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "8wq97lhx59x7",
+          "name": "AWS US West - prod-us-west-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 25,
+          "showcase": false,
+          "start_date": "2023-09-18",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.935Z"
+        },
+        {
+          "created_at": "2026-08-26T20:17:07.534Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "hy0247hvwzry",
+          "name": "AWS US East (VA) - prod-us-east-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 26,
+          "showcase": false,
+          "start_date": "2026-08-26",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.957Z"
+        },
+        {
+          "created_at": "2026-09-17T15:10:29.806Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "fg4xzyccz85n",
+          "name": "AWS West prod-us-west-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 27,
+          "showcase": false,
+          "start_date": "2026-09-17",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:33.982Z"
+        },
+        {
+          "created_at": "2021-11-02T16:55:24.114Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "fs80tlfpb7kx",
+          "name": "Azure US Central - us-central2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 28,
+          "showcase": false,
+          "start_date": "2021-11-02",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.008Z"
+        },
+        {
+          "created_at": "2019-04-10T08:17:36.836Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "1mnpb5g27m21",
+          "name": "Azure Netherlands - prod-eu-west-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 29,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.119Z"
+        },
+        {
+          "created_at": "2026-09-30T20:36:48.905Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "4n4j5c167pyh",
+          "name": "Azure UAE - prod-me-central-2",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 30,
+          "showcase": false,
+          "start_date": "2026-09-30",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.143Z"
+        },
+        {
+          "created_at": "2019-04-10T08:16:51.482Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "sc8qqdx6j1h5",
+          "name": "GCP Australia - prod-au-southeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 31,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.167Z"
+        },
+        {
+          "created_at": "2023-03-01T23:31:21.570Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "c66zgq8xld33",
+          "name": "GCP Belgium - prod-eu-west-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 32,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.192Z"
+        },
+        {
+          "created_at": "2023-03-01T23:31:48.474Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "kw9wxv34yw80",
+          "name": "GCP Brazil - prod-sa-east-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 33,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.217Z"
+        },
+        {
+          "created_at": "2023-03-01T23:25:32.193Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "bh5f9ggjnj60",
+          "name": "GCP India - prod-ap-south-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 34,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.239Z"
+        },
+        {
+          "created_at": "2026-08-24T22:56:35.919Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "djpzyfdl3x70",
+          "name": "GCP Saudi Arabia - prod-me-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 35,
+          "showcase": false,
+          "start_date": "2026-08-24",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.262Z"
+        },
+        {
+          "created_at": "2023-02-28T20:41:21.903Z",
+          "description": "ap-southeast-0",
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "54tht9mpb5sk",
+          "name": "GCP Singapore - prod-ap-southeast-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 36,
+          "showcase": false,
+          "start_date": "2023-02-28",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.285Z"
+        },
+        {
+          "created_at": "2023-03-01T23:33:37.814Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "yt6pjkj14lvk",
+          "name": "GCP UK - prod-gb-south-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 37,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.308Z"
+        },
+        {
+          "created_at": "2017-08-28T09:09:28.157Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "qqj6ssvvsqmq",
+          "name": "GCP US Central - prod-us-central-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 38,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.330Z"
+        },
+        {
+          "created_at": "2023-03-01T23:34:11.777Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "m7cr9xxllhpn",
+          "name": "GCP US Central - prod-us-central-3",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 39,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.351Z"
+        },
+        {
+          "created_at": "2023-04-03T08:44:26.276Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "jky8f03q6zfj",
+          "name": "GCP US Central - prod-us-central-4",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 40,
+          "showcase": false,
+          "start_date": "2023-04-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.371Z"
+        },
+        {
+          "created_at": "2026-09-09T17:07:28.189Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "zb9pfcch5qw1",
+          "name": "GCP US Central - prod-us-central-7",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 41,
+          "showcase": false,
+          "start_date": "2026-09-09",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.391Z"
+        },
+        {
+          "created_at": "2023-03-01T23:34:20.391Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "2yn7w8rnphcp",
+          "name": "GCP US East - prod-us-east-1",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 42,
+          "showcase": false,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.414Z"
+        },
+        {
+          "created_at": "2017-08-28T12:20:34.704Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "4vfjcc6ptw32",
+          "name": "play.grafana.org",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 43,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-04T04:59:52.213Z"
+        },
+        {
+          "created_at": "2026-03-05T19:24:59.581Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "4sk1vxpqgb7s",
+          "name": "Federal Cloud - AWS US Gov West",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 44,
+          "showcase": false,
+          "start_date": "2026-03-05",
+          "status": "operational",
+          "updated_at": "2026-11-04T04:59:52.233Z"
+        },
+        {
+          "created_at": "2026-11-03T17:18:24.676Z",
+          "description": null,
+          "group": false,
+          "group_id": "y8nfqvv7w562",
+          "id": "zc9wr5rd0tpf",
+          "name": "Azure Malasia - azure-malaysiawest-0",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 45,
+          "showcase": false,
+          "start_date": "2026-11-03",
+          "status": "operational",
+          "updated_at": "2026-11-20T12:02:34.434Z"
+        }
+      ],
+      "created_at": "2026-11-04T03:02:14.717Z",
+      "id": "djhnhnnbh6tg",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "v2sp8gjnhwk6",
+              "name": "Grafana - AWS Australia - prod-au-southeast-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "wfc1hb7m917l",
+              "name": "Grafana - AWS Australia - prod-au-southeast-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3313q22s44c6",
+              "name": "Grafana - AWS Canada prod-ca-central-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zvfc1jlr92kg",
+              "name": "Grafana - AWS Canada - prod-ca-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "7p6wcb29nx29",
+              "name": "Grafana - AWS Germany prod-eu-central-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2vj35rbpdr7s",
+              "name": "Grafana - AWS India - prod-ap-south-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "cqkrtg039qbs",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "txbgz1946dds",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "675g90qrmwcm",
+              "name": "Grafana - AWS Ireland eu-west-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "b562z2mrff79",
+              "name": "Grafana - AWS Ireland - prod-eu-west-6",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nrv6vyr5l7m8",
+              "name": "Grafana - AWS Japan - prod-ap-northeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "y8p2jm7hpwy0",
+              "name": "Grafana - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2p5hs0y7lnsl",
+              "name": "Grafana - AWS Sweden eu-north-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "tv6d4zqb6nz7",
+              "name": "Grafana - AWS Sweden - prod-eu-north-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h1t1253xs6k9",
+              "name": "Grafana - AWS Switzerland - prod-eu-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "mdgpcmr3s1xx",
+              "name": "Grafana - AWS Switzerland eu-central-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hl40gbs2zkn4",
+              "name": "Grafana - AWS UAE - prod-me-central-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "lxb7122px698",
+              "name": "Grafana - AWS UK - prod-gb-south-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d5gnddsryq15",
+              "name": "Grafana - AWS East (VA) prod-us-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t0592d5sxhgh",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hy0247hvwzry",
+              "name": "Grafana - AWS US East (VA) - prod-us-east-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fg4xzyccz85n",
+              "name": "Grafana - AWS West prod-us-west-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fs80tlfpb7kx",
+              "name": "Grafana - Azure US Central - us-central2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "1mnpb5g27m21",
+              "name": "Grafana - Azure Netherlands - prod-eu-west-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4n4j5c167pyh",
+              "name": "Grafana - Azure UAE - prod-me-central-2",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "sc8qqdx6j1h5",
+              "name": "Grafana - GCP Australia - prod-au-southeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "c66zgq8xld33",
+              "name": "Grafana - GCP Belgium - prod-eu-west-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kw9wxv34yw80",
+              "name": "Grafana - GCP Brazil - prod-sa-east-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bh5f9ggjnj60",
+              "name": "Grafana - GCP India - prod-ap-south-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "djpzyfdl3x70",
+              "name": "Grafana - GCP Saudi Arabia - prod-me-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "54tht9mpb5sk",
+              "name": "Grafana - GCP Singapore - prod-ap-southeast-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yt6pjkj14lvk",
+              "name": "Grafana - GCP UK - prod-gb-south-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zb9pfcch5qw1",
+              "name": "Grafana - GCP US Central - prod-us-central-7",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4vfjcc6ptw32",
+              "name": "Grafana - play.grafana.org",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4sk1vxpqgb7s",
+              "name": "Grafana - Federal Cloud - AWS US Gov West",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zc9wr5rd0tpf",
+              "name": "Grafana - Azure Malasia - azure-malaysiawest-0",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The fix has been deployed to all production clusters and we are observing a continued period of stability. At this time, we are marking the incident as resolved.",
+          "created_at": "2026-11-04T04:59:52.299Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T04:59:52.299Z",
+          "id": "gfp15hyks380",
+          "incident_id": "djhnhnnbh6tg",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T04:59:52.299Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "v2sp8gjnhwk6",
+              "name": "Grafana - AWS Australia - prod-au-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "wfc1hb7m917l",
+              "name": "Grafana - AWS Australia - prod-au-southeast-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "3313q22s44c6",
+              "name": "Grafana - AWS Canada prod-ca-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zvfc1jlr92kg",
+              "name": "Grafana - AWS Canada - prod-ca-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "7p6wcb29nx29",
+              "name": "Grafana - AWS Germany prod-eu-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2vj35rbpdr7s",
+              "name": "Grafana - AWS India - prod-ap-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "cqkrtg039qbs",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "txbgz1946dds",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "675g90qrmwcm",
+              "name": "Grafana - AWS Ireland eu-west-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "b562z2mrff79",
+              "name": "Grafana - AWS Ireland - prod-eu-west-6",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "nrv6vyr5l7m8",
+              "name": "Grafana - AWS Japan - prod-ap-northeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "y8p2jm7hpwy0",
+              "name": "Grafana - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2p5hs0y7lnsl",
+              "name": "Grafana - AWS Sweden eu-north-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "tv6d4zqb6nz7",
+              "name": "Grafana - AWS Sweden - prod-eu-north-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "h1t1253xs6k9",
+              "name": "Grafana - AWS Switzerland - prod-eu-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "mdgpcmr3s1xx",
+              "name": "Grafana - AWS Switzerland eu-central-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hl40gbs2zkn4",
+              "name": "Grafana - AWS UAE - prod-me-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "lxb7122px698",
+              "name": "Grafana - AWS UK - prod-gb-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "d5gnddsryq15",
+              "name": "Grafana - AWS East (VA) prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "t0592d5sxhgh",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hy0247hvwzry",
+              "name": "Grafana - AWS US East (VA) - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fg4xzyccz85n",
+              "name": "Grafana - AWS West prod-us-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "fs80tlfpb7kx",
+              "name": "Grafana - Azure US Central - us-central2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "1mnpb5g27m21",
+              "name": "Grafana - Azure Netherlands - prod-eu-west-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4n4j5c167pyh",
+              "name": "Grafana - Azure UAE - prod-me-central-2",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "sc8qqdx6j1h5",
+              "name": "Grafana - GCP Australia - prod-au-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "c66zgq8xld33",
+              "name": "Grafana - GCP Belgium - prod-eu-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "kw9wxv34yw80",
+              "name": "Grafana - GCP Brazil - prod-sa-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bh5f9ggjnj60",
+              "name": "Grafana - GCP India - prod-ap-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "djpzyfdl3x70",
+              "name": "Grafana - GCP Saudi Arabia - prod-me-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "54tht9mpb5sk",
+              "name": "Grafana - GCP Singapore - prod-ap-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yt6pjkj14lvk",
+              "name": "Grafana - GCP UK - prod-gb-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zb9pfcch5qw1",
+              "name": "Grafana - GCP US Central - prod-us-central-7",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4vfjcc6ptw32",
+              "name": "Grafana - play.grafana.org",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4sk1vxpqgb7s",
+              "name": "Grafana - Federal Cloud - AWS US Gov West",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "zc9wr5rd0tpf",
+              "name": "Grafana - Azure Malasia - azure-malaysiawest-0",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The fix has landed in 60% of production. We are currently monitoring as it lands in the remaining clusters.",
+          "created_at": "2026-11-04T04:07:46.614Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T04:07:46.614Z",
+          "id": "3jzs5493fbln",
+          "incident_id": "djhnhnnbh6tg",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T04:07:46.614Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "v2sp8gjnhwk6",
+              "name": "Grafana - AWS Australia - prod-au-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "wfc1hb7m917l",
+              "name": "Grafana - AWS Australia - prod-au-southeast-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "9zgd4n4s874v",
+              "name": "Grafana - AWS Brazil - prod-sa-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "3313q22s44c6",
+              "name": "Grafana - AWS Canada prod-ca-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "zvfc1jlr92kg",
+              "name": "Grafana - AWS Canada - prod-ca-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "6wgslg1s3bzr",
+              "name": "Grafana - AWS Germany - prod-eu-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "wdcnfc3drb8s",
+              "name": "Grafana - AWS Germany - prod-eu-west-4",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "7p6wcb29nx29",
+              "name": "Grafana - AWS Germany prod-eu-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2vj35rbpdr7s",
+              "name": "Grafana - AWS India - prod-ap-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "cqkrtg039qbs",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "txbgz1946dds",
+              "name": "Grafana - AWS Indonesia - prod-ap-southeast-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "675g90qrmwcm",
+              "name": "Grafana - AWS Ireland eu-west-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "b562z2mrff79",
+              "name": "Grafana - AWS Ireland - prod-eu-west-6",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "nrv6vyr5l7m8",
+              "name": "Grafana - AWS Japan - prod-ap-northeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "y8p2jm7hpwy0",
+              "name": "Grafana - AWS Singapore - prod-ap-southeast-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2p5hs0y7lnsl",
+              "name": "Grafana - AWS Sweden eu-north-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "tv6d4zqb6nz7",
+              "name": "Grafana - AWS Sweden - prod-eu-north-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "h1t1253xs6k9",
+              "name": "Grafana - AWS Switzerland - prod-eu-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "mdgpcmr3s1xx",
+              "name": "Grafana - AWS Switzerland eu-central-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hl40gbs2zkn4",
+              "name": "Grafana - AWS UAE - prod-me-central-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "lxb7122px698",
+              "name": "Grafana - AWS UK - prod-gb-south-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hbqgpzmf8h9k",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "d5gnddsryq15",
+              "name": "Grafana - AWS East (VA) prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "t0592d5sxhgh",
+              "name": "Grafana - AWS US East (OH) - prod-us-east-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "8wq97lhx59x7",
+              "name": "Grafana - AWS US West - prod-us-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hy0247hvwzry",
+              "name": "Grafana - AWS US East (VA) - prod-us-east-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "fg4xzyccz85n",
+              "name": "Grafana - AWS West prod-us-west-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "fs80tlfpb7kx",
+              "name": "Grafana - Azure US Central - us-central2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "1mnpb5g27m21",
+              "name": "Grafana - Azure Netherlands - prod-eu-west-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4n4j5c167pyh",
+              "name": "Grafana - Azure UAE - prod-me-central-2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "sc8qqdx6j1h5",
+              "name": "Grafana - GCP Australia - prod-au-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "c66zgq8xld33",
+              "name": "Grafana - GCP Belgium - prod-eu-west-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "kw9wxv34yw80",
+              "name": "Grafana - GCP Brazil - prod-sa-east-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bh5f9ggjnj60",
+              "name": "Grafana - GCP India - prod-ap-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "djpzyfdl3x70",
+              "name": "Grafana - GCP Saudi Arabia - prod-me-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "54tht9mpb5sk",
+              "name": "Grafana - GCP Singapore - prod-ap-southeast-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "yt6pjkj14lvk",
+              "name": "Grafana - GCP UK - prod-gb-south-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "qqj6ssvvsqmq",
+              "name": "Grafana - GCP US Central - prod-us-central-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "m7cr9xxllhpn",
+              "name": "Grafana - GCP US Central - prod-us-central-3",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "jky8f03q6zfj",
+              "name": "Grafana - GCP US Central - prod-us-central-4",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "zb9pfcch5qw1",
+              "name": "Grafana - GCP US Central - prod-us-central-7",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "2yn7w8rnphcp",
+              "name": "Grafana - GCP US East - prod-us-east-1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4vfjcc6ptw32",
+              "name": "Grafana - play.grafana.org",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4sk1vxpqgb7s",
+              "name": "Grafana - Federal Cloud - AWS US Gov West",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "zc9wr5rd0tpf",
+              "name": "Grafana - Azure Malasia - azure-malaysiawest-0",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Since ~21:40 UTC on Nov 3, GitHub started rejecting the default User-Agent our Git Sync client sends (nanogit/0), so nearly every GitHub-backed repo shows as unhealthy (\"not authorized\") and syncs are being skipped. Our Engineering team has rolled out a fix to development and validated that the fix works. We will roll out the fix to production shortly and will provide another update.",
+          "created_at": "2026-11-04T03:02:16.095Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-04T03:02:16.095Z",
+          "id": "yym9np5lrmtz",
+          "incident_id": "djhnhnnbh6tg",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-04T03:02:16.095Z"
+        }
+      ],
+      "monitoring_at": "2026-11-04T04:07:46.614Z",
+      "name": "GitHub returning 403 for all Git Sync repositories",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-04T04:59:52.299Z",
+      "shortlink": "https://stspg.io/c1s5cmykytmk",
+      "started_at": "2026-11-04T03:02:14.651Z",
+      "status": "resolved",
+      "updated_at": "2026-11-04T04:59:52.324Z"
+    }
+  }
+}

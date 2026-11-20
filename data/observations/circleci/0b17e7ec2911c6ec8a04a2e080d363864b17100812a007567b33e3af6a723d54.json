@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "circleci/7cnl777wp9qz",
+    "vendor": "circleci",
+    "native_id": "7cnl777wp9qz",
+    "title": "Issues with network routing for Mac jobs",
+    "url": "https://stspg.io/vg35mbl8lxpg",
+    "impact": "minor",
+    "status": "postmortem",
+    "started_at": "2026-07-13T21:52:02.877Z",
+    "resolved_at": "2026-07-14T23:18:34.925Z",
+    "duration_minutes": 1526,
+    "components": [
+      "macOS Jobs"
+    ],
+    "updates": [
+      {
+        "native_id": "jw1xk05hx0pg",
+        "status": "investigating",
+        "body": "We're received some reports of intermittent network issues between our mac infrastructure and a VCS provider again. We are investigating and will provide updates.",
+        "created_at": "2026-07-13T21:52:03.001Z"
+      },
+      {
+        "native_id": "m9frghgc29ph",
+        "status": "investigating",
+        "body": "We're still investigating these intermittent network issues. We'll update again shortly, we appreciate your patience.",
+        "created_at": "2026-07-13T22:21:02.826Z"
+      },
+      {
+        "native_id": "4wzxv2pv33lb",
+        "status": "investigating",
+        "body": "We've been able to reproduce the issue, but it still appears to be very much intermittent. We're continuing to work with our Mac infrastructure provider to help diagnose the issue. We'll update again soon.",
+        "created_at": "2026-07-13T23:13:24.434Z"
+      },
+      {
+        "native_id": "hd0t385cdp74",
+        "status": "monitoring",
+        "body": "We've identified the issue. Some customers may experience jobs that hang or fail to progress during Github fetch steps due to intermittent networking issues. Our engineers are actively monitoring.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-13T23:35:24.593Z"
+      },
+      {
+        "native_id": "k1dlxg14sfdr",
+        "status": "identified",
+        "body": "Unfortunately there are still some customers that may be experiencing jobs that hang or fail to progress during Github fetch steps due to ongoing intermittent networking issues with our Mac infrastructure provider. Our engineers are actively working with them to resolve this. We appreciate your patience.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T13:59:54.591Z"
+      },
+      {
+        "native_id": "wqphn66st6hh",
+        "status": "identified",
+        "body": "Our Mac infrastructure provider is testing changes to their network configuration in an effort to isolate the source of the issue. We're actively validating whether this resolves the impact and will follow up with another update soon. In the meantime, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T15:35:01.27Z"
+      },
+      {
+        "native_id": "mjnlkwxtsq46",
+        "status": "identified",
+        "body": "We've identified the issue as some inbound routes from the affected VCS provider causing significantly lower available bandwidth which is negatively impacting repo fetch times. We're working with our Mac infrastructure provider to attempt to shift inbound traffic to a different route, however this process may take an extended period of time to complete. We will continue to provide updates as they become available.\n\nAs we've shared in previous updates, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+        "created_at": "2026-07-14T16:31:42.627Z"
+      },
+      {
+        "native_id": "pssjdn3d943w",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has shifted the inbound routes and we are seeing recovery in VCS fetch times. We will be continuing to monitor this issue over the next few hours. We'll update again soon.",
+        "created_at": "2026-07-14T16:58:55.916Z"
+      },
+      {
+        "native_id": "99zzqg0p7msd",
+        "status": "monitoring",
+        "body": "We're continuing to see slow, progressive recovery in VCS fetch times. We're going to continuing monitoring and update again soon. We appreciate your patience.",
+        "created_at": "2026-07-14T18:28:25.595Z"
+      },
+      {
+        "native_id": "6xzp6y5jkxg3",
+        "status": "investigating",
+        "body": "We're starting to see VCS fetch times rising again. Our engineering team is actively investigating and working with our Mac infrastructure provider to resolve this. Again, we appreciate your patience.",
+        "created_at": "2026-07-14T20:18:56.277Z"
+      },
+      {
+        "native_id": "c1m5bspmmqc8",
+        "status": "monitoring",
+        "body": "Our Mac infrastructure provider has shifted more traffic to working network providers and we're starting to see significant recovery again in VCS fetch times. As always, our engineering team will continue to monitor this closely and we'll provide another update soon.",
+        "created_at": "2026-07-14T22:15:51.903Z"
+      },
+      {
+        "native_id": "k1jb2bmq3kfd",
+        "status": "resolved",
+        "body": "We continue to see significant VCS fetch time recovery over the last couple of hours. We're going to resolve this incident, and our engineering team will continue to monitor closely. We greatly appreciate your patience as we worked through this with our Mac infrastructure provider. Please reach out to our Support team if you have any issues.",
+        "created_at": "2026-07-14T23:18:34.925Z"
+      },
+      {
+        "native_id": "c4yjs46km5tz",
+        "status": "postmortem",
+        "body": "## Summary\n\nFrom 18:00 UTC on July 13, 2026 to 23:18 UTC on July 14, 2026, some customers running jobs on CircleCI's macOS fleet experienced jobs that hung or failed to progress during GitHub fetch steps. For these customers, GitHub fetch steps which would ordinarily take 1-2 minutes took 20-30 minutes, and timed out. The issue was caused by a capacity and routing problem on the network path between our Mac infrastructure provider and GitHub, and the associated intermittent networking issues slowed down fetches from GitHub. During the entire incident, our team worked directly with our Mac infrastructure provider to identify and reroute traffic away from the affected network paths. We resolved an initial occurrence at 19:40 UTC on July 13. The issue recurred at 21:52 UTC that same day, we reopened the incident, and it was fully resolved by 23:18 UTC on July 14.\n\nOur macOS fleet had a similar issue several weeks ago. From 20:18 UTC on June 24, 2026 to 03:09 UTC on June 25, 2026, customers experienced a [similar incident](https://status.circleci.com/incidents/gvysjmkf4ct9) affecting the ability of macOS jobs to reach GitHub. That incident was also caused by a network routing problem in our Mac infrastructure provider.\n\nWe thank our customers for their patience while we worked through this incident. Please see below for specific actions which CircleCI and our Mac infrastructure provider will be taking. Please reach out to our support team with any questions or concerns.\n\nThe status pages for this incident can be found [here](https://status.circleci.com/incidents/n1tc2lw9q7l0) and [here](https://status.circleci.com/incidents/7cnl777wp9qz).\n\n## Background\n\nCircleCI's macOS jobs are hosted on a third-party Mac infrastructure provider. That provider connects to the broader internet, including services like GitHub, over multiple redundant upstream network paths. When one of those paths is experiencing reduced capacity or a routing problem, jobs that are fetching code or dependencies from a destination along that network path can slow down or hang intermittently, even when CircleCI's own platform, the third-party infrastructure provider, and the destination service are all operating normally.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nAt 18:00 on July 13, some customers running macOS jobs began experiencing intermittent failures and delays fetching code and dependencies from GitHub. We opened an investigation and alerted our customers via our status page at 18:55. By 19:04, our Mac infrastructure provider identified increased latency on one of its network paths and rerouted traffic around it. Fetch times recovered, and we moved the incident to `Monitoring` at 19:29, and to `Resolved` at 19:40.\n\nAt 20:44 UTC, customers reported that the issue had returned. We reopened the incident and updated our status page to `Investigating` at 21:52. Over the following two hours, we worked closely with our infrastructure provider to gather diagnostic data in an effort to isolate the affected network path. In the meantime, we published guidance recommending that customers increase their `no_output_timeout` setting to 15–20 minutes, to allow more time for GitHub fetches to complete during the intermittent slowdowns, and moved the status page to `Monitoring` at 23:35.\n\nAfter publishing the workaround guidance at 23:35 UTC on July 13, we expected the underlying network issue to improve overnight. It did not. At 13:59 UTC on July 14, we confirmed that customers were still experiencing intermittent failures and moved the status page back to `Investigating`. Our engineering team reproduced the failure directly using our own testing tools, which helped confirm this was a general `git-fetch` issue rather than something specific to any particular build tool, container image, or software update. At 15:35, we updated the status page to share that our infrastructure provider was testing changes to its network configuration to isolate the source of the issue. At 16:31, we updated the status page again to share that we'd identified the cause as reduced inbound bandwidth on a specific route, and that we were working with our provider to shift traffic to a different route. At 16:36, our infrastructure provider identified the affected network paths and shifted traffic away from them, fetch times recovered, and at 16:58, we updated the status page to `Monitoring`.\n\nBy early afternoon, some customers were again seeing slow fetch times, and we moved the status page back to `Investigating` at 20:18. Our infrastructure provider identified two additional network paths with degraded performance and shifted traffic away from them by 22:07. Fetch times stabilized over the following hour, and we marked the incident `Resolved` at 23:18.\n\nIn total, customers running Mac jobs may have experienced intermittent job slowdowns or failures for portions of the window between 18:00 UTC on July 13 and 23:18 UTC on July 14. Our infrastructure provider has since reported clean test results across its network and believes the underlying capacity issue originated further upstream, closer to GitHub, rather than within its own network. We are continuing to monitor this closely.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are building additional automated monitoring for macOS fleet GitHub-fetch performance.** Our extensive automated monitoring did not catch this incident. We are now adding end-to-end monitoring for GitHub fetches in particular, in order to detect similar issues proactively.\n\n**We are working directly with our Mac infrastructure provider on faster, more proactive detection.** We are asking our provider to build monitoring that can detect a degraded network path and reroute around it automatically, rather than relying on CircleCI to identify and request a reroute during an active incident.\n\n**We are turning the diagnostic tooling we built during this incident into a standing capability.** This will let us detect and reproduce this class of network failure on demand going forward, rather than assembling test infrastructure during an active incident.\n\n**We are reviewing our incident response process for a sufficient confirmation window before marking a network-related incident Resolved.** This incident briefly recurred after an early, premature resolution; we are formalizing a minimum period of confirmed-clean monitoring before closing incidents of this type. We will continue to provide regular updates along the way as investigation and remediation continues.\n\n**We are actively moving from a single provider for Mac infrastructure** **to multiple providers.** This will allow CircleCI to route incoming customer workloads to the most available and best-performing provider.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+        "created_at": "2026-07-16T01:56:30.452Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-11-09T08:22:00.885Z",
+          "description": "CircleCI jobs using the macos executor.",
+          "group": false,
+          "group_id": null,
+          "id": "bpfmy8wy8wq2",
+          "name": "macOS Jobs",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 3,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-19T19:22:09.876Z"
+        }
+      ],
+      "created_at": "2026-07-13T21:52:02.888Z",
+      "id": "7cnl777wp9qz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nFrom 18:00 UTC on July 13, 2026 to 23:18 UTC on July 14, 2026, some customers running jobs on CircleCI's macOS fleet experienced jobs that hung or failed to progress during GitHub fetch steps. For these customers, GitHub fetch steps which would ordinarily take 1-2 minutes took 20-30 minutes, and timed out. The issue was caused by a capacity and routing problem on the network path between our Mac infrastructure provider and GitHub, and the associated intermittent networking issues slowed down fetches from GitHub. During the entire incident, our team worked directly with our Mac infrastructure provider to identify and reroute traffic away from the affected network paths. We resolved an initial occurrence at 19:40 UTC on July 13. The issue recurred at 21:52 UTC that same day, we reopened the incident, and it was fully resolved by 23:18 UTC on July 14.\n\nOur macOS fleet had a similar issue several weeks ago. From 20:18 UTC on June 24, 2026 to 03:09 UTC on June 25, 2026, customers experienced a [similar incident](https://status.circleci.com/incidents/gvysjmkf4ct9) affecting the ability of macOS jobs to reach GitHub. That incident was also caused by a network routing problem in our Mac infrastructure provider.\n\nWe thank our customers for their patience while we worked through this incident. Please see below for specific actions which CircleCI and our Mac infrastructure provider will be taking. Please reach out to our support team with any questions or concerns.\n\nThe status pages for this incident can be found [here](https://status.circleci.com/incidents/n1tc2lw9q7l0) and [here](https://status.circleci.com/incidents/7cnl777wp9qz).\n\n## Background\n\nCircleCI's macOS jobs are hosted on a third-party Mac infrastructure provider. That provider connects to the broader internet, including services like GitHub, over multiple redundant upstream network paths. When one of those paths is experiencing reduced capacity or a routing problem, jobs that are fetching code or dependencies from a destination along that network path can slow down or hang intermittently, even when CircleCI's own platform, the third-party infrastructure provider, and the destination service are all operating normally.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nAt 18:00 on July 13, some customers running macOS jobs began experiencing intermittent failures and delays fetching code and dependencies from GitHub. We opened an investigation and alerted our customers via our status page at 18:55. By 19:04, our Mac infrastructure provider identified increased latency on one of its network paths and rerouted traffic around it. Fetch times recovered, and we moved the incident to `Monitoring` at 19:29, and to `Resolved` at 19:40.\n\nAt 20:44 UTC, customers reported that the issue had returned. We reopened the incident and updated our status page to `Investigating` at 21:52. Over the following two hours, we worked closely with our infrastructure provider to gather diagnostic data in an effort to isolate the affected network path. In the meantime, we published guidance recommending that customers increase their `no_output_timeout` setting to 15–20 minutes, to allow more time for GitHub fetches to complete during the intermittent slowdowns, and moved the status page to `Monitoring` at 23:35.\n\nAfter publishing the workaround guidance at 23:35 UTC on July 13, we expected the underlying network issue to improve overnight. It did not. At 13:59 UTC on July 14, we confirmed that customers were still experiencing intermittent failures and moved the status page back to `Investigating`. Our engineering team reproduced the failure directly using our own testing tools, which helped confirm this was a general `git-fetch` issue rather than something specific to any particular build tool, container image, or software update. At 15:35, we updated the status page to share that our infrastructure provider was testing changes to its network configuration to isolate the source of the issue. At 16:31, we updated the status page again to share that we'd identified the cause as reduced inbound bandwidth on a specific route, and that we were working with our provider to shift traffic to a different route. At 16:36, our infrastructure provider identified the affected network paths and shifted traffic away from them, fetch times recovered, and at 16:58, we updated the status page to `Monitoring`.\n\nBy early afternoon, some customers were again seeing slow fetch times, and we moved the status page back to `Investigating` at 20:18. Our infrastructure provider identified two additional network paths with degraded performance and shifted traffic away from them by 22:07. Fetch times stabilized over the following hour, and we marked the incident `Resolved` at 23:18.\n\nIn total, customers running Mac jobs may have experienced intermittent job slowdowns or failures for portions of the window between 18:00 UTC on July 13 and 23:18 UTC on July 14. Our infrastructure provider has since reported clean test results across its network and believes the underlying capacity issue originated further upstream, closer to GitHub, rather than within its own network. We are continuing to monitor this closely.\n\n## Future Prevention and Process Improvement\n\nWe are taking the following steps to prevent a recurrence and improve our response time:\n\n**We are building additional automated monitoring for macOS fleet GitHub-fetch performance.** Our extensive automated monitoring did not catch this incident. We are now adding end-to-end monitoring for GitHub fetches in particular, in order to detect similar issues proactively.\n\n**We are working directly with our Mac infrastructure provider on faster, more proactive detection.** We are asking our provider to build monitoring that can detect a degraded network path and reroute around it automatically, rather than relying on CircleCI to identify and request a reroute during an active incident.\n\n**We are turning the diagnostic tooling we built during this incident into a standing capability.** This will let us detect and reproduce this class of network failure on demand going forward, rather than assembling test infrastructure during an active incident.\n\n**We are reviewing our incident response process for a sufficient confirmation window before marking a network-related incident Resolved.** This incident briefly recurred after an early, premature resolution; we are formalizing a minimum period of confirmed-clean monitoring before closing incidents of this type. We will continue to provide regular updates along the way as investigation and remediation continues.\n\n**We are actively moving from a single provider for Mac infrastructure** **to multiple providers.** This will allow CircleCI to route incoming customer workloads to the most available and best-performing provider.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+          "created_at": "2026-07-16T01:56:30.452Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "c4yjs46km5tz",
+          "incident_id": "7cnl777wp9qz",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-07-16T01:56:42.742Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to see significant VCS fetch time recovery over the last couple of hours. We're going to resolve this incident, and our engineering team will continue to monitor closely. We greatly appreciate your patience as we worked through this with our Mac infrastructure provider. Please reach out to our Support team if you have any issues.",
+          "created_at": "2026-07-14T23:18:34.925Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T23:18:34.925Z",
+          "id": "k1jb2bmq3kfd",
+          "incident_id": "7cnl777wp9qz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T23:18:34.925Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has shifted more traffic to working network providers and we're starting to see significant recovery again in VCS fetch times. As always, our engineering team will continue to monitor this closely and we'll provide another update soon.",
+          "created_at": "2026-07-14T22:15:51.903Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T22:15:51.903Z",
+          "id": "c1m5bspmmqc8",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T22:15:51.903Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're starting to see VCS fetch times rising again. Our engineering team is actively investigating and working with our Mac infrastructure provider to resolve this. Again, we appreciate your patience.",
+          "created_at": "2026-07-14T20:18:56.277Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T20:18:56.277Z",
+          "id": "6xzp6y5jkxg3",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T20:18:56.277Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're continuing to see slow, progressive recovery in VCS fetch times. We're going to continuing monitoring and update again soon. We appreciate your patience.",
+          "created_at": "2026-07-14T18:28:25.595Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T18:28:25.595Z",
+          "id": "99zzqg0p7msd",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T18:28:25.595Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider has shifted the inbound routes and we are seeing recovery in VCS fetch times. We will be continuing to monitor this issue over the next few hours. We'll update again soon.",
+          "created_at": "2026-07-14T16:58:55.916Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T16:58:55.916Z",
+          "id": "pssjdn3d943w",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T16:58:55.916Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified the issue as some inbound routes from the affected VCS provider causing significantly lower available bandwidth which is negatively impacting repo fetch times. We're working with our Mac infrastructure provider to attempt to shift inbound traffic to a different route, however this process may take an extended period of time to complete. We will continue to provide updates as they become available.\n\nAs we've shared in previous updates, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T16:31:42.627Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T16:31:42.627Z",
+          "id": "mjnlkwxtsq46",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T16:31:42.627Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Our Mac infrastructure provider is testing changes to their network configuration in an effort to isolate the source of the issue. We're actively validating whether this resolves the impact and will follow up with another update soon. In the meantime, increasing the no_output_timeout to 15-20 min continues to help: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T15:35:01.270Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T15:35:01.270Z",
+          "id": "wqphn66st6hh",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T15:35:01.270Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Unfortunately there are still some customers that may be experiencing jobs that hang or fail to progress during Github fetch steps due to ongoing intermittent networking issues with our Mac infrastructure provider. Our engineers are actively working with them to resolve this. We appreciate your patience.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-14T13:59:54.591Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-14T13:59:54.591Z",
+          "id": "k1dlxg14sfdr",
+          "incident_id": "7cnl777wp9qz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-14T13:59:54.591Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've identified the issue. Some customers may experience jobs that hang or fail to progress during Github fetch steps due to intermittent networking issues. Our engineers are actively monitoring.\n\nIn the meantime, we've seen success with increasing the no_output_timeout to 15 - 20 min to allow more time for Github fetches. This can be done by following this community guide: https://support.circleci.com/hc/en-us/articles/360007188574-Build-has-Hit-Timeout-Limit",
+          "created_at": "2026-07-13T23:35:24.593Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T23:35:24.593Z",
+          "id": "hd0t385cdp74",
+          "incident_id": "7cnl777wp9qz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T23:35:24.593Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We've been able to reproduce the issue, but it still appears to be very much intermittent. We're continuing to work with our Mac infrastructure provider to help diagnose the issue. We'll update again soon.",
+          "created_at": "2026-07-13T23:13:24.434Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T23:13:24.434Z",
+          "id": "4wzxv2pv33lb",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T23:13:24.434Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're still investigating these intermittent network issues. We'll update again shortly, we appreciate your patience.",
+          "created_at": "2026-07-13T22:21:02.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T22:21:02.826Z",
+          "id": "m9frghgc29ph",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T22:21:02.826Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bpfmy8wy8wq2",
+              "name": "macOS Jobs",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We're received some reports of intermittent network issues between our mac infrastructure and a VCS provider again. We are investigating and will provide updates.",
+          "created_at": "2026-07-13T21:52:03.001Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-13T21:52:03.001Z",
+          "id": "jw1xk05hx0pg",
+          "incident_id": "7cnl777wp9qz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-07-13T21:52:03.001Z"
+        }
+      ],
+      "monitoring_at": "2026-07-13T23:35:24.593Z",
+      "name": "Issues with network routing for Mac jobs",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-14T23:18:34.925Z",
+      "shortlink": "https://stspg.io/vg35mbl8lxpg",
+      "started_at": "2026-07-13T21:52:02.877Z",
+      "status": "postmortem",
+      "updated_at": "2026-07-16T01:56:42.744Z"
+    }
+  }
+}
