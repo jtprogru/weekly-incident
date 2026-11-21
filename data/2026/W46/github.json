@@ -1696,7 +1696,7 @@
       {
         "native_id": "m9q28dm1dj31",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 11, 2026, from 20:05 to 21:02 UTC, customers experienced delayed or failed Actions workflow starts, webhook errors and delivery delays, slower GitHub Apps API requests, and reduced availability of Copilot features, including Code Review. GitHub Pages builds were also delayed.\u003cbr /\u003e\u003cbr /\u003eNearly all GitHub Actions runs triggered between 20:18 and 20:55 UTC were delayed or failed, leaving approximately 3.4 million partially created runs that are being canceled. No GitHub Pages deployments completed during the incident. In the Central US data residency stamp, between 20:06 and 20:50 UTC, about 63% of webhook API requests failed and 27% of deliveries were not recorded; those deliveries reached their destinations but remain unavailable to view or redeliver. Between approximately 20:20 and 21:00 UTC, Copilot code review on github.com completed 87% fewer reviews than normal and some other Copilot features were also unavailable.\u003cbr /\u003e\u003cbr /\u003eThe disruption was caused by an Azure Cosmos DB regional outage affecting database accounts used by these services. Per Cosmos’s RCA, a configuration change to the Central US gateways exposed a latent race condition under a specific high-load traffic pattern, causing gateway crashes and health-probe failures. Cosmos mitigated by rolling back the change. Service health recovered around 21:02 UTC, and the queued Actions backlog finished processing by 21:21 UTC.\u003cbr /\u003e\u003cbr /\u003eOur follow-up work focuses on validating regional database failover across affected services and developing tested recovery procedures. We are also improving recovery tools to quickly clear stuck Actions checks and runs after incidents so they do not remain uncancelable or block pull request merges.",
         "created_at": "2026-11-11T21:21:39.473Z"
       }
     ],
@@ -1795,7 +1795,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 11, 2026, from 20:05 to 21:02 UTC, customers experienced delayed or failed Actions workflow starts, webhook errors and delivery delays, slower GitHub Apps API requests, and reduced availability of Copilot features, including Code Review. GitHub Pages builds were also delayed.\u003cbr /\u003e\u003cbr /\u003eNearly all GitHub Actions runs triggered between 20:18 and 20:55 UTC were delayed or failed, leaving approximately 3.4 million partially created runs that are being canceled. No GitHub Pages deployments completed during the incident. In the Central US data residency stamp, between 20:06 and 20:50 UTC, about 63% of webhook API requests failed and 27% of deliveries were not recorded; those deliveries reached their destinations but remain unavailable to view or redeliver. Between approximately 20:20 and 21:00 UTC, Copilot code review on github.com completed 87% fewer reviews than normal and some other Copilot features were also unavailable.\u003cbr /\u003e\u003cbr /\u003eThe disruption was caused by an Azure Cosmos DB regional outage affecting database accounts used by these services. Per Cosmos’s RCA, a configuration change to the Central US gateways exposed a latent race condition under a specific high-load traffic pattern, causing gateway crashes and health-probe failures. Cosmos mitigated by rolling back the change. Service health recovered around 21:02 UTC, and the queued Actions backlog finished processing by 21:21 UTC.\u003cbr /\u003e\u003cbr /\u003eOur follow-up work focuses on validating regional database failover across affected services and developing tested recovery procedures. We are also improving recovery tools to quickly clear stuck Actions checks and runs after incidents so they do not remain uncancelable or block pull request merges.",
           "created_at": "2026-11-11T21:21:39.473Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -1804,7 +1804,7 @@
           "incident_id": "dvy0t3mvh1lg",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-11T21:21:39.473Z"
+          "updated_at": "2026-11-20T18:14:41.556Z"
         },
         {
           "affected_components": [
@@ -2109,7 +2109,7 @@
       "shortlink": "https://stspg.io/jdjlq5zjyl48",
       "started_at": "2026-11-11T20:48:12.260Z",
       "status": "resolved",
-      "updated_at": "2026-11-11T21:21:39.499Z"
+      "updated_at": "2026-11-20T18:14:41.562Z"
     }
   },
   {

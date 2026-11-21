@@ -84,7 +84,7 @@
       {
         "native_id": "c4z3tyvgvlwh",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "On November 16, 2026, between 09:30 and 15:55 UTC, some pull request merges on GitHub timed out. On average, 2.9% of merge attempts timed out, with a peak of 7.1% at 15:17 UTC. Some GitHub Actions workflow runs triggered by pull requests were also delayed. Git operations such as push and fetch stayed available, with higher latency. This was a repeat of a shorter event on November 13, between 13:15 and 17:50 UTC, when 1.7% of merges timed out.\u003cbr /\u003e\u003cbr /\u003eBoth events had the same cause: some of the storage servers that hold Git repository data reached their disk read bandwidth limits. A merge must be written to every copy of a repository, so one overloaded server slowed merges for every repository it hosts. Read load on these servers had been growing as part of a planned move of repositories to new infrastructure. A disk configuration setting on those servers also made them read far more data than necessary, which cut their usable bandwidth roughly in half. We mitigated the incident by correcting that setting and moving some load away from the busiest servers.\u003cbr /\u003e\u003cbr /\u003eThe corrected setting is now applied permanently across our storage fleet. We are adding storage capacity in the affected region and alerting on per-server disk bandwidth so we catch saturation before it affects customers. Sustained merge timeouts will now page our on-call engineers directly. We are also adding capacity checks before moving repositories or traffic onto new infrastructure.",
         "created_at": "2026-11-16T16:26:26.775Z"
       }
     ],
@@ -141,7 +141,7 @@
               "old_status": "operational"
             }
           ],
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "On November 16, 2026, between 09:30 and 15:55 UTC, some pull request merges on GitHub timed out. On average, 2.9% of merge attempts timed out, with a peak of 7.1% at 15:17 UTC. Some GitHub Actions workflow runs triggered by pull requests were also delayed. Git operations such as push and fetch stayed available, with higher latency. This was a repeat of a shorter event on November 13, between 13:15 and 17:50 UTC, when 1.7% of merges timed out.\u003cbr /\u003e\u003cbr /\u003eBoth events had the same cause: some of the storage servers that hold Git repository data reached their disk read bandwidth limits. A merge must be written to every copy of a repository, so one overloaded server slowed merges for every repository it hosts. Read load on these servers had been growing as part of a planned move of repositories to new infrastructure. A disk configuration setting on those servers also made them read far more data than necessary, which cut their usable bandwidth roughly in half. We mitigated the incident by correcting that setting and moving some load away from the busiest servers.\u003cbr /\u003e\u003cbr /\u003eThe corrected setting is now applied permanently across our storage fleet. We are adding storage capacity in the affected region and alerting on per-server disk bandwidth so we catch saturation before it affects customers. Sustained merge timeouts will now page our on-call engineers directly. We are also adding capacity checks before moving repositories or traffic onto new infrastructure.",
           "created_at": "2026-11-16T16:26:26.775Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -150,7 +150,7 @@
           "incident_id": "2zfqmghmg3s3",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-16T16:26:26.775Z"
+          "updated_at": "2026-11-20T18:50:41.395Z"
         },
         {
           "affected_components": [
@@ -411,7 +411,7 @@
       "shortlink": "https://stspg.io/ljtn69jlt087",
       "started_at": "2026-11-16T11:59:40.892Z",
       "status": "resolved",
-      "updated_at": "2026-11-16T16:26:26.809Z"
+      "updated_at": "2026-11-20T18:50:41.400Z"
     }
   },
   {
@@ -810,7 +810,7 @@
       {
         "native_id": "swkh8t6d4ztv",
         "status": "resolved",
-        "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+        "body": "Between November 5, 2026, at 18:02 UTC and November 19, 2026, at 18:05 UTC, GitHub users experienced unexpected expiration of their web browser sessions despite continued activity, requiring them to login. An authentication change introduced an issue that caused web requests to bypass the session activity updates and cookie renewal that normally extend session lifetime. Affected sessions consequently expired when they reached their initial expiration time.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by deploying a fix to ensure that continued web activity renews session expiration and browser cookies.\u003cbr /\u003e\u003cbr /\u003eWe are adding monitoring to detect unexpected drops in session renewal activity, helping us catch similar issues sooner and reduce their impact on users.",
         "created_at": "2026-11-19T18:17:42.581Z"
       }
     ],
@@ -823,7 +823,7 @@
       "incident_updates": [
         {
           "affected_components": null,
-          "body": "This incident has been resolved. Thank you for your patience and understanding as we addressed this issue. A detailed root cause analysis will be shared as soon as it is available.",
+          "body": "Between November 5, 2026, at 18:02 UTC and November 19, 2026, at 18:05 UTC, GitHub users experienced unexpected expiration of their web browser sessions despite continued activity, requiring them to login. An authentication change introduced an issue that caused web requests to bypass the session activity updates and cookie renewal that normally extend session lifetime. Affected sessions consequently expired when they reached their initial expiration time.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by deploying a fix to ensure that continued web activity renews session expiration and browser cookies.\u003cbr /\u003e\u003cbr /\u003eWe are adding monitoring to detect unexpected drops in session renewal activity, helping us catch similar issues sooner and reduce their impact on users.",
           "created_at": "2026-11-19T18:17:42.581Z",
           "custom_tweet": null,
           "deliver_notifications": true,
@@ -832,7 +832,7 @@
           "incident_id": "m310qbkfm3ww",
           "status": "resolved",
           "tweet_id": null,
-          "updated_at": "2026-11-19T18:17:42.581Z"
+          "updated_at": "2026-11-20T17:58:43.991Z"
         },
         {
           "affected_components": null,
@@ -882,7 +882,7 @@
       "shortlink": "https://stspg.io/pvjz2g01trc7",
       "started_at": "2026-11-19T17:06:26.800Z",
       "status": "resolved",
-      "updated_at": "2026-11-19T18:17:42.609Z"
+      "updated_at": "2026-11-20T17:58:43.994Z"
     }
   }
 ]

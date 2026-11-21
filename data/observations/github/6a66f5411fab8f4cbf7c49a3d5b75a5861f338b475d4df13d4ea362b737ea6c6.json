@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/2zfqmghmg3s3",
+    "vendor": "github",
+    "native_id": "2zfqmghmg3s3",
+    "title": "Incident with Pull Requests",
+    "url": "https://stspg.io/ljtn69jlt087",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-16T11:59:40.892Z",
+    "resolved_at": "2026-11-16T16:26:26.775Z",
+    "duration_minutes": 266,
+    "components": [
+      "Pull Requests",
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "cslv6wz0zdrj",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Pull Requests",
+        "created_at": "2026-11-16T11:59:41.041Z"
+      },
+      {
+        "native_id": "1bl68t4mj9tt",
+        "status": "investigating",
+        "body": "We’re investigating elevated timeouts when merging pull requests. Some users may be unable to merge pull requests successfully; timeouts are occurring at a higher rate than usual. We’re working to identify the cause and restore normal performance.",
+        "created_at": "2026-11-16T12:00:25.126Z"
+      },
+      {
+        "native_id": "x5ndl1sr1gkq",
+        "status": "investigating",
+        "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 2–3% of merges are timing out, compared with a baseline near 0.2%. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T12:35:29.655Z"
+      },
+      {
+        "native_id": "pnw83hsnyn06",
+        "status": "investigating",
+        "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 2–3% of merges are timing out, compared with a baseline near 0.2%. Mitigations so far have not restored normal performance, and our teams are continuing to investigate. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T13:24:59.7Z"
+      },
+      {
+        "native_id": "5wmsy0jzj8pl",
+        "status": "investigating",
+        "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 3% of merges are timing out, compared with a baseline near 0.2%. Mitigations so far have not materially improved performance, and our teams are working to reduce load and restore normal service. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T14:06:43.722Z"
+      },
+      {
+        "native_id": "4npvr5nh5smp",
+        "status": "investigating",
+        "body": "We’re continuing to investigate elevated pull request merge timeouts. The latest reported rate is 4.75%, compared with a baseline near 0.2%, so some users may have difficulty merging pull requests. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T15:03:22.949Z"
+      },
+      {
+        "native_id": "2z93684j8m1v",
+        "status": "investigating",
+        "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-11-16T15:33:14.648Z"
+      },
+      {
+        "native_id": "0dd631dh8t96",
+        "status": "investigating",
+        "body": "We’re seeing early signs of improvement in pull request merge times, but recovery is not yet confirmed. The last confirmed timeout rate was 2.5%, compared with a baseline near 0.2%, so some users may still have difficulty merging pull requests. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T15:46:44.96Z"
+      },
+      {
+        "native_id": "w4pdfvcj4pxw",
+        "status": "investigating",
+        "body": "We’re seeing early signs of improvement in pull request merge times \u0026 workflow start times, but recovery is not yet confirmed. Users may still have difficulty merging pull requests. We’re reducing load on affected systems and monitoring the impact. We’ll share another update as we learn more.",
+        "created_at": "2026-11-16T15:55:07.507Z"
+      },
+      {
+        "native_id": "lkx7cxdtymql",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-16T16:07:32.376Z"
+      },
+      {
+        "native_id": "zgr9xhmwbtjb",
+        "status": "monitoring",
+        "body": "We’ve mitigated the issue affecting pull request merges and Actions workflow start times by reducing load on affected systems. Pull Requests and Actions have recovered, and we’re continuing to monitor their performance.",
+        "created_at": "2026-11-16T16:16:07.322Z"
+      },
+      {
+        "native_id": "c4z3tyvgvlwh",
+        "status": "resolved",
+        "body": "On November 16, 2026, between 09:30 and 15:55 UTC, some pull request merges on GitHub timed out. On average, 2.9% of merge attempts timed out, with a peak of 7.1% at 15:17 UTC. Some GitHub Actions workflow runs triggered by pull requests were also delayed. Git operations such as push and fetch stayed available, with higher latency. This was a repeat of a shorter event on November 13, between 13:15 and 17:50 UTC, when 1.7% of merges timed out.\u003cbr /\u003e\u003cbr /\u003eBoth events had the same cause: some of the storage servers that hold Git repository data reached their disk read bandwidth limits. A merge must be written to every copy of a repository, so one overloaded server slowed merges for every repository it hosts. Read load on these servers had been growing as part of a planned move of repositories to new infrastructure. A disk configuration setting on those servers also made them read far more data than necessary, which cut their usable bandwidth roughly in half. We mitigated the incident by correcting that setting and moving some load away from the busiest servers.\u003cbr /\u003e\u003cbr /\u003eThe corrected setting is now applied permanently across our storage fleet. We are adding storage capacity in the affected region and alerting on per-server disk bandwidth so we catch saturation before it affects customers. Sustained merge timeouts will now page our on-call engineers directly. We are also adding capacity checks before moving repositories or traffic onto new infrastructure.",
+        "created_at": "2026-11-16T16:26:26.775Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-09-02T15:39:06.329Z",
+          "description": "Requests for Pull Requests on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "hhtssxt0f5v2",
+          "name": "Pull Requests",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 6,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.311Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-16T16:07:32.343Z"
+        }
+      ],
+      "created_at": "2026-11-16T11:59:40.900Z",
+      "id": "2zfqmghmg3s3",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On November 16, 2026, between 09:30 and 15:55 UTC, some pull request merges on GitHub timed out. On average, 2.9% of merge attempts timed out, with a peak of 7.1% at 15:17 UTC. Some GitHub Actions workflow runs triggered by pull requests were also delayed. Git operations such as push and fetch stayed available, with higher latency. This was a repeat of a shorter event on November 13, between 13:15 and 17:50 UTC, when 1.7% of merges timed out.\u003cbr /\u003e\u003cbr /\u003eBoth events had the same cause: some of the storage servers that hold Git repository data reached their disk read bandwidth limits. A merge must be written to every copy of a repository, so one overloaded server slowed merges for every repository it hosts. Read load on these servers had been growing as part of a planned move of repositories to new infrastructure. A disk configuration setting on those servers also made them read far more data than necessary, which cut their usable bandwidth roughly in half. We mitigated the incident by correcting that setting and moving some load away from the busiest servers.\u003cbr /\u003e\u003cbr /\u003eThe corrected setting is now applied permanently across our storage fleet. We are adding storage capacity in the affected region and alerting on per-server disk bandwidth so we catch saturation before it affects customers. Sustained merge timeouts will now page our on-call engineers directly. We are also adding capacity checks before moving repositories or traffic onto new infrastructure.",
+          "created_at": "2026-11-16T16:26:26.775Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T16:26:26.775Z",
+          "id": "c4z3tyvgvlwh",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-20T18:50:41.395Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’ve mitigated the issue affecting pull request merges and Actions workflow start times by reducing load on affected systems. Pull Requests and Actions have recovered, and we’re continuing to monitor their performance.",
+          "created_at": "2026-11-16T16:16:07.322Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T16:16:07.322Z",
+          "id": "zgr9xhmwbtjb",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T16:16:07.322Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions and Pull Requests has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-16T16:07:32.376Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T16:07:32.376Z",
+          "id": "lkx7cxdtymql",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T16:07:32.376Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re seeing early signs of improvement in pull request merge times \u0026 workflow start times, but recovery is not yet confirmed. Users may still have difficulty merging pull requests. We’re reducing load on affected systems and monitoring the impact. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T15:55:07.507Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:55:07.507Z",
+          "id": "w4pdfvcj4pxw",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T15:55:07.507Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re seeing early signs of improvement in pull request merge times, but recovery is not yet confirmed. The last confirmed timeout rate was 2.5%, compared with a baseline near 0.2%, so some users may still have difficulty merging pull requests. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T15:46:44.960Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:46:44.960Z",
+          "id": "0dd631dh8t96",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T15:46:44.960Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Actions is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-11-16T15:33:14.648Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:33:14.648Z",
+          "id": "2z93684j8m1v",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T15:33:14.648Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re continuing to investigate elevated pull request merge timeouts. The latest reported rate is 4.75%, compared with a baseline near 0.2%, so some users may have difficulty merging pull requests. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T15:03:22.949Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T15:03:22.949Z",
+          "id": "4npvr5nh5smp",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T15:03:22.949Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 3% of merges are timing out, compared with a baseline near 0.2%. Mitigations so far have not materially improved performance, and our teams are working to reduce load and restore normal service. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T14:06:43.722Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T14:06:43.722Z",
+          "id": "5wmsy0jzj8pl",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T14:06:43.722Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 2–3% of merges are timing out, compared with a baseline near 0.2%. Mitigations so far have not restored normal performance, and our teams are continuing to investigate. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T13:24:59.700Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T13:24:59.700Z",
+          "id": "pnw83hsnyn06",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T13:24:59.700Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re continuing to investigate elevated pull request merge timeouts. Approximately 2–3% of merges are timing out, compared with a baseline near 0.2%. We’ll share another update as we learn more.",
+          "created_at": "2026-11-16T12:35:29.655Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T12:35:29.655Z",
+          "id": "x5ndl1sr1gkq",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T12:35:29.655Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We’re investigating elevated timeouts when merging pull requests. Some users may be unable to merge pull requests successfully; timeouts are occurring at a higher rate than usual. We’re working to identify the cause and restore normal performance.",
+          "created_at": "2026-11-16T12:00:25.126Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T12:00:25.126Z",
+          "id": "1bl68t4mj9tt",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T12:00:25.126Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hhtssxt0f5v2",
+              "name": "Pull Requests",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Pull Requests",
+          "created_at": "2026-11-16T11:59:41.041Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-16T11:59:41.041Z",
+          "id": "cslv6wz0zdrj",
+          "incident_id": "2zfqmghmg3s3",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-16T11:59:41.041Z"
+        }
+      ],
+      "monitoring_at": "2026-11-16T16:07:32.376Z",
+      "name": "Incident with Pull Requests",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-16T16:26:26.775Z",
+      "shortlink": "https://stspg.io/ljtn69jlt087",
+      "started_at": "2026-11-16T11:59:40.892Z",
+      "status": "resolved",
+      "updated_at": "2026-11-20T18:50:41.400Z"
+    }
+  }
+}
