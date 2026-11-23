@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/akjr7qn5o622",
+    "vendor": "cloudflare",
+    "native_id": "akjr7qn5o622",
+    "title": "Cache Purging Delays in Milan",
+    "url": "https://www.cloudflarestatus.com/incidents/akjr7qn5o622",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-20T20:51:40.979Z",
+    "resolved_at": "2026-11-20T22:25:16.933Z",
+    "duration_minutes": 93,
+    "components": [
+      "CDN Cache Purge"
+    ],
+    "updates": [
+      {
+        "native_id": "w5eh265dy0d5",
+        "status": "investigating",
+        "body": "Cloudflare single-file cache purging (purge by URL) called via the Dashboard/API is delayed in Milan. We are working to resolve this issue as soon as possible. Until then you may use the Purge Everything feature but do be aware it may cause a surge in traffic to your origin server(s). More updates to follow.",
+        "created_at": "2026-11-20T20:51:40.979Z"
+      },
+      {
+        "native_id": "03i6em1sfyts",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-20T20:55:47.303Z"
+      },
+      {
+        "native_id": "3t0qr0cy89y3",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are currently monitoring the results.",
+        "created_at": "2026-11-20T22:03:50.103Z"
+      },
+      {
+        "native_id": "kaytadcjvyay",
+        "status": "resolved",
+        "body": "This incident is now resolved.",
+        "created_at": "2026-11-20T22:25:16.933Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-31T16:54:52.000Z",
+          "description": "CDN single file cache purging service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "fbvx0hxhhdj0",
+          "name": "CDN Cache Purge",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-22T21:00:02.753Z"
+        }
+      ],
+      "created_at": "2026-11-20T20:51:40.979Z",
+      "id": "akjr7qn5o622",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident is now resolved.",
+          "created_at": "2026-11-20T22:25:16.933Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-20T22:25:16.933Z",
+          "id": "kaytadcjvyay",
+          "incident_id": "akjr7qn5o622",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-20T22:25:16.933Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are currently monitoring the results.",
+          "created_at": "2026-11-20T22:03:50.103Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-20T22:03:50.103Z",
+          "id": "3t0qr0cy89y3",
+          "incident_id": "akjr7qn5o622",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-20T22:03:50.103Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "fbvx0hxhhdj0",
+              "name": "CDN \u0026 Performance - CDN Cache Purge",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-20T20:55:47.303Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-20T20:55:47.303Z",
+          "id": "03i6em1sfyts",
+          "incident_id": "akjr7qn5o622",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-20T20:55:47.303Z"
+        },
+        {
+          "affected_components": null,
+          "body": "Cloudflare single-file cache purging (purge by URL) called via the Dashboard/API is delayed in Milan. We are working to resolve this issue as soon as possible. Until then you may use the Purge Everything feature but do be aware it may cause a surge in traffic to your origin server(s). More updates to follow.",
+          "created_at": "2026-11-20T20:51:40.979Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-20T20:51:40.979Z",
+          "id": "w5eh265dy0d5",
+          "incident_id": "akjr7qn5o622",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-20T20:51:40.979Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cache Purging Delays in Milan",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-20T22:25:16.933Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/akjr7qn5o622",
+      "started_at": "2026-11-20T20:51:40.979Z",
+      "status": "resolved",
+      "updated_at": "2026-11-20T22:25:16.933Z"
+    }
+  }
+}

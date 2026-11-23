@@ -1,0 +1,344 @@
+{
+  "dedup": {
+    "rules_version": "identity-v1",
+    "source_records_total": 6,
+    "source_versions_total": 6,
+    "canonical_incidents_total": 6,
+    "merged_source_records_total": 0,
+    "pending_candidate_pairs": 0,
+    "conflicted_groups_total": 0
+  },
+  "week": "2026-W48",
+  "from": "2026-11-23T00:00:00Z",
+  "to": "2026-11-30T00:00:00Z",
+  "generated_at": "2026-11-23T16:39:28.556730271Z",
+  "sources": [
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "anthropic",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "atlassian",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 34,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "aws",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 6,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "circleci",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "cloudflare",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-10-29T11:52:25.981929879Z",
+      "vendor": "datadog",
+      "ok": false,
+      "error": "GET https://status.datadoghq.com/api/v2/incidents.json: status 403",
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 0,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "digitalocean",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "gcp",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 8,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "github",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "grafana",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "openai",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 25,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "slack",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 26,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-11-23T16:39:28.556730271Z",
+      "vendor": "stripe",
+      "ok": true,
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 50,
+      "parse_errors": 0
+    },
+    {
+      "last_success_at": "2026-10-29T11:52:25.981929879Z",
+      "vendor": "yandexcloud",
+      "ok": false,
+      "error": "GET https://status.cloud.yandex.ru/api/incidents?lang=en\u0026page=4: status 403",
+      "fetched_at": "2026-11-23T16:39:28.556730271Z",
+      "incidents_seen": 0,
+      "parse_errors": 0
+    }
+  ],
+  "incidents": [
+    {
+      "canonical": {
+        "id": "ci-f78ca8dfad9ba99839df429c",
+        "sources": [
+          {
+            "key": "anthropic/yzs0s90d8fm8",
+            "path": "2026/W48/anthropic.json",
+            "url": "https://stspg.io/q2ptbwdjx31m"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-f78ca8dfad9ba99839df429c",
+      "vendor": "anthropic",
+      "title": "Elevated errors for multiple models",
+      "url": "https://stspg.io/q2ptbwdjx31m",
+      "impact": "major",
+      "status": "resolved",
+      "started_at": "2026-11-23T09:49:22.296Z",
+      "resolved_at": "2026-11-23T11:07:41.048Z",
+      "duration_minutes": 78,
+      "ongoing": false,
+      "components": [
+        "Claude API (api.anthropic.com)",
+        "Claude Code",
+        "Claude Cowork",
+        "claude.ai"
+      ],
+      "score": {
+        "value": 468,
+        "duration_minutes": 78,
+        "components": 4,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": true
+    },
+    {
+      "canonical": {
+        "id": "ci-935fe1af73dc60214871a211",
+        "sources": [
+          {
+            "key": "cloudflare/00dp7cliyqqt",
+            "path": "2026/W48/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-935fe1af73dc60214871a211",
+      "vendor": "cloudflare",
+      "title": "Cloudflare Workers API – Delayed or Inconsistent Responses",
+      "url": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
+      "impact": "minor",
+      "status": "investigating",
+      "started_at": "2026-11-23T13:52:11.144Z",
+      "ongoing": true,
+      "components": [
+        "Workers"
+      ],
+      "score": {
+        "value": 300.6,
+        "duration_minutes": 167,
+        "components": 1,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": true
+    },
+    {
+      "canonical": {
+        "id": "ci-54f88c09192b0e7859d41c6a",
+        "sources": [
+          {
+            "key": "openai/01M84HKHX73RF7HTVZQ2A9GFXP",
+            "path": "2026/W48/openai.json",
+            "url": "https://status.openai.com/incidents/01M84HKHX73RF7HTVZQ2A9GFXP"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-54f88c09192b0e7859d41c6a",
+      "vendor": "openai",
+      "title": "Elevated errors with GPT-6 conversations on paid ChatGPT plans",
+      "url": "https://status.openai.com/incidents/01M84HKHX73RF7HTVZQ2A9GFXP",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-23T15:50:14Z",
+      "resolved_at": "2026-11-23T16:38:46Z",
+      "duration_minutes": 48,
+      "ongoing": false,
+      "components": [],
+      "score": {
+        "value": 72,
+        "duration_minutes": 48,
+        "components": 1,
+        "vendor_weight": 1.5
+      },
+      "above_threshold": false
+    },
+    {
+      "canonical": {
+        "id": "ci-50b13eda4ec253504256f775",
+        "sources": [
+          {
+            "key": "cloudflare/pnfv9wfy2q4y",
+            "path": "2026/W48/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/pnfv9wfy2q4y"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-50b13eda4ec253504256f775",
+      "vendor": "cloudflare",
+      "title": "Increased HTTP 5xx Errors in Brussels",
+      "url": "https://www.cloudflarestatus.com/incidents/pnfv9wfy2q4y",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-23T02:34:56.549Z",
+      "resolved_at": "2026-11-23T02:46:14.797Z",
+      "duration_minutes": 11,
+      "ongoing": false,
+      "components": [
+        "Brussels, Belgium - (BRU)",
+        "Network"
+      ],
+      "score": {
+        "value": 39.6,
+        "duration_minutes": 11,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "canonical": {
+        "id": "ci-d27030769a36e56ca4d79b41",
+        "sources": [
+          {
+            "key": "cloudflare/nosp2iizzvc7",
+            "path": "2026/W48/cloudflare.json",
+            "url": "https://www.cloudflarestatus.com/incidents/nosp2iizzvc7"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-d27030769a36e56ca4d79b41",
+      "vendor": "cloudflare",
+      "title": "Elevated latency in Frankfurt",
+      "url": "https://www.cloudflarestatus.com/incidents/nosp2iizzvc7",
+      "impact": "none",
+      "status": "resolved",
+      "started_at": "2026-11-23T04:18:00Z",
+      "resolved_at": "2026-11-23T04:28:00Z",
+      "duration_minutes": 10,
+      "ongoing": false,
+      "components": [
+        "Frankfurt, Germany - (FRA)",
+        "Network"
+      ],
+      "score": {
+        "value": 36,
+        "duration_minutes": 10,
+        "components": 2,
+        "vendor_weight": 1.8
+      },
+      "above_threshold": false
+    },
+    {
+      "canonical": {
+        "id": "ci-a8e1742927cc5a716868643f",
+        "sources": [
+          {
+            "key": "circleci/shx3q3z0y3g1",
+            "path": "2026/W48/circleci.json",
+            "url": "https://stspg.io/lsklslsk9s9h"
+          }
+        ],
+        "reasons": [],
+        "start_quality": "vendor_reported",
+        "warnings": []
+      },
+      "key": "ci-a8e1742927cc5a716868643f",
+      "vendor": "circleci",
+      "title": "Issues logging in for BitBucket users",
+      "url": "https://stspg.io/lsklslsk9s9h",
+      "impact": "minor",
+      "status": "resolved",
+      "started_at": "2026-11-23T14:51:28.641Z",
+      "resolved_at": "2026-11-23T15:24:13.943Z",
+      "duration_minutes": 32,
+      "ongoing": false,
+      "components": [
+        "Atlassian Bitbucket API"
+      ],
+      "score": {
+        "value": 32,
+        "duration_minutes": 32,
+        "components": 1,
+        "vendor_weight": 1
+      },
+      "above_threshold": false
+    }
+  ]
+}
