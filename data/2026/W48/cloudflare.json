@@ -242,7 +242,7 @@
     "title": "Cloudflare Workers API – Delayed or Inconsistent Responses",
     "url": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
     "impact": "minor",
-    "status": "investigating",
+    "status": "identified",
     "started_at": "2026-11-23T13:52:11.144Z",
     "components": [
       "Workers"
@@ -253,6 +253,12 @@
         "status": "investigating",
         "body": "Cloudflare is investigating an issue affecting the Workers API and Workers configuration in the Cloudflare dashboard. \nCustomers may see out-of-date or inconsistent information when viewing or managing Workers. \nFor example, recent deployments or configuration changes may not show up right away. \nWorkers that are already running in production are not affected. \n\n\nWe are working to mitigate this problem. More updates to follow shortly.",
         "created_at": "2026-11-23T13:52:11.144Z"
+      },
+      {
+        "native_id": "k0hoy9limzsh",
+        "status": "identified",
+        "body": "Multiple fixes are underway to address the underlying problem.",
+        "created_at": "2026-11-24T01:28:49.9Z"
       }
     ],
     "first_seen_at": "2026-11-23T16:39:28.556730271Z",
@@ -278,6 +284,19 @@
       "id": "00dp7cliyqqt",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Multiple fixes are underway to address the underlying problem.",
+          "created_at": "2026-11-24T01:28:49.900Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T01:28:49.900Z",
+          "id": "k0hoy9limzsh",
+          "incident_id": "00dp7cliyqqt",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T01:28:49.900Z"
+        },
         {
           "affected_components": [
             {
@@ -306,8 +325,352 @@
       "resolved_at": null,
       "shortlink": "https://www.cloudflarestatus.com/incidents/00dp7cliyqqt",
       "started_at": "2026-11-23T13:52:11.144Z",
-      "status": "investigating",
-      "updated_at": "2026-11-23T13:52:34.093Z"
+      "status": "identified",
+      "updated_at": "2026-11-24T01:28:49.900Z"
+    }
+  },
+  {
+    "key": "cloudflare/idlaxmxz4unz",
+    "vendor": "cloudflare",
+    "native_id": "idlaxmxz4unz",
+    "title": "Increased Errors for Durable Objects in Seattle",
+    "url": "https://www.cloudflarestatus.com/incidents/idlaxmxz4unz",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-24T07:25:34.236Z",
+    "resolved_at": "2026-11-24T08:26:20.047Z",
+    "duration_minutes": 60,
+    "components": [
+      "Durable Objects",
+      "Seattle, United States - (SEA)"
+    ],
+    "updates": [
+      {
+        "native_id": "3f156ymarco0",
+        "status": "investigating",
+        "body": "Cloudflare is aware of, and investigating an issue with Durable Objects which potentially impacts multiple customers in Seattle. Durable Objects are experiencing an elevated level of overload errors in the aforementioned region. We are currently investigating this issue.",
+        "created_at": "2026-11-24T07:25:34.236Z"
+      },
+      {
+        "native_id": "9u4hl0ax06gj",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-24T08:06:50.369Z"
+      },
+      {
+        "native_id": "6033adgoejnr",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-24T08:07:37.221Z"
+      },
+      {
+        "native_id": "v910vsni6c0t",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-24T08:26:20.047Z"
+      }
+    ],
+    "first_seen_at": "2026-11-24T16:35:34.497058916Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T14:55:22.000Z",
+          "description": "Durable Objects provide low-latency coordination and consistent permanent storage for the Workers platform.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bty1yz6dhh0v",
+          "name": "Durable Objects",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-11-24T08:26:20.047Z"
+        },
+        {
+          "created_at": "2014-10-27T19:57:30.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "bvtc2f85ft3p",
+          "name": "Seattle, United States - (SEA)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 52,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-24T14:02:32.825Z"
+        }
+      ],
+      "created_at": "2026-11-24T07:25:34.236Z",
+      "id": "idlaxmxz4unz",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-24T08:26:20.047Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T08:26:20.047Z",
+          "id": "v910vsni6c0t",
+          "incident_id": "idlaxmxz4unz",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T08:26:20.047Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-24T08:07:37.221Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T08:07:37.221Z",
+          "id": "6033adgoejnr",
+          "incident_id": "idlaxmxz4unz",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T08:07:37.221Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-24T08:06:50.369Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T08:06:50.369Z",
+          "id": "9u4hl0ax06gj",
+          "incident_id": "idlaxmxz4unz",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T08:06:50.369Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bty1yz6dhh0v",
+              "name": "Developer Services - Durable Objects",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "bvtc2f85ft3p",
+              "name": "North America - Seattle, United States - (SEA)",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is aware of, and investigating an issue with Durable Objects which potentially impacts multiple customers in Seattle. Durable Objects are experiencing an elevated level of overload errors in the aforementioned region. We are currently investigating this issue.",
+          "created_at": "2026-11-24T07:25:34.236Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T07:25:34.236Z",
+          "id": "3f156ymarco0",
+          "incident_id": "idlaxmxz4unz",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T07:25:34.236Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased Errors for Durable Objects in Seattle",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-24T08:26:20.047Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/idlaxmxz4unz",
+      "started_at": "2026-11-24T07:25:34.236Z",
+      "status": "resolved",
+      "updated_at": "2026-11-24T08:26:20.047Z"
+    }
+  },
+  {
+    "key": "cloudflare/no721jcnlrbh",
+    "vendor": "cloudflare",
+    "native_id": "no721jcnlrbh",
+    "title": "Magic Transit Degraded Performance",
+    "url": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
+    "impact": "major",
+    "status": "identified",
+    "started_at": "2026-11-24T11:29:22.902Z",
+    "components": [
+      "Magic Transit"
+    ],
+    "updates": [
+      {
+        "native_id": "l1qgyii5i9zx",
+        "status": "investigating",
+        "body": "Cloudflare is currently investigating issues related to Magic Transit. A subset of Magic Transit customers have a Cloudflare-managed setting enabled that clears the Don't Fragment (DF) flag. For these customers, the setting is not currently taking effect. As a result, packets with the DF flag set and larger than the tunnel MTU may be dropped.\nWe advise customers to set an MSS clamp on their egress traffic in order to ensure ingress traffic is correctly sized.",
+        "created_at": "2026-11-24T11:29:22.902Z"
+      },
+      {
+        "native_id": "gtq4mos1gv9k",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-24T12:58:11.264Z"
+      }
+    ],
+    "first_seen_at": "2026-11-24T16:35:34.497058916Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2020-12-17T09:48:10.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "bjlxcss20fsl",
+          "name": "Magic Transit",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 9,
+          "showcase": false,
+          "start_date": "2020-12-17",
+          "status": "partial_outage",
+          "updated_at": "2026-11-24T11:29:22.902Z"
+        }
+      ],
+      "created_at": "2026-11-24T11:29:22.902Z",
+      "id": "no721jcnlrbh",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-24T12:58:11.264Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T12:58:11.264Z",
+          "id": "gtq4mos1gv9k",
+          "incident_id": "no721jcnlrbh",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T12:58:11.264Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "bjlxcss20fsl",
+              "name": "Network Services - Magic Transit",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is currently investigating issues related to Magic Transit. A subset of Magic Transit customers have a Cloudflare-managed setting enabled that clears the Don't Fragment (DF) flag. For these customers, the setting is not currently taking effect. As a result, packets with the DF flag set and larger than the tunnel MTU may be dropped.\nWe advise customers to set an MSS clamp on their egress traffic in order to ensure ingress traffic is correctly sized.",
+          "created_at": "2026-11-24T11:29:22.902Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T11:29:22.902Z",
+          "id": "l1qgyii5i9zx",
+          "incident_id": "no721jcnlrbh",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T14:58:40.337Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Magic Transit Degraded Performance",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/no721jcnlrbh",
+      "started_at": "2026-11-24T11:29:22.902Z",
+      "status": "identified",
+      "updated_at": "2026-11-24T14:58:40.337Z"
+    }
+  },
+  {
+    "key": "cloudflare/x5ma22sji8wi",
+    "vendor": "cloudflare",
+    "native_id": "x5ma22sji8wi",
+    "title": "Issues with Email Routing in France",
+    "url": "https://www.cloudflarestatus.com/incidents/x5ma22sji8wi",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-11-24T13:38:40.144Z",
+    "components": [
+      "Email Routing"
+    ],
+    "updates": [
+      {
+        "native_id": "tk39sh75hjk3",
+        "status": "identified",
+        "body": "Cloudflare is investigating issues with Email Routing in France. Some SPF records may intermittently fail to resolve. Impact is restricted to email forwarding functionality and does not affect any connectivity, security, CDN or Area1 functionality, nor does it affect Email Routing outside of France. We are working to mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-24T13:38:40.144Z"
+      },
+      {
+        "native_id": "gbz2hibup8sm",
+        "status": "identified",
+        "body": "We are continuing to work on a fix for the issue.",
+        "created_at": "2026-11-24T14:50:35.525Z"
+      }
+    ],
+    "first_seen_at": "2026-11-24T16:35:34.497058916Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-01-27T17:18:07.000Z",
+          "description": "Email Routing service allowing for forwarding of email traffic",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "gjb0yzvvrpf6",
+          "name": "Email Routing",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2022-01-27",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-24T13:38:40.144Z"
+        }
+      ],
+      "created_at": "2026-11-24T13:38:40.144Z",
+      "id": "x5ma22sji8wi",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "We are continuing to work on a fix for the issue.",
+          "created_at": "2026-11-24T14:50:35.525Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T14:50:35.525Z",
+          "id": "gbz2hibup8sm",
+          "incident_id": "x5ma22sji8wi",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T14:50:35.525Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "gjb0yzvvrpf6",
+              "name": "Email - Email Routing",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Email Routing in France. Some SPF records may intermittently fail to resolve. Impact is restricted to email forwarding functionality and does not affect any connectivity, security, CDN or Area1 functionality, nor does it affect Email Routing outside of France. We are working to mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-24T13:38:40.144Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-24T13:38:40.144Z",
+          "id": "tk39sh75hjk3",
+          "incident_id": "x5ma22sji8wi",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-24T13:38:40.144Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Issues with Email Routing in France",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/x5ma22sji8wi",
+      "started_at": "2026-11-24T13:38:40.144Z",
+      "status": "identified",
+      "updated_at": "2026-11-24T14:50:35.525Z"
     }
   }
 ]

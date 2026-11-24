@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "circleci/6cfhhlr4rmm0",
+    "vendor": "circleci",
+    "native_id": "6cfhhlr4rmm0",
+    "title": "Delay in data appearing in UI and API",
+    "url": "https://stspg.io/hkfkwz292bz8",
+    "impact": "major",
+    "status": "postmortem",
+    "started_at": "2026-10-09T11:33:00.284Z",
+    "resolved_at": "2026-10-10T02:08:45.055Z",
+    "duration_minutes": 875,
+    "components": [
+      "CircleCI API",
+      "CircleCI UI"
+    ],
+    "updates": [
+      {
+        "native_id": "sfkwmky10ly8",
+        "status": "identified",
+        "body": "There is a delay in our data infrastructure causing delays before build data and some notifications become visible. We are working on a mitigation.",
+        "created_at": "2026-10-09T11:33:00.542Z"
+      },
+      {
+        "native_id": "yjnhth0t8yh8",
+        "status": "identified",
+        "body": "What's impacted: \nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect\nSince 11:15 UTC:\n - Pipelines are still being created while this is ongoing but not yet processed, so retriggering may result in duplicate pipelines.\n - Outbound webhooks and transactional notifications (Slack and email) are not being sent.\n - Pipeline statuses may not be visible. \n - Usage charge data on the Project Usage page will be stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update: \nWe will provide another update by 13:30 UTC.",
+        "created_at": "2026-10-09T13:00:40.161Z"
+      },
+      {
+        "native_id": "88ds0hhr371x",
+        "status": "identified",
+        "body": "Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted:\nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect:\n- Since about 13:00 UTC, pipelines are being processed again and jobs are starting.\n- Most jobs are currently starting within about 4 minutes, and some are waiting up to about 10 minutes. Pipelines triggered during the incident are still being processed and may take longer to start.\n- Outbound webhooks and notifications have resumed. \n- Pipelines are still being processed from the backlog, so retriggering may result in duplicate pipelines.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update:\nWe will provide another update by 14:00 UTC.",
+        "created_at": "2026-10-09T13:30:31.975Z"
+      },
+      {
+        "native_id": "nd0zqb74k0hw",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Pipelines are being processed again, including those triggered during the incident.\n- Since about 13:25 UTC, workflows and jobs have been starting with increasing delays as we work through the backlog. Most jobs are currently starting within about 10 minutes, and some are waiting up to about 25 minutes.\n- We expect to work through this backlog by about 14:35 UTC.\n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows. \n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 14:30 UTC.",
+        "created_at": "2026-10-09T14:00:23.628Z"
+      },
+      {
+        "native_id": "76l1sfjdf53g",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are improving. Most jobs are now starting within about 3 minutes, down from about 10 minutes at 13:50 UTC.\n- Some workflows from pipelines triggered during the incident are still waiting up to about 40 minutes to start.\n- Working through the backlog is taking slightly longer than expected. We now expect to clear it by about 14:45 UTC. \n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 15:00 UTC.",
+        "created_at": "2026-10-09T14:29:58.944Z"
+      },
+      {
+        "native_id": "6l23l9vg00p7",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of workflows from pipelines triggered during the incident cleared at about 14:40 UTC.\n- Most jobs are now starting within about 30 seconds, and some are waiting up to about 3 minutes.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers continue to work on the underlying issue.\n\nNext update\nWe will provide another update by 15:10 UTC.",
+        "created_at": "2026-10-09T14:43:52.603Z"
+      },
+      {
+        "native_id": "bctws6py234x",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of pipelines and workflows from the incident has cleared.\n- Since about 14:45 UTC, most workflows and jobs are starting within about 15 seconds, and start times are continuing to return to normal.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers monitor the recovery.\n\nNext update\nWe will provide another update by 15:20 UTC.",
+        "created_at": "2026-10-09T14:54:02.94Z"
+      },
+      {
+        "native_id": "f9jb7ggjpsxy",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Workflows and jobs are running on time.\n- The CircleCI UI is about 30 minutes behind. New workflows and status changes may take that long to appear.\n- Our engineers are actively working to speed up processing so the UI can catch up.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to reduce this delay.\n\nNext update\nWe will provide another update by 16:00 UTC.",
+        "created_at": "2026-10-09T15:32:03.279Z"
+      },
+      {
+        "native_id": "ymxbztqs0prv",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Since about 15:15 UTC, workflows and jobs have been starting with increasing delays. Most jobs are currently starting within about 4 minutes, and some are waiting up to about 20 minutes.\n- The CircleCI UI remains about 30 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 16:30 UTC.",
+        "created_at": "2026-10-09T16:02:42.495Z"
+      },
+      {
+        "native_id": "zp01djn036zf",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs have stopped increasing and are beginning to ease. Most jobs are starting within about 4 minutes, and some are waiting up to about 25 minutes.\n- The CircleCI UI is now about 20 minutes behind, down from about 30 minutes. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:00 UTC.",
+        "created_at": "2026-10-09T16:32:53.245Z"
+      },
+      {
+        "native_id": "m77xw2dm51zs",
+        "status": "monitoring",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are holding steady. Most jobs are starting within about 4 minutes, and some are waiting up to about 8 minutes, down from about 25 minutes.\n- The CircleCI UI remains about 20 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:30 UTC.",
+        "created_at": "2026-10-09T17:06:30.17Z"
+      },
+      {
+        "native_id": "ywrkgdr5qxpv",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Since about 17:00 UTC, delays have increased significantly. Most jobs are now taking about 12 minutes to start, and some are waiting up to about 30 minutes.\n- Since about 17:15 UTC, some jobs are failing to start. \n- Pipelines are being processed more slowly, so some may take longer to start. \n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear. \n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 18:00 UTC.",
+        "created_at": "2026-10-09T17:34:01.223Z"
+      },
+      {
+        "native_id": "rr745bm3mdpr",
+        "status": "identified",
+        "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat to expect\n- Since about 17:00 UTC, we are seeing an increase in delays. Most jobs are now taking about 25 minutes to start, and some are waiting up to about an hour.\n- Since about 17:15 UTC, some in-progress workflows have failed and a small number of jobs are failing to start.\n- New pipelines are being queued and are taking longer to start.\n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nOur engineers continue to work to resolve the issue at hand. \n\nNext update\nWe will provide another update by 18:30 UTC.",
+        "created_at": "2026-10-09T18:08:03.166Z"
+      },
+      {
+        "native_id": "t14nr135wscg",
+        "status": "identified",
+        "body": "What's changed since our last update\n\n* The CircleCI UI is about an hour behind, and up to about 90 minutes for some updates. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Jobs that are running are starting faster. Most are now starting within about 15 minutes, down from about 28 minutes, though some are still waiting over an hour.\n* New pipelines are increasingly delayed.\n* Some workflows are still failing. Workflows that could not be processed in time are being marked as failed.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n\nStill ongoing: \nUsage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:00 UTC.",
+        "created_at": "2026-10-09T18:32:52.602Z"
+      },
+      {
+        "native_id": "phlrcb2qhh92",
+        "status": "identified",
+        "body": "What's changed since our last update\n\n* Jobs are starting faster. Most are now starting within about 8 minutes, down from about 15 minutes, and the longest waits have dropped from over an hour to about 45 minutes.\n* The CircleCI UI is beginning to catch up, but it is still behind. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Pipelines are being processed faster, but new pipelines are still delayed.\n\nStill ongoing\n* Some workflows and jobs are still failing.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n* Usage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:30 UTC.",
+        "created_at": "2026-10-09T18:57:01.746Z"
+      },
+      {
+        "native_id": "zznj02llzfvt",
+        "status": "identified",
+        "body": "Since our last update, jobs are starting faster: most are now starting within about 6 minutes, down from about 8 minutes. The CircleCI UI is catching up but still about an hour behind. New pipelines are being processed as they arrive. \n\nJobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI. \n\nWe will provide another update by 20:00 UTC.",
+        "created_at": "2026-10-09T19:29:54.594Z"
+      },
+      {
+        "native_id": "vxwn1x5xj418",
+        "status": "identified",
+        "body": "Jobs are starting faster and fewer are failing: most jobs are now starting within about 4 minutes, down from about 6 minutes, and the longest waits have dropped from about 30 minutes to about 20 minutes. \n\nPipelines from earlier in the incident are now being worked through. \n\nThe CircleCI UI is still behind, and some older updates may take longer to appear. Jobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI.\n\nWe will provide another update by 20:30 UTC.",
+        "created_at": "2026-10-09T20:06:36.341Z"
+      },
+      {
+        "native_id": "7d56g12hwjlm",
+        "status": "identified",
+        "body": "Since about 20:48 UTC, new workflows and jobs are not starting. We have temporarily paused starting new work so that our systems can catch up on work already in progress, including delayed updates to the CircleCI UI and API. Older updates are now appearing in the UI and API as this backlog clears. New pipelines are still being accepted and queued\n\nPlease avoid retriggering pipelines or workflows during this time, as this may create duplicates once work resumes.\n\nWe will provide another update by 22:00 UTC.",
+        "created_at": "2026-10-09T21:22:37.747Z"
+      },
+      {
+        "native_id": "4t1ztc23mt5p",
+        "status": "identified",
+        "body": "Since our last update, most of the pipelines that were delayed earlier in the incident have now been processed, and their workflows are queued to start. New workflows and jobs remain paused while we prepare to resume work safely. Delayed updates continue to appear in the CircleCI UI and API. \n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates once work resumes. \n\nWe will provide another update by 22:30 UTC.",
+        "created_at": "2026-10-09T22:09:04.56Z"
+      },
+      {
+        "native_id": "jjc9y44qb8jb",
+        "status": "identified",
+        "body": "Since our last update, we have begun gradually resuming work, and some queued workflows and jobs are starting again. Most queued work is still waiting, and jobs that do start may have waited over an hour. We are increasing the rate carefully to avoid overloading our systems. Delayed updates continue to appear in the CircleCI UI and API.\n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates as queued work resumes. \n\nWe will provide another update by 23:00 UTC.",
+        "created_at": "2026-10-09T22:28:06.582Z"
+      },
+      {
+        "native_id": "kn8lpnsykn0b",
+        "status": "identified",
+        "body": "A large number of queued workflows and jobs have started, and the CircleCI UI and API have caught up and are showing updates normally with few delays. We are continuing to work through the remaining queued work. Jobs from the queue may have waited about an hour or more to start, and some Linux jobs are waiting up to about 10 minutes for capacity.\n\nPlease continue to avoid retriggering while queued work continues to process. \n\nWe will provide another update by 23:30 UTC.",
+        "created_at": "2026-10-09T23:00:06.282Z"
+      },
+      {
+        "native_id": "slddcgnpwq08",
+        "status": "identified",
+        "body": "We are still working through a significant backlog of queued workflows and jobs. Wait times are improving but they remain longer than normal and some jobs have waited over an hour. The CircleCI UI and API remain up to date. Please avoid retriggering pipelines or workflows while the backlog clears, as this may create duplicates. We will provide another update by 00:00 UTC.",
+        "created_at": "2026-10-09T23:38:12.044Z"
+      },
+      {
+        "native_id": "njsd66nx1hyw",
+        "status": "identified",
+        "body": "Since our last update, the backlog of queued workflows and jobs has cleared, as of about 23:47 UTC. Workflows and jobs are now starting within seconds, and the CircleCI UI and API are up to date. We are monitoring our systems closely to make sure they remain stable. We will provide another update by 00:30 UTC.",
+        "created_at": "2026-10-09T23:59:55.337Z"
+      },
+      {
+        "native_id": "1x9pgyt80fkg",
+        "status": "identified",
+        "body": "Workflows and jobs have continued to start normally, within seconds, and the CircleCI UI and API remain up to date. Slack and email notifications delayed earlier in the incident are still being delivered. \n\nUsage charge data on the Project Usage page is stale. \n\nWe are continuing to monitor our systems closely and will provide another update by 01:15 UTC.",
+        "created_at": "2026-10-10T00:45:09.426Z"
+      },
+      {
+        "native_id": "kx623r35xmcs",
+        "status": "monitoring",
+        "body": "Workflows and jobs are starting and running normally, and the CircleCI UI and API are up to date. We are continuing to monitor our systems closely to make sure they remain stable. \n\nWe will provide another update by 02:00 UTC.",
+        "created_at": "2026-10-10T01:23:13.373Z"
+      },
+      {
+        "native_id": "tc0kt3x23wgk",
+        "status": "resolved",
+        "body": "Between 11:15 UTC and 23:47 UTC on October 9, customers experienced delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\nFrom 11:15 to about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent. From about 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nFrom about 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n\nFrom 20:48 to about 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time. From about 22:10 to 23:47 UTC, queued workflows and jobs resumed and were processed. Some of them had waited up to about 2 hours.\n\nThe issue has been resolved and all affected functionality has returned to normal. Usage charge data on the Project Usage page is not yet up to date and will be updated once our data backfills complete. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our engineers worked on implementing a fix.",
+        "created_at": "2026-10-10T02:08:45.055Z"
+      },
+      {
+        "native_id": "fwv96xzh2q71",
+        "status": "postmortem",
+        "body": "## Summary\n\nBetween 11:15 UTC and 23:47 UTC on October 9, CircleCI customers experienced hours-long delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\n* From 11:15 to 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent.\n* From 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n* From 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n* From 20:48 to 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time.\n* From 22:10 to 23:47 UTC, queued workflows and jobs resumed and were successfully processed. Some of them had waited up to about 2 hours.\n* By 23:47, the incident was mitigated.\n\nThe status page for this incident can be found at [October 9 - Delay in data appearing in UI and API](https://status.circleci.com/incidents/6cfhhlr4rmm0). Customers experienced a similar incident earlier in the week at [October 6 - Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c).\n\nMultiple CircleCI services use Temporal backed by Postgres as a reliable queueing mechanism, and both incidents had the same cause: the rate of writes to Temporal's Postgres instance were faster than Postgres’s transaction log could archive those writes. In both cases, this caused multi-hour delays in processing both pipelines and status notifications.\n\nWe evaluated several mitigations, then paused new workflow starts so the system could recover safely, and ramped back up gradually. We then throttled work back up until our systems returned to normal.\n\nTo permanently resolve the bottleneck, we have split work across multiple Temporal instances, each with its own independent database and worker clusters, and we load-balance across them. We had already scheduled infrastructure work starting the week of October 12 that would have removed this exact bottleneck and prevented these incidents. So starting 19:11 on October 9 our engineering team implemented, tested, and rolled out a simpler version of these changes within a few hours. We further added new alerting and tuned the underlying databases for better performance under high load.\n\nCustomers whose jobs failed during this window may rerun them.\n\n## Background\n\nTo run customer jobs, CircleCI executes a series of steps: we accept customer pipelines; we assign jobs for those pipelines to workers; we deliver status updates for those pipelines and jobs; and we charge customers for the credits those jobs consume. Each of these steps is implemented by an independent service, with reliable queues in between.\n\nHistorically we have implemented these reliable queues with RabbitMQ on top of durable storage, with exponential backoff and dead letter queues for reliability. Over the last year, we have increasingly reimplemented our reliable queues on [Temporal](https://temporal.io/), which provides far better durability and reliability guarantees over a simpler and more powerful programming model. Our build service \\(which turns a pipeline config into an executable plan\\), our workflow orchestrator service \\(which distributes tasks onto workers\\), our notification service \\(which delivers status updates\\), and our charging service \\(which charges customers for credits\\) all now use Temporal.\n\nTemporal stores the state for its workflows and activities \\(called “history”\\) in a database, and this is the only component in a Temporal instance that is synchronous and stateful. As a consequence, a Temporal instance’s ability to accept and execute workflows is dependent on the write rate of its backing database. We have also configured Temporal to delete completed workflows and activities from its history 3 days after they complete.\n\nAt the time of this incident, we used a single clustered Temporal instance backed by a Multi-AZ Postgres RDS instance for all of these reliable queues. While a Multi-AZ RDS instance is resilient to zone failures, it maintains database consistency via a single write-ahead-log \\(WAL\\). At the time we had configured our Postgres instance to store its WAL on a Dedicated Log Volume \\(DLV\\) so log writes did not compete with data writes. The database archives the log continuously to backup storage, and it can only reuse space on the volume after the log has been archived. If the database writes logs faster than it archives, the volume fills and Postgres has no space to the write its WAL log. Then the database stops accepting incoming writes and goes entirely read-only. An RDS DLV is limited to 1TB of storage and 3000 IOPS and per AWS these limits are hardcoded and cannot be increased.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nOne of the contributing factors to the October 6 incident was that we were processing a high rate of Temporal history deletions at the same time as incoming work, which in turn put pressure on the backing database. To resolve the October 6 incident, we changed cleanup settings on Temporal’s largest tables and moved the transaction log back to its dedicated volume. These changes eliminated the major source of transaction log writes, but did not consider the additional log writes from scheduled deletions. Because we have configured Temporal to delete completed workflows and activities from its history 3 days after they complete, the October 6 history was scheduled to be deleted on October 9.\n\nStarting at 08:00 on October 9, Temporal began processing those scheduled deletions, and as a consequence free space on the Postgres DLV began dropping precipitously, from 0.8TB at 08:00 to 0.1TB by 10:10. Our monitoring alerted at 10:28 and we declared an incident at 10:31. While our infrastructure team was investigating, at 11:15 the DLV ran out of space and the Postgres instance went read-only. This stopped all Temporal processing in its tracks.\n\nAt 11:42, we restarted Postgres to move the WAL log from the DLV onto the data volume and use the spare disk space and IOPS there. This maneuver had mitigated the incident on October 6, and we knew it would take roughly 60 minutes.\n\nWhile the database was restarting, we began implementing several load-shedding techniques upstream of Temporal:\n\n* We began investigating whether we should shed incoming workloads altogether to keep the rest moving, but ultimately decided that this would provide no value.\n* At 12:29, we flagged off credit charging updates, which represented 12% of Temporal activities. This left the Pipeline Usage page with stale charging data, until we would backfill it, but would not lose data or prevent pipelines from running.\n\nAt 12:59, the database was back up and began processing work that had queued since 11:15 and by 14:40, this backlog had cleared and jobs were starting on time. However, by 15:15, delays returned as database’s routing cleanup had fallen far behind on the tables Temporal uses to track queued and scheduled work. Those tables normally hold tens of thousands of deleted rows awaiting cleanup, but by late afternoon, they held tens of millions of rows. Every Temporal operation had to read past those rows, so the database spent much more processing time on each one and Temporal ran slower. This resulted in customers continuing to see hour-long delays in starting pipelines and in status updates.\n\nFor the next several hours we attempted various mitigations, including:\n\n* Manipulating Temporal configuration values to reduce database pressure. This had minimal effect.\n* Running manual vacuum jobs to clean up dead rows in Postgres. This ended up competing for CPU with queries themselves, and was ultimately counterproductive. We cancelled them at 17:45 to relieve the pressure on the database load.\n* We began trying to move all of the notification usecases to a separate Temporal instance. This represented 18% of Temporal activities. We successfully finished moving notifications by 17:07.\n* At 17:16, we successfully implemented an optimization in our representation of pipeline state, which reduced it by 5%. That in turn reduced the size of database writes and therefore data pressure on the Postgres WAL log.\n\nNone of these fully mitigated the issue.\n\nBy 20:48, we realized that Postgres was now thrashing on database CPU and was no longer bottlenecked on log writes. We further realized that our upstream systems were both submitting new work and also retrying work that had earlier been submitted and failed. Recognizing that we were in a classic retry storm, we paused all incoming and retry work and let it queue up, in order to allow the database to fully complete in-process work. We then slowly throttled up queued work from 22:07 to keep the database at a sustainable load.\n\nThis fully succeeded by 23:47 when all queued work had started, and we closed the incident at 02:08 on October 10.\n\n## Future Prevention and Process Improvement\n\n### Multiple Temporal Instances\n\nIn parallel with incident mitigation and resolution, starting at 19:11 on October 9, we also began standing up multiple sharded Temporal instances and implementing the ability to load-balance incoming work between them.\n\nEach of the multiple Temporal instances maintains its own independent database and worker clusters, and so is isolated from the others. As a postmortem action item from the October 6 incident, we had already scheduled infrastructure work that would have removed the bottleneck of a single Temporal instance and Postgres database, starting October 12 and expecting to take 2 weeks. On October 9, we realized that this work simply could not wait, so our engineering team implemented, tested, and rolled out a simpler version of the planned changes within a few hours.\n\nThese changes completed successfully at 01:45 on October 10.\n\n**In addition, we are changing how we store and monitor transaction logs.** Our Temporal database no longer uses the fixed-size log volume. We are adding alerts on how far log archiving falls behind and how fast the database writes logs, so we can act hours earlier than we did on October 9.\n\n**We are also revisiting the Temporal's deletion schedule.** Temporal deletes finished work a few days after it runs, so a busy day returns as database load later in the week. We are changing when and how quickly those deletions run.\n\n**We are changing how our systems retry when Temporal is slow.** On October 9, our systems retried failed work against Temporal and added to its load. As we committed after the October 6 incident, we are changing our systems to wait for Temporal to recover so work is not dropped.\n\n## Conclusion\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+        "created_at": "2026-10-12T22:32:05.877Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-02T13:47:11.283Z",
+          "description": "Public facing APIs",
+          "group": false,
+          "group_id": null,
+          "id": "t489m38xq83m",
+          "name": "CircleCI API",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": true,
+          "start_date": "2025-05-02",
+          "status": "operational",
+          "updated_at": "2026-10-14T00:22:39.024Z"
+        },
+        {
+          "created_at": "2017-08-11T03:29:32.538Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "sw1j7xsbdlk4",
+          "name": "CircleCI UI",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-24T14:54:55.103Z"
+        }
+      ],
+      "created_at": "2026-10-09T11:33:00.290Z",
+      "id": "6cfhhlr4rmm0",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nBetween 11:15 UTC and 23:47 UTC on October 9, CircleCI customers experienced hours-long delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\n* From 11:15 to 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent.\n* From 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n* From 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n* From 20:48 to 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time.\n* From 22:10 to 23:47 UTC, queued workflows and jobs resumed and were successfully processed. Some of them had waited up to about 2 hours.\n* By 23:47, the incident was mitigated.\n\nThe status page for this incident can be found at [October 9 - Delay in data appearing in UI and API](https://status.circleci.com/incidents/6cfhhlr4rmm0). Customers experienced a similar incident earlier in the week at [October 6 - Delays in pipelines, workflows, UI data, and notifications](https://status.circleci.com/incidents/z4hbq8h49j8c).\n\nMultiple CircleCI services use Temporal backed by Postgres as a reliable queueing mechanism, and both incidents had the same cause: the rate of writes to Temporal's Postgres instance were faster than Postgres’s transaction log could archive those writes. In both cases, this caused multi-hour delays in processing both pipelines and status notifications.\n\nWe evaluated several mitigations, then paused new workflow starts so the system could recover safely, and ramped back up gradually. We then throttled work back up until our systems returned to normal.\n\nTo permanently resolve the bottleneck, we have split work across multiple Temporal instances, each with its own independent database and worker clusters, and we load-balance across them. We had already scheduled infrastructure work starting the week of October 12 that would have removed this exact bottleneck and prevented these incidents. So starting 19:11 on October 9 our engineering team implemented, tested, and rolled out a simpler version of these changes within a few hours. We further added new alerting and tuned the underlying databases for better performance under high load.\n\nCustomers whose jobs failed during this window may rerun them.\n\n## Background\n\nTo run customer jobs, CircleCI executes a series of steps: we accept customer pipelines; we assign jobs for those pipelines to workers; we deliver status updates for those pipelines and jobs; and we charge customers for the credits those jobs consume. Each of these steps is implemented by an independent service, with reliable queues in between.\n\nHistorically we have implemented these reliable queues with RabbitMQ on top of durable storage, with exponential backoff and dead letter queues for reliability. Over the last year, we have increasingly reimplemented our reliable queues on [Temporal](https://temporal.io/), which provides far better durability and reliability guarantees over a simpler and more powerful programming model. Our build service \\(which turns a pipeline config into an executable plan\\), our workflow orchestrator service \\(which distributes tasks onto workers\\), our notification service \\(which delivers status updates\\), and our charging service \\(which charges customers for credits\\) all now use Temporal.\n\nTemporal stores the state for its workflows and activities \\(called “history”\\) in a database, and this is the only component in a Temporal instance that is synchronous and stateful. As a consequence, a Temporal instance’s ability to accept and execute workflows is dependent on the write rate of its backing database. We have also configured Temporal to delete completed workflows and activities from its history 3 days after they complete.\n\nAt the time of this incident, we used a single clustered Temporal instance backed by a Multi-AZ Postgres RDS instance for all of these reliable queues. While a Multi-AZ RDS instance is resilient to zone failures, it maintains database consistency via a single write-ahead-log \\(WAL\\). At the time we had configured our Postgres instance to store its WAL on a Dedicated Log Volume \\(DLV\\) so log writes did not compete with data writes. The database archives the log continuously to backup storage, and it can only reuse space on the volume after the log has been archived. If the database writes logs faster than it archives, the volume fills and Postgres has no space to the write its WAL log. Then the database stops accepting incoming writes and goes entirely read-only. An RDS DLV is limited to 1TB of storage and 3000 IOPS and per AWS these limits are hardcoded and cannot be increased.\n\n## What Happened\n\n_\\(All times UTC\\)_\n\nOne of the contributing factors to the October 6 incident was that we were processing a high rate of Temporal history deletions at the same time as incoming work, which in turn put pressure on the backing database. To resolve the October 6 incident, we changed cleanup settings on Temporal’s largest tables and moved the transaction log back to its dedicated volume. These changes eliminated the major source of transaction log writes, but did not consider the additional log writes from scheduled deletions. Because we have configured Temporal to delete completed workflows and activities from its history 3 days after they complete, the October 6 history was scheduled to be deleted on October 9.\n\nStarting at 08:00 on October 9, Temporal began processing those scheduled deletions, and as a consequence free space on the Postgres DLV began dropping precipitously, from 0.8TB at 08:00 to 0.1TB by 10:10. Our monitoring alerted at 10:28 and we declared an incident at 10:31. While our infrastructure team was investigating, at 11:15 the DLV ran out of space and the Postgres instance went read-only. This stopped all Temporal processing in its tracks.\n\nAt 11:42, we restarted Postgres to move the WAL log from the DLV onto the data volume and use the spare disk space and IOPS there. This maneuver had mitigated the incident on October 6, and we knew it would take roughly 60 minutes.\n\nWhile the database was restarting, we began implementing several load-shedding techniques upstream of Temporal:\n\n* We began investigating whether we should shed incoming workloads altogether to keep the rest moving, but ultimately decided that this would provide no value.\n* At 12:29, we flagged off credit charging updates, which represented 12% of Temporal activities. This left the Pipeline Usage page with stale charging data, until we would backfill it, but would not lose data or prevent pipelines from running.\n\nAt 12:59, the database was back up and began processing work that had queued since 11:15 and by 14:40, this backlog had cleared and jobs were starting on time. However, by 15:15, delays returned as database’s routing cleanup had fallen far behind on the tables Temporal uses to track queued and scheduled work. Those tables normally hold tens of thousands of deleted rows awaiting cleanup, but by late afternoon, they held tens of millions of rows. Every Temporal operation had to read past those rows, so the database spent much more processing time on each one and Temporal ran slower. This resulted in customers continuing to see hour-long delays in starting pipelines and in status updates.\n\nFor the next several hours we attempted various mitigations, including:\n\n* Manipulating Temporal configuration values to reduce database pressure. This had minimal effect.\n* Running manual vacuum jobs to clean up dead rows in Postgres. This ended up competing for CPU with queries themselves, and was ultimately counterproductive. We cancelled them at 17:45 to relieve the pressure on the database load.\n* We began trying to move all of the notification usecases to a separate Temporal instance. This represented 18% of Temporal activities. We successfully finished moving notifications by 17:07.\n* At 17:16, we successfully implemented an optimization in our representation of pipeline state, which reduced it by 5%. That in turn reduced the size of database writes and therefore data pressure on the Postgres WAL log.\n\nNone of these fully mitigated the issue.\n\nBy 20:48, we realized that Postgres was now thrashing on database CPU and was no longer bottlenecked on log writes. We further realized that our upstream systems were both submitting new work and also retrying work that had earlier been submitted and failed. Recognizing that we were in a classic retry storm, we paused all incoming and retry work and let it queue up, in order to allow the database to fully complete in-process work. We then slowly throttled up queued work from 22:07 to keep the database at a sustainable load.\n\nThis fully succeeded by 23:47 when all queued work had started, and we closed the incident at 02:08 on October 10.\n\n## Future Prevention and Process Improvement\n\n### Multiple Temporal Instances\n\nIn parallel with incident mitigation and resolution, starting at 19:11 on October 9, we also began standing up multiple sharded Temporal instances and implementing the ability to load-balance incoming work between them.\n\nEach of the multiple Temporal instances maintains its own independent database and worker clusters, and so is isolated from the others. As a postmortem action item from the October 6 incident, we had already scheduled infrastructure work that would have removed the bottleneck of a single Temporal instance and Postgres database, starting October 12 and expecting to take 2 weeks. On October 9, we realized that this work simply could not wait, so our engineering team implemented, tested, and rolled out a simpler version of the planned changes within a few hours.\n\nThese changes completed successfully at 01:45 on October 10.\n\n**In addition, we are changing how we store and monitor transaction logs.** Our Temporal database no longer uses the fixed-size log volume. We are adding alerts on how far log archiving falls behind and how fast the database writes logs, so we can act hours earlier than we did on October 9.\n\n**We are also revisiting the Temporal's deletion schedule.** Temporal deletes finished work a few days after it runs, so a busy day returns as database load later in the week. We are changing when and how quickly those deletions run.\n\n**We are changing how our systems retry when Temporal is slow.** On October 9, our systems retried failed work against Temporal and added to its load. As we committed after the October 6 incident, we are changing our systems to wait for Temporal to recover so work is not dropped.\n\n## Conclusion\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. We thank our customers for their patience while our team worked to resolve these incidents.\n\nPlease reach out to our support team with any questions or concerns.",
+          "created_at": "2026-10-12T22:32:05.877Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "fwv96xzh2q71",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-10-12T22:34:58.719Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 11:15 UTC and 23:47 UTC on October 9, customers experienced delays and failures across pipelines, workflows and jobs, along with delays in the CircleCI UI, API and notifications.\n\nFrom 11:15 to about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and Slack and email notifications were not sent. From about 13:00 to 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nFrom about 15:15 to 20:48 UTC, workflows and jobs started with increasing delays, of up to about an hour, and the CircleCI UI and API fell behind by up to about 2 hours. During this time, some jobs failed to start and some in-progress workflows failed.\n\nFrom 20:48 to about 22:10 UTC, we temporarily paused starting new workflows and jobs so our systems could recover. New pipelines were accepted and queued during this time. From about 22:10 to 23:47 UTC, queued workflows and jobs resumed and were processed. Some of them had waited up to about 2 hours.\n\nThe issue has been resolved and all affected functionality has returned to normal. Usage charge data on the Project Usage page is not yet up to date and will be updated once our data backfills complete. Customers whose jobs failed during this window may rerun affected jobs. We thank you for your patience while our engineers worked on implementing a fix.",
+          "created_at": "2026-10-10T02:08:45.055Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T02:08:45.055Z",
+          "id": "tc0kt3x23wgk",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T02:08:45.055Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Workflows and jobs are starting and running normally, and the CircleCI UI and API are up to date. We are continuing to monitor our systems closely to make sure they remain stable. \n\nWe will provide another update by 02:00 UTC.",
+          "created_at": "2026-10-10T01:23:13.373Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T01:23:13.373Z",
+          "id": "kx623r35xmcs",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T01:23:13.373Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Workflows and jobs have continued to start normally, within seconds, and the CircleCI UI and API remain up to date. Slack and email notifications delayed earlier in the incident are still being delivered. \n\nUsage charge data on the Project Usage page is stale. \n\nWe are continuing to monitor our systems closely and will provide another update by 01:15 UTC.",
+          "created_at": "2026-10-10T00:45:09.426Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-10T00:45:09.426Z",
+          "id": "1x9pgyt80fkg",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-10T00:45:09.426Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, the backlog of queued workflows and jobs has cleared, as of about 23:47 UTC. Workflows and jobs are now starting within seconds, and the CircleCI UI and API are up to date. We are monitoring our systems closely to make sure they remain stable. We will provide another update by 00:30 UTC.",
+          "created_at": "2026-10-09T23:59:55.337Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:59:55.337Z",
+          "id": "njsd66nx1hyw",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:59:55.337Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are still working through a significant backlog of queued workflows and jobs. Wait times are improving but they remain longer than normal and some jobs have waited over an hour. The CircleCI UI and API remain up to date. Please avoid retriggering pipelines or workflows while the backlog clears, as this may create duplicates. We will provide another update by 00:00 UTC.",
+          "created_at": "2026-10-09T23:38:12.044Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:38:12.044Z",
+          "id": "slddcgnpwq08",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:38:12.044Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A large number of queued workflows and jobs have started, and the CircleCI UI and API have caught up and are showing updates normally with few delays. We are continuing to work through the remaining queued work. Jobs from the queue may have waited about an hour or more to start, and some Linux jobs are waiting up to about 10 minutes for capacity.\n\nPlease continue to avoid retriggering while queued work continues to process. \n\nWe will provide another update by 23:30 UTC.",
+          "created_at": "2026-10-09T23:00:06.282Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T23:00:06.282Z",
+          "id": "kn8lpnsykn0b",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T23:00:06.282Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, we have begun gradually resuming work, and some queued workflows and jobs are starting again. Most queued work is still waiting, and jobs that do start may have waited over an hour. We are increasing the rate carefully to avoid overloading our systems. Delayed updates continue to appear in the CircleCI UI and API.\n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates as queued work resumes. \n\nWe will provide another update by 23:00 UTC.",
+          "created_at": "2026-10-09T22:28:06.582Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T22:28:06.582Z",
+          "id": "jjc9y44qb8jb",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T22:28:06.582Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, most of the pipelines that were delayed earlier in the incident have now been processed, and their workflows are queued to start. New workflows and jobs remain paused while we prepare to resume work safely. Delayed updates continue to appear in the CircleCI UI and API. \n\nPlease continue to avoid retriggering pipelines or workflows, as this may create duplicates once work resumes. \n\nWe will provide another update by 22:30 UTC.",
+          "created_at": "2026-10-09T22:09:04.560Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T22:09:04.560Z",
+          "id": "4t1ztc23mt5p",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T22:09:04.560Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since about 20:48 UTC, new workflows and jobs are not starting. We have temporarily paused starting new work so that our systems can catch up on work already in progress, including delayed updates to the CircleCI UI and API. Older updates are now appearing in the UI and API as this backlog clears. New pipelines are still being accepted and queued\n\nPlease avoid retriggering pipelines or workflows during this time, as this may create duplicates once work resumes.\n\nWe will provide another update by 22:00 UTC.",
+          "created_at": "2026-10-09T21:22:37.747Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T21:22:37.747Z",
+          "id": "7d56g12hwjlm",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T21:22:37.747Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Jobs are starting faster and fewer are failing: most jobs are now starting within about 4 minutes, down from about 6 minutes, and the longest waits have dropped from about 30 minutes to about 20 minutes. \n\nPipelines from earlier in the incident are now being worked through. \n\nThe CircleCI UI is still behind, and some older updates may take longer to appear. Jobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI.\n\nWe will provide another update by 20:30 UTC.",
+          "created_at": "2026-10-09T20:06:36.341Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T20:06:36.341Z",
+          "id": "vxwn1x5xj418",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T20:06:36.341Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since our last update, jobs are starting faster: most are now starting within about 6 minutes, down from about 8 minutes. The CircleCI UI is catching up but still about an hour behind. New pipelines are being processed as they arrive. \n\nJobs may already have run even if the UI does not show them yet, so please avoid retriggering workflows that don't appear in the UI. \n\nWe will provide another update by 20:00 UTC.",
+          "created_at": "2026-10-09T19:29:54.594Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T19:29:54.594Z",
+          "id": "zznj02llzfvt",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T19:29:54.594Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's changed since our last update\n\n* Jobs are starting faster. Most are now starting within about 8 minutes, down from about 15 minutes, and the longest waits have dropped from over an hour to about 45 minutes.\n* The CircleCI UI is beginning to catch up, but it is still behind. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Pipelines are being processed faster, but new pipelines are still delayed.\n\nStill ongoing\n* Some workflows and jobs are still failing.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n* Usage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:30 UTC.",
+          "created_at": "2026-10-09T18:57:01.746Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:57:01.746Z",
+          "id": "phlrcb2qhh92",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:57:01.746Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's changed since our last update\n\n* The CircleCI UI is about an hour behind, and up to about 90 minutes for some updates. Workflows and jobs may already have run, or may be running, even if the UI shows them as not started or does not show them at all.\n* Jobs that are running are starting faster. Most are now starting within about 15 minutes, down from about 28 minutes, though some are still waiting over an hour.\n* New pipelines are increasingly delayed.\n* Some workflows are still failing. Workflows that could not be processed in time are being marked as failed.\n* Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n\nStill ongoing: \nUsage charge data on the Project Usage page is stale. \n\nNext update\nWe will provide another update by 19:00 UTC.",
+          "created_at": "2026-10-09T18:32:52.602Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:32:52.602Z",
+          "id": "t14nr135wscg",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:32:52.602Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat to expect\n- Since about 17:00 UTC, we are seeing an increase in delays. Most jobs are now taking about 25 minutes to start, and some are waiting up to about an hour.\n- Since about 17:15 UTC, some in-progress workflows have failed and a small number of jobs are failing to start.\n- New pipelines are being queued and are taking longer to start.\n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nOur engineers continue to work to resolve the issue at hand. \n\nNext update\nWe will provide another update by 18:30 UTC.",
+          "created_at": "2026-10-09T18:08:03.166Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T18:08:03.166Z",
+          "id": "rr745bm3mdpr",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T18:08:03.166Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers triggering pipelines and running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Since about 17:00 UTC, delays have increased significantly. Most jobs are now taking about 12 minutes to start, and some are waiting up to about 30 minutes.\n- Since about 17:15 UTC, some jobs are failing to start. \n- Pipelines are being processed more slowly, so some may take longer to start. \n- The CircleCI UI is more than an hour behind. New workflows and status changes may take that long to appear. \n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 18:00 UTC.",
+          "created_at": "2026-10-09T17:34:01.223Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T17:34:01.223Z",
+          "id": "ywrkgdr5qxpv",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T17:34:01.223Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat’s impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are holding steady. Most jobs are starting within about 4 minutes, and some are waiting up to about 8 minutes, down from about 25 minutes.\n- The CircleCI UI remains about 20 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don’t yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:30 UTC.",
+          "created_at": "2026-10-09T17:06:30.170Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T17:06:30.170Z",
+          "id": "m77xw2dm51zs",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T17:06:30.170Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog. Since about 15:15 UTC, workflows and jobs have again been starting with delays.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs have stopped increasing and are beginning to ease. Most jobs are starting within about 4 minutes, and some are waiting up to about 25 minutes.\n- The CircleCI UI is now about 20 minutes behind, down from about 30 minutes. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 17:00 UTC.",
+          "created_at": "2026-10-09T16:32:53.245Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T16:32:53.245Z",
+          "id": "zp01djn036zf",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T16:32:53.245Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers running workflows and jobs, customers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Since about 15:15 UTC, workflows and jobs have been starting with increasing delays. Most jobs are currently starting within about 4 minutes, and some are waiting up to about 20 minutes.\n- The CircleCI UI remains about 30 minutes behind on average, and some updates are taking longer. New workflows and status changes may take that long to appear.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to reduce these delays.\n\nNext update\nWe will provide another update by 16:30 UTC.",
+          "created_at": "2026-10-09T16:02:42.495Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T16:02:42.495Z",
+          "id": "ymxbztqs0prv",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T16:02:42.495Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat's impacted\nCustomers viewing pipelines, workflows and jobs in the CircleCI UI, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Workflows and jobs are running on time.\n- The CircleCI UI is about 30 minutes behind. New workflows and status changes may take that long to appear.\n- Our engineers are actively working to speed up processing so the UI can catch up.\n- Please avoid retriggering workflows that don't yet appear in the UI, as this may create duplicates.\n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to reduce this delay.\n\nNext update\nWe will provide another update by 16:00 UTC.",
+          "created_at": "2026-10-09T15:32:03.279Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T15:32:03.279Z",
+          "id": "f9jb7ggjpsxy",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T15:32:03.279Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of pipelines and workflows from the incident has cleared.\n- Since about 14:45 UTC, most workflows and jobs are starting within about 15 seconds, and start times are continuing to return to normal.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers monitor the recovery.\n\nNext update\nWe will provide another update by 15:20 UTC.",
+          "created_at": "2026-10-09T14:54:02.940Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:54:02.940Z",
+          "id": "bctws6py234x",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:54:02.940Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent. Between about 13:00 UTC and 14:40 UTC, workflows and jobs started with delays while we worked through the backlog.\n\nWhat’s impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- The backlog of workflows from pipelines triggered during the incident cleared at about 14:40 UTC.\n- Most jobs are now starting within about 30 seconds, and some are waiting up to about 3 minutes.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers continue to work on the underlying issue.\n\nNext update\nWe will provide another update by 15:10 UTC.",
+          "created_at": "2026-10-09T14:43:52.603Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:43:52.603Z",
+          "id": "6l23l9vg00p7",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:43:52.603Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n\n- Delays starting workflows and jobs are improving. Most jobs are now starting within about 3 minutes, down from about 10 minutes at 13:50 UTC.\n- Some workflows from pipelines triggered during the incident are still waiting up to about 40 minutes to start.\n- Working through the backlog is taking slightly longer than expected. We now expect to clear it by about 14:45 UTC. \n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows.\n- Usage charge data on the Project Usage page is currently stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 15:00 UTC.",
+          "created_at": "2026-10-09T14:29:58.944Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:29:58.944Z",
+          "id": "76l1sfjdf53g",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:29:58.944Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Since 11:15 UTC, customers have experienced disruption to pipelines and notifications. Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted\nCustomers running workflows and jobs, and customers viewing usage data on the Project Usage page.\n\nWhat can you expect\n- Pipelines are being processed again, including those triggered during the incident.\n- Since about 13:25 UTC, workflows and jobs have been starting with increasing delays as we work through the backlog. Most jobs are currently starting within about 10 minutes, and some are waiting up to about 25 minutes.\n- We expect to work through this backlog by about 14:35 UTC.\n- Workflows from pipelines triggered during the incident are still waiting to start, so retriggering may result in duplicate workflows. \n- Usage charge data on the Project Usage page is currently stale.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update\nWe will provide another update by 14:30 UTC.",
+          "created_at": "2026-10-09T14:00:23.628Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T14:00:23.628Z",
+          "id": "nd0zqb74k0hw",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T14:00:23.628Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Between 11:15 UTC and about 13:00 UTC, pipelines were created but not processed, and outbound webhooks and transactional notifications (Slack and email) were not sent.\n\nWhat's impacted:\nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect:\n- Since about 13:00 UTC, pipelines are being processed again and jobs are starting.\n- Most jobs are currently starting within about 4 minutes, and some are waiting up to about 10 minutes. Pipelines triggered during the incident are still being processed and may take longer to start.\n- Outbound webhooks and notifications have resumed. \n- Pipelines are still being processed from the backlog, so retriggering may result in duplicate pipelines.\n\nThank you for your patience while our engineers work to resolve this.\n\nNext update:\nWe will provide another update by 14:00 UTC.",
+          "created_at": "2026-10-09T13:30:31.975Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T13:30:31.975Z",
+          "id": "88ds0hhr371x",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T13:30:31.975Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "What's impacted: \nCustomers triggering pipelines, and customers relying on outbound webhooks and email and Slack notifications.\n\nWhat can you expect\nSince 11:15 UTC:\n - Pipelines are still being created while this is ongoing but not yet processed, so retriggering may result in duplicate pipelines.\n - Outbound webhooks and transactional notifications (Slack and email) are not being sent.\n - Pipeline statuses may not be visible. \n - Usage charge data on the Project Usage page will be stale. \n\nThank you for your patience while our engineers work to resolve this.\n\nNext update: \nWe will provide another update by 13:30 UTC.",
+          "created_at": "2026-10-09T13:00:40.161Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T13:00:40.161Z",
+          "id": "yjnhth0t8yh8",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T13:00:40.161Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "sw1j7xsbdlk4",
+              "name": "CircleCI UI",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "t489m38xq83m",
+              "name": "CircleCI API",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "There is a delay in our data infrastructure causing delays before build data and some notifications become visible. We are working on a mitigation.",
+          "created_at": "2026-10-09T11:33:00.542Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-09T11:33:00.542Z",
+          "id": "sfkwmky10ly8",
+          "incident_id": "6cfhhlr4rmm0",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-09T11:33:00.542Z"
+        }
+      ],
+      "monitoring_at": "2026-10-09T14:54:02.940Z",
+      "name": "Delay in data appearing in UI and API",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-10T02:08:45.055Z",
+      "shortlink": "https://stspg.io/hkfkwz292bz8",
+      "started_at": "2026-10-09T11:33:00.284Z",
+      "status": "postmortem",
+      "updated_at": "2026-10-12T22:34:58.722Z"
+    }
+  }
+}
