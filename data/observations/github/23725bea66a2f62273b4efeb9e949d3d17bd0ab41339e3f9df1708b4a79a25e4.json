@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/nxy2l0ssxm10",
+    "vendor": "github",
+    "native_id": "nxy2l0ssxm10",
+    "title": "Disruption with GitHub services",
+    "url": "https://stspg.io/6p81rf34z4nc",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-10-30T14:31:16.529Z",
+    "resolved_at": "2026-10-30T15:02:51.002Z",
+    "duration_minutes": 31,
+    "components": [
+      "Issues",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "l7mzr1yvncbj",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-10-30T14:31:16.604Z"
+      },
+      {
+        "native_id": "lhfj3bxlx7zt",
+        "status": "investigating",
+        "body": "We are investigating degraded performance across multiple services. We will continue to keep users updated on progress towards mitigation.",
+        "created_at": "2026-10-30T14:35:42.638Z"
+      },
+      {
+        "native_id": "z27wndyskklx",
+        "status": "investigating",
+        "body": "Issues is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-10-30T14:36:00.563Z"
+      },
+      {
+        "native_id": "6r5n25htln18",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-10-30T14:39:42.881Z"
+      },
+      {
+        "native_id": "fqjqj54f4rwl",
+        "status": "investigating",
+        "body": "Issues is operating normally.",
+        "created_at": "2026-10-30T14:45:58.58Z"
+      },
+      {
+        "native_id": "4n4d3tp21y6f",
+        "status": "investigating",
+        "body": "A temporarily overloaded component triggered a burst of errors between 14:21 and 14:30 UTC across numerous services. Component health has returned to normal and we continue to monitor while investigating the root cause.\u003cbr /\u003e",
+        "created_at": "2026-10-30T14:48:00.12Z"
+      },
+      {
+        "native_id": "jnn6ddrx97hk",
+        "status": "monitoring",
+        "body": "The degradation affecting Pages has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-30T14:49:46.388Z"
+      },
+      {
+        "native_id": "kw3pxydwdqj4",
+        "status": "resolved",
+        "body": "On October 30, 2026, between 14:20 and 14:29 UTC, customers experienced errors across multiple GitHub services. Affected services include Git operations, GraphQL and REST API, Pull Requests, and Issues. At peak, about 3.5% of API requests failed. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by slow database requests that held connections open longer than expected, which used all available connections to one of our primary databases. Service recovered at 14:29 UTC once connections were released. \u003cbr /\u003e\u003cbr /\u003eSince the incident, we have fixed the code path that held connections open and increased the processing capacity of our database connection layer. We are also improving alerting for this type of overload.",
+        "created_at": "2026-10-30T15:02:51.002Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-01-31T20:01:46.638Z",
+          "description": "Requests for Issues on GitHub.com",
+          "group": false,
+          "group_id": null,
+          "id": "kr09ddfgbfsf",
+          "name": "Issues",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "major_outage",
+          "updated_at": "2026-11-25T16:07:50.360Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "partial_outage",
+          "updated_at": "2026-11-25T16:11:14.034Z"
+        }
+      ],
+      "created_at": "2026-10-30T14:31:16.537Z",
+      "id": "nxy2l0ssxm10",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On October 30, 2026, between 14:20 and 14:29 UTC, customers experienced errors across multiple GitHub services. Affected services include Git operations, GraphQL and REST API, Pull Requests, and Issues. At peak, about 3.5% of API requests failed. \u003cbr /\u003e\u003cbr /\u003eThe incident was caused by slow database requests that held connections open longer than expected, which used all available connections to one of our primary databases. Service recovered at 14:29 UTC once connections were released. \u003cbr /\u003e\u003cbr /\u003eSince the incident, we have fixed the code path that held connections open and increased the processing capacity of our database connection layer. We are also improving alerting for this type of overload.",
+          "created_at": "2026-10-30T15:02:51.002Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T15:02:51.002Z",
+          "id": "kw3pxydwdqj4",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-18T21:49:12.655Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Pages has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-30T14:49:46.388Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:49:46.388Z",
+          "id": "jnn6ddrx97hk",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:49:46.388Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "A temporarily overloaded component triggered a burst of errors between 14:21 and 14:30 UTC across numerous services. Component health has returned to normal and we continue to monitor while investigating the root cause.\u003cbr /\u003e",
+          "created_at": "2026-10-30T14:48:00.120Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:48:00.120Z",
+          "id": "4n4d3tp21y6f",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:48:00.120Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Issues is operating normally.",
+          "created_at": "2026-10-30T14:45:58.580Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:45:58.580Z",
+          "id": "fqjqj54f4rwl",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:45:58.580Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-10-30T14:39:42.881Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:39:42.881Z",
+          "id": "6r5n25htln18",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:39:42.881Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "kr09ddfgbfsf",
+              "name": "Issues",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Issues is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-10-30T14:36:00.563Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:36:00.563Z",
+          "id": "z27wndyskklx",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:36:00.563Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating degraded performance across multiple services. We will continue to keep users updated on progress towards mitigation.",
+          "created_at": "2026-10-30T14:35:42.638Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:35:42.638Z",
+          "id": "lhfj3bxlx7zt",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:35:42.638Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-10-30T14:31:16.604Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T14:31:16.604Z",
+          "id": "l7mzr1yvncbj",
+          "incident_id": "nxy2l0ssxm10",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T14:31:16.604Z"
+        }
+      ],
+      "monitoring_at": "2026-10-30T14:49:46.388Z",
+      "name": "Disruption with GitHub services",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-30T15:02:51.002Z",
+      "shortlink": "https://stspg.io/6p81rf34z4nc",
+      "started_at": "2026-10-30T14:31:16.529Z",
+      "status": "resolved",
+      "updated_at": "2026-11-18T21:49:12.661Z"
+    }
+  }
+}

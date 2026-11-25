@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/f33c51cw0ojd",
+    "vendor": "cloudflare",
+    "native_id": "f33c51cw0ojd",
+    "title": "Degraded connectivity between Europe and Asia Pacific",
+    "url": "https://www.cloudflarestatus.com/incidents/f33c51cw0ojd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-18T22:26:41.943Z",
+    "resolved_at": "2026-11-19T03:19:28.782Z",
+    "duration_minutes": 292,
+    "components": [
+      "Cache Reserve",
+      "D1",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "7br8n5mo5mrp",
+        "status": "investigating",
+        "body": "Cloudflare is investigating degraded connectivity between Europe and the Asia Pacific region. Customers may experience increased errors and latency for requests traversing this path, including requests involving R2, D1, and Cache Reserve. Other Cloudflare services that rely on Europe-to-Asia Pacific connectivity may also be affected. Network teams are working to mitigate the issue and restore normal connectivity. Further updates will be provided as more information becomes available.",
+        "created_at": "2026-11-18T22:26:41.943Z"
+      },
+      {
+        "native_id": "59g5qc07mwm6",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-18T23:48:52.158Z"
+      },
+      {
+        "native_id": "8f8u2lnzzz90",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-19T00:36:54.191Z"
+      },
+      {
+        "native_id": "wzdj058e1pjn",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-19T03:19:28.782Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-06-12T16:52:52.000Z",
+          "description": "Cache Reserve is a large, persistent data store implemented on top of R2. By pushing a single button in the dashboard, your website’s cacheable content will be written to Cache Reserve.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3q1jnbdbn845",
+          "name": "Cache Reserve",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2023-06-12",
+          "status": "operational",
+          "updated_at": "2026-11-19T03:19:28.782Z"
+        },
+        {
+          "created_at": "2024-02-09T08:57:38.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "z0yd3sxqjqdm",
+          "name": "D1",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2024-02-09",
+          "status": "operational",
+          "updated_at": "2026-11-22T01:11:58.075Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-25T00:12:11.962Z"
+        }
+      ],
+      "created_at": "2026-11-18T22:26:41.943Z",
+      "id": "f33c51cw0ojd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-19T03:19:28.782Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T03:19:28.782Z",
+          "id": "wzdj058e1pjn",
+          "incident_id": "f33c51cw0ojd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T03:19:28.782Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-19T00:36:54.191Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-19T00:36:54.191Z",
+          "id": "8f8u2lnzzz90",
+          "incident_id": "f33c51cw0ojd",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-19T00:36:54.191Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-18T23:48:52.158Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-18T23:48:52.158Z",
+          "id": "59g5qc07mwm6",
+          "incident_id": "f33c51cw0ojd",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-18T23:48:52.158Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "z0yd3sxqjqdm",
+              "name": "Developer Services - D1",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "3q1jnbdbn845",
+              "name": "CDN \u0026 Performance - Cache Reserve",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating degraded connectivity between Europe and the Asia Pacific region. Customers may experience increased errors and latency for requests traversing this path, including requests involving R2, D1, and Cache Reserve. Other Cloudflare services that rely on Europe-to-Asia Pacific connectivity may also be affected. Network teams are working to mitigate the issue and restore normal connectivity. Further updates will be provided as more information becomes available.",
+          "created_at": "2026-11-18T22:26:41.943Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-18T22:26:41.943Z",
+          "id": "7br8n5mo5mrp",
+          "incident_id": "f33c51cw0ojd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-18T23:47:28.148Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Degraded connectivity between Europe and Asia Pacific",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-19T03:19:28.782Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/f33c51cw0ojd",
+      "started_at": "2026-11-18T22:26:41.943Z",
+      "status": "resolved",
+      "updated_at": "2026-11-19T03:19:28.782Z"
+    }
+  }
+}

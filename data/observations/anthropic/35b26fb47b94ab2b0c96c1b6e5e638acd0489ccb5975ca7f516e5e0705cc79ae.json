@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "anthropic/h101vcmhnfky",
+    "vendor": "anthropic",
+    "native_id": "h101vcmhnfky",
+    "title": "Elevated errors for Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5",
+    "url": "https://stspg.io/gqp288t3qzpt",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-10-23T23:37:42.659Z",
+    "resolved_at": "2026-10-24T00:11:20.874Z",
+    "duration_minutes": 33,
+    "components": [
+      "claude.ai",
+      "Claude API (api.anthropic.com)",
+      "Claude Code",
+      "Claude Cowork"
+    ],
+    "updates": [
+      {
+        "native_id": "3ytwwh315hpv",
+        "status": "investigating",
+        "body": "We are investigating elevated errors on requests to Claude Fable 5.1. We will provide an update as soon as possible.",
+        "created_at": "2026-10-23T23:37:42.938Z"
+      },
+      {
+        "native_id": "4pdnd11zlzy2",
+        "status": "identified",
+        "body": "We have identified the cause of elevated errors on requests to Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5, as well as fast mode requests to Opus 5.5 and are working on a fix. We will provide an update as soon as possible.",
+        "created_at": "2026-10-23T23:39:22.607Z"
+      },
+      {
+        "native_id": "pjrfw3x34cwb",
+        "status": "monitoring",
+        "body": "We are seeing success rates return to normal for all affected models, and are continuing to monitor to ensure no further issues.",
+        "created_at": "2026-10-23T23:54:14.793Z"
+      },
+      {
+        "native_id": "tn9f2y4l3ktv",
+        "status": "resolved",
+        "body": "The issue affecting Claude models has been resolved. Impact occurred from 16:28 PT / 23:28 UTC on October 23 to 16:59 PT / 23:59 UTC on October 23.",
+        "created_at": "2026-10-24T00:11:20.874Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-07-11T17:52:24.275Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "rwppv331jlwc",
+          "name": "claude.ai",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-24T17:27:14.640Z"
+        },
+        {
+          "created_at": "2023-07-11T17:53:10.880Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "k8w3r06qmzrp",
+          "name": "Claude API (api.anthropic.com)",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 3,
+          "showcase": true,
+          "start_date": "2023-07-11",
+          "status": "operational",
+          "updated_at": "2026-11-24T17:27:14.670Z"
+        },
+        {
+          "created_at": "2025-05-22T21:35:29.822Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "yyzkbfz2thpt",
+          "name": "Claude Code",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 4,
+          "showcase": true,
+          "start_date": "2025-02-06",
+          "status": "operational",
+          "updated_at": "2026-11-24T17:27:14.696Z"
+        },
+        {
+          "created_at": "2026-04-01T17:39:47.692Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "bpp5gb3hpjcl",
+          "name": "Claude Cowork",
+          "only_show_if_degraded": false,
+          "page_id": "tymt9n04zgry",
+          "position": 5,
+          "showcase": true,
+          "start_date": "2026-04-01",
+          "status": "operational",
+          "updated_at": "2026-11-24T17:27:14.723Z"
+        }
+      ],
+      "created_at": "2026-10-23T23:37:42.667Z",
+      "id": "h101vcmhnfky",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The issue affecting Claude models has been resolved. Impact occurred from 16:28 PT / 23:28 UTC on October 23 to 16:59 PT / 23:59 UTC on October 23.",
+          "created_at": "2026-10-24T00:11:20.874Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-24T00:11:20.874Z",
+          "id": "tn9f2y4l3ktv",
+          "incident_id": "h101vcmhnfky",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-24T00:11:20.874Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "degraded_performance",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We are seeing success rates return to normal for all affected models, and are continuing to monitor to ensure no further issues.",
+          "created_at": "2026-10-23T23:54:14.793Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T23:54:14.793Z",
+          "id": "pjrfw3x34cwb",
+          "incident_id": "h101vcmhnfky",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T23:54:14.793Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "major_outage",
+              "old_status": "major_outage"
+            }
+          ],
+          "body": "We have identified the cause of elevated errors on requests to Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5, as well as fast mode requests to Opus 5.5 and are working on a fix. We will provide an update as soon as possible.",
+          "created_at": "2026-10-23T23:39:22.607Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T23:39:22.607Z",
+          "id": "4pdnd11zlzy2",
+          "incident_id": "h101vcmhnfky",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T23:39:22.607Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "rwppv331jlwc",
+              "name": "claude.ai",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "k8w3r06qmzrp",
+              "name": "Claude API (api.anthropic.com)",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "yyzkbfz2thpt",
+              "name": "Claude Code",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "bpp5gb3hpjcl",
+              "name": "Claude Cowork",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating elevated errors on requests to Claude Fable 5.1. We will provide an update as soon as possible.",
+          "created_at": "2026-10-23T23:37:42.938Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T23:37:42.938Z",
+          "id": "3ytwwh315hpv",
+          "incident_id": "h101vcmhnfky",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T23:37:42.938Z"
+        }
+      ],
+      "monitoring_at": "2026-10-23T23:54:14.793Z",
+      "name": "Elevated errors for Claude Fable 5.1, Sonnet 5.5, and Haiku 5.5",
+      "page_id": "tymt9n04zgry",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-24T00:11:20.874Z",
+      "shortlink": "https://stspg.io/gqp288t3qzpt",
+      "started_at": "2026-10-23T23:37:42.659Z",
+      "status": "resolved",
+      "updated_at": "2026-10-24T00:11:20.902Z"
+    }
+  }
+}

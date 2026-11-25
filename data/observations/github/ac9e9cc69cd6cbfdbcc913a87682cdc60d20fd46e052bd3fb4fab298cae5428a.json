@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/ntrfd2jqldn6",
+    "vendor": "github",
+    "native_id": "ntrfd2jqldn6",
+    "title": "Delayed Actions status check results",
+    "url": "https://stspg.io/kmk42jg3v1sm",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-10-23T07:29:03.074Z",
+    "resolved_at": "2026-10-23T08:05:27.354Z",
+    "duration_minutes": 36,
+    "components": [
+      "Actions"
+    ],
+    "updates": [
+      {
+        "native_id": "5wwpm7n0sr3p",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions",
+        "created_at": "2026-10-23T07:29:03.32Z"
+      },
+      {
+        "native_id": "t65z0l507v6c",
+        "status": "investigating",
+        "body": "We are seeing delays in results from Actions workflows being reported within GitHub starting from 07:07 UTC.\u003cbr /\u003e\u003cbr /\u003eRecovery is already being seen but our team is continuing to investigate and monitor performance.",
+        "created_at": "2026-10-23T07:31:54.566Z"
+      },
+      {
+        "native_id": "4bswwt1f8qwd",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-23T07:53:40.388Z"
+      },
+      {
+        "native_id": "g0dsmz29chw2",
+        "status": "monitoring",
+        "body": "As of 07:27 UTC, Actions results are delivering within normal SLOs again.\u003cbr /\u003e\u003cbr /\u003eThank you for this patience during this period of delayed Actions results delivery. Our team continues to monitor system health and explore refinements to reduce impact to customers in the future.",
+        "created_at": "2026-10-23T07:56:35.639Z"
+      },
+      {
+        "native_id": "28hx9h8kqktb",
+        "status": "resolved",
+        "body": "On October 23, 2026, between 07:06 UTC and 07:27 UTC, GitHub Actions workflow run results were delayed. Job status, check run updates, and logs in the GitHub UI and API updated with an average delay of about 2 minutes, and some updates were delayed by up to about 7 minutes.  \u003cbr /\u003e\u003cbr /\u003eDuring this window, a storage dependency that Actions uses to process workflow logs and artifacts throttled our requests. This slowed result processing, causing updates to queue up. The queue was fully processed by 07:27 UTC, shortly after the throttling stopped. \u003cbr /\u003e\u003cbr /\u003eTo reduce the risk of recurrence, we have added several storage accounts to increase capacity, and we are working on additional steps to continue to scale. We are also working with our storage provider to understand why the throttling occurred, and improving how result processing handles storage throttling and how quickly we detect it.",
+        "created_at": "2026-10-23T08:05:27.354Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "partial_outage",
+          "updated_at": "2026-11-25T16:07:28.581Z"
+        }
+      ],
+      "created_at": "2026-10-23T07:29:03.081Z",
+      "id": "ntrfd2jqldn6",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On October 23, 2026, between 07:06 UTC and 07:27 UTC, GitHub Actions workflow run results were delayed. Job status, check run updates, and logs in the GitHub UI and API updated with an average delay of about 2 minutes, and some updates were delayed by up to about 7 minutes.  \u003cbr /\u003e\u003cbr /\u003eDuring this window, a storage dependency that Actions uses to process workflow logs and artifacts throttled our requests. This slowed result processing, causing updates to queue up. The queue was fully processed by 07:27 UTC, shortly after the throttling stopped. \u003cbr /\u003e\u003cbr /\u003eTo reduce the risk of recurrence, we have added several storage accounts to increase capacity, and we are working on additional steps to continue to scale. We are also working with our storage provider to understand why the throttling occurred, and improving how result processing handles storage throttling and how quickly we detect it.",
+          "created_at": "2026-10-23T08:05:27.354Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T08:05:27.354Z",
+          "id": "28hx9h8kqktb",
+          "incident_id": "ntrfd2jqldn6",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-10-28T22:29:49.025Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "As of 07:27 UTC, Actions results are delivering within normal SLOs again.\u003cbr /\u003e\u003cbr /\u003eThank you for this patience during this period of delayed Actions results delivery. Our team continues to monitor system health and explore refinements to reduce impact to customers in the future.",
+          "created_at": "2026-10-23T07:56:35.639Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T07:56:35.639Z",
+          "id": "g0dsmz29chw2",
+          "incident_id": "ntrfd2jqldn6",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T07:56:35.639Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-23T07:53:40.388Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T07:53:40.388Z",
+          "id": "4bswwt1f8qwd",
+          "incident_id": "ntrfd2jqldn6",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T07:53:40.388Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We are seeing delays in results from Actions workflows being reported within GitHub starting from 07:07 UTC.\u003cbr /\u003e\u003cbr /\u003eRecovery is already being seen but our team is continuing to investigate and monitor performance.",
+          "created_at": "2026-10-23T07:31:54.566Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T07:31:54.566Z",
+          "id": "t65z0l507v6c",
+          "incident_id": "ntrfd2jqldn6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T07:31:54.566Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions",
+          "created_at": "2026-10-23T07:29:03.320Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-23T07:29:03.320Z",
+          "id": "5wwpm7n0sr3p",
+          "incident_id": "ntrfd2jqldn6",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-23T07:29:03.320Z"
+        }
+      ],
+      "monitoring_at": "2026-10-23T07:53:40.388Z",
+      "name": "Delayed Actions status check results",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-23T08:05:27.354Z",
+      "shortlink": "https://stspg.io/kmk42jg3v1sm",
+      "started_at": "2026-10-23T07:29:03.074Z",
+      "status": "resolved",
+      "updated_at": "2026-10-28T22:29:49.032Z"
+    }
+  }
+}

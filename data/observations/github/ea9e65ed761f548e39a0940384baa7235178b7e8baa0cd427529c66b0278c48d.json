@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/pwxsjgnvrk6b",
+    "vendor": "github",
+    "native_id": "pwxsjgnvrk6b",
+    "title": "Incident with Actions, Pages, and Webhooks",
+    "url": "https://stspg.io/5cd2m4n59spv",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-10-30T17:50:54.67Z",
+    "resolved_at": "2026-10-30T19:23:40.177Z",
+    "duration_minutes": 92,
+    "components": [
+      "Webhooks",
+      "Actions",
+      "Pages"
+    ],
+    "updates": [
+      {
+        "native_id": "kf5r4fxnpcxm",
+        "status": "investigating",
+        "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+        "created_at": "2026-10-30T17:50:54.785Z"
+      },
+      {
+        "native_id": "32c94hh1q94t",
+        "status": "investigating",
+        "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+        "created_at": "2026-10-30T18:00:58.169Z"
+      },
+      {
+        "native_id": "0np7f6379hck",
+        "status": "investigating",
+        "body": "We continue to investigate delays affecting Actions workflows, Pages deployments, and webhook events, along with errors affecting code search and live updates. We have taken mitigation steps. Actions processing and Pages deployments are showing signs of recovery, but impact has not fully resolved. We are monitoring recovery and investigating the underlying cause.",
+        "created_at": "2026-10-30T18:06:21.711Z"
+      },
+      {
+        "native_id": "y3df1c7d4tpz",
+        "status": "investigating",
+        "body": "All affected services have recovered following mitigation. We continue to investigate root cause.",
+        "created_at": "2026-10-30T18:32:23.55Z"
+      },
+      {
+        "native_id": "07bwq3zmhfqs",
+        "status": "monitoring",
+        "body": "The degradation affecting Actions, Pages and Webhooks has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-10-30T18:32:39.824Z"
+      },
+      {
+        "native_id": "pcz4pwz6xt9n",
+        "status": "resolved",
+        "body": "On October 30, 2026, from 17:50 to 18:32 UTC, Actions, Pages, and Webhooks experienced degraded performance. Actions workflow processing, Pages deployments, and webhook deliveries were delayed, and code search and live updates returned errors. Some Actions queues took additional time to drain after mitigation, and the incident was resolved at 19:23 UTC. \u003cbr /\u003e\u003cbr /\u003eThe impact was triggered by maintenance on a cloud network gateway connecting an Actions service in the GitHub data center to Redis clusters in the Central US Azure region. The service's Redis client retried aggressively and redialed those connections. That produced a connection storm that saturated the gateway, with about 90% of connection attempts failing. Other services sharing the same network path were degraded as well. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the affected resources from rotation, which ended the connection storm and allowed the gateway to recover. We have already reduced the number of connection retries in the impacted service and are further improving retry behavior with jittered backoff, shorter connect timeouts, and retry budgets. We are also working with our infrastructure team to make GitHub more resilient to gateway maintenance.",
+        "created_at": "2026-10-30T19:23:40.177Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-11-13T18:00:24.256Z",
+          "description": "Real time HTTP callbacks of user-generated and system events",
+          "group": false,
+          "group_id": null,
+          "id": "4230lsnqdsld",
+          "name": "Webhooks",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 2,
+          "showcase": true,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-25T15:55:19.668Z"
+        },
+        {
+          "created_at": "2019-11-13T18:02:19.432Z",
+          "description": "Workflows, Compute and Orchestration for GitHub Actions",
+          "group": false,
+          "group_id": null,
+          "id": "br0l2tvcx85d",
+          "name": "Actions",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 7,
+          "showcase": true,
+          "start_date": null,
+          "status": "partial_outage",
+          "updated_at": "2026-11-25T16:07:28.581Z"
+        },
+        {
+          "created_at": "2017-01-31T20:04:33.923Z",
+          "description": "Frontend application and API servers for Pages builds",
+          "group": false,
+          "group_id": null,
+          "id": "vg70hn9s2tyj",
+          "name": "Pages",
+          "only_show_if_degraded": false,
+          "page_id": "kctbh9vrtdwd",
+          "position": 9,
+          "showcase": true,
+          "start_date": null,
+          "status": "partial_outage",
+          "updated_at": "2026-11-25T16:11:14.034Z"
+        }
+      ],
+      "created_at": "2026-10-30T17:50:54.677Z",
+      "id": "pwxsjgnvrk6b",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "On October 30, 2026, from 17:50 to 18:32 UTC, Actions, Pages, and Webhooks experienced degraded performance. Actions workflow processing, Pages deployments, and webhook deliveries were delayed, and code search and live updates returned errors. Some Actions queues took additional time to drain after mitigation, and the incident was resolved at 19:23 UTC. \u003cbr /\u003e\u003cbr /\u003eThe impact was triggered by maintenance on a cloud network gateway connecting an Actions service in the GitHub data center to Redis clusters in the Central US Azure region. The service's Redis client retried aggressively and redialed those connections. That produced a connection storm that saturated the gateway, with about 90% of connection attempts failing. Other services sharing the same network path were degraded as well. \u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by removing the affected resources from rotation, which ended the connection storm and allowed the gateway to recover. We have already reduced the number of connection retries in the impacted service and are further improving retry behavior with jittered backoff, shorter connect timeouts, and retry budgets. We are also working with our infrastructure team to make GitHub more resilient to gateway maintenance.",
+          "created_at": "2026-10-30T19:23:40.177Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T19:23:40.177Z",
+          "id": "pcz4pwz6xt9n",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-03T17:39:38.137Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "The degradation affecting Actions, Pages and Webhooks has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-10-30T18:32:39.824Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T18:32:39.824Z",
+          "id": "07bwq3zmhfqs",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T18:32:39.824Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "All affected services have recovered following mitigation. We continue to investigate root cause.",
+          "created_at": "2026-10-30T18:32:23.550Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T18:32:23.550Z",
+          "id": "y3df1c7d4tpz",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T18:32:23.550Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We continue to investigate delays affecting Actions workflows, Pages deployments, and webhook events, along with errors affecting code search and live updates. We have taken mitigation steps. Actions processing and Pages deployments are showing signs of recovery, but impact has not fully resolved. We are monitoring recovery and investigating the underlying cause.",
+          "created_at": "2026-10-30T18:06:21.711Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T18:06:21.711Z",
+          "id": "0np7f6379hck",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T18:06:21.711Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "vg70hn9s2tyj",
+              "name": "Pages",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Pages is experiencing degraded performance. We are continuing to investigate.",
+          "created_at": "2026-10-30T18:00:58.169Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T18:00:58.169Z",
+          "id": "32c94hh1q94t",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T18:00:58.169Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "4230lsnqdsld",
+              "name": "Webhooks",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "br0l2tvcx85d",
+              "name": "Actions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating reports of degraded performance for Actions and Webhooks",
+          "created_at": "2026-10-30T17:50:54.785Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-10-30T17:50:54.785Z",
+          "id": "kf5r4fxnpcxm",
+          "incident_id": "pwxsjgnvrk6b",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-10-30T17:50:54.785Z"
+        }
+      ],
+      "monitoring_at": "2026-10-30T18:32:39.824Z",
+      "name": "Incident with Actions, Pages, and Webhooks",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-10-30T19:23:40.177Z",
+      "shortlink": "https://stspg.io/5cd2m4n59spv",
+      "started_at": "2026-10-30T17:50:54.670Z",
+      "status": "resolved",
+      "updated_at": "2026-11-03T17:39:38.143Z"
+    }
+  }
+}
