@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "github/m0wvf9pt3l0l",
+    "vendor": "github",
+    "native_id": "m0wvf9pt3l0l",
+    "title": "LFS degradation for some customers",
+    "url": "https://stspg.io/ywpzwl4yl621",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-25T23:06:54.822Z",
+    "resolved_at": "2026-11-26T00:43:01.069Z",
+    "duration_minutes": 96,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "rvsrz57mlpt1",
+        "status": "investigating",
+        "body": "We are investigating reports of impacted performance for some GitHub services.",
+        "created_at": "2026-11-25T23:06:54.89Z"
+      },
+      {
+        "native_id": "ttpgw9kncnpj",
+        "status": "investigating",
+        "body": "We have identified an issue that impacts Large File Storage (LFS) for a small number of customers. We are working on mitigation.",
+        "created_at": "2026-11-25T23:10:38.986Z"
+      },
+      {
+        "native_id": "6y6fz71jw688",
+        "status": "investigating",
+        "body": "We're continuing to investigate elevated error rates affecting a small number of customers using Git LFS. We are still assessing mitigation options and will share updates as we learn more.",
+        "created_at": "2026-11-25T23:45:35.179Z"
+      },
+      {
+        "native_id": "3sr1xvhnh1f8",
+        "status": "investigating",
+        "body": "We've applied a mitigation to fix the issues in Git LFS. We are seeing improvements in telemetry and are monitoring for full recovery.",
+        "created_at": "2026-11-26T00:28:37.671Z"
+      },
+      {
+        "native_id": "7v0x9tdm267x",
+        "status": "monitoring",
+        "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+        "created_at": "2026-11-26T00:41:11.103Z"
+      },
+      {
+        "native_id": "r028yd05h7xp",
+        "status": "resolved",
+        "body": "On November 25, 2026, between 21:30 UTC and 00:28 UTC, Git Large File Storage (LFS) operations on github.com were degraded. During this time, an average of 2% of Git LFS requests failed, peaking at 4%. Many more requests initially failed but succeeded when Git LFS clients automatically retried them, which caused slower uploads and downloads for affected users. Other Git operations were not affected. This was due to a large volume of automated, unauthenticated traffic that overwhelmed the Git LFS servers in one of our regions, leaving them unable to respond to requests in time.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by moving most Git LFS traffic from the affected region to other regions with more capacity. Error rates returned to normal by 00:28 UTC.\u003cbr /\u003e\u003cbr /\u003eWe are working to limit the impact of high-volume unauthenticated traffic on Git LFS, and to add capacity in the affected region, to prevent similar disruptions in the future.",
+        "created_at": "2026-11-26T00:43:01.069Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-25T23:06:54.830Z",
+      "id": "m0wvf9pt3l0l",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "On November 25, 2026, between 21:30 UTC and 00:28 UTC, Git Large File Storage (LFS) operations on github.com were degraded. During this time, an average of 2% of Git LFS requests failed, peaking at 4%. Many more requests initially failed but succeeded when Git LFS clients automatically retried them, which caused slower uploads and downloads for affected users. Other Git operations were not affected. This was due to a large volume of automated, unauthenticated traffic that overwhelmed the Git LFS servers in one of our regions, leaving them unable to respond to requests in time.\u003cbr /\u003e\u003cbr /\u003eWe mitigated the incident by moving most Git LFS traffic from the affected region to other regions with more capacity. Error rates returned to normal by 00:28 UTC.\u003cbr /\u003e\u003cbr /\u003eWe are working to limit the impact of high-volume unauthenticated traffic on Git LFS, and to add capacity in the affected region, to prevent similar disruptions in the future.",
+          "created_at": "2026-11-26T00:43:01.069Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T00:43:01.069Z",
+          "id": "r028yd05h7xp",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T01:58:51.566Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The degradation has been mitigated. We are monitoring to ensure stability.",
+          "created_at": "2026-11-26T00:41:11.103Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T00:41:11.103Z",
+          "id": "7v0x9tdm267x",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T00:41:11.103Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We've applied a mitigation to fix the issues in Git LFS. We are seeing improvements in telemetry and are monitoring for full recovery.",
+          "created_at": "2026-11-26T00:28:37.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T00:28:37.671Z",
+          "id": "3sr1xvhnh1f8",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T00:28:37.671Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We're continuing to investigate elevated error rates affecting a small number of customers using Git LFS. We are still assessing mitigation options and will share updates as we learn more.",
+          "created_at": "2026-11-25T23:45:35.179Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T23:45:35.179Z",
+          "id": "6y6fz71jw688",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T23:45:35.179Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We have identified an issue that impacts Large File Storage (LFS) for a small number of customers. We are working on mitigation.",
+          "created_at": "2026-11-25T23:10:38.986Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T23:10:38.986Z",
+          "id": "ttpgw9kncnpj",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T23:10:38.986Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are investigating reports of impacted performance for some GitHub services.",
+          "created_at": "2026-11-25T23:06:54.890Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T23:06:54.890Z",
+          "id": "rvsrz57mlpt1",
+          "incident_id": "m0wvf9pt3l0l",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T23:06:54.890Z"
+        }
+      ],
+      "monitoring_at": "2026-11-26T00:41:11.103Z",
+      "name": "LFS degradation for some customers",
+      "page_id": "kctbh9vrtdwd",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T00:43:01.069Z",
+      "shortlink": "https://stspg.io/ywpzwl4yl621",
+      "started_at": "2026-11-25T23:06:54.822Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T01:58:51.572Z"
+    }
+  }
+}

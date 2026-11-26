@@ -870,7 +870,7 @@
           "showcase": false,
           "start_date": "2022-07-05",
           "status": "operational",
-          "updated_at": "2026-11-25T00:12:11.962Z"
+          "updated_at": "2026-11-26T09:37:54.438Z"
         }
       ],
       "created_at": "2026-11-24T21:54:25.621Z",
@@ -1175,6 +1175,837 @@
       "started_at": "2026-11-25T07:24:35.866Z",
       "status": "resolved",
       "updated_at": "2026-11-25T09:11:39.926Z"
+    }
+  },
+  {
+    "key": "cloudflare/vk87u9j2g6if",
+    "vendor": "cloudflare",
+    "native_id": "vk87u9j2g6if",
+    "title": "Some customers cannot create monitors",
+    "url": "https://www.cloudflarestatus.com/incidents/vk87u9j2g6if",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-25T16:42:03.442Z",
+    "resolved_at": "2026-11-25T17:48:50.696Z",
+    "duration_minutes": 66,
+    "components": [
+      "Notifications"
+    ],
+    "updates": [
+      {
+        "native_id": "fmwmog75w950",
+        "status": "investigating",
+        "body": "We’re investigating an issue that prevents some customers from creating monitors in the Cloudflare dashboard under Alerts → Monitors. Affected customers may see error 17204 stating that their account has a limit of zero custom analytics policies. \nWe’ll share an update as we learn more.",
+        "created_at": "2026-11-25T16:42:03.442Z"
+      },
+      {
+        "native_id": "cypkuixw56u7",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-25T17:48:50.696Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-09-13T12:50:58.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "5xvn0m7tthlf",
+          "name": "Notifications",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 7,
+          "showcase": false,
+          "start_date": "2022-09-13",
+          "status": "operational",
+          "updated_at": "2026-11-25T17:48:50.696Z"
+        }
+      ],
+      "created_at": "2026-11-25T16:42:03.442Z",
+      "id": "vk87u9j2g6if",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-25T17:48:50.696Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T17:48:50.696Z",
+          "id": "cypkuixw56u7",
+          "incident_id": "vk87u9j2g6if",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T17:48:50.696Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "5xvn0m7tthlf",
+              "name": "Dashboard \u0026 API - Notifications",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re investigating an issue that prevents some customers from creating monitors in the Cloudflare dashboard under Alerts → Monitors. Affected customers may see error 17204 stating that their account has a limit of zero custom analytics policies. \nWe’ll share an update as we learn more.",
+          "created_at": "2026-11-25T16:42:03.442Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T16:42:03.442Z",
+          "id": "fmwmog75w950",
+          "incident_id": "vk87u9j2g6if",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T16:44:10.147Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Some customers cannot create monitors",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-25T17:48:50.696Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/vk87u9j2g6if",
+      "started_at": "2026-11-25T16:42:03.442Z",
+      "status": "resolved",
+      "updated_at": "2026-11-25T17:48:50.696Z"
+    }
+  },
+  {
+    "key": "cloudflare/2quqh864hxdi",
+    "vendor": "cloudflare",
+    "native_id": "2quqh864hxdi",
+    "title": "Elevated R2 errors for buckets in APAC region",
+    "url": "https://www.cloudflarestatus.com/incidents/2quqh864hxdi",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-25T16:50:45.239Z",
+    "resolved_at": "2026-11-25T20:03:49.798Z",
+    "duration_minutes": 193,
+    "components": [
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "kc6zl40ka6k1",
+        "status": "investigating",
+        "body": "Requests to R2 buckets in APAC region may experience elevated errors.\nWe are currently investigating this issue.",
+        "created_at": "2026-11-25T16:50:45.239Z"
+      },
+      {
+        "native_id": "r8z79urrhh5g",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-25T17:23:55.811Z"
+      },
+      {
+        "native_id": "8ymj5llnngsj",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-25T20:03:49.798Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        }
+      ],
+      "created_at": "2026-11-25T16:50:45.239Z",
+      "id": "2quqh864hxdi",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-25T20:03:49.798Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T20:03:49.798Z",
+          "id": "8ymj5llnngsj",
+          "incident_id": "2quqh864hxdi",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T20:03:49.798Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-25T17:23:55.811Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T17:23:55.811Z",
+          "id": "r8z79urrhh5g",
+          "incident_id": "2quqh864hxdi",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T17:23:55.811Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Requests to R2 buckets in APAC region may experience elevated errors.\nWe are currently investigating this issue.",
+          "created_at": "2026-11-25T16:50:45.239Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T16:50:45.239Z",
+          "id": "kc6zl40ka6k1",
+          "incident_id": "2quqh864hxdi",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T16:50:45.239Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated R2 errors for buckets in APAC region",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-25T20:03:49.798Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/2quqh864hxdi",
+      "started_at": "2026-11-25T16:50:45.239Z",
+      "status": "resolved",
+      "updated_at": "2026-11-25T20:03:49.798Z"
+    }
+  },
+  {
+    "key": "cloudflare/ef6928vi0mic",
+    "vendor": "cloudflare",
+    "native_id": "ef6928vi0mic",
+    "title": "Elevated R2 Latency",
+    "url": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-25T20:08:42.535Z",
+    "resolved_at": "2026-11-26T00:11:05.494Z",
+    "duration_minutes": 242,
+    "components": [
+      "Stream",
+      "Pipelines",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "a5o0oq2udu2t",
+        "status": "investigating",
+        "body": "We are currently investigating reports of high latency for R2, Stream, and Pipelines. Users may experience elevated latency while using these services.",
+        "created_at": "2026-11-25T20:08:42.535Z"
+      },
+      {
+        "native_id": "mc2exuxrci1v",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-25T20:45:48.869Z"
+      },
+      {
+        "native_id": "bl55g86elgdx",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-25T21:00:59.561Z"
+      },
+      {
+        "native_id": "n2vhlih9pbtt",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T00:11:05.494Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:53:34.000Z",
+          "description": "Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "47xg28c02lnk",
+          "name": "Stream",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "created_at": "2026-08-11T12:16:30.000Z",
+          "description": "Managed streaming data pipeline service that ingests events, applies SQL transformations, and delivers them to R2 as Apache Iceberg tables or Parquet/JSON files.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "xr712w0ly7nr",
+          "name": "Pipelines",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-08-11",
+          "status": "operational",
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        }
+      ],
+      "created_at": "2026-11-25T20:08:42.535Z",
+      "id": "ef6928vi0mic",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T00:11:05.494Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T00:11:05.494Z",
+          "id": "n2vhlih9pbtt",
+          "incident_id": "ef6928vi0mic",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-25T21:00:59.561Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T21:00:59.561Z",
+          "id": "bl55g86elgdx",
+          "incident_id": "ef6928vi0mic",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T21:00:59.561Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-25T20:45:48.869Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T20:45:48.869Z",
+          "id": "mc2exuxrci1v",
+          "incident_id": "ef6928vi0mic",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T20:45:48.869Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "47xg28c02lnk",
+              "name": "Media - Stream",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Developer Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating reports of high latency for R2, Stream, and Pipelines. Users may experience elevated latency while using these services.",
+          "created_at": "2026-11-25T20:08:42.535Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T20:08:42.535Z",
+          "id": "a5o0oq2udu2t",
+          "incident_id": "ef6928vi0mic",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T20:08:42.535Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated R2 Latency",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T00:11:05.494Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
+      "started_at": "2026-11-25T20:08:42.535Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T00:11:05.494Z"
+    }
+  },
+  {
+    "key": "cloudflare/mkudgr09g9ax",
+    "vendor": "cloudflare",
+    "native_id": "mkudgr09g9ax",
+    "title": "RealTimeKit Recording Delays",
+    "url": "https://www.cloudflarestatus.com/incidents/mkudgr09g9ax",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-26T09:26:11.09Z",
+    "resolved_at": "2026-11-26T10:05:20.593Z",
+    "duration_minutes": 39,
+    "components": [
+      "RealtimeKit"
+    ],
+    "updates": [
+      {
+        "native_id": "sbde8npu5m6h",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with RealTimeKit recordings remaining in an invoked state. We are working to understand the full impact and mitigate this problem. More updates to follow shortly",
+        "created_at": "2026-11-26T09:26:11.09Z"
+      },
+      {
+        "native_id": "i0of9i8m8jax",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-26T09:33:29.018Z"
+      },
+      {
+        "native_id": "4kctyeyebtjn",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-26T10:03:53.671Z"
+      },
+      {
+        "native_id": "uc0qloci6dwr",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T10:05:20.593Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2025-05-16T17:08:23.000Z",
+          "description": "Build real-time serverless video, audio and data applications.\r\n\r\nCloudflare Realtime is infrastructure for real-time audio/video/data applications. It allows you to build real-time apps without worrying about scaling or regions. It can act as a selective forwarding unit (WebRTC SFU), as a fanout delivery system for broadcasting (WebRTC CDN) or anything in between.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "yxhtws7ltl9t",
+          "name": "RealtimeKit",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": "2025-05-16",
+          "status": "operational",
+          "updated_at": "2026-11-26T10:05:20.593Z"
+        }
+      ],
+      "created_at": "2026-11-26T09:26:11.090Z",
+      "id": "mkudgr09g9ax",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T10:05:20.593Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T10:05:20.593Z",
+          "id": "uc0qloci6dwr",
+          "incident_id": "mkudgr09g9ax",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T10:05:20.593Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-26T10:03:53.671Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T09:43:00.000Z",
+          "id": "4kctyeyebtjn",
+          "incident_id": "mkudgr09g9ax",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T10:04:22.488Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-26T09:33:29.018Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T09:33:29.018Z",
+          "id": "i0of9i8m8jax",
+          "incident_id": "mkudgr09g9ax",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T09:33:29.018Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "yxhtws7ltl9t",
+              "name": "Realtime - RealtimeKit",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with RealTimeKit recordings remaining in an invoked state. We are working to understand the full impact and mitigate this problem. More updates to follow shortly",
+          "created_at": "2026-11-26T09:26:11.090Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T09:26:11.090Z",
+          "id": "sbde8npu5m6h",
+          "incident_id": "mkudgr09g9ax",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T09:26:11.090Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "RealTimeKit Recording Delays",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T10:05:20.593Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/mkudgr09g9ax",
+      "started_at": "2026-11-26T09:26:11.090Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T10:05:20.593Z"
+    }
+  },
+  {
+    "key": "cloudflare/qlwszxx4667e",
+    "vendor": "cloudflare",
+    "native_id": "qlwszxx4667e",
+    "title": "Cloudflare Billing Issues",
+    "url": "https://www.cloudflarestatus.com/incidents/qlwszxx4667e",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-26T09:28:58.472Z",
+    "resolved_at": "2026-11-26T09:37:54.438Z",
+    "duration_minutes": 8,
+    "components": [
+      "Subscriptions",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "eimin716gjfl",
+        "status": "monitoring",
+        "body": "Cloudflare is experiencing problems in processing changes through our billing subscription service for R2. All other services are operating normally. We will provide an update once billing subscription services return to normal.",
+        "created_at": "2026-11-26T09:28:58.473Z"
+      },
+      {
+        "native_id": "njd18sn7ilzn",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T09:37:54.438Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-01-19T10:58:03.000Z",
+          "description": "Changes to subscriptions or placing new orders for service",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "8m7bb706rh1c",
+          "name": "Subscriptions",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 8,
+          "showcase": false,
+          "start_date": "2024-01-19",
+          "status": "operational",
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        }
+      ],
+      "created_at": "2026-11-26T09:28:58.473Z",
+      "id": "qlwszxx4667e",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T09:37:54.438Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T09:37:54.438Z",
+          "id": "njd18sn7ilzn",
+          "incident_id": "qlwszxx4667e",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "8m7bb706rh1c",
+              "name": "Dashboard \u0026 API - Subscriptions",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is experiencing problems in processing changes through our billing subscription service for R2. All other services are operating normally. We will provide an update once billing subscription services return to normal.",
+          "created_at": "2026-11-26T09:28:58.473Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T09:28:58.473Z",
+          "id": "eimin716gjfl",
+          "incident_id": "qlwszxx4667e",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T09:28:58.473Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Billing Issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T09:37:54.438Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/qlwszxx4667e",
+      "started_at": "2026-11-26T09:28:58.472Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T09:37:54.438Z"
+    }
+  },
+  {
+    "key": "cloudflare/filussqshtfq",
+    "vendor": "cloudflare",
+    "native_id": "filussqshtfq",
+    "title": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
+    "url": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
+    "impact": "minor",
+    "status": "identified",
+    "started_at": "2026-11-26T14:19:51.141Z",
+    "components": [
+      "AI Gateway"
+    ],
+    "updates": [
+      {
+        "native_id": "biryz3g33ovm",
+        "status": "investigating",
+        "body": "Cloudflare is investigating elevated errors affecting AI Gateway requests to Gemini 4 models (gemini-4-argon, gemini-4-carbon, gemini-4-hydrogen, gemini-4-neon) routed through Google Vertex AI with Unified Billing. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-26T14:19:51.141Z"
+      },
+      {
+        "native_id": "vlj91kzfwb16",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-26T15:36:40.346Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-05-31T09:52:06.000Z",
+          "description": "Cloudflare’s AI Gateway allows you to gain visibility and control over your AI apps.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "0311l882p558",
+          "name": "AI Gateway",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": "2024-05-31",
+          "status": "degraded_performance",
+          "updated_at": "2026-11-26T14:19:51.141Z"
+        }
+      ],
+      "created_at": "2026-11-26T14:19:51.141Z",
+      "id": "filussqshtfq",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-26T15:36:40.346Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T15:36:40.346Z",
+          "id": "vlj91kzfwb16",
+          "incident_id": "filussqshtfq",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T15:36:40.346Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "0311l882p558",
+              "name": "AI - AI Gateway",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating elevated errors affecting AI Gateway requests to Gemini 4 models (gemini-4-argon, gemini-4-carbon, gemini-4-hydrogen, gemini-4-neon) routed through Google Vertex AI with Unified Billing. We are working to understand the full impact and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-26T14:19:51.141Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T14:19:51.141Z",
+          "id": "biryz3g33ovm",
+          "incident_id": "filussqshtfq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T14:19:51.141Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
+      "started_at": "2026-11-26T14:19:51.141Z",
+      "status": "identified",
+      "updated_at": "2026-11-26T15:36:40.346Z"
+    }
+  },
+  {
+    "key": "cloudflare/6crqy1zulybd",
+    "vendor": "cloudflare",
+    "native_id": "6crqy1zulybd",
+    "title": "Workers AI - Deepseek Flash increased errors",
+    "url": "https://www.cloudflarestatus.com/incidents/6crqy1zulybd",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-26T14:41:21.826Z",
+    "resolved_at": "2026-11-26T14:42:37.764Z",
+    "duration_minutes": 1,
+    "components": [
+      "Workers AI"
+    ],
+    "updates": [
+      {
+        "native_id": "psgfbxomyh36",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an increased amount of errors from Deepseek Flash on Workers AI.",
+        "created_at": "2026-11-26T14:41:21.826Z"
+      },
+      {
+        "native_id": "7hqd4q4roqme",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T14:42:37.764Z"
+      }
+    ],
+    "first_seen_at": "2026-11-26T15:54:03.19907951Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2024-02-14T15:05:51.000Z",
+          "description": "Workers AI allows you to run machine learning models, on the Cloudflare network, from your own code – whether that be from Workers, Pages, or anywhere via REST API.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "zvm7mqn92xzc",
+          "name": "Workers AI",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": "2024-02-14",
+          "status": "operational",
+          "updated_at": "2026-11-26T14:42:37.764Z"
+        }
+      ],
+      "created_at": "2026-11-26T14:41:21.826Z",
+      "id": "6crqy1zulybd",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T14:42:37.764Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T14:42:37.764Z",
+          "id": "7hqd4q4roqme",
+          "incident_id": "6crqy1zulybd",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T14:42:37.764Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zvm7mqn92xzc",
+              "name": "AI - Workers AI",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating an increased amount of errors from Deepseek Flash on Workers AI.",
+          "created_at": "2026-11-26T14:41:21.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T14:41:21.826Z",
+          "id": "psgfbxomyh36",
+          "incident_id": "6crqy1zulybd",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T14:41:21.826Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Workers AI - Deepseek Flash increased errors",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T14:42:37.764Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/6crqy1zulybd",
+      "started_at": "2026-11-26T14:41:21.826Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T14:42:37.764Z"
     }
   }
 ]

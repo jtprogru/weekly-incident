@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "circleci/9lvbbbs9l87b",
+    "vendor": "circleci",
+    "native_id": "9lvbbbs9l87b",
+    "title": "Errors with GitHub APIs delaying workflows",
+    "url": "https://stspg.io/96ffdz58cxdr",
+    "impact": "minor",
+    "status": "postmortem",
+    "started_at": "2026-07-20T00:35:59.007Z",
+    "resolved_at": "2026-07-20T01:45:35.921Z",
+    "duration_minutes": 69,
+    "components": [
+      "Pipelines \u0026 Workflows",
+      "GitHub Git Operations",
+      "GitHub API Requests"
+    ],
+    "updates": [
+      {
+        "native_id": "xyscvj4wnwzg",
+        "status": "identified",
+        "body": "We have identified an issue with GitHub API requests that may cause some customers to see workflows stuck in a running state or workflows fail to start.\n\nGitHub has reported incidents on the APIs\n\nhttps://www.githubstatus.com/incidents/ph5nns5y4gxj\nhttps://www.githubstatus.com/incidents/8vfyvq16hzh9\n\nWe are monitoring the stability of GitHub APIs and will update this page as more information is available.",
+        "created_at": "2026-07-20T00:35:59.132Z"
+      },
+      {
+        "native_id": "75l4t5swgmyz",
+        "status": "identified",
+        "body": "We are also seeing errors processing push event webhooks due to the upstream API outage.\n\nUsers may need to retry pipelines for these push events.",
+        "created_at": "2026-07-20T01:24:02.761Z"
+      },
+      {
+        "native_id": "n238z7z50f6r",
+        "status": "monitoring",
+        "body": "We are seeing signs of recovery from the GitHub API.\n\nWe will stay in a monitoring state to verify that the API error rate has recovered.",
+        "created_at": "2026-07-20T01:36:34.59Z"
+      },
+      {
+        "native_id": "qmtt4dyxvrth",
+        "status": "resolved",
+        "body": "GitHub API error rates have recovered to normal levels.\n\nDuring the incident, some customers may have seen pipelines fail to start or not receive status updates. Some pipelines may be stuck in a running state.\n\n* You should re-push commits or use the UI to manually trigger pipelines that didn't start.\n* Pipelines in a stuck running state should be canceled and rerun.\n\nIf you encounter any issues please contact CircleCI support.",
+        "created_at": "2026-07-20T01:45:35.921Z"
+      },
+      {
+        "native_id": "918fpmwdrv2b",
+        "status": "postmortem",
+        "body": "## Summary\n\nOn July 20, 2026 from 00:22 to 01:45 UTC, CircleCI customers using our GitHub integrations experienced failures running pipelines and experienced workflows getting stuck. During this incident, some pipelines triggered by users using GitHub failed to start or ran as error pipelines. Customers whose pipelines failed or ran as error pipelines during this window should re-run them.\n\nThis was caused by an [upstream API degradation at GitHub](https://www.githubstatus.com/incidents/ph5nns5y4gxj), which impacted many GitHub APIs that CircleCI uses to trigger and run pipelines.\n\nBy 01:45 UTC, GitHub APIs recovered, and customer pipelines ran normally.\n\nThe original CircleCI status page can be found [here](https://status.circleci.com/incidents/9lvbbbs9l87b). \n\n## What Happened\n\n\\(all times UTC\\)\n\nBeginning 00:22 on July 20, 2026, GitHub began returning elevated errors for the following API requests:\n\n* `applications/*/token`\n* `repos/*/commits`\n* `repos/*/*/contents/*`\n* `repos/*/*/hooks`\n* `repos/*/*/hooks/*`\n* `repos/*/*/keys`\n* `repos/*/*/pulls`\n* `repos/*/*/statuses/*`\n\nCircleCI relies on these requests to correctly trigger and run pipelines.\n\nAt 00:22, our internal monitoring alerted us to the problem. Our team began investigating, and found that a small number of pipelines belonging to GitHub projects either failed to start or ran as error pipelines. This included scheduled pipelines and workflows. In addition, a small number of customer workflows experienced stuck jobs and required a re-run of the workflow to fix.\n\nAt 01:45, GitHub recovered and pipeline processing returned to normal operating levels. Only pipelines triggered during the incident window were affected, and customers should re-run those pipelines.\n\n## Future Prevention and Process Improvement\n\nWe are actively working to improve the resilience of pipeline processing during GitHub service disruptions to reduce the customer impact of similar incidents in the future. We are scoping features that will help customers recover with reduced manual steps after incidents resolve.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+        "created_at": "2026-07-23T21:10:02.964Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-07-10T21:13:25.145Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "zxxnbynf4dkm",
+          "name": "Pipelines \u0026 Workflows",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 5,
+          "showcase": true,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-10-14T00:26:03.788Z"
+        },
+        {
+          "created_at": "2024-07-01T23:04:38.296Z",
+          "description": null,
+          "group": false,
+          "group_id": "s21fdjds0k15",
+          "id": "9284lhdn3v38",
+          "name": "GitHub Git Operations",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 6,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-25T16:32:14.039Z"
+        },
+        {
+          "created_at": "2019-01-21T21:45:32.960Z",
+          "description": null,
+          "group": false,
+          "group_id": "s21fdjds0k15",
+          "id": "ys748wcgjv2s",
+          "name": "GitHub API Requests",
+          "only_show_if_degraded": false,
+          "page_id": "6w4r0ttlx5ft",
+          "position": 8,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-25T16:33:48.966Z"
+        }
+      ],
+      "created_at": "2026-07-20T00:35:59.020Z",
+      "id": "9lvbbbs9l87b",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "## Summary\n\nOn July 20, 2026 from 00:22 to 01:45 UTC, CircleCI customers using our GitHub integrations experienced failures running pipelines and experienced workflows getting stuck. During this incident, some pipelines triggered by users using GitHub failed to start or ran as error pipelines. Customers whose pipelines failed or ran as error pipelines during this window should re-run them.\n\nThis was caused by an [upstream API degradation at GitHub](https://www.githubstatus.com/incidents/ph5nns5y4gxj), which impacted many GitHub APIs that CircleCI uses to trigger and run pipelines.\n\nBy 01:45 UTC, GitHub APIs recovered, and customer pipelines ran normally.\n\nThe original CircleCI status page can be found [here](https://status.circleci.com/incidents/9lvbbbs9l87b). \n\n## What Happened\n\n\\(all times UTC\\)\n\nBeginning 00:22 on July 20, 2026, GitHub began returning elevated errors for the following API requests:\n\n* `applications/*/token`\n* `repos/*/commits`\n* `repos/*/*/contents/*`\n* `repos/*/*/hooks`\n* `repos/*/*/hooks/*`\n* `repos/*/*/keys`\n* `repos/*/*/pulls`\n* `repos/*/*/statuses/*`\n\nCircleCI relies on these requests to correctly trigger and run pipelines.\n\nAt 00:22, our internal monitoring alerted us to the problem. Our team began investigating, and found that a small number of pipelines belonging to GitHub projects either failed to start or ran as error pipelines. This included scheduled pipelines and workflows. In addition, a small number of customer workflows experienced stuck jobs and required a re-run of the workflow to fix.\n\nAt 01:45, GitHub recovered and pipeline processing returned to normal operating levels. Only pipelines triggered during the incident window were affected, and customers should re-run those pipelines.\n\n## Future Prevention and Process Improvement\n\nWe are actively working to improve the resilience of pipeline processing during GitHub service disruptions to reduce the customer impact of similar incidents in the future. We are scoping features that will help customers recover with reduced manual steps after incidents resolve.\n\nCustomer experience is our top priority, and we commit to continually improving the reliability of our systems to match the trust that our customers place in us. Please reach out to our support team with any questions or concerns.",
+          "created_at": "2026-07-23T21:10:02.964Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": null,
+          "id": "918fpmwdrv2b",
+          "incident_id": "9lvbbbs9l87b",
+          "status": "postmortem",
+          "tweet_id": null,
+          "updated_at": "2026-07-23T21:10:52.588Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9284lhdn3v38",
+              "name": "Upstream Services - GitHub Git Operations",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "GitHub API error rates have recovered to normal levels.\n\nDuring the incident, some customers may have seen pipelines fail to start or not receive status updates. Some pipelines may be stuck in a running state.\n\n* You should re-push commits or use the UI to manually trigger pipelines that didn't start.\n* Pipelines in a stuck running state should be canceled and rerun.\n\nIf you encounter any issues please contact CircleCI support.",
+          "created_at": "2026-07-20T01:45:35.921Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:45:35.921Z",
+          "id": "qmtt4dyxvrth",
+          "incident_id": "9lvbbbs9l87b",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:45:35.921Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9284lhdn3v38",
+              "name": "Upstream Services - GitHub Git Operations",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are seeing signs of recovery from the GitHub API.\n\nWe will stay in a monitoring state to verify that the API error rate has recovered.",
+          "created_at": "2026-07-20T01:36:34.590Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:36:34.590Z",
+          "id": "n238z7z50f6r",
+          "incident_id": "9lvbbbs9l87b",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:36:34.590Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "9284lhdn3v38",
+              "name": "Upstream Services - GitHub Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We are also seeing errors processing push event webhooks due to the upstream API outage.\n\nUsers may need to retry pipelines for these push events.",
+          "created_at": "2026-07-20T01:24:02.761Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T01:24:02.761Z",
+          "id": "75l4t5swgmyz",
+          "incident_id": "9lvbbbs9l87b",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T01:24:02.761Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "zxxnbynf4dkm",
+              "name": "Pipelines \u0026 Workflows",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "9284lhdn3v38",
+              "name": "Upstream Services - GitHub Git Operations",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "ys748wcgjv2s",
+              "name": "Upstream Services - GitHub API Requests",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified an issue with GitHub API requests that may cause some customers to see workflows stuck in a running state or workflows fail to start.\n\nGitHub has reported incidents on the APIs\n\nhttps://www.githubstatus.com/incidents/ph5nns5y4gxj\nhttps://www.githubstatus.com/incidents/8vfyvq16hzh9\n\nWe are monitoring the stability of GitHub APIs and will update this page as more information is available.",
+          "created_at": "2026-07-20T00:35:59.132Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-07-20T00:35:59.132Z",
+          "id": "xyscvj4wnwzg",
+          "incident_id": "9lvbbbs9l87b",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-07-20T00:35:59.132Z"
+        }
+      ],
+      "monitoring_at": "2026-07-20T01:36:34.590Z",
+      "name": "Errors with GitHub APIs delaying workflows",
+      "page_id": "6w4r0ttlx5ft",
+      "reminder_intervals": null,
+      "resolved_at": "2026-07-20T01:45:35.921Z",
+      "shortlink": "https://stspg.io/96ffdz58cxdr",
+      "started_at": "2026-07-20T00:35:59.007Z",
+      "status": "postmortem",
+      "updated_at": "2026-07-23T21:10:52.591Z"
+    }
+  }
+}

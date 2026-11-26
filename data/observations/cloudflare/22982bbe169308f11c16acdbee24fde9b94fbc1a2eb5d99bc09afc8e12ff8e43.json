@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "cloudflare/ef6928vi0mic",
+    "vendor": "cloudflare",
+    "native_id": "ef6928vi0mic",
+    "title": "Elevated R2 Latency",
+    "url": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-25T20:08:42.535Z",
+    "resolved_at": "2026-11-26T00:11:05.494Z",
+    "duration_minutes": 242,
+    "components": [
+      "Stream",
+      "Pipelines",
+      "R2"
+    ],
+    "updates": [
+      {
+        "native_id": "a5o0oq2udu2t",
+        "status": "investigating",
+        "body": "We are currently investigating reports of high latency for R2, Stream, and Pipelines. Users may experience elevated latency while using these services.",
+        "created_at": "2026-11-25T20:08:42.535Z"
+      },
+      {
+        "native_id": "mc2exuxrci1v",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-25T20:45:48.869Z"
+      },
+      {
+        "native_id": "bl55g86elgdx",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-25T21:00:59.561Z"
+      },
+      {
+        "native_id": "n2vhlih9pbtt",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T00:11:05.494Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:53:34.000Z",
+          "description": "Cloudflare Stream lets you or your end users upload, store, encode, and deliver live and on-demand video with one API, without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "47xg28c02lnk",
+          "name": "Stream",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 3,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "created_at": "2026-08-11T12:16:30.000Z",
+          "description": "Managed streaming data pipeline service that ingests events, applies SQL transformations, and delivers them to R2 as Apache Iceberg tables or Parquet/JSON files.",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "xr712w0ly7nr",
+          "name": "Pipelines",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 12,
+          "showcase": false,
+          "start_date": "2026-08-11",
+          "status": "operational",
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "created_at": "2022-07-05T10:55:24.000Z",
+          "description": "High-performance storage for files and objects with zero egress charges",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "hb7g5sq2zz0h",
+          "name": "R2",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": "2022-07-05",
+          "status": "operational",
+          "updated_at": "2026-11-26T09:37:54.438Z"
+        }
+      ],
+      "created_at": "2026-11-25T20:08:42.535Z",
+      "id": "ef6928vi0mic",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T00:11:05.494Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T00:11:05.494Z",
+          "id": "n2vhlih9pbtt",
+          "incident_id": "ef6928vi0mic",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T00:11:05.494Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-25T21:00:59.561Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T21:00:59.561Z",
+          "id": "bl55g86elgdx",
+          "incident_id": "ef6928vi0mic",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T21:00:59.561Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-25T20:45:48.869Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T20:45:48.869Z",
+          "id": "mc2exuxrci1v",
+          "incident_id": "ef6928vi0mic",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T20:45:48.869Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "hb7g5sq2zz0h",
+              "name": "Developer Services - R2",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "47xg28c02lnk",
+              "name": "Media - Stream",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "xr712w0ly7nr",
+              "name": "Developer Services - Pipelines",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are currently investigating reports of high latency for R2, Stream, and Pipelines. Users may experience elevated latency while using these services.",
+          "created_at": "2026-11-25T20:08:42.535Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-25T20:08:42.535Z",
+          "id": "a5o0oq2udu2t",
+          "incident_id": "ef6928vi0mic",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-25T20:08:42.535Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated R2 Latency",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T00:11:05.494Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/ef6928vi0mic",
+      "started_at": "2026-11-25T20:08:42.535Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T00:11:05.494Z"
+    }
+  }
+}
