@@ -1825,8 +1825,10 @@
     "title": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
     "url": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
     "impact": "minor",
-    "status": "identified",
+    "status": "resolved",
     "started_at": "2026-11-26T14:19:51.141Z",
+    "resolved_at": "2026-11-26T18:07:04.835Z",
+    "duration_minutes": 227,
     "components": [
       "AI Gateway"
     ],
@@ -1842,6 +1844,18 @@
         "status": "identified",
         "body": "The issue has been identified and a fix is being implemented.",
         "created_at": "2026-11-26T15:36:40.346Z"
+      },
+      {
+        "native_id": "31vqsjbxphof",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-26T16:39:49.166Z"
+      },
+      {
+        "native_id": "7cgvuee854gs",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T18:07:04.835Z"
       }
     ],
     "first_seen_at": "2026-11-26T15:54:03.19907951Z",
@@ -1859,14 +1873,40 @@
           "position": 2,
           "showcase": false,
           "start_date": "2024-05-31",
-          "status": "degraded_performance",
-          "updated_at": "2026-11-26T14:19:51.141Z"
+          "status": "operational",
+          "updated_at": "2026-11-26T18:07:04.835Z"
         }
       ],
       "created_at": "2026-11-26T14:19:51.141Z",
       "id": "filussqshtfq",
       "impact": "minor",
       "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T18:07:04.835Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T18:07:04.835Z",
+          "id": "7cgvuee854gs",
+          "incident_id": "filussqshtfq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T18:07:04.835Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-26T16:39:49.166Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:39:49.166Z",
+          "id": "31vqsjbxphof",
+          "incident_id": "filussqshtfq",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:39:49.166Z"
+        },
         {
           "affected_components": null,
           "body": "The issue has been identified and a fix is being implemented.",
@@ -1905,11 +1945,11 @@
       "name": "AI Gateway – Elevated errors for Gemini 4 models using Unified Billing",
       "page_id": "yh6f0r4529hb",
       "reminder_intervals": null,
-      "resolved_at": null,
+      "resolved_at": "2026-11-26T18:07:04.835Z",
       "shortlink": "https://www.cloudflarestatus.com/incidents/filussqshtfq",
       "started_at": "2026-11-26T14:19:51.141Z",
-      "status": "identified",
-      "updated_at": "2026-11-26T15:36:40.346Z"
+      "status": "resolved",
+      "updated_at": "2026-11-26T18:07:04.835Z"
     }
   },
   {
@@ -2006,6 +2046,233 @@
       "started_at": "2026-11-26T14:41:21.826Z",
       "status": "resolved",
       "updated_at": "2026-11-26T14:42:37.764Z"
+    }
+  },
+  {
+    "key": "cloudflare/xiqj67vl5pqm",
+    "vendor": "cloudflare",
+    "native_id": "xiqj67vl5pqm",
+    "title": "Cloudflare Dashboard and Cloudflare API service issues",
+    "url": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-26T16:03:50.006Z",
+    "resolved_at": "2026-11-26T18:17:04.572Z",
+    "duration_minutes": 133,
+    "components": [
+      "Dashboard",
+      "API"
+    ],
+    "updates": [
+      {
+        "native_id": "b0vuhj53kf22",
+        "status": "investigating",
+        "body": "Cloudflare is investigating issues with Cloudflare Dashboard and related APIs. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Cloudflare Edge. Customers using the Dashboard / Cloudflare APIs are impacted as requests might fail and/or errors may be displayed.",
+        "created_at": "2026-11-26T16:03:50.006Z"
+      },
+      {
+        "native_id": "tkr37wx2zxki",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-26T16:39:33.782Z"
+      },
+      {
+        "native_id": "dg2cw3op4i3m",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-26T18:17:04.572Z"
+      }
+    ],
+    "first_seen_at": "2026-11-27T15:42:29.489508197Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-26T18:17:04.572Z"
+        },
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Application programming interface (API) for customers to read and write their configurations at https://api.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "g4tb35rs9yw7",
+          "name": "API",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 2,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-26T18:17:04.572Z"
+        }
+      ],
+      "created_at": "2026-11-26T16:03:50.006Z",
+      "id": "xiqj67vl5pqm",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-26T18:17:04.572Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T18:17:04.572Z",
+          "id": "dg2cw3op4i3m",
+          "incident_id": "xiqj67vl5pqm",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T18:17:04.572Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-26T16:39:33.782Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:39:33.782Z",
+          "id": "tkr37wx2zxki",
+          "incident_id": "xiqj67vl5pqm",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:39:33.782Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Dashboard \u0026 API - Dashboard",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "g4tb35rs9yw7",
+              "name": "Dashboard \u0026 API - API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating issues with Cloudflare Dashboard and related APIs. These issues do not affect the serving of cached files via the Cloudflare CDN or other security features at the Cloudflare Edge. Customers using the Dashboard / Cloudflare APIs are impacted as requests might fail and/or errors may be displayed.",
+          "created_at": "2026-11-26T16:03:50.006Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:03:50.006Z",
+          "id": "b0vuhj53kf22",
+          "incident_id": "xiqj67vl5pqm",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:03:50.006Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare Dashboard and Cloudflare API service issues",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T18:17:04.572Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm",
+      "started_at": "2026-11-26T16:03:50.006Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T18:17:04.572Z"
+    }
+  },
+  {
+    "key": "cloudflare/955xa7dtx0ca",
+    "vendor": "cloudflare",
+    "native_id": "955xa7dtx0ca",
+    "title": "Cloudflare University website unavailable",
+    "url": "https://www.cloudflarestatus.com/incidents/955xa7dtx0ca",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-27T14:49:03.546Z",
+    "resolved_at": "2026-11-27T15:05:32.622Z",
+    "duration_minutes": 16,
+    "components": [],
+    "updates": [
+      {
+        "native_id": "nvjvrx5sloi0",
+        "status": "investigating",
+        "body": "The Cloudflare University website, learn.cloudflare.com, may be unavailable for some customers. Access to it may return a 521 error message.",
+        "created_at": "2026-11-27T14:49:03.546Z"
+      },
+      {
+        "native_id": "tblwambojrb5",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-27T14:52:29.982Z"
+      },
+      {
+        "native_id": "8bsxwz8ft0re",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-27T15:05:32.622Z"
+      }
+    ],
+    "first_seen_at": "2026-11-27T15:42:29.489508197Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-27T14:49:03.546Z",
+      "id": "955xa7dtx0ca",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-27T15:05:32.622Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-27T15:05:32.622Z",
+          "id": "8bsxwz8ft0re",
+          "incident_id": "955xa7dtx0ca",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-27T15:05:32.622Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-27T14:52:29.982Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-27T14:52:29.982Z",
+          "id": "tblwambojrb5",
+          "incident_id": "955xa7dtx0ca",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-27T14:52:29.982Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The Cloudflare University website, learn.cloudflare.com, may be unavailable for some customers. Access to it may return a 521 error message.",
+          "created_at": "2026-11-27T14:49:03.546Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-27T14:49:03.546Z",
+          "id": "nvjvrx5sloi0",
+          "incident_id": "955xa7dtx0ca",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-27T14:49:03.546Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Cloudflare University website unavailable",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-27T15:05:32.622Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/955xa7dtx0ca",
+      "started_at": "2026-11-27T14:49:03.546Z",
+      "status": "resolved",
+      "updated_at": "2026-11-27T15:05:32.622Z"
     }
   }
 ]

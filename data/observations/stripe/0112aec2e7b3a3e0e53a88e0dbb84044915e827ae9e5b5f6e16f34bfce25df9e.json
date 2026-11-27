@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/zmpdfkzbkjcl",
+    "vendor": "stripe",
+    "native_id": "zmpdfkzbkjcl",
+    "title": "Elevated errors on Google Pay payments",
+    "url": "https://stspg.io/j7b7wsrfq7hm",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-09-16T10:05:49Z",
+    "resolved_at": "2026-09-16T17:52:35.333Z",
+    "duration_minutes": 466,
+    "components": [
+      "Stripe core components",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "5tg88dymcq3d",
+        "status": "monitoring",
+        "body": "We're currently investigating elevated errors on Google Pay payments. We'll post an update soon.",
+        "created_at": "2026-09-16T17:13:49.455Z"
+      },
+      {
+        "native_id": "mdttg7zqzx8n",
+        "status": "monitoring",
+        "body": "We've confirmed with the upstream partner that the Google Pay issue is recovering. We are monitoring and will provide an update when the issue is resolved.",
+        "created_at": "2026-09-16T17:20:14.829Z"
+      },
+      {
+        "native_id": "ykq6m09n3zg4",
+        "status": "resolved",
+        "body": "The issue with Google Pay has been resolved.",
+        "created_at": "2026-09-16T17:52:35.333Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:27:58.262Z",
+          "description": "Dashboard, support, payouts, and webhooks",
+          "group": false,
+          "group_id": null,
+          "id": "mdklyd2ynjqv",
+          "name": "Stripe core components",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 5,
+          "showcase": false,
+          "start_date": "2023-07-28",
+          "status": "operational",
+          "updated_at": "2026-11-01T14:36:29.221Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-11-27T11:50:52.649Z"
+        }
+      ],
+      "created_at": "2026-09-16T10:05:49.000Z",
+      "id": "zmpdfkzbkjcl",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "The issue with Google Pay has been resolved.",
+          "created_at": "2026-09-16T17:52:35.333Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T17:52:35.333Z",
+          "id": "ykq6m09n3zg4",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:52:35.333Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We've confirmed with the upstream partner that the Google Pay issue is recovering. We are monitoring and will provide an update when the issue is resolved.",
+          "created_at": "2026-09-16T17:20:14.829Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-09-16T17:20:14.829Z",
+          "id": "mdttg7zqzx8n",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:20:14.829Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "mdklyd2ynjqv",
+              "name": "Stripe core components",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're currently investigating elevated errors on Google Pay payments. We'll post an update soon.",
+          "created_at": "2026-09-16T17:13:49.455Z",
+          "custom_tweet": null,
+          "deliver_notifications": false,
+          "display_at": "2026-09-16T10:05:49.000Z",
+          "id": "5tg88dymcq3d",
+          "incident_id": "zmpdfkzbkjcl",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-09-16T17:41:23.880Z"
+        }
+      ],
+      "monitoring_at": "2026-09-16T10:05:49.000Z",
+      "name": "Elevated errors on Google Pay payments",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-09-16T17:52:35.333Z",
+      "shortlink": "https://stspg.io/j7b7wsrfq7hm",
+      "started_at": "2026-09-16T10:05:49.000Z",
+      "status": "resolved",
+      "updated_at": "2026-09-16T17:52:35.352Z"
+    }
+  }
+}

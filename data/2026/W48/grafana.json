@@ -1,0 +1,183 @@
+[
+  {
+    "key": "grafana/x69sj7kpdnzp",
+    "vendor": "grafana",
+    "native_id": "x69sj7kpdnzp",
+    "title": "Stack Creation Failing for Grafana Cloud Users in Europe",
+    "url": "https://stspg.io/hmdmbpp6pkpc",
+    "impact": "major",
+    "status": "resolved",
+    "started_at": "2026-11-26T16:26:12.362Z",
+    "resolved_at": "2026-11-26T18:42:28.261Z",
+    "duration_minutes": 136,
+    "components": [
+      "Grafana.com"
+    ],
+    "updates": [
+      {
+        "native_id": "7bxqj2wnn32w",
+        "status": "investigating",
+        "body": "We are investigating an issue preventing the creation of new Grafana Cloud stacks from users who attempt to create a Stack located in Europe. Existing stacks are not affected. Next update by 17:20 UTC.",
+        "created_at": "2026-11-26T16:26:12.493Z"
+      },
+      {
+        "native_id": "k3dvj214zdnc",
+        "status": "identified",
+        "body": "We have identified the cause of this issue and are working on a resolution. Customers located in Europe may be unable to create new Grafana Cloud stacks, in any region. Customers in other locations can create stacks normally. Next update by 17:20 UTC.",
+        "created_at": "2026-11-26T16:34:11.35Z"
+      },
+      {
+        "native_id": "qyyj6pss0hvx",
+        "status": "monitoring",
+        "body": "A fix has been implemented, and customers located in Europe can create new Grafana Cloud stacks again. We are monitoring to confirm that stack creation is working normally. Next update by 17:45 UTC.",
+        "created_at": "2026-11-26T16:47:59.219Z"
+      },
+      {
+        "native_id": "wn3v34gktxk6",
+        "status": "monitoring",
+        "body": "A fix has been implemented, and customers located in Europe can create new Grafana Cloud stacks again. We are continuing to monitor to confirm that stack creation is working normally. Next update by 18:45 UTC.",
+        "created_at": "2026-11-26T17:42:36.441Z"
+      },
+      {
+        "native_id": "srqjgpz6r5q4",
+        "status": "resolved",
+        "body": "Resolved - A critical incident caused stack creation to fail for users located in the EU, while US users were unaffected. An investigation traced the cause to a Cloudflare API outage that returned 504 gateway timeouts to the EU production environment, with the pooled-org jobs that failed during the outage later revived once the calls succeeded again. Cloudflare resolved the incident and the team has confirmed the problem is resolved.",
+        "created_at": "2026-11-26T18:42:28.261Z"
+      }
+    ],
+    "first_seen_at": "2026-11-27T15:42:29.489508197Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2017-08-28T12:20:45.773Z",
+          "description": null,
+          "group": false,
+          "group_id": "ygr3wtn2s0kn",
+          "id": "m0qkgdzwyr6l",
+          "name": "Grafana.com",
+          "only_show_if_degraded": false,
+          "page_id": "6r99zhljywjf",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-26T18:42:28.213Z"
+        }
+      ],
+      "created_at": "2026-11-26T16:26:12.373Z",
+      "id": "x69sj7kpdnzp",
+      "impact": "major",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "m0qkgdzwyr6l",
+              "name": "Website and Support - Grafana.com",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "Resolved - A critical incident caused stack creation to fail for users located in the EU, while US users were unaffected. An investigation traced the cause to a Cloudflare API outage that returned 504 gateway timeouts to the EU production environment, with the pooled-org jobs that failed during the outage later revived once the calls succeeded again. Cloudflare resolved the incident and the team has confirmed the problem is resolved.",
+          "created_at": "2026-11-26T18:42:28.261Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T18:42:28.261Z",
+          "id": "srqjgpz6r5q4",
+          "incident_id": "x69sj7kpdnzp",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T18:42:28.261Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m0qkgdzwyr6l",
+              "name": "Website and Support - Grafana.com",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented, and customers located in Europe can create new Grafana Cloud stacks again. We are continuing to monitor to confirm that stack creation is working normally. Next update by 18:45 UTC.",
+          "created_at": "2026-11-26T17:42:36.441Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T17:42:36.441Z",
+          "id": "wn3v34gktxk6",
+          "incident_id": "x69sj7kpdnzp",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T17:42:36.441Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m0qkgdzwyr6l",
+              "name": "Website and Support - Grafana.com",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "A fix has been implemented, and customers located in Europe can create new Grafana Cloud stacks again. We are monitoring to confirm that stack creation is working normally. Next update by 17:45 UTC.",
+          "created_at": "2026-11-26T16:47:59.219Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:47:59.219Z",
+          "id": "qyyj6pss0hvx",
+          "incident_id": "x69sj7kpdnzp",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:47:59.219Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m0qkgdzwyr6l",
+              "name": "Website and Support - Grafana.com",
+              "new_status": "partial_outage",
+              "old_status": "partial_outage"
+            }
+          ],
+          "body": "We have identified the cause of this issue and are working on a resolution. Customers located in Europe may be unable to create new Grafana Cloud stacks, in any region. Customers in other locations can create stacks normally. Next update by 17:20 UTC.",
+          "created_at": "2026-11-26T16:34:11.350Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:34:11.350Z",
+          "id": "k3dvj214zdnc",
+          "incident_id": "x69sj7kpdnzp",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:34:11.350Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "m0qkgdzwyr6l",
+              "name": "Website and Support - Grafana.com",
+              "new_status": "partial_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We are investigating an issue preventing the creation of new Grafana Cloud stacks from users who attempt to create a Stack located in Europe. Existing stacks are not affected. Next update by 17:20 UTC.",
+          "created_at": "2026-11-26T16:26:12.493Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-26T16:26:12.493Z",
+          "id": "7bxqj2wnn32w",
+          "incident_id": "x69sj7kpdnzp",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-26T16:26:12.493Z"
+        }
+      ],
+      "monitoring_at": "2026-11-26T16:47:59.219Z",
+      "name": "Stack Creation Failing for Grafana Cloud Users in Europe",
+      "page_id": "6r99zhljywjf",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-26T18:42:28.261Z",
+      "shortlink": "https://stspg.io/hmdmbpp6pkpc",
+      "started_at": "2026-11-26T16:26:12.362Z",
+      "status": "resolved",
+      "updated_at": "2026-11-26T18:42:28.282Z"
+    }
+  }
+]

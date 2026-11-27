@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "record": {
+    "key": "stripe/pg7ynt93z5sq",
+    "vendor": "stripe",
+    "native_id": "pg7ynt93z5sq",
+    "title": "Elevated Apple Pay API errors",
+    "url": "https://stspg.io/twy5139vhmjq",
+    "impact": "none",
+    "status": "resolved",
+    "started_at": "2026-11-17T17:14:38.738Z",
+    "resolved_at": "2026-11-17T20:05:20.16Z",
+    "duration_minutes": 170,
+    "components": [
+      "Stripe API",
+      "Acquirers and payment methods"
+    ],
+    "updates": [
+      {
+        "native_id": "ptlbn1zsw4dr",
+        "status": "investigating",
+        "body": "We’re currently investigating elevated error rates and response times with Apple Pay. We’ll post an update soon.",
+        "created_at": "2026-11-17T17:14:38.979Z"
+      },
+      {
+        "native_id": "dpkcnz3xvlrv",
+        "status": "investigating",
+        "body": "We're continuing to investigate elevated error rates and response times with Apple Pay. We'll post updates as they become available.",
+        "created_at": "2026-11-17T18:04:08.037Z"
+      },
+      {
+        "native_id": "9mvhl43l3pb9",
+        "status": "resolved",
+        "body": "From 16:34 to 19:50 UTC, we saw increased Apple Pay failures due to an issue external to Stripe. This is now resolved.",
+        "created_at": "2026-11-17T20:05:20.16Z"
+      }
+    ],
+    "first_seen_at": "0001-01-01T00:00:00Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2023-05-25T21:26:05.565Z",
+          "description": null,
+          "group": false,
+          "group_id": null,
+          "id": "2p0n66vlgnn2",
+          "name": "Stripe API",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 1,
+          "showcase": true,
+          "start_date": "2023-03-01",
+          "status": "operational",
+          "updated_at": "2026-11-17T20:05:20.108Z"
+        },
+        {
+          "created_at": "2023-05-25T21:28:17.189Z",
+          "description": "Banks, card networks, and local payments",
+          "group": false,
+          "group_id": null,
+          "id": "glvywj51z2g9",
+          "name": "Acquirers and payment methods",
+          "only_show_if_degraded": false,
+          "page_id": "d5zv7xbys5v3",
+          "position": 6,
+          "showcase": false,
+          "start_date": "2023-05-25",
+          "status": "operational",
+          "updated_at": "2026-11-27T11:50:52.649Z"
+        }
+      ],
+      "created_at": "2026-11-17T17:14:38.747Z",
+      "id": "pg7ynt93z5sq",
+      "impact": "none",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "operational",
+              "old_status": "partial_outage"
+            },
+            {
+              "code": "glvywj51z2g9",
+              "name": "Acquirers and payment methods",
+              "new_status": "operational",
+              "old_status": "operational"
+            }
+          ],
+          "body": "From 16:34 to 19:50 UTC, we saw increased Apple Pay failures due to an issue external to Stripe. This is now resolved.",
+          "created_at": "2026-11-17T20:05:20.160Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T20:05:20.160Z",
+          "id": "9mvhl43l3pb9",
+          "incident_id": "pg7ynt93z5sq",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T20:05:20.160Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "partial_outage",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "We're continuing to investigate elevated error rates and response times with Apple Pay. We'll post updates as they become available.",
+          "created_at": "2026-11-17T18:04:08.037Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T18:04:08.037Z",
+          "id": "dpkcnz3xvlrv",
+          "incident_id": "pg7ynt93z5sq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T18:04:08.037Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "2p0n66vlgnn2",
+              "name": "Stripe API",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            }
+          ],
+          "body": "We’re currently investigating elevated error rates and response times with Apple Pay. We’ll post an update soon.",
+          "created_at": "2026-11-17T17:14:38.979Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-17T17:14:38.979Z",
+          "id": "ptlbn1zsw4dr",
+          "incident_id": "pg7ynt93z5sq",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-17T17:14:38.979Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Apple Pay API errors",
+      "page_id": "d5zv7xbys5v3",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-17T20:05:20.160Z",
+      "shortlink": "https://stspg.io/twy5139vhmjq",
+      "started_at": "2026-11-17T17:14:38.738Z",
+      "status": "resolved",
+      "updated_at": "2026-11-17T20:05:20.190Z"
+    }
+  }
+}
