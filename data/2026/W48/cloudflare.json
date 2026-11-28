@@ -291,7 +291,7 @@
           "showcase": false,
           "start_date": null,
           "status": "degraded_performance",
-          "updated_at": "2026-11-24T21:35:41.514Z"
+          "updated_at": "2026-11-28T05:40:36.612Z"
         }
       ],
       "created_at": "2026-11-23T13:52:11.144Z",
@@ -2099,7 +2099,7 @@
           "showcase": false,
           "start_date": null,
           "status": "operational",
-          "updated_at": "2026-11-26T18:17:04.572Z"
+          "updated_at": "2026-11-28T09:23:38.704Z"
         },
         {
           "created_at": "2014-10-09T03:32:07.000Z",
@@ -2273,6 +2273,443 @@
       "started_at": "2026-11-27T14:49:03.546Z",
       "status": "resolved",
       "updated_at": "2026-11-27T15:05:32.622Z"
+    }
+  },
+  {
+    "key": "cloudflare/j7ihgms4mvhb",
+    "vendor": "cloudflare",
+    "native_id": "j7ihgms4mvhb",
+    "title": "Elevated Errors for Cloudflare Workers Subrequests",
+    "url": "https://www.cloudflarestatus.com/incidents/j7ihgms4mvhb",
+    "impact": "minor",
+    "status": "resolved",
+    "started_at": "2026-11-28T04:45:43.228Z",
+    "resolved_at": "2026-11-28T05:38:42.819Z",
+    "duration_minutes": 52,
+    "components": [
+      "Workers",
+      "Atlanta, United States - (ATL)",
+      "Columbus, United States - (CMH)",
+      "Dallas, United States - (DFW)",
+      "São Paulo, Brazil - (GRU)"
+    ],
+    "updates": [
+      {
+        "native_id": "wstw0lgl9nuq",
+        "status": "investigating",
+        "body": "Cloudflare has identified an issue that causes intermittent DNS errors for a small subset of Cloudflare Workers subrequests to origins. Affected subrequests return HTTP 403 with Cloudflare error 1000. Impact is concentrated in Columbus, Dallas, São Paulo and Atlanta. No customer action is required. Public authoritative DNS is not affected. We are actively working to mitigate the impact and resolve the issue.",
+        "created_at": "2026-11-28T04:45:43.228Z"
+      },
+      {
+        "native_id": "pyuusd0yild4",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-28T05:03:27.022Z"
+      },
+      {
+        "native_id": "gihiby77vc8p",
+        "status": "monitoring",
+        "body": "A fix has been implemented and we are monitoring the results.",
+        "created_at": "2026-11-28T05:31:18.826Z"
+      },
+      {
+        "native_id": "mvwj5md4fy5s",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-28T05:38:42.819Z"
+      }
+    ],
+    "first_seen_at": "2026-11-28T14:38:31.787549693Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2019-01-24T16:49:08.000Z",
+          "description": "Cloudflare Workers provides a serverless execution environment that allows you to create new applications or augment existing ones without configuring or maintaining infrastructure",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "57srcl8zcn7c",
+          "name": "Workers",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "degraded_performance",
+          "updated_at": "2026-11-28T05:40:36.612Z"
+        },
+        {
+          "created_at": "2014-10-27T20:33:06.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "03wwgmh4vbnl",
+          "name": "Atlanta, United States - (ATL)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 4,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-28T05:40:36.612Z"
+        },
+        {
+          "created_at": "2019-01-23T08:27:40.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "rq16k3q6yz17",
+          "name": "Columbus, United States - (CMH)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 13,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-28T05:40:36.612Z"
+        },
+        {
+          "created_at": "2014-10-27T19:52:05.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "4l01sk5cdn5c",
+          "id": "r8ppmb3xm98j",
+          "name": "Dallas, United States - (DFW)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 14,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-28T05:40:36.612Z"
+        },
+        {
+          "created_at": "2014-10-27T21:45:14.000Z",
+          "description": null,
+          "group": false,
+          "group_id": "91blz4ztt7dm",
+          "id": "73mbn78m0yzm",
+          "name": "São Paulo, Brazil - (GRU)",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 43,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-28T05:40:36.612Z"
+        }
+      ],
+      "created_at": "2026-11-28T04:45:43.228Z",
+      "id": "j7ihgms4mvhb",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": [
+            {
+              "code": "03wwgmh4vbnl",
+              "name": "North America - Atlanta, United States - (ATL)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "rq16k3q6yz17",
+              "name": "North America - Columbus, United States - (CMH)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "r8ppmb3xm98j",
+              "name": "North America - Dallas, United States - (DFW)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "73mbn78m0yzm",
+              "name": "Latin America \u0026 the Caribbean - São Paulo, Brazil - (GRU)",
+              "new_status": "operational",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "operational",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-28T05:38:42.819Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T05:38:42.819Z",
+          "id": "mvwj5md4fy5s",
+          "incident_id": "j7ihgms4mvhb",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T05:38:42.819Z"
+        },
+        {
+          "affected_components": null,
+          "body": "A fix has been implemented and we are monitoring the results.",
+          "created_at": "2026-11-28T05:31:18.826Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T05:31:18.826Z",
+          "id": "gihiby77vc8p",
+          "incident_id": "j7ihgms4mvhb",
+          "status": "monitoring",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T05:31:18.826Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-28T05:03:27.022Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T05:03:27.022Z",
+          "id": "pyuusd0yild4",
+          "incident_id": "j7ihgms4mvhb",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T05:03:27.022Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "03wwgmh4vbnl",
+              "name": "North America - Atlanta, United States - (ATL)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "rq16k3q6yz17",
+              "name": "North America - Columbus, United States - (CMH)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "r8ppmb3xm98j",
+              "name": "North America - Dallas, United States - (DFW)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "73mbn78m0yzm",
+              "name": "Latin America \u0026 the Caribbean - São Paulo, Brazil - (GRU)",
+              "new_status": "degraded_performance",
+              "old_status": "operational"
+            },
+            {
+              "code": "57srcl8zcn7c",
+              "name": "Developer Services - Workers",
+              "new_status": "degraded_performance",
+              "old_status": "degraded_performance"
+            }
+          ],
+          "body": "Cloudflare has identified an issue that causes intermittent DNS errors for a small subset of Cloudflare Workers subrequests to origins. Affected subrequests return HTTP 403 with Cloudflare error 1000. Impact is concentrated in Columbus, Dallas, São Paulo and Atlanta. No customer action is required. Public authoritative DNS is not affected. We are actively working to mitigate the impact and resolve the issue.",
+          "created_at": "2026-11-28T04:45:43.228Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T04:45:43.228Z",
+          "id": "wstw0lgl9nuq",
+          "incident_id": "j7ihgms4mvhb",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T04:45:43.228Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Elevated Errors for Cloudflare Workers Subrequests",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-28T05:38:42.819Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/j7ihgms4mvhb",
+      "started_at": "2026-11-28T04:45:43.228Z",
+      "status": "resolved",
+      "updated_at": "2026-11-28T05:40:36.612Z"
+    }
+  },
+  {
+    "key": "cloudflare/27xnfvjy0n6j",
+    "vendor": "cloudflare",
+    "native_id": "27xnfvjy0n6j",
+    "title": "Email Delivery Delays",
+    "url": "https://www.cloudflarestatus.com/incidents/27xnfvjy0n6j",
+    "impact": "critical",
+    "status": "resolved",
+    "started_at": "2026-11-28T07:21:21.338Z",
+    "resolved_at": "2026-11-28T09:23:38.704Z",
+    "duration_minutes": 122,
+    "components": [
+      "Dashboard"
+    ],
+    "updates": [
+      {
+        "native_id": "ilq5zge9ca7z",
+        "status": "investigating",
+        "body": "Cloudflare is investigating a delay in our ability to send emails. This includes password reset, mFA token emails. We are working to resolve the issue. More updates to follow shortly.",
+        "created_at": "2026-11-28T07:21:21.338Z"
+      },
+      {
+        "native_id": "yi5upzqnqhro",
+        "status": "investigating",
+        "body": "We are continuing to investigate the issue.",
+        "created_at": "2026-11-28T08:33:41.761Z"
+      },
+      {
+        "native_id": "i2rfgl1yxq0s",
+        "status": "identified",
+        "body": "The issue has been identified and a fix is being implemented.",
+        "created_at": "2026-11-28T09:13:48.044Z"
+      },
+      {
+        "native_id": "9kv4shcm1kat",
+        "status": "resolved",
+        "body": "This incident has been resolved.",
+        "created_at": "2026-11-28T09:23:38.704Z"
+      }
+    ],
+    "first_seen_at": "2026-11-28T14:38:31.787549693Z",
+    "raw": {
+      "components": [
+        {
+          "created_at": "2014-10-09T03:32:07.000Z",
+          "description": "Dashboard where customers can view and make changes to their configurations at https://dash.cloudflare.com",
+          "group": false,
+          "group_id": "1km35smx8p41",
+          "id": "3sq3s4d20ywk",
+          "name": "Dashboard",
+          "only_show_if_degraded": false,
+          "page_id": "yh6f0r4529hb",
+          "position": 1,
+          "showcase": false,
+          "start_date": null,
+          "status": "operational",
+          "updated_at": "2026-11-28T09:23:38.704Z"
+        }
+      ],
+      "created_at": "2026-11-28T07:21:21.338Z",
+      "id": "27xnfvjy0n6j",
+      "impact": "critical",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "This incident has been resolved.",
+          "created_at": "2026-11-28T09:23:38.704Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T09:23:38.704Z",
+          "id": "9kv4shcm1kat",
+          "incident_id": "27xnfvjy0n6j",
+          "status": "resolved",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T09:23:38.704Z"
+        },
+        {
+          "affected_components": null,
+          "body": "The issue has been identified and a fix is being implemented.",
+          "created_at": "2026-11-28T09:13:48.044Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T09:13:48.044Z",
+          "id": "i2rfgl1yxq0s",
+          "incident_id": "27xnfvjy0n6j",
+          "status": "identified",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T09:13:48.044Z"
+        },
+        {
+          "affected_components": null,
+          "body": "We are continuing to investigate the issue.",
+          "created_at": "2026-11-28T08:33:41.761Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T08:33:41.761Z",
+          "id": "yi5upzqnqhro",
+          "incident_id": "27xnfvjy0n6j",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T08:33:41.761Z"
+        },
+        {
+          "affected_components": [
+            {
+              "code": "3sq3s4d20ywk",
+              "name": "Dashboard \u0026 API - Dashboard",
+              "new_status": "major_outage",
+              "old_status": "operational"
+            }
+          ],
+          "body": "Cloudflare is investigating a delay in our ability to send emails. This includes password reset, mFA token emails. We are working to resolve the issue. More updates to follow shortly.",
+          "created_at": "2026-11-28T07:21:21.338Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T07:21:21.338Z",
+          "id": "ilq5zge9ca7z",
+          "incident_id": "27xnfvjy0n6j",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T07:21:21.338Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Email Delivery Delays",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": "2026-11-28T09:23:38.704Z",
+      "shortlink": "https://www.cloudflarestatus.com/incidents/27xnfvjy0n6j",
+      "started_at": "2026-11-28T07:21:21.338Z",
+      "status": "resolved",
+      "updated_at": "2026-11-28T09:23:38.704Z"
+    }
+  },
+  {
+    "key": "cloudflare/gi1o8ptw764t",
+    "vendor": "cloudflare",
+    "native_id": "gi1o8ptw764t",
+    "title": "Increased HTTP 5xx Errors in Bangkok, Thailand region",
+    "url": "https://www.cloudflarestatus.com/incidents/gi1o8ptw764t",
+    "impact": "minor",
+    "status": "investigating",
+    "started_at": "2026-11-28T14:33:43.305Z",
+    "components": [],
+    "updates": [
+      {
+        "native_id": "45ae37wibcb5",
+        "status": "investigating",
+        "body": "Cloudflare is investigating an increased level of HTTP 5xx errors in Bangkok, Thailand region (BKK). We are working to analyse and mitigate this problem. More updates to follow shortly.",
+        "created_at": "2026-11-28T14:33:43.305Z"
+      }
+    ],
+    "first_seen_at": "2026-11-28T14:38:31.787549693Z",
+    "raw": {
+      "components": [],
+      "created_at": "2026-11-28T14:33:43.305Z",
+      "id": "gi1o8ptw764t",
+      "impact": "minor",
+      "incident_updates": [
+        {
+          "affected_components": null,
+          "body": "Cloudflare is investigating an increased level of HTTP 5xx errors in Bangkok, Thailand region (BKK). We are working to analyse and mitigate this problem. More updates to follow shortly.",
+          "created_at": "2026-11-28T14:33:43.305Z",
+          "custom_tweet": null,
+          "deliver_notifications": true,
+          "display_at": "2026-11-28T14:33:43.305Z",
+          "id": "45ae37wibcb5",
+          "incident_id": "gi1o8ptw764t",
+          "status": "investigating",
+          "tweet_id": null,
+          "updated_at": "2026-11-28T14:33:43.305Z"
+        }
+      ],
+      "monitoring_at": null,
+      "name": "Increased HTTP 5xx Errors in Bangkok, Thailand region",
+      "page_id": "yh6f0r4529hb",
+      "reminder_intervals": null,
+      "resolved_at": null,
+      "shortlink": "https://www.cloudflarestatus.com/incidents/gi1o8ptw764t",
+      "started_at": "2026-11-28T14:33:43.305Z",
+      "status": "investigating",
+      "updated_at": "2026-11-28T14:33:57.441Z"
     }
   }
 ]
